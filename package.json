@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "name": "pxls-web",
+  "version": "1.0.0",
+  "description": "Web client for pxls.space",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "start": "node index.js"
+  },
+  "author": "Pxls Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.5",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "cookie-parser": "^1.4.6",
+    "eslint": "^7.15.0",
+    "eslint-config-semistandard": "^15.0.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "esprima": "^4.0.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "gulp": "^4.0.2",
+    "gulp-buffer": "^0.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-eslint": "https://github.com/pxlsspace/gulp-eslint.git",
+    "gulp-if": "^3.0.0",
+    "gulp-minify": "https://github.com/pxlsspace/gulp-minify.git",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tap": "^2.0.0",
+    "http-proxy-middleware": "^2.0.6",
+    "merge-stream": "^2.0.0",
+    "pofile": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp-rename": "^2.0.0",
+    "through2": "^2.0.5"
+  }
+}

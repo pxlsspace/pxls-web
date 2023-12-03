@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{profile_of.name}} - Pxls</title>
+    <link rel="stylesheet" href="/profile/css/theme-purple.min.css">
+    <link rel="stylesheet" href="/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/profile/css/views/index.css">
+    <link rel="stylesheet" href="/SLIDEIN.css">
+    <script src="/jquery-3.4.1.min.js"></script>
+    <script src="/profile/js/bootstrap.bundle.min.js"></script>
+    <script src="/crel.min.js"></script>
+    <script src="/SLIDEIN.js"></script>
+    {{#if requested_self}}
+    {{! no reason to add even more network bloat. we only need spectrum if we're modifying factions and factions are only modifiable on our own profile. }}
+    <link rel="stylesheet" href="/profile/css/spectrum.css">
+    <script src="/profile/js/spectrum-min.js"></script>
+    {{/if}}
+</head>
+<body data-palette="{{#if palette}}{{palette}}{{/if}}" data-faction-max-tag="{{max_faction_tag_length}}" data-faction-max-name="{{max_faction_name_length}}">
+<nav class="navbar navbar-dark navbar-expand-md" role="nav">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a href="/" class="nav-link">Pxls</a>
+        </li>
+        <li class="nav-item active">
+            {{! eg "Alice's profile". Double singlequote is a java thing - needed if a replacement (such as this) contains a singlequote. }}
+            <a href="{{route_root}}" class="nav-link">{{i18n '{0}\'s Profile' profile_of.name}}</a>
+        </li>
+    </ul>
+    {{#if requesting_user}}
+    <div class="my-2 my-lg-0">
+        <div class="dropdown">
+            <button class="navbar-text btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" id="btnNavUserDropdown">
+                <i class="fas fa-user-alt mr-1"></i>{{requesting_user.name}}
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" id="navUserDropdown" aria-labelledby="btnNavUserDropdown">
+                <a href="/profile?action=details" class="dropdown-item">{{i18n 'My Profile'}}</a>
+                <a href="/profile?action=factions" class="dropdown-item">{{i18n 'My Factions'}}</a>
+                <a href="/profile?action=data" class="dropdown-item">{{i18n 'My Data'}}</a>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</nav>
+<main role="main" class="mb-3">
+    <div class="container">
+        <h1>{{#if profile_of.displayedFaction}}[{{profile_of.fetchDisplayedFaction.tag}}] {{/if}}{{i18n '{0}\'s Profile' profile_of.name}}</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group" id="tabsTriggers">
+                    <a href="{{route_root}}?action=details" data-action="details" class="list-group-item text-light active">
+                        <i class="fas fa-id-card mr-2 d-none d-md-inline-block"></i>{{i18n 'Info'}}
+                    </a>
+                    {{#if requested_self}}
+                    <a href="{{route_root}}?action=reports" class="list-group-item text-light" data-action="reports">
+                        <i class="fas fa-flag mr-2 d-none d-md-inline-block"></i>{{i18n 'Reports'}}
+                    </a>
+                    <a href="{{route_root}}?action=factions" class="list-group-item text-light" data-action="factions">
+                        <i class="fas fa-users mr-2 d-none d-md-inline-block"></i>{{i18n 'Factions'}}
+                    </a>
+                    <a href="{{route_root}}?action=data" class="list-group-item text-light" data-action="data">
+                        <i class="fas fa-key mr-2 d-none d-md-inline-block"></i>{{i18n 'Data'}}
+                    </a>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="col-md-9 tab-content mt-3 mt-md-0" id="tabsWrapper">
+                <div id="tab-details" class="tab-pane text-center active" data-tab="details">
+                    {{#unless profile_of}}
+                    <p class="text-warning text-center">{{i18n 'You must be logged in to view your profile.'}}</p>
+                    {{else}}
+                    <h3>{{username}}</h3>
+                    <table class="inline-block">
+                        <tbody>
+                        <tr>
+                            <th class="text-right pr-3">{{i18n 'Registration Date'}}</th>
+                            <td class="text-left">
+                                <time datetime={{profile_of.signupTime}}>
+                                    {{profile_of.signupTimeFormatted}}
+                                </time>
+                            </td>
+                        </tr>
+                        {{#unless snip_mode}}
+                        <tr>
+                            <th class="text-right pr-3">{{i18n 'Alltime Pixels'}}</th>
+                            <td class="text-left">{{profile_of.allTimePixelCount}}</td>
+                        </tr>
+                        <tr>
+                            <th class="text-right pr-3">{{i18n 'Current Canvas Pixels'}}</th>
+                            <td class="text-left">{{profile_of.pixelCount}}</td>
+                        </tr>
+                        {{/unless}}
+                        <tr>
+                            <th class="text-right pr-3">{{i18n 'Discord Tag'}}</th>
+                            <td class="text-left">{{default profile_of.discordName "Not Set"}}</td>
+                        </tr>
+                        <tr>
+                            <th class="text-right pr-3">{{i18n 'Faction'}}</th>
+                            <td class="text-left">{{#unless profile_of.displayedFaction}}[{{profile_of.fetchDisplayedFaction.tag}}] {{profile_of.fetchDisplayedFaction.name}} (ID: {{profile_of.fetchDisplayedFaction.id}}){{else}}{{i18n 'None'}}{{/unless}}</td>
+                        </tr>
+                        <tr>
+                            <th class="text-right pr-3">{{i18n 'Roles'}}</th>
+                            <td class="text-left">{{profile_of.getRolesString}}</td>
+                        </tr>
+                        {{#if profile_of.isBanned}}
+                        <tr>
+                            <th class="text-right pr-3">{{i18n 'Canvas Ban Expiry'}}</th>
+                            <td class="text-left">
+                                {{#if profile_of.isPermaBanned}}
+                                {{i18n 'Never'}}
+                                {{else}}
+                                <time datetime={{profile_of.getBanExpiryTime}}>
+                                    {{profile_of.getBanExpiryTimeFormatted}}
+                                </time>
+                                {{/if}}
+                            </td>
+                        </tr>
+                        {{/if}}
+                        {{#if profile_of.isChatbanned}}
+                        <tr>
+                            <th class="text-right pr-3">{{i18n 'Chat Ban Expiry'}}</th>
+                            <td class="text-left">
+                                {{#if profile_of.isPermaChatBanned}}
+                                {{i18n 'Never'}}
+                                {{else}}
+                                <time datetime={{profile_of.getChatBanExpiryTime}}>
+                                    {{profile_of.getChatBanExpiryTimeFormatted}}
+                                </time>
+                                {{/if}}
+                            </td>
+                        </tr>
+                        {{/if}}
+                        </tbody>
+                    </table>
+                    <div class="d-block mt-4">
+                        {{{i18n 'View rankings and other stats <a href="/stats">here</a>.'}}}
+                    </div>
+                    {{/unless}}
+                </div>
+                {{#if requested_self}}
+                <div id="tab-reports" class="tab-pane" data-tab="reports">
+                    {{#unless profile_of}}
+                    <p class="text-warning text-center">{{i18n 'You must be logged in to view your reports.'}}</p>
+                    {{else}}
+                    <h3 class="text-center">{{i18n 'Reports'}}</h3>
+                    <div class="card collapseable mb-2">
+                        <div class="card-header">
+                            <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
+                            <span class="text-info">{{i18n 'Canvas Reports ({0}/{1} open)' canvas_reports_open_count canvas_reports_length }}</span>
+                        </div>
+                        <div class="card-body p-0 body-collapse-target collapse">
+                            <div class="p-3">
+                                {{#each canvas_reports}}
+                                <div class="card collapseable mb-2">
+                                    <div class="card-header">
+                                        <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
+                                        <span class="{{#if report.closed}}text-success{{else}}text-warning{{/if}}">
+                                            {{#if this.closed}}
+                                            {{! eg "Report on Bob (closed) }}
+                                            {{i18n 'Report on {0} (closed)' reportedName}}
+                                            {{else}}
+                                            {{! eg "Report on Bob (open) }}
+                                            {{i18n 'Report on {0} (open)' reportedName}}
+                                            {{/if}}
+                                        </span>
+                                    </div>
+                                    <div class="card-body p-0 body-collapse-target collapse">
+                                        <div class="p-3">
+                                            {{! eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC) }}
+                                            <h6>{{i18n 'Reported {0} on {1}' reportedName report.time}}</h6>
+                                            <p>{{report.message}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/each}}
+                                {{#unless canvas_reports}}
+                                <p>{{i18n 'There are no canvas reports to show.'}}</p>
+                                {{/unless}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card collapseable mb-2">
+                        <div class="card-header">
+                            <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
+                            <span class="text-info">{{i18n 'Chat Reports ({0}/{1} open)' chat_reports_open_count chat_reports_length}}</span>
+                        </div>
+                        <div class="card-body p-0 body-collapse-target collapse">
+                            <div class="p-3">
+                                {{#each chat_reports}}
+                                <div class="card collapseable mb-2">
+                                    <div class="card-header">
+                                        <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
+                                        <span class="{{#if report.closed}}text-success{{else}}text-warning{{/if}}">
+                                            {{#if report.closed}}
+                                            {{i18n 'Report on {0} (closed)' reportedName}}
+                                            {{else}}
+                                            {{i18n 'Report on {0} (open)' reportedName}}
+                                            {{/if}}
+                                        </span>
+                                    </div>
+                                    <div class="card-body p-0 body-collapse-target collapse">
+                                        <div class="p-3">
+                                            <h6>{{i18n 'Reported {0} on {1}' reportedName report.time}}</h6>
+                                            <p>{{report.report_message}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/each}}
+                                {{#unless chat_reports}}
+                                <p>{{i18n 'There are no chat reports to show.'}}</p>
+                                {{/unless}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/unless}}
+                </div>
+                <div id="tab-factions" class="tab-pane" data-tab="factions">
+                    {{#unless profile_of}}
+                    <p class="text-center text-warning">{{i18n 'You must be logged in to manage your factions.'}}</p>
+                    {{else}}
+                        {{#if (or profile_of.isFactionRestricted profile_of.isBanned)}}
+                        <small class="text-danger m-0 p-0 d-block">
+                            {{#if profile_of.isFactionRestricted}}
+                            {{i18n 'You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator.'}}
+                            {{else}}
+                            {{i18n 'You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator.'}}
+                            {{/if}}
+                        </small>
+                        {{/if}}
+                    {{/unless}}
+                    {{#if (gt (default new_fac_min_pixels 0) requesting_user_alltime_pixels)}}
+                    <small class="text-warning m-0 p-0 d-block">{{i18n 'You must have at least {0} all-time pixels to create a faction.' (default new_fac_min_pixels 0)}}</small>
+                    {{/if}}
+                    <div class="mb-2">
+                        <button class="btn btn-success btn-sm mr-1 global-faction-action" data-action="factionCreate" {{#if (or (gt (default new_fac_min_pixels 0) requesting_user_alltime_pixels) profile_of.isFactionRestricted)}}disabled="disabled"{{/if}}><i class="fas fa-plus"></i> {{i18n 'Create'}}</button>
+                        <button class="btn btn-primary btn-sm mr-1 global-faction-action" data-toggle="modal" data-target="#modal-faction-search"><i class="fas fa-user-plus"></i> {{i18n 'Join'}}</button>
+                    </div>
+                    {{#each factions}}
+                    <div class="media mb-2 faction-media" data-faction-id="{{faction.id}}" data-faction-name="{{faction.name}}" data-faction-tag="{{faction.tag}}" data-faction-color="{{default faction.color 0}}">
+                        <span class="media-text-icon mr-3">[{{faction.tag}}]</span>
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">
+                                {{#if (eq (default profile_of.displayedFaction -1) faction.id)}}
+                                <i class="fas fa-eye mr-1 text-success" style="font-size: 0.75em;" title="{{i18n 'This is your currently displayed faction.'}}"></i>
+                                {{/if}}
+                                {{! eg "Pixelers (members: 100, ID: 1)" }}
+                                {{i18n '{0} (members: {1}, ID: {2})' faction.name faction.fetchMembers faction.id}}
+                            </h5>
+                            <div class="mb-1 mt-2">
+                                <span class="text-muted">{{i18n 'Owner: {0}' faction.fetchOwner.name}}</span>
+                            </div>
+                            <div>
+                                {{#if (eq (default profile_of.displayedFaction -1) faction.id)}}
+                                {{! makes the faction no longer the one displayed for the current user }}
+                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionRemoveDisplayed"><i class="fas fa-minus mr-1"></i>{{i18n 'Remove Displayed'}}</button>
+                                {{else}}
+                                {{! makes the faction the one displayed for the current user }}
+                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionSetDisplayed"><i class="fas fa-check mr-1"></i>{{i18n 'Set Displayed'}}</button>
+                                {{/if}}
+                                {{#if (eq faction.owner profile_of.id)}}
+                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionMembers" data-toggle="modal" data-target="#modal-member-list-{{faction.id}}"><i class="fas fa-users mr-1"></i>{{i18n 'Members'}}</button>
+                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionEdit"><i class="fas fa-pencil-alt mr-1"></i>{{i18n 'Edit'}}</button>
+                                <button class="btn btn-danger btn-sm mr-1 mt-1 faction-action" data-action="factionDelete"><i class="fas fa-times mr-1"></i>{{i18n 'Delete'}}</button>
+                                {{else}}
+                                <button class="btn btn-danger btn-sm mr-1 mt-1 faction-action" data-action="factionLeave"><i class="fas fa-sign-out-alt mr-1"></i>{{i18n 'Leave'}}</button>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                    {{#unless factions}}
+                    <p class="text-center text-warning">{{i18n 'You are not in any factions yet!'}}</p>
+                    {{/unless}}
+                </div>
+                <div id="tab-data" class="tab-pane text-center" data-tab="data">
+                    {{#unless profile_of}}
+                    <p class="text-warning text-center">{{i18n 'You must be logged in to view your data.'}}</p>
+                    {{else}}
+                    <h3>{{i18n 'Log Keys'}}</h3>
+                    <p><i class="fas fa-info-circle"></i> {{i18n 'Log keys can be used by those who have them to tell which pixels you placed on previous canvases.'}}</p>
+                    {{#if keys}}
+                    <table class="inline-block table-border-between">
+                        <thead>
+                        <tr>
+                            <th class="text-center pr-3">{{i18n 'Canvas Code'}}</th>
+                            <th class="text-center">{{i18n 'Log Key'}}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{#each keys}}
+                        <tr>
+                            <td class="text-center pr-3 align-text-top">{{this.key}}</td>
+                            <td class="text-left"><code class="break">{{this.value}}</code></td>
+                            <td><button type="button" class="btn btn-primary text-light" data-action="copy-log-key"><i class="fas fa-clipboard-list"></i></button></td>
+                        </tr>
+                        {{/each}}
+                        </tbody>
+                    </table>
+                    {{else}}
+                    <p class="text-center text-warning">{{i18n 'You have no log keys yet!'}}</p>
+                    <p class="text-center text-warning">{{i18n 'Log keys should show up here after a canvas you have placed on ends.'}}</p>
+                    {{/if}}
+                    {{/unless}}
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</main>
+{{#if requested_self}}
+{{#each factions}}
+{{#if (eq faction.owner profile_of.id)}}
+<div class="modal fade member-list-modal" id="modal-member-list-{{faction.id}}" data-faction-id="{{faction.id}}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{i18n 'Members of {0} ([{1}])' faction.name faction.tag}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="{{i18n 'Close'}}">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="card collapseable mb-2">
+                    <div class="card-header">
+                        <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
+                        <span class="text-info">{{i18n 'Faction Members'}}</span>
+                    </div>
+                    <div class="card-body p-0 body-collapse-target collapse">
+                        <div class="p-3">
+                            {{! This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list. }}
+                            {{! since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list }}
+                            {{#if (gt faction.fetchMembers 1)}}
+                            {{#each faction.fetchMembers}}
+                            {{#if (ne member.id profile_of.id)}}
+                            <div class="row member-row mb-1" data-member="{{member.name}}">
+                                <div class="col-md-6">
+                                    <span><a href="/profile/{{member.name}}" target="_blank">{{member.name}}</a></span>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <button class="btn btn-sm btn-success faction-subaction" data-action="transfer">{{i18n 'Transfer Ownership'}}</button>
+                                    {{! bans a user from the faction }}
+                                    <button class="btn btn-sm btn-danger faction-subaction" data-action="ban">{{i18n 'Ban'}}</button>
+                                </div>
+                            </div>
+                            {{/if}}
+                            {{/each}}
+                            {{else}}
+                            <p class="text-muted text-center mb-0">{{i18n 'Nothing to see here!'}}</p>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+                <div class="card collapseable mb-2">
+                    <div class="card-header">
+                        <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
+                        <span class="text-info">{{i18n 'Faction Bans'}}</span>
+                    </div>
+                    <div class="card-body p-0 body-collapse-target collapse">
+                        <div class="p-3">
+                            {{#each faction.fetchBans}}
+                            <div class="row member-row mb-1" data-member="{{member.name}}">
+                                <div class="col-md-6">
+                                    <span>{{member.name}}</span>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <button class="btn btn-sm btn-primary faction-subaction" data-action="unban">{{i18n 'Unban'}}</button>
+                                </div>
+                            </div>
+                            {{/each}}
+                            {{#unless faction.fetchBans}}
+                            <p class="text-muted text-center mb-0">{{i18n 'Nothing to see here!'}}</p>
+                            {{/unless}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{i18n 'Close'}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+{{/each}}
+{{/if}}
+<div class="modal fade" id="modal-faction-search" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{i18n 'Find A Faction'}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="{{i18n 'Close'}}">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form" id="frmFactionSearch">
+                    <div class="form-group">
+                        <div class="input-group flex-nowrap">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="txtFactionSearch">{{i18n 'Search:'}}</label>
+                            </div>
+                            <input type="text" class="form-control" autocomplete="disabled" id="txtFactionSearch" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-info" type="submit" id="btnFactionSearch"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div id="searchTarget" class="m-0 px-0 py-2">
+                    <p class="text-muted text-center">{{i18n 'Enter a search term to get started.'}}</p>
+                </div>
+                <button class="btn btn-block btn-sm btn-secondary d-none" id="btnFactionSearchLoadMore">{{i18n 'Load More'}}</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{i18n 'Close'}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/profile/js/views/root.js"></script>
+<script src="/profile/js/views/profile.js"></script>
+</body>
+</html>
