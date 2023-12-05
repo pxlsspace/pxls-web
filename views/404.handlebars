@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="/profile/css/theme-purple.min.css">
     <link rel="stylesheet" href="/fontawesome-all.min.css">
 </head>
-<body data-palette="{% if palette is not null %}{{palette | join(',')}}{% endif %}" data-faction-max-tag="{{max_faction_tag_length|default(99999)}}" data-faction-max-name="{{max_faction_name_length|default(99999)}}">
+<body data-palette="{{#unless palette}}{{palette}}{{/unless}}" data-faction-max-tag="{{max_faction_tag_length}}" data-faction-max-name="{{max_faction_name_length}}">
 <nav class="navbar navbar-dark navbar-expand-md" role="nav">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
             <a href="/" class="nav-link">Pxls</a>
         </li>
     </ul>
-    {% if requesting_user is not null %}
+    {{#if requesting_user}}
     <div class="my-2 my-lg-0">
         <div class="dropdown">
             <button class="navbar-text btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" id="btnNavUserDropdown">
@@ -30,30 +30,30 @@
             </div>
         </div>
     </div>
-    {% endif %}
+    {{/if}}
 </nav>
 <main role="main" class="mb-3">
     <div class="container">
-        {% if err == 404 %}
-        {# HTTP status code name #}
+        {{#if (eq err 404) }}
+        {{! HTTP status code name }}
         <h1>{{{i18n 'Not Found'}}}</h1>
         <hr>
         <p>{{{i18n 'The content you requested could not be found at this URL. If you believe this is an error, please contact a developer.'}}}</p>
         <div class="d-block">
-            {# links to the homepage (the app itself) #}
+            {{! links to the homepage (the app itself) }}
             <a href="/" class="btn btn-primary mr-1"><i class="fas fa-arrow-left"></i> {{{i18n 'Back to Pxls'}}}</a>
             <a href="/profile" class="btn btn-primary mr-1"><i class="fas fa-user"></i> {{{i18n 'My Profile'}}}</a>
         </div>
-        {% elseif err == 403 %}
-        {# HTTP status code name #}
+        {{else if (eq err 403) }}
+        {{! HTTP status code name }}
         <h1>{{{i18n 'Not Authenticated'}}}</h1>
         <hr>
         <p>{{{i18n 'You must be logged in to access this data. Please go back to pxls and go through the authentication process.'}}}</p>
         <div class="d-block">
             <a href="/" class="btn btn-primary mr-1"><i class="fas fa-arrow-left"></i> {{{i18n 'Back to Pxls'}}}</a>
         </div>
-        {% else %}
-        {# HTTP status code name #}
+        {{else}}
+        {{! HTTP status code name }}
         <h1>{{{i18n 'Not Allowed'}}}</h1>
         <hr>
         <p>{{{i18n 'The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later.'}}}</p>
@@ -61,7 +61,7 @@
             <a href="/" class="btn btn-primary mr-1"><i class="fas fa-arrow-left"></i> {{{i18n 'Back to Pxls'}}}</a>
             <a href="/profile" class="btn btn-primary mr-1"><i class="fas fa-user"></i> {{{i18n 'My Profile'}}}</a>
         </div>
-        {% endif %}
+        {{/if}}
     </div>
 </main>
 <script src="/profile/js/views/root.js"></script>

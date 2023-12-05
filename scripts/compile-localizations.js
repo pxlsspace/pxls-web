@@ -4,8 +4,8 @@ const childProcess = require('child_process');
 
 const { promisify } = require('util');
 
-const PO_DIR = 'po';
-const OUTPUT_DIR = 'resources';
+const PO_DIR = '../po';
+const OUTPUT_DIR = '../resources';
 
 const dir = fs.readdirSync(PO_DIR);
 

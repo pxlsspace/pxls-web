@@ -1,23 +1,16 @@
 const fs = require('fs');
+const path = require('path');
+
+const { listFiles } = require('../utils.js');
+const { findTranslationCalls, contract, shave } = require('./localization-util');
+
 const PO = require('pofile');
 const esprima = require('esprima');
 
-const { findTranslationCalls, contract, shave } = require('./localization-util');
+const views = listFiles('../views');
 
-const PEBBLE_FILES = [
-  'resources/public/pebble_templates/index.html',
-  'resources/public/pebble_templates/faq.html',
-  'resources/public/pebble_templates/info.html',
-  'resources/public/pebble_templates/profile.html',
-  'resources/public/pebble_templates/40x.html'
-];
-
-const PEBBLE_COMMENT_MATCH = /{([#])((?!\1}).)*\1}/g;
-const PEBBLE_CODE_MATCH = /{([%])((?!\1}).)*\1}|{{((?!}}).)*}}/g;
-
-const I18N_MATCH = /i18n\s*[(]/g;
-// a string matching regex, handles escapes and escaped escapes.
-const STRING_MATCH = /(["'])((\\{2})*|(.*?[^\\](\\{2})*))\1/g;
+const handlebarsI18nMatch = /i18n (["'])(.+?)[^\\]+?\1/;
+const handlebarsCommentMatch = /\{\{! +?(.+?) +?}}/;
 
 const poFiles = new Map();
 
@@ -40,6 +33,20 @@ function createPoFile(name) {
   itemsByIdByPofile.set(name, new Map());
   poFiles.set(name, poFile);
 }
+
+for (const path of views) {
+  const file = fs.readFileSync(path, 'utf8');
+  const lines = file.split('\n').map(e => e.trim());
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const i18nMatch = line.match(handlebarsI18nMatch);
+    const commentMatch = line.match(handlebarsCommentMatch);
+    console.log(i18nMatch, commentMatch);
+  }
+}
+
+return;
 
 for (const path of PEBBLE_FILES) {
   const file = fs.readFileSync(path).toString();
@@ -144,32 +151,32 @@ for (const path of PEBBLE_FILES) {
 // TODO: maybe just use ttag instead?
 
 const JS_FILES = [
-  'resources/public/pxls.js',
-  'resources/public/include/ban.js',
-  'resources/public/include/board.js',
-  'resources/public/include/chat.js',
-  'resources/public/include/chromeOffsetWorkaround.js',
-  'resources/public/include/coords.js',
-  'resources/public/include/grid.js',
-  'resources/public/include/helpers.js',
-  'resources/public/include/lookup.js',
-  'resources/public/include/modal.js',
-  'resources/public/include/nativeNotifications.js',
-  'resources/public/include/notifications.js',
-  'resources/public/include/overlays.js',
-  'resources/public/include/panels.js',
-  'resources/public/include/place.js',
-  'resources/public/include/query.js',
-  'resources/public/include/serviceworkers.js',
-  'resources/public/include/settings.js',
-  'resources/public/include/socket.js',
-  'resources/public/include/storage.js',
-  'resources/public/include/template.js',
-  'resources/public/include/timer.js',
-  'resources/public/include/typeahead.js',
-  'resources/public/include/uiHelper.js',
-  'resources/public/include/user.js',
-  'resources/public/admin/admin.js'
+  'public/pxls.js',
+  'public/include/ban.js',
+  'public/include/board.js',
+  'public/include/chat.js',
+  'public/include/chromeOffsetWorkaround.js',
+  'public/include/coords.js',
+  'public/include/grid.js',
+  'public/include/helpers.js',
+  'public/include/lookup.js',
+  'public/include/modal.js',
+  'public/include/nativeNotifications.js',
+  'public/include/notifications.js',
+  'public/include/overlays.js',
+  'public/include/panels.js',
+  'public/include/place.js',
+  'public/include/query.js',
+  'public/include/serviceworkers.js',
+  'public/include/settings.js',
+  'public/include/socket.js',
+  'public/include/storage.js',
+  'public/include/template.js',
+  'public/include/timer.js',
+  'public/include/typeahead.js',
+  'public/include/uiHelper.js',
+  'public/include/user.js',
+  'public/admin/admin.js'
 ];
 
 const JS_POFILE = 'Localization';
@@ -184,7 +191,7 @@ const jsItemsById = itemsByIdByPofile.get(JS_POFILE);
 const TRANSLATOR_COMMENT_REGEX = /^\s*translator:\s?(.*)$/i;
 
 for (const path of JS_FILES) {
-  const file = fs.readFileSync(path).toString();
+  const file = fs.readFileSync('../' + path).toString();
   const script = esprima.parseScript(file, { range: true, comment: true });
 
   const translatableStrings = script.body
@@ -285,7 +292,7 @@ for (const path of JS_FILES) {
 }
 
 for (const [name, poFile] of poFiles.entries()) {
-  poFile.save(`po/${name}.pot`, e => e ? console.error : null);
+  poFile.save(`../po/${name}.pot`, e => e ? console.error : null);
 }
 
 console.info(`Parsed ${PEBBLE_FILES.length + JS_FILES.length} files.`);

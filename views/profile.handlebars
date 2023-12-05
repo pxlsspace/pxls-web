@@ -48,7 +48,7 @@
 </nav>
 <main role="main" class="mb-3">
     <div class="container">
-        <h1>{{#if profile_of.displayedFaction}}[{{profile_of.fetchDisplayedFaction.tag}}] {{/if}}{{i18n '{0}\'s Profile' profile_of.name}}</h1>
+        <h1>{{#if profile_of.displayedFactionId}}[{{#with (factionById profile_of.displayedFactionId)}}{{tag}}{{/with}}] {{/if}}{{i18n '{0}\'s Profile' profile_of.name}}</h1>
         <hr>
         <div class="row">
             <div class="col-md-3">
@@ -80,7 +80,7 @@
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Registration Date'}}</th>
                             <td class="text-left">
-                                <time datetime={{profile_of.signupTime}}>
+                                <time datetime={{isoTime profile_of.signupTime}}>
                                     {{profile_of.signupTimeFormatted}}
                                 </time>
                             </td>
@@ -114,7 +114,7 @@
                                 {{#if profile_of.isPermaBanned}}
                                 {{i18n 'Never'}}
                                 {{else}}
-                                <time datetime={{profile_of.getBanExpiryTime}}>
+                                <time datetime={{isoTime profile_of.getBanExpiryTime}}>
                                     {{profile_of.getBanExpiryTimeFormatted}}
                                 </time>
                                 {{/if}}
@@ -128,7 +128,7 @@
                                 {{#if profile_of.isPermaChatBanned}}
                                 {{i18n 'Never'}}
                                 {{else}}
-                                <time datetime={{profile_of.getChatBanExpiryTime}}>
+                                <time datetime={{isoTime profile_of.getChatBanExpiryTime}}>
                                     {{profile_of.getChatBanExpiryTimeFormatted}}
                                 </time>
                                 {{/if}}
@@ -241,29 +241,29 @@
                         <button class="btn btn-primary btn-sm mr-1 global-faction-action" data-toggle="modal" data-target="#modal-faction-search"><i class="fas fa-user-plus"></i> {{i18n 'Join'}}</button>
                     </div>
                     {{#each factions}}
-                    <div class="media mb-2 faction-media" data-faction-id="{{faction.id}}" data-faction-name="{{faction.name}}" data-faction-tag="{{faction.tag}}" data-faction-color="{{default faction.color 0}}">
-                        <span class="media-text-icon mr-3">[{{faction.tag}}]</span>
+                    <div class="media mb-2 faction-media" data-faction-id="{{this.id}}" data-faction-name="{{this.name}}" data-faction-tag="{{this.tag}}" data-faction-color="{{default this.color 0}}">
+                        <span class="media-text-icon mr-3">[{{this.tag}}]</span>
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">
-                                {{#if (eq (default profile_of.displayedFaction -1) faction.id)}}
+                                {{#if (eq (default profile_of.displayedFaction -1) this.id)}}
                                 <i class="fas fa-eye mr-1 text-success" style="font-size: 0.75em;" title="{{i18n 'This is your currently displayed faction.'}}"></i>
                                 {{/if}}
                                 {{! eg "Pixelers (members: 100, ID: 1)" }}
-                                {{i18n '{0} (members: {1}, ID: {2})' faction.name faction.fetchMembers faction.id}}
+                                {{i18n '{0} (members: {1}, ID: {2})' this.name this.memberCount this.id}}
                             </h5>
                             <div class="mb-1 mt-2">
-                                <span class="text-muted">{{i18n 'Owner: {0}' faction.fetchOwner.name}}</span>
+                                <span class="text-muted">{{i18n 'Owner: {0}' this.owner}}</span>
                             </div>
                             <div>
-                                {{#if (eq (default profile_of.displayedFaction -1) faction.id)}}
+                                {{#if (eq (default profile_of.displayedFactionId -1) this.id)}}
                                 {{! makes the faction no longer the one displayed for the current user }}
                                 <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionRemoveDisplayed"><i class="fas fa-minus mr-1"></i>{{i18n 'Remove Displayed'}}</button>
                                 {{else}}
                                 {{! makes the faction the one displayed for the current user }}
                                 <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionSetDisplayed"><i class="fas fa-check mr-1"></i>{{i18n 'Set Displayed'}}</button>
                                 {{/if}}
-                                {{#if (eq faction.owner profile_of.id)}}
-                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionMembers" data-toggle="modal" data-target="#modal-member-list-{{faction.id}}"><i class="fas fa-users mr-1"></i>{{i18n 'Members'}}</button>
+                                {{#if (eq this.owner profile_of.name)}}
+                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionMembers" data-toggle="modal" data-target="#modal-member-list-{{this.id}}"><i class="fas fa-users mr-1"></i>{{i18n 'Members'}}</button>
                                 <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionEdit"><i class="fas fa-pencil-alt mr-1"></i>{{i18n 'Edit'}}</button>
                                 <button class="btn btn-danger btn-sm mr-1 mt-1 faction-action" data-action="factionDelete"><i class="fas fa-times mr-1"></i>{{i18n 'Delete'}}</button>
                                 {{else}}
@@ -314,12 +314,12 @@
 </main>
 {{#if requested_self}}
 {{#each factions}}
-{{#if (eq faction.owner profile_of.id)}}
-<div class="modal fade member-list-modal" id="modal-member-list-{{faction.id}}" data-faction-id="{{faction.id}}" tabindex="-1" role="dialog" aria-hidden="true">
+{{#if (eq this.owner profile_of.id)}}
+<div class="modal fade member-list-modal" id="modal-member-list-{{this.id}}" data-faction-id="{{faction.id}}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">{{i18n 'Members of {0} ([{1}])' faction.name faction.tag}}</h5>
+                <h5 class="modal-title">{{i18n 'Members of {0} ([{1}])' this.name this.tag}}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="{{i18n 'Close'}}">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -334,12 +334,12 @@
                         <div class="p-3">
                             {{! This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list. }}
                             {{! since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list }}
-                            {{#if (gt faction.fetchMembers 1)}}
-                            {{#each faction.fetchMembers}}
-                            {{#if (ne member.id profile_of.id)}}
-                            <div class="row member-row mb-1" data-member="{{member.name}}">
+                            {{#if (gt this.fetchMembers 1)}}
+                            {{#each this.fetchMembers}}
+                            {{#if (ne ../this.id profile_of.id)}}
+                            <div class="row member-row mb-1" data-member="{{../this.name}}">
                                 <div class="col-md-6">
-                                    <span><a href="/profile/{{member.name}}" target="_blank">{{member.name}}</a></span>
+                                    <span><a href="/profile/{{../this.name}}" target="_blank">{{../this.name}}</a></span>
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <button class="btn btn-sm btn-success faction-subaction" data-action="transfer">{{i18n 'Transfer Ownership'}}</button>
