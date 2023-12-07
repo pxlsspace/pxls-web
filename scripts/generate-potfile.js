@@ -113,20 +113,6 @@ for (const path of jsFiles) {
       stringCount++;
       poItems.set(id, item);
     }
-
-    // // push reference only if unique
-    // if (item.references.indexOf(path) === -1) {
-    //   const lastJs = item.references.indexOf(item.references.filter(r => r.endsWith('.js')).reverse()[0]);
-    //   if (path.endsWith('.js') && lastJs !== -1 && !item.references[lastJs].includes(' ')) {
-    //     item.references[lastJs] += ' ' + path;
-    //   } else {
-    //     item.references.push(path);
-    //   }
-    // }
-    //
-    // for (const comment of relevantComments) {
-    //   item.extractedComments.push(comment);
-    // }
   }
 
   // clear the strings array
