@@ -146,7 +146,6 @@ app.use('/', async (req, res, next) => {
       chatReportsOpenCount: data.chatReports.filter(r => !r.closed).length,
 
       helpers: {
-        factionById: (id) => data.user.factions.find(f => f.id === id),
         displayedFaction: () => data.user.factions.find(f => f.id === data.user.displayedFactionId),
 
         ...handebarsHelpers(poFile)
