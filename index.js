@@ -85,9 +85,9 @@ app.use('/', async (req, res, next) => {
       ...data,
       user: {
         ...data.user,
-        signupTimeFormatted: new Date(+data.user.signupTime).toLocaleString(),
-        banExpiryFormatted: new Date(+data.user.banExpiry).toLocaleString(),
-        chatBanExpiryFormatted: new Date(+data.user.chatBanExpiry).toLocaleString()
+        signupTimeFormatted: new Date(data.user.signupTime).toLocaleString(),
+        banExpiryFormatted: new Date(data.user.banExpiry).toLocaleString(),
+        chatBanExpiryFormatted: new Date(data.user.chatBanExpiry).toLocaleString()
       },
       isSelf: data.user.id === data.self.id,
       routeRoot: req.path,
