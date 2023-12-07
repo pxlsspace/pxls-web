@@ -1,11 +1,11 @@
 const path = require('path');
-const fs = require('fs');
 const http = require('http');
-const PO = require('pofile');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const { create } = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const express = require('express');
+
+const { listFiles, getLanguageData, i18n } = require('./utils');
 
 const app = express();
 const server = http.createServer(app);
@@ -142,60 +142,6 @@ async function sendErrorPage(req, res, code) {
 
     helpers: handebarsHelpers(poFile)
   });
-}
-
-function i18n(str, poFile, args) {
-  if (typeof poFile.items === 'undefined') {
-    console.trace(str, poFile.poFile, args);
-    return;
-  }
-  const item = poFile.items.find(i => i.msgid === str);
-  if (!item) {
-    console.warn(`No translation found for ${str}`);
-  }
-  str = (item && item.msgstr[0]) || str;
-  for (let i = 0; i < args.length; i++) {
-    str = str.replace(`{${i}}`, args[i]);
-  }
-  return str;
-}
-
-async function getLanguageData(req, res) {
-  const langCode = req.cookies['pxls-accept-language-override'] || 'en';
-  let poFile;
-  try {
-    poFile = await loadPO(path.join(__dirname, 'po', `Localization${langCode === 'en' ? '' : '_' + langCode}.po`));
-  } catch (e) {
-    console.error(e);
-    await sendErrorPage(req, res, 500);
-    return;
-  }
-  return { poFile, langCode };
-}
-
-const loadPO = (path) => new Promise((resolve, reject) => {
-  PO.load(path, (error, poFile) => {
-    if (error) {
-      reject(error);
-    } else {
-      resolve(poFile);
-    }
-  });
-});
-
-function listFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    if (fs.statSync(filePath).isDirectory()) {
-      listFiles(filePath, fileList);
-    } else {
-      fileList.push(filePath.replace(__dirname, '').replaceAll('\\', '/'));
-    }
-  });
-
-  return fileList;
 }
 
 server.listen(port, () => console.info('Listening at http://localhost:3000/'));
