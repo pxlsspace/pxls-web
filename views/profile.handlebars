@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{profile_of.name}} - Pxls</title>
+    <title>{{user.name}} - Pxls</title>
     <link rel="stylesheet" href="/profile/css/theme-purple.min.css">
     <link rel="stylesheet" href="/fontawesome-all.min.css">
     <link rel="stylesheet" href="/profile/css/views/index.css">
@@ -14,13 +14,13 @@
     <script src="/profile/js/bootstrap.bundle.min.js"></script>
     <script src="/crel.min.js"></script>
     <script src="/SLIDEIN.js"></script>
-    {{#if requested_self}}
+    {{#if isSelf}}
     {{! no reason to add even more network bloat. we only need spectrum if we're modifying factions and factions are only modifiable on our own profile. }}
     <link rel="stylesheet" href="/profile/css/spectrum.css">
     <script src="/profile/js/spectrum-min.js"></script>
     {{/if}}
 </head>
-<body data-palette="{{#if palette}}{{palette}}{{/if}}" data-faction-max-tag="{{max_faction_tag_length}}" data-faction-max-name="{{max_faction_name_length}}">
+<body data-palette="{{#if palette}}{{palette}}{{/if}}" data-faction-max-tag="{{maxFactionTagLength}}" data-faction-max-name="{{maxFactionNameLength}}">
 <nav class="navbar navbar-dark navbar-expand-md" role="nav">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -28,14 +28,14 @@
         </li>
         <li class="nav-item active">
             {{! eg "Alice's profile". Double singlequote is a java thing - needed if a replacement (such as this) contains a singlequote. }}
-            <a href="{{route_root}}" class="nav-link">{{i18n '{0}\'s Profile' profile_of.name}}</a>
+            <a href="{{routeRoot}}" class="nav-link">{{i18n '{0}\'s Profile' user.name}}</a>
         </li>
     </ul>
-    {{#if requesting_user}}
+    {{#if self}}
     <div class="my-2 my-lg-0">
         <div class="dropdown">
             <button class="navbar-text btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" id="btnNavUserDropdown">
-                <i class="fas fa-user-alt mr-1"></i>{{requesting_user.name}}
+                <i class="fas fa-user-alt mr-1"></i>{{self.name}}
             </button>
             <div class="dropdown-menu dropdown-menu-right" id="navUserDropdown" aria-labelledby="btnNavUserDropdown">
                 <a href="/profile?action=details" class="dropdown-item">{{i18n 'My Profile'}}</a>
@@ -48,22 +48,22 @@
 </nav>
 <main role="main" class="mb-3">
     <div class="container">
-        <h1>{{#if profile_of.displayedFactionId}}{{#with (displayedFaction)}}[{{tag}}] {{/with}}{{/if}}{{i18n '{0}\'s Profile' profile_of.name}}</h1>
+        <h1>{{#with (displayedFaction)}}[{{tag}}] {{/with}}{{i18n '{0}\'s Profile' user.name}}</h1>
         <hr>
         <div class="row">
             <div class="col-md-3">
                 <div class="list-group" id="tabsTriggers">
-                    <a href="{{route_root}}?action=details" data-action="details" class="list-group-item text-light active">
+                    <a href="{{routeRoot}}?action=details" data-action="details" class="list-group-item text-light active">
                         <i class="fas fa-id-card mr-2 d-none d-md-inline-block"></i>{{i18n 'Info'}}
                     </a>
-                    {{#if requested_self}}
-                    <a href="{{route_root}}?action=reports" class="list-group-item text-light" data-action="reports">
+                    {{#if isSelf}}
+                    <a href="{{routeRoot}}?action=reports" class="list-group-item text-light" data-action="reports">
                         <i class="fas fa-flag mr-2 d-none d-md-inline-block"></i>{{i18n 'Reports'}}
                     </a>
-                    <a href="{{route_root}}?action=factions" class="list-group-item text-light" data-action="factions">
+                    <a href="{{routeRoot}}?action=factions" class="list-group-item text-light" data-action="factions">
                         <i class="fas fa-users mr-2 d-none d-md-inline-block"></i>{{i18n 'Factions'}}
                     </a>
-                    <a href="{{route_root}}?action=data" class="list-group-item text-light" data-action="data">
+                    <a href="{{routeRoot}}?action=data" class="list-group-item text-light" data-action="data">
                         <i class="fas fa-key mr-2 d-none d-md-inline-block"></i>{{i18n 'Data'}}
                     </a>
                     {{/if}}
@@ -71,65 +71,73 @@
             </div>
             <div class="col-md-9 tab-content mt-3 mt-md-0" id="tabsWrapper">
                 <div id="tab-details" class="tab-pane text-center active" data-tab="details">
-                    {{#unless profile_of}}
+                    {{#unless user}}
                     <p class="text-warning text-center">{{i18n 'You must be logged in to view your profile.'}}</p>
                     {{else}}
-                    <h3>{{username}}</h3>
+                    <h3>{{user.username}}</h3>
                     <table class="inline-block">
                         <tbody>
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Registration Date'}}</th>
                             <td class="text-left">
-                                <time datetime={{isoTime profile_of.signupTime}}>
-                                    {{profile_of.signupTimeFormatted}}
+                                <time datetime={{isoTime user.signupTime}}>
+                                    {{user.signupTimeFormatted}}
                                 </time>
                             </td>
                         </tr>
-                        {{#unless snip_mode}}
+                        {{#unless snipMode}}
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Alltime Pixels'}}</th>
-                            <td class="text-left">{{profile_of.allTimePixelCount}}</td>
+                            <td class="text-left">{{user.pixelCountAllTime}}</td>
                         </tr>
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Current Canvas Pixels'}}</th>
-                            <td class="text-left">{{profile_of.pixelCount}}</td>
+                            <td class="text-left">{{user.pixelCount}}</td>
                         </tr>
                         {{/unless}}
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Discord Tag'}}</th>
-                            <td class="text-left">{{default profile_of.discordName "Not Set"}}</td>
+                            <td class="text-left">{{default user.discordName "Not Set"}}</td>
                         </tr>
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Faction'}}</th>
-                        <td class="text-left">{{#if profile_of.displayedFactionId}}{{#with (displayedFaction)}}[{{tag}}] {{name}} (ID: {{id}}){{/with}}{{else}}{{i18n 'None'}}{{/if}}</td>
+                            <td class="text-left">{{#if user.displayedFactionId}}{{#with (displayedFaction)}}[{{tag}}] {{name}} (ID: {{id}}){{/with}}{{else}}{{i18n 'None'}}{{/if}}</td>
                         </tr>
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Roles'}}</th>
-                            <td class="text-left">{{profile_of.getRolesString}}</td>
+                            <td class="text-left">
+                                {{#if user.roles}}
+                                <ul class="roles">
+                                    {{#each user.roles}}<li>{{#each this.badges}}<i class="{{this.cssIcon}}"></i> {{/each}}{{this.name}}</li>{{/each}}
+                                </ul>
+                                {{else}}
+                                <span class="text-muted">({{i18n 'None'}})</span>
+                                {{/if}}
+                            </td>
                         </tr>
-                        {{#if profile_of.isBanned}}
+                        {{#if user.isBanned}}
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Canvas Ban Expiry'}}</th>
                             <td class="text-left">
-                                {{#if profile_of.isPermaBanned}}
+                                {{#if user.isPermaBanned}}
                                 {{i18n 'Never'}}
                                 {{else}}
-                                <time datetime={{isoTime profile_of.getBanExpiryTime}}>
-                                    {{profile_of.getBanExpiryTimeFormatted}}
+                                <time datetime={{isoTime user.banExpiry}}>
+                                    {{user.banExpiryFormatted}}
                                 </time>
                                 {{/if}}
                             </td>
                         </tr>
                         {{/if}}
-                        {{#if profile_of.isChatbanned}}
+                        {{#if user.isChatBanned}}
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Chat Ban Expiry'}}</th>
                             <td class="text-left">
-                                {{#if profile_of.isPermaChatBanned}}
+                                {{#if user.isPermaChatBanned}}
                                 {{i18n 'Never'}}
                                 {{else}}
-                                <time datetime={{isoTime profile_of.getChatBanExpiryTime}}>
-                                    {{profile_of.getChatBanExpiryTimeFormatted}}
+                                <time datetime={{isoTime user.chatBanExpiry}}>
+                                    {{user.chatBanExpiryFormatted}}
                                 </time>
                                 {{/if}}
                             </td>
@@ -142,20 +150,20 @@
                     </div>
                     {{/unless}}
                 </div>
-                {{#if requested_self}}
+                {{#if isSelf}}
                 <div id="tab-reports" class="tab-pane" data-tab="reports">
-                    {{#unless profile_of}}
+                    {{#unless user}}
                     <p class="text-warning text-center">{{i18n 'You must be logged in to view your reports.'}}</p>
                     {{else}}
                     <h3 class="text-center">{{i18n 'Reports'}}</h3>
                     <div class="card collapseable mb-2">
                         <div class="card-header">
                             <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
-                            <span class="text-info">{{i18n 'Canvas Reports ({0}/{1} open)' canvas_reports_open_count canvas_reports_length }}</span>
+                            <span class="text-info">{{i18n 'Canvas Reports ({0}/{1} open)' canvasReportsOpenCount (len canvasReports)}}</span>
                         </div>
                         <div class="card-body p-0 body-collapse-target collapse">
                             <div class="p-3">
-                                {{#each canvas_reports}}
+                                {{#each canvasReports}}
                                 <div class="card collapseable mb-2">
                                     <div class="card-header">
                                         <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
@@ -172,13 +180,13 @@
                                     <div class="card-body p-0 body-collapse-target collapse">
                                         <div class="p-3">
                                             {{! eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC) }}
-                                            <h6>{{i18n 'Reported {0} on {1}' this.target this.time}}</h6>
-                                            <p>{{report.message}}</p>
+                                            <h6>{{i18n 'Reported {0} on {1}' this.target (localeDate this.time)}}</h6>
+                                            <p>{{this.message}}</p>
                                         </div>
                                     </div>
                                 </div>
                                 {{/each}}
-                                {{#unless canvas_reports}}
+                                {{#unless canvasReports}}
                                 <p>{{i18n 'There are no canvas reports to show.'}}</p>
                                 {{/unless}}
                             </div>
@@ -187,11 +195,11 @@
                     <div class="card collapseable mb-2">
                         <div class="card-header">
                             <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
-                            <span class="text-info">{{i18n 'Chat Reports ({0}/{1} open)' chat_reports_open_count chat_reports_length}}</span>
+                            <span class="text-info">{{i18n 'Chat Reports ({0}/{1} open)' chatReportsOpenCount (len chatReports)}}</span>
                         </div>
                         <div class="card-body p-0 body-collapse-target collapse">
                             <div class="p-3">
-                                {{#each chat_reports}}
+                                {{#each chatReports}}
                                 <div class="card collapseable mb-2">
                                     <div class="card-header">
                                         <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
@@ -205,13 +213,13 @@
                                     </div>
                                     <div class="card-body p-0 body-collapse-target collapse">
                                         <div class="p-3">
-                                            <h6>{{i18n 'Reported {0} on {1}' this.target this.time}}</h6>
+                                            <h6>{{i18n 'Reported {0} on {1}' this.target (localeDate this.time)}}</h6>
                                             <p>{{this.message}}</p>
                                         </div>
                                     </div>
                                 </div>
                                 {{/each}}
-                                {{#unless chat_reports}}
+                                {{#unless chatReports}}
                                 <p>{{i18n 'There are no chat reports to show.'}}</p>
                                 {{/unless}}
                             </div>
@@ -220,12 +228,12 @@
                     {{/unless}}
                 </div>
                 <div id="tab-factions" class="tab-pane" data-tab="factions">
-                    {{#unless profile_of}}
+                    {{#unless user}}
                     <p class="text-center text-warning">{{i18n 'You must be logged in to manage your factions.'}}</p>
                     {{else}}
-                        {{#if (or profile_of.isFactionRestricted profile_of.isBanned)}}
+                        {{#if (or user.isFactionRestricted user.isBanned)}}
                         <small class="text-danger m-0 p-0 d-block">
-                            {{#if profile_of.isFactionRestricted}}
+                            {{#if user.isFactionRestricted}}
                             {{i18n 'You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator.'}}
                             {{else}}
                             {{i18n 'You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator.'}}
@@ -233,11 +241,11 @@
                         </small>
                         {{/if}}
                     {{/unless}}
-                    {{#if (gt (default new_fac_min_pixels 0) requesting_user.pixelCountAllTime)}}
-                    <small class="text-warning m-0 p-0 d-block">{{i18n 'You must have at least {0} all-time pixels to create a faction.' (default new_fac_min_pixels 0)}}</small>
+                    {{#if (gt (default newFactionMinPixels 0) self.pixelCountAllTime)}}
+                    <small class="text-warning m-0 p-0 d-block">{{i18n 'You must have at least {0} all-time pixels to create a faction.' (default newFactionMinPixels 0)}}</small>
                     {{/if}}
                     <div class="mb-2">
-                        <button class="btn btn-success btn-sm mr-1 global-faction-action" data-action="factionCreate" {{#if (or (gt (default new_fac_min_pixels 0) requesting_user.pixelCountAllTime) profile_of.isFactionRestricted)}}disabled="disabled"{{/if}}><i class="fas fa-plus"></i> {{i18n 'Create'}}</button>
+                        <button class="btn btn-success btn-sm mr-1 global-faction-action" data-action="factionCreate" {{#if (or (gt (default newFactionMinPixels 0) self.pixelCountAllTime) user.isFactionRestricted)}}disabled="disabled"{{/if}}><i class="fas fa-plus"></i> {{i18n 'Create'}}</button>
                         <button class="btn btn-primary btn-sm mr-1 global-faction-action" data-toggle="modal" data-target="#modal-faction-search"><i class="fas fa-user-plus"></i> {{i18n 'Join'}}</button>
                     </div>
                     {{#each factions}}
@@ -245,24 +253,24 @@
                         <span class="media-text-icon mr-3">[{{this.tag}}]</span>
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">
-                                {{#if (eq ../profile_of.displayedFactionId this.id)}}
+                                {{#if (eq ../user.displayedFactionId this.id)}}
                                 <i class="fas fa-eye mr-1 text-success" style="font-size: 0.75em;" title="{{i18n 'This is your currently displayed faction.'}}"></i>
                                 {{/if}}
                                 {{! eg "Pixelers (members: 100, ID: 1)" }}
-                                {{i18n '{0} (members: {1}, ID: {2})' this.name this.memberCount this.id}}
+                                {{i18n '{0} (members: {1}, ID: {2})' this.name (len this.members) this.id}}
                             </h5>
                             <div class="mb-1 mt-2">
                                 <span class="text-muted">{{i18n 'Owner: {0}' this.ownerName}}</span>
                             </div>
                             <div>
-                                {{#if (eq ../profile_of.displayedFactionId this.id)}}
+                                {{#if (eq ../user.displayedFactionId this.id)}}
                                 {{! makes the faction no longer the one displayed for the current user }}
                                 <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionRemoveDisplayed"><i class="fas fa-minus mr-1"></i>{{i18n 'Remove Displayed'}}</button>
                                 {{else}}
                                 {{! makes the faction the one displayed for the current user }}
                                 <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionSetDisplayed"><i class="fas fa-check mr-1"></i>{{i18n 'Set Displayed'}}</button>
                                 {{/if}}
-                                {{#if (eq this.ownerId ../profile_of.id)}}
+                                {{#if (eq this.ownerId ../self.id)}}
                                 <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionMembers" data-toggle="modal" data-target="#modal-member-list-{{this.id}}"><i class="fas fa-users mr-1"></i>{{i18n 'Members'}}</button>
                                 <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionEdit"><i class="fas fa-pencil-alt mr-1"></i>{{i18n 'Edit'}}</button>
                                 <button class="btn btn-danger btn-sm mr-1 mt-1 faction-action" data-action="factionDelete"><i class="fas fa-times mr-1"></i>{{i18n 'Delete'}}</button>
@@ -278,7 +286,7 @@
                     {{/unless}}
                 </div>
                 <div id="tab-data" class="tab-pane text-center" data-tab="data">
-                    {{#unless profile_of}}
+                    {{#unless user}}
                     <p class="text-warning text-center">{{i18n 'You must be logged in to view your data.'}}</p>
                     {{else}}
                     <h3>{{i18n 'Log Keys'}}</h3>
@@ -312,9 +320,9 @@
         </div>
     </div>
 </main>
-{{#if requested_self}}
+{{#if isSelf}}
 {{#each factions}}
-{{#if (eq this.ownerId ../profile_of.id)}}
+{{#if (eq this.ownerId ../user.id)}}
 <div class="modal fade member-list-modal" id="modal-member-list-{{this.id}}" data-faction-id="{{this.id}}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -334,12 +342,12 @@
                         <div class="p-3">
                             {{! This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list. }}
                             {{! since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list }}
-                            {{#if (gt this.fetchMembers 1)}}
-                            {{#each this.fetchMembers}}
-                            {{#if (ne ../this.id ../../profile_of.id)}}
-                            <div class="row member-row mb-1" data-member="{{../this.name}}">
+                            {{#if (gt (len this.members) 1)}}
+                            {{#each this.members}}
+                            {{#if (ne this.id ../../self.id)}}
+                            <div class="row member-row mb-1" data-member="{{this.username}}">
                                 <div class="col-md-6">
-                                    <span><a href="/profile/{{../this.name}}" target="_blank">{{../this.name}}</a></span>
+                                    <span><a href="/profile/{{this.username}}" target="_blank">{{this.username}}</a></span>
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <button class="btn btn-sm btn-success faction-subaction" data-action="transfer">{{i18n 'Transfer Ownership'}}</button>

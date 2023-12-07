@@ -22,7 +22,10 @@ const filesInDist = listFiles(path.join('dist')).map(file => file.replace('dist/
 const handebarsHelpers = (poFile) => ({
   i18n: (str, ...args) => i18n(str, poFile, args),
   isoTime: (time) => new Date(time).toISOString(),
+  localeDate: (time) => new Date(time * 1000).toLocaleString(),
+  log: (...args) => console.debug(...args),
   default: (value, defaultValue) => value || defaultValue,
+  len: (value) => value.length,
   eq: (v1, v2) => v1 === v2,
   ne: (v1, v2) => v1 !== v2,
   lt: (v1, v2) => v1 < v2,
@@ -41,6 +44,7 @@ const proxy = createProxyMiddleware({
   target: 'http://localhost:4567',
   changeOrigin: true,
   selfHandleResponse: true,
+  logLevel: 'error',
   onProxyRes: async function (proxyRes, req, res) {
     if (proxyRes.statusCode >= 400) {
       await sendErrorPage(req, res, proxyRes.statusCode);
@@ -56,6 +60,7 @@ const wsProxy = createProxyMiddleware({
   target: 'ws://localhost:4567/ws',
   changeOrigin: true,
   ws: true,
+  logLevel: 'error',
   onProxyReq: function (proxyReq, req, res) {
     res.send();
   }
@@ -126,47 +131,19 @@ app.use('/', async (req, res, next) => {
       await sendErrorPage(req, res, 404);
       return;
     }
+    // console.dir(data, { depth: null });
     res.render('profile', {
-      profile_of: {
-        id: data.user.id,
-        name: data.user.username,
-        displayedFactionId: data.user.displayedFactionId,
-        signupTime: data.user.signupTime,
+      ...data,
+      user: {
+        ...data.user,
         signupTimeFormatted: new Date(+data.user.signupTime).toLocaleString(),
-        allTimePixelCount: data.user.pixelCountAllTime,
-        pixelCount: data.user.pixelCount,
-        discordName: data.user.discordName,
-        getRolesString: data.user.roleNames,
-        isBanned: data.user.isBanned,
-        isPermaBanned: data.user.isPermaBanned,
-        getBanExpiryTime: data.user.banExpiry,
-        getBanExpiryTimeFormatted: new Date(+data.user.banExpiry).toLocaleString(),
-        isChatbanned: data.user.isChatBanned,
-        isPermaChatbanned: data.user.isPermaChatBanned,
-        getChatBanExpiryTime: data.user.chatBanExpiry,
-        getChatBanExpiryTimeFormatted: new Date(+data.user.chatBanExpiry).toLocaleString(),
-        isFactionRestricted: data.user.isFactionRestricted
+        banExpiryFormatted: new Date(+data.user.banExpiry).toLocaleString(),
+        chatBanExpiryFormatted: new Date(+data.user.chatBanExpiry).toLocaleString()
       },
-      route_root: '/' + fileName,
-      username: data.user.username,
-      requested_self: data.self.id === data.user.id,
-      requesting_user: {
-        id: data.self.id,
-        name: data.self.username,
-        pixelCountAllTime: data.self.pixelCountAllTime
-      },
-      palette: data.palette,
-      max_faction_tag_length: data.maxFactionTagLength,
-      max_faction_name_length: data.maxFactionNameLength,
-      canvas_reports_open_count: data.canvasReports.length,
-      canvas_reports_length: data.canvasReports.length,
-      chat_reports_open_count: data.chatReports.length,
-      chat_reports_length: data.chatReports.length,
-      snip_mode: data.snipMode,
-      canvas_reports: data.canvasReports,
-      chat_reports: data.chatReports,
-      factions: data.user.factions,
-      keys: data.keys,
+      isSelf: data.user.id === data.self.id,
+      routeRoot: '/' + fileName,
+      canvasReportsOpenCount: data.canvasReports.filter(r => !r.closed).length,
+      chatReportsOpenCount: data.chatReports.filter(r => !r.closed).length,
 
       helpers: {
         factionById: (id) => data.user.factions.find(f => f.id === id),
