@@ -131,3 +131,6 @@ dist
 
 # IDEA
 .idea
+
+# Pxls-specific
+config.json5

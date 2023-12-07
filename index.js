@@ -6,15 +6,16 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const { create } = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const express = require('express');
+require('json5/lib/register');
 
 const { listFiles, getLanguageData, getLoadedPOFiles, handlebarsHelpers } = require('./utils');
+const config = require('./config.json5');
 
 const app = express();
 const server = http.createServer(app);
 const hbs = create({
   partialsDir: path.join(__dirname, 'views', 'partials')
 });
-const port = 3000;
 
 app.use(cookieParser());
 app.engine('handlebars', hbs.engine);
@@ -24,7 +25,7 @@ app.set('views', path.join(__dirname, 'views'));
 const filesInDist = listFiles(path.join('dist')).map(file => file.replace('dist/', ''));
 
 const proxy = createProxyMiddleware({
-  target: 'http://localhost:4567',
+  target: 'http://' + config.proxyTo,
   changeOrigin: true,
   selfHandleResponse: true,
   logLevel: 'error',
@@ -40,7 +41,7 @@ const proxy = createProxyMiddleware({
 });
 
 const wsProxy = createProxyMiddleware({
-  target: 'ws://localhost:4567/ws',
+  target: `ws://${config.proxyTo}/ws`,
   changeOrigin: true,
   ws: true,
   logLevel: 'error'
@@ -67,10 +68,10 @@ app.use('/', async (req, res, next) => {
 
       helpers: handlebarsHelpers(poFile)
     });
-  } else if (/^profile$|profile\/(?!js|css)/.test(relativePath)) {
+  } else if (/^\/profile(?:\/\w+)?$/.test(req.path)) {
     let profileName = relativePath.split('/')[1] || '';
     if (profileName !== '') profileName = '?username=' + profileName;
-    const dataRes = await proxyFetch('http://localhost:4567/api/v1/profile' + profileName);
+    const dataRes = await proxyFetch(`http://${config.proxyTo}/api/v1/profile` + profileName);
     if (dataRes.status >= 400) {
       await sendErrorPage(req, res, dataRes.status);
       return;
@@ -101,7 +102,7 @@ app.use('/', async (req, res, next) => {
     });
   } else if (filesInDist.includes(relativePath)) {
     res.sendFile(filePath);
-  } else if (req.path.startsWith('/ws')) {
+  } else if (req.path === '/ws') {
     wsProxy(req, res, next);
   } else {
     proxy(req, res, next);
@@ -124,8 +125,8 @@ async function sendErrorPage(req, res, code) {
   });
 }
 
-server.listen(port, () => {
-  console.info(`Listening at http://localhost:${port}/`);
+server.listen(config.port, () => {
+  console.info(`Listening at http://localhost:${config.port}/`);
 
   const rl = readline.createInterface({
     input: process.stdin,
