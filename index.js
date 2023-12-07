@@ -61,7 +61,7 @@ const wsProxy = createProxyMiddleware({
   target: 'ws://localhost:4567/ws',
   changeOrigin: true,
   ws: true,
-  logLevel: 'silent'
+  logLevel: 'error'
 });
 
 server.on('upgrade', wsProxy.upgrade);
