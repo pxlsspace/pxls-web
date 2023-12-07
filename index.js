@@ -68,7 +68,6 @@ app.use('/', async (req, res, next) => {
       helpers: handlebarsHelpers(poFile)
     });
   } else if (/^profile$|profile\/(?!js|css)/.test(relativePath)) {
-    // get profile data
     let profileName = relativePath.split('/')[1] || '';
     if (profileName !== '') profileName = '?username=' + profileName;
     const dataRes = await proxyFetch('http://localhost:4567/api/v1/profile' + profileName);
@@ -81,7 +80,6 @@ app.use('/', async (req, res, next) => {
       await sendErrorPage(req, res, 404);
       return;
     }
-    // console.dir(data, { depth: null });
     res.render('profile', {
       ...data,
       user: {
@@ -128,7 +126,7 @@ async function sendErrorPage(req, res, code) {
 
 server.listen(port, () => {
   console.info(`Listening at http://localhost:${port}/`);
-  // terminal
+
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
