@@ -81,7 +81,11 @@ function html() {
           ? file.basename.length
           : extIndex);
 
-      src(['public/**/*.html'], { read: true })
+      src([
+        'public/**/*.html',
+        '!public/auth_done.html',
+        '!public/mobile_captcha.html'
+      ], { read: true })
         .pipe(buffer())
         .pipe(translateHTML(file.path))
         .pipe(rename({ suffix: langcode }))
@@ -107,7 +111,11 @@ function minJS() {
 const SOURCE_FILES = [
   'public/**/*.js',
   '!public/**/*.min.js',
-  '!public/**/*-min.js'
+  '!public/**/*-min.js',
+  '!public/include/**/*.js',
+  '!public/profile/**/*.js',
+  '!public/SLIDEIN.js',
+  '!public/serviceWorker.js'
 ];
 
 function lint() {
@@ -177,7 +185,7 @@ function srcJS() {
           ? file.basename.length
           : extIndex);
 
-      src([...SOURCE_FILES, '!public/include/**/*.js', '!public/profile/**/*.js'], { read: false })
+      src(SOURCE_FILES, { read: false })
         .pipe(tap(file => {
           file.contents = browserify(file.path, { debug: isDevEnvironment })
             .bundle();
