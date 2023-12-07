@@ -52,6 +52,9 @@ exports.i18n = i18n;
 /** @type {Map<string, PO>} */
 const loadedPOFiles = new Map();
 
+// returning reference
+exports.getLoadedPOFiles = () => ({ loadedPOFiles });
+
 /**
  * Gets the language data for the request.
  * @param req The request object.

@@ -1,11 +1,13 @@
 const path = require('path');
 const http = require('http');
+const readline = require('readline');
+
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const { create } = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const express = require('express');
 
-const { listFiles, getLanguageData, handlebarsHelpers } = require('./utils');
+const { listFiles, getLanguageData, getLoadedPOFiles, handlebarsHelpers } = require('./utils');
 
 const app = express();
 const server = http.createServer(app);
@@ -124,4 +126,32 @@ async function sendErrorPage(req, res, code) {
   });
 }
 
-server.listen(port, () => console.info('Listening at http://localhost:3000/'));
+server.listen(port, () => {
+  console.info(`Listening at http://localhost:${port}/`);
+  // terminal
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    prompt: '> '
+  });
+  const exit = () => {
+    console.info('Goodbye');
+    server.close();
+    process.exit();
+  };
+  rl.on('SIGINT', () => exit);
+  rl.on('line', line => {
+    const args = line.split(' ');
+    const command = args[0].toLowerCase();
+    args.shift();
+
+    if (command === 'reload') {
+      const { loadedPOFiles } = getLoadedPOFiles();
+      loadedPOFiles.clear();
+      console.info('Cleared PO file cache');
+    } else if (command === 'exit') {
+      exit();
+    }
+    rl.prompt();
+  });
+});
