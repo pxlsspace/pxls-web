@@ -25,7 +25,6 @@ const handebarsHelpers = (poFile) => ({
   i18n: (str, ...args) => i18n(str, poFile, args),
   isoTime: (time) => new Date(time).toISOString(),
   localeDate: (time) => new Date(time * 1000).toLocaleString(),
-  log: (...args) => console.debug(...args),
   default: (value, defaultValue) => value || defaultValue,
   len: (value) => value.length,
   eq: (v1, v2) => v1 === v2,
