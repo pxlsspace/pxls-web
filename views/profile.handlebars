@@ -48,7 +48,7 @@
 </nav>
 <main role="main" class="mb-3">
     <div class="container">
-        <h1>{{#if profile_of.displayedFactionId}}[{{#with (factionById profile_of.displayedFactionId)}}{{tag}}{{/with}}] {{/if}}{{i18n '{0}\'s Profile' profile_of.name}}</h1>
+        <h1>{{#if profile_of.displayedFactionId}}{{#with (displayedFaction)}}[{{tag}}] {{/with}}{{/if}}{{i18n '{0}\'s Profile' profile_of.name}}</h1>
         <hr>
         <div class="row">
             <div class="col-md-3">
@@ -101,7 +101,7 @@
                         </tr>
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Faction'}}</th>
-                            <td class="text-left">{{#unless profile_of.displayedFaction}}[{{profile_of.fetchDisplayedFaction.tag}}] {{profile_of.fetchDisplayedFaction.name}} (ID: {{profile_of.fetchDisplayedFaction.id}}){{else}}{{i18n 'None'}}{{/unless}}</td>
+                        <td class="text-left">{{#if profile_of.displayedFactionId}}{{#with (displayedFaction)}}[{{tag}}] {{name}} (ID: {{id}}){{/with}}{{else}}{{i18n 'None'}}{{/if}}</td>
                         </tr>
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Roles'}}</th>
@@ -159,20 +159,20 @@
                                 <div class="card collapseable mb-2">
                                     <div class="card-header">
                                         <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
-                                        <span class="{{#if report.closed}}text-success{{else}}text-warning{{/if}}">
+                                        <span class="{{#if this.closed}}text-success{{else}}text-warning{{/if}}">
                                             {{#if this.closed}}
                                             {{! eg "Report on Bob (closed) }}
-                                            {{i18n 'Report on {0} (closed)' reportedName}}
+                                            {{i18n 'Report on {0} (closed)' this.target}}
                                             {{else}}
                                             {{! eg "Report on Bob (open) }}
-                                            {{i18n 'Report on {0} (open)' reportedName}}
+                                            {{i18n 'Report on {0} (open)' this.target}}
                                             {{/if}}
                                         </span>
                                     </div>
                                     <div class="card-body p-0 body-collapse-target collapse">
                                         <div class="p-3">
                                             {{! eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC) }}
-                                            <h6>{{i18n 'Reported {0} on {1}' reportedName report.time}}</h6>
+                                            <h6>{{i18n 'Reported {0} on {1}' this.target this.time}}</h6>
                                             <p>{{report.message}}</p>
                                         </div>
                                     </div>
@@ -195,18 +195,18 @@
                                 <div class="card collapseable mb-2">
                                     <div class="card-header">
                                         <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
-                                        <span class="{{#if report.closed}}text-success{{else}}text-warning{{/if}}">
-                                            {{#if report.closed}}
-                                            {{i18n 'Report on {0} (closed)' reportedName}}
+                                        <span class="{{#if this.closed}}text-success{{else}}text-warning{{/if}}">
+                                            {{#if this.closed}}
+                                            {{i18n 'Report on {0} (closed)' this.target}}
                                             {{else}}
-                                            {{i18n 'Report on {0} (open)' reportedName}}
+                                            {{i18n 'Report on {0} (open)' this.target}}
                                             {{/if}}
                                         </span>
                                     </div>
                                     <div class="card-body p-0 body-collapse-target collapse">
                                         <div class="p-3">
-                                            <h6>{{i18n 'Reported {0} on {1}' reportedName report.time}}</h6>
-                                            <p>{{report.report_message}}</p>
+                                            <h6>{{i18n 'Reported {0} on {1}' this.target this.time}}</h6>
+                                            <p>{{this.message}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -233,11 +233,11 @@
                         </small>
                         {{/if}}
                     {{/unless}}
-                    {{#if (gt (default new_fac_min_pixels 0) requesting_user_alltime_pixels)}}
+                    {{#if (gt (default new_fac_min_pixels 0) requesting_user.pixelCountAllTime)}}
                     <small class="text-warning m-0 p-0 d-block">{{i18n 'You must have at least {0} all-time pixels to create a faction.' (default new_fac_min_pixels 0)}}</small>
                     {{/if}}
                     <div class="mb-2">
-                        <button class="btn btn-success btn-sm mr-1 global-faction-action" data-action="factionCreate" {{#if (or (gt (default new_fac_min_pixels 0) requesting_user_alltime_pixels) profile_of.isFactionRestricted)}}disabled="disabled"{{/if}}><i class="fas fa-plus"></i> {{i18n 'Create'}}</button>
+                        <button class="btn btn-success btn-sm mr-1 global-faction-action" data-action="factionCreate" {{#if (or (gt (default new_fac_min_pixels 0) requesting_user.pixelCountAllTime) profile_of.isFactionRestricted)}}disabled="disabled"{{/if}}><i class="fas fa-plus"></i> {{i18n 'Create'}}</button>
                         <button class="btn btn-primary btn-sm mr-1 global-faction-action" data-toggle="modal" data-target="#modal-faction-search"><i class="fas fa-user-plus"></i> {{i18n 'Join'}}</button>
                     </div>
                     {{#each factions}}
@@ -245,24 +245,24 @@
                         <span class="media-text-icon mr-3">[{{this.tag}}]</span>
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">
-                                {{#if (eq (default profile_of.displayedFaction -1) this.id)}}
+                                {{#if (eq ../profile_of.displayedFactionId this.id)}}
                                 <i class="fas fa-eye mr-1 text-success" style="font-size: 0.75em;" title="{{i18n 'This is your currently displayed faction.'}}"></i>
                                 {{/if}}
                                 {{! eg "Pixelers (members: 100, ID: 1)" }}
                                 {{i18n '{0} (members: {1}, ID: {2})' this.name this.memberCount this.id}}
                             </h5>
                             <div class="mb-1 mt-2">
-                                <span class="text-muted">{{i18n 'Owner: {0}' this.owner}}</span>
+                                <span class="text-muted">{{i18n 'Owner: {0}' this.ownerName}}</span>
                             </div>
                             <div>
-                                {{#if (eq (default profile_of.displayedFactionId -1) this.id)}}
+                                {{#if (eq ../profile_of.displayedFactionId this.id)}}
                                 {{! makes the faction no longer the one displayed for the current user }}
                                 <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionRemoveDisplayed"><i class="fas fa-minus mr-1"></i>{{i18n 'Remove Displayed'}}</button>
                                 {{else}}
                                 {{! makes the faction the one displayed for the current user }}
                                 <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionSetDisplayed"><i class="fas fa-check mr-1"></i>{{i18n 'Set Displayed'}}</button>
                                 {{/if}}
-                                {{#if (eq this.owner profile_of.name)}}
+                                {{#if (eq this.ownerId ../profile_of.id)}}
                                 <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionMembers" data-toggle="modal" data-target="#modal-member-list-{{this.id}}"><i class="fas fa-users mr-1"></i>{{i18n 'Members'}}</button>
                                 <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionEdit"><i class="fas fa-pencil-alt mr-1"></i>{{i18n 'Edit'}}</button>
                                 <button class="btn btn-danger btn-sm mr-1 mt-1 faction-action" data-action="factionDelete"><i class="fas fa-times mr-1"></i>{{i18n 'Delete'}}</button>
@@ -294,8 +294,8 @@
                         <tbody>
                         {{#each keys}}
                         <tr>
-                            <td class="text-center pr-3 align-text-top">{{this.key}}</td>
-                            <td class="text-left"><code class="break">{{this.value}}</code></td>
+                            <td class="text-center pr-3 align-text-top">{{@key}}</td>
+                            <td class="text-left"><code class="break">{{this}}</code></td>
                             <td><button type="button" class="btn btn-primary text-light" data-action="copy-log-key"><i class="fas fa-clipboard-list"></i></button></td>
                         </tr>
                         {{/each}}
@@ -314,8 +314,8 @@
 </main>
 {{#if requested_self}}
 {{#each factions}}
-{{#if (eq this.owner profile_of.id)}}
-<div class="modal fade member-list-modal" id="modal-member-list-{{this.id}}" data-faction-id="{{faction.id}}" tabindex="-1" role="dialog" aria-hidden="true">
+{{#if (eq this.ownerId ../profile_of.id)}}
+<div class="modal fade member-list-modal" id="modal-member-list-{{this.id}}" data-faction-id="{{this.id}}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -336,7 +336,7 @@
                             {{! since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list }}
                             {{#if (gt this.fetchMembers 1)}}
                             {{#each this.fetchMembers}}
-                            {{#if (ne ../this.id profile_of.id)}}
+                            {{#if (ne ../this.id ../../profile_of.id)}}
                             <div class="row member-row mb-1" data-member="{{../this.name}}">
                                 <div class="col-md-6">
                                     <span><a href="/profile/{{../this.name}}" target="_blank">{{../this.name}}</a></span>

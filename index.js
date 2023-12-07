@@ -128,63 +128,49 @@ app.use('/', async (req, res, next) => {
     }
     res.render('profile', {
       profile_of: {
-        name: data.username,
-        displayedFactionId: data.displayedFactionId,
-        signupTime: data.signupTime,
-        signupTimeFormatted: new Date(+data.signupTime).toLocaleString(),
-        allTimePixelCount: data.pixelCountAllTime,
-        pixelCount: data.pixelCount,
-        discordName: data.discordName,
-        getRolesString: data.roleNames,
-        isBanned: data.isBanned,
-        isPermaBanned: data.isPermaBanned,
-        getBanExpiryTime: data.banExpiry,
-        getBanExpiryTimeFormatted: new Date(+data.banExpiry).toLocaleString(),
-        isChatbanned: data.isChatBanned,
-        isPermaChatbanned: data.isPermaChatBanned,
-        getChatBanExpiryTime: data.chatBanExpiry,
-        getChatBanExpiryTimeFormatted: new Date(+data.chatBanExpiry).toLocaleString(),
-        isFactionRestricted: data.isFactionRestricted
+        id: data.user.id,
+        name: data.user.username,
+        displayedFactionId: data.user.displayedFactionId,
+        signupTime: data.user.signupTime,
+        signupTimeFormatted: new Date(+data.user.signupTime).toLocaleString(),
+        allTimePixelCount: data.user.pixelCountAllTime,
+        pixelCount: data.user.pixelCount,
+        discordName: data.user.discordName,
+        getRolesString: data.user.roleNames,
+        isBanned: data.user.isBanned,
+        isPermaBanned: data.user.isPermaBanned,
+        getBanExpiryTime: data.user.banExpiry,
+        getBanExpiryTimeFormatted: new Date(+data.user.banExpiry).toLocaleString(),
+        isChatbanned: data.user.isChatBanned,
+        isPermaChatbanned: data.user.isPermaChatBanned,
+        getChatBanExpiryTime: data.user.chatBanExpiry,
+        getChatBanExpiryTimeFormatted: new Date(+data.user.chatBanExpiry).toLocaleString(),
+        isFactionRestricted: data.user.isFactionRestricted
       },
       route_root: '/' + fileName,
-      username: data.username,
-      requested_self: true,
+      username: data.user.username,
+      requested_self: data.self.id === data.user.id,
       requesting_user: {
-        name: 'Vanilla'
+        id: data.self.id,
+        name: data.self.username,
+        pixelCountAllTime: data.self.pixelCountAllTime
       },
-      palette: 'FFFFFF,C2CBD4,858D98,4B4F58,22272D,000000,38271D,6C422C,BC7541,FFB27F,FFD6BF,FEB2D9,F854CF,C785F3,9C29BC,562972,1E1E5B,153FA2,1C95DF,A0E8FF,17A8A3,226677,094C45,278242,43C91E,B7F954,FFFFAF,FAE70F,FEA815,EA5B15,5A0400,990700,D81515,FF635E',
-      max_faction_tag_length: 5,
-      max_faction_name_length: 20,
-      canvas_reports_open_count: 0,
-      canvas_reports_length: 0,
-      chat_reports_open_count: 0,
-      chat_reports_length: 0,
-      snip_mode: false,
-      reportedName: 'REPORTEDNAME', // -snip- if snip_mode
-      canvas_reports: [
-        {
-          closed: false,
-          time: 0,
-          message: 'REPORTMESSAGE'
-        }
-      ],
-      chat_reports: [
-        {
-          closed: false,
-          time: 0,
-          report_message: 'REPORTMESSAGE'
-        }
-      ],
-      factions: data.factions,
-      keys: [
-        {
-          key: 'KEY',
-          value: 'VALUE'
-        }
-      ],
+      palette: data.palette,
+      max_faction_tag_length: data.maxFactionTagLength,
+      max_faction_name_length: data.maxFactionNameLength,
+      canvas_reports_open_count: data.canvasReports.length,
+      canvas_reports_length: data.canvasReports.length,
+      chat_reports_open_count: data.chatReports.length,
+      chat_reports_length: data.chatReports.length,
+      snip_mode: data.snipMode,
+      canvas_reports: data.canvasReports,
+      chat_reports: data.chatReports,
+      factions: data.user.factions,
+      keys: data.keys,
 
       helpers: {
-        factionById: (id) => data.factions.find(f => f.id === id),
+        factionById: (id) => data.user.factions.find(f => f.id === id),
+        displayedFaction: () => data.user.factions.find(f => f.id === data.user.displayedFactionId),
 
         ...handebarsHelpers(poFile)
       }
