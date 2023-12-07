@@ -248,7 +248,7 @@
                         <button class="btn btn-success btn-sm mr-1 global-faction-action" data-action="factionCreate" {{#if (or (gt (default newFactionMinPixels 0) self.pixelCountAllTime) user.isFactionRestricted)}}disabled="disabled"{{/if}}><i class="fas fa-plus"></i> {{i18n 'Create'}}</button>
                         <button class="btn btn-primary btn-sm mr-1 global-faction-action" data-toggle="modal" data-target="#modal-faction-search"><i class="fas fa-user-plus"></i> {{i18n 'Join'}}</button>
                     </div>
-                    {{#each factions}}
+                    {{#each user.factions}}
                     <div class="media mb-2 faction-media" data-faction-id="{{this.id}}" data-faction-name="{{this.name}}" data-faction-tag="{{this.tag}}" data-faction-color="{{default this.color 0}}">
                         <span class="media-text-icon mr-3">[{{this.tag}}]</span>
                         <div class="media-body">
@@ -281,7 +281,7 @@
                         </div>
                     </div>
                     {{/each}}
-                    {{#unless factions}}
+                    {{#unless user.factions}}
                     <p class="text-center text-warning">{{i18n 'You are not in any factions yet!'}}</p>
                     {{/unless}}
                 </div>
