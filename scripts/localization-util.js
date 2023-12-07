@@ -47,7 +47,9 @@ const {
   ThrowStatement,
   SequenceExpression,
   ContinueStatement,
-  ArrayPattern
+  ArrayPattern,
+  MethodDefinition,
+  Super
 } = esprima.Syntax;
 
 function isGettextCall(callExpression) {
@@ -141,6 +143,7 @@ function findTranslationCalls(expression) {
         .map(findTranslationCalls)
         .flat();
     case Property:
+    case MethodDefinition:
       return findTranslationCalls(expression.value);
     case ThrowStatement:
     case ReturnStatement:
@@ -172,6 +175,7 @@ function findTranslationCalls(expression) {
     case BreakStatement:
     case ContinueStatement:
     case ArrayPattern:
+    case Super:
       return [];
     default:
       console.debug(`Unknown expression type: ${expression.type}`);

@@ -1,5 +1,4 @@
-#!/usr/bin/bash
-for localization in  po/*.po
+for localization in ../po/*.po
 do
-    msgmerge -N -U --no-wrap $localization po/Localization.pot
+    msgmerge -N -U --no-wrap $localization ../po/Localization.pot
 done
