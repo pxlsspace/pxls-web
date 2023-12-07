@@ -49,6 +49,9 @@ function i18n(str, poFile, args) {
 
 exports.i18n = i18n;
 
+/** @type {Map<string, PO>} */
+const loadedPOFiles = new Map();
+
 /**
  * Gets the language data for the request.
  * @param req The request object.
@@ -56,11 +59,25 @@ exports.i18n = i18n;
  */
 async function getLanguageData(req) {
   const langCode = req.cookies['pxls-accept-language-override'] || 'en';
-  const poFile = await loadPO(path.join(__dirname, 'po', `Localization${langCode === 'en' ? '' : '_' + langCode}.po`));
+  const poFile = await getPO(langCode);
   return { poFile, langCode };
 }
 
 exports.getLanguageData = getLanguageData;
+
+/**
+ * Gets the PO file for the language code.
+ * @param langCode The language code.
+ * @returns {Promise<PO>} The PO file.
+ */
+async function getPO(langCode) {
+  if (loadedPOFiles.has(langCode)) {
+    return loadedPOFiles.get(langCode);
+  }
+  const poFile = await loadPO(path.join(__dirname, 'po', `Localization${langCode === 'en' ? '' : '_' + langCode}.po`));
+  loadedPOFiles.set(langCode, poFile);
+  return poFile;
+}
 
 /**
  * Loads a PO file.
@@ -80,3 +97,23 @@ function loadPO(path) {
 }
 
 exports.loadPO = loadPO;
+
+exports.handlebarsHelpers = (poFile) => ({
+  i18n: (str, ...args) => i18n(str, poFile, args),
+  isoTime: (time) => new Date(time).toISOString(),
+  localeDate: (time) => new Date(time * 1000).toLocaleString(),
+  default: (value, defaultValue) => value || defaultValue,
+  len: (value) => value.length,
+  eq: (v1, v2) => v1 === v2,
+  ne: (v1, v2) => v1 !== v2,
+  lt: (v1, v2) => v1 < v2,
+  gt: (v1, v2) => v1 > v2,
+  lte: (v1, v2) => v1 <= v2,
+  gte: (v1, v2) => v1 >= v2,
+  and() {
+    return Array.prototype.every.call(arguments, Boolean);
+  },
+  or() {
+    return Array.prototype.slice.call(arguments, 0, -1).some(Boolean);
+  }
+});
