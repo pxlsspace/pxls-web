@@ -2,9 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
 "POT-Creation-Date: 2023-12-07T03:58:47.363Z\n"
+"PO-Revision-Date: 2023-12-08 20:44+0000\n"
+"Last-Translator: Mikarific <mikerific2@gmail.com>\n"
+"Language-Team: Toki Pona <https://weblate.pxls.space/projects/pxls-space/"
+"pxls-web/tok/>\n"
 "Language: tok\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.2.1\n"
 
 #: ../views/404.handlebars
 #: ../views/404.handlebars
@@ -12,12 +18,12 @@ msgstr ""
 #: ../views/profile.handlebars
 #: ../public/include/user.js
 msgid "My Profile"
-msgstr ""
+msgstr "lipu mi"
 
 #: ../views/404.handlebars
 #: ../views/profile.handlebars
 msgid "My Factions"
-msgstr ""
+msgstr "kulupu mi"
 
 #.  HTTP status code name 
 #: ../views/404.handlebars
@@ -27,6 +33,8 @@ msgstr ""
 #: ../views/404.handlebars
 msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
 msgstr ""
+"lipu ni li jo e ijo ala. ni li powe la, sina ken toki tawa jan pali pi musi "
+"Pxls."
 
 #.  links to the homepage (the app itself) 
 #: ../views/404.handlebars
@@ -55,81 +63,84 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Place pixels with people to create art"
-msgstr ""
+msgstr "o pana e leko li pali e sitelen lon poka jan ante"
 
 #: ../views/index.handlebars
 msgid "Lost connection to server, reconnecting..."
-msgstr ""
+msgstr "mi ken ala toki tawa ilo la, mi toki sin..."
 
 #: ../views/index.handlebars
 msgid "Loading Heatmap (press <kbd>H</kbd> to cancel)"
 msgstr ""
+"sitelen seli li kama lon (sina wile ala la, o kepeken e nena <kbd>H</kbd>)"
 
 #: ../views/index.handlebars
 msgid "Loading Virginmap (press <kbd>X</kbd> to cancel)"
 msgstr ""
+"sitelen pi leko ala li kama lon (sina wile ala la, o kepeken e nena "
+"<kbd>X</kbd>)"
 
 #: ../views/index.handlebars
 msgid "Logout"
-msgstr ""
+msgstr "o tawa"
 
 #: ../views/index.handlebars
 msgid "Canvas:"
-msgstr ""
+msgstr "sitelen ni:"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "N/A"
-msgstr ""
+msgstr "ala"
 
 #: ../views/index.handlebars
 msgid "All Time:"
-msgstr ""
+msgstr "sitelen ale:"
 
 #: ../views/index.handlebars
 msgid "Loading online user count&hellip;"
-msgstr ""
+msgstr "nanpa jan li kama lon&hellip;"
 
 #: ../views/index.handlebars
 #: ../public/admin/admin.js
 #: ../public/include/lookup.js
 msgid "Pixels"
-msgstr ""
+msgstr "leko"
 
 #: ../views/index.handlebars
 msgid "Undo"
-msgstr ""
+msgstr "o weka e leko sina"
 
 #: ../views/index.handlebars
 msgid "You are not signed in.&nbsp;<a href=\"#\">Sign in with...</a>"
-msgstr ""
+msgstr "sina jo ala e lipu jan.&nbsp;<a href=\"#\">o jo e lipu jan...</a>"
 
 #: ../views/index.handlebars
 msgid "Loading..."
-msgstr ""
+msgstr "mi kama lon..."
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "Sign up"
-msgstr ""
+msgstr "o jo e lipu jan"
 
 #: ../views/index.handlebars
 msgid "Pick a username"
-msgstr ""
+msgstr "o pana e nimi sina tawa mi"
 
 #: ../views/index.handlebars
 msgid "Username:"
-msgstr ""
+msgstr "nimi sina:"
 
 #: ../views/index.handlebars
 msgid "Discord Tag (Optional):"
-msgstr ""
+msgstr "sina wile la, nimi sina pi ilo Siko:"
 
 #: ../views/index.handlebars
 msgid "Drag and drop template image"
-msgstr ""
+msgstr "o pana e ilo sitelen tawa mi"
 
 #: ../views/index.handlebars
 msgid "Exit"
@@ -138,49 +149,49 @@ msgstr ""
 #: ../views/index.handlebars
 #: ../views/profile.handlebars
 msgid "Info"
-msgstr ""
+msgstr "sona"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "Close Panel"
-msgstr ""
+msgstr "o weka e lipu ni"
 
 #: ../views/index.handlebars
 #: ../public/include/chat.js
 msgid "Chat"
-msgstr ""
+msgstr "poki toki"
 
 #: ../views/index.handlebars
 msgid "Pings"
-msgstr ""
+msgstr "mu tawa sina"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "Settings"
-msgstr ""
+msgstr "ante"
 
 #: ../views/index.handlebars
 msgid "Jump To Bottom"
-msgstr ""
+msgstr "o lon anpa"
 
 #: ../views/index.handlebars
 msgid "Replying to"
-msgstr ""
+msgstr "o toki tawa jan"
 
 #: ../views/index.handlebars
 #: ../public/include/chat.js
 msgid "On"
-msgstr ""
+msgstr "toki ni li mu"
 
 #: ../views/index.handlebars
 msgid "Emoji"
-msgstr ""
+msgstr "sitelen Emosi"
 
 #: ../views/index.handlebars
 msgid "Search"
-msgstr ""
+msgstr "o alasa"
 
 #: ../views/index.handlebars
 msgid "keybinds;keys;keyboard;hotkeys"
@@ -188,16 +199,16 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Keybinds"
-msgstr ""
+msgstr "ilo nena"
 
 #: ../views/index.handlebars
 msgid "general"
-msgstr ""
+msgstr "ijo"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "General"
-msgstr ""
+msgstr "ijo"
 
 #: ../views/index.handlebars
 msgid "move;moving;panning;drag"
@@ -206,6 +217,7 @@ msgstr ""
 #: ../views/index.handlebars
 msgid "Mouse/arrows/wasd to pan"
 msgstr ""
+"sina wile tawa supa la, sina ken kepeken e ilo misa e ilo ←→↑↓ e ilo WASD."
 
 #: ../views/index.handlebars
 msgid "mousewheel;zooming"
@@ -213,7 +225,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Scroll/pinch to zoom"
-msgstr ""
+msgstr "sina wile tawa suli la, sina ken tawa sike e nena lon ilo misa."
 
 #: ../views/index.handlebars
 msgid "scroll;zooming"
@@ -222,14 +234,18 @@ msgstr ""
 #: ../views/index.handlebars
 msgid "<kbd>+</kbd>/<kbd>-</kbd> or <kbd>Q</kbd>/<kbd>E</kbd> to zoom"
 msgstr ""
+"nena <kbd>+</kbd>/nena <kbd>-</kbd> en nena <kbd>Q</kbd>/nena <kbd>E</kbd> "
+"li ken tawa suli."
 
 #: ../views/index.handlebars
 msgid "lookups"
-msgstr ""
+msgstr "alasa"
 
 #: ../views/index.handlebars
 msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
 msgstr ""
+"sina kepeken e nena <kbd>Shift</kbd> e ilo misa la, sina ken alasa e jan pi "
+"pali leko."
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
@@ -238,7 +254,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>G</kbd> to toggle grid"
-msgstr ""
+msgstr "nena <kbd>G</kbd> la, ilo palisa li kama lon."
 
 #: ../views/index.handlebars
 msgid "close;information shown;information hidden;info shown;info hidden;hide information;show information"
@@ -246,7 +262,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>I</kbd> to open info"
-msgstr ""
+msgstr "nena <kbd>I</kbd> la, lipu sona li kama lon."
 
 #: ../views/index.handlebars
 msgid "close;settings hidden;settings shown;hide settings;show settings"
@@ -254,7 +270,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>T</kbd> to open settings"
-msgstr ""
+msgstr "nena <kbd>T</kbd> la, lipu ante li kama lon."
 
 #: ../views/index.handlebars
 msgid "close;chat hidden;chat shown;hide chat;show chat"
@@ -262,7 +278,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>B</kbd> to open chat"
-msgstr ""
+msgstr "nena <kbd>B</kbd> la, poki toki li kama lon."
 
 #: ../views/index.handlebars
 msgid "canvas locked;move;moving;zoom;zooming"
@@ -270,7 +286,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>L</kbd> to toggle locking panning of the canvas"
-msgstr ""
+msgstr "nena <kbd>L</kbd> la, sitelen li ken ala tawa."
 
 #: ../views/index.handlebars
 msgid "take screenshot;image;download;picture;canvas"
@@ -278,7 +294,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>P</kbd> to take a snapshot"
-msgstr ""
+msgstr "nena <kbd>P</kbd> la, sina lanpan e sitelen."
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
@@ -287,7 +303,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>H</kbd> to toggle heatmap"
-msgstr ""
+msgstr "nena <kbd>H</kbd> la, sina lon e sitelen seli."
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
@@ -296,7 +312,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>X</kbd> to toggle virginmap"
-msgstr ""
+msgstr "nena <kbd>X</kbd> la, sina lon e sitelen pi leko ala."
 
 #: ../views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;wipe;clean;"
@@ -304,7 +320,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>O</kbd> to clear heatmap"
-msgstr ""
+msgstr "nena <kbd>O</kbd> la, sina weka e sona pi sitelen seli."
 
 #: ../views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;wipe;clean;"
@@ -312,7 +328,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>U</kbd> to clear virginmap"
-msgstr ""
+msgstr "nena <kbd>U</kbd> la, sina weka e sona pi sitelen pi leko ala."
 
 #: ../views/index.handlebars
 msgid "next color;previous color"
@@ -320,7 +336,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>J</kbd>/<kbd>K</kbd> to cycle through palette colors"
-msgstr ""
+msgstr "nena <kbd>J</kbd>/<kbd>K</kbd> la, sina ante e kule leko."
 
 #: ../views/index.handlebars
 msgid "current coordinates;coords"
@@ -328,7 +344,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>C</kbd> to copy link of moused-over coordinates"
-msgstr ""
+msgstr "nena <kbd>C</kbd> la, sina lanpan e ilo linluwi pi lon sina."
 
 #: ../views/index.handlebars
 msgid "cancel selection"
@@ -336,7 +352,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>ESC</kbd> to deselect current pixel"
-msgstr ""
+msgstr "nena <kbd>ESC</kbd> la, sina jo ala e kule leko."
 
 #: ../views/index.handlebars
 msgid "recenter;jump;center on template;guides;focus"
@@ -344,7 +360,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>R</kbd> to center the board on the current template"
-msgstr ""
+msgstr "nena <kbd>R</kbd> la, sina lukin e ilo sitelen sina."
 
 #: ../views/index.handlebars
 msgid "templates;guides"
@@ -353,7 +369,7 @@ msgstr ""
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "Template"
-msgstr ""
+msgstr "ilo sitelen"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
@@ -362,11 +378,11 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>Page Up</kbd> to increase opacity"
-msgstr ""
+msgstr "nena <kbd>Page Up</kbd> la, sina suli e lon pi ilo sitelen sina."
 
 #: ../views/index.handlebars
 msgid "<kbd>Page Down</kbd> to decrease opacity"
-msgstr ""
+msgstr "nena <kbd>Page Down</kbd> la, sina lili e lon pi ilo sitelen sina."
 
 #: ../views/index.handlebars
 msgid "hidden;shown;hide;show"
@@ -375,10 +391,14 @@ msgstr ""
 #: ../views/index.handlebars
 msgid "<kbd>V</kbd> to toggle visibility"
 msgstr ""
+"nena <kbd>V</kbd> la, sina weka e ilo sitelen sina anu lon e ilo sitelen "
+"sina."
 
 #: ../views/index.handlebars
 msgid "Note: These values are based on QWERTY keyboards. For other layouts, use the keys corresponding to the same position on a QWERTY keyboard."
 msgstr ""
+"IJO SULI: nasin ni li nasin pi ilo pi nena mute pi nasin QWERTY. sina jo e "
+"ilo ante pi nena mute la, ijo li lon sama pi nasin QWERTY."
 
 #: ../views/index.handlebars
 msgid "templates;overlays;guides"
@@ -394,11 +414,13 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Use template"
-msgstr ""
+msgstr "o kepeken e ilo sitelen"
 
 #: ../views/index.handlebars
 msgid "Hold down <kbd>Ctrl</kbd> (or <kbd>Option</kbd> on mac) to drag the template around"
 msgstr ""
+"sina wile tawa supa e ilo sitelen la, o awen kepeken e nena <kbd>Ctrl</kbd> ("
+"sina kepeken e ilo MacOS la, o kepeken e nena <kbd>Option</kbd>)"
 
 #: ../views/index.handlebars
 msgid "template title;template name;tab name;tab title;title="
@@ -406,7 +428,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Title:"
-msgstr ""
+msgstr "nimi pi ilo sitelen:"
 
 #: ../views/index.handlebars
 msgid "template location source;template source URL;template URL;template="
@@ -414,7 +436,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "URL:"
-msgstr ""
+msgstr "tan pi ilo sitelen (ilo linluwi):"
 
 #: ../views/index.handlebars
 msgid "template position;template x;template y;template location; template vertical; template horizontal;ox=;oy="
@@ -422,11 +444,11 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Horizontal position:"
-msgstr ""
+msgstr "nanpa X pi ilo sitelen:"
 
 #: ../views/index.handlebars
 msgid "Vertical position:"
-msgstr ""
+msgstr "nanpa Y pi ilo sitelen:"
 
 #: ../views/index.handlebars
 msgid "template width;tw="
@@ -434,12 +456,12 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Width:"
-msgstr ""
+msgstr "nanpa suli pi ilo sitelen:"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "Reset"
-msgstr ""
+msgstr "o sin"
 
 #: ../views/index.handlebars
 msgid "template style;custom template"
@@ -447,39 +469,39 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Style:"
-msgstr ""
+msgstr "nasin pi ilo sitelen:"
 
 #: ../views/index.handlebars
 msgid "Use Source Style"
-msgstr ""
+msgstr "nasin ala"
 
 #: ../views/index.handlebars
 msgid "1-to-1"
-msgstr ""
+msgstr "nasin pi nanpa wan"
 
 #: ../views/index.handlebars
 msgid "1-to-1 (keep incorrect colors)"
-msgstr ""
+msgstr "nasin pi nanpa wan (o awen e kule powe)"
 
 #: ../views/index.handlebars
 msgid "Dotted (Small, 1:2)"
-msgstr ""
+msgstr "nasin sike (lili, 1:2)"
 
 #: ../views/index.handlebars
 msgid "Dotted (Big, 2:2)"
-msgstr ""
+msgstr "nasin sike (suli, 2:2)"
 
 #: ../views/index.handlebars
 msgid "Symbols"
-msgstr ""
+msgstr "nasin pi sitelen musi"
 
 #: ../views/index.handlebars
 msgid "Numbers"
-msgstr ""
+msgstr "nasin nanpa"
 
 #: ../views/index.handlebars
 msgid "Custom…"
-msgstr ""
+msgstr "nasin sina…"
 
 #: ../views/index.handlebars
 msgid "template style source;template style URL;custom style URL;custom template"
@@ -487,7 +509,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Custom style URL:"
-msgstr ""
+msgstr "tan pi nasin pi ilo sitelen (ilo linluwi):"
 
 #: ../views/index.handlebars
 msgid "template conversion;template palette conversion;convert to palette"
@@ -495,15 +517,15 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Color Conversion Mode:"
-msgstr ""
+msgstr "nasin pi ante kule:"
 
 #: ../views/index.handlebars
 msgid "Unconverted"
-msgstr ""
+msgstr "o ante ala e kule"
 
 #: ../views/index.handlebars
 msgid "Nearest Custom"
-msgstr ""
+msgstr "o ante e kule"
 
 #: ../views/index.handlebars
 msgid "template transparency;template opacity;oo="
@@ -511,7 +533,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Opacity:"
-msgstr ""
+msgstr "lon pi ilo sitelen:"
 
 #: ../views/index.handlebars
 msgid "ui;interface"
@@ -519,7 +541,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "UI Settings"
-msgstr ""
+msgstr "ante lukin"
 
 #: ../views/index.handlebars
 msgid "language override;text"
@@ -527,31 +549,31 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Language override:"
-msgstr ""
+msgstr "o kepeken e toki ni:"
 
 #: ../views/index.handlebars
 msgid "Use Browser Language"
-msgstr ""
+msgstr "toki pi ilo sina"
 
 #: ../views/index.handlebars
 msgid "English"
-msgstr ""
+msgstr "toki Inli"
 
 #: ../views/index.handlebars
 msgid "French"
-msgstr ""
+msgstr "toki Kanse"
 
 #: ../views/index.handlebars
 msgid "Russian"
-msgstr ""
+msgstr "toki Losi"
 
 #: ../views/index.handlebars
 msgid "Bulgarian"
-msgstr ""
+msgstr "toki Pokasi"
 
 #: ../views/index.handlebars
 msgid "Swedish"
-msgstr ""
+msgstr "toki Sensa"
 
 #: ../views/index.handlebars
 msgid "themes;look;stylesheets;visuals"
@@ -559,11 +581,11 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Theme:"
-msgstr ""
+msgstr "lukin lipu:"
 
 #: ../views/index.handlebars
 msgid "Default"
-msgstr ""
+msgstr "walo"
 
 #: ../views/index.handlebars
 msgid "hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden"
@@ -571,7 +593,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Show reticule"
-msgstr ""
+msgstr "o lon e lukin pi leko kama lon"
 
 #: ../views/index.handlebars
 msgid "hide cursor;cursor shown;cursor hidden"
@@ -579,7 +601,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Show cursor"
-msgstr ""
+msgstr "o lon e lukin pi kule sina"
 
 #: ../views/index.handlebars
 msgid "darkness filter"
@@ -587,15 +609,15 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Enable color brightness"
-msgstr ""
+msgstr "ken pi ante pimeja"
 
 #: ../views/index.handlebars
 msgid "Warning: Known to cause fuzziness in Chrome on some Mac/Linux installs"
-msgstr ""
+msgstr "IJO SULI: sina kepeken e ilo MacOS anu ilo Linux la, ni li ken nasa."
 
 #: ../views/index.handlebars
 msgid "Color brightness:"
-msgstr ""
+msgstr "pimeja kule:"
 
 #: ../views/index.handlebars
 msgid "keep current selected;keep curent color;place"
@@ -603,7 +625,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Deselect color after placing"
-msgstr ""
+msgstr "sina pana e leko la, o jo ala e kule"
 
 #: ../views/index.handlebars
 msgid "mousewheel;palette scrolling"
@@ -611,7 +633,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Enable scrolling on the palette to switch colors"
-msgstr ""
+msgstr "sina ken tawa e kule kepeken ilo misa"
 
 #: ../views/index.handlebars
 msgid "reverse scrolling;mousewheel;palette scrolling;enable scrolling on the palette to switch colors"
@@ -619,7 +641,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Invert scroll direction"
-msgstr ""
+msgstr "o ante e tawa poka kule"
 
 #: ../views/index.handlebars
 msgid "indexed colors;palette indicies"
@@ -627,7 +649,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Add numbers to palette entries"
-msgstr ""
+msgstr "o pana e nanpa tawa kule"
 
 #: ../views/index.handlebars
 msgid "scrollbar;palette scrolling"
@@ -635,7 +657,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Enable thin scrollbar"
-msgstr ""
+msgstr "o lili e palisa tawa"
 
 #: ../views/index.handlebars
 msgid "scrollbar;palette scrolling;palette stack"
@@ -643,7 +665,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Enable palette stacking"
-msgstr ""
+msgstr "o kulupu mute e kule"
 
 #: ../views/index.handlebars
 msgid "floating bubble location"
@@ -651,23 +673,23 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Bubble position:"
-msgstr ""
+msgstr "lon pi toki suli:"
 
 #: ../views/index.handlebars
 msgid "Top left"
-msgstr ""
+msgstr "sewi nanpa wan"
 
 #: ../views/index.handlebars
 msgid "Top right"
-msgstr ""
+msgstr "sewi nanpa tu"
 
 #: ../views/index.handlebars
 msgid "Bottom left"
-msgstr ""
+msgstr "anpa nanpa wan"
 
 #: ../views/index.handlebars
 msgid "Bottom right"
-msgstr ""
+msgstr "anpa nanpa tu"
 
 #: ../views/index.handlebars
 msgid "broken;offset workaround"
@@ -675,7 +697,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Attempt to fix canvas displacement bug in Chrome 78+"
-msgstr ""
+msgstr "o pona e nasa pi ilo Chrome pi nanpa 78+"
 
 #: ../views/index.handlebars
 msgid "chat;message;ping sound"
@@ -683,7 +705,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Chat Settings"
-msgstr ""
+msgstr "poki toki"
 
 #: ../views/index.handlebars
 msgid "username;color;colour"
@@ -691,7 +713,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Username Color:"
-msgstr ""
+msgstr "kule pi nimi sina:"
 
 #: ../views/index.handlebars
 msgid "chat message;chat ui"
@@ -699,7 +721,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Interface"
-msgstr ""
+msgstr "lukin pi poki toki"
 
 #: ../views/index.handlebars
 msgid "enable;disable"
@@ -707,11 +729,11 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Enable chat"
-msgstr ""
+msgstr "o lon e poki toki"
 
 #: ../views/index.handlebars
 msgid "Page must be reloaded after changing"
-msgstr ""
+msgstr "sina ante e ni la, sina wile kama lon sin e lipu Pxls."
 
 #: ../views/index.handlebars
 msgid "chat size;chat font"
@@ -719,7 +741,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Font Size:"
-msgstr ""
+msgstr "nanpa pi suli toki:"
 
 #: ../views/index.handlebars
 msgid "time;timestamps"
@@ -727,7 +749,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "24 Hour Timestamps"
-msgstr ""
+msgstr "o kepeken e nasin tenpo 24"
 
 #: ../views/index.handlebars
 msgid "badges;pixel count;pixels placed"
@@ -735,7 +757,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Show pixel-placed badges"
-msgstr ""
+msgstr "o lon e nanpa pi pana leko"
 
 #: ../views/index.handlebars
 msgid "badges;factions"
@@ -743,7 +765,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Show faction tags"
-msgstr ""
+msgstr "o lon e nimi pi kulupu jan"
 
 #: ../views/index.handlebars
 msgid "template urls;template links;template name"
@@ -751,7 +773,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Replace template titles with URLs in chat where applicable"
-msgstr ""
+msgstr "ilo linluwi pi ilo sitelen li lon la, o kepeken ala e nimi ona"
 
 #: ../views/index.handlebars
 msgid "chat orientation;chat position"
@@ -759,7 +781,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Enable horizontal chat"
-msgstr ""
+msgstr "o supa e poki toki"
 
 #: ../views/index.handlebars
 msgid "banner;animation"
@@ -767,7 +789,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Enable the rotating banner under chat"
-msgstr ""
+msgstr "o lon e toki suli lon anpa pi poki toki"
 
 #: ../views/index.handlebars
 msgid "max;messages;truncate"
@@ -775,7 +797,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Maximum amount of chat messages:"
-msgstr ""
+msgstr "nanpa pi toki lon poki toki:"
 
 #: ../views/index.handlebars
 msgid "link;url;behaviour"
@@ -783,7 +805,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Default internal link action click:"
-msgstr ""
+msgstr "ilo sitelen lon poki toki la, mi pali e seme?:"
 
 #: ../views/index.handlebars
 msgid "chat icon;chat notifications;chat ping"
@@ -791,22 +813,22 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Chat icon badge mode:"
-msgstr ""
+msgstr "nasin pi sike lon sitelen pi poki toki:"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "Show on unread ping"
-msgstr ""
+msgstr "jan li mu tawa sina, o lon"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "Show on unread message"
-msgstr ""
+msgstr "jan li toki, o lon"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "Never show"
-msgstr ""
+msgstr "o lon ala"
 
 #: ../views/index.handlebars
 msgid "chat icon;chat notifications;chat message"
@@ -814,7 +836,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Chat icon highlight mode:"
-msgstr ""
+msgstr "nasin pi kule lon sitelen pi poki toki:"
 
 #: ../views/index.handlebars
 msgid "ignored;ignores;unignore;blocked;blocking;unblock"
@@ -822,7 +844,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Ignores"
-msgstr ""
+msgstr "jan weka"
 
 #: ../views/index.handlebars
 msgid "unignore;unblock"
@@ -830,7 +852,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Unignore"
-msgstr ""
+msgstr "o weka ala"
 
 #: ../views/index.handlebars
 msgid "overlays;virginmap;heatmap;grid"
@@ -838,7 +860,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Overlay Settings"
-msgstr ""
+msgstr "sitelen sinpin"
 
 #: ../views/index.handlebars
 msgid "heatmap;heatmap opacity;clear heatmap"
@@ -846,15 +868,15 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Heatmap"
-msgstr ""
+msgstr "sitelen seli"
 
 #: ../views/index.handlebars
 msgid "Turn on heatmap"
-msgstr ""
+msgstr "o lon e sitelen seli"
 
 #: ../views/index.handlebars
 msgid "(toggle with <kbd>H</kbd>)"
-msgstr ""
+msgstr "(o kepeken e nena <kbd>H</kbd>)"
 
 #: ../views/index.handlebars
 msgid "overlays;activity;pixels placed pixels;wipe;clean"
@@ -862,11 +884,11 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Clear heatmap"
-msgstr ""
+msgstr "o weka e sona pi sitelen seli"
 
 #: ../views/index.handlebars
 msgid "(hotkey: <kbd>O</kbd>)"
-msgstr ""
+msgstr "(sina ken kepeken e nena <kbd>O</kbd>)"
 
 #: ../views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;transparency"
@@ -874,7 +896,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Heatmap background opacity:"
-msgstr ""
+msgstr "sitelen seli la, suli lukin:"
 
 #: ../views/index.handlebars
 msgid "virginmap;virginmap opacity;clear virginmap"
@@ -882,15 +904,15 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Virginmap"
-msgstr ""
+msgstr "sitelen pi leko ala"
 
 #: ../views/index.handlebars
 msgid "Turn on virginmap"
-msgstr ""
+msgstr "o lon e sitelen pi leko ala"
 
 #: ../views/index.handlebars
 msgid "(toggle with <kbd>X</kbd>)"
-msgstr ""
+msgstr "(o kepeken e nena <kbd>X</kbd>)"
 
 #: ../views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;transparency"
@@ -898,7 +920,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Virginmap background opacity:"
-msgstr ""
+msgstr "sitelen pi leko ala la, suli lukin:"
 
 #: ../views/index.handlebars
 msgid "overlays;activity;pixels unplaced pixels;wipe;clean"
@@ -906,15 +928,15 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Clear virginmap"
-msgstr ""
+msgstr "sitelen pi leko ala la, o weka e sona"
 
 #: ../views/index.handlebars
 msgid "(hotkey: <kbd>U</kbd>)"
-msgstr ""
+msgstr "(sina ken kepeken e nena <kbd>U</kbd>)"
 
 #: ../views/index.handlebars
 msgid "Layer template underneath heatmap"
-msgstr ""
+msgstr "o monsi e ilo sitelen lon monsi pi sitelen seli"
 
 #: ../views/index.handlebars
 msgid "grid;toggle grid"
@@ -922,15 +944,15 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Grid"
-msgstr ""
+msgstr "ilo palisa"
 
 #: ../views/index.handlebars
 msgid "Turn on grid"
-msgstr ""
+msgstr "o lon e ilo palisa"
 
 #: ../views/index.handlebars
 msgid "(toggle with <kbd>G</kbd>)"
-msgstr ""
+msgstr "(o kepeken e nena <kbd>G</kbd>)"
 
 #: ../views/index.handlebars
 msgid "controls;zooming;panning;movement"
@@ -938,7 +960,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Control Settings"
-msgstr ""
+msgstr "nasin tawa"
 
 #: ../views/index.handlebars
 msgid "zooming;scrolling;scale;scaling"
@@ -946,7 +968,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Zooming"
-msgstr ""
+msgstr "tawa suli"
 
 #: ../views/index.handlebars
 msgid "scrolling sensitivity;zooming sensitivity;mousewheel sensitivity"
@@ -954,7 +976,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Zoom sensitivity:"
-msgstr ""
+msgstr "tawa pi tawa suli:"
 
 #: ../views/index.handlebars
 msgid "zooming limit;scrolling limit;mousewheel;zooming minimum;zooming maximum"
@@ -962,11 +984,11 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Minimum scale:"
-msgstr ""
+msgstr "nanpa li ni, sitelen ken ala lili:"
 
 #: ../views/index.handlebars
 msgid "Maximum scale:"
-msgstr ""
+msgstr "nanpa li ni, sitelen ken ala suli:"
 
 #: ../views/index.handlebars
 msgid "rounding;zooming;scrolling;mousewheel;integer;decimal"
@@ -974,7 +996,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Round zoom values to nearest whole number"
-msgstr ""
+msgstr "o ante e nanpa pi suli sitelen tawa nanpa suli"
 
 #: ../views/index.handlebars
 msgid "controls;miscellaneous"
@@ -982,7 +1004,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Lock the canvas (disallow canvas drag/zoom with mouse/fingers)"
-msgstr ""
+msgstr "o weka e ken pi tawa sitelen"
 
 #: ../views/index.handlebars
 msgid "MMB picker;mouse picker;selection;palette picker"
@@ -990,7 +1012,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Enable middle mouse button selecting color from board"
-msgstr ""
+msgstr "nena lon sike pi ilo misa li ken lanpan e kule"
 
 #: ../views/index.handlebars
 msgid "right click action"
@@ -998,27 +1020,27 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Right-click action:"
-msgstr ""
+msgstr "nasin pi ilo tu lon ilo misa:"
 
 #: ../views/index.handlebars
 msgid "Nothing"
-msgstr ""
+msgstr "o ala"
 
 #: ../views/index.handlebars
 msgid "Clear color"
-msgstr ""
+msgstr "o weka e kule"
 
 #: ../views/index.handlebars
 msgid "Copy color"
-msgstr ""
+msgstr "o lanpan e kule"
 
 #: ../views/index.handlebars
 msgid "Lookup"
-msgstr ""
+msgstr "o alasa e jan pi pali leko"
 
 #: ../views/index.handlebars
 msgid "Clear color + Lookup"
-msgstr ""
+msgstr "o weka e kule li alasa e jan pi pali leko"
 
 #: ../views/index.handlebars
 msgid "snapshots;screenshot;download;picture;canvas"
@@ -1026,7 +1048,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Snapshot Settings"
-msgstr ""
+msgstr "nasin pi lanpan sitelen"
 
 #: ../views/index.handlebars
 msgid "screenshot;snapshot;download;board;canvas"
@@ -1038,19 +1060,19 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Snapshot image format:"
-msgstr ""
+msgstr "nasin pi sitelen lanpan:"
 
 #: ../views/index.handlebars
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 #: ../views/index.handlebars
 msgid "JPEG"
-msgstr ""
+msgstr "JPEG"
 
 #: ../views/index.handlebars
 msgid "WEBP (Chrome only)"
-msgstr ""
+msgstr "WEBP (ilo Chrome taso)"
 
 #: ../views/index.handlebars
 msgid "sound;notification;alert;notify;ping"
@@ -1058,7 +1080,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Sound and Notification Settings"
-msgstr ""
+msgstr "nasin kalama en nasin mu"
 
 #: ../views/index.handlebars
 msgid "audio;mute;noise;volume"
@@ -1066,7 +1088,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Enable sound"
-msgstr ""
+msgstr "kalama li lon"
 
 #: ../views/index.handlebars
 msgid "notifs;notify;pixel notification"
@@ -1074,7 +1096,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Enable pixel available notification"
-msgstr ""
+msgstr "sina jo e leko la, mi mu tawa sina"
 
 #: ../views/index.handlebars
 msgid "notification;pixel ready;alert"
@@ -1082,7 +1104,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Pixel Ready Notification"
-msgstr ""
+msgstr "mu pi jo leko"
 
 #: ../views/index.handlebars
 msgid "alert source;notify url;notify source;notification url;notification source"
@@ -1090,15 +1112,15 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Alert URL:"
-msgstr ""
+msgstr "ilo linluwi pi kalama mu:"
 
 #: ../views/index.handlebars
 msgid "Update"
-msgstr ""
+msgstr "o ante"
 
 #: ../views/index.handlebars
 msgid "Test"
-msgstr ""
+msgstr "o kute"
 
 #: ../views/index.handlebars
 msgid "sound level;audio level;mute audio;mute sound"
@@ -1106,7 +1128,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Volume:"
-msgstr ""
+msgstr "suli kalama:"
 
 #: ../views/index.handlebars
 msgid "alert forewarning;alert delay; notification delay; notification forewarning"
@@ -1114,7 +1136,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Delay (seconds):"
-msgstr ""
+msgstr "nanpa awen:"
 
 #: ../views/index.handlebars
 msgid "chat mentions;chat pings;chat sound"
@@ -1122,11 +1144,11 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Chat Pings"
-msgstr ""
+msgstr "mu pi poki toki"
 
 #: ../views/index.handlebars
 msgid "Enable pings"
-msgstr ""
+msgstr "o lon e mu pi poki toki"
 
 #: ../views/index.handlebars
 msgid "mention sound"
@@ -1134,7 +1156,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Play sound on ping:"
-msgstr ""
+msgstr "mu pi poki toki li lon la, nasin kalama li ni:"
 
 #: ../views/index.handlebars
 #: ../public/include/chat.js
