@@ -81,6 +81,15 @@ function html() {
           ? file.basename.length
           : extIndex);
 
+      // Source HTML files that don't need to be translated
+      src([
+        'public/auth_done.html',
+        'public/mobile_captcha.html'
+      ], { read: true })
+        .pipe(buffer())
+        .pipe(dest('dist'));
+
+      // Source all other HTML files
       src([
         'public/**/*.html',
         '!public/auth_done.html',
