@@ -138,7 +138,8 @@ server.listen(config.port, () => {
     server.close();
     process.exit();
   };
-  rl.on('SIGINT', () => exit);
+  process.on('SIGINT', exit);
+  rl.on('SIGINT', exit);
   rl.on('line', line => {
     const args = line.split(' ');
     const command = args[0].toLowerCase();
