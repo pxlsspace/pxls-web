@@ -1,7 +1,7 @@
 const { src, dest, parallel, series } = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
-const eslint = require('gulp-eslint');
+const eslint = require('gulp-eslint-new');
 const minify = require('gulp-minify');
 const gulpIf = require('gulp-if');
 const browserify = require('browserify');
