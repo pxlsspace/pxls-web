@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
 "POT-Creation-Date: 2023-12-07T03:58:47.363Z\n"
-"PO-Revision-Date: 2023-12-09 08:37+0000\n"
+"PO-Revision-Date: 2023-12-09 17:04+0000\n"
 "Last-Translator: Mikarific <mikerific2@gmail.com>\n"
 "Language-Team: Toki Pona <https://weblate.pxls.space/projects/pxls-space/"
 "pxls-web/tok/>\n"
@@ -1243,126 +1243,172 @@ msgstr ""
 #: ../views/partials/faq.handlebars
 msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
 msgstr ""
+"ni li nasin pi musi Pxls. sina jo e leko la, o awen ala o pana e leko. sina "
+"jo e leko li awen la, awen pi leko sin li kepeken tenpo suli. taso, sina jo "
+"e leko li pana e leko la, awen pi leko sin li kepeken tenpo lili."
 
 #: ../views/partials/faq.handlebars
 msgid "How do I appeal a ban?"
-msgstr ""
+msgstr "jan pali li weka e mi. mi wile kama lon sin la, mi seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
 msgstr ""
+"sina lukin e sona kulupu la, sina ken toki tawa jan pali lon <a href=\"https"
+"://pxls.space/discord\" target=\"_blank\">ilo Siko</a> li ken toki tawa jan "
+"pali lon <a href=\"https://pxls.space/appeal\" target=\"_blank\">lipu pi "
+"kama lon sin</a>."
 
 #: ../views/partials/faq.handlebars
 msgid "How do I make a template?"
-msgstr ""
+msgstr "mi pali e ilo sitelen kepeken seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "A template is an image link that is posted in the template textbox in the settings panel so you can place over it on the canvas. You may use a regular image link to your pixel art, but many people use 3rd party tools like <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> or <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn pixel art into a fancier link. If you need to make pixel art yourself, you can use <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> to create art to put into Charity or Clueless."
 msgstr ""
+"ilo sitelen li ilo linluwi sitelen. sina pana e ilo linluwi tawa lipu ante "
+"la, ona li kama lon sinpin sitelen. sina ken kepeken e sitelen pi namako "
+"ala... taso, jan mute li kepeken e <a href=\"https://charity.pxls.space\" "
+"target=\"_blank\">ilo Sawisi</a> anu kepeken e <a href=\"https://discord.gg/"
+"5MVDCq53vC\" target=\"blank\">ilo Clueless</a>. ilo ni li namako e sitelen "
+"sina li pali e ilo linluwi namako. sina wile pali e sitelen leko la, sina "
+"ken kepeken e <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank"
+"\">ilo Piskel</a>."
 
 #: ../views/partials/faq.handlebars
 msgid "How do I move a template?"
-msgstr ""
+msgstr "mi tawa e ilo sitelen kepeken seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to move it around. On mobile, you can tap and hold where you want to move the template and click \"Move Template Here\" in the pop-up."
 msgstr ""
+"sina wile tawa supa e ilo sitelen la, o awen kepeken e nena <kbd>Ctrl</kbd> ("
+"sina kepeken e ilo MacOS la, o kepeken e nena <kbd>Option</kbd>). sina "
+"kepeken e ilo nanpa lili la, sina ken awen luka lon lon li luka e \"o tawa e "
+"ilo sitelen\"."
 
 #: ../views/partials/faq.handlebars
 msgid "Does the canvas reset? When?"
-msgstr ""
+msgstr "sitelen li kama sin anu seme? ona li kama sin lon tenpo seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "Yes. The canvas resets when it is completely full. A reset date is not usually decided until the canvas is full, but the average canvas life-span is around 1 month. Updates are posted in our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> when a reset date is set."
 msgstr ""
+"sitelen li jo e sitelen lili mute la, ona li kama sin. tenpo pi sitelen sin "
+"li kama la, jan pali li pana e tenpo tawa sina lon <a href=\"https://pxls."
+"space/discord\" target=\"_blank\">ilo Siko</a>."
 
 #: ../views/partials/faq.handlebars
 msgid "Where can I see the past canvases?"
-msgstr ""
+msgstr "mi lukin e sitelen pini lon seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
 msgstr ""
+"jan pali li pana e sitelen pini lon <a href=\"https://pxls.space/discord\" "
+"target=\"_blank\">ilo Siko</a>. kin la, <a href=\"https://pxlsfiddle.com\" "
+"target=\"_blank\">ilo PxlsFiddle</a> li pana e sitelen pini."
 
 #: ../views/partials/faq.handlebars
 msgid "How do I see who placed a pixel?"
-msgstr ""
+msgstr "mi wile alasa e jan pi pali leko la, mi seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "By shift-clicking (or tap and hold on mobile) a pixel, you can see who placed a pixel, how many pixels they have placed, and when they placed it."
 msgstr ""
+"sina kepeken e nena <kbd>Shift</kbd> li luka e ilo misa la, sina ken alasa e "
+"jan pi pali leko. sina kepeken e ilo nanpa lili la, sina ken awen luka."
 
 #: ../views/partials/faq.handlebars
 msgid "How do I report someone?"
-msgstr ""
+msgstr "jan li ike la, mi toki e ni tawa jan pali kepeken seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "Shift-click (or tap and hold on mobile) on a pixel, and click the Report button."
 msgstr ""
+"sina o kepeken e nena <kbd>Shift</kbd> li luka e ilo misa o alasa e jan pi "
+"pali leko. lipu ni la, sina ken kepeken e nena \"jan ni li ike\"."
 
 #: ../views/partials/faq.handlebars
 msgid "How do I change the color of my name in the chat?"
-msgstr ""
+msgstr "mi wile kule e nimi mi la, mi seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "There is a \"Username Color\" option near the bottom of the settings panel."
-msgstr ""
+msgstr "sina ken kule e nimi sina lon lipu ante."
 
 #: ../views/partials/faq.handlebars
 msgid "What is a \"virginmap\"?"
-msgstr ""
+msgstr "sitelen pi leko ala li seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "The virginmap shows which pixels have not yet been placed on (or “virgin” pixels)."
 msgstr ""
+"sitelen pi leko ala li sitelen pi pali jan. jan ala li pana e leko la, leko "
+"li laso. jan li pana e leko la, leko li pimeja."
 
 #: ../views/partials/faq.handlebars
 msgid "How do I report bugs?"
-msgstr ""
+msgstr "ilo Pxls li nasa la, mi toki tawa seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
 msgstr ""
+"sina ken toki tawa poki \"#dev-and-bugs\" lon <a href=\"https://pxls.space/"
+"discord\" target=\"_blank\">ilo Siko</a>. sina jo e nasa suli la, o toki "
+"tawa jan pali."
 
 #: ../views/partials/faq.handlebars
 msgid "How do I get more info or contact staff?"
-msgstr ""
+msgstr "mi wile kama sona anu wile toki tawa jan pali la, mi seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "Check the info panel (the icon on the top left) for more details and links, or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, where a staff member will gladly respond."
 msgstr ""
+"sina wile sona la, o lukin e lipu sona. sina wile toki tawa jan pali la o "
+"kama lon <a href=\"https://pxls.space/discord\" target=\"_blank\">ilo Siko</"
+"a>. sina kama lon ilo Siko la, jan pali li ken toki tawa sina."
 
 #: ../views/partials/info.handlebars
 msgid "Welcome!"
-msgstr ""
+msgstr "toki a!"
 
 #: ../views/partials/info.handlebars
 msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
 msgstr ""
+"toki a! ni li musi Pxls. musi Pxls li sama musi <a href=\"https://www.reddit."
+"com/r/place\" target=\"_blank\">r/place</a>. sina pana e leko tawa ona. sina "
+"awen la, sina ken pana e leko sin tawa musi Pxls. jan mute li pana la, sina "
+"mute li ken pali e sitelen suli."
 
 #: ../views/partials/info.handlebars
 msgid "The best place to reach staff and fellow community is in the discord!"
 msgstr ""
+"sina wile toki tawa jan ante anu jan pali lon kulupu la, o kama lon ilo Siko!"
 
 #: ../views/partials/info.handlebars
 msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
-msgstr ""
+msgstr "o lukin e lipu ante Pxls. o lukin e nasin lawa lon anpa. o musi!"
 
 #: ../views/partials/info.handlebars
 msgid "Canvas Rules"
-msgstr ""
+msgstr "nasin lawa pi sitelen"
 
 #: ../views/partials/info.handlebars
 msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
 msgstr ""
+"kulupu Pxls li wile jo e sitelen pi jan ale li wile jo e kulupu pona. tan ni "
+"la, sina wile awen lon kulupu ni la o sona e ni:"
 
 #: ../views/partials/info.handlebars
 msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
 msgstr ""
+"o toki pona tawa jan ale. o toki ala e nimi ike. o pali ala e sitelen ike "
+"tawa jan ante e sitelen \"Swastika\" e sitelen \"Hammer and Sickle\"."
 
 #: ../views/partials/info.handlebars
 msgid "No NSFW or NSFL content."
-msgstr ""
+msgstr "o pana ala e ijo unpa."
 
 #: ../views/partials/info.handlebars
 msgid "No nudity or otherwise sexually explicit content"
@@ -2355,7 +2401,7 @@ msgstr ""
 
 #: ../public/include/lookup.js
 msgid "Move Template Here"
-msgstr ""
+msgstr "o tawa e ilo sitelen"
 
 #: ../public/include/lookup.js
 msgid "An error occurred, either you aren't logged in or you may be attempting to look up users too fast. Please try again in 60 seconds"
