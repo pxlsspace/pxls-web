@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const express = require('express');
 require('json5/lib/register');
 
-const { listFiles, getLanguageData, getLoadedPOFiles, handlebarsHelpers } = require('./utils');
+const { listFiles, getLanguageData, getLoadedPOFiles, handlebarsHelpers, proxyFetch } = require('./utils');
 const config = require('./config.json5');
 
 const app = express();
@@ -54,14 +54,9 @@ app.use('/', async (req, res, next) => {
   const filePath = path.join(__dirname, 'dist', relativePath);
   const { poFile, langCode } = await getLanguageData(req);
 
-  const proxyFetch = (url, options = {}) => fetch(url, {
-    ...options,
-    headers: req.headers
-  });
-
   if (req.path === '/') {
     res.render('index', {
-      title: 'pxls.space',
+      title: config.title,
       lang: langCode,
       head: '',
       scriptLang: langCode === 'en' ? '' : '_' + langCode,
@@ -71,7 +66,7 @@ app.use('/', async (req, res, next) => {
   } else if (/^\/profile(?:\/\w+)?$/.test(req.path)) {
     let profileName = relativePath.split('/')[1] || '';
     if (profileName !== '') profileName = '?username=' + profileName;
-    const dataRes = await proxyFetch(`http://${config.proxyTo}/api/v1/profile` + profileName);
+    const dataRes = await proxyFetch(req, `http://${config.proxyTo}/api/v1/profile` + profileName);
     if (dataRes.status >= 400) {
       await sendErrorPage(req, res, dataRes.status);
       return;
@@ -82,6 +77,7 @@ app.use('/', async (req, res, next) => {
       return;
     }
     res.render('profile', {
+      title: config.title,
       ...data,
       user: {
         ...data.user,
@@ -112,12 +108,17 @@ app.use('/', async (req, res, next) => {
 async function sendErrorPage(req, res, code) {
   const { poFile } = await getLanguageData(req);
 
-  res.status(code).render('404', {
-    palette: 'FFFFFF,C2CBD4,858D98,4B4F58,22272D,000000,38271D,6C422C,BC7541,FFB27F,FFD6BF,FEB2D9,F854CF,C785F3,9C29BC,562972,1E1E5B,153FA2,1C95DF,A0E8FF,17A8A3,226677,094C45,278242,43C91E,B7F954,FFFFAF,FAE70F,FEA815,EA5B15,5A0400,990700,D81515,FF635E',
-    max_faction_tag_length: 5,
-    max_faction_name_length: 20,
-    requesting_user: {
-      name: 'Vanilla'
+  let name = '';
+  const dataRes = await proxyFetch(req, `http://${config.proxyTo}/whoami`);
+  if (dataRes.ok) {
+    const data = await dataRes.json();
+    name = data.username;
+  }
+
+  res.status(code).render('error', {
+    title: config.title,
+    self: {
+      name
     },
     err: code,
 

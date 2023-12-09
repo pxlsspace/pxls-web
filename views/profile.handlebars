@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{user.name}} - Pxls</title>
+    <title>{{user.name}} - {{title}}</title>
     <link rel="stylesheet" href="/profile/css/theme-purple.min.css">
     <link rel="stylesheet" href="/fontawesome-all.min.css">
     <link rel="stylesheet" href="/profile/css/views/index.css">
@@ -24,7 +24,7 @@
 <nav class="navbar navbar-dark navbar-expand-md" role="nav">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a href="/" class="nav-link">Pxls</a>
+            <a href="/" class="nav-link">{{title}}</a>
         </li>
         <li class="nav-item active">
             {{! eg "Alice's profile". Double singlequote is a java thing - needed if a replacement (such as this) contains a singlequote. }}
@@ -101,14 +101,18 @@
                         </tr>
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Faction'}}</th>
-                            <td class="text-left">{{#if user.displayedFactionId}}{{#with (displayedFaction)}}[{{tag}}] {{name}} (ID: {{id}}){{/with}}{{else}}{{i18n 'None'}}{{/if}}</td>
+                            {{#if displayedFaction}}
+                            <td class="text-left">{{#with (displayedFaction)}}[{{tag}}] {{name}} (ID: {{id}}){{/with}}</td>
+                            {{else}}
+                            <td class="text-left text-muted">({{i18n 'None'}})</td>
+                            {{/if}}
                         </tr>
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Roles'}}</th>
                             <td class="text-left">
                                 {{#if user.roles}}
                                 <ul class="roles">
-                                    {{#each user.roles}}<li>{{#each this.badges}}<i class="{{this.cssIcon}}"></i> {{/each}}{{this.name}}</li>{{/each}}
+                                {{#each user.roles}}<li>{{#each this.badges}}<i class="{{this.cssIcon}}"></i> {{/each}}{{this.name}}</li>{{/each}}
                                 </ul>
                                 {{else}}
                                 <span class="text-muted">({{i18n 'None'}})</span>

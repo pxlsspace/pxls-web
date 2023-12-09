@@ -5,24 +5,24 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pxls</title>
+    <title>{{err}} - {{title}}</title>
     <script src="/jquery-3.4.1.min.js"></script>
     <script src="/profile/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/profile/css/theme-purple.min.css">
     <link rel="stylesheet" href="/fontawesome-all.min.css">
 </head>
-<body data-palette="{{#unless palette}}{{palette}}{{/unless}}" data-faction-max-tag="{{max_faction_tag_length}}" data-faction-max-name="{{max_faction_name_length}}">
+<body>
 <nav class="navbar navbar-dark navbar-expand-md" role="nav">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a href="/" class="nav-link">Pxls</a>
+            <a href="/" class="nav-link">{{title}}</a>
         </li>
     </ul>
-    {{#if requesting_user}}
+    {{#if self}}
     <div class="my-2 my-lg-0">
         <div class="dropdown">
             <button class="navbar-text btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" id="btnNavUserDropdown">
-                <i class="fas fa-user-alt mr-1"></i>{{requesting_user.name}}
+                <i class="fas fa-user-alt mr-1"></i>{{self.name}}
             </button>
             <div class="dropdown-menu dropdown-menu-right" id="navUserDropdown" aria-labelledby="btnNavUserDropdown">
                 <a href="/profile?action=details" class="dropdown-item">{{{i18n 'My Profile'}}}</a>

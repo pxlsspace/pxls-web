@@ -71,7 +71,7 @@ exports.getLanguageData = getLanguageData;
 /**
  * Gets the PO file for the language code.
  * @param langCode The language code.
- * @returns {Promise<PO>} The PO file.
+ * @returns {Promise<PO>} A promise that resolves to the PO file.
  */
 async function getPO(langCode) {
   if (loadedPOFiles.has(langCode)) {
@@ -100,6 +100,22 @@ function loadPO(path) {
 }
 
 exports.loadPO = loadPO;
+
+/**
+ * Proxies a fetch request with request headers.
+ * @param req The request object.
+ * @param url The URL to proxy to.
+ * @param options The fetch options.
+ * @returns {Promise<Response>} A promise that resolves to the response.
+ */
+function proxyFetch(req, url, options) {
+  return fetch(url, {
+    ...options,
+    headers: req.headers
+  });
+}
+
+exports.proxyFetch = proxyFetch;
 
 exports.handlebarsHelpers = (poFile) => ({
   i18n: (str, ...args) => i18n(str, poFile, args),
