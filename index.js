@@ -91,8 +91,8 @@ app.use('/', async (req, res, next) => {
       },
       isSelf: data.user.id === data.self.id,
       routeRoot: req.path,
-      canvasReportsOpenCount: data.canvasReports.filter(r => !r.closed).length,
-      chatReportsOpenCount: data.chatReports.filter(r => !r.closed).length,
+      canvasReportsOpenCount: (data.canvasReports || []).filter(r => !r.closed).length,
+      chatReportsOpenCount: (data.chatReports || []).filter(r => !r.closed).length,
 
       helpers: {
         displayedFaction: () => data.user.factions.find(f => f.id === data.user.displayedFactionId),
