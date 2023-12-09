@@ -12,13 +12,13 @@ module.exports.socket = (function() {
     reconnect: function() {
       $('#reconnecting').show();
       setTimeout(function() {
-        $.get(window.location.pathname + '?_' + (new Date()).getTime(), function() {
+        $.get(window.location.pathname + 'info?_' + (new Date()).getTime(), function() {
           window.location.reload();
         }).fail(function() {
           console.info('Server still down...');
           self.reconnect();
         });
-      }, 3000);
+      }, 5000);
     },
     reconnectSocket: function() {
       self.ws.onclose = function() {
