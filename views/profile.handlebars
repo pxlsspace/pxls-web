@@ -321,7 +321,7 @@
     </div>
 </main>
 {{#if isSelf}}
-{{#each factions}}
+{{#each user.factions}}
 {{#if (eq this.ownerId ../user.id)}}
 <div class="modal fade member-list-modal" id="modal-member-list-{{this.id}}" data-faction-id="{{this.id}}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -345,9 +345,9 @@
                             {{#if (gt (len this.members) 1)}}
                             {{#each this.members}}
                             {{#if (ne this.id ../../self.id)}}
-                            <div class="row member-row mb-1" data-member="{{this.username}}">
+                            <div class="row member-row mb-1" data-member="{{this.name}}">
                                 <div class="col-md-6">
-                                    <span><a href="/profile/{{this.username}}" target="_blank">{{this.username}}</a></span>
+                                    <span><a href="/profile/{{this.name}}" target="_blank">{{this.name}}</a></span>
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <button class="btn btn-sm btn-success faction-subaction" data-action="transfer">{{i18n 'Transfer Ownership'}}</button>
@@ -370,17 +370,17 @@
                     </div>
                     <div class="card-body p-0 body-collapse-target collapse">
                         <div class="p-3">
-                            {{#each faction.fetchBans}}
-                            <div class="row member-row mb-1" data-member="{{member.name}}">
+                            {{#each this.bans}}
+                            <div class="row member-row mb-1" data-member="{{this.name}}">
                                 <div class="col-md-6">
-                                    <span>{{member.name}}</span>
+                                    <span>{{this.name}}</span>
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <button class="btn btn-sm btn-primary faction-subaction" data-action="unban">{{i18n 'Unban'}}</button>
                                 </div>
                             </div>
                             {{/each}}
-                            {{#unless faction.fetchBans}}
+                            {{#unless this.bans}}
                             <p class="text-muted text-center mb-0">{{i18n 'Nothing to see here!'}}</p>
                             {{/unless}}
                         </div>
