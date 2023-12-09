@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
 "POT-Creation-Date: 2023-12-07T03:58:47.363Z\n"
-"PO-Revision-Date: 2023-12-08 20:44+0000\n"
+"PO-Revision-Date: 2023-12-09 08:37+0000\n"
 "Last-Translator: Mikarific <mikerific2@gmail.com>\n"
 "Language-Team: Toki Pona <https://weblate.pxls.space/projects/pxls-space/"
 "pxls-web/tok/>\n"
@@ -149,7 +149,7 @@ msgstr ""
 #: ../views/index.handlebars
 #: ../views/profile.handlebars
 msgid "Info"
-msgstr "sona"
+msgstr "sona suli"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
@@ -183,7 +183,7 @@ msgstr "o toki tawa jan"
 #: ../views/index.handlebars
 #: ../public/include/chat.js
 msgid "On"
-msgstr "toki ni li mu"
+msgstr "mu"
 
 #: ../views/index.handlebars
 msgid "Emoji"
@@ -1160,16 +1160,17 @@ msgstr "mu pi poki toki li lon la, nasin kalama li ni:"
 
 #: ../views/index.handlebars
 #: ../public/include/chat.js
+#, fuzzy
 msgid "Off"
-msgstr ""
+msgstr "mu ala"
 
 #: ../views/index.handlebars
 msgid "Only when necessary"
-msgstr ""
+msgstr "ona li suli la, mi kalama"
 
 #: ../views/index.handlebars
 msgid "Always"
-msgstr ""
+msgstr "tenpo ale la, mi kalama"
 
 #: ../views/index.handlebars
 msgid "mention sound volume"
@@ -1177,7 +1178,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Ping sound volume:"
-msgstr ""
+msgstr "suli pi kalama mu:"
 
 #: ../views/index.handlebars
 msgid "personal account"
@@ -1185,52 +1186,59 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "Account Settings"
-msgstr ""
+msgstr "ante pi lipu sina"
 
 #: ../views/index.handlebars
 msgid "Public Discord name:"
-msgstr ""
+msgstr "nimi sina pi ilo Siko:"
 
 #: ../views/index.handlebars
 #: ../public/include/chat.js
 msgid "Set"
-msgstr ""
+msgstr "o ante"
 
 #: ../views/index.handlebars
 msgid "Remove"
-msgstr ""
+msgstr "o weka"
 
 #: ../views/index.handlebars
 msgid "Help"
-msgstr ""
+msgstr "sona nasin"
 
 #: ../views/index.handlebars
 msgid "Notifications"
-msgstr ""
+msgstr "sona sin"
 
 #: ../views/partials/faq.handlebars
 msgid "FAQ"
-msgstr ""
+msgstr "wile sona pi jan mute"
 
 #: ../views/partials/faq.handlebars
 msgid "Why is the cooldown as long as it is?"
-msgstr ""
+msgstr "mi pana e leko la, mi awen tan seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "The time it takes to get a pixel is dynamic, and changes based on how many people are online. The cooldown time is longer when more users are online."
 msgstr ""
+"sina pana e leko la, sina awen. tenpo awen li ante. jan mute li lon la, "
+"tenpo awen li suli. jan lili li lon la, tenpo awen li lili."
 
 #: ../views/partials/faq.handlebars
 msgid "Why does it say 0/6 pixels?"
-msgstr ""
+msgstr "ona li toki e nimi \"0/6\" tan seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "This means that you are waiting for your next pixel. When you place a pixel, there is a cooldown for when you can place the next one. Over time, you can gain up to 6 \"stacked\" pixels to place at once."
 msgstr ""
+"ona li toki e nimi 0/6 la, sina awen. sina pana e leko la, sina ken pana e "
+"leko sin lon tenpo kama lili. taso, sina awen awen la, sina kama jo e leko "
+"mute. sina jo e leko mute la, sina ken pana e leko mute."
 
 #: ../views/partials/faq.handlebars
 msgid "Why does it take so long to \"stack\" pixels?"
 msgstr ""
+"mi kama jo e leko wan la, mi awen kepeken tenpo lili. taso, mi kama jo e "
+"leko mute la, mi awen kepeken tenpo mute. ni li tan seme?"
 
 #: ../views/partials/faq.handlebars
 msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
