@@ -127,6 +127,11 @@ const SOURCE_FILES = [
   '!public/serviceWorker.js'
 ];
 
+const NON_TRANSLATED_SOURCE_FILES = [
+  'public/SLIDEIN.js',
+  'public/serviceWorker.js'
+];
+
 function lint() {
   return src(SOURCE_FILES)
     .pipe(eslint())
@@ -193,6 +198,16 @@ function srcJS() {
         : file.basename.substring(codeIndex, extIndex === -1
           ? file.basename.length
           : extIndex);
+
+      src(NON_TRANSLATED_SOURCE_FILES, { read: false })
+        .pipe(tap(file => {
+          file.contents = browserify(file.path, { debug: isDevEnvironment })
+            .bundle();
+        }))
+        .pipe(buffer())
+        .pipe(gulpIf(isDevEnvironment, sourcemaps.init({ loadMaps: true })))
+        .pipe(gulpIf(isDevEnvironment, sourcemaps.write()))
+        .pipe(dest('dist'));
 
       src(SOURCE_FILES, { read: false })
         .pipe(tap(file => {
