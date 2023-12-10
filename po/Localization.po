@@ -1,2466 +1,2461 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-07T03:58:47.363Z\n"
+"POT-Creation-Date: 2023-12-10T20:50:04.139Z\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
-#: ../views/404.handlebars ../views/profile.handlebars
-#: ../public/include/user.js
+#: /views/error.handlebars /views/profile.handlebars /public/include/user.js
 msgid "My Profile"
 msgstr "My Profile"
 
-#: ../views/404.handlebars ../views/profile.handlebars
+#: /views/error.handlebars /views/profile.handlebars
 msgid "My Factions"
 msgstr "My Factions"
 
-#.  HTTP status code name
-#: ../views/404.handlebars
+#.  HTTP status code name 
+#: /views/error.handlebars
 msgid "Not Found"
 msgstr "Not Found"
 
-#: ../views/404.handlebars
+#: /views/error.handlebars
 msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
 msgstr "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
 
-#.  links to the homepage (the app itself)
-#: ../views/404.handlebars
+#.  links to the homepage (the app itself) 
+#: /views/error.handlebars
 msgid "Back to Pxls"
 msgstr "Back to Pxls"
 
-#.  HTTP status code name
-#: ../views/404.handlebars
+#.  HTTP status code name 
+#: /views/error.handlebars
 msgid "Not Authenticated"
 msgstr "Not Authenticated"
 
-#: ../views/404.handlebars
+#: /views/error.handlebars
 msgid "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
 msgstr "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
 
-#.  HTTP status code name
-#: ../views/404.handlebars
+#.  HTTP status code name 
+#: /views/error.handlebars
 msgid "Not Allowed"
 msgstr "Not Allowed"
 
-#: ../views/404.handlebars
+#: /views/error.handlebars
 msgid "The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later."
 msgstr "The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later."
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Place pixels with people to create art"
 msgstr "Place pixels with people to create art"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Lost connection to server, reconnecting..."
 msgstr "Lost connection to server, reconnecting..."
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Loading Heatmap (press <kbd>H</kbd> to cancel)"
 msgstr "Loading Heatmap (press <kbd>H</kbd> to cancel)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Loading Virginmap (press <kbd>X</kbd> to cancel)"
 msgstr "Loading Virginmap (press <kbd>X</kbd> to cancel)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Logout"
 msgstr "Logout"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Canvas:"
 msgstr "Canvas:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "N/A"
 msgstr "N/A"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "All Time:"
 msgstr "All Time:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Loading online user count&hellip;"
 msgstr "Loading online user count&hellip;"
 
-#: ../views/index.handlebars ../public/admin/admin.js
-#: ../public/include/lookup.js
+#: /views/index.handlebars /public/admin/admin.js /public/include/lookup.js
 msgid "Pixels"
 msgstr "Pixels"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Undo"
 msgstr "Undo"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "You are not signed in.&nbsp;<a href=\"#\">Sign in with...</a>"
 msgstr "You are not signed in.&nbsp;<a href=\"#\">Sign in with...</a>"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Loading..."
 msgstr "Loading..."
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Sign up"
 msgstr "Sign up"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Pick a username"
 msgstr "Pick a username"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Username:"
 msgstr "Username:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Discord Tag (Optional):"
 msgstr "Discord Tag (Optional):"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Drag and drop template image"
 msgstr "Drag and drop template image"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Exit"
 msgstr "Exit"
 
-#: ../views/index.handlebars ../views/profile.handlebars
+#: /views/index.handlebars /views/profile.handlebars
 msgid "Info"
 msgstr "Info"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Close Panel"
 msgstr "Close Panel"
 
-#: ../views/index.handlebars ../public/include/chat.js
+#: /views/index.handlebars /public/include/chat.js
 msgid "Chat"
 msgstr "Chat"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Pings"
 msgstr "Pings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Settings"
 msgstr "Settings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Jump To Bottom"
 msgstr "Jump To Bottom"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Replying to"
 msgstr "Replying to"
 
-#: ../views/index.handlebars ../public/include/chat.js
+#: /views/index.handlebars /public/include/chat.js
 msgid "On"
 msgstr "On"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Emoji"
 msgstr "Emoji"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Search"
 msgstr "Search"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "keybinds;keys;keyboard;hotkeys"
 msgstr "keybinds;keys;keyboard;hotkeys"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Keybinds"
 msgstr "Keybinds"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "general"
 msgstr "general"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "General"
 msgstr "General"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "move;moving;panning;drag"
 msgstr "move;moving;panning;drag"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Mouse/arrows/wasd to pan"
 msgstr "Mouse/arrows/wasd to pan"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "mousewheel;zooming"
 msgstr "mousewheel;zooming"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Scroll/pinch to zoom"
 msgstr "Scroll/pinch to zoom"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "scroll;zooming"
 msgstr "scroll;zooming"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>+</kbd>/<kbd>-</kbd> or <kbd>Q</kbd>/<kbd>E</kbd> to zoom"
 msgstr "<kbd>+</kbd>/<kbd>-</kbd> or <kbd>Q</kbd>/<kbd>E</kbd> to zoom"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "lookups"
 msgstr "lookups"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
 msgstr "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
 msgstr "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>G</kbd> to toggle grid"
 msgstr "<kbd>G</kbd> to toggle grid"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "close;information shown;information hidden;info shown;info hidden;hide information;show information"
 msgstr "close;information shown;information hidden;info shown;info hidden;hide information;show information"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>I</kbd> to open info"
 msgstr "<kbd>I</kbd> to open info"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "close;settings hidden;settings shown;hide settings;show settings"
 msgstr "close;settings hidden;settings shown;hide settings;show settings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>T</kbd> to open settings"
 msgstr "<kbd>T</kbd> to open settings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "close;chat hidden;chat shown;hide chat;show chat"
 msgstr "close;chat hidden;chat shown;hide chat;show chat"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>B</kbd> to open chat"
 msgstr "<kbd>B</kbd> to open chat"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "canvas locked;move;moving;zoom;zooming"
 msgstr "canvas locked;move;moving;zoom;zooming"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>L</kbd> to toggle locking panning of the canvas"
 msgstr "<kbd>L</kbd> to toggle locking panning of the canvas"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "take screenshot;image;download;picture;canvas"
 msgstr "take screenshot;image;download;picture;canvas"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>P</kbd> to take a snapshot"
 msgstr "<kbd>P</kbd> to take a snapshot"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
 msgstr "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>H</kbd> to toggle heatmap"
 msgstr "<kbd>H</kbd> to toggle heatmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
 msgstr "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>X</kbd> to toggle virginmap"
 msgstr "<kbd>X</kbd> to toggle virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;wipe;clean;"
 msgstr "overlays;user activity;pixels placed pixels;wipe;clean;"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>O</kbd> to clear heatmap"
 msgstr "<kbd>O</kbd> to clear heatmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;wipe;clean;"
 msgstr "overlays;user activity;pixels unplaced pixels;wipe;clean;"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>U</kbd> to clear virginmap"
 msgstr "<kbd>U</kbd> to clear virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "next color;previous color"
 msgstr "next color;previous color"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>J</kbd>/<kbd>K</kbd> to cycle through palette colors"
 msgstr "<kbd>J</kbd>/<kbd>K</kbd> to cycle through palette colors"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "current coordinates;coords"
 msgstr "current coordinates;coords"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>C</kbd> to copy link of moused-over coordinates"
 msgstr "<kbd>C</kbd> to copy link of moused-over coordinates"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "cancel selection"
 msgstr "cancel selection"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>ESC</kbd> to deselect current pixel"
 msgstr "<kbd>ESC</kbd> to deselect current pixel"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "recenter;jump;center on template;guides;focus"
 msgstr "recenter;jump;center on template;guides;focus"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>R</kbd> to center the board on the current template"
 msgstr "<kbd>R</kbd> to center the board on the current template"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "templates;guides"
 msgstr "templates;guides"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Template"
 msgstr "Template"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "transparency"
 msgstr "transparency"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>Page Up</kbd> to increase opacity"
 msgstr "<kbd>Page Up</kbd> to increase opacity"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>Page Down</kbd> to decrease opacity"
 msgstr "<kbd>Page Down</kbd> to decrease opacity"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "hidden;shown;hide;show"
 msgstr "hidden;shown;hide;show"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>V</kbd> to toggle visibility"
 msgstr "<kbd>V</kbd> to toggle visibility"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Note: These values are based on QWERTY keyboards. For other layouts, use the keys corresponding to the same position on a QWERTY keyboard."
 msgstr "Note: These values are based on QWERTY keyboards. For other layouts, use the keys corresponding to the same position on a QWERTY keyboard."
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "templates;overlays;guides"
 msgstr "templates;overlays;guides"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "templates;overlays;image;pixel art"
 msgstr "templates;overlays;image;pixel art"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template enabled;template disabled;show template;hide template;template shown;template hidden"
 msgstr "template enabled;template disabled;show template;hide template;template shown;template hidden"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Use template"
 msgstr "Use template"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Hold down <kbd>Ctrl</kbd> (or <kbd>Option</kbd> on mac) to drag the template around"
 msgstr "Hold down <kbd>Ctrl</kbd> (or <kbd>Option</kbd> on mac) to drag the template around"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template title;template name;tab name;tab title;title="
 msgstr "template title;template name;tab name;tab title;title="
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Title:"
 msgstr "Title:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template location source;template source URL;template URL;template="
 msgstr "template location source;template source URL;template URL;template="
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "URL:"
 msgstr "URL:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template position;template x;template y;template location; template vertical; template horizontal;ox=;oy="
 msgstr "template position;template x;template y;template location; template vertical; template horizontal;ox=;oy="
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Horizontal position:"
 msgstr "Horizontal position:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Vertical position:"
 msgstr "Vertical position:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template width;tw="
 msgstr "template width;tw="
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Width:"
 msgstr "Width:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Reset"
 msgstr "Reset"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template style;custom template"
 msgstr "template style;custom template"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Style:"
 msgstr "Style:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Use Source Style"
 msgstr "Use Source Style"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "1-to-1"
 msgstr "1-to-1"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "1-to-1 (keep incorrect colors)"
 msgstr "1-to-1 (keep incorrect colors)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Dotted (Small, 1:2)"
 msgstr "Dotted (Small, 1:2)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Dotted (Big, 2:2)"
 msgstr "Dotted (Big, 2:2)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Symbols"
 msgstr "Symbols"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Numbers"
 msgstr "Numbers"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Custom…"
 msgstr "Custom…"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template style source;template style URL;custom style URL;custom template"
 msgstr "template style source;template style URL;custom style URL;custom template"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Custom style URL:"
 msgstr "Custom style URL:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template conversion;template palette conversion;convert to palette"
 msgstr "template conversion;template palette conversion;convert to palette"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Color Conversion Mode:"
 msgstr "Color Conversion Mode:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Unconverted"
 msgstr "Unconverted"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Nearest Custom"
 msgstr "Nearest Custom"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template transparency;template opacity;oo="
 msgstr "template transparency;template opacity;oo="
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Opacity:"
 msgstr "Opacity:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "ui;interface"
 msgstr "ui;interface"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "UI Settings"
 msgstr "UI Settings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "language override;text"
 msgstr "language override;text"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Language override:"
 msgstr "Language override:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Use Browser Language"
 msgstr "Use Browser Language"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "English"
 msgstr "English"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "French"
 msgstr "French"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Russian"
 msgstr "Russian"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Bulgarian"
 msgstr "Bulgarian"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Swedish"
 msgstr "Swedish"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "themes;look;stylesheets;visuals"
 msgstr "themes;look;stylesheets;visuals"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Theme:"
 msgstr "Theme:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Default"
 msgstr "Default"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden"
 msgstr "hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Show reticule"
 msgstr "Show reticule"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "hide cursor;cursor shown;cursor hidden"
 msgstr "hide cursor;cursor shown;cursor hidden"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Show cursor"
 msgstr "Show cursor"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "darkness filter"
 msgstr "darkness filter"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable color brightness"
 msgstr "Enable color brightness"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Warning: Known to cause fuzziness in Chrome on some Mac/Linux installs"
 msgstr "Warning: Known to cause fuzziness in Chrome on some Mac/Linux installs"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Color brightness:"
 msgstr "Color brightness:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "keep current selected;keep curent color;place"
 msgstr "keep current selected;keep curent color;place"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Deselect color after placing"
 msgstr "Deselect color after placing"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "mousewheel;palette scrolling"
 msgstr "mousewheel;palette scrolling"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable scrolling on the palette to switch colors"
 msgstr "Enable scrolling on the palette to switch colors"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "reverse scrolling;mousewheel;palette scrolling;enable scrolling on the palette to switch colors"
 msgstr "reverse scrolling;mousewheel;palette scrolling;enable scrolling on the palette to switch colors"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Invert scroll direction"
 msgstr "Invert scroll direction"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "indexed colors;palette indicies"
 msgstr "indexed colors;palette indicies"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Add numbers to palette entries"
 msgstr "Add numbers to palette entries"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "scrollbar;palette scrolling"
 msgstr "scrollbar;palette scrolling"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable thin scrollbar"
 msgstr "Enable thin scrollbar"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "scrollbar;palette scrolling;palette stack"
 msgstr "scrollbar;palette scrolling;palette stack"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable palette stacking"
 msgstr "Enable palette stacking"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "floating bubble location"
 msgstr "floating bubble location"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Bubble position:"
 msgstr "Bubble position:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Top left"
 msgstr "Top left"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Top right"
 msgstr "Top right"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Bottom left"
 msgstr "Bottom left"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Bottom right"
 msgstr "Bottom right"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "broken;offset workaround"
 msgstr "broken;offset workaround"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Attempt to fix canvas displacement bug in Chrome 78+"
 msgstr "Attempt to fix canvas displacement bug in Chrome 78+"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat;message;ping sound"
 msgstr "chat;message;ping sound"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Chat Settings"
 msgstr "Chat Settings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "username;color;colour"
 msgstr "username;color;colour"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Username Color:"
 msgstr "Username Color:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat message;chat ui"
 msgstr "chat message;chat ui"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Interface"
 msgstr "Interface"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "enable;disable"
 msgstr "enable;disable"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable chat"
 msgstr "Enable chat"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Page must be reloaded after changing"
 msgstr "Page must be reloaded after changing"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat size;chat font"
 msgstr "chat size;chat font"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Font Size:"
 msgstr "Font Size:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "time;timestamps"
 msgstr "time;timestamps"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "24 Hour Timestamps"
 msgstr "24 Hour Timestamps"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "badges;pixel count;pixels placed"
 msgstr "badges;pixel count;pixels placed"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Show pixel-placed badges"
 msgstr "Show pixel-placed badges"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "badges;factions"
 msgstr "badges;factions"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Show faction tags"
 msgstr "Show faction tags"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template urls;template links;template name"
 msgstr "template urls;template links;template name"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Replace template titles with URLs in chat where applicable"
 msgstr "Replace template titles with URLs in chat where applicable"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat orientation;chat position"
 msgstr "chat orientation;chat position"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable horizontal chat"
 msgstr "Enable horizontal chat"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "banner;animation"
 msgstr "banner;animation"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable the rotating banner under chat"
 msgstr "Enable the rotating banner under chat"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "max;messages;truncate"
 msgstr "max;messages;truncate"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Maximum amount of chat messages:"
 msgstr "Maximum amount of chat messages:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "link;url;behaviour"
 msgstr "link;url;behaviour"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Default internal link action click:"
 msgstr "Default internal link action click:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat icon;chat notifications;chat ping"
 msgstr "chat icon;chat notifications;chat ping"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Chat icon badge mode:"
 msgstr "Chat icon badge mode:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread ping"
 msgstr "Show on unread ping"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread message"
 msgstr "Show on unread message"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Never show"
 msgstr "Never show"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat icon;chat notifications;chat message"
 msgstr "chat icon;chat notifications;chat message"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Chat icon highlight mode:"
 msgstr "Chat icon highlight mode:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "ignored;ignores;unignore;blocked;blocking;unblock"
 msgstr "ignored;ignores;unignore;blocked;blocking;unblock"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Ignores"
 msgstr "Ignores"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "unignore;unblock"
 msgstr "unignore;unblock"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Unignore"
 msgstr "Unignore"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;virginmap;heatmap;grid"
 msgstr "overlays;virginmap;heatmap;grid"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Overlay Settings"
 msgstr "Overlay Settings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "heatmap;heatmap opacity;clear heatmap"
 msgstr "heatmap;heatmap opacity;clear heatmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Heatmap"
 msgstr "Heatmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Turn on heatmap"
 msgstr "Turn on heatmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "(toggle with <kbd>H</kbd>)"
 msgstr "(toggle with <kbd>H</kbd>)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;activity;pixels placed pixels;wipe;clean"
 msgstr "overlays;activity;pixels placed pixels;wipe;clean"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Clear heatmap"
 msgstr "Clear heatmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "(hotkey: <kbd>O</kbd>)"
 msgstr "(hotkey: <kbd>O</kbd>)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;transparency"
 msgstr "overlays;user activity;pixels placed pixels;transparency"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Heatmap background opacity:"
 msgstr "Heatmap background opacity:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "virginmap;virginmap opacity;clear virginmap"
 msgstr "virginmap;virginmap opacity;clear virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Virginmap"
 msgstr "Virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Turn on virginmap"
 msgstr "Turn on virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "(toggle with <kbd>X</kbd>)"
 msgstr "(toggle with <kbd>X</kbd>)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;transparency"
 msgstr "overlays;user activity;pixels unplaced pixels;transparency"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Virginmap background opacity:"
 msgstr "Virginmap background opacity:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;activity;pixels unplaced pixels;wipe;clean"
 msgstr "overlays;activity;pixels unplaced pixels;wipe;clean"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Clear virginmap"
 msgstr "Clear virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "(hotkey: <kbd>U</kbd>)"
 msgstr "(hotkey: <kbd>U</kbd>)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Layer template underneath heatmap"
 msgstr "Layer template underneath heatmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "grid;toggle grid"
 msgstr "grid;toggle grid"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Grid"
 msgstr "Grid"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Turn on grid"
 msgstr "Turn on grid"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "(toggle with <kbd>G</kbd>)"
 msgstr "(toggle with <kbd>G</kbd>)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "controls;zooming;panning;movement"
 msgstr "controls;zooming;panning;movement"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Control Settings"
 msgstr "Control Settings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "zooming;scrolling;scale;scaling"
 msgstr "zooming;scrolling;scale;scaling"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Zooming"
 msgstr "Zooming"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "scrolling sensitivity;zooming sensitivity;mousewheel sensitivity"
 msgstr "scrolling sensitivity;zooming sensitivity;mousewheel sensitivity"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Zoom sensitivity:"
 msgstr "Zoom sensitivity:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "zooming limit;scrolling limit;mousewheel;zooming minimum;zooming maximum"
 msgstr "zooming limit;scrolling limit;mousewheel;zooming minimum;zooming maximum"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Minimum scale:"
 msgstr "Minimum scale:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Maximum scale:"
 msgstr "Maximum scale:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "rounding;zooming;scrolling;mousewheel;integer;decimal"
 msgstr "rounding;zooming;scrolling;mousewheel;integer;decimal"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Round zoom values to nearest whole number"
 msgstr "Round zoom values to nearest whole number"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "controls;miscellaneous"
 msgstr "controls;miscellaneous"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Lock the canvas (disallow canvas drag/zoom with mouse/fingers)"
 msgstr "Lock the canvas (disallow canvas drag/zoom with mouse/fingers)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "MMB picker;mouse picker;selection;palette picker"
 msgstr "MMB picker;mouse picker;selection;palette picker"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable middle mouse button selecting color from board"
 msgstr "Enable middle mouse button selecting color from board"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "right click action"
 msgstr "right click action"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Right-click action:"
 msgstr "Right-click action:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Nothing"
 msgstr "Nothing"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Clear color"
 msgstr "Clear color"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Copy color"
 msgstr "Copy color"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Lookup"
 msgstr "Lookup"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Clear color + Lookup"
 msgstr "Clear color + Lookup"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "snapshots;screenshot;download;picture;canvas"
 msgstr "snapshots;screenshot;download;picture;canvas"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Snapshot Settings"
 msgstr "Snapshot Settings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "screenshot;snapshot;download;board;canvas"
 msgstr "screenshot;snapshot;download;board;canvas"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "take screenshot;image;download format;picture;canvas;board"
 msgstr "take screenshot;image;download format;picture;canvas;board"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Snapshot image format:"
 msgstr "Snapshot image format:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "PNG"
 msgstr "PNG"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "JPEG"
 msgstr "JPEG"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "WEBP (Chrome only)"
 msgstr "WEBP (Chrome only)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "sound;notification;alert;notify;ping"
 msgstr "sound;notification;alert;notify;ping"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Sound and Notification Settings"
 msgstr "Sound and Notification Settings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "audio;mute;noise;volume"
 msgstr "audio;mute;noise;volume"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable sound"
 msgstr "Enable sound"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "notifs;notify;pixel notification"
 msgstr "notifs;notify;pixel notification"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable pixel available notification"
 msgstr "Enable pixel available notification"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "notification;pixel ready;alert"
 msgstr "notification;pixel ready;alert"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Pixel Ready Notification"
 msgstr "Pixel Ready Notification"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "alert source;notify url;notify source;notification url;notification source"
 msgstr "alert source;notify url;notify source;notification url;notification source"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Alert URL:"
 msgstr "Alert URL:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Update"
 msgstr "Update"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Test"
 msgstr "Test"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "sound level;audio level;mute audio;mute sound"
 msgstr "sound level;audio level;mute audio;mute sound"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Volume:"
 msgstr "Volume:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "alert forewarning;alert delay; notification delay; notification forewarning"
 msgstr "alert forewarning;alert delay; notification delay; notification forewarning"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Delay (seconds):"
 msgstr "Delay (seconds):"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat mentions;chat pings;chat sound"
 msgstr "chat mentions;chat pings;chat sound"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Chat Pings"
 msgstr "Chat Pings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable pings"
 msgstr "Enable pings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "mention sound"
 msgstr "mention sound"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Play sound on ping:"
 msgstr "Play sound on ping:"
 
-#: ../views/index.handlebars ../public/include/chat.js
+#: /views/index.handlebars /public/include/chat.js
 msgid "Off"
 msgstr "Off"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Only when necessary"
 msgstr "Only when necessary"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Always"
 msgstr "Always"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "mention sound volume"
 msgstr "mention sound volume"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Ping sound volume:"
 msgstr "Ping sound volume:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "personal account"
 msgstr "personal account"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Account Settings"
 msgstr "Account Settings"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Public Discord name:"
 msgstr "Public Discord name:"
 
-#: ../views/index.handlebars ../public/include/chat.js
+#: /views/index.handlebars /public/include/chat.js
 msgid "Set"
 msgstr "Set"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Remove"
 msgstr "Remove"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Help"
 msgstr "Help"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Notifications"
 msgstr "Notifications"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "FAQ"
 msgstr "FAQ"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Why is the cooldown as long as it is?"
 msgstr "Why is the cooldown as long as it is?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "The time it takes to get a pixel is dynamic, and changes based on how many people are online. The cooldown time is longer when more users are online."
 msgstr "The time it takes to get a pixel is dynamic, and changes based on how many people are online. The cooldown time is longer when more users are online."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Why does it say 0/6 pixels?"
 msgstr "Why does it say 0/6 pixels?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "This means that you are waiting for your next pixel. When you place a pixel, there is a cooldown for when you can place the next one. Over time, you can gain up to 6 \"stacked\" pixels to place at once."
 msgstr "This means that you are waiting for your next pixel. When you place a pixel, there is a cooldown for when you can place the next one. Over time, you can gain up to 6 \"stacked\" pixels to place at once."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Why does it take so long to \"stack\" pixels?"
 msgstr "Why does it take so long to \"stack\" pixels?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
 msgstr "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I appeal a ban?"
 msgstr "How do I appeal a ban?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
 msgstr ""
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I make a template?"
 msgstr "How do I make a template?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "A template is an image link that is posted in the template textbox in the settings panel so you can place over it on the canvas. You may use a regular image link to your pixel art, but many people use 3rd party tools like <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> or <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn pixel art into a fancier link. If you need to make pixel art yourself, you can use <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> to create art to put into Charity or Clueless."
 msgstr "A template is an image link that is posted in the template textbox in the settings panel so you can place over it on the canvas. You may use a regular image link to your pixel art, but many people use 3rd party tools like <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> or <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn pixel art into a fancier link. If you need to make pixel art yourself, you can use <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> to create art to put into Charity or Clueless."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I move a template?"
 msgstr "How do I move a template?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to move it around. On mobile, you can tap and hold where you want to move the template and click \"Move Template Here\" in the pop-up."
 msgstr "Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to move it around. On mobile, you can tap and hold where you want to move the template and click \"Move Template Here\" in the pop-up."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Does the canvas reset? When?"
 msgstr "Does the canvas reset? When?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Yes. The canvas resets when it is completely full. A reset date is not usually decided until the canvas is full, but the average canvas life-span is around 1 month. Updates are posted in our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> when a reset date is set."
 msgstr "Yes. The canvas resets when it is completely full. A reset date is not usually decided until the canvas is full, but the average canvas life-span is around 1 month. Updates are posted in our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> when a reset date is set."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Where can I see the past canvases?"
 msgstr "Where can I see the past canvases?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
 msgstr "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I see who placed a pixel?"
 msgstr "How do I see who placed a pixel?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "By shift-clicking (or tap and hold on mobile) a pixel, you can see who placed a pixel, how many pixels they have placed, and when they placed it."
 msgstr "By shift-clicking (or tap and hold on mobile) a pixel, you can see who placed a pixel, how many pixels they have placed, and when they placed it."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I report someone?"
 msgstr "How do I report someone?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Shift-click (or tap and hold on mobile) on a pixel, and click the Report button."
 msgstr "Shift-click (or tap and hold on mobile) on a pixel, and click the Report button."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I change the color of my name in the chat?"
 msgstr "How do I change the color of my name in the chat?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "There is a \"Username Color\" option near the bottom of the settings panel."
 msgstr "There is a \"Username Color\" option near the bottom of the settings panel."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "What is a \"virginmap\"?"
 msgstr "What is a \"virginmap\"?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "The virginmap shows which pixels have not yet been placed on (or “virgin” pixels)."
 msgstr "The virginmap shows which pixels have not yet been placed on (or “virgin” pixels)."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I report bugs?"
 msgstr "How do I report bugs?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
 msgstr "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I get more info or contact staff?"
 msgstr "How do I get more info or contact staff?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Check the info panel (the icon on the top left) for more details and links, or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, where a staff member will gladly respond."
 msgstr "Check the info panel (the icon on the top left) for more details and links, or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, where a staff member will gladly respond."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Welcome!"
 msgstr "Welcome!"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
 msgstr ""
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "The best place to reach staff and fellow community is in the discord!"
 msgstr "The best place to reach staff and fellow community is in the discord!"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
 msgstr "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Canvas Rules"
 msgstr "Canvas Rules"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
 msgstr "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
 msgstr "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No NSFW or NSFL content."
 msgstr "No NSFW or NSFL content."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No nudity or otherwise sexually explicit content"
 msgstr "No nudity or otherwise sexually explicit content"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
 msgstr "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No sexual imagery/erotica"
 msgstr "No sexual imagery/erotica"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No excessive blood or otherwise obscene/shocking content"
 msgstr "No excessive blood or otherwise obscene/shocking content"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas."
 msgstr "No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No auto-placement tools of any kind, you must place the pixels manually."
 msgstr "No auto-placement tools of any kind, you must place the pixels manually."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
 msgstr "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
 msgstr "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Staff have final say in any rule disputes"
 msgstr "Staff have final say in any rule disputes"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
 msgstr "If you feel a moderator has acted inappropriately, please report it to an administrator."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
 msgstr "If you believe you have been falsely banned you may contact a moderator or administrator."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Chat Rules"
 msgstr "Chat Rules"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
 msgstr "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No hate speech. This includes emoji/symbols/ASCII art."
 msgstr "No hate speech. This includes emoji/symbols/ASCII art."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Normal swearing/etc is allowed"
 msgstr "Normal swearing/etc is allowed"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No spamming"
 msgstr "No spamming"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "This includes excessive ASCII art/emojis/symbols/whitespace"
 msgstr "This includes excessive ASCII art/emojis/symbols/whitespace"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No \"copy pasta\"s"
 msgstr "No \"copy pasta\"s"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
 msgstr "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
 msgstr "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No personal information"
 msgstr "No personal information"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Links"
 msgstr "Links"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Discord (main hub)"
 msgstr "Discord (main hub)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Subreddit"
 msgstr "Subreddit"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Twitter"
 msgstr "Twitter"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "GitHub"
 msgstr "GitHub"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Single-player mode"
 msgstr "Single-player mode"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Statistics"
 msgstr "Statistics"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Profile (user info, factions, etc.)"
 msgstr "Profile (user info, factions, etc.)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Generator, progress checker, and monitor for Pxls templates"
 msgstr "Generator, progress checker, and monitor for Pxls templates"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Charity (templates, monitors, etc.)"
 msgstr "Charity (templates, monitors, etc.)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Archives"
 msgstr "Archives"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "PxlsFiddle (archives)"
 msgstr "PxlsFiddle (archives)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Donate"
 msgstr "Donate"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Donations are not accepted at this time, but this panel will be updated when they're open again!"
 msgstr ""
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "{0}'s Profile"
 msgstr ""
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "My Data"
 msgstr "My Data"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Reports"
 msgstr "Reports"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Factions"
 msgstr "Factions"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Data"
 msgstr "Data"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You must be logged in to view your profile."
 msgstr "You must be logged in to view your profile."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Registration Date"
 msgstr "Registration Date"
 
-#: ../views/profile.handlebars ../public/include/lookup.js
+#: /views/profile.handlebars /public/include/lookup.js
 msgid "Alltime Pixels"
 msgstr "Alltime Pixels"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Current Canvas Pixels"
 msgstr "Current Canvas Pixels"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Discord Tag"
 msgstr "Discord Tag"
 
-#: ../views/profile.handlebars ../public/include/lookup.js
+#: /views/profile.handlebars /public/include/lookup.js
 msgid "Faction"
 msgstr "Faction"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "None"
 msgstr "None"
 
-#: ../views/profile.handlebars ../public/admin/admin.js
+#: /views/profile.handlebars /public/admin/admin.js
 msgid "Roles"
 msgstr "Roles"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Canvas Ban Expiry"
 msgstr "Canvas Ban Expiry"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Never"
 msgstr "Never"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Chat Ban Expiry"
 msgstr "Chat Ban Expiry"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "View rankings and other stats <a href=\"/stats\">here</a>."
 msgstr "View rankings and other stats <a href=\"/stats\">here</a>."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You must be logged in to view your reports."
 msgstr "You must be logged in to view your reports."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Canvas Reports ({0}/{1} open)"
 msgstr "Canvas Reports ({0}/{1} open)"
 
-#.  eg "Report on Bob (closed)
-#: ../views/profile.handlebars
+#.  eg "Report on Bob (closed) 
+#: /views/profile.handlebars
 msgid "Report on {0} (closed)"
 msgstr "Report on {0} (closed)"
 
-#.  eg "Report on Bob (open)
-#: ../views/profile.handlebars
+#.  eg "Report on Bob (open) 
+#: /views/profile.handlebars
 msgid "Report on {0} (open)"
 msgstr "Report on {0} (open)"
 
-#.  eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
-#: ../views/profile.handlebars
+#.  eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC) 
+#: /views/profile.handlebars
 msgid "Reported {0} on {1}"
 msgstr "Reported {0} on {1}"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "There are no canvas reports to show."
 msgstr "There are no canvas reports to show."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Chat Reports ({0}/{1} open)"
 msgstr "Chat Reports ({0}/{1} open)"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "There are no chat reports to show."
 msgstr "There are no chat reports to show."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You must be logged in to manage your factions."
 msgstr "You must be logged in to manage your factions."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator."
 msgstr "You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator."
 msgstr "You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You must have at least {0} all-time pixels to create a faction."
 msgstr "You must have at least {0} all-time pixels to create a faction."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Create"
 msgstr "Create"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Join"
 msgstr "Join"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "This is your currently displayed faction."
 msgstr "This is your currently displayed faction."
 
-#.  eg "Pixelers (members: 100, ID: 1)"
-#: ../views/profile.handlebars
+#.  eg "Pixelers (members: 100, ID: 1)" 
+#: /views/profile.handlebars
 msgid "{0} (members: {1}, ID: {2})"
 msgstr "{0} (members: {1}, ID: {2})"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Owner: {0}"
 msgstr "Owner: {0}"
 
-#.  makes the faction no longer the one displayed for the current user
-#: ../views/profile.handlebars
+#.  makes the faction no longer the one displayed for the current user 
+#: /views/profile.handlebars
 msgid "Remove Displayed"
 msgstr "Remove Displayed"
 
-#.  makes the faction the one displayed for the current user
-#: ../views/profile.handlebars
+#.  makes the faction the one displayed for the current user 
+#: /views/profile.handlebars
 msgid "Set Displayed"
 msgstr "Set Displayed"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Members"
 msgstr "Members"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Edit"
 msgstr "Edit"
 
-#: ../views/profile.handlebars ../public/include/chat.js
+#: /views/profile.handlebars /public/include/chat.js
 msgid "Delete"
 msgstr "Delete"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Leave"
 msgstr "Leave"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You are not in any factions yet!"
 msgstr "You are not in any factions yet!"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You must be logged in to view your data."
 msgstr "You must be logged in to view your data."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Log Keys"
 msgstr "Log Keys"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Log keys can be used by those who have them to tell which pixels you placed on previous canvases."
 msgstr "Log keys can be used by those who have them to tell which pixels you placed on previous canvases."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Canvas Code"
 msgstr "Canvas Code"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Log Key"
 msgstr "Log Key"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You have no log keys yet!"
 msgstr "You have no log keys yet!"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Log keys should show up here after a canvas you have placed on ends."
 msgstr "Log keys should show up here after a canvas you have placed on ends."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Members of {0} ([{1}])"
 msgstr "Members of {0} ([{1}])"
 
-#: ../views/profile.handlebars ../public/admin/admin.js
-#: ../public/include/lookup.js
+#: /views/profile.handlebars /public/admin/admin.js /public/include/lookup.js
 msgid "Close"
 msgstr "Close"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Faction Members"
 msgstr "Faction Members"
 
-#.  This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list.
-#.  since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list
-#: ../views/profile.handlebars
+#.  This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list. 
+#.  since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list 
+#: /views/profile.handlebars
 msgid "Transfer Ownership"
 msgstr "Transfer Ownership"
 
-#.  bans a user from the faction
-#: ../views/profile.handlebars ../public/include/chat.js
+#.  bans a user from the faction 
+#: /views/profile.handlebars /public/include/chat.js
 msgid "Ban"
 msgstr "Ban"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Nothing to see here!"
 msgstr "Nothing to see here!"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Faction Bans"
 msgstr "Faction Bans"
 
-#: ../views/profile.handlebars ../public/admin/admin.js
-#: ../public/include/chat.js
+#: /views/profile.handlebars /public/admin/admin.js /public/include/chat.js
 msgid "Unban"
 msgstr "Unban"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Find A Faction"
 msgstr "Find A Faction"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Search:"
 msgstr "Search:"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Enter a search term to get started."
 msgstr "Enter a search term to get started."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Load More"
 msgstr "Load More"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Send alert..."
 msgstr "Send alert..."
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Rule #1: Hateful/derogatory speech or symbols"
 msgstr "Rule #1: Hateful/derogatory speech or symbols"
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
 msgstr "Rule #2: Nudity, genitalia, or non-PG-13 content"
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Rule #3: Multi-account"
 msgstr "Rule #3: Multi-account"
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Rule #4: Botting"
 msgstr "Rule #4: Botting"
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Other (specify below)"
 msgstr "Other (specify below)"
 
-#: ../public/admin/admin.js ../public/include/chat.js
-#: ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
 msgid "Additional information (if applicable)"
 msgstr "Additional information (if applicable)"
 
 #. "Revert pixels of the last *n* hours", part before 'n'
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Revert pixels of the last "
 msgstr "Revert pixels of the last "
 
 #. "Revert pixels of the last *n* hours", part after 'n'
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid " hours"
 msgstr " hours"
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "You must specify the details."
 msgstr "You must specify the details."
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Something went wrong! Perhaps insufficient permissions?"
 msgstr "Something went wrong! Perhaps insufficient permissions?"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Shadowban user"
 msgstr "Shadowban user"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Shadowbanned user"
 msgstr "Shadowbanned user"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Permaban user"
 msgstr "Permaban user"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Permabanned user"
 msgstr "Permabanned user"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ban user"
 msgstr "Ban user"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Banned user"
 msgstr "Banned user"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Unbanned user ${username}"
 msgstr "Unbanned user ${username}"
 
 #. Context: ban type
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "shadow"
 msgstr "shadow"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "never"
 msgstr "never"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "permanent"
 msgstr "permanent"
 
-#: ../public/admin/admin.js ../public/include/chat.js
-#: ../public/include/uiHelper.js ../public/include/user.js
+#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/include/user.js
 msgid "Yes"
 msgstr "Yes"
 
-#: ../public/admin/admin.js ../public/include/chat.js
-#: ../public/include/uiHelper.js ../public/include/user.js
+#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/include/user.js
 msgid "No"
 msgstr "No"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Yes (permanent)"
 msgstr "Yes (permanent)"
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Username"
 msgstr "Username"
 
-#: ../public/admin/admin.js ../public/include/chat.js
+#: /public/admin/admin.js /public/include/chat.js
 msgid "Profile"
 msgstr "Profile"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Logins"
 msgstr "Logins"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "All Time Pixels"
 msgstr "All Time Pixels"
 
-#: ../public/admin/admin.js ../public/include/user.js
+#: /public/admin/admin.js /public/include/user.js
 msgid "Rename Requested"
 msgstr "Rename Requested"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Discord Name"
 msgstr "Discord Name"
 
-#: ../public/admin/admin.js ../public/include/user.js
+#: /public/admin/admin.js /public/include/user.js
 msgid "Banned"
 msgstr "Banned"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Chatbanned"
 msgstr "Chatbanned"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ban Reason"
 msgstr "Ban Reason"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ban Expiracy"
 msgstr "Ban Expiracy"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Chatban Reason"
 msgstr "Chatban Reason"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "(canvas ban)"
 msgstr "(canvas ban)"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "when canvas ban ends"
 msgstr "when canvas ban ends"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Chatban Expires"
 msgstr "Chatban Expires"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ban (24h)"
 msgstr "Ban (24h)"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Permaban"
 msgstr "Permaban"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Shadowban"
 msgstr "Shadowban"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Custom ban length: "
 msgstr "Custom ban length: "
 
 #. Admin check. Example: type = 'username', arg = 'pxlsuser94'
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "${type} ${arg} not found."
 msgstr "${type} ${arg} not found."
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Unban Reason:"
 msgstr "Unban Reason:"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Unbanning ${username}"
 msgstr "Unbanning ${username}"
 
-#: ../public/admin/admin.js ../public/include/chat.js
-#: ../public/include/lookup.js ../public/include/user.js
+#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/include/user.js
 msgid "Cancel"
 msgstr "Cancel"
 
 #. Moderator panel label
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "MOD"
 msgstr "MOD"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ignore cooldown"
 msgstr "Ignore cooldown"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Place any color"
 msgstr "Place any color"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ignore placemap"
 msgstr "Ignore placemap"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ban user (24h)"
 msgstr "Ban user (24h)"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Unban user"
 msgstr "Unban user"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Check user"
 msgstr "Check user"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "profile"
 msgstr "profile"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "User Agent"
 msgstr "User Agent"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Send Alert"
 msgstr "Send Alert"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Mod Actions"
 msgstr "Mod Actions"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "More..."
 msgstr "More..."
 
 #. Snapshot save name
-#: ../public/include/board.js
+#: /public/include/board.js
 msgid "pxls canvas"
 msgstr "pxls canvas"
 
 #. template link action
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Ask"
 msgstr "Ask"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Open in a new tab"
 msgstr "Open in a new tab"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Open in current tab (replacing template)"
 msgstr "Open in current tab (replacing template)"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Jump to coordinates without replacing template"
 msgstr "Jump to coordinates without replacing template"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Please upload your template image to a third-party image host."
 msgstr "Please upload your template image to a third-party image host."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "You must have at least "
 msgstr "You must have at least "
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid " pixels to send links."
 msgstr " pixels to send links."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "You must be logged in to chat."
 msgstr "You must be logged in to chat."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "No Results"
 msgstr "No Results"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Reply"
 msgstr "Reply"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "none provided"
 msgstr "none provided"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Purged by ${purge.initiator} with reason: ${reason}"
 msgstr "Purged by ${purge.initiator} with reason: ${reason}"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "template:"
 msgstr "template:"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Open Failed"
 msgstr "Open Failed"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Failed to automatically open in a new tab"
 msgstr "Failed to automatically open in a new tab"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Click here to open in a new tab instead"
 msgstr "Click here to open in a new tab instead"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Open Template"
 msgstr "Open Template"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "This link will overwrite your current template. What would you like to do?"
 msgstr "This link will overwrite your current template. What would you like to do?"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Note: You can set a default action in the settings menu which bypasses this popup completely."
 msgstr "Note: You can set a default action in the settings menu which bypasses this popup completely."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "OK"
 msgstr "OK"
 
-#: ../public/include/chat.js ../public/include/lookup.js
+#: /public/include/chat.js /public/include/lookup.js
 msgid "Report"
 msgstr "Report"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Mention"
 msgstr "Mention"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Ignore"
 msgstr "Ignore"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Chat (un)ban"
 msgstr "Chat (un)ban"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Purge User"
 msgstr "Purge User"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Mod Lookup"
 msgstr "Mod Lookup"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Chat Lookup"
 msgstr "Chat Lookup"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Enter a reason for your report"
 msgstr "Enter a reason for your report"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "You are reporting a chat message from ${reportTarget} with the content:"
 msgstr "You are reporting a chat message from ${reportTarget} with the content:"
 
-#: ../public/include/chat.js ../public/include/lookup.js
+#: /public/include/chat.js /public/include/lookup.js
 msgid "Sent report!"
 msgstr "Sent report!"
 
-#: ../public/include/chat.js ../public/include/lookup.js
+#: /public/include/chat.js /public/include/lookup.js
 msgid "Error sending report."
 msgstr "Error sending report."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Report User"
 msgstr "Report User"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "User ignored. You can unignore from chat settings."
 msgstr "User ignored. You can unignore from chat settings."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Failed to ignore user. Either they\\'re already ignored, or an error occurred. If the problem persists, contact a developer."
 msgstr "Failed to ignore user. Either they\\'re already ignored, or an error occurred. If the problem persists, contact a developer."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Permanent"
 msgstr "Permanent"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Temporary"
 msgstr "Temporary"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Rule 3: Spam"
 msgstr "Rule 3: Spam"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Rule 1: Chat civility"
 msgstr "Rule 1: Chat civility"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Rule 2: Hate Speech"
 msgstr "Rule 2: Hate Speech"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Rule 5: NSFW"
 msgstr "Rule 5: NSFW"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Custom"
 msgstr "Custom"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Banning:"
 msgstr "Banning:"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Message:"
 msgstr "Message:"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Ban Length"
 msgstr "Ban Length"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Reason"
 msgstr "Reason"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Purge Messages"
 msgstr "Purge Messages"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Purging all messages is disabled during snip mode"
 msgstr "Purging all messages is disabled during snip mode"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Silent (no purge message)"
 msgstr "Silent (no purge message)"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Custom reason"
 msgstr "Custom reason"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Additional information:"
 msgstr "Additional information:"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Chatban initiated"
 msgstr "Chatban initiated"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Error occurred while chatbanning"
 msgstr "Error occurred while chatbanning"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Chatban"
 msgstr "Chatban"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Failed to delete"
 msgstr "Failed to delete"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "ID: "
 msgstr "ID: "
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "User: "
 msgstr "User: "
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Message: "
 msgstr "Message: "
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Reason: "
 msgstr "Reason: "
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Delete Message"
 msgstr "Delete Message"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Purge"
 msgstr "Purge"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Selected Message"
 msgstr "Selected Message"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Purge Reason"
 msgstr "Purge Reason"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "User purged"
 msgstr "User purged"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Error sending purge."
 msgstr "Error sending purge."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Toggle Rename Request"
 msgstr "Toggle Rename Request"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Select one of the options below to set the current rename request state."
 msgstr "Select one of the options below to set the current rename request state."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Rename request updated"
 msgstr "Rename request updated"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "An unknown error occurred. Please contact a developer"
 msgstr "An unknown error occurred. Please contact a developer"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "New Name: "
 msgstr "New Name: "
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Enter the new name for the user below. Please note that if you\\'re trying to change the caps, you\\'ll have to rename to something else first."
 msgstr "Enter the new name for the user below. Please note that if you\\'re trying to change the caps, you\\'ll have to rename to something else first."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "User renamed"
 msgstr "User renamed"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Force Rename"
 msgstr "Force Rename"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "You cannot use chat while canvas banned."
 msgstr "You cannot use chat while canvas banned."
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Sending..."
 msgstr "Sending..."
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "additional information:"
 msgstr "additional information:"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Report Pixel"
 msgstr "Report Pixel"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "This pixel is background (was not placed by a user)."
 msgstr "This pixel is background (was not placed by a user)."
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Hide sensitive information"
 msgstr "Hide sensitive information"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Move Template Here"
 msgstr "Move Template Here"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "An error occurred, either you aren't logged in or you may be attempting to look up users too fast. Please try again in 60 seconds"
 msgstr "An error occurred, either you aren't logged in or you may be attempting to look up users too fast. Please try again in 60 seconds"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Coords"
 msgstr "Coords"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "View Profile"
 msgstr "View Profile"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Origin"
 msgstr "Origin"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Part of a nuke"
 msgstr "Part of a nuke"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Placed by a staff member using placement overrides"
 msgstr "Placed by a staff member using placement overrides"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Time"
 msgstr "Time"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "just now"
 msgstr "just now"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
 msgstr "${hoursStr}:${minuteStr}:${secsStr} ago"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Discord"
 msgstr "Discord"
 
-#: ../public/include/notifications.js
+#: /public/include/notifications.js
 msgid "Posted by ${notification.who}"
 msgstr "Posted by ${notification.who}"
 
-#: ../public/include/notifications.js
+#: /public/include/notifications.js
 msgid "Expires ${expiry}"
 msgstr "Expires ${expiry}"
 
-#: ../public/include/template.js
+#: /public/include/template.js
 msgid "There was an error getting the image"
 msgstr "There was an error getting the image"
 
-#: ../public/include/timer.js
+#: /public/include/timer.js
 msgid "Your next pixel will be available in ${delay} seconds!"
 msgstr "Your next pixel will be available in ${delay} seconds!"
 
-#: ../public/include/timer.js
+#: /public/include/timer.js
 msgid "Your next pixel has been available for ${alertDelay} seconds!"
 msgstr "Your next pixel has been available for ${alertDelay} seconds!"
 
-#: ../public/include/timer.js
+#: /public/include/timer.js
 msgid "Your next pixel is available!"
 msgstr "Your next pixel is available!"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Dark"
 msgstr "Dark"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Darker"
 msgstr "Darker"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Blue"
 msgstr "Blue"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Purple"
 msgstr "Purple"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Green"
 msgstr "Green"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Matte"
 msgstr "Matte"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Terminal"
 msgstr "Terminal"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Red"
 msgstr "Red"
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "A new ${type} report has been received."
 msgstr "A new ${type} report has been received."
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Cannot fetch local files. Use the file selector in template settings."
 msgstr "Cannot fetch local files. Use the file selector in template settings."
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Redirect Warning"
 msgstr "Redirect Warning"
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Are you sure you want to redirect to the following URL?"
 msgstr "Are you sure you want to redirect to the following URL?"
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Drag and dropped file must be a valid image."
 msgstr "Drag and dropped file must be a valid image."
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Discord name updated successfully"
 msgstr "Discord name updated successfully"
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Couldn\\'t change discord name: "
 msgstr "Couldn\\'t change discord name: "
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Sign in with..."
 msgstr "Sign in with..."
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "New Accounts Disabled"
 msgstr "New Accounts Disabled"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "online"
 msgstr "online"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Sign Out"
 msgstr "Sign Out"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Are you sure you want to sign out?"
 msgstr "Are you sure you want to sign out?"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "You are permanently banned."
 msgstr "You are permanently banned."
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "You are temporarily banned and will not be allowed to place until ${timestamp}"
 msgstr "You are temporarily banned and will not be allowed to place until ${timestamp}"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "You can contact us using one of the links in the info menu."
 msgstr "You can contact us using one of the links in the info menu."
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "If you think this was an error, please contact us using one of the links in the info tab."
 msgstr "If you think this was an error, please contact us using one of the links in the info tab."
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Ban reason:"
 msgstr "Ban reason:"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "An unknown error occurred. Please contact staff on discord"
 msgstr "An unknown error occurred. Please contact staff on discord"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Staff have required you to change your username, this usually means your name breaks one of our rules."
 msgstr "Staff have required you to change your username, this usually means your name breaks one of our rules."
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "If you disagree, please contact us on Discord (link in the info panel)."
 msgstr "If you disagree, please contact us on Discord (link in the info panel)."
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "New Username:"
 msgstr "New Username:"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Not now"
 msgstr "Not now"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Change"
 msgstr "Change"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "You must change your username."
 msgstr "You must change your username."
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Click here to continue."
 msgstr "Click here to continue."
 
-#: ../public/pxls.js
+#: /public/pxls.js
 msgid "Alert"
 msgstr "Alert"

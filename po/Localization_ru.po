@@ -1,2466 +1,2461 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-07T03:58:47.363Z\n"
+"POT-Creation-Date: 2023-12-10T20:50:04.139Z\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
-#: ../views/404.handlebars ../views/profile.handlebars
-#: ../public/include/user.js
+#: /views/error.handlebars /views/profile.handlebars /public/include/user.js
 msgid "My Profile"
 msgstr "Мой профиль"
 
-#: ../views/404.handlebars ../views/profile.handlebars
+#: /views/error.handlebars /views/profile.handlebars
 msgid "My Factions"
 msgstr "Мои фракции"
 
 #.  HTTP status code name 
-#: ../views/404.handlebars
+#: /views/error.handlebars
 msgid "Not Found"
 msgstr "Не найдено"
 
-#: ../views/404.handlebars
+#: /views/error.handlebars
 msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
 msgstr "Запрошенный вами контент не может быть найден по этому URL-адресу. Если вы считаете, что это ошибка, обратитесь к разработчику."
 
 #.  links to the homepage (the app itself) 
-#: ../views/404.handlebars
+#: /views/error.handlebars
 msgid "Back to Pxls"
 msgstr "Вернуться в Pxls"
 
 #.  HTTP status code name 
-#: ../views/404.handlebars
+#: /views/error.handlebars
 msgid "Not Authenticated"
 msgstr "Не авторизован"
 
-#: ../views/404.handlebars
+#: /views/error.handlebars
 msgid "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
 msgstr "Вы должны авторизоваться, чтобы получить доступ к этим данным. Вернитесь в pxls и пройдите процесс авторизации."
 
 #.  HTTP status code name 
-#: ../views/404.handlebars
+#: /views/error.handlebars
 msgid "Not Allowed"
 msgstr "Не разрешено"
 
-#: ../views/404.handlebars
+#: /views/error.handlebars
 msgid "The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later."
 msgstr "Действие, которое вы пытались выполнить, запрещено или привело к ошибке. Убедитесь, что у вас есть доступ к конечной точке, и повторите попытку позже."
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Place pixels with people to create art"
 msgstr "Ставьте пиксели с пользователями, чтобы создавать рисунки"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Lost connection to server, reconnecting..."
 msgstr "Потеряно соединение с сервером, переподключение..."
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Loading Heatmap (press <kbd>H</kbd> to cancel)"
 msgstr "Загрузка Heatmap (нажмите <kbd>H</kbd> для отмены)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Loading Virginmap (press <kbd>X</kbd> to cancel)"
 msgstr "Загрузка Virginmap (нажмите <kbd>X</kbd> для отмены)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Logout"
 msgstr "Выйти"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Canvas:"
 msgstr "Полотно:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "N/A"
 msgstr "N/A"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "All Time:"
 msgstr "Общее:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Loading online user count&hellip;"
 msgstr "Загрузка пользователей в сети&hellip;"
 
-#: ../views/index.handlebars ../public/admin/admin.js
-#: ../public/include/lookup.js
+#: /views/index.handlebars /public/admin/admin.js /public/include/lookup.js
 msgid "Pixels"
 msgstr "Пиксели"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Undo"
 msgstr "Отменить"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "You are not signed in.&nbsp;<a href=\"#\">Sign in with...</a>"
 msgstr "Вы не авторизованы.&nbsp;<a href=\"#\">Авторизоваться через...</a>"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Loading..."
 msgstr "Загрузка..."
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Sign up"
 msgstr "Зарегистрироваться"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Pick a username"
 msgstr "Выберите имя пользователя"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Username:"
 msgstr "Имя пользователя:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Discord Tag (Optional):"
 msgstr "Метка Discord (Опционально)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Drag and drop template image"
 msgstr "Перетащить шаблон"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Exit"
 msgstr "Выход"
 
-#: ../views/index.handlebars ../views/profile.handlebars
+#: /views/index.handlebars /views/profile.handlebars
 msgid "Info"
 msgstr "Информация"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Close Panel"
 msgstr "Закрыть панель"
 
-#: ../views/index.handlebars ../public/include/chat.js
+#: /views/index.handlebars /public/include/chat.js
 msgid "Chat"
 msgstr "Чат"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Pings"
 msgstr "Упоминания"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Settings"
 msgstr "Настройки"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Jump To Bottom"
 msgstr "Переместиться вниз"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Replying to"
 msgstr ""
 
-#: ../views/index.handlebars ../public/include/chat.js
+#: /views/index.handlebars /public/include/chat.js
 msgid "On"
 msgstr "Включить"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Emoji"
 msgstr "Эмодзи"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Search"
 msgstr "Поиск"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "keybinds;keys;keyboard;hotkeys"
 msgstr "горячие клавиши;клавиши;клавиатура;горячие клавиши"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Keybinds"
 msgstr "Горячие клавиши"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "general"
 msgstr "общие"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "General"
 msgstr "Общие"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "move;moving;panning;drag"
 msgstr "движение;двигаться;перемещение;перетаскивать"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Mouse/arrows/wasd to pan"
 msgstr "Мышь/стрелки/wasd для перемещения"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "mousewheel;zooming"
 msgstr "колесо мыши;приближение"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Scroll/pinch to zoom"
 msgstr "СКМ для приближения"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "scroll;zooming"
 msgstr "СКМ;приближение"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>+</kbd>/<kbd>-</kbd> or <kbd>Q</kbd>/<kbd>E</kbd> to zoom"
 msgstr "<kbd>+</kbd>/<kbd>-</kbd> или <kbd>Q</kbd>/<kbd>E</kbd> для приближения"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "lookups"
 msgstr "просмотры"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
 msgstr "<kbd>Shift</kbd> + Нажать/удерживать для информации о пикселе"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
 msgstr "оверлеи;расположение;сетка скрыта;сетка показана;убрать сетку;показать сетку"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>G</kbd> to toggle grid"
 msgstr "<kbd>G</kbd> для включения сетки"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "close;information shown;information hidden;info shown;info hidden;hide information;show information"
 msgstr "закрыть;информация показана;информация скрыта;информация показана;информация скрыта;скрыть информацию;показать информацию"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>I</kbd> to open info"
 msgstr "<kbd>I</kbd> чтобы открыть окно информации"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "close;settings hidden;settings shown;hide settings;show settings"
 msgstr "закрыть;настройки скрыты;настройки показаны;скрыть настройки;показать настройки"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>T</kbd> to open settings"
 msgstr "<kbd>T</kbd> чтобы открыть окно настроек"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "close;chat hidden;chat shown;hide chat;show chat"
 msgstr "закрыть;чат скрыт;чат показан;скрыть чат;показать чат"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>B</kbd> to open chat"
 msgstr "<kbd>B</kbd> чтобы открыть окно чата"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "canvas locked;move;moving;zoom;zooming"
 msgstr "зафиксировать полотно;переместить;перемещение;приблизить;приближение"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>L</kbd> to toggle locking panning of the canvas"
 msgstr "<kbd>L</kbd> для включения фиксации полотна"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "take screenshot;image;download;picture;canvas"
 msgstr "сделать скриншот;изображение;загрузка;картинка;полотно"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>P</kbd> to take a snapshot"
 msgstr "<kbd>P</kbd> чтобы сохранить полотно"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
 msgstr "оверлей;пользовательская активность;пиксели ставят пиксели пиздец;heatmap скрыт;heatmap показан;убрать heatmap;показать heatmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>H</kbd> to toggle heatmap"
 msgstr "<kbd>H</kbd> чтобы переключить тепловую карту"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
 msgstr "оверлеи;пользовательская активность;пиксели убирают пиксели страшно;virginmap скрыта;virginmap показана;скрыть virginmap;показать virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>X</kbd> to toggle virginmap"
 msgstr "<kbd>X</kbd> чтобы переключить virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;wipe;clean;"
 msgstr "оверлеи;пользовательская активность;пиксели ставят пиксели;стереть;очистить;"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>O</kbd> to clear heatmap"
 msgstr "<kbd>O</kbd> чтобы очистить тепловую карту"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;wipe;clean;"
 msgstr "оверлеи;пользовательская активность;пиксели убирают пиксели;стереть;очистить;"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>U</kbd> to clear virginmap"
 msgstr "<kbd>U</kbd> чтобы очистить virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "next color;previous color"
 msgstr "следующий цвет;предыдущий цвет"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>J</kbd>/<kbd>K</kbd> to cycle through palette colors"
 msgstr "<kbd>J</kbd>/<kbd>K</kbd> чтобы перемещаться по палитре"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "current coordinates;coords"
 msgstr "текущие координаты;корды"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>C</kbd> to copy link of moused-over coordinates"
 msgstr "<kbd>C</kbd> чтобы скопировать координаты курсора"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "cancel selection"
 msgstr "отменить выбор"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>ESC</kbd> to deselect current pixel"
 msgstr "<kbd>ESC</kbd> чтобы отменить выбор текущего пикселя"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "recenter;jump;center on template;guides;focus"
 msgstr "центрировать заново;прыжок;центрировать на шаблоне;подсказки;фокус"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>R</kbd> to center the board on the current template"
 msgstr "<kbd>R</kbd> чтобы переместиться на центр шаблона"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "templates;guides"
 msgstr "шаблоны;подсказки"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Template"
 msgstr "Шаблон"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "transparency"
 msgstr "прозрачность"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>Page Up</kbd> to increase opacity"
 msgstr "<kbd>Page Up</kbd> чтобы уменьшить прозрачность"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>Page Down</kbd> to decrease opacity"
 msgstr "<kbd>Page Down</kbd> чтобы увеличить прозрачность"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "hidden;shown;hide;show"
 msgstr "скрыто;показано;скрыть;показать"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "<kbd>V</kbd> to toggle visibility"
 msgstr "<kbd>V</kbd> чтобы переключить видимость"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Note: These values are based on QWERTY keyboards. For other layouts, use the keys corresponding to the same position on a QWERTY keyboard."
 msgstr "Примечание: Все значения основаны на QWERTY-клавиатурах. В иных раскладках, используйте то же расположение клавиш, что и на QWERTY-клавиатурах."
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "templates;overlays;guides"
 msgstr "шаблоны;оверлеи;подсказки"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "templates;overlays;image;pixel art"
 msgstr "шаблоны;оверлеи;изображение;пиксельная картина"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template enabled;template disabled;show template;hide template;template shown;template hidden"
 msgstr "шаблон включен;шаблон выключен;показать шаблон;скрыть шаблон;шаблон виден;шаблон скрыт"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Use template"
 msgstr "Использовать шаблон"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Hold down <kbd>Ctrl</kbd> (or <kbd>Option</kbd> on mac) to drag the template around"
 msgstr "Удерживайте <kbd>Ctrl</kbd> (или <kbd>Option</kbd> на Mac) чтобы перетащить шаблон"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template title;template name;tab name;tab title;title="
 msgstr "заголовок шаблона;имя шаблона;имя вкладки;заголовок вкладки;заголовок="
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Title:"
 msgstr "Заголовок:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template location source;template source URL;template URL;template="
 msgstr "источник местоположения шаблона; источник шаблона URL; шаблон URL; шаблон="
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "URL:"
 msgstr "URL:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template position;template x;template y;template location; template vertical; template horizontal;ox=;oy="
 msgstr "позиция шаблона;x шаблона;y шаблона;местоположение шаблона; вертикаль шаблона; горизонталь шаблона;ox=;oy="
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Horizontal position:"
 msgstr "Горизонтальная позиция:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Vertical position:"
 msgstr "Вертикальная позиция:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template width;tw="
 msgstr "ширина шаблона;tw="
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Width:"
 msgstr "Ширина:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Reset"
 msgstr "Сброс"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template style;custom template"
 msgstr "стиль шаблона; пользовательский шаблон"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Style:"
 msgstr "Стиль"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Use Source Style"
 msgstr "Использовать стиль источника"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "1-to-1"
 msgstr "1 к 1"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "1-to-1 (keep incorrect colors)"
 msgstr "1 к 1 (сохранять неправильные цвета)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Dotted (Small, 1:2)"
 msgstr "Точечный (Маленький, 1:2)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Dotted (Big, 2:2)"
 msgstr "Точечный (Большой, 2:2)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Symbols"
 msgstr "Символы"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Numbers"
 msgstr "Цифры"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Custom…"
 msgstr "Пользовательский…"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template style source;template style URL;custom style URL;custom template"
 msgstr "источник стиля шаблона; URL стиля шаблона; URL пользовательского стиля; пользовательский шаблон"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Custom style URL:"
 msgstr "URL пользовательского стиля"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template conversion;template palette conversion;convert to palette"
 msgstr "преобразование шаблона;преобразование палитры шаблона;преобразование в палитру"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Color Conversion Mode:"
 msgstr "Режим преобразования цвета"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Unconverted"
 msgstr "Непреобразованный"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Nearest Custom"
 msgstr "Ближайший пользовательский"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template transparency;template opacity;oo="
 msgstr "позрачность шаблона;затененность шаблона;oo="
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Opacity:"
 msgstr "Непрозрачность:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "ui;interface"
 msgstr "ui;интерфейс"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "UI Settings"
 msgstr "Настройки Интерфейса"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "language override;text"
 msgstr "выбор языка; текст"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Language override:"
 msgstr "Выбор языка"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Use Browser Language"
 msgstr "Использовать язык браузера"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "English"
 msgstr "Английский"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "French"
 msgstr "Французский"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Russian"
 msgstr "Русский"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Bulgarian"
 msgstr "Болгарский"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Swedish"
 msgstr "Шведский"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "themes;look;stylesheets;visuals"
 msgstr "темы;взгляд;таблицы стилей;визуалы"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Theme:"
 msgstr "Тема:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Default"
 msgstr "По умолчанию"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden"
 msgstr "скрыть перекрестие;скрыть перекрестие;перекрестие показано перекрестие показано;перекрестие скрыто;перекрестие скрыто"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Show reticule"
 msgstr "Показать прицел"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "hide cursor;cursor shown;cursor hidden"
 msgstr "скрыть курсор;курсор показан;курсор скрыт"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Show cursor"
 msgstr "Показать курсор"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "darkness filter"
 msgstr "фильтр тьмы"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable color brightness"
 msgstr "Нстроить яркость"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Warning: Known to cause fuzziness in Chrome on some Mac/Linux installs"
 msgstr "Внимание: Известно, что это приводит к нечеткости в Chrome на некоторых системах Mac/Linux"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Color brightness:"
 msgstr "Цветовая насыщенность:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "keep current selected;keep curent color;place"
 msgstr "удерживать выбранное;удерживать текущий цвет;поставить"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Deselect color after placing"
 msgstr "Сбросить цвет после установки пикселя"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "mousewheel;palette scrolling"
 msgstr "колесо мыши;прокрутка палитры"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable scrolling on the palette to switch colors"
 msgstr "Включить прокрутку палитры для смены цвета"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "reverse scrolling;mousewheel;palette scrolling;enable scrolling on the palette to switch colors"
 msgstr "обратная прокрутка;колесо мыши;прокрутка палитры;включить прокрутку палитры для смены цвета"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Invert scroll direction"
 msgstr "Инвертировать направление прокрутки"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "indexed colors;palette indicies"
 msgstr "индексированные цвета;индексы палитры"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Add numbers to palette entries"
 msgstr "Добавить номера к цветам палитры"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "scrollbar;palette scrolling"
 msgstr "полоса прокрутки;прокрутка палитры"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable thin scrollbar"
 msgstr "Включить тонкую полосу прокрутки"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "scrollbar;palette scrolling;palette stack"
 msgstr "полоса прокрутки;прокрутка палитры;набор палитры"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable palette stacking"
 msgstr "Включить сортировку палитры"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "floating bubble location"
 msgstr "Местоположение окна пользователя"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Bubble position:"
 msgstr "Позиция окна пользователя:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Top left"
 msgstr "Слева вверху"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Top right"
 msgstr "Справа вверху"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Bottom left"
 msgstr "Слева внизу"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Bottom right"
 msgstr "Справа внизу"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "broken;offset workaround"
 msgstr "ошибка;обходное смещение"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Attempt to fix canvas displacement bug in Chrome 78+"
 msgstr "Попытка исправить ошибку смещения холста в Chrome 78+"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat;message;ping sound"
 msgstr "чат;сообщение;звук оповещения"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Chat Settings"
 msgstr "Настройки чата"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "username;color;colour"
 msgstr "имя пользователя;цвет;оттенок"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Username Color:"
 msgstr "Цвет имени пользователя:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat message;chat ui"
 msgstr "сообщение чата;UI чата"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Interface"
 msgstr "Интерфейс чата"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "enable;disable"
 msgstr ""
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable chat"
 msgstr ""
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Page must be reloaded after changing"
 msgstr ""
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat size;chat font"
 msgstr "размер чата;шрифт чата"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Font Size:"
 msgstr "Размер шрифта:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "time;timestamps"
 msgstr "время;обозначение времени"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "24 Hour Timestamps"
 msgstr "24-часовое обозначение времени"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "badges;pixel count;pixels placed"
 msgstr "значки;число пикселей;пикселей поставлено"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Show pixel-placed badges"
 msgstr "Показать значки поставленных пикселей"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "badges;factions"
 msgstr "значки;фракции"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Show faction tags"
 msgstr "Отображать тэги фракций"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "template urls;template links;template name"
 msgstr "URL шаблона;ссылки шаблона;имя шаблона"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Replace template titles with URLs in chat where applicable"
 msgstr "Заменить заголовки шаблонов URL-адресами в чате, где это возможно"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat orientation;chat position"
 msgstr "ориентация чата;позиция чата"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable horizontal chat"
 msgstr "Включить горизонтальный чат"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "banner;animation"
 msgstr "баннер;анимация"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable the rotating banner under chat"
 msgstr "Включить вращающийся баннер под чатом"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "max;messages;truncate"
 msgstr "максимально;сообщения;обрезать"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Maximum amount of chat messages:"
 msgstr "Максимальное количество сообщений в чате:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "link;url;behaviour"
 msgstr "ссылка;URL;поведение"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Default internal link action click:"
 msgstr "Щелчок по внутренней ссылке - по умолчанию:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat icon;chat notifications;chat ping"
 msgstr "иконка чата;уведомления чата;оповещение чата"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Chat icon badge mode:"
 msgstr "Режим иконки чата"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread ping"
 msgstr "Показать непрочитанное оповещение"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread message"
 msgstr "Показать непрочитанное сообщение"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Never show"
 msgstr "Никогда не показывать"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat icon;chat notifications;chat message"
 msgstr "иконка чата;уведомления чата;сообщение чата"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Chat icon highlight mode:"
 msgstr "Подсветка иконки чата:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "ignored;ignores;unignore;blocked;blocking;unblock"
 msgstr "игнорируется;игнорирования;не игнорировать;заблокирован;блокировка;разблокировать"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Ignores"
 msgstr "Список игнора"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "unignore;unblock"
 msgstr "не игнорировать;разблокировать"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Unignore"
 msgstr "Не игнорировать"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;virginmap;heatmap;grid"
 msgstr "оверлеи;virginmap;тепловая карта;сетка"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Overlay Settings"
 msgstr "Настройки оверлея"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "heatmap;heatmap opacity;clear heatmap"
 msgstr "тепловая карта;затененность heatmap;очистить heatmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Heatmap"
 msgstr "Тепловая карта"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Turn on heatmap"
 msgstr "Показать тепловую карту"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "(toggle with <kbd>H</kbd>)"
 msgstr "(чтобы переключить, нажмите <kbd>H</kbd>)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;activity;pixels placed pixels;wipe;clean"
 msgstr "оверлеи;активность;пиксели ставят пиксели;стереть;очистить"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Clear heatmap"
 msgstr "Очистить тепловую карту"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "(hotkey: <kbd>O</kbd>)"
 msgstr "(горячая клавиша: <kbd>O</kbd>)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;transparency"
 msgstr "оверлеи;активность пользователей;пиксели ставят пиксели;прозрачность"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Heatmap background opacity:"
 msgstr "затененность фона тепловой карты:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "virginmap;virginmap opacity;clear virginmap"
 msgstr "virginmap;затененность virginmap;очистить virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Virginmap"
 msgstr "Virginmap (карта нетронутых пикселей)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Turn on virginmap"
 msgstr "Включить virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "(toggle with <kbd>X</kbd>)"
 msgstr "(чтобы переключить, нажмите <kbd>X</kbd>)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;transparency"
 msgstr "оверлеи;активность пользователей;пиксели убирают пиксели;прозрачность"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Virginmap background opacity:"
 msgstr "затененность фона Virginmap:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;activity;pixels unplaced pixels;wipe;clean"
 msgstr "оверлеи;активность;пиксели убирают пиксели;стереть;очистить"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Clear virginmap"
 msgstr "Очистить virginmap"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "(hotkey: <kbd>U</kbd>)"
 msgstr "(горячая клавиша: <kbd>U</kbd>)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Layer template underneath heatmap"
 msgstr "Размещение шаблона под тепловой картой"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "grid;toggle grid"
 msgstr "сетка;переключить сетку"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Grid"
 msgstr "Сетка"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Turn on grid"
 msgstr "Включить сетку"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "(toggle with <kbd>G</kbd>)"
 msgstr "(чтобы переключить, нажмите <kbd>G</kbd>)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "controls;zooming;panning;movement"
 msgstr "элементы управления;приближение;фиксация;движение"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Control Settings"
 msgstr "Настройки элементов управления"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "zooming;scrolling;scale;scaling"
 msgstr "приближение;прокрутка;масштаб;масштабирование"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Zooming"
 msgstr "Приближение"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "scrolling sensitivity;zooming sensitivity;mousewheel sensitivity"
 msgstr "прокрутка чувствительности;чувствительность приближения;чувствительность СКМ"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Zoom sensitivity:"
 msgstr "Чувствительность приближения:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "zooming limit;scrolling limit;mousewheel;zooming minimum;zooming maximum"
 msgstr "ограничение приближения;ограничение прокрутки;СКМ;минимальное значение приближения;максимальное значение приближения"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Minimum scale:"
 msgstr "Минимальный масштаб:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Maximum scale:"
 msgstr "Максимальный масштаб:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "rounding;zooming;scrolling;mousewheel;integer;decimal"
 msgstr "округление;приближение;прокрутка;СКМ;целое число;десятичное"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Round zoom values to nearest whole number"
 msgstr "Округлить значения масштабирования до ближайшего целого числа"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "controls;miscellaneous"
 msgstr "элементы управления;разное"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Lock the canvas (disallow canvas drag/zoom with mouse/fingers)"
 msgstr "Закрепить полотно (запрещает перетаскивание полотна/приближение с помощью мыши/пальцами)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "MMB picker;mouse picker;selection;palette picker"
 msgstr "выбор MMB;выбор с помощью мыши;выбор;выбор палитры"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable middle mouse button selecting color from board"
 msgstr "Включение выбора цвета с полотна средней кнопкой мыши"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "right click action"
 msgstr "щелчок правой кнопкой мыши"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Right-click action:"
 msgstr "Щелчок правой кнопкой мыши:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Nothing"
 msgstr "Ничего"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Clear color"
 msgstr "Очистить цвет"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Copy color"
 msgstr "Копировать цвет"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Lookup"
 msgstr "Просмотреть"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Clear color + Lookup"
 msgstr "Очистить цвет + Просмотреть"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "snapshots;screenshot;download;picture;canvas"
 msgstr "снимки;скриншот;загрузка;картинка;полотно"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Snapshot Settings"
 msgstr "Настройки снимка"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "screenshot;snapshot;download;board;canvas"
 msgstr "скриншот;снимок;загрузка;полотно;полотно"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "take screenshot;image;download format;picture;canvas;board"
 msgstr "сделать скриншот;изображение;загрузить формат;картинка;полотно;полотно"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Snapshot image format:"
 msgstr "Формат снимка изображения:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "PNG"
 msgstr "PNG"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "JPEG"
 msgstr "JPEG"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "WEBP (Chrome only)"
 msgstr "WEBP (только для Chrome)"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "sound;notification;alert;notify;ping"
 msgstr "звук;уведомление;сигнал;уведомлять;оповещение"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Sound and Notification Settings"
 msgstr "Параметры звука и уведомлений"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "audio;mute;noise;volume"
 msgstr "аудио;приглушенный;шумный;громкость"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable sound"
 msgstr "Включить звук"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "notifs;notify;pixel notification"
 msgstr "уведомления;уведомлять;уведомление пикселя"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable pixel available notification"
 msgstr "Включить уведомление о доступности пикселей"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "notification;pixel ready;alert"
 msgstr "уведомление;пиксель готов;сигнал"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Pixel Ready Notification"
 msgstr "Уведомление о готовности пикселя"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "alert source;notify url;notify source;notification url;notification source"
 msgstr "источник сигнала;уведомлять url;уведомлять источник;уведомление url;источник уведомление"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Alert URL:"
 msgstr "URL сигнала:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Update"
 msgstr "Обновить"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Test"
 msgstr "Тест"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "sound level;audio level;mute audio;mute sound"
 msgstr "уровень звука;уровень аудио;убрать звук аудио;убрать звук"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Volume:"
 msgstr "Громкость:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "alert forewarning;alert delay; notification delay; notification forewarning"
 msgstr "сигнал предупреждения;задержка сигнала; задержка уведомления; уведомление предупреждения"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Delay (seconds):"
 msgstr "Задержка (секунды):"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "chat mentions;chat pings;chat sound"
 msgstr "упоминания чата;оповещения чата;звук чата"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Chat Pings"
 msgstr "Оповещения чата"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Enable pings"
 msgstr "Включить оповещения"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "mention sound"
 msgstr "звук упоминания"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Play sound on ping:"
 msgstr "Проигрывать звук оповещения:"
 
-#: ../views/index.handlebars ../public/include/chat.js
+#: /views/index.handlebars /public/include/chat.js
 msgid "Off"
 msgstr "Отключить"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Only when necessary"
 msgstr "Только по необходимости"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Always"
 msgstr "Всегда"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "mention sound volume"
 msgstr "громкость звука упоминания"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Ping sound volume:"
 msgstr "Громкость звука оповещения:"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "personal account"
 msgstr "личный аккаунт"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Account Settings"
 msgstr "Настройки аккаунта"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Public Discord name:"
 msgstr "Метка Discord:"
 
-#: ../views/index.handlebars ../public/include/chat.js
+#: /views/index.handlebars /public/include/chat.js
 msgid "Set"
 msgstr "Установить"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Remove"
 msgstr "Удалить"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Help"
 msgstr "Помощь"
 
-#: ../views/index.handlebars
+#: /views/index.handlebars
 msgid "Notifications"
 msgstr "Оповещения"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "FAQ"
 msgstr "FAQ"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Why is the cooldown as long as it is?"
 msgstr "Почему время получения нового пикселя такое длинное?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "The time it takes to get a pixel is dynamic, and changes based on how many people are online. The cooldown time is longer when more users are online."
 msgstr "Время, необходимое для получения пикселя, рассчитывается динамически и изменяется в зависимости от того, сколько людей находится в сети. Время получения пикселя увеличивается, когда в сети больше пользователей."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Why does it say 0/6 pixels?"
 msgstr "Почему написано 0/6 пикселей?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "This means that you are waiting for your next pixel. When you place a pixel, there is a cooldown for when you can place the next one. Over time, you can gain up to 6 \"stacked\" pixels to place at once."
 msgstr "Это означает, что вы ждете следующего пикселя. Когда вы размещаете пиксель, есть время восстановления до того, когда вы можете разместить следующий. Со временем вы можете получить до 6 накопленных пикселей, которые можете сразу же разместить."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Why does it take so long to \"stack\" pixels?"
 msgstr "Почему так долго накапливаются пиксели?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
 msgstr "Это сделано намеренно. Лучше разместить пиксель, как только вы его получите. Накопление пикселей должно дать вам толчок, если вы отошли на некоторое время и вернулись. Чтобы получить полные 6/6 пикселей, требуется около 40 минут, но для размещения 6 пикселей, по отдельности без накопления, требуется всего около 3 минут."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I appeal a ban?"
 msgstr "Как мне обжаловать бан?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
 msgstr "Напишите нам в <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> или отправьте обращение в нашeй <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google форме</a> после прочтения правил в информационной панели сайта."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I make a template?"
 msgstr "Как мне сделать шаблон?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "A template is an image link that is posted in the template textbox in the settings panel so you can place over it on the canvas. You may use a regular image link to your pixel art, but many people use 3rd party tools like <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> or <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn pixel art into a fancier link. If you need to make pixel art yourself, you can use <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> to create art to put into Charity or Clueless."
 msgstr "Шаблон — это ссылка на изображение, которая размещена в текстовом поле шаблона на панели настроек, чтобы вы могли поместить ее на холст. Вы можете использовать обычную ссылку на изображение для своего пиксельного арта, но многие люди используют сторонние инструменты, такие как <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> или <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> чтобы превратить пиксель-арт в более красивую ссылку. Если вам нужно сделать пиксель-арт самостоятельно, вы можете использовать <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> для создания артов и для размещения их в Charity или Clueless."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I move a template?"
 msgstr "Как мне подвинуть шаблон?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to move it around. On mobile, you can tap and hold where you want to move the template and click \"Move Template Here\" in the pop-up."
 msgstr "Удерживайте <kbd>CTRL</kbd> (или <kbd>OPTION</kbd> на macOS), щелкните ЛКМ и перетяните куда вам нужно, чтобы переместить его. На мобильном устройстве вы можете нажать и удерживать то место, куда вы хотите переместить шаблон, и щелкнуть «Переместить шаблон сюда» во всплывающем окне."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Does the canvas reset? When?"
 msgstr "Меняется ли полотно? Когда?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Yes. The canvas resets when it is completely full. A reset date is not usually decided until the canvas is full, but the average canvas life-span is around 1 month. Updates are posted in our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> when a reset date is set."
 msgstr "Да. Полотно меняется, когда оно полностью заполнено. Дата сброса полотна обычно не определяется, пока полотно не будет заполнено, но средний срок жизни полотна составляет около 1 месяца. Обновления размещены в нашем <a href=\"https://pxls.space/discord\" target=\"_blank\">Дискорде</a> когда установлена дата сброса."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Where can I see the past canvases?"
 msgstr "Где я могу увидеть прошлые полотна?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
 msgstr "Прошлые полотна представлены на нашем сайте, <a href=\"https://pxls.space/discord\" target=\"_blank\">Дискорде</a>, или на стороннем веб-сайте <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, который записывает таймлапсы и много полезной информации по каждому полотну."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I see who placed a pixel?"
 msgstr "Как мне посмотреть, кто поставил пиксель?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "By shift-clicking (or tap and hold on mobile) a pixel, you can see who placed a pixel, how many pixels they have placed, and when they placed it."
 msgstr "Удерживая нажатой клавишу Shift и щелкнув ЛКМ на пиксель (или нажмите и удерживайте ЛКМ/на экране телефона), вы можете увидеть, кто разместил пиксель, сколько пикселей они разместили и когда они разместили его."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I report someone?"
 msgstr "Как пожаловаться на кого-то или написать о нарушении правил?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Shift-click (or tap and hold on mobile) on a pixel, and click the Report button."
 msgstr "Удерживая нажатой клавишу Shift щелкните ЛКМ на пиксель (или нажмите и удерживайте ЛКМ/на экране телефона), нажмите кнопку «Жалоба» (Report). В чате вы можете просто нажать на ник нарушителя и нажать кнопку «Жалоба» (Report)."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I change the color of my name in the chat?"
 msgstr "Как поменять цвет моего ника в чате?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "There is a \"Username Color\" option near the bottom of the settings panel."
 msgstr "В нижней части панели настроек есть опция «Цвет имени пользователя»."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "What is a \"virginmap\"?"
 msgstr "Что такое \"virginmap\"?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "The virginmap shows which pixels have not yet been placed on (or “virgin” pixels)."
 msgstr "Virginmap показывает, какие пиксели еще не были размещены на полотне (или “девственные” пиксели)."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I report bugs?"
 msgstr "Как мне сообщить о багах (ошибках) сайта?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
 msgstr "Отправляйте сообщения об багах в #dev-and-bugs канал в <a href=\"https://pxls.space/discord\" target=\"_blank\">Дискорде</a>. Если вы обнаружили эксплойт, сообщите об этом одному из модераторов/администраторов в частном порядке (через личные сообщения в Дискорде)."
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "How do I get more info or contact staff?"
 msgstr "Как мне получить дополнительную информацию или связаться с администраторами?"
 
-#: ../views/partials/faq.handlebars
+#: /views/partials/faq.handlebars
 msgid "Check the info panel (the icon on the top left) for more details and links, or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, where a staff member will gladly respond."
 msgstr "Просмотрите информационную панель (значок в левом верхнем углу) для получения более подробной информации и ссылок, или присоединитесь к нашему <a href=\"https://pxls.space/discord\" target=\"_blank\">Дискорду</a>, где члены команды модерации с радостью ответят."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Welcome!"
 msgstr "Добро пожаловать!"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
 msgstr "Добро пожаловать на pxls.space! Pxls - это многопользовательский онлайн-холст для совместной работы, который позволяет вам создавать все, что вы можете вообразить, по одному пикселю за раз. Присоединяйтесь к сотням других игроков в сообществе Pxls и создавайте потрясающие произведения искусства вместе в команде, или в одиночку."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "The best place to reach staff and fellow community is in the discord!"
 msgstr "Лучшее место для общения с сотрудниками модерации и сообществом - это наш Дискорд!"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
 msgstr "Посетите наши страницы в социальных сетях и пожалуйста, прочитайте приведенные ниже правила. Развлекайтесь, создавая (или меняя) рисунки!"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Canvas Rules"
 msgstr "Правила полотна"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
 msgstr "Мы гордимся тем, что пытаемся сохранить нашу площадку открытой для всех, свободной от внешнего вмешательства с нашей стороны, и особенно от цензуры. Однако ради блага сообщества и исходя из наших собственных убеждений, пожалуйста, примите во внимание следующие правила и соблюдайте их:"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
 msgstr "Никаких символов ненависти или уничижительных речей. Это включает, но не ограничивается такими словами, как <i>f****t (пидор)</i>, <i>n****r (нигер)</i>, и т.д.; так же как свастика и любые другие символы терроризма."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No NSFW or NSFL content."
 msgstr "Никакого NSFW или NSFL контента."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No nudity or otherwise sexually explicit content"
 msgstr "Запрещено изображение обнаженной натуры или иной контент откровенно сексуального характера."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
 msgstr "Никаких женских сосков/обнаженной груди, гениталий, половых жидкостей."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No sexual imagery/erotica"
 msgstr "Никаких сексуальных образов/эротики"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No excessive blood or otherwise obscene/shocking content"
 msgstr "Запрещены изображения с чрезмерным количеством крови или иного непристойного/шокирующего содержания"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas."
 msgstr "Не более чем <b>один</b> аккаунт на пользователя, без исключений. Пользователям, владеющими несколькими аккаунтами будет запрещено создавать изображения на холсте."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No auto-placement tools of any kind, you must place the pixels manually."
 msgstr "Никаких инструментов автоматического размещения, вы должны ставить пиксели вручную."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
 msgstr "Не злоупотребляйте функциями сайта, такими как жалобы (report) или просмотр пикселей на полотне. (например, автоматические жалобы/просмотр пикселей и т. д.)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
 msgstr "Любое автоматическое сохранение данных из просмотров пикселей пользователей запрещено и приведет к бану."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Staff have final say in any rule disputes"
 msgstr "Персонал модерации сайта имеет последнее слово в любых спорах о правилах"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
 msgstr "Если вы считаете, что модератор действовал ненадлежащим образом, сообщите об этом администратору."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
 msgstr "Если вы считаете, что вас забанили по ошибке, вы можете связаться с модератором или администратором."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Chat Rules"
 msgstr "Правила чата"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
 msgstr "Поддерживайте вежливость в чате. Запрещены оскорбления или гомофобные/трансфобные высказывания/оскорбления инвалидов."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No hate speech. This includes emoji/symbols/ASCII art."
 msgstr "Никаких ненавистнических высказываний. Сюда же входят эмодзи/символы/изображения ASCII."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Normal swearing/etc is allowed"
 msgstr "Резрешены обычные ругательства и т.п."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No spamming"
 msgstr "Никакого спама"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "This includes excessive ASCII art/emojis/symbols/whitespace"
 msgstr "Это включает в себя чрезмерное количество изображений ASCII/смайлов/символов/пробелов."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No \"copy pasta\"s"
 msgstr "Никаких копирований (паст) - например скопированные анекдоты, тексты песен и т.д."
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
 msgstr "Запрещены ссылки на сайты, которые активно нарушают правила полотна или чата (например, порносайты)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
 msgstr "Никаких символов, нарушающих правила полотна или чата (например, NSFW ASCII изображения)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "No personal information"
 msgstr "Запрещена личная информация и ее распространение"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Links"
 msgstr "Ссылки"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Discord (main hub)"
 msgstr "Discord (основной)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Subreddit"
 msgstr "Subreddit"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Twitter"
 msgstr "Twitter"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "GitHub"
 msgstr "GitHub"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Single-player mode"
 msgstr "Одиночный режим"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Statistics"
 msgstr "Статистика"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Profile (user info, factions, etc.)"
 msgstr "Профиль (информация пользователя, фракции, и т.д.)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Generator, progress checker, and monitor for Pxls templates"
 msgstr "Генератор, средство проверки прогресса и мониторинг для шаблонов Pxls"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Charity (templates, monitors, etc.)"
 msgstr "Charity (шаблоны, мониторинг и т.д.)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Archives"
 msgstr "Aрхивы"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "PxlsFiddle (archives)"
 msgstr "PxlsFiddle (архивы)"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Donate"
 msgstr "Пожертвования"
 
-#: ../views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Donations are not accepted at this time, but this panel will be updated when they're open again!"
 msgstr "Пожертвования в настоящее время не принимаются, но эта панель будет обновлена, когда они снова откроются!"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "{0}'s Profile"
 msgstr "{0}'s профиль"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "My Data"
 msgstr "Мои данные"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Reports"
 msgstr "Жалобы"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Factions"
 msgstr "Фракции"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Data"
 msgstr "Данные"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You must be logged in to view your profile."
 msgstr "Вы должны авторизоваться, чтобы просмотреть свой профиль."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Registration Date"
 msgstr "Дата регистрации"
 
-#: ../views/profile.handlebars ../public/include/lookup.js
+#: /views/profile.handlebars /public/include/lookup.js
 msgid "Alltime Pixels"
 msgstr "Всего пикселей"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Current Canvas Pixels"
 msgstr "Пиксели на этом полотне"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Discord Tag"
 msgstr "Метка Дискорда"
 
-#: ../views/profile.handlebars ../public/include/lookup.js
+#: /views/profile.handlebars /public/include/lookup.js
 msgid "Faction"
 msgstr "Фракция"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "None"
 msgstr "Отсутствует"
 
-#: ../views/profile.handlebars ../public/admin/admin.js
+#: /views/profile.handlebars /public/admin/admin.js
 msgid "Roles"
 msgstr "Роли"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Canvas Ban Expiry"
 msgstr "Срок истечения бана на полотне"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Never"
 msgstr "Никогда"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Chat Ban Expiry"
 msgstr "Срок истечения бана в чате"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "View rankings and other stats <a href=\"/stats\">here</a>."
 msgstr "Просмотр рейтингов и другой статистики <a href=\"/stats\">здесь</a>."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You must be logged in to view your reports."
 msgstr "Вы должны авторизоваться, чтобы просмотреть свои жалобы."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Canvas Reports ({0}/{1} open)"
 msgstr "Жалобы полотна ({0}/{1} рассматриваются)"
 
 #.  eg "Report on Bob (closed) 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (closed)"
 msgstr "Жалоба по {0} (решена)"
 
 #.  eg "Report on Bob (open) 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (open)"
 msgstr "Жалоба по {0} (рассматривается)"
 
 #.  eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC) 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Reported {0} on {1}"
 msgstr "Отправлено жалоб {0} из {1}"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "There are no canvas reports to show."
 msgstr "Нет жалоб по полотну для отображения."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Chat Reports ({0}/{1} open)"
 msgstr "Жалобы чата ({0}/{1} рассматривается)"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "There are no chat reports to show."
 msgstr "Нет жалоб по чату для отображения."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You must be logged in to manage your factions."
 msgstr "Вы должны авторизоваться, чтобы управлять своими фракциями."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator."
 msgstr "Вы ограничены определенным количеством фракций и не можете создавать новые. Если вы считаете, что это ошибка, обратитесь к модератору."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator."
 msgstr "Вы забанены на полотне и не можете создавать новые фракции. Если вы считаете, что это ошибка, обратитесь к модератору."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You must have at least {0} all-time pixels to create a faction."
 msgstr "Вы должны иметь как минимум {0} общего количества пикселей для создания фракции."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Create"
 msgstr "Создать"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Join"
 msgstr "Войти"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "This is your currently displayed faction."
 msgstr "Это ваша текущая отображаемая фракция."
 
 #.  eg "Pixelers (members: 100, ID: 1)" 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "{0} (members: {1}, ID: {2})"
 msgstr "{0} (членов: {1}, ID: {2})"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Owner: {0}"
 msgstr "Владелец: {0}"
 
 #.  makes the faction no longer the one displayed for the current user 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Remove Displayed"
 msgstr "Отменить отображение"
 
 #.  makes the faction the one displayed for the current user 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Set Displayed"
 msgstr "Отобразить"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Members"
 msgstr "Члены"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Edit"
 msgstr "Редактировать"
 
-#: ../views/profile.handlebars ../public/include/chat.js
+#: /views/profile.handlebars /public/include/chat.js
 msgid "Delete"
 msgstr "Удалить"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Leave"
 msgstr "Покинуть"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You are not in any factions yet!"
 msgstr "Вы еще не состоите ни в одной фракции!"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You must be logged in to view your data."
 msgstr "Вы должны авторизоваться, чтобы увидеть свои данные."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Log Keys"
 msgstr "Ключи полотна"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Log keys can be used by those who have them to tell which pixels you placed on previous canvases."
 msgstr "Вы можете использовать эти ключи, чтобы определить, какие пиксели вы разместили на предыдущих полотнах."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Canvas Code"
 msgstr "Код полотна"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Log Key"
 msgstr "Ключ"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "You have no log keys yet!"
 msgstr "У вас еще нет ключей полотна!"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Log keys should show up here after a canvas you have placed on ends."
 msgstr "Ключи должны показываться здесь после окончания полотна, на котором вы ставили пиксели"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Members of {0} ([{1}])"
 msgstr "Члены {0} ([{1}])"
 
-#: ../views/profile.handlebars ../public/admin/admin.js
-#: ../public/include/lookup.js
+#: /views/profile.handlebars /public/admin/admin.js /public/include/lookup.js
 msgid "Close"
 msgstr "Закрыть"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Faction Members"
 msgstr "Члены фракции"
 
 #.  This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list. 
 #.  since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Transfer Ownership"
 msgstr "Передать полномочия"
 
 #.  bans a user from the faction 
-#: ../views/profile.handlebars ../public/include/chat.js
+#: /views/profile.handlebars /public/include/chat.js
 msgid "Ban"
 msgstr "Бан"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Nothing to see here!"
 msgstr "Здесь ничего нет, сталкер, проходи не задерживайся!"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Faction Bans"
 msgstr "Баны фракции"
 
-#: ../views/profile.handlebars ../public/admin/admin.js
-#: ../public/include/chat.js
+#: /views/profile.handlebars /public/admin/admin.js /public/include/chat.js
 msgid "Unban"
 msgstr "Разбанить"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Find A Faction"
 msgstr "Найти фракцию"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Search:"
 msgstr "Поиск:"
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Enter a search term to get started."
 msgstr "Введите поисковый запрос, чтобы начать."
 
-#: ../views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Load More"
 msgstr "Загрузить больше"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Send alert..."
 msgstr ""
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Rule #1: Hateful/derogatory speech or symbols"
 msgstr "Правило #1: Ненавистнические/уничижительные высказывания или символы"
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
 msgstr "Правило #2: Нагота, гениталии или не 13+ контент"
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Rule #3: Multi-account"
 msgstr "Правило #3: Мультиаккаунт"
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Rule #4: Botting"
 msgstr "Правило #4: Ботоводство"
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Other (specify below)"
 msgstr "Другое (укажите ниже)"
 
-#: ../public/admin/admin.js ../public/include/chat.js
-#: ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
 msgid "Additional information (if applicable)"
 msgstr "Дополнительная информация (если применимо)"
 
 #. "Revert pixels of the last *n* hours", part before 'n'
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Revert pixels of the last "
 msgstr ""
 
 #. "Revert pixels of the last *n* hours", part after 'n'
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid " hours"
 msgstr ""
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "You must specify the details."
 msgstr "Вы должны уточнить детали."
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Something went wrong! Perhaps insufficient permissions?"
 msgstr "Что-то пошло не так! Возможно недостаточно прав?"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Shadowban user"
 msgstr "Дать теневой бан"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Shadowbanned user"
 msgstr "Пользователь с теневым баном"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Permaban user"
 msgstr "Забанить навечно"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Permabanned user"
 msgstr "Забаненный навечно пользователь"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ban user"
 msgstr "Забанить пользователя"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Banned user"
 msgstr "Забаненный пользователь"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Unbanned user ${username}"
 msgstr "Разбаненный пользователь ${username}"
 
 #. Context: ban type
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "shadow"
 msgstr "скрытно"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "never"
 msgstr "никогда"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "permanent"
 msgstr "навечно"
 
-#: ../public/admin/admin.js ../public/include/chat.js
-#: ../public/include/uiHelper.js ../public/include/user.js
+#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/include/user.js
 msgid "Yes"
 msgstr "Да"
 
-#: ../public/admin/admin.js ../public/include/chat.js
-#: ../public/include/uiHelper.js ../public/include/user.js
+#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/include/user.js
 msgid "No"
 msgstr "Нет"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Yes (permanent)"
 msgstr "Да (навечно)"
 
-#: ../public/admin/admin.js ../public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: ../public/admin/admin.js ../public/include/chat.js
+#: /public/admin/admin.js /public/include/chat.js
 msgid "Profile"
 msgstr "Профиль"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Logins"
 msgstr "Логины"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "All Time Pixels"
 msgstr "Все пиксели"
 
-#: ../public/admin/admin.js ../public/include/user.js
+#: /public/admin/admin.js /public/include/user.js
 msgid "Rename Requested"
 msgstr "Переименование запрошено"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Discord Name"
 msgstr "Ник Discord"
 
-#: ../public/admin/admin.js ../public/include/user.js
+#: /public/admin/admin.js /public/include/user.js
 msgid "Banned"
 msgstr "Забанен"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Chatbanned"
 msgstr "Забанен в чате"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ban Reason"
 msgstr "Причина бана"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ban Expiracy"
 msgstr "Истечение бана"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Chatban Reason"
 msgstr "Причина чат-бана"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "(canvas ban)"
 msgstr "(бан на полотне)"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "when canvas ban ends"
 msgstr "когда истекает бан канваса"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Chatban Expires"
 msgstr "Истечение чат-бана"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ban (24h)"
 msgstr ""
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Permaban"
 msgstr ""
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Shadowban"
 msgstr ""
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Custom ban length: "
 msgstr ""
 
 #. Admin check. Example: type = 'username', arg = 'pxlsuser94'
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "${type} ${arg} not found."
 msgstr "${type} ${arg} не найден"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Unban Reason:"
 msgstr "Причина разбана"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Unbanning ${username}"
 msgstr "Разбан ${username}"
 
-#: ../public/admin/admin.js ../public/include/chat.js
-#: ../public/include/lookup.js ../public/include/user.js
+#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/include/user.js
 msgid "Cancel"
 msgstr "Отменить"
 
 #. Moderator panel label
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "MOD"
 msgstr ""
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ignore cooldown"
 msgstr ""
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Place any color"
 msgstr ""
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ignore placemap"
 msgstr ""
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Ban user (24h)"
 msgstr ""
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Unban user"
 msgstr ""
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Check user"
 msgstr ""
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "profile"
 msgstr "профиль"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "User Agent"
 msgstr "Пользовательский агент"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Send Alert"
 msgstr "Отправить предупреждение"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "Mod Actions"
 msgstr "Действия модератора"
 
-#: ../public/admin/admin.js
+#: /public/admin/admin.js
 msgid "More..."
 msgstr ""
 
 #. Snapshot save name
-#: ../public/include/board.js
+#: /public/include/board.js
 msgid "pxls canvas"
 msgstr "полотно pxls"
 
 #. template link action
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Ask"
 msgstr "Всплывающее окно"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Open in a new tab"
 msgstr "Открыть в новой вкладке"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Open in current tab (replacing template)"
 msgstr "Открыть в текущей вкладке (заменить шаблон)"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Jump to coordinates without replacing template"
 msgstr "Перейти к координатам без замены шаблона"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Please upload your template image to a third-party image host."
 msgstr "Пожалуйста, загрузите изображение вашего шаблона на сторонний хостинг."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "You must have at least "
 msgstr "Вы должны иметь хотя бы "
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid " pixels to send links."
 msgstr " пикселей, для отправки ссылок."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "You must be logged in to chat."
 msgstr "Вы должны быть авторизованы в чате."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "No Results"
 msgstr ""
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Reply"
 msgstr ""
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "none provided"
 msgstr "не предусмотрено"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Purged by ${purge.initiator} with reason: ${reason}"
 msgstr "Удалено ${purge.initiator} по причине: ${reason}"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "template:"
 msgstr "шаблон:"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Open Failed"
 msgstr "Не удалось открыть"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Failed to automatically open in a new tab"
 msgstr "Не удалось автоматически открыть в новой вкладке"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Click here to open in a new tab instead"
 msgstr "Нажмите здесь, чтобы вместо этого открыть в новой вкладке"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Open Template"
 msgstr "Открыть шаблон"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "This link will overwrite your current template. What would you like to do?"
 msgstr "Эта ссылка перезапишет ваш текущий шаблон. Что бы вы хотели сделать?"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Note: You can set a default action in the settings menu which bypasses this popup completely."
 msgstr "Примечание: В меню настроек можно установить действие по умолчанию, которое полностью обходит это всплывающее окно."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "OK"
 msgstr ""
 
-#: ../public/include/chat.js ../public/include/lookup.js
+#: /public/include/chat.js /public/include/lookup.js
 msgid "Report"
 msgstr "Жалоба"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Mention"
 msgstr "Упомянуть"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Ignore"
 msgstr "Игнорировать"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Chat (un)ban"
 msgstr "Чат-бан (разбан)"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Purge User"
 msgstr "Удалить все сообщения"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Mod Lookup"
 msgstr "Окно модера"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Chat Lookup"
 msgstr "Проверка чата"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Enter a reason for your report"
 msgstr "Введите причину вашей жалобы"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "You are reporting a chat message from ${reportTarget} with the content:"
 msgstr ""
 
-#: ../public/include/chat.js ../public/include/lookup.js
+#: /public/include/chat.js /public/include/lookup.js
 msgid "Sent report!"
 msgstr ""
 
-#: ../public/include/chat.js ../public/include/lookup.js
+#: /public/include/chat.js /public/include/lookup.js
 msgid "Error sending report."
 msgstr "Ошибка отправки жалобы"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Report User"
 msgstr "Пожаловаться"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "User ignored. You can unignore from chat settings."
 msgstr "Пользователь игнорируется. Вы можете снять игнор в настройках чата"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Failed to ignore user. Either they\\'re already ignored, or an error occurred. If the problem persists, contact a developer."
 msgstr "Ошибка игнора пользователя. Либо он уже игнорируется, либо произошла ошибка. Если проблема не устранится, обратитесь к разработчику."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Permanent"
 msgstr "Навечно"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Temporary"
 msgstr "Временно"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Rule 3: Spam"
 msgstr "Правило 3: Спам"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Rule 1: Chat civility"
 msgstr "Правило 1: Вежливость в чате"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Rule 2: Hate Speech"
 msgstr "Правило 2: Ненавистнические высказывания"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Rule 5: NSFW"
 msgstr "Правило 5: NSFW"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Custom"
 msgstr "Другое"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Banning:"
 msgstr "Забанить:"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Message:"
 msgstr "Сообщение:"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Ban Length"
 msgstr "Длительность бана"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Reason"
 msgstr "Причина"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Purge Messages"
 msgstr "Удалить сообщения"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Purging all messages is disabled during snip mode"
 msgstr "Удаление всех сообщений отключено в режиме snip"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Silent (no purge message)"
 msgstr ""
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Custom reason"
 msgstr "Другая причина"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Additional information:"
 msgstr "Дополнительная информация:"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Chatban initiated"
 msgstr ""
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Error occurred while chatbanning"
 msgstr "Произошла ошибка при чат-бане"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Chatban"
 msgstr "Чат-бан"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Failed to delete"
 msgstr "Ошибка удаления"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "ID: "
 msgstr "ID: "
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "User: "
 msgstr "Пользователь: "
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Message: "
 msgstr "Сообщение: "
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Reason: "
 msgstr "Причина: "
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Delete Message"
 msgstr "Удалить сообщение"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Purge"
 msgstr "Удалить все сообщения"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Selected Message"
 msgstr "Выбранное сообщение"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Purge Reason"
 msgstr "Причина удаления"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "User purged"
 msgstr ""
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Error sending purge."
 msgstr "Ошибка удаления"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Toggle Rename Request"
 msgstr "Переключить запрос на переименование"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Select one of the options below to set the current rename request state."
 msgstr "Выберите один из вариантов ниже, чтобы установить текущее состояние запроса на переименование."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Rename request updated"
 msgstr ""
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "An unknown error occurred. Please contact a developer"
 msgstr "Произошла неизвестная ошибка. Пожалуйста обратитесь к разработчику"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "New Name: "
 msgstr "Новое имя: "
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Enter the new name for the user below. Please note that if you\\'re trying to change the caps, you\\'ll have to rename to something else first."
 msgstr "Введите новое имя для пользователя ниже. Пожалуйста заметьте, что если вы хотите изметь заглавные буквы, вам сначала придется переименовать их во что-то другое."
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "User renamed"
 msgstr ""
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "Force Rename"
 msgstr "Принудительно переименовать"
 
-#: ../public/include/chat.js
+#: /public/include/chat.js
 msgid "You cannot use chat while canvas banned."
 msgstr "Вы не можете использовать чат, пока забанены на полотне."
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Sending..."
 msgstr "Отправка..."
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "additional information:"
 msgstr "дополнительная информация:"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Report Pixel"
 msgstr "Пожаловаться"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "This pixel is background (was not placed by a user)."
 msgstr ""
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Hide sensitive information"
 msgstr "Скрыть конфиденциальную информацию"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Move Template Here"
 msgstr ""
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "An error occurred, either you aren't logged in or you may be attempting to look up users too fast. Please try again in 60 seconds"
 msgstr "Произошла ошибка, либо вы не авторизованы, либо вы используете поиск слишком часто. Повторите попытку через 60 секунд."
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Coords"
 msgstr "Координаты"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "View Profile"
 msgstr "Просмотреть профиль"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Origin"
 msgstr "Источник"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Part of a nuke"
 msgstr "Часть нюка"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Placed by a staff member using placement overrides"
 msgstr "Размещено модератором с использованием специальных инструментов"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Time"
 msgstr "Время"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "just now"
 msgstr "только что"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
 msgstr "${hoursStr}:${minuteStr}:${secsStr} назад"
 
-#: ../public/include/lookup.js
+#: /public/include/lookup.js
 msgid "Discord"
 msgstr "Дискорд"
 
-#: ../public/include/notifications.js
+#: /public/include/notifications.js
 msgid "Posted by ${notification.who}"
 msgstr "Сообщение от ${notification.who}"
 
-#: ../public/include/notifications.js
+#: /public/include/notifications.js
 msgid "Expires ${expiry}"
 msgstr "Истекает ${expiry}"
 
-#: ../public/include/template.js
+#: /public/include/template.js
 msgid "There was an error getting the image"
 msgstr "Произошла ошибка при получении изображения"
 
-#: ../public/include/timer.js
+#: /public/include/timer.js
 msgid "Your next pixel will be available in ${delay} seconds!"
 msgstr "Ваш следующий пиксель будет доступен через ${delay} секунд!"
 
-#: ../public/include/timer.js
+#: /public/include/timer.js
 msgid "Your next pixel has been available for ${alertDelay} seconds!"
 msgstr "Ваш следующий пиксель был доступен в течение ${alertDelay} секунд!"
 
-#: ../public/include/timer.js
+#: /public/include/timer.js
 msgid "Your next pixel is available!"
 msgstr "Ваш следующий пиксель доступен!"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Dark"
 msgstr "Темная"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Darker"
 msgstr "Темнее тёмного"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Blue"
 msgstr "Синяя"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Purple"
 msgstr "Фиолетовая"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Green"
 msgstr "Зеленая"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Matte"
 msgstr "Матовая"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Terminal"
 msgstr "Матрица"
 
 #. theme name
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Red"
 msgstr "Красная"
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "A new ${type} report has been received."
 msgstr ""
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Cannot fetch local files. Use the file selector in template settings."
 msgstr "Невозможно получить локальные файлы. Используйте кнопку [Выбрать файл] в настройках шаблона."
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Redirect Warning"
 msgstr "Предупреждение о перенаправлении"
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Are you sure you want to redirect to the following URL?"
 msgstr "Вы уверены, что хотите перейти по указанной ссылке?"
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Drag and dropped file must be a valid image."
 msgstr "Перетаскиваемый файл должен быть допустимым изображением."
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Discord name updated successfully"
 msgstr "Ник Discord успешно обновлен"
 
-#: ../public/include/uiHelper.js
+#: /public/include/uiHelper.js
 msgid "Couldn\\'t change discord name: "
 msgstr "Не удалось изменить ник дискорда: "
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Sign in with..."
 msgstr "Авторизоваться с..."
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "New Accounts Disabled"
 msgstr "Новые аккаунты отключены"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "online"
 msgstr "онлайн"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Sign Out"
 msgstr "Выйти"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Are you sure you want to sign out?"
 msgstr "Вы уверены что хотите выйти?"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "You are permanently banned."
 msgstr "Вы забанены навсегда."
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "You are temporarily banned and will not be allowed to place until ${timestamp}"
 msgstr "Вы временно забанены и не сможете размещать пиксели до ${timestamp}"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "You can contact us using one of the links in the info menu."
 msgstr ""
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "If you think this was an error, please contact us using one of the links in the info tab."
 msgstr "Если вы считаете, что это была ошибка, свяжитесь с нами, используя одну из ссылок на вкладке информации."
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Ban reason:"
 msgstr "Причина бана:"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "An unknown error occurred. Please contact staff on discord"
 msgstr ""
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Staff have required you to change your username, this usually means your name breaks one of our rules."
 msgstr "Модерация потребовала от вас сменить имя пользователя, обычно это означает, что ваше имя пользователя нарушает одно из наших правил."
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "If you disagree, please contact us on Discord (link in the info panel)."
 msgstr "Если вы не согласны, свяжитесь с нами в Discord (ссылка на информационной панели)."
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "New Username:"
 msgstr "Новое имя пользователя:"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Not now"
 msgstr "Не сейчас"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Change"
 msgstr "Изменить"
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "You must change your username."
 msgstr ""
 
-#: ../public/include/user.js
+#: /public/include/user.js
 msgid "Click here to continue."
 msgstr ""
 
-#: ../public/pxls.js
+#: /public/pxls.js
 msgid "Alert"
 msgstr "Предупреждение"
