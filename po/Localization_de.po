@@ -2,9 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
 "POT-Creation-Date: 2023-12-07T03:58:47.363Z\n"
+"PO-Revision-Date: 2023-12-10 11:35+0000\n"
+"Last-Translator: Doxylamin <git@mauriceschmitz.de>\n"
+"Language-Team: German <https://weblate.pxls.space/projects/pxls-space/"
+"pxls-web/de/>\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.2.1\n"
 
 #: ../views/404.handlebars
 #: ../views/404.handlebars
@@ -12,224 +18,232 @@ msgstr ""
 #: ../views/profile.handlebars
 #: ../public/include/user.js
 msgid "My Profile"
-msgstr ""
+msgstr "Mein Profil"
 
 #: ../views/404.handlebars
 #: ../views/profile.handlebars
 msgid "My Factions"
-msgstr ""
+msgstr "Meine Fraktionen"
 
 #.  HTTP status code name 
 #: ../views/404.handlebars
 msgid "Not Found"
-msgstr ""
+msgstr "Nicht gefunden"
 
 #: ../views/404.handlebars
 msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
 msgstr ""
+"Der von dir angeforderte Inhalt konnte unter dieser URL nicht gefunden "
+"werden. Wenn du glaubst, dass dies ein Fehler ist, kontaktiere bitte einen "
+"Entwickler."
 
 #.  links to the homepage (the app itself) 
 #: ../views/404.handlebars
 #: ../views/404.handlebars
 #: ../views/404.handlebars
 msgid "Back to Pxls"
-msgstr ""
+msgstr "Zurück zu Pxls"
 
 #.  HTTP status code name 
 #: ../views/404.handlebars
 msgid "Not Authenticated"
-msgstr ""
+msgstr "Nicht authentifiziert"
 
 #: ../views/404.handlebars
 msgid "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
 msgstr ""
+"Du musst eingeloggt sein, um diese Daten abrufen zu können. Bitte gehe "
+"zurück zu Pxls und durchlaufe den Authentifizierungsprozess."
 
 #.  HTTP status code name 
 #: ../views/404.handlebars
 msgid "Not Allowed"
-msgstr ""
+msgstr "Nicht Erlaubt"
 
 #: ../views/404.handlebars
 msgid "The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later."
 msgstr ""
+"Die Aktion, die du versucht hast auszuführen, ist nicht erlaubt oder hat zu "
+"einem Fehler geführt. Bitte stelle sicher, dass du Zugriff auf den Endpunkt "
+"hast und versuche es später noch einmal."
 
 #: ../views/index.handlebars
 msgid "Place pixels with people to create art"
-msgstr ""
+msgstr "Platziere Pixel mit Menschen um Kunst zu schaffen"
 
 #: ../views/index.handlebars
 msgid "Lost connection to server, reconnecting..."
-msgstr ""
+msgstr "Verbindung zum Server verloren. Verbindung wiederherstellen..."
 
 #: ../views/index.handlebars
 msgid "Loading Heatmap (press <kbd>H</kbd> to cancel)"
-msgstr ""
+msgstr "Heatmap wird geladen (drücke <kbd>H</kbd> zum abbrechen)"
 
 #: ../views/index.handlebars
 msgid "Loading Virginmap (press <kbd>X</kbd> to cancel)"
-msgstr ""
+msgstr "Virginmap wird geladen (drücke <kbd>X</kbd> zum abbrechen)"
 
 #: ../views/index.handlebars
 msgid "Logout"
-msgstr ""
+msgstr "Abmelden"
 
 #: ../views/index.handlebars
 msgid "Canvas:"
-msgstr ""
+msgstr "Leinwand:"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "N/A"
-msgstr ""
+msgstr "k.A."
 
 #: ../views/index.handlebars
 msgid "All Time:"
-msgstr ""
+msgstr "Gesamt:"
 
 #: ../views/index.handlebars
 msgid "Loading online user count&hellip;"
-msgstr ""
+msgstr "Online-Benutzer werden geladen&hellip;"
 
 #: ../views/index.handlebars
 #: ../public/admin/admin.js
 #: ../public/include/lookup.js
 msgid "Pixels"
-msgstr ""
+msgstr "Pixels"
 
 #: ../views/index.handlebars
 msgid "Undo"
-msgstr ""
+msgstr "Rückgängig"
 
 #: ../views/index.handlebars
 msgid "You are not signed in.&nbsp;<a href=\"#\">Sign in with...</a>"
-msgstr ""
+msgstr "Sie sind nicht angemeldet.&nbsp;<a href=\"#\">Anmelden mit...</a>"
 
 #: ../views/index.handlebars
 msgid "Loading..."
-msgstr ""
+msgstr "Laden..."
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "Sign up"
-msgstr ""
+msgstr "Registrieren"
 
 #: ../views/index.handlebars
 msgid "Pick a username"
-msgstr ""
+msgstr "Wähle einen Nutzernamen"
 
 #: ../views/index.handlebars
 msgid "Username:"
-msgstr ""
+msgstr "Nutzername:"
 
 #: ../views/index.handlebars
 msgid "Discord Tag (Optional):"
-msgstr ""
+msgstr "Discord Tag (optional):"
 
 #: ../views/index.handlebars
 msgid "Drag and drop template image"
-msgstr ""
+msgstr "Vorlagenbild ziehen und ablegen"
 
 #: ../views/index.handlebars
 msgid "Exit"
-msgstr ""
+msgstr "Verlassen"
 
 #: ../views/index.handlebars
 #: ../views/profile.handlebars
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "Close Panel"
-msgstr ""
+msgstr "Panel schließen"
 
 #: ../views/index.handlebars
 #: ../public/include/chat.js
 msgid "Chat"
-msgstr ""
+msgstr "Chat"
 
 #: ../views/index.handlebars
 msgid "Pings"
-msgstr ""
+msgstr "Erwähnungen"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: ../views/index.handlebars
 msgid "Jump To Bottom"
-msgstr ""
+msgstr "Nach unten springen"
 
 #: ../views/index.handlebars
 msgid "Replying to"
-msgstr ""
+msgstr "Antwort an"
 
 #: ../views/index.handlebars
 #: ../public/include/chat.js
 msgid "On"
-msgstr ""
+msgstr "Ein"
 
 #: ../views/index.handlebars
 msgid "Emoji"
-msgstr ""
+msgstr "Emoji"
 
 #: ../views/index.handlebars
 msgid "Search"
-msgstr ""
+msgstr "Suche"
 
 #: ../views/index.handlebars
 msgid "keybinds;keys;keyboard;hotkeys"
-msgstr ""
+msgstr "tastenkürzel;taste;tastatur;hotkeys"
 
 #: ../views/index.handlebars
 msgid "Keybinds"
-msgstr ""
+msgstr "Tastaturkürzel"
 
 #: ../views/index.handlebars
 msgid "general"
-msgstr ""
+msgstr "generell"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
 msgid "General"
-msgstr ""
+msgstr "Generell"
 
 #: ../views/index.handlebars
 msgid "move;moving;panning;drag"
-msgstr ""
+msgstr "bewegen;bewegung;schwenken;ziehen"
 
 #: ../views/index.handlebars
 msgid "Mouse/arrows/wasd to pan"
-msgstr ""
+msgstr "Maus/Pfeile/WASD zum Bewegen"
 
 #: ../views/index.handlebars
 msgid "mousewheel;zooming"
-msgstr ""
+msgstr "mausrad;zoomen"
 
 #: ../views/index.handlebars
 msgid "Scroll/pinch to zoom"
-msgstr ""
+msgstr "Zum Zoomen scrollen/drücken"
 
 #: ../views/index.handlebars
 msgid "scroll;zooming"
-msgstr ""
+msgstr "scroll;zoom"
 
 #: ../views/index.handlebars
 msgid "<kbd>+</kbd>/<kbd>-</kbd> or <kbd>Q</kbd>/<kbd>E</kbd> to zoom"
-msgstr ""
+msgstr "<kbd>+</kbd>/<kbd>-</kbd> oder <kbd>Q</kbd>/<kbd>E</kbd> zum Zoomen"
 
 #: ../views/index.handlebars
 msgid "lookups"
-msgstr ""
+msgstr "nachschlagen"
 
 #: ../views/index.handlebars
 msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
-msgstr ""
+msgstr "<kbd>Shift</kbd> + klicken/halten zum Abrufen von Pixeln"
 
 #: ../views/index.handlebars
 #: ../views/index.handlebars
