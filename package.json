@@ -11,12 +11,19 @@
   "author": "Pxls Contributors",
   "license": "MIT",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "http-proxy-middleware": "^2.0.6",
+    "json5": "^2.2.3",
+    "pofile": "^1.1.0"
+  },
+  "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.5",
     "@handlebars/parser": "^2.1.0",
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
-    "cookie-parser": "^1.4.6",
     "eslint": "^8.55.0",
     "eslint-config-semistandard": "^15.0.0",
     "eslint-config-standard": "^14.1.0",
@@ -25,24 +32,17 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "esprima": "^4.0.1",
-    "express": "^4.18.2",
-    "express-handlebars": "^7.1.2",
+    "glob-parent": "^6.0.2",
     "gulp": "^4.0.2",
     "gulp-buffer": "^0.0.2",
     "gulp-clean-css": "^4.2.0",
     "gulp-eslint-new": "^1.8.4",
     "gulp-if": "^3.0.0",
     "gulp-minify": "^3.1.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-tap": "^2.0.0",
-    "http-proxy-middleware": "^2.0.6",
-    "json5": "^2.2.3",
     "merge-stream": "^2.0.0",
-    "pofile": "^1.1.0"
-  },
-  "devDependencies": {
-    "glob-parent": "^6.0.2",
-    "gulp-rename": "^2.0.0",
     "through2": "^2.0.5"
   },
   "overrides": {
