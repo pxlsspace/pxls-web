@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
 "POT-Creation-Date: 2023-12-07T03:58:47.363Z\n"
-"PO-Revision-Date: 2023-12-10 11:35+0000\n"
-"Last-Translator: Doxylamin <git@mauriceschmitz.de>\n"
+"PO-Revision-Date: 2023-12-10 11:39+0000\n"
+"Last-Translator: Weblate Admin <thiscamefrom@pxls.space>\n"
 "Language-Team: German <https://weblate.pxls.space/projects/pxls-space/"
 "pxls-web/de/>\n"
 "Language: de\n"
@@ -252,7 +252,7 @@ msgstr ""
 
 #: ../views/index.handlebars
 msgid "<kbd>G</kbd> to toggle grid"
-msgstr ""
+msgstr "<kbd>G</kbd> um Gitternetz umzuschalten"
 
 #: ../views/index.handlebars
 msgid "close;information shown;information hidden;info shown;info hidden;hide information;show information"
