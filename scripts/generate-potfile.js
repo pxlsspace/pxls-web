@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 const { listFiles } = require('../utils.js');
 const { findTranslationCalls, contract } = require('./localization-util');
@@ -7,8 +8,8 @@ const PO = require('pofile');
 const esprima = require('esprima');
 const Handlebars = require('@handlebars/parser');
 
-const viewsFiles = listFiles('../views');
-const jsFiles = listFiles('../public').filter(e => e.endsWith('.js'));
+const viewsFiles = listFiles(path.join(__dirname, '..', 'views'));
+const jsFiles = listFiles(path.join(__dirname, '..', 'public')).filter(e => e.endsWith('.js'));
 
 let stringCount = 0;
 
@@ -50,17 +51,17 @@ function processNode(node, path, pendingComments = []) {
   }
 }
 
-for (const path of viewsFiles) {
-  const file = fs.readFileSync(path, 'utf8');
+for (const viewPath of viewsFiles) {
+  const file = fs.readFileSync(path.join(__dirname, '..', viewPath), 'utf8');
   const ast = Handlebars.parse(file);
 
   for (const node of ast.body) {
-    processNode(node, path);
+    processNode(node, viewPath);
   }
 }
 
-for (const path of jsFiles) {
-  const file = fs.readFileSync(path, 'utf8');
+for (const jsPath of jsFiles) {
+  const file = fs.readFileSync(path.join(__dirname, '..', jsPath), 'utf8');
   const script = esprima.parseScript(file, { range: true, comment: true });
 
   const translatableStrings = script.body
@@ -101,14 +102,14 @@ for (const path of jsFiles) {
 
     if (poItems.has(id)) {
       item = poItems.get(id);
-      if (!item.references.includes(path)) {
-        item.references.push(path);
+      if (!item.references.includes(jsPath)) {
+        item.references.push(jsPath);
       }
       item.extractedComments.push(...relevantComments);
     } else {
       item = new PO.Item();
       item.msgid = id;
-      item.references.push(path);
+      item.references.push(jsPath);
       item.extractedComments.push(...relevantComments);
       stringCount++;
       poItems.set(id, item);

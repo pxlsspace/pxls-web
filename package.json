@@ -6,6 +6,9 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp",
+    "gen-pot": "node scripts/generate-potfile.js",
+    "new-local": "sh scripts/new-localization.sh",
+    "update-local": "sh scripts/update-localizations.sh",
     "start": "node index.js"
   },
   "author": "Pxls Contributors",
