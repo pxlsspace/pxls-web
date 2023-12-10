@@ -125,8 +125,9 @@ for (const item of poItems.values()) {
   poFile.items.push(item);
 }
 
-poFile.save('../po/Localization.pot', e => e ? console.error : null);
+const outPath = path.join(__dirname, '..', 'po', 'Localization.pot');
+poFile.save(outPath, e => e ? console.error : null);
 
 console.info(`Parsed ${viewsFiles.length + jsFiles.length} files.`);
 console.info(`${stringCount} strings found.`);
-console.info('Output ../po/Localization.pot.');
+console.info(`Output ${outPath}.`);
