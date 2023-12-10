@@ -112,7 +112,7 @@ exports.loadPO = loadPO;
  * @param options The fetch options.
  * @returns {Promise<Response>} A promise that resolves to the response.
  */
-function proxyFetch(req, url, options) {
+function proxyFetch(req, url, options = {}) {
   return fetch(url, {
     ...options,
     headers: req.headers
