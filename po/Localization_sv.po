@@ -2,8 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
 "POT-Creation-Date: 2023-12-07T03:58:47.363Z\n"
+"PO-Revision-Date: 2023-12-10 11:35+0000\n"
+"Last-Translator: Temriel <firedudd@gmail.com>\n"
+"Language-Team: Swedish <https://weblate.pxls.space/projects/pxls-space/"
+"pxls-web/sv/>\n"
 "Language: sv\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.2.1\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../views/404.handlebars ../views/profile.handlebars
 #: ../public/include/user.js
@@ -265,7 +272,7 @@ msgstr "överlägg;användarsaktivitet;pixlar placerade;värmekarta gömd;värme
 
 #: ../views/index.handlebars
 msgid "<kbd>H</kbd> to toggle heatmap"
-msgstr "<kbd>H</kbd för att växla värmekartan"
+msgstr "<kbd>H</kbd> för att växla värmekartan"
 
 #: ../views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
@@ -281,7 +288,7 @@ msgstr "överlägg;användarsaktivitet;pixler placerade pixlar;rensa;rent;"
 
 #: ../views/index.handlebars
 msgid "<kbd>O</kbd> to clear heatmap"
-msgstr "<kbd>O</kbd för att rensa värmekartan"
+msgstr "<kbd>O</kbd> för att rensa värmekartan"
 
 #: ../views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;wipe;clean;"
@@ -1085,7 +1092,7 @@ msgstr "varna för förvarning;varningsfördröjning; notifications fördräjnin
 
 #: ../views/index.handlebars
 msgid "Delay (seconds):"
-msgstr "Fördröjning (sekunder)"
+msgstr "Fördröjning (sekunder):"
 
 #: ../views/index.handlebars
 msgid "chat mentions;chat pings;chat sound"
@@ -1189,7 +1196,11 @@ msgstr "Hur kan jag vädja en banlyselse?"
 
 #: ../views/partials/faq.handlebars
 msgid "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
-msgstr "Kontakta oss på <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> eller skicka in en vädjandesbegära till vår <a \"href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> efter du har läst sidans regler i info panelen."
+msgstr ""
+"Kontakta oss på <a href=\"https://pxls.space/discord\" target=\"_blank\""
+">Discord</a> eller skicka in en vädjandesbegära till vår <a href=\"https"
+"://pxls.space/appeal\" target=\"_blank\">Google form</a> efter du har läst "
+"sidans regler i info panelen."
 
 #: ../views/partials/faq.handlebars
 msgid "How do I make a template?"
@@ -1329,7 +1340,9 @@ msgstr "Inga auto-placerande verktyg av något slag, du måste placera alla pixl
 
 #: ../views/partials/info.handlebars
 msgid "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
-msgstr "Missbruka inte hemsidans fuctioner, som reportrar eller användar-uppslagningar. (t.ex. automatiskt reportering/nvändar-uppslagningar, etc."
+msgstr ""
+"Missbruka inte hemsidans fuctioner, som reportrar eller användar-"
+"uppslagningar. (t.ex. automatiskt reportering/nvändar-uppslagningar, etc.)"
 
 #: ../views/partials/info.handlebars
 msgid "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
@@ -1377,7 +1390,9 @@ msgstr "Inga \"copy pasta\"s"
 
 #: ../views/partials/info.handlebars
 msgid "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
-msgstr "Inga länkar till sidor som aktivt brytor mot kanvas eller chatt regler (t.ex. porr sidor)."
+msgstr ""
+"Inga länkar till sidor som aktivt bryter mot kanvas eller chatt regler ("
+"t.ex. porr sidor)"
 
 #: ../views/partials/info.handlebars
 msgid "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
@@ -1743,11 +1758,11 @@ msgstr "Något gick fel! Har du kanske otillräckliga behörigheter?"
 
 #: ../public/admin/admin.js
 msgid "Shadowban user"
-msgstr "Skugbannlys användare"
+msgstr "Shadowban användare"
 
 #: ../public/admin/admin.js
 msgid "Shadowbanned user"
-msgstr "Skugbannlyste användare"
+msgstr "Shadowbannad användare"
 
 #: ../public/admin/admin.js
 msgid "Permaban user"
@@ -1772,7 +1787,7 @@ msgstr "Ångrade bannlysning hos ${username}"
 #. Context: ban type
 #: ../public/admin/admin.js
 msgid "shadow"
-msgstr "skug"
+msgstr "shadow"
 
 #: ../public/admin/admin.js
 msgid "never"
@@ -1857,18 +1872,16 @@ msgid "Ban (24h)"
 msgstr "Bannlyss (24h)"
 
 #: ../public/admin/admin.js
-#, fuzzy
 msgid "Permaban"
-msgstr "Permabannlys användare"
+msgstr "Permabannlys"
 
 #: ../public/admin/admin.js
-#, fuzzy
 msgid "Shadowban"
-msgstr "Skugbannlys användare"
+msgstr "Shadowban"
 
 #: ../public/admin/admin.js
 msgid "Custom ban length: "
-msgstr "Frivilig bannlyssnings längd"
+msgstr "Frivilig bannlyssnings längd: "
 
 #. Admin check. Example: type = 'username', arg = 'pxlsuser94'
 #: ../public/admin/admin.js
@@ -1898,23 +1911,20 @@ msgid "Ignore cooldown"
 msgstr "Ignorera väntetid"
 
 #: ../public/admin/admin.js
-#, fuzzy
 msgid "Place any color"
-msgstr "Rensa färg"
+msgstr "Placera valfri färg"
 
 #: ../public/admin/admin.js
 msgid "Ignore placemap"
 msgstr "Ignorera placeringskarta"
 
 #: ../public/admin/admin.js
-#, fuzzy
 msgid "Ban user (24h)"
-msgstr "Bannlys användare"
+msgstr "Bannlys användare (24h)"
 
 #: ../public/admin/admin.js
-#, fuzzy
 msgid "Unban user"
-msgstr "Bannlys användare"
+msgstr "Ta bort bannlysning på användare"
 
 #: ../public/admin/admin.js
 msgid "Check user"
@@ -1956,7 +1966,7 @@ msgstr "Öppna i ett nytt fönster"
 
 #: ../public/include/chat.js
 msgid "Open in current tab (replacing template)"
-msgstr "Öppna i nuvarande fönster (byter ut nuvarande template)."
+msgstr "Öppna i nuvarande fönster (byter ut nuvarande template)"
 
 #: ../public/include/chat.js
 msgid "Jump to coordinates without replacing template"
@@ -2135,9 +2145,8 @@ msgid "Purging all messages is disabled during snip mode"
 msgstr "Rensning av alla meddelanden är avaktiverat under -snip- läge"
 
 #: ../public/include/chat.js
-#, fuzzy
 msgid "Silent (no purge message)"
-msgstr "Tyst (ingent rensnings medelland)"
+msgstr "Tyst (inget rensnings meddelande)"
 
 #: ../public/include/chat.js
 msgid "Custom reason"
@@ -2355,7 +2364,7 @@ msgstr "Grön"
 #. theme name
 #: ../public/include/uiHelper.js
 msgid "Matte"
-msgstr "Matte"
+msgstr "Matt"
 
 #. theme name
 #: ../public/include/uiHelper.js
