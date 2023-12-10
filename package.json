@@ -41,7 +41,11 @@
     "pofile": "^1.1.0"
   },
   "devDependencies": {
+    "glob-parent": "^6.0.2",
     "gulp-rename": "^2.0.0",
     "through2": "^2.0.5"
+  },
+  "overrides": {
+    "glob-parent": "^6.0.2"
   }
 }
