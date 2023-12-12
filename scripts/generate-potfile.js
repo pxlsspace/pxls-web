@@ -27,7 +27,7 @@ const poItems = new Map();
 
 function processNode(node, path, pendingComments = []) {
   if (node.type === 'CommentStatement' && !node.value.startsWith('\n')) {
-    pendingComments.push(node.value);
+    pendingComments.push(node.value.trim());
   }
   if (node.type === 'MustacheStatement' && node.path.original === 'i18n') {
     const id = node.params[0].value;
