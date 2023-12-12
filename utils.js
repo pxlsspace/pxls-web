@@ -113,10 +113,12 @@ exports.loadPO = loadPO;
  * @returns {Promise<Response>} A promise that resolves to the response.
  */
 function proxyFetch(req, url, options = {}) {
-  return fetch(url, {
+  return new Promise((resolve, reject) => fetch(url, {
     ...options,
     headers: req.headers
-  });
+  })
+    .then(res => res.ok ? resolve(res) : reject(res))
+    .catch(reject));
 }
 
 exports.proxyFetch = proxyFetch;

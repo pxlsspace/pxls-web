@@ -66,9 +66,13 @@ app.use('/', async (req, res, next) => {
   } else if (/^\/profile(?:\/\w+)?$/.test(req.path)) {
     let profileName = relativePath.split('/')[1] || '';
     if (profileName !== '') profileName = '?username=' + profileName;
-    const dataRes = await proxyFetch(req, `http://${config.proxyTo}/api/v1/profile` + profileName);
-    if (dataRes.status >= 400) {
-      await sendErrorPage(req, res, dataRes.status);
+    /** @type {Response} */
+    let dataRes;
+    try {
+      dataRes = await proxyFetch(req, `http://${config.proxyTo}/api/v1/profile` + profileName);
+    } catch (err) {
+      const code = err.status || 500;
+      await sendErrorPage(req, res, code);
       return;
     }
     const data = await dataRes.json();
@@ -109,11 +113,12 @@ async function sendErrorPage(req, res, code) {
   const { poFile } = await getLanguageData(req);
 
   let name = '';
-  const dataRes = await proxyFetch(req, `http://${config.proxyTo}/whoami`);
-  if (dataRes.ok) {
-    const data = await dataRes.json();
-    name = data.username;
-  }
+  await proxyFetch(req, `http://${config.proxyTo}/whoami`)
+    .then(res => res.json())
+    .then(data => {
+      name = data.username;
+    })
+    .catch(() => {});
 
   res.status(code).render('error', {
     title: config.title,
