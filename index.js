@@ -58,7 +58,6 @@ app.use('/', async (req, res, next) => {
     res.render('index', {
       title: config.title,
       lang: langCode,
-      head: '',
       scriptLang: langCode === 'en' ? '' : '_' + langCode,
 
       helpers: handlebarsHelpers(poFile)
