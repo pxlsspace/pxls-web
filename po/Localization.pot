@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-10T20:50:04.139Z\n"
+"POT-Creation-Date: 2023-12-12T19:44:02.744Z\n"
 "Language: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -18,7 +18,7 @@ msgstr ""
 msgid "My Factions"
 msgstr ""
 
-#.  HTTP status code name 
+#. HTTP status code name
 #: /views/error.handlebars
 msgid "Not Found"
 msgstr ""
@@ -27,14 +27,14 @@ msgstr ""
 msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
 msgstr ""
 
-#.  links to the homepage (the app itself) 
+#. links to the homepage (the app itself)
 #: /views/error.handlebars
 #: /views/error.handlebars
 #: /views/error.handlebars
 msgid "Back to Pxls"
 msgstr ""
 
-#.  HTTP status code name 
+#. HTTP status code name
 #: /views/error.handlebars
 msgid "Not Authenticated"
 msgstr ""
@@ -43,7 +43,7 @@ msgstr ""
 msgid "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
 msgstr ""
 
-#.  HTTP status code name 
+#. HTTP status code name
 #: /views/error.handlebars
 msgid "Not Allowed"
 msgstr ""
@@ -102,7 +102,12 @@ msgid "Undo"
 msgstr ""
 
 #: /views/index.handlebars
-msgid "You are not signed in.&nbsp;<a href=\"#\">Sign in with...</a>"
+msgid "You are not signed in."
+msgstr ""
+
+#: /views/index.handlebars
+#: /public/include/user.js
+msgid "Sign in with..."
 msgstr ""
 
 #: /views/index.handlebars
@@ -1558,19 +1563,19 @@ msgstr ""
 msgid "Canvas Reports ({0}/{1} open)"
 msgstr ""
 
-#.  eg "Report on Bob (closed) 
+#. eg "Report on Bob (closed)
 #: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Report on {0} (closed)"
 msgstr ""
 
-#.  eg "Report on Bob (open) 
+#. eg "Report on Bob (open)
 #: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Report on {0} (open)"
 msgstr ""
 
-#.  eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC) 
+#. eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
 #: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reported {0} on {1}"
@@ -1616,7 +1621,7 @@ msgstr ""
 msgid "This is your currently displayed faction."
 msgstr ""
 
-#.  eg "Pixelers (members: 100, ID: 1)" 
+#. eg "Pixelers (members: 100, ID: 1)"
 #: /views/profile.handlebars
 msgid "{0} (members: {1}, ID: {2})"
 msgstr ""
@@ -1625,12 +1630,12 @@ msgstr ""
 msgid "Owner: {0}"
 msgstr ""
 
-#.  makes the faction no longer the one displayed for the current user 
+#. makes the faction no longer the one displayed for the current user
 #: /views/profile.handlebars
 msgid "Remove Displayed"
 msgstr ""
 
-#.  makes the faction the one displayed for the current user 
+#. makes the faction the one displayed for the current user
 #: /views/profile.handlebars
 msgid "Set Displayed"
 msgstr ""
@@ -1701,13 +1706,13 @@ msgstr ""
 msgid "Faction Members"
 msgstr ""
 
-#.  This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list. 
-#.  since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list 
+#. This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list.
+#. since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list
 #: /views/profile.handlebars
 msgid "Transfer Ownership"
 msgstr ""
 
-#.  bans a user from the faction 
+#. bans a user from the faction
 #: /views/profile.handlebars
 #: /public/include/chat.js
 msgid "Ban"
@@ -2460,7 +2465,11 @@ msgid "Couldn\\'t change discord name: "
 msgstr ""
 
 #: /public/include/user.js
-msgid "Sign in with..."
+msgid "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
+msgstr ""
+
+#: /public/include/user.js
+msgid "Sign in with {0}"
 msgstr ""
 
 #: /public/include/user.js

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-10T20:50:04.139Z\n"
+"POT-Creation-Date: 2023-12-12T19:44:02.744Z\n"
 "Language: bg\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -13,7 +13,7 @@ msgstr "Моят профил"
 msgid "My Factions"
 msgstr "Моите фракции"
 
-#.  HTTP status code name 
+#. HTTP status code name
 #: /views/error.handlebars
 msgid "Not Found"
 msgstr "Не е намерено"
@@ -22,12 +22,12 @@ msgstr "Не е намерено"
 msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
 msgstr "Съдържанието, което искате да намерите на този URL не е намерено. Ако смятате, че това е грешка, моля, контактувайте с администратор."
 
-#.  links to the homepage (the app itself) 
+#. links to the homepage (the app itself)
 #: /views/error.handlebars
 msgid "Back to Pxls"
 msgstr "Връщане в Pxls"
 
-#.  HTTP status code name 
+#. HTTP status code name
 #: /views/error.handlebars
 msgid "Not Authenticated"
 msgstr "Достъпът не е разрешен"
@@ -36,7 +36,7 @@ msgstr "Достъпът не е разрешен"
 msgid "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
 msgstr "Трябва да сте влезли във Вашия профил, за да проверите това съдържание."
 
-#.  HTTP status code name 
+#. HTTP status code name
 #: /views/error.handlebars
 msgid "Not Allowed"
 msgstr "Не е разрешено"
@@ -90,8 +90,12 @@ msgid "Undo"
 msgstr "Отказ"
 
 #: /views/index.handlebars
-msgid "You are not signed in.&nbsp;<a href=\"#\">Sign in with...</a>"
-msgstr "Не сте влезли.&nbsp;<a href=\"#\">Влезте с...</a>"
+msgid "You are not signed in."
+msgstr "Не сте влезли."
+
+#: /views/index.handlebars /public/include/user.js
+msgid "Sign in with..."
+msgstr "Влезте с/ъс..."
 
 #: /views/index.handlebars
 msgid "Loading..."
@@ -1517,17 +1521,17 @@ msgstr "Трябва да сте влезли в профила си, за да 
 msgid "Canvas Reports ({0}/{1} open)"
 msgstr "Докладвания за платното ({0}/{1} отворени)"
 
-#.  eg "Report on Bob (closed) 
+#. eg "Report on Bob (closed)
 #: /views/profile.handlebars
 msgid "Report on {0} (closed)"
 msgstr "Докладване над {0} (прегледано)"
 
-#.  eg "Report on Bob (open) 
+#. eg "Report on Bob (open)
 #: /views/profile.handlebars
 msgid "Report on {0} (open)"
 msgstr "Докладване над {0} (непрегледано)"
 
-#.  eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC) 
+#. eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
 #: /views/profile.handlebars
 msgid "Reported {0} on {1}"
 msgstr "Докладвал за {0} на {1}"
@@ -1572,7 +1576,7 @@ msgstr "Присъединете се"
 msgid "This is your currently displayed faction."
 msgstr "Това е фракцията, показана на Вашия профил."
 
-#.  eg "Pixelers (members: 100, ID: 1)" 
+#. eg "Pixelers (members: 100, ID: 1)"
 #: /views/profile.handlebars
 msgid "{0} (members: {1}, ID: {2})"
 msgstr "{0} (членове: {1}, ID: {2})"
@@ -1581,12 +1585,12 @@ msgstr "{0} (членове: {1}, ID: {2})"
 msgid "Owner: {0}"
 msgstr "Собственик: {0}"
 
-#.  makes the faction no longer the one displayed for the current user 
+#. makes the faction no longer the one displayed for the current user
 #: /views/profile.handlebars
 msgid "Remove Displayed"
 msgstr "Премахнете от профила"
 
-#.  makes the faction the one displayed for the current user 
+#. makes the faction the one displayed for the current user
 #: /views/profile.handlebars
 msgid "Set Displayed"
 msgstr "Покажете на профила"
@@ -1651,13 +1655,13 @@ msgstr "Затворете"
 msgid "Faction Members"
 msgstr "Членове на фракцията"
 
-#.  This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list. 
-#.  since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list 
+#. This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list.
+#. since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list
 #: /views/profile.handlebars
 msgid "Transfer Ownership"
 msgstr "Прехвърлете собственост"
 
-#.  bans a user from the faction 
+#. bans a user from the faction
 #: /views/profile.handlebars /public/include/chat.js
 msgid "Ban"
 msgstr "Премахни от фракцията"
@@ -2385,8 +2389,12 @@ msgid "Couldn\\'t change discord name: "
 msgstr "Не можахме да редактираме името Ви:"
 
 #: /public/include/user.js
-msgid "Sign in with..."
-msgstr "Влезте с/ъс..."
+msgid "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
+msgstr ""
+
+#: /public/include/user.js
+msgid "Sign in with {0}"
+msgstr "Влезте с {0}"
 
 #: /public/include/user.js
 msgid "New Accounts Disabled"

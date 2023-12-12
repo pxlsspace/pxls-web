@@ -114,7 +114,12 @@
         <div id="ui-bottom">
             <button type="button" id="undo"><span>{{{i18n 'Undo'}}}</span></button>
             <div id="login-overlay" class="palette-overlay">
-                {{{i18n 'You are not signed in.&nbsp;<a href="#">Sign in with...</a>'}}}
+                <div id="sign-in-with">
+                    <span>{{{i18n 'You are not signed in.'}}}</span>
+                    <a href="#">{{{i18n 'Sign in with...'}}}</a>
+                </div>
+                {{! Populated if legal.termsUrl exists on /info }}
+                <span id="legal"></span>
             </div>
             <div id="user-message" class="palette-overlay"></div>
             <div id="palette"></div>

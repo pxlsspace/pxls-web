@@ -816,6 +816,25 @@ dt {
     justify-content: center;
 }
 
+#login-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+#login-overlay > #sign-in-with {
+    display: flex;
+    gap: 4px;
+}
+
+#login-overlay > #legal {
+    color: var(--text-muted-color);
+    font-size: 0.8em;
+    text-align: center;
+}
+
 #palette {
     position: relative;
     z-index: 6;

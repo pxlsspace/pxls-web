@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-10T20:50:04.139Z\n"
+"POT-Creation-Date: 2023-12-12T19:44:02.744Z\n"
 "Language: sv\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -13,7 +13,7 @@ msgstr "Min Profil"
 msgid "My Factions"
 msgstr "Mina Grupper"
 
-#.  HTTP status code name 
+#. HTTP status code name
 #: /views/error.handlebars
 msgid "Not Found"
 msgstr "Inte hittad"
@@ -22,12 +22,12 @@ msgstr "Inte hittad"
 msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
 msgstr "Innehållet du försökte nå kunde inte bli hittad vid denna URL. Om du tror att detta är ett fel, snälla kontakta en utvecklare av hemsidan."
 
-#.  links to the homepage (the app itself) 
+#. links to the homepage (the app itself)
 #: /views/error.handlebars
 msgid "Back to Pxls"
 msgstr "Tillbaka till Pxls"
 
-#.  HTTP status code name 
+#. HTTP status code name
 #: /views/error.handlebars
 msgid "Not Authenticated"
 msgstr "Inte Autentiserad"
@@ -36,7 +36,7 @@ msgstr "Inte Autentiserad"
 msgid "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
 msgstr "Du måste vara inloggad för att kunna nå denna data. Snälla gå tillbaka till pxls och gå igenom autentiserings processen."
 
-#.  HTTP status code name 
+#. HTTP status code name
 #: /views/error.handlebars
 msgid "Not Allowed"
 msgstr "Inte tillåten"
@@ -90,8 +90,12 @@ msgid "Undo"
 msgstr "Ångra"
 
 #: /views/index.handlebars
-msgid "You are not signed in.&nbsp;<a href=\"#\">Sign in with...</a>"
-msgstr "Du är inte inloggad. &nbsp;<a href=\"#\">Logga in med...</a>"
+msgid "You are not signed in."
+msgstr "Du är inte inloggad."
+
+#: /views/index.handlebars /public/include/user.js
+msgid "Sign in with..."
+msgstr "Logga in med..."
 
 #: /views/index.handlebars
 msgid "Loading..."
@@ -1517,17 +1521,17 @@ msgstr "Du måste vara inloggad för att kunna se dinna raporter."
 msgid "Canvas Reports ({0}/{1} open)"
 msgstr "Kanvas Reporter ({0}/{1} öppen)"
 
-#.  eg "Report on Bob (closed) 
+#. eg "Report on Bob (closed)
 #: /views/profile.handlebars
 msgid "Report on {0} (closed)"
 msgstr "Report på {0} (sluten)"
 
-#.  eg "Report on Bob (open) 
+#. eg "Report on Bob (open)
 #: /views/profile.handlebars
 msgid "Report on {0} (open)"
 msgstr "Report på {0} (öppen)"
 
-#.  eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC) 
+#. eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
 #: /views/profile.handlebars
 msgid "Reported {0} on {1}"
 msgstr "Reporterade {0} på {1}"
@@ -1572,7 +1576,7 @@ msgstr "Gå med"
 msgid "This is your currently displayed faction."
 msgstr "Det här är ditt nuvarande visad grupp."
 
-#.  eg "Pixelers (members: 100, ID: 1)" 
+#. eg "Pixelers (members: 100, ID: 1)"
 #: /views/profile.handlebars
 msgid "{0} (members: {1}, ID: {2})"
 msgstr "{0} (medlemmar: {1}, ID: {2})"
@@ -1581,12 +1585,12 @@ msgstr "{0} (medlemmar: {1}, ID: {2})"
 msgid "Owner: {0}"
 msgstr "Ägare: {0}"
 
-#.  makes the faction no longer the one displayed for the current user 
+#. makes the faction no longer the one displayed for the current user
 #: /views/profile.handlebars
 msgid "Remove Displayed"
 msgstr "Ta Bort Visad Grupp"
 
-#.  makes the faction the one displayed for the current user 
+#. makes the faction the one displayed for the current user
 #: /views/profile.handlebars
 msgid "Set Displayed"
 msgstr "Sätt Visad Grupp"
@@ -1651,13 +1655,13 @@ msgstr "Stäng"
 msgid "Faction Members"
 msgstr "Grupp Medlemmar"
 
-#.  This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list. 
-#.  since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list 
+#. This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list.
+#. since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list
 #: /views/profile.handlebars
 msgid "Transfer Ownership"
 msgstr "Överför Ägande"
 
-#.  bans a user from the faction 
+#. bans a user from the faction
 #: /views/profile.handlebars /public/include/chat.js
 msgid "Ban"
 msgstr "Bannlysning"
@@ -2391,8 +2395,12 @@ msgid "Couldn\\'t change discord name: "
 msgstr "Kan inte ändra discord namn: "
 
 #: /public/include/user.js
-msgid "Sign in with..."
-msgstr "Logga in med..."
+msgid "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
+msgstr "Genom att du loggar in eller registrerar dig, så godkänner du <a href=\"{0}\">användarvillkoren</a> och <a href=\"{1}\">integritetspolicyn</a>"
+
+#: /public/include/user.js
+msgid "Sign in with {0}"
+msgstr "Logga in med {0}"
 
 #: /public/include/user.js
 msgid "New Accounts Disabled"
@@ -2465,3 +2473,6 @@ msgstr "Klicka här för att fortsätta."
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Alert"
+
+#~ msgid "You are not signed in.&nbsp;<a href=\"#\">Sign in with...</a>"
+#~ msgstr "Du är inte inloggad. &nbsp;<a href=\"#\">Logga in med...</a>"

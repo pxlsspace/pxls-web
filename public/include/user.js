@@ -18,6 +18,8 @@ const user = (function() {
       userInfo: $('#user-info'),
       pixelCounts: $('#pixel-counts'),
       loginOverlay: $('#login-overlay'),
+      signInWith: $('#sign-in-with'),
+      legal: $('#legal'),
       userMessage: $('#user-message'),
       prompt: $('#prompt'),
       signup: $('#signup')
@@ -67,7 +69,30 @@ const user = (function() {
       return self.loggedIn;
     },
     webinit: function(data) {
-      self.elements.loginOverlay.find('a').click(function(evt) {
+      if (data.legal.termsUrl) {
+        self.elements.legal.html(__('By logging in or registering, you agree to the <a href="{0}" target="_blank">terms of use</a> and <a href="{1}" target="_blank">privacy policy</a>.')
+          .replace('{0}', data.legal.termsUrl)
+          .replace('{1}', data.legal.privacyUrl));
+      }
+
+      const signInPromptLink = self.elements.signInWith.find('a');
+
+      const authServices = Object.values(data.authServices);
+      if (authServices.length === 1) {
+        const service = authServices[0];
+        signInPromptLink.text(__('Sign in with {0}').replace('{0}', service.name));
+        signInPromptLink.attr('href', `/signin/${service.id}?redirect=1`);
+        signInPromptLink.click(function(evt) {
+          if (window.open(`/signin/${service.id}?redirect=1`, '_blank')) {
+            evt.preventDefault();
+            return;
+          }
+          ls.set('auth_same_window', true);
+        });
+        return;
+      }
+
+      signInPromptLink.click(function(evt) {
         evt.preventDefault();
 
         const cancelButton = crel('button', { class: 'float-right text-button' }, __('Cancel'));
