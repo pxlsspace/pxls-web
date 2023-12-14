@@ -54,6 +54,11 @@ window.DEFAULT_SPECTRUM_OPTIONS = window.DEFAULT_SPECTRUM_OPTIONS || {
       time.innerText = (new Date(datetime)).toLocaleString();
     }
   }
+
+  // convert numbers to locally formatted numbers
+  for (const numberElem of document.querySelectorAll('.number')) {
+    numberElem.innerText = (new Intl.NumberFormat()).format(numberElem.innerText);
+  }
 })();
 
 async function initFactionSearch() {
