@@ -26,6 +26,7 @@ function copy() {
     'public/themes/**/*',
     'public/webfonts/**/*',
     'public/*.wav',
+    'public/favicon.ico',
     // TODO: minify profile
     'public/profile/**/*'], { base: 'public' })
     .pipe(dest('dist'));
