@@ -101,7 +101,7 @@
                         </tr>
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Faction'}}</th>
-                            {{#if displayedFaction}}
+                            {{#if (displayedFaction)}}
                             <td class="text-left">{{#with (displayedFaction)}}[{{tag}}] {{name}} (ID: {{id}}){{/with}}</td>
                             {{else}}
                             <td class="text-left text-muted">({{i18n 'None'}})</td>
