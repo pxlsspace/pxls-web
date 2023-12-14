@@ -62,7 +62,7 @@ app.use('/', async (req, res, next) => {
 
       helpers: handlebarsHelpers(poFile)
     });
-  } else if (/^\/profile(?:\/\w+)?$/.test(req.path)) {
+  } else if (/^\/profile(?:\/[\w-]+)?$/.test(req.path)) {
     let profileName = relativePath.split('/')[1] || '';
     if (profileName !== '') profileName = '?username=' + profileName;
     /** @type {Response} */
