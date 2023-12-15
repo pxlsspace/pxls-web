@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-15T03:24:16.115Z\n"
+"POT-Creation-Date: 2023-12-15T14:09:43.864Z\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -514,20 +514,28 @@ msgid "English"
 msgstr "English"
 
 #: /views/index.handlebars
+msgid "Bulgarian"
+msgstr "Bulgarian"
+
+#: /views/index.handlebars
 msgid "French"
 msgstr "French"
+
+#: /views/index.handlebars
+msgid "German"
+msgstr "German"
 
 #: /views/index.handlebars
 msgid "Russian"
 msgstr "Russian"
 
 #: /views/index.handlebars
-msgid "Bulgarian"
-msgstr "Bulgarian"
-
-#: /views/index.handlebars
 msgid "Swedish"
 msgstr "Swedish"
+
+#: /views/index.handlebars
+msgid "Toki Pona"
+msgstr "Toki Pona"
 
 #: /views/index.handlebars
 msgid "themes;look;stylesheets;visuals"

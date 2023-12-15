@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-15T13:57:07.865Z\n"
+"POT-Creation-Date: 2023-12-15T14:09:43.864Z\n"
 "PO-Revision-Date: 2023-12-09 17:04+0000\n"
 "Last-Translator: Mikarific <mikerific2@gmail.com>\n"
 "Language-Team: Toki Pona <https://weblate.pxls.space/projects/pxls-space/pxls-web/tok/>\n"
@@ -520,20 +520,28 @@ msgid "English"
 msgstr "toki Inli"
 
 #: /views/index.handlebars
+msgid "Bulgarian"
+msgstr "toki Pokasi"
+
+#: /views/index.handlebars
 msgid "French"
 msgstr "toki Kanse"
+
+#: /views/index.handlebars
+msgid "German"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "Russian"
 msgstr "toki Losi"
 
 #: /views/index.handlebars
-msgid "Bulgarian"
-msgstr "toki Pokasi"
-
-#: /views/index.handlebars
 msgid "Swedish"
 msgstr "toki Sensa"
+
+#: /views/index.handlebars
+msgid "Toki Pona"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "themes;look;stylesheets;visuals"
