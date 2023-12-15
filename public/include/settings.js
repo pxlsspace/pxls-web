@@ -475,6 +475,9 @@ module.exports.settings = (function() {
         },
         internal: {
           behavior: setting('chat.links.internal.behavior', SettingType.SELECT, 'ask')
+        },
+        external: {
+          skip: setting('chat.links.external.skip', SettingType.TOGGLE, false, $('#setting-chat-links-external-skip'))
         }
       },
       font: {

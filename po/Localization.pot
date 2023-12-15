@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-12T19:44:02.744Z\n"
+"POT-Creation-Date: 2023-12-15T03:24:32.805Z\n"
 "Language: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -787,6 +787,18 @@ msgstr ""
 
 #: /views/index.handlebars
 msgid "Default internal link action click:"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "link;url;behaviour;external;bypass;skip"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Skip external link popup"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Note: Has no effect if external link popups are disabled by the server."
 msgstr ""
 
 #: /views/index.handlebars
@@ -2059,6 +2071,26 @@ msgstr ""
 
 #: /public/include/chat.js
 msgid "Purged by ${purge.initiator} with reason: ${reason}"
+msgstr ""
+
+#: /public/include/chat.js
+msgid "External Link"
+msgstr ""
+
+#: /public/include/chat.js
+msgid "This link is taking you to the following website:"
+msgstr ""
+
+#: /public/include/chat.js
+msgid "The operators of this website have no responsibility or control over the contents hosted at {0}. Are you sure you want to go there?"
+msgstr ""
+
+#: /public/include/chat.js
+msgid "Note: You can disable this popup in settings."
+msgstr ""
+
+#: /public/include/chat.js
+msgid "Visit Site"
 msgstr ""
 
 #: /public/include/chat.js

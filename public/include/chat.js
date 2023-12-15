@@ -24,6 +24,7 @@ const chat = (function() {
     lastPingAudioTimestamp: 0,
     linkMinimumPixelCount: 0,
     sendLinkToStaff: false,
+    defaultExternalLinkPopup: false,
     last_opened_panel: ls.get('chat.last_opened_panel') >> 0,
     idLog: [],
     typeahead: {
@@ -127,7 +128,7 @@ const chat = (function() {
               const scale = parseFloat(getParam('scale'));
               return self._makeCoordinatesElement(url.toString(), coordsX, coordsY, isNaN(scale) ? 20 : scale, getParam('template'), getParam('title'));
             } else {
-              return crel('a', { href: node.url, target: '_blank' }, next());
+              return self._makeLinkElement(node.url);
             }
           };
 
@@ -791,6 +792,7 @@ const chat = (function() {
       self.setCharLimit(data.chatCharacterLimit);
       self.setLinkMinimumPixelCount(data.chatLinkMinimumPixelCount);
       self.setLinkSendToStaff(data.chatLinkSendToStaff);
+      self.setDefaultExternalLinkPopup(data.chatDefaultExternalLinkPopup);
       self.ratelimitMessage = data.chatRatelimitMessage;
       self.canvasBanRespected = data.chatRespectsCanvasBan;
       self._populateUsernameColor();
@@ -1120,6 +1122,9 @@ const chat = (function() {
     },
     setLinkSendToStaff(linkSendToStaff) {
       self.sendLinkToStaff = linkSendToStaff;
+    },
+    setDefaultExternalLinkPopup(defaultExternalLinkPopup) {
+      self.defaultExternalLinkPopup = defaultExternalLinkPopup;
     },
     isChatBanned: () => {
       return self.chatban.permanent || (self.chatban.banEnd - moment.now() > 0);
@@ -1561,6 +1566,62 @@ const chat = (function() {
     _markMessageShadowBanned: (elem) => {
       elem.classList.add('shadow-banned');
       elem.dataset.shadowBanned = 'true';
+    },
+    _makeLinkElement: (href) => {
+      function handleClick(e) {
+        if (e.shiftKey || e.ctrlKey || e.metaKey) {
+          // open the link in a new window / tab
+          return;
+        }
+
+        e.preventDefault();
+
+        const skipLinkCheck = !self.defaultExternalLinkPopup || settings.chat.links.external.skip.get();
+        if (skipLinkCheck) {
+          window.open(href, '_blank');
+        } else {
+          self._popLinkCheck(href).then(action => {
+            modal.closeAll();
+            if (action) {
+              window.open(href, '_blank');
+            }
+          });
+        }
+      }
+
+      return crel('a', {
+        class: 'link',
+        href,
+        onclick: handleClick
+      }, href);
+    },
+    _popLinkCheck: (href) => {
+      return new Promise((resolve, reject) => {
+        const bodyWrapper = crel('div');
+        const url = new URL(href);
+        const baseDomain = url.hostname.replace(/^www\./, '');
+
+        modal.show(modal.buildDom(
+          crel('h2', __('External Link')),
+          crel(bodyWrapper,
+            { style: 'display: flex; flex-direction: column; gap: .75em; max-width: 35em;' },
+            crel('span', __('This link is taking you to the following website:')),
+            crel('code', { class: 'text-orange', style: 'overflow-wrap: break-word; word-wrap: break-word;' }, href),
+            crel('span', __('The operators of this website have no responsibility or control over the contents hosted at {0}. Are you sure you want to go there?').replace('{0}', baseDomain)),
+            crel('span', { class: 'text-muted' }, __('Note: You can disable this popup in settings.'))
+          ),
+          [
+            [__('Cancel'), () => resolve(false)],
+            [__('Visit Site'), () => resolve(true)]
+          ].map(x =>
+            crel('button', {
+              class: 'text-button',
+              style: 'margin-left: 3px; margin-bottom: 1em; position: initial !important; bottom: initial !important; right: initial !important;',
+              onclick: x[1]
+            }, x[0])
+          )
+        ));
+      });
     },
     _makeCoordinatesElement: (raw, x, y, scale, template, title) => {
       let text = `(${x}, ${y}${scale != null ? `, ${scale}x` : ''})`;
