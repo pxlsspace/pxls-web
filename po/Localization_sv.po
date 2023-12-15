@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
 "POT-Creation-Date: 2023-12-07T03:58:47.363Z\n"
-"PO-Revision-Date: 2023-12-10 11:35+0000\n"
-"Last-Translator: Temriel <firedudd@gmail.com>\n"
+"PO-Revision-Date: 2023-12-15 08:20+0000\n"
+"Last-Translator: Weblate Admin <thiscamefrom@pxls.space>\n"
 "Language-Team: Swedish <https://weblate.pxls.space/projects/pxls-space/"
 "pxls-web/sv/>\n"
 "Language: sv\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.2.1\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #: /views/error.handlebars /views/profile.handlebars /public/include/user.js
 msgid "My Profile"
@@ -1883,12 +1883,10 @@ msgid "Ban (24h)"
 msgstr "Bannlyss (24h)"
 
 #: /public/admin/admin.js
-#, fuzzy
 msgid "Permaban"
 msgstr "Permabannlys"
 
 #: /public/admin/admin.js
-#, fuzzy
 msgid "Shadowban"
 msgstr "Shadowban"
 
@@ -1924,7 +1922,6 @@ msgid "Ignore cooldown"
 msgstr "Ignorera väntetid"
 
 #: /public/admin/admin.js
-#, fuzzy
 msgid "Place any color"
 msgstr "Placera valfri färg"
 
@@ -1933,12 +1930,10 @@ msgid "Ignore placemap"
 msgstr "Ignorera placeringskarta"
 
 #: /public/admin/admin.js
-#, fuzzy
 msgid "Ban user (24h)"
 msgstr "Bannlys användare (24h)"
 
 #: /public/admin/admin.js
-#, fuzzy
 msgid "Unban user"
 msgstr "Ta bort bannlysning på användare"
 
@@ -2181,7 +2176,6 @@ msgid "Purging all messages is disabled during snip mode"
 msgstr "Rensning av alla meddelanden är avaktiverat under -snip- läge"
 
 #: /public/include/chat.js
-#, fuzzy
 msgid "Silent (no purge message)"
 msgstr "Tyst (inget rensnings meddelande)"
 
