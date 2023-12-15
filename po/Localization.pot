@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-15T03:24:32.805Z\n"
+"POT-Creation-Date: 2023-12-15T08:41:45.152Z\n"
 "Language: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -555,6 +555,10 @@ msgstr ""
 
 #: /views/index.handlebars
 msgid "Swedish"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Missing a language? <a href=\"https://weblate.pxls.space/engage/pxls-space/\" target=\"_blank\">Get involved.</a>"
 msgstr ""
 
 #: /views/index.handlebars
