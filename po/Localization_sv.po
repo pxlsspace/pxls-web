@@ -2727,7 +2727,7 @@ msgid ""
 msgstr ""
 "Genom att du loggar in eller registrerar dig, så godkänner du <a "
 "href=\"{0}\" target=\"_blank\">användarvillkoren</a> och <a href=\"{1}\" "
-"target=\"_blank\">>integritetspolicyn</a>."
+"target=\"_blank\">integritetspolicyn</a>."
 
 #: /public/include/user.js
 msgid "Sign in with {0}"
