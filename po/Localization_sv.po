@@ -1,16 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-07T03:58:47.363Z\n"
-"PO-Revision-Date: 2023-12-10 11:35+0000\n"
-"Last-Translator: Temriel <firedudd@gmail.com>\n"
-"Language-Team: Swedish <https://weblate.pxls.space/projects/pxls-space/"
-"pxls-web/sv/>\n"
+"POT-Creation-Date: 2023-12-15T14:09:43.864Z\n"
+"PO-Revision-Date: 2023-12-15 08:20+0000\n"
+"Last-Translator: Weblate Admin <thiscamefrom@pxls.space>\n"
+"Language-Team: Swedish <https://weblate.pxls.space/projects/pxls-space/pxls-web/sv/>\n"
 "Language: sv\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.2.1\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #: /views/error.handlebars /views/profile.handlebars /public/include/user.js
 msgid "My Profile"
@@ -521,20 +520,28 @@ msgid "English"
 msgstr "Engelska"
 
 #: /views/index.handlebars
+msgid "Bulgarian"
+msgstr "Bulgariska"
+
+#: /views/index.handlebars
 msgid "French"
 msgstr "Franska"
+
+#: /views/index.handlebars
+msgid "German"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "Russian"
 msgstr "Ryska"
 
 #: /views/index.handlebars
-msgid "Bulgarian"
-msgstr "Bulgariska"
-
-#: /views/index.handlebars
 msgid "Swedish"
 msgstr "Svenska"
+
+#: /views/index.handlebars
+msgid "Toki Pona"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "themes;look;stylesheets;visuals"
@@ -1210,11 +1217,7 @@ msgstr "Hur kan jag vädja en banlyselse?"
 
 #: /views/partials/faq.handlebars
 msgid "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
-msgstr ""
-"Kontakta oss på <a href=\"https://pxls.space/discord\" target=\"_blank\""
-">Discord</a> eller skicka in en vädjandesbegära till vår <a href=\"https"
-"://pxls.space/appeal\" target=\"_blank\">Google form</a> efter du har läst "
-"sidans regler i info panelen."
+msgstr "Kontakta oss på <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> eller skicka in en vädjandesbegära till vår <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> efter du har läst sidans regler i info panelen."
 
 #: /views/partials/faq.handlebars
 msgid "How do I make a template?"
@@ -1354,9 +1357,7 @@ msgstr "Inga auto-placerande verktyg av något slag, du måste placera alla pixl
 
 #: /views/partials/info.handlebars
 msgid "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
-msgstr ""
-"Missbruka inte hemsidans fuctioner, som reportrar eller användar-"
-"uppslagningar. (t.ex. automatiskt reportering/nvändar-uppslagningar, etc.)"
+msgstr "Missbruka inte hemsidans fuctioner, som reportrar eller användar-uppslagningar. (t.ex. automatiskt reportering/nvändar-uppslagningar, etc.)"
 
 #: /views/partials/info.handlebars
 msgid "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
@@ -1404,9 +1405,7 @@ msgstr "Inga \"copy pasta\"s"
 
 #: /views/partials/info.handlebars
 msgid "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
-msgstr ""
-"Inga länkar till sidor som aktivt bryter mot kanvas eller chatt regler ("
-"t.ex. porr sidor)"
+msgstr "Inga länkar till sidor som aktivt bryter mot kanvas eller chatt regler (t.ex. porr sidor)"
 
 #: /views/partials/info.handlebars
 msgid "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
@@ -1883,12 +1882,10 @@ msgid "Ban (24h)"
 msgstr "Bannlyss (24h)"
 
 #: /public/admin/admin.js
-#, fuzzy
 msgid "Permaban"
 msgstr "Permabannlys"
 
 #: /public/admin/admin.js
-#, fuzzy
 msgid "Shadowban"
 msgstr "Shadowban"
 
@@ -1924,7 +1921,6 @@ msgid "Ignore cooldown"
 msgstr "Ignorera väntetid"
 
 #: /public/admin/admin.js
-#, fuzzy
 msgid "Place any color"
 msgstr "Placera valfri färg"
 
@@ -1933,12 +1929,10 @@ msgid "Ignore placemap"
 msgstr "Ignorera placeringskarta"
 
 #: /public/admin/admin.js
-#, fuzzy
 msgid "Ban user (24h)"
 msgstr "Bannlys användare (24h)"
 
 #: /public/admin/admin.js
-#, fuzzy
 msgid "Unban user"
 msgstr "Ta bort bannlysning på användare"
 
@@ -2181,7 +2175,6 @@ msgid "Purging all messages is disabled during snip mode"
 msgstr "Rensning av alla meddelanden är avaktiverat under -snip- läge"
 
 #: /public/include/chat.js
-#, fuzzy
 msgid "Silent (no purge message)"
 msgstr "Tyst (inget rensnings meddelande)"
 
