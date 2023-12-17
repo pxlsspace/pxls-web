@@ -38,7 +38,7 @@ exports.listFiles = listFiles;
 function i18n(str, poFile, args) {
   const item = poFile.items.find(i => i.msgid === str);
   if (!item) {
-    console.warn(`No translation found for "${str}"`);
+    console.warn(`${poFile.headers.Language}: No translation found for "${str}"`);
   }
   str = (item && item.msgstr[0]) || str;
   for (let i = 0; i < args.length; i++) {
