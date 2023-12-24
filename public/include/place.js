@@ -45,7 +45,7 @@ module.exports.place = (function() {
 
       self.color = newColorIdx;
       ls.set('color', newColorIdx);
-      $('.palette-color').removeClass('active');
+      $('.palette-button').removeClass('active');
 
       $('body').toggleClass('show-placeable-bubble', newColorIdx === -1);
       if (newColorIdx === -1) {
@@ -66,14 +66,14 @@ module.exports.place = (function() {
         .css('background-color', isOnPalette ? `#${self.palette[newColorIdx].value}` : (isTransparent ? 'var(--general-background)' : null))
       );
       if (newColorIdx !== -1) {
-        $($('.palette-color[data-idx=' + newColorIdx + '],.palette-color[data-idx=-1]')).addClass('active'); // Select both the new color AND the deselect button. Signifies more that it's a deselect button rather than a "delete pixel" button
+        $($('.palette-button[data-idx=' + newColorIdx + '],.palette-button[data-idx=-1]')).addClass('active'); // Select both the new color AND the deselect button. Signifies more that it's a deselect button rather than a "delete pixel" button
         try {
-          $(`.palette-color[data-idx="${newColorIdx}"]`)[0].scrollIntoView({
+          $(`.palette-button[data-idx="${newColorIdx}"]`)[0].scrollIntoView({
             block: 'nearest',
             inline: 'nearest'
           });
         } catch (e) {
-          $(`.palette-color[data-idx="${newColorIdx}"]`)[0].scrollIntoView(false);
+          $(`.palette-button[data-idx="${newColorIdx}"]`)[0].scrollIntoView(false);
         }
       }
     },
@@ -148,17 +148,18 @@ module.exports.place = (function() {
     },
     setPalette: function(palette) {
       self.palette = palette;
-      self.elements.palette.find('.palette-color').remove().end().append(
+      self.elements.palette.find('.palette-button').remove().end().append(
         $.map(self.palette, function(color, idx) {
           return $('<button>')
             .attr('title', color.name)
             .attr('type', 'button')
             .attr('data-idx', idx)
-            .addClass('palette-color')
+            .addClass('palette-button')
             .addClass('ontouchstart' in window ? 'touch' : 'no-touch')
-            .css('background-color', `#${color.value}`)
             .append(
-              $('<span>').addClass('palette-number').text(idx)
+              $('<div>').addClass('palette-color')
+                .css('background-color', `#${color.value}`)
+                .append($('<span>').addClass('palette-number').text(idx))
             )
             .click(function() {
               self.switch(idx);
@@ -169,8 +170,9 @@ module.exports.place = (function() {
         $('<button>')
           .attr('type', 'button')
           .attr('data-idx', 0xFF)
-          .addClass('palette-color palette-color-special checkerboard-background pixelate')
+          .addClass('palette-button palette-button-special')
           .addClass('ontouchstart' in window ? 'touch' : 'no-touch')
+          .append($('<div>').addClass('palette-color checkerboard-background pixelate'))
           .hide()
           .click(function() {
             self.switch(0xFF);
@@ -180,7 +182,7 @@ module.exports.place = (function() {
         $('<button>')
           .attr('type', 'button')
           .attr('data-idx', -1)
-          .addClass('palette-color no-border deselect-button')
+          .addClass('palette-button no-border deselect-button')
           .addClass('ontouchstart' in window ? 'touch' : 'no-touch').css('background-color', 'transparent')
           .append(
             crel('i', { class: 'fas fa-times' })
@@ -191,7 +193,7 @@ module.exports.place = (function() {
       );
     },
     togglePaletteSpecialColors: (show) => {
-      self.elements.palette.find('.palette-color.palette-color-special').toggle(show);
+      self.elements.palette.find('.palette-button.palette-button-special').toggle(show);
     },
     can_undo: false,
     undo: function(evt) {
