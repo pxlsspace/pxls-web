@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-15T14:09:43.864Z\n"
+"POT-Creation-Date: 2023-12-31T21:19:19.842Z\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -1414,20 +1414,28 @@ msgid "Links"
 msgstr "Ссылки"
 
 #: /views/partials/info.handlebars
-msgid "Discord (main hub)"
-msgstr "Discord (основной)"
+msgid "Terms of Service"
+msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "Subreddit"
-msgstr "Subreddit"
+msgid "Privacy Policy"
+msgstr ""
+
+#: /views/partials/info.handlebars
+msgid "Discord (main hub)"
+msgstr "Discord (основной)"
 
 #: /views/partials/info.handlebars
 msgid "Twitter"
 msgstr "Twitter"
 
 #: /views/partials/info.handlebars
-msgid "GitHub"
-msgstr "GitHub"
+msgid "GitHub (back end)"
+msgstr ""
+
+#: /views/partials/info.handlebars
+msgid "GitHub (front end)"
+msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "Single-player mode"
@@ -1440,6 +1448,10 @@ msgstr "Статистика"
 #: /views/partials/info.handlebars
 msgid "Profile (user info, factions, etc.)"
 msgstr "Профиль (информация пользователя, фракции, и т.д.)"
+
+#: /views/partials/info.handlebars
+msgid "Wiki"
+msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "Generator, progress checker, and monitor for Pxls templates"
@@ -2507,3 +2519,9 @@ msgstr ""
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Предупреждение"
+
+#~ msgid "Subreddit"
+#~ msgstr "Subreddit"
+
+#~ msgid "GitHub"
+#~ msgstr "GitHub"

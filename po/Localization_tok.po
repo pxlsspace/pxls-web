@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-15T14:09:43.864Z\n"
+"POT-Creation-Date: 2023-12-31T21:19:19.842Z\n"
 "PO-Revision-Date: 2023-12-09 17:04+0000\n"
 "Last-Translator: Mikarific <mikerific2@gmail.com>\n"
 "Language-Team: Toki Pona <https://weblate.pxls.space/projects/pxls-space/pxls-web/tok/>\n"
@@ -1421,11 +1421,15 @@ msgid "Links"
 msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "Discord (main hub)"
+msgid "Terms of Service"
 msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "Subreddit"
+msgid "Privacy Policy"
+msgstr ""
+
+#: /views/partials/info.handlebars
+msgid "Discord (main hub)"
 msgstr ""
 
 #: /views/partials/info.handlebars
@@ -1433,7 +1437,11 @@ msgid "Twitter"
 msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "GitHub"
+msgid "GitHub (back end)"
+msgstr ""
+
+#: /views/partials/info.handlebars
+msgid "GitHub (front end)"
 msgstr ""
 
 #: /views/partials/info.handlebars
@@ -1446,6 +1454,10 @@ msgstr ""
 
 #: /views/partials/info.handlebars
 msgid "Profile (user info, factions, etc.)"
+msgstr ""
+
+#: /views/partials/info.handlebars
+msgid "Wiki"
 msgstr ""
 
 #: /views/partials/info.handlebars
