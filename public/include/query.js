@@ -130,7 +130,20 @@ module.exports.query = (function() {
     },
     update: function() {
       const s = self.getStr();
-      if (location.replace) {
+
+      // NOTE ([  ]): This function fires a url update event, causing the
+      // template to update itself if it was changed. This is *bad* because it
+      // is a queued update while hotkey actions bypass the queued delay for
+      // responsiveness. This means that when a template is toggled on, it
+      // will be toggled on *again* by this call 200ms later. If in that
+      // window the template is turned off, this will not fire a queued update
+      // and so the old queued update turns it back on without interaction.
+      //
+      // TL;DR: This doesn't work but I'm leaving to code here to explain *why.*
+      // A proper fix probably involves fixing this entire mess of:
+      // input, to url, to event, to url, to display, etc.
+      const locationReplaceDisabled = true;
+      if (location.replace && !locationReplaceDisabled) {
         // NOTE ([  ]): this seems to not push to the back button or history UI,
         // *but not on Firefox* at time of writing.
         location.replace('#' + s);

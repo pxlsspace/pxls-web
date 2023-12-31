@@ -400,6 +400,33 @@ module.exports.template = (function() {
 
       self.updateSettings();
 
+      let VKeyPressed = false;
+      // `e` is a key event.
+      // True if v key is the focus of the event.
+      const testForV = (e) => e.key === 'v' || e.key === 'KeyV' || e.key === 'V' || e.which === 86;
+
+      $(window).keydown(function(e) {
+        if (['INPUT', 'TEXTAREA'].includes(e.target.nodeName)) {
+          // prevent inputs from triggering shortcuts
+          return;
+        }
+
+        if (testForV(e)) {
+          if (VKeyPressed) {
+            return;
+          }
+          VKeyPressed = true;
+
+          self._update({ use: !self.options.use });
+        }
+      });
+
+      $(window).keyup(function(e) {
+        if (testForV(e)) {
+          VKeyPressed = false;
+        }
+      });
+
       $(window).keydown(function(evt) {
         if (['INPUT', 'TEXTAREA'].includes(evt.target.nodeName)) {
           // prevent inputs from triggering shortcuts
@@ -432,14 +459,6 @@ module.exports.template = (function() {
           case 34:
             newOpacity = Math.max(0, self.options.opacity - 0.1);
             settings.board.template.opacity.set(newOpacity);
-            break;
-          case 'KeyV':
-          case 86:
-          case 'v':
-          case 'V':
-            self._update({
-              use: !self.options.use
-            });
             break;
         }
       }).on('keyup blur', self.stopDragging);
