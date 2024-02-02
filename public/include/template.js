@@ -467,21 +467,28 @@ module.exports.template = (function() {
         x: 0,
         y: 0
       };
+
       self.elements.visibles.data(
         'dragging', false
       ).on('mousedown pointerdown', function(evt) {
-        evt.preventDefault();
-        $(this).data('dragging', true);
-        drag.x = evt.clientX;
-        drag.y = evt.clientY;
-        evt.stopPropagation();
-      }).on('mouseup pointerup', function(evt) {
-        evt.preventDefault();
-        $(this).data('dragging', false);
-        evt.stopPropagation();
+        if (evt.ctrlKey || evt.altKey) {
+          evt.preventDefault();
+          $(self.elements.visibles).data('dragging', true);
+          drag.x = evt.clientX;
+          drag.y = evt.clientY;
+          evt.stopPropagation();
+        }
+      });
+
+      $(document).on('mouseup pointerup', function(evt) {
+        if ($(self.elements.visibles).data('dragging')) {
+          evt.preventDefault();
+          $(self.elements.visibles).data('dragging', false);
+          evt.stopPropagation();
+        }
       }).on('mousemove pointermove', function(evt) {
-        evt.preventDefault();
-        if ($(this).data('dragging')) {
+        if ($(self.elements.visibles).data('dragging')) {
+          evt.preventDefault();
           if (!evt.ctrlKey && !evt.altKey) {
             self.stopDragging();
             return;
@@ -541,6 +548,9 @@ module.exports.template = (function() {
       if (self.options.use) {
         self.elements.visibles.css('pointer-events', 'none').data('dragging', false);
       }
+    },
+    isDragging: function() {
+      $(self.elements.visibles).data('dragging');
     },
     setPixelated: function(pixelate = true) {
       self.elements.visibles.toggleClass('pixelate', pixelate);
