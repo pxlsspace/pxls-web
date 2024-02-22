@@ -871,6 +871,19 @@ dt {
     background-color: #888;
 }
 
+.palette-button {
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+    /* the default of `baseline` causes the deselect button to be raised on Firefox */
+    vertical-align: top;
+}
+
+.palette-button:first-child {
+    margin-left: 10px;
+}
+
 .palette-color {
     display: inline-block;
     position: relative;
@@ -879,28 +892,20 @@ dt {
     min-height: 32px;
     border: 2px solid var(--palette-item-border-color);
     border-radius: 3px;
-    margin: 5px;
-    cursor: pointer;
     bottom: 0;
-    /* the default of `baseline` causes the deselect button to be raised on Firefox */
-    vertical-align: top;
 }
 
-.palette-color:first-child {
-    margin-left: 10px;
-}
-
-.palette-color.active,
-.palette-color.no-touch:hover {
+.palette-button.active > .palette-color,
+.palette-button.no-touch:hover > .palette-color {
     bottom: 7px;
 }
 
-.palette-color.deselect-button {
+.palette-button.deselect-button {
     font-size: 1.75rem;
     color: var(--palette-deselect-button-color);
 }
 
-.palette-color.deselect-button.active {
+.palette-button.deselect-button.active {
     bottom: 11px;
 }
 
