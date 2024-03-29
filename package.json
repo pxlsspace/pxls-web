@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "cookie-parser": "^1.4.6",
-    "express": "^4.18.2",
+    "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
     "http-proxy-middleware": "^2.0.6",
     "json5": "^2.2.3",
