@@ -28,7 +28,7 @@ function copy() {
     'public/*.wav',
     'public/favicon.ico',
     // TODO: minify profile
-    'public/profile/**/*'], { base: 'public' })
+    'public/profile/**/*'], { base: 'public', encoding: false })
     .pipe(dest('dist'));
 }
 
