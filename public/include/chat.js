@@ -27,6 +27,7 @@ const chat = (function() {
     defaultExternalLinkPopup: false,
     last_opened_panel: ls.get('chat.last_opened_panel') >> 0,
     idLog: [],
+    emoteSet7TV: {},
     typeahead: {
       helper: null,
       suggesting: false,
@@ -101,7 +102,7 @@ const chat = (function() {
         pretty: __('Jump to coordinates without replacing template')
       }
     },
-    init: () => {
+    init: async () => {
       uiHelper = require('./uiHelper').uiHelper;
       user = require('./user').user;
       place = require('./place').place;
@@ -159,27 +160,6 @@ const chat = (function() {
       });
       socket.on('faction_update', e => self._updateFaction(e.faction));
       socket.on('faction_clear', e => self._clearFaction(e.fid));
-      socket.on('chat_history', e => {
-        if (self.seenHistory) return;
-        for (const packet of e.messages.reverse()) {
-          self._process(packet, true);
-        }
-        const last = self.elements.body.find('li[data-id]').last()[0];
-        if (last) {
-          self._doScroll(last);
-          if (last.dataset.id && last.dataset.id > ls.get('chat-last_seen_id')) {
-            if (settings.ui.chat.icon.badge.get() === 'message') {
-              self.elements.panel_trigger.addClass('has-ping');
-            }
-            if (settings.ui.chat.icon.color.get() === 'message') {
-              self.elements.message_icon.addClass('has-notification');
-            }
-          }
-        }
-        self.seenHistory = true;
-        self.addServerAction('History loaded at ' + moment().format('MMM Do YYYY, hh:mm:ss A'));
-        setTimeout(() => socket.send({ type: 'ChatbanState' }), 0);
-      });
       socket.on('chat_message', e => {
         self._process(e.message);
         const isChatOpen = panels.isOpen('chat');
@@ -788,7 +768,7 @@ const chat = (function() {
         self.elements.emoji_button.hide();
       }
     },
-    webinit(data) {
+    async webinit(data) {
       self.setCharLimit(data.chatCharacterLimit);
       self.setLinkMinimumPixelCount(data.chatLinkMinimumPixelCount);
       self.setLinkSendToStaff(data.chatLinkSendToStaff);
@@ -828,9 +808,21 @@ const chat = (function() {
       });
 
       if (data.chatEnabled) {
-        self.customEmoji = data.customEmoji.map(({ name, emoji }) => ({ name, emoji: `./emoji/${emoji}` }));
+        let emotes7TV = [];
+        if (data.emoteSet7TV) {
+          await self.init7TV(data.emoteSet7TV);
+          emotes7TV = (self.emoteSet7TV.emotes || []).map(emote => {
+            const emoteUrl = 'https:' + emote.data.host.url + '/2x.webp?t_' + new Date().getTime();
+            return { name: emote.name, emoji: emoteUrl };
+          });
+        }
+        self.customEmoji = [
+          ...data.customEmoji.map(({ name, emoji }) => ({ name, emoji: `./emoji/${emoji}` })),
+          ...emotes7TV
+        ];
         self.initEmojiPicker();
         self.initTypeahead();
+        await self.loadHistory();
       } else {
         self.disable();
       }
@@ -1046,6 +1038,38 @@ const chat = (function() {
         clone.appendChild(elem.firstChild);
       }
       elem.replaceWith(clone);
+    },
+    init7TV: async (emoteSetId) => {
+      try {
+        const res = await fetch('https://7tv.io/v3/emote-sets/' + emoteSetId);
+        self.emoteSet7TV = await res.json();
+      } catch (err) {
+        console.error('Failed to fetch 7TV emote set', emoteSetId);
+        console.error(err);
+      }
+    },
+    loadHistory: async () => {
+      const res = await fetch('chat/history');
+      const history = await res.json();
+      if (self.seenHistory) return;
+      for (const packet of history.reverse()) {
+        self._process(packet, true);
+      }
+      const last = self.elements.body.find('li[data-id]').last()[0];
+      if (last) {
+        self._doScroll(last);
+        if (last.dataset.id && last.dataset.id > ls.get('chat-last_seen_id')) {
+          if (settings.ui.chat.icon.badge.get() === 'message') {
+            self.elements.panel_trigger.addClass('has-ping');
+          }
+          if (settings.ui.chat.icon.color.get() === 'message') {
+            self.elements.message_icon.addClass('has-notification');
+          }
+        }
+      }
+      self.seenHistory = true;
+      self.addServerAction('History loaded at ' + moment().format('MMM Do YYYY, hh:mm:ss A'));
+      setTimeout(() => socket.send({ type: 'ChatbanState' }), 0);
     },
     reloadIgnores: () => { self.ignored = (ls.get('chat.ignored') || '').split(','); },
     saveIgnores: () => ls.set('chat.ignored', (self.ignored || []).join(',')),
