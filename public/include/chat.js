@@ -833,7 +833,7 @@ const chat = (function() {
         if (data.emoteSet7TV) {
           await self.init7TV(data.emoteSet7TV);
           emotes7TV = (self.emoteSet7TV.emotes || []).map(emote => {
-            const emoteUrl = 'https:' + emote.data.host.url + '/2x.webp';
+            const emoteUrl = 'https:' + emote.data.host.url + '/2x.webp?t_' + new Date().getTime();
             return { name: emote.name, emoji: emoteUrl };
           });
         }
