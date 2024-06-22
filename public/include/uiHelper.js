@@ -805,13 +805,6 @@ const uiHelper = (function() {
      */
     handleFileUrl(url) {
       template.update({ use: true, url, convertMode: 'nearestCustom' });
-    },
-    /**
-     * Returns a cache-busting string based on the current timestamp.
-     * @returns {string}
-     */
-    cacheBuster() {
-      return '?_' + new Date().getTime();
     }
   };
 
@@ -859,8 +852,7 @@ const uiHelper = (function() {
         : ls.get('tabs.has-focus') === self.tabId;
     },
     prettifyRange: self.prettifyRange,
-    handleFile: self.handleFile,
-    cacheBuster: self.cacheBuster
+    handleFile: self.handleFile
   };
 })();
 

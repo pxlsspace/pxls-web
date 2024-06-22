@@ -1040,7 +1040,7 @@ const chat = (function() {
     },
     init7TV: async (emoteSetId) => {
       try {
-        const res = await fetch('https://7tv.io/v3/emote-sets/' + emoteSetId + uiHelper.cacheBuster());
+        const res = await fetch('https://7tv.io/v3/emote-sets/' + emoteSetId, { cache: 'no-store' });
         self.emoteSet7TV = await res.json();
       } catch (err) {
         console.error('Failed to fetch 7TV emote set', emoteSetId);
@@ -1048,7 +1048,7 @@ const chat = (function() {
       }
     },
     loadHistory: async () => {
-      const res = await fetch('chat/history' + uiHelper.cacheBuster());
+      const res = await fetch('chat/history');
       const history = await res.json();
       if (self.seenHistory) return;
       for (const packet of history.reverse()) {

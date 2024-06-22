@@ -160,9 +160,9 @@ module.exports.overlays = (function() {
       }
 
       // we use xhr directly because of jquery being weird on raw binary
-      const fetchVirginmap = LazyPromise.wrap(() => binaryAjax('/virginmap?_' + (new Date()).getTime()));
-      const fetchHeatmap = LazyPromise.wrap(() => binaryAjax('/heatmap?_' + (new Date()).getTime()));
-      const fetchPlacemap = LazyPromise.wrap(() => binaryAjax('/placemap?_' + (new Date()).getTime()));
+      const fetchVirginmap = LazyPromise.wrap(() => binaryAjax('/virginmap'));
+      const fetchHeatmap = LazyPromise.wrap(() => binaryAjax('/heatmap'));
+      const fetchPlacemap = LazyPromise.wrap(() => binaryAjax('/placemap'));
 
       // virginmap stuff
       const virginbackground = self.add('virginbackground', () => createOverlayImageData(fetchVirginmap, fetchPlacemap, 0x0000FF00, 0x00));
