@@ -163,11 +163,12 @@ const chat = (function() {
       socket.on('chat_message', e => {
         self._process(e.message);
         const isChatOpen = panels.isOpen('chat');
+        const authorIgnored = self.getIgnores().includes(e.message.author);
         if (!isChatOpen) {
-          if (settings.ui.chat.icon.badge.get() === 'message') {
+          if (settings.ui.chat.icon.badge.get() === 'message' && !authorIgnored) {
             self.elements.panel_trigger.addClass('has-ping');
           }
-          if (settings.ui.chat.icon.color.get() === 'message') {
+          if (settings.ui.chat.icon.color.get() === 'message' && !authorIgnored) {
             self.elements.message_icon.addClass('has-notification');
           }
         }
