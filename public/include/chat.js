@@ -425,8 +425,6 @@ const chat = (function() {
         }
       });
 
-      socket.send({ type: 'ChatHistory' });
-
       self.elements.rate_limit_overlay.hide();
 
       let allowSend = true;
