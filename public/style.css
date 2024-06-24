@@ -448,7 +448,7 @@ dt {
     background-image: linear-gradient(45deg, #5A0400, #990700, #D81515, #ff635e, #D81515, #990700, #5A0400);
 }
 .donator.donator--forest{
-    background-image: linear-gradient(45deg, #02250c, #042f18, #054523, #06592d, #076131);
+    background-image: linear-gradient(45deg, #02250c, #076131, #02250c);
 }
 
 .error {
