@@ -566,6 +566,10 @@ msgid "Toki Pona"
 msgstr ""
 
 #: /views/index.handlebars
+msgid "Missing a language? <a href=\"https://weblate.pxls.space/engage/pxls-space/\" target=\"_blank\">Get involved.</a>"
+msgstr ""
+
+#: /views/index.handlebars
 msgid "themes;look;stylesheets;visuals"
 msgstr ""
 
