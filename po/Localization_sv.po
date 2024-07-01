@@ -4,7 +4,8 @@ msgstr ""
 "POT-Creation-Date: 2023-12-31T21:19:19.842Z\n"
 "PO-Revision-Date: 2023-12-15 08:20+0000\n"
 "Last-Translator: Weblate Admin <thiscamefrom@pxls.space>\n"
-"Language-Team: Swedish <https://weblate.pxls.space/projects/pxls-space/pxls-web/sv/>\n"
+"Language-Team: Swedish <https://weblate.pxls.space/projects/pxls-space/pxls-"
+"web/sv/>\n"
 "Language: sv\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,8 +26,12 @@ msgid "Not Found"
 msgstr "Inte hittad"
 
 #: /views/error.handlebars
-msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
-msgstr "Innehållet du försökte nå kunde inte bli hittad vid denna URL. Om du tror att detta är ett fel, snälla kontakta en utvecklare av hemsidan."
+msgid ""
+"The content you requested could not be found at this URL. If you believe "
+"this is an error, please contact a developer."
+msgstr ""
+"Innehållet du försökte nå kunde inte bli hittad vid denna URL. Om du tror "
+"att detta är ett fel, snälla kontakta en utvecklare av hemsidan."
 
 #. links to the homepage (the app itself)
 #: /views/error.handlebars
@@ -39,8 +44,12 @@ msgid "Not Authenticated"
 msgstr "Inte Autentiserad"
 
 #: /views/error.handlebars
-msgid "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
-msgstr "Du måste vara inloggad för att kunna nå denna data. Snälla gå tillbaka till pxls och gå igenom autentiserings processen."
+msgid ""
+"You must be logged in to access this data. Please go back to pxls and go "
+"through the authentication process."
+msgstr ""
+"Du måste vara inloggad för att kunna nå denna data. Snälla gå tillbaka till "
+"pxls och gå igenom autentiserings processen."
 
 #. HTTP status code name
 #: /views/error.handlebars
@@ -48,8 +57,12 @@ msgid "Not Allowed"
 msgstr "Inte tillåten"
 
 #: /views/error.handlebars
-msgid "The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later."
-msgstr "Handlingen du försökte utföra är inte tillåten eller resulterade i ett fell. Snälla försäkra att du har tillgång till slutpunket och försök igen senare."
+msgid ""
+"The action you attempted to perform is not allowed or resulted in an error. "
+"Please ensure you have access to the endpoint and try again later."
+msgstr ""
+"Handlingen du försökte utföra är inte tillåten eller resulterade i ett fell. "
+"Snälla försäkra att du har tillgång till slutpunket och försök igen senare."
 
 #: /views/index.handlebars
 msgid "Place pixels with people to create art"
@@ -129,7 +142,7 @@ msgstr "Dra och släpp templatebilden"
 
 #: /views/index.handlebars
 msgid "Exit"
-msgstr "Utgång"
+msgstr "Avsluta"
 
 #: /views/index.handlebars /views/profile.handlebars
 msgid "Info"
@@ -209,7 +222,8 @@ msgstr "skrolla;zommning"
 
 #: /views/index.handlebars
 msgid "<kbd>+</kbd>/<kbd>-</kbd> or <kbd>Q</kbd>/<kbd>E</kbd> to zoom"
-msgstr "<kbd>+</kbd>/<kbd>-</kbd> eller <kbd>Q</kbd>/<kbd>E</kbd> för att zooma"
+msgstr ""
+"<kbd>+</kbd>/<kbd>-</kbd> eller <kbd>Q</kbd>/<kbd>E</kbd> för att zooma"
 
 #: /views/index.handlebars
 msgid "lookups"
@@ -228,8 +242,12 @@ msgid "<kbd>G</kbd> to toggle grid"
 msgstr "<kbd>G</kbd> för att växla rutnät"
 
 #: /views/index.handlebars
-msgid "close;information shown;information hidden;info shown;info hidden;hide information;show information"
-msgstr "stäng;information visad; information gömd; info visad; info gömd;göm information;visa information"
+msgid ""
+"close;information shown;information hidden;info shown;info hidden;hide "
+"information;show information"
+msgstr ""
+"stäng;information visad; information gömd; info visad; info gömd;göm "
+"information;visa information"
 
 #: /views/index.handlebars
 msgid "<kbd>I</kbd> to open info"
@@ -237,7 +255,9 @@ msgstr "<kbd>I</kbd> för att öppna info"
 
 #: /views/index.handlebars
 msgid "close;settings hidden;settings shown;hide settings;show settings"
-msgstr "stäng;inställningar gömda;inställningar visade;göm inställningar;visa inställningar"
+msgstr ""
+"stäng;inställningar gömda;inställningar visade;göm inställningar;visa "
+"inställningar"
 
 #: /views/index.handlebars
 msgid "<kbd>T</kbd> to open settings"
@@ -268,16 +288,24 @@ msgid "<kbd>P</kbd> to take a snapshot"
 msgstr "<kbd>P</kbd> för att ta en skärmbild"
 
 #: /views/index.handlebars
-msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
-msgstr "överlägg;användarsaktivitet;pixlar placerade;värmekarta gömd;värmekarta visad;göm värmekarta;visa värmekarta"
+msgid ""
+"overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;"
+"hide heatmap;show heatmap"
+msgstr ""
+"överlägg;användarsaktivitet;pixlar placerade;värmekarta gömd;värmekarta "
+"visad;göm värmekarta;visa värmekarta"
 
 #: /views/index.handlebars
 msgid "<kbd>H</kbd> to toggle heatmap"
 msgstr "<kbd>H</kbd> för att växla värmekartan"
 
 #: /views/index.handlebars
-msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
-msgstr "överlägg;användarsaktivitet;pixlar oplacerade pixlar;oskuldskartan gömd;oskuldskartan visad;göm oskuldskartan;visa oskuldskartan"
+msgid ""
+"overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap "
+"shown;hide virginmap;show virginmap"
+msgstr ""
+"överlägg;användarsaktivitet;pixlar oplacerade pixlar;oskuldskartan gömd;"
+"oskuldskartan visad;göm oskuldskartan;visa oskuldskartan"
 
 #: /views/index.handlebars
 msgid "<kbd>X</kbd> to toggle virginmap"
@@ -360,8 +388,12 @@ msgid "<kbd>V</kbd> to toggle visibility"
 msgstr "<kbd>V</kbd> för att växla synlighet"
 
 #: /views/index.handlebars
-msgid "Note: These values are based on QWERTY keyboards. For other layouts, use the keys corresponding to the same position on a QWERTY keyboard."
-msgstr "Notera: Dessa värden är baserade på QWERTY tangentbord. För andra layouter, använd tangenterna som har samma position på ett QWERTY tangentbord."
+msgid ""
+"Note: These values are based on QWERTY keyboards. For other layouts, use the "
+"keys corresponding to the same position on a QWERTY keyboard."
+msgstr ""
+"Notera: Dessa värden är baserade på QWERTY tangentbord. För andra layouter, "
+"använd tangenterna som har samma position på ett QWERTY tangentbord."
 
 #: /views/index.handlebars
 msgid "templates;overlays;guides"
@@ -372,16 +404,24 @@ msgid "templates;overlays;image;pixel art"
 msgstr "templater;överlägg;bilder;pixelkonst"
 
 #: /views/index.handlebars
-msgid "template enabled;template disabled;show template;hide template;template shown;template hidden"
-msgstr "template aktiverade;templater avstängda;visa template;göm template;template visad;template gömd"
+msgid ""
+"template enabled;template disabled;show template;hide template;template "
+"shown;template hidden"
+msgstr ""
+"template aktiverade;templater avstängda;visa template;göm template;template "
+"visad;template gömd"
 
 #: /views/index.handlebars
 msgid "Use template"
 msgstr "Använd template"
 
 #: /views/index.handlebars
-msgid "Hold down <kbd>Ctrl</kbd> (or <kbd>Option</kbd> on mac) to drag the template around"
-msgstr "Håll ner <kbd>Ctrl</kbd> (eller <kbd>Option</kbd> på en mac) för att dra runt templaten"
+msgid ""
+"Hold down <kbd>Ctrl</kbd> (or <kbd>Option</kbd> on mac) to drag the template "
+"around"
+msgstr ""
+"Håll ner <kbd>Ctrl</kbd> (eller <kbd>Option</kbd> på en mac) för att dra "
+"runt templaten"
 
 #: /views/index.handlebars
 msgid "template title;template name;tab name;tab title;title="
@@ -400,8 +440,12 @@ msgid "URL:"
 msgstr "URL:"
 
 #: /views/index.handlebars
-msgid "template position;template x;template y;template location; template vertical; template horizontal;ox=;oy="
-msgstr "template position;template x;template y;template position; template vertikal; template horisontell;ox=;oy="
+msgid ""
+"template position;template x;template y;template location; template "
+"vertical; template horizontal;ox=;oy="
+msgstr ""
+"template position;template x;template y;template position; template "
+"vertikal; template horisontell;ox=;oy="
 
 #: /views/index.handlebars
 msgid "Horizontal position:"
@@ -464,8 +508,10 @@ msgid "Custom…"
 msgstr "Anpassad…"
 
 #: /views/index.handlebars
-msgid "template style source;template style URL;custom style URL;custom template"
-msgstr "template stil ursprung;template stil URL;valfri stil URL;valfri template"
+msgid ""
+"template style source;template style URL;custom style URL;custom template"
+msgstr ""
+"template stil ursprung;template stil URL;valfri stil URL;valfri template"
 
 #: /views/index.handlebars
 msgid "Custom style URL:"
@@ -529,7 +575,7 @@ msgstr "Franska"
 
 #: /views/index.handlebars
 msgid "German"
-msgstr ""
+msgstr "Tyska"
 
 #: /views/index.handlebars
 msgid "Russian"
@@ -541,7 +587,7 @@ msgstr "Svenska"
 
 #: /views/index.handlebars
 msgid "Toki Pona"
-msgstr ""
+msgstr "Toki Pona"
 
 #: /views/index.handlebars
 msgid "themes;look;stylesheets;visuals"
@@ -556,8 +602,11 @@ msgid "Default"
 msgstr "Standard"
 
 #: /views/index.handlebars
-msgid "hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden"
-msgstr "göm hårkors;göm hårkors;hårkors visad hårkors visad;hårkors gömd;hårkors gömd"
+msgid ""
+"hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;"
+"reticle hidden"
+msgstr ""
+"göm hårkors;göm hårkors;hårkors visad hårkors visad;hårkors gömd;hårkors gömd"
 
 #: /views/index.handlebars
 msgid "Show reticule"
@@ -581,7 +630,8 @@ msgstr "Aktivera färgljusstyrka"
 
 #: /views/index.handlebars
 msgid "Warning: Known to cause fuzziness in Chrome on some Mac/Linux installs"
-msgstr "Warning: Känd att orsaka luddighet i Chrome på vissa Mac/Linux installeringar"
+msgstr ""
+"Warning: Känd att orsaka luddighet i Chrome på vissa Mac/Linux installeringar"
 
 #: /views/index.handlebars
 msgid "Color brightness:"
@@ -604,8 +654,12 @@ msgid "Enable scrolling on the palette to switch colors"
 msgstr "Aktivera scrollande på paletten för att växla mellan färgerna"
 
 #: /views/index.handlebars
-msgid "reverse scrolling;mousewheel;palette scrolling;enable scrolling on the palette to switch colors"
-msgstr "omvänd skrollning;mushjul;palett skrollande;aktivera skollning på färgpaletten för att byta färger"
+msgid ""
+"reverse scrolling;mousewheel;palette scrolling;enable scrolling on the "
+"palette to switch colors"
+msgstr ""
+"omvänd skrollning;mushjul;palett skrollande;aktivera skollning på "
+"färgpaletten för att byta färger"
 
 #: /views/index.handlebars
 msgid "Invert scroll direction"
@@ -777,15 +831,15 @@ msgstr "Standard intern länk vid åtgärd click:"
 
 #: /views/index.handlebars
 msgid "link;url;behaviour;external;bypass;skip"
-msgstr ""
+msgstr "länk;url;beteende;extern;sidoväg,skippa"
 
 #: /views/index.handlebars
 msgid "Skip external link popup"
-msgstr ""
+msgstr "Skippa extern länk popup"
 
 #: /views/index.handlebars
 msgid "Note: Has no effect if external link popups are disabled by the server."
-msgstr ""
+msgstr "Notera: Har ingen effekt om extern länk popups är avstängd av servern."
 
 #: /views/index.handlebars
 msgid "chat icon;chat notifications;chat ping"
@@ -956,7 +1010,8 @@ msgid "Zoom sensitivity:"
 msgstr "Zommkänsligheten:"
 
 #: /views/index.handlebars
-msgid "zooming limit;scrolling limit;mousewheel;zooming minimum;zooming maximum"
+msgid ""
+"zooming limit;scrolling limit;mousewheel;zooming minimum;zooming maximum"
 msgstr "zoomningsbegränsingen"
 
 #: /views/index.handlebars
@@ -981,7 +1036,9 @@ msgstr "kontroller,diverse"
 
 #: /views/index.handlebars
 msgid "Lock the canvas (disallow canvas drag/zoom with mouse/fingers)"
-msgstr "Lås kanvas vid plats (förbjuder kanvasen att förflytas/zommas ut med mus/fingrar)"
+msgstr ""
+"Lås kanvas vid plats (förbjuder kanvasen att förflytas/zommas ut med mus/"
+"fingrar)"
 
 #: /views/index.handlebars
 msgid "MMB picker;mouse picker;selection;palette picker"
@@ -1084,8 +1141,11 @@ msgid "Pixel Ready Notification"
 msgstr "Pixel Redo Notification"
 
 #: /views/index.handlebars
-msgid "alert source;notify url;notify source;notification url;notification source"
-msgstr "larma källa;notifiera url;notifiera källa;notifications url;notifications källa"
+msgid ""
+"alert source;notify url;notify source;notification url;notification source"
+msgstr ""
+"larma källa;notifiera url;notifiera källa;notifications url;notifications "
+"källa"
 
 #: /views/index.handlebars
 msgid "Alert URL:"
@@ -1108,8 +1168,11 @@ msgid "Volume:"
 msgstr "Volym:"
 
 #: /views/index.handlebars
-msgid "alert forewarning;alert delay; notification delay; notification forewarning"
-msgstr "varna för förvarning;varningsfördröjning; notifications fördräjning;notifications förvarning"
+msgid ""
+"alert forewarning;alert delay; notification delay; notification forewarning"
+msgstr ""
+"varna för förvarning;varningsfördröjning; notifications fördräjning;"
+"notifications förvarning"
 
 #: /views/index.handlebars
 msgid "Delay (seconds):"
@@ -1192,144 +1255,272 @@ msgid "Why is the cooldown as long as it is?"
 msgstr "Varför är väntningstiden så lång som den är?"
 
 #: /views/partials/faq.handlebars
-msgid "The time it takes to get a pixel is dynamic, and changes based on how many people are online. The cooldown time is longer when more users are online."
-msgstr "Tiden som det tar för att placera en pixel är dynamisk, och ändras i förhållande med antalet av personer som är online. Väntetiden blir längre destå mer användare är online."
+msgid ""
+"The time it takes to get a pixel is dynamic, and changes based on how many "
+"people are online. The cooldown time is longer when more users are online."
+msgstr ""
+"Tiden som det tar för att placera en pixel är dynamisk, och ändras i "
+"förhållande med antalet av personer som är online. Väntetiden blir längre "
+"destå mer användare är online."
 
 #: /views/partials/faq.handlebars
 msgid "Why does it say 0/6 pixels?"
 msgstr "Varför står det 0/6 pixlar?"
 
 #: /views/partials/faq.handlebars
-msgid "This means that you are waiting for your next pixel. When you place a pixel, there is a cooldown for when you can place the next one. Over time, you can gain up to 6 \"stacked\" pixels to place at once."
-msgstr "Detta betyder att du väntar på din nästa pixel. När du placerar en pixel, så finns det en väntetid tills du kan placera en till. Om man väntar lite längre så kan man få upp till 6 stycken \"staplade\" pixlar som du kan placera samtidigt."
+msgid ""
+"This means that you are waiting for your next pixel. When you place a pixel, "
+"there is a cooldown for when you can place the next one. Over time, you can "
+"gain up to 6 \"stacked\" pixels to place at once."
+msgstr ""
+"Detta betyder att du väntar på din nästa pixel. När du placerar en pixel, så "
+"finns det en väntetid tills du kan placera en till. Om man väntar lite "
+"längre så kan man få upp till 6 stycken \"staplade\" pixlar som du kan "
+"placera samtidigt."
 
 #: /views/partials/faq.handlebars
 msgid "Why does it take so long to \"stack\" pixels?"
 msgstr "Varför tar det en så long tid att \"stapla\" pixlar?"
 
 #: /views/partials/faq.handlebars
-msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
-msgstr "Det är designat så här. Det är bättre att placera en pixel så fort du får den. Pixel \"staplande\" är mer för dom som går AFK. Det tar runt 40 minuter för att få 6/6 pixlar, medans det bara tar runt 3 minuter för att placera lika många om man gör det så fort man får dom."
+msgid ""
+"This is by design. It is better to place a pixel as soon as you get one. "
+"Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It "
+"takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 "
+"minutes to place 6 pixels if you place them as soon as possible."
+msgstr ""
+"Det är designat så här. Det är bättre att placera en pixel så fort du får "
+"den. Pixel \"staplande\" är mer för dom som går AFK. Det tar runt 40 minuter "
+"för att få 6/6 pixlar, medans det bara tar runt 3 minuter för att placera "
+"lika många om man gör det så fort man får dom."
 
 #: /views/partials/faq.handlebars
 msgid "How do I appeal a ban?"
 msgstr "Hur kan jag vädja en banlyselse?"
 
 #: /views/partials/faq.handlebars
-msgid "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
-msgstr "Kontakta oss på <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> eller skicka in en vädjandesbegära till vår <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> efter du har läst sidans regler i info panelen."
+msgid ""
+"Contact us on <a href=\"https://pxls.space/discord\" "
+"target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://"
+"pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the "
+"rules in the site's info panel."
+msgstr ""
+"Kontakta oss på <a href=\"https://pxls.space/discord\" "
+"target=\"_blank\">Discord</a> eller skicka in en vädjandesbegära till vår <a "
+"href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> efter "
+"du har läst sidans regler i info panelen."
 
 #: /views/partials/faq.handlebars
 msgid "How do I make a template?"
 msgstr "Hur gör jag ett template?"
 
 #: /views/partials/faq.handlebars
-msgid "A template is an image link that is posted in the template textbox in the settings panel so you can place over it on the canvas. You may use a regular image link to your pixel art, but many people use 3rd party tools like <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> or <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn pixel art into a fancier link. If you need to make pixel art yourself, you can use <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> to create art to put into Charity or Clueless."
-msgstr "Ett template är en bildlänk som är inlagd i template textrutan i inställningspanelen så att du kan placera den över kanvasen. Du kan använda en normal bild länk till din pixelkonst, men många personer anväder tredje parti verktyg som <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> eller <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> för att få det i en finare länk. Om du behöver göra pixelkonst själv så kan du använda <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> för att göra konst som du sedan kan lägga in på Charity eller PxlsFiddle."
+msgid ""
+"A template is an image link that is posted in the template textbox in the "
+"settings panel so you can place over it on the canvas. You may use a regular "
+"image link to your pixel art, but many people use 3rd party tools like <a "
+"href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> or <a "
+"href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn "
+"pixel art into a fancier link. If you need to make pixel art yourself, you "
+"can use <a href=\"https://www.piskelapp.com/p/create\" "
+"target=\"_blank\">Piskel</a> to create art to put into Charity or Clueless."
+msgstr ""
+"Ett template är en bildlänk som är inlagd i template textrutan i "
+"inställningspanelen så att du kan placera den över kanvasen. Du kan använda "
+"en normal bild länk till din pixelkonst, men många personer anväder tredje "
+"parti verktyg som <a href=\"https://charity.pxls.space\" "
+"target=\"_blank\">Charity</a> eller <a href=\"https://discord."
+"gg/5MVDCq53vC\" target=\"blank\">Clueless</a> för att få det i en finare "
+"länk. Om du behöver göra pixelkonst själv så kan du använda <a "
+"href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> för "
+"att göra konst som du sedan kan lägga in på Charity eller PxlsFiddle."
 
 #: /views/partials/faq.handlebars
 msgid "How do I move a template?"
 msgstr "Hur flyttar jag ett template?"
 
 #: /views/partials/faq.handlebars
-msgid "Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to move it around. On mobile, you can tap and hold where you want to move the template and click \"Move Template Here\" in the pop-up."
-msgstr "Håll ner <kbd>CTRL</kbd> (eller <kbd>OPTION</kbd> på macOS) och klicka och dra för att flytta runt på den. På telefon så kan du trycka var du vill flytta templaten och sedan klicka \"Flytta template\" i popupen."
+msgid ""
+"Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to "
+"move it around. On mobile, you can tap and hold where you want to move the "
+"template and click \"Move Template Here\" in the pop-up."
+msgstr ""
+"Håll ner <kbd>CTRL</kbd> (eller <kbd>OPTION</kbd> på macOS) och klicka och "
+"dra för att flytta runt på den. På telefon så kan du trycka var du vill "
+"flytta templaten och sedan klicka \"Flytta template\" i popupen."
 
 #: /views/partials/faq.handlebars
 msgid "Does the canvas reset? When?"
 msgstr "Resetas kanvasnen? När?"
 
 #: /views/partials/faq.handlebars
-msgid "Yes. The canvas resets when it is completely full. A reset date is not usually decided until the canvas is full, but the average canvas life-span is around 1 month. Updates are posted in our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> when a reset date is set."
-msgstr "Ja. Kanvasen resetas när den är nästan helt full. Ett reset datum är inte bestämt tills kanvasen är full, men den normala lifslängden för en kanvas är runt 1 månad. Updateringar är inlaggda på vår <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> när ett reset datum har blivit valt."
+msgid ""
+"Yes. The canvas resets when it is completely full. A reset date is not "
+"usually decided until the canvas is full, but the average canvas life-span "
+"is around 1 month. Updates are posted in our <a href=\"https://pxls.space/"
+"discord\" target=\"_blank\">Discord server</a> when a reset date is set."
+msgstr ""
+"Ja. Kanvasen resetas när den är nästan helt full. Ett reset datum är inte "
+"bestämt tills kanvasen är full, men den normala lifslängden för en kanvas är "
+"runt 1 månad. Updateringar är inlaggda på vår <a href=\"https://pxls.space/"
+"discord\" target=\"_blank\">Discord server</a> när ett reset datum har "
+"blivit valt."
 
 #: /views/partials/faq.handlebars
 msgid "Where can I see the past canvases?"
 msgstr "Vart kan jag se dom föredetta kanvaserna?"
 
 #: /views/partials/faq.handlebars
-msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
-msgstr "De föredetta kanvas är sparade på vår <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, och på tredje parti hemsidan <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, vilket sparar bilder av under kanvasen som sedan blir gjorda till en timelapse, och väldigt mycket information om kanvaserna."
+msgid ""
+"The past canvases are featured on our <a href=\"https://pxls.space/discord\" "
+"target=\"_blank\">Discord server</a>, or the 3rd party website <a "
+"href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which "
+"records timelapses and a lot of useful information on each canvas."
+msgstr ""
+"De föredetta kanvas är sparade på vår <a href=\"https://pxls.space/discord\" "
+"target=\"_blank\">Discord server</a>, och på tredje parti hemsidan <a "
+"href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, vilket "
+"sparar bilder av under kanvasen som sedan blir gjorda till en timelapse, och "
+"väldigt mycket information om kanvaserna."
 
 #: /views/partials/faq.handlebars
 msgid "How do I see who placed a pixel?"
 msgstr "Hur kan jag se vem som placerade en pixel?"
 
 #: /views/partials/faq.handlebars
-msgid "By shift-clicking (or tap and hold on mobile) a pixel, you can see who placed a pixel, how many pixels they have placed, and when they placed it."
-msgstr "Genom att skift-clicka (eller genom att trycka och hålla på mobil) en pixel, så kan man se vem som placerade en pixel, hur många dom har placerat totalt, och när dom placerade den."
+msgid ""
+"By shift-clicking (or tap and hold on mobile) a pixel, you can see who "
+"placed a pixel, how many pixels they have placed, and when they placed it."
+msgstr ""
+"Genom att skift-clicka (eller genom att trycka och hålla på mobil) en pixel, "
+"så kan man se vem som placerade en pixel, hur många dom har placerat totalt, "
+"och när dom placerade den."
 
 #: /views/partials/faq.handlebars
 msgid "How do I report someone?"
 msgstr "Hur raporterar jag någon?"
 
 #: /views/partials/faq.handlebars
-msgid "Shift-click (or tap and hold on mobile) on a pixel, and click the Report button."
-msgstr "Skift-clicka på (eller tryck och håll på mobil) en pixel och tryck på Report knappen."
+msgid ""
+"Shift-click (or tap and hold on mobile) on a pixel, and click the Report "
+"button."
+msgstr ""
+"Skift-clicka på (eller tryck och håll på mobil) en pixel och tryck på Report "
+"knappen."
 
 #: /views/partials/faq.handlebars
 msgid "How do I change the color of my name in the chat?"
 msgstr "Hur ändrar jag färgen på mitt namn i chatten?"
 
 #: /views/partials/faq.handlebars
-msgid "There is a \"Username Color\" option near the bottom of the settings panel."
-msgstr "Det finns en \"Namn Färg\" inställning nära botten av inställnings panelen."
+msgid ""
+"There is a \"Username Color\" option near the bottom of the settings panel."
+msgstr ""
+"Det finns en \"Namn Färg\" inställning nära botten av inställnings panelen."
 
 #: /views/partials/faq.handlebars
 msgid "What is a \"virginmap\"?"
 msgstr "Vad är en \"Oskuldsskarta\"?"
 
 #: /views/partials/faq.handlebars
-msgid "The virginmap shows which pixels have not yet been placed on (or “virgin” pixels)."
-msgstr "Oskuldskartan visar vilka pixlar som inte har blivit placerad på än (eller \"oskuld\" pixlar)."
+msgid ""
+"The virginmap shows which pixels have not yet been placed on (or “virgin” "
+"pixels)."
+msgstr ""
+"Oskuldskartan visar vilka pixlar som inte har blivit placerad på än (eller "
+"\"oskuld\" pixlar)."
 
 #: /views/partials/faq.handlebars
 msgid "How do I report bugs?"
 msgstr "Hur kan jag raportera buggar?"
 
 #: /views/partials/faq.handlebars
-msgid "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
-msgstr "Skicka in buggar till #dev-and-bugs kanalen i <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord servern</a>. Om du har hittat en själv-utnyttjande bugg, snälla meddela någon anställd privat (genom direkta meddelanden)."
+msgid ""
+"Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/"
+"discord\" target=\"_blank\">Discord server</a>. If you have found an "
+"exploit, please message one of the staff members privately (through DMs)."
+msgstr ""
+"Skicka in buggar till #dev-and-bugs kanalen i <a href=\"https://pxls.space/"
+"discord\" target=\"_blank\">Discord servern</a>. Om du har hittat en själv-"
+"utnyttjande bugg, snälla meddela någon anställd privat (genom direkta "
+"meddelanden)."
 
 #: /views/partials/faq.handlebars
 msgid "How do I get more info or contact staff?"
 msgstr "Hur kan jag få mer info eller kontakta någon anställd?"
 
 #: /views/partials/faq.handlebars
-msgid "Check the info panel (the icon on the top left) for more details and links, or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, where a staff member will gladly respond."
-msgstr "Kolla i info panelen (iconen i övre vänstra hörnet) för mer detaljer och länkar, eller gå med i vår <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, då en av våra anställda kan gladeligen hjälpa till."
+msgid ""
+"Check the info panel (the icon on the top left) for more details and links, "
+"or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord "
+"server</a>, where a staff member will gladly respond."
+msgstr ""
+"Kolla i info panelen (iconen i övre vänstra hörnet) för mer detaljer och "
+"länkar, eller gå med i vår <a href=\"https://pxls.space/discord\" "
+"target=\"_blank\">Discord server</a>, då en av våra anställda kan gladeligen "
+"hjälpa till."
 
 #: /views/partials/info.handlebars
 msgid "Welcome!"
 msgstr "Välkommen!"
 
 #: /views/partials/info.handlebars
-msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
-msgstr "Välkommen till pxls.space! Pxls är ett fler-spelare online samarbets kanvas baserad på <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">/r/place</a>, som låter dig göra vad som helst som du kan komma på, en pixel åt gången. Gå med hundratals av andra spelare i Pxls gemensamheten och gör fantastiska konstverk tillsammans som ett team, eller solo."
+msgid ""
+"Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas "
+"based on Reddit's <a href=\"https://www.reddit.com/r/place\" "
+"target=\"_blank\">r/place</a> event from 2017 that allows you to create "
+"anything you can imagine, one pixel at a time. Join hundreds of other "
+"players in the Pxls community and create amazing works of art together as a "
+"team, or solo."
+msgstr ""
+"Välkommen till pxls.space! Pxls är ett fler-spelare online samarbets kanvas "
+"baserad på <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">/r/"
+"place</a>, som låter dig göra vad som helst som du kan komma på, en pixel åt "
+"gången. Gå med hundratals av andra spelare i Pxls gemensamheten och gör "
+"fantastiska konstverk tillsammans som ett team, eller solo."
 
 #: /views/partials/info.handlebars
 msgid "The best place to reach staff and fellow community is in the discord!"
-msgstr "Den bästa platsen att nå moderatorerna och vårt gemenskap i discord servern!"
+msgstr ""
+"Den bästa platsen att nå moderatorerna och vårt gemenskap i discord servern!"
 
 #: /views/partials/info.handlebars
-msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
-msgstr "Kolla på våra sociala medier sidor, och snälla ta den tid som behövs för att läsa igenom reglerna vi har. Ha kul med görandet av (eller att ändra) konst!"
+msgid ""
+"Check out our social media pages, and please take the time to read the rules "
+"below. Have fun creating (or changing) art!"
+msgstr ""
+"Kolla på våra sociala medier sidor, och snälla ta den tid som behövs för att "
+"läsa igenom reglerna vi har. Ha kul med görandet av (eller att ändra) konst!"
 
 #: /views/partials/info.handlebars
 msgid "Canvas Rules"
 msgstr "Kanvas Regler"
 
 #: /views/partials/info.handlebars
-msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
-msgstr "Vi är stolta över att försöka hålla en öppen kanvas för alla, fri från yttre störning på vår sida, speciellt censoring. Men, för vårt gemenskaps bästa och på grund av vår egen tro, snälla acceptera oc följ dem följande reglerna:"
+msgid ""
+"We pride ourselves on trying to keep an open canvas for all free from "
+"outside interference on our end, and especially censorship. However, for the "
+"good of the community and on accounts of our own beliefs, please acknowledge "
+"and obey the following guidelines:"
+msgstr ""
+"Vi är stolta över att försöka hålla en öppen kanvas för alla, fri från yttre "
+"störning på vår sida, speciellt censoring. Men, för vårt gemenskaps bästa "
+"och på grund av vår egen tro, snälla acceptera oc följ dem följande reglerna:"
 
 #: /views/partials/info.handlebars
-msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
-msgstr "Inga hatfyllda bilder eller förkränkande språk. Detta inkluderar, men är inte begränsat till ord som <i>f****t</i>, <i>n****r</i>, etc; ävensom Hakkorset, Hammare och Skäran, eller andra symboler av terrorism."
+msgid ""
+"No hateful imagery or derogatory speech. This includes but is not limited to "
+"words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, "
+"Hammer and Sickle, and any symbols of terrorism."
+msgstr ""
+"Inga hatfyllda bilder eller förkränkande språk. Detta inkluderar, men är "
+"inte begränsat till ord som <i>f****t</i>, <i>n****r</i>, etc; ävensom "
+"Hakkorset, Hammare och Skäran, eller andra symboler av terrorism."
 
 #: /views/partials/info.handlebars
 msgid "No NSFW or NSFL content."
-msgstr "Inget NSFW (Not Safe For Work) eller NSFL (Not Safe For Life) innehåll."
+msgstr ""
+"Inget NSFW (Not Safe For Work) eller NSFL (Not Safe For Life) innehåll."
 
 #: /views/partials/info.handlebars
 msgid "No nudity or otherwise sexually explicit content"
@@ -1337,7 +1528,9 @@ msgstr "Ingen nakenhet eller annars sexuellt explicit innehåll"
 
 #: /views/partials/info.handlebars
 msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
-msgstr "Inga kvinno-presenterande nippel/bara bröst, genitalier eller sexuella vätskor"
+msgstr ""
+"Inga kvinno-presenterande nippel/bara bröst, genitalier eller sexuella "
+"vätskor"
 
 #: /views/partials/info.handlebars
 msgid "No sexual imagery/erotica"
@@ -1345,43 +1538,70 @@ msgstr "Inget sexuellt eller erotiska konstverk"
 
 #: /views/partials/info.handlebars
 msgid "No excessive blood or otherwise obscene/shocking content"
-msgstr "Ingen överdrivet mängd med blod eller annars obscen/shockerande innehåll"
+msgstr ""
+"Ingen överdrivet mängd med blod eller annars obscen/shockerande innehåll"
 
 #: /views/partials/info.handlebars
-msgid "No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas."
-msgstr "Inga mer än <b>ett</b> konto per användare, inga undantag. Fler-konto användare kommer att bli förbjudna från att göra konst på kanvasen."
+msgid ""
+"No more than <b>one</b> account per user, no exceptions. Multiple account "
+"users will be banned from creating art on the canvas."
+msgstr ""
+"Inga mer än <b>ett</b> konto per användare, inga undantag. Fler-konto "
+"användare kommer att bli förbjudna från att göra konst på kanvasen."
 
 #: /views/partials/info.handlebars
-msgid "No auto-placement tools of any kind, you must place the pixels manually."
-msgstr "Inga auto-placerande verktyg av något slag, du måste placera alla pixlar manuellt."
+msgid ""
+"No auto-placement tools of any kind, you must place the pixels manually."
+msgstr ""
+"Inga auto-placerande verktyg av något slag, du måste placera alla pixlar "
+"manuellt."
 
 #: /views/partials/info.handlebars
-msgid "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
-msgstr "Missbruka inte hemsidans fuctioner, som reportrar eller användar-uppslagningar. (t.ex. automatiskt reportering/nvändar-uppslagningar, etc.)"
+msgid ""
+"Do not abuse site functionality, such as reports or lookups. (e.g. automated "
+"reporting/lookups, etc.)"
+msgstr ""
+"Missbruka inte hemsidans fuctioner, som reportrar eller användar-"
+"uppslagningar. (t.ex. automatiskt reportering/nvändar-uppslagningar, etc.)"
 
 #: /views/partials/info.handlebars
-msgid "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
-msgstr "Någon sorts automatiserad aggregering av data från användar-uppslagningar är inte tillåtet, och kommer resultera i en bannlysning från hemsidan."
+msgid ""
+"Any automated aggregation of data from user lookups is not allowed, and will "
+"result in a ban."
+msgstr ""
+"Någon sorts automatiserad aggregering av data från användar-uppslagningar är "
+"inte tillåtet, och kommer resultera i en bannlysning från hemsidan."
 
 #: /views/partials/info.handlebars
 msgid "Staff have final say in any rule disputes"
 msgstr "Moderatorer har sista ordet i alla regel konflikter"
 
 #: /views/partials/info.handlebars
-msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
-msgstr "Om du känner att en moderator har agerat olämpligt, snälla raportera det till en administrator."
+msgid ""
+"If you feel a moderator has acted inappropriately, please report it to an "
+"administrator."
+msgstr ""
+"Om du känner att en moderator har agerat olämpligt, snälla raportera det "
+"till en administrator."
 
 #: /views/partials/info.handlebars
-msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
-msgstr "Om du tror att du har blivit falskt bannlyst från sidan, så kan du kontakta en moderator eller administrator."
+msgid ""
+"If you believe you have been falsely banned you may contact a moderator or "
+"administrator."
+msgstr ""
+"Om du tror att du har blivit falskt bannlyst från sidan, så kan du kontakta "
+"en moderator eller administrator."
 
 #: /views/partials/info.handlebars
 msgid "Chat Rules"
 msgstr "Chatt Regler"
 
 #: /views/partials/info.handlebars
-msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
-msgstr "Håll chatten civil. Du får ej trakassera någon, eller använda homofobiskt/transfobiskt/funkofobiskt språk."
+msgid ""
+"Keep chat civil. No harassment or homophobic/transphobic/disablist language."
+msgstr ""
+"Håll chatten civil. Du får ej trakassera någon, eller använda homofobiskt/"
+"transfobiskt/funkofobiskt språk."
 
 #: /views/partials/info.handlebars
 msgid "No hate speech. This includes emoji/symbols/ASCII art."
@@ -1404,12 +1624,18 @@ msgid "No \"copy pasta\"s"
 msgstr "Inga \"copy pasta\"s"
 
 #: /views/partials/info.handlebars
-msgid "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
-msgstr "Inga länkar till sidor som aktivt bryter mot kanvas eller chatt regler (t.ex. porr sidor)"
+msgid ""
+"No links to sites that actively break the canvas or chat rules (e.g. porn "
+"sites)"
+msgstr ""
+"Inga länkar till sidor som aktivt bryter mot kanvas eller chatt regler (t."
+"ex. porr sidor)"
 
 #: /views/partials/info.handlebars
 msgid "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
-msgstr "Inget symbolik vilket bryter mot kanvas eller chatt regler (t.ex. NSFW ASCII konst)"
+msgstr ""
+"Inget symbolik vilket bryter mot kanvas eller chatt regler (t.ex. NSFW ASCII "
+"konst)"
 
 #: /views/partials/info.handlebars
 msgid "No personal information"
@@ -1480,8 +1706,12 @@ msgid "Donate"
 msgstr "Donera"
 
 #: /views/partials/info.handlebars
-msgid "Donations are not accepted at this time, but this panel will be updated when they're open again!"
-msgstr "Donationer är inte accepterade vid denna tid, men denna panel kommer att bli updaterad så fort dom är öppna igen!"
+msgid ""
+"Donations are not accepted at this time, but this panel will be updated when "
+"they're open again!"
+msgstr ""
+"Donationer är inte accepterade vid denna tid, men denna panel kommer att bli "
+"updaterad så fort dom är öppna igen!"
 
 #: /views/profile.handlebars
 msgid "{0}'s Profile"
@@ -1591,16 +1821,25 @@ msgid "You must be logged in to manage your factions."
 msgstr "Du måste vara inloggad för att kunna hantera dinna grupper."
 
 #: /views/profile.handlebars
-msgid "You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator."
-msgstr "Du är grupp begränsad och kan inte göra nya grupper. Om du tror att detta är ett fel, snälla kontakta en moderator."
+msgid ""
+"You are faction restricted and cannot create new factions. If you believe "
+"this is an error, please contact a moderator."
+msgstr ""
+"Du är grupp begränsad och kan inte göra nya grupper. Om du tror att detta är "
+"ett fel, snälla kontakta en moderator."
 
 #: /views/profile.handlebars
-msgid "You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator."
-msgstr "Du är kanvas-bannlyst och kan inte göra nya grupper. Om du tror att detta är ett fel, snälla kontakta en moderator."
+msgid ""
+"You are canvas banned and cannot create new factions. If you believe this is "
+"an error, please contact a moderator."
+msgstr ""
+"Du är kanvas-bannlyst och kan inte göra nya grupper. Om du tror att detta är "
+"ett fel, snälla kontakta en moderator."
 
 #: /views/profile.handlebars
 msgid "You must have at least {0} all-time pixels to create a faction."
-msgstr "Du måste ha minst {0} heltid pixlar placerade för att kunna göra en grupp."
+msgstr ""
+"Du måste ha minst {0} heltid pixlar placerade för att kunna göra en grupp."
 
 #: /views/profile.handlebars
 msgid "Create"
@@ -1662,8 +1901,12 @@ msgid "Log Keys"
 msgstr "Logg Nycklar"
 
 #: /views/profile.handlebars
-msgid "Log keys can be used by those who have them to tell which pixels you placed on previous canvases."
-msgstr "Logg nycklar kan bli använda av dom som har dom för att se vilka pixlar du placerat på en föredetta kanvas."
+msgid ""
+"Log keys can be used by those who have them to tell which pixels you placed "
+"on previous canvases."
+msgstr ""
+"Logg nycklar kan bli använda av dom som har dom för att se vilka pixlar du "
+"placerat på en föredetta kanvas."
 
 #: /views/profile.handlebars
 msgid "Canvas Code"
@@ -1679,7 +1922,8 @@ msgstr "Du har inga log nycklar ännu!"
 
 #: /views/profile.handlebars
 msgid "Log keys should show up here after a canvas you have placed on ends."
-msgstr "Logg nycklar borde visas up här efter en kanvas du har placerat på tar slut."
+msgstr ""
+"Logg nycklar borde visas up här efter en kanvas du har placerat på tar slut."
 
 #: /views/profile.handlebars
 msgid "Members of {0} ([{1}])"
@@ -2028,23 +2272,27 @@ msgstr "Utrensad av ${purge.initiator} med resonemangen: ${reason}"
 
 #: /public/include/chat.js
 msgid "External Link"
-msgstr ""
+msgstr "Extern Länk"
 
 #: /public/include/chat.js
 msgid "This link is taking you to the following website:"
-msgstr ""
+msgstr "Den här länken kommer ta dig till följande hemsidan:"
 
 #: /public/include/chat.js
-msgid "The operators of this website have no responsibility or control over the contents hosted at {0}. Are you sure you want to go there?"
+msgid ""
+"The operators of this website have no responsibility or control over the "
+"contents hosted at {0}. Are you sure you want to go there?"
 msgstr ""
+"Operatörerna av denna hemsida har inget ansvar eller kontroll av det "
+"innehåll du kan hitta på {0}. Är du säker på att du vill gå dit?"
 
 #: /public/include/chat.js
 msgid "Note: You can disable this popup in settings."
-msgstr ""
+msgstr "Notera: Du kan stänga av denna popup i inställningarna."
 
 #: /public/include/chat.js
 msgid "Visit Site"
-msgstr ""
+msgstr "Besök Hemsida"
 
 #: /public/include/chat.js
 msgid "template:"
@@ -2067,12 +2315,19 @@ msgid "Open Template"
 msgstr "Öppna Template"
 
 #: /public/include/chat.js
-msgid "This link will overwrite your current template. What would you like to do?"
-msgstr "Denna länk kommer att överskriva din nuvarande template. Vad skulle du vilja göra?"
+msgid ""
+"This link will overwrite your current template. What would you like to do?"
+msgstr ""
+"Denna länk kommer att överskriva din nuvarande template. Vad skulle du vilja "
+"göra?"
 
 #: /public/include/chat.js
-msgid "Note: You can set a default action in the settings menu which bypasses this popup completely."
-msgstr "Notera: Du kan ställa in en standard aktion i inställningsmenyn vilket ignorerar denna popup helt."
+msgid ""
+"Note: You can set a default action in the settings menu which bypasses this "
+"popup completely."
+msgstr ""
+"Notera: Du kan ställa in en standard aktion i inställningsmenyn vilket "
+"ignorerar denna popup helt."
 
 #: /public/include/chat.js
 msgid "OK"
@@ -2112,7 +2367,8 @@ msgstr "Skriv in en anledning till din report"
 
 #: /public/include/chat.js
 msgid "You are reporting a chat message from ${reportTarget} with the content:"
-msgstr "Du raporterar ett chatt medellande från ${reportTarget} med innehållet:"
+msgstr ""
+"Du raporterar ett chatt medellande från ${reportTarget} med innehållet:"
 
 #: /public/include/chat.js /public/include/lookup.js
 msgid "Sent report!"
@@ -2131,8 +2387,12 @@ msgid "User ignored. You can unignore from chat settings."
 msgstr "Användare ignorerad. Du kan ändra detta i chatt inställningarna."
 
 #: /public/include/chat.js
-msgid "Failed to ignore user. Either they\\'re already ignored, or an error occurred. If the problem persists, contact a developer."
-msgstr "Misslyckade att ignorera användare. Antingen är dom redan ignorerade, eller ett fel uppstod. Om problemet fortsätter, kontakta en utvecklare."
+msgid ""
+"Failed to ignore user. Either they\\'re already ignored, or an error "
+"occurred. If the problem persists, contact a developer."
+msgstr ""
+"Misslyckade att ignorera användare. Antingen är dom redan ignorerade, eller "
+"ett fel uppstod. Om problemet fortsätter, kontakta en utvecklare."
 
 #: /public/include/chat.js
 msgid "Permanent"
@@ -2259,8 +2519,11 @@ msgid "Toggle Rename Request"
 msgstr "Växla Omdöpnings Begäran"
 
 #: /public/include/chat.js
-msgid "Select one of the options below to set the current rename request state."
-msgstr "Välj någon av alternativen under för att ställa in nuvarande omdöpnings begärande status."
+msgid ""
+"Select one of the options below to set the current rename request state."
+msgstr ""
+"Välj någon av alternativen under för att ställa in nuvarande omdöpnings "
+"begärande status."
 
 #: /public/include/chat.js
 msgid "Rename request updated"
@@ -2275,8 +2538,13 @@ msgid "New Name: "
 msgstr "Nytt Namn: "
 
 #: /public/include/chat.js
-msgid "Enter the new name for the user below. Please note that if you\\'re trying to change the caps, you\\'ll have to rename to something else first."
-msgstr "Skriv in det nya namnet för användaren nedan. Snälla notera att om du försöker byta stora bokstäver eller små bokstäver, så måste du byta namnet till något annat först."
+msgid ""
+"Enter the new name for the user below. Please note that if you\\'re trying "
+"to change the caps, you\\'ll have to rename to something else first."
+msgstr ""
+"Skriv in det nya namnet för användaren nedan. Snälla notera att om du "
+"försöker byta stora bokstäver eller små bokstäver, så måste du byta namnet "
+"till något annat först."
 
 #: /public/include/chat.js
 msgid "User renamed"
@@ -2315,8 +2583,12 @@ msgid "Move Template Here"
 msgstr "Flytta Template"
 
 #: /public/include/lookup.js
-msgid "An error occurred, either you aren't logged in or you may be attempting to look up users too fast. Please try again in 60 seconds"
-msgstr "Ett fel uppstod, antingen är du inte inloggad eller så försöker du kolla upp användare för snabbt. Snälla försök igen om 60 sekunder"
+msgid ""
+"An error occurred, either you aren't logged in or you may be attempting to "
+"look up users too fast. Please try again in 60 seconds"
+msgstr ""
+"Ett fel uppstod, antingen är du inte inloggad eller så försöker du kolla upp "
+"användare för snabbt. Snälla försök igen om 60 sekunder"
 
 #: /public/include/lookup.js
 msgid "Coords"
@@ -2424,7 +2696,8 @@ msgstr "En ny ${type} har blivit mottagen."
 
 #: /public/include/uiHelper.js
 msgid "Cannot fetch local files. Use the file selector in template settings."
-msgstr "Kan inte nå lokala filer. Använd fil väljaren i template inställningarna."
+msgstr ""
+"Kan inte nå lokala filer. Använd fil väljaren i template inställningarna."
 
 #: /public/include/uiHelper.js
 msgid "Redirect Warning"
@@ -2447,8 +2720,14 @@ msgid "Couldn\\'t change discord name: "
 msgstr "Kan inte ändra discord namn: "
 
 #: /public/include/user.js
-msgid "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
-msgstr "Genom att du loggar in eller registrerar dig, så godkänner du <a href=\"{0}\">användarvillkoren</a> och <a href=\"{1}\">integritetspolicyn</a>"
+msgid ""
+"By logging in or registering, you agree to the <a href=\"{0}\" "
+"target=\"_blank\">terms of use</a> and <a href=\"{1}\" "
+"target=\"_blank\">privacy policy</a>."
+msgstr ""
+"Genom att du loggar in eller registrerar dig, så godkänner du <a "
+"href=\"{0}\" target=\"_blank\">användarvillkoren</a> och <a href=\"{1}\" "
+"target=\"_blank\">integritetspolicyn</a>."
 
 #: /public/include/user.js
 msgid "Sign in with {0}"
@@ -2475,16 +2754,24 @@ msgid "You are permanently banned."
 msgstr "Du är permanent bannlyst."
 
 #: /public/include/user.js
-msgid "You are temporarily banned and will not be allowed to place until ${timestamp}"
-msgstr "Du är temporärt bannlyst och du är inte tillåten att placera tills ${timestamp}"
+msgid ""
+"You are temporarily banned and will not be allowed to place until "
+"${timestamp}"
+msgstr ""
+"Du är temporärt bannlyst och du är inte tillåten att placera tills "
+"${timestamp}"
 
 #: /public/include/user.js
 msgid "You can contact us using one of the links in the info menu."
 msgstr "Du kan kontakta oss genom att använda en av länkarna i info menyn."
 
 #: /public/include/user.js
-msgid "If you think this was an error, please contact us using one of the links in the info tab."
-msgstr "Om du tror att detta var ett misstag, snälla kontakta oss genom någon av länkarna i info panelen."
+msgid ""
+"If you think this was an error, please contact us using one of the links in "
+"the info tab."
+msgstr ""
+"Om du tror att detta var ett misstag, snälla kontakta oss genom någon av "
+"länkarna i info panelen."
 
 #: /public/include/user.js
 msgid "Ban reason:"
@@ -2495,12 +2782,18 @@ msgid "An unknown error occurred. Please contact staff on discord"
 msgstr "Ett okänt fel uppstod. Snälla kontakta moderatorerna på discord"
 
 #: /public/include/user.js
-msgid "Staff have required you to change your username, this usually means your name breaks one of our rules."
-msgstr "Moderatorerna kräver att du ändrar ditt användarnamn, detta brukar betyda att ditt namn bryter mot någon av våra regler."
+msgid ""
+"Staff have required you to change your username, this usually means your "
+"name breaks one of our rules."
+msgstr ""
+"Moderatorerna kräver att du ändrar ditt användarnamn, detta brukar betyda "
+"att ditt namn bryter mot någon av våra regler."
 
 #: /public/include/user.js
 msgid "If you disagree, please contact us on Discord (link in the info panel)."
-msgstr "Om du inte håller med, snälla kontakta oss på Discord (länk finns i info panelen)."
+msgstr ""
+"Om du inte håller med, snälla kontakta oss på Discord (länk finns i info "
+"panelen)."
 
 #: /public/include/user.js
 msgid "New Username:"
@@ -2526,11 +2819,13 @@ msgstr "Klicka här för att fortsätta."
 msgid "Alert"
 msgstr "Alert"
 
-#~ msgid "Subreddit"
-#~ msgstr "Subreddit"
+#: /views/partials/info.handlebars
+msgid "Subreddit"
+msgstr "Subreddit"
 
-#~ msgid "GitHub"
-#~ msgstr "GitHub"
+#: /views/partials/info.handlebars
+msgid "GitHub"
+msgstr "GitHub"
 
 #~ msgid "You are not signed in.&nbsp;<a href=\"#\">Sign in with...</a>"
 #~ msgstr "Du är inte inloggad. &nbsp;<a href=\"#\">Logga in med...</a>"
