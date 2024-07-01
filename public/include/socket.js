@@ -12,7 +12,7 @@ module.exports.socket = (function() {
     reconnect: function() {
       $('#reconnecting').show();
       setTimeout(function() {
-        $.get(window.location.pathname + 'info?_' + (new Date()).getTime(), function() {
+        $.get(window.location.pathname + 'info', function() {
           window.location.reload();
         }).fail(function() {
           console.info('Server still down...');

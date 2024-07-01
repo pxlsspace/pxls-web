@@ -526,7 +526,7 @@ const board = (function() {
         });
 
         try {
-          self.draw(await binaryAjax('/boarddata' + '?_' + (new Date()).getTime()));
+          self.draw(await binaryAjax('/boarddata'));
         } catch (e) {
           console.error('Error drawing board:', e);
           socket.reconnect();
