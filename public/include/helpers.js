@@ -1,10 +1,10 @@
 // first we define the global helperfunctions and figure out what kind of settings our browser needs to use
-module.exports.binaryAjax = async function(url) {
+module.exports.binaryAjax = async function (url) {
   const response = await fetch(url);
   const data = new Uint8Array(await response.arrayBuffer());
   return data;
 };
-module.exports.createImageData = function(w, h) {
+module.exports.createImageData = function (w, h) {
   try {
     return new ImageData(w, h);
   } catch (e) {
@@ -15,7 +15,7 @@ module.exports.createImageData = function(w, h) {
   }
 };
 module.exports.intToHex = (i) => `#${('000000' + (i >>> 0).toString(16)).slice(-6)}`;
-module.exports.hexToRGB = function(hex) {
+module.exports.hexToRGB = function (hex) {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result ? {
     r: parseInt(result[1], 16),
@@ -23,10 +23,14 @@ module.exports.hexToRGB = function(hex) {
     b: parseInt(result[3], 16)
   } : null;
 };
-module.exports.analytics = function() {
+module.exports.analytics = function () {
   if (window.ga) {
     window.ga.apply(this, arguments);
   }
+};
+module.exports.indexToSymbol = (i) => {
+  const dict = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh';
+  return dict[i];
 };
 
 class LazyPromise extends Promise {
@@ -63,8 +67,8 @@ class LazyPromise extends Promise {
 module.exports.LazyPromise = LazyPromise;
 
 const nua = navigator.userAgent;
-let haveImageRendering = (function() {
-  const checkImageRendering = function(prefix, crisp, pixelated, optimizeContrast) {
+let haveImageRendering = (function () {
+  const checkImageRendering = function (prefix, crisp, pixelated, optimizeContrast) {
     const d = document.createElement('div');
     if (crisp) {
       d.style.imageRendering = prefix + 'crisp-edges';

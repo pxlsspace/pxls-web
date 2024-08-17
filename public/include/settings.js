@@ -5,7 +5,7 @@ const {
 
 const { ls } = require('./storage');
 
-module.exports.settings = (function() {
+module.exports.settings = (function () {
   const SettingType = {
     TOGGLE: 0,
     RANGE: 1,
@@ -15,7 +15,7 @@ module.exports.settings = (function() {
     RADIO: 5
   };
 
-  const validate = function(value, fallback, type) {
+  const validate = function (value, fallback, type) {
     switch (type) {
       case SettingType.TOGGLE:
         // valid if value is a boolean (either true or false)
@@ -29,7 +29,7 @@ module.exports.settings = (function() {
         }
         break;
       case SettingType.NUMBER:
-        /* falls through */
+      /* falls through */
       case SettingType.RANGE:
         // valid if value is a number
         if (!isNaN(parseFloat(value))) {
@@ -37,7 +37,7 @@ module.exports.settings = (function() {
         }
         break;
       case SettingType.SELECT:
-        /* falls through */
+      /* falls through */
       case SettingType.RADIO:
         // select and radios can use practically any values: allow if not void
         if (value != null) {
@@ -47,7 +47,7 @@ module.exports.settings = (function() {
     return fallback;
   };
 
-  const filterInput = function(controls, type) {
+  const filterInput = function (controls, type) {
     switch (type) {
       case SettingType.TOGGLE:
         return controls.filter('input[type=checkbox]');
@@ -72,15 +72,15 @@ module.exports.settings = (function() {
    * @param {JQuery|Element|selector} initialControls the inputs to bind as the controls of this setting.
    * @returns {Object} the setting object with public access to certain functions.
    */
-  const setting = function(name, type, defaultValue, initialControls = $()) {
+  const setting = function (name, type, defaultValue, initialControls = $()) {
     const listeners = [];
     let controls = $();
 
-    const get = function() {
+    const get = function () {
       const value = ls.get(name);
       return validate(value, defaultValue, type);
     };
-    const set = function(value) {
+    const set = function (value) {
       const validValue = validate(value, defaultValue, type);
       ls.set(name, validValue);
 
@@ -123,22 +123,22 @@ module.exports.settings = (function() {
     const self = {
       get: get,
       set: set,
-      reset: function() {
+      reset: function () {
         self.set(defaultValue);
       },
-      listen: function(f) {
+      listen: function (f) {
         listeners.push(f);
         // this makes the listener aware of the initial state since it may not be initialised to the correct value
         f(self.get());
       },
-      unlisten: function(f) {
+      unlisten: function (f) {
         const index = listeners.indexOf(f);
         if (index !== -1) {
           listeners.splice(index, 1);
         }
       },
       controls: {
-        add: function(control) {
+        add: function (control) {
           const toAdd = filterInput($(control), type);
           controls = controls.add(toAdd);
 
@@ -151,7 +151,7 @@ module.exports.settings = (function() {
           // update the new controls to have the correct value
           self.set(self.get());
         },
-        remove: function(control) {
+        remove: function (control) {
           const toRemove = controls.filter($(control));
           controls = controls.not(toRemove);
 
@@ -161,17 +161,17 @@ module.exports.settings = (function() {
 
           toRemove.off(changeEvents, changeFunction);
         },
-        disable: function() {
+        disable: function () {
           controls.prop('disabled', true);
         },
-        enable: function() {
+        enable: function () {
           controls.prop('disabled', false);
         }
       }
     };
 
     if (type === SettingType.TOGGLE) {
-      self.toggle = function() { self.set(!self.get()); };
+      self.toggle = function () { self.set(!self.get()); };
     }
 
     self.controls.add(initialControls);
@@ -237,7 +237,7 @@ module.exports.settings = (function() {
   const searchNoResults = $('<p>').text('No Results').addClass('hidden text-muted').css({ 'text-align': 'center', 'margin-top': '5em', 'font-style': 'italic' });
   $('#settings > .panel-body').append(searchNoResults);
 
-  const searchFunction = function(regex, object, allowTextSearch = false) {
+  const searchFunction = function (regex, object, allowTextSearch = false) {
     const data = object.data('keywords');
     if (!data) {
       return allowTextSearch && regex.test(object.text());
@@ -299,7 +299,7 @@ module.exports.settings = (function() {
     searchNoResults.toggleClass('hidden', displayedSections.length > 0);
   }
 
-  searchInput.on('keyup', function(evt) {
+  searchInput.on('keyup', function (evt) {
     if (evt.key === 'Enter' || evt.which === 13) {
       $(this).blur();
     }
@@ -309,7 +309,7 @@ module.exports.settings = (function() {
     evt.stopPropagation();
   });
 
-  searchInput.on('change', function() {
+  searchInput.on('change', function () {
     filterSettings(searchInput.val());
   });
 
@@ -348,6 +348,9 @@ module.exports.settings = (function() {
       palette: {
         numbers: {
           enable: setting('ui.palette.numbers.enable', SettingType.TOGGLE, false, $('#setting-ui-palette-numbers-enable'))
+        },
+        symbols: {
+          enable: setting('ui.palette.symbols.enable', SettingType.TOGGLE, false, $('#setting-ui-palette-symbols-enable'))
         },
         scrollbar: {
           thin: {

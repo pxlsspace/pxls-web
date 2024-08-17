@@ -9,11 +9,12 @@ let user;
 
 const {
   analytics,
-  hexToRGB
+  hexToRGB,
+  indexToSymbol
 } = require('./helpers');
 
 // this takes care of placing pixels, the palette, the reticule and stuff associated with that
-module.exports.place = (function() {
+module.exports.place = (function () {
   const self = {
     elements: {
       palette: $('#palette'),
@@ -32,10 +33,10 @@ module.exports.place = (function() {
     isDoingCaptcha: false,
     lastPixel: null,
     autoreset: true,
-    setAutoReset: function(v) {
+    setAutoReset: function (v) {
       self.autoreset = !!v;
     },
-    switch: function(newColorIdx) {
+    switch: function (newColorIdx) {
       const isOnPalette = newColorIdx >= 0 && newColorIdx < self.palette.length;
       const isTransparent = newColorIdx === 0xFF && user.placementOverrides && user.placementOverrides.canPlaceAnyColor;
 
@@ -77,13 +78,13 @@ module.exports.place = (function() {
         }
       }
     },
-    place: function(x, y, color = null) {
+    place: function (x, y, color = null) {
       if (!timer.cooledDown() || self.color === -1) { // nope can't place yet
         return;
       }
       self._place(x, y, color);
     },
-    _place: function(x, y, color = null) {
+    _place: function (x, y, color = null) {
       if (color == null) {
         color = self.color;
       }
@@ -101,7 +102,7 @@ module.exports.place = (function() {
         self.switch(-1);
       }
     },
-    update: function(clientX, clientY) {
+    update: function (clientX, clientY) {
       if (clientX !== undefined) {
         const boardPos = board.fromScreen(clientX, clientY);
         self.reticule = {
@@ -129,8 +130,11 @@ module.exports.place = (function() {
         self.toggleCursor(true);
       }
     },
-    setNumberedPaletteEnabled: function(shouldBeNumbered) {
-      self.elements.palette[0].classList.toggle('no-pills', !shouldBeNumbered);
+    setNumberedPaletteEnabled: function (shouldBeNumbered) {
+      self.elements.palette[0].classList.toggle('no-numbers', !shouldBeNumbered);
+    },
+    setSymbolPaletteEnabled: function (shouldBeSymbols) {
+      self.elements.palette[0].classList.toggle('no-symbols', !shouldBeSymbols);
     },
     toggleReticule: (show) => {
       if (show && settings.ui.reticule.enable.get()) {
@@ -146,10 +150,10 @@ module.exports.place = (function() {
         self.elements.cursor.hide();
       }
     },
-    setPalette: function(palette) {
+    setPalette: function (palette) {
       self.palette = palette;
       self.elements.palette.find('.palette-button').remove().end().append(
-        $.map(self.palette, function(color, idx) {
+        $.map(self.palette, function (color, idx) {
           return $('<button>')
             .attr('title', color.name)
             .attr('type', 'button')
@@ -159,9 +163,10 @@ module.exports.place = (function() {
             .append(
               $('<div>').addClass('palette-color')
                 .css('background-color', `#${color.value}`)
-                .append($('<span>').addClass('palette-number').text(idx))
+                .append($('<span>').addClass('palette-pill').addClass('palette-number').text(idx))
+                .append($('<span>').addClass('palette-pill').addClass('palette-symbol').text(indexToSymbol(idx)))
             )
-            .click(function() {
+            .click(function () {
               self.switch(idx);
             });
         })
@@ -174,7 +179,7 @@ module.exports.place = (function() {
           .addClass('ontouchstart' in window ? 'touch' : 'no-touch')
           .append($('<div>').addClass('palette-color checkerboard-background pixelate'))
           .hide()
-          .click(function() {
+          .click(function () {
             self.switch(0xFF);
           })
       );
@@ -187,7 +192,7 @@ module.exports.place = (function() {
           .append(
             crel('i', { class: 'fas fa-times' })
           )
-          .click(function() {
+          .click(function () {
             self.switch(-1);
           })
       );
@@ -196,24 +201,24 @@ module.exports.place = (function() {
       self.elements.palette.find('.palette-button.palette-button-special').toggle(show);
     },
     can_undo: false,
-    undo: function(evt) {
+    undo: function (evt) {
       evt.stopPropagation();
       socket.send({ type: 'undo' });
       self.can_undo = false;
       document.body.classList.remove('undo-visible');
       self.elements.undo.removeClass('open');
     },
-    init: function() {
+    init: function () {
       board = require('./board').board;
       user = require('./user').user;
       self.toggleReticule(false);
       self.toggleCursor(false);
       document.body.classList.remove('undo-visible');
       self.elements.undo.removeClass('open');
-      board.getRenderBoard().on('pointermove mousemove', function(evt) {
+      board.getRenderBoard().on('pointermove mousemove', function (evt) {
         self.update(evt.clientX, evt.clientY);
       });
-      $(window).on('pointermove mousemove touchstart touchmove', function(evt) {
+      $(window).on('pointermove mousemove touchstart touchmove', function (evt) {
         let x = 0;
         let y = 0;
         if (evt.changedTouches && evt.changedTouches[0]) {
@@ -230,7 +235,7 @@ module.exports.place = (function() {
         if (self.can_undo) {
 
         }
-      }).keydown(function(evt) {
+      }).keydown(function (evt) {
         if (['INPUT', 'TEXTAREA'].includes(evt.target.nodeName)) {
           // prevent inputs from triggering shortcuts
           return;
@@ -239,19 +244,19 @@ module.exports.place = (function() {
         if (self.can_undo && (evt.key === 'z' || evt.key === 'Z' || evt.keyCode === 90) && evt.ctrlKey) {
           self.undo(evt);
         }
-      }).on('touchstart', function(evt) {
+      }).on('touchstart', function (evt) {
         if (self.color === -1 || self.can_undo) {
 
         }
       });
-      socket.on('pixel', function(data) {
-        $.map(data.pixels, function(px) {
+      socket.on('pixel', function (data) {
+        $.map(data.pixels, function (px) {
           board.setPixelIndex(px.x, px.y, px.color, false);
         });
         board.refresh();
         board.update(true);
       });
-      socket.on('ACK', function(data) {
+      socket.on('ACK', function (data) {
         switch (data.ackFor) {
           case 'PLACE':
             $(window).trigger('pxls:ack:place', [data.x, data.y]);
@@ -268,14 +273,14 @@ module.exports.place = (function() {
 
         if (uiHelper.getAvailable() === 0) { uiHelper.setPlaceableText(data.ackFor === 'PLACE' ? 0 : 1); }
       });
-      socket.on('admin_placement_overrides', function(data) {
+      socket.on('admin_placement_overrides', function (data) {
         self.togglePaletteSpecialColors(data.placementOverrides.canPlaceAnyColor);
         if (!data.placementOverrides.canPlaceAnyColor && self.color === 0xFF) {
           self.switch(-1);
         }
       });
       let captchaScriptLoad = null;
-      socket.on('captcha_required', async function(data) {
+      socket.on('captcha_required', async function (data) {
         if (captchaScriptLoad == null) {
           captchaScriptLoad = new Promise((resolve, reject) => {
             $.getScript('https://www.google.com/recaptcha/api.js')
@@ -298,7 +303,7 @@ module.exports.place = (function() {
 
         analytics('send', 'event', 'Captcha', 'Execute');
       });
-      socket.on('captcha_status', function(data) {
+      socket.on('captcha_status', function (data) {
         if (data.success) {
           self._place(self.lastPixel.x, self.lastPixel.y, self.lastPixel.color);
 
@@ -309,12 +314,12 @@ module.exports.place = (function() {
         }
         uiHelper.toggleCaptchaLoading(false);
       });
-      socket.on('can_undo', function(data) {
+      socket.on('can_undo', function (data) {
         document.body.classList.add('undo-visible');
         self.elements.undo.addClass('open');
         self.can_undo = true;
         if (self.undoTimeout !== false) clearTimeout(self.undoTimeout);
-        self.undoTimeout = setTimeout(function() {
+        self.undoTimeout = setTimeout(function () {
           document.body.classList.remove('undo-visible');
           self.elements.undo.removeClass('open');
           self.can_undo = false;
@@ -322,7 +327,7 @@ module.exports.place = (function() {
         }, data.time * 1000);
       });
       self.elements.undo.click(self.undo);
-      window.recaptchaCallback = function(token) {
+      window.recaptchaCallback = function (token) {
         self.isDoingCaptcha = false;
         socket.send({
           type: 'captcha',
@@ -337,11 +342,11 @@ module.exports.place = (function() {
         self.switch(newVal <= -1 ? self.palette.length - 1 : newVal);
       });
 
-      settings.place.deselectonplace.enable.listen(function(value) {
+      settings.place.deselectonplace.enable.listen(function (value) {
         self.setAutoReset(value);
       });
     },
-    getPaletteABGR: function() {
+    getPaletteABGR: function () {
       const result = new Uint32Array(self.palette.length);
       for (const i in self.palette) {
         const { r, g, b } = hexToRGB(self.palette[i].value);
@@ -364,6 +369,7 @@ module.exports.place = (function() {
     togglePaletteSpecialColors: self.togglePaletteSpecialColors,
     setAutoReset: self.setAutoReset,
     setNumberedPaletteEnabled: self.setNumberedPaletteEnabled,
+    setSymbolPaletteEnabled: self.setSymbolPaletteEnabled,
     get color() {
       return self.color;
     },

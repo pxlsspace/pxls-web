@@ -614,6 +614,10 @@ msgid "Add numbers to palette entries"
 msgstr "Add numbers to palette entries"
 
 #: /views/index.handlebars
+msgid "Add symbols to palette entries"
+msgstr "Add symbols to palette entries"
+
+#: /views/index.handlebars
 msgid "scrollbar;palette scrolling"
 msgstr "scrollbar;palette scrolling"
 
