@@ -514,7 +514,9 @@ dt {
 
 @font-face {
     font-family: "Pxls Symbols";
-    src: url(./webfonts/PxlsSymbols.ttf) format("truetype");
+    src: url(webfonts/PxlsSymbols.ttf) format("truetype"),
+        url(webfonts/PxlsSymbols.woff) format("woff"),
+        url(webfonts/PxlsSymbols.woff2) format("woff2")
 }
 
 /*//////////////////////////*\
