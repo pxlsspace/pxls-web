@@ -521,14 +521,12 @@
                         </div>
                         <div data-keywords="{{{i18n 'indexed colors;palette indicies'}}}">
                             <label class="input-group">
-                                <input id="setting-ui-palette-numbers-enable" type="checkbox">
-                                <span class="label-text">{{{i18n 'Add numbers to palette entries'}}}</span>
-                            </label>
-                        </div>
-                        <div data-keywords="{{{i18n 'indexed colors;palette indicies'}}}">
-                            <label class="input-group">
-                                <input id="setting-ui-palette-symbols-enable" type="checkbox">
-                                <span class="label-text">{{{i18n 'Add symbols to palette entries'}}}</span>
+                                <span class="label-text">{{{i18n 'Add labels to palette entries:'}}}</span>
+                                <select id="setting-ui-palette-style">
+                                    <option value="off">{{{i18n 'Off'}}}</option>
+                                    <option value="numbers">{{{i18n 'Numbers'}}}</option>
+                                    <option value="symbols">{{{i18n 'Symbols'}}}</option>
+                                </select>
                             </label>
                         </div>
                         <div data-keywords="{{{i18n 'scrollbar;palette scrolling'}}}">

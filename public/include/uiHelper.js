@@ -161,14 +161,8 @@ const uiHelper = (function () {
           .toggleClass('fa-unlock', !value);
       });
 
-      settings.ui.palette.numbers.enable.listen(function (value) {
-        place.setNumberedPaletteEnabled(value);
-        document.querySelector('#setting-ui-palette-symbols-enable').disabled = value;
-      });
-
-      settings.ui.palette.symbols.enable.listen(function (value) {
-        place.setSymbolPaletteEnabled(value);
-        document.querySelector('#setting-ui-palette-numbers-enable').disabled = value;
+      settings.ui.palette.style.listen(function (value) {
+        place.setPaletteStyle(value);
       });
 
       settings.ui.palette.scrollbar.thin.enable.listen(function (value) {

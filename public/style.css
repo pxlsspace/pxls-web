@@ -982,9 +982,16 @@ dt {
     font-family: "Pxls Symbols";
 }
 
-#palette.no-numbers .palette-number,
-#palette.no-symbols .palette-symbol {
+#palette.no-pills .palette-number,
+#palette.no-pills .palette-symbol,
+#palette.palette-numbers .palette-symbol,
+#palette.palette-symbols .palette-number {
     display: none !important;
+}
+
+#palette.palette-numbers .palette-number,
+#palette.palette-symbols .palette-symbol {
+    display: block !important;
 }
 
 #reticule {

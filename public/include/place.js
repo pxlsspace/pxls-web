@@ -130,11 +130,21 @@ module.exports.place = (function () {
         self.toggleCursor(true);
       }
     },
-    setNumberedPaletteEnabled: function (shouldBeNumbered) {
-      self.elements.palette[0].classList.toggle('no-numbers', !shouldBeNumbered);
-    },
-    setSymbolPaletteEnabled: function (shouldBeSymbols) {
-      self.elements.palette[0].classList.toggle('no-symbols', !shouldBeSymbols);
+    setPaletteStyle: function (style) {
+      const styles = ['no-pills', 'palette-numbers', 'palette-symbols'];
+      self.elements.palette[0].classList.remove(...styles);
+
+      switch (style) {
+        case 'off':
+          self.elements.palette[0].classList.add('no-pills');
+          break;
+        case 'numbers':
+          self.elements.palette[0].classList.add('palette-numbers');
+          break;
+        case 'symbols':
+          self.elements.palette[0].classList.add('palette-symbols');
+          break;
+      }
     },
     toggleReticule: (show) => {
       if (show && settings.ui.reticule.enable.get()) {
@@ -368,8 +378,7 @@ module.exports.place = (function () {
     getPaletteABGR: self.getPaletteABGR,
     togglePaletteSpecialColors: self.togglePaletteSpecialColors,
     setAutoReset: self.setAutoReset,
-    setNumberedPaletteEnabled: self.setNumberedPaletteEnabled,
-    setSymbolPaletteEnabled: self.setSymbolPaletteEnabled,
+    setPaletteStyle: self.setPaletteStyle,
     get color() {
       return self.color;
     },
