@@ -8,20 +8,23 @@ module.exports.createImageData = function (w, h) {
   try {
     return new ImageData(w, h);
   } catch (e) {
-    const imgCanv = document.createElement('canvas');
+    const imgCanv = document.createElement("canvas");
     imgCanv.width = w;
     imgCanv.height = h;
-    return imgCanv.getContext('2d').getImageData(0, 0, w, h);
+    return imgCanv.getContext("2d").getImageData(0, 0, w, h);
   }
 };
-module.exports.intToHex = (i) => `#${('000000' + (i >>> 0).toString(16)).slice(-6)}`;
+module.exports.intToHex = (i) =>
+  `#${("000000" + (i >>> 0).toString(16)).slice(-6)}`;
 module.exports.hexToRGB = function (hex) {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result ? {
-    r: parseInt(result[1], 16),
-    g: parseInt(result[2], 16),
-    b: parseInt(result[3], 16)
-  } : null;
+  return result
+    ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16),
+      }
+    : null;
 };
 module.exports.analytics = function () {
   if (window.ga) {
@@ -29,18 +32,18 @@ module.exports.analytics = function () {
   }
 };
 module.exports.indexToSymbol = (i) => {
-  const dict = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh';
+  const charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh";
 
-  if (i < 0 || i >= dict.length) {
-    return '';
+  if (i < 0 || i >= charSet.length) {
+    return "";
   }
 
-  return dict[i];
+  return charSet[i];
 };
 
 class LazyPromise extends Promise {
   constructor(execute) {
-    super(resolve => {
+    super((resolve) => {
       resolve();
     });
     this.execute = execute;
@@ -48,7 +51,7 @@ class LazyPromise extends Promise {
   }
 
   static wrap(createPromise) {
-    return new LazyPromise(resolve => {
+    return new LazyPromise((resolve) => {
       resolve(createPromise());
     });
   }
@@ -73,41 +76,59 @@ module.exports.LazyPromise = LazyPromise;
 
 const nua = navigator.userAgent;
 let haveImageRendering = (function () {
-  const checkImageRendering = function (prefix, crisp, pixelated, optimizeContrast) {
-    const d = document.createElement('div');
+  const checkImageRendering = function (
+    prefix,
+    crisp,
+    pixelated,
+    optimizeContrast
+  ) {
+    const d = document.createElement("div");
     if (crisp) {
-      d.style.imageRendering = prefix + 'crisp-edges';
-      if (d.style.imageRendering === prefix + 'crisp-edges') {
+      d.style.imageRendering = prefix + "crisp-edges";
+      if (d.style.imageRendering === prefix + "crisp-edges") {
         return true;
       }
     }
     if (pixelated) {
-      d.style.imageRendering = prefix + 'pixelated';
-      if (d.style.imageRendering === prefix + 'pixelated') {
+      d.style.imageRendering = prefix + "pixelated";
+      if (d.style.imageRendering === prefix + "pixelated") {
         return true;
       }
     }
     if (optimizeContrast) {
-      d.style.imageRendering = prefix + 'optimize-contrast';
-      if (d.style.imageRendering === prefix + 'optimize-contrast') {
+      d.style.imageRendering = prefix + "optimize-contrast";
+      if (d.style.imageRendering === prefix + "optimize-contrast") {
         return true;
       }
     }
     return false;
   };
-  return checkImageRendering('', true, true, false) || checkImageRendering('-o-', true, false, false) || checkImageRendering('-moz-', true, false, false) || checkImageRendering('-webkit-', true, false, true);
+  return (
+    checkImageRendering("", true, true, false) ||
+    checkImageRendering("-o-", true, false, false) ||
+    checkImageRendering("-moz-", true, false, false) ||
+    checkImageRendering("-webkit-", true, false, true)
+  );
 })();
 let haveZoomRendering = false;
 const webkitBased = nua.match(/AppleWebKit/i);
-const iOSSafari = (nua.match(/(iPod|iPhone|iPad)/i) && webkitBased);
-const desktopSafari = (nua.match(/safari/i) && !nua.match(/chrome/i));
-const msEdge = nua.indexOf('Edge') > -1;
-const possiblyMobile = window.innerWidth < 768 && nua.includes('Mobile');
+const iOSSafari = nua.match(/(iPod|iPhone|iPad)/i) && webkitBased;
+const desktopSafari = nua.match(/safari/i) && !nua.match(/chrome/i);
+const msEdge = nua.indexOf("Edge") > -1;
+const possiblyMobile = window.innerWidth < 768 && nua.includes("Mobile");
 if (iOSSafari) {
-  const iOS = parseFloat(
-    ('' + (/CPU.*OS ([0-9_]{1,5})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0, ''])[1])
-      .replace('undefined', '3_2').replace('_', '.').replace('_', '')
-  ) || false;
+  const iOS =
+    parseFloat(
+      (
+        "" +
+        (/CPU.*OS ([0-9_]{1,5})|(CPU like).*AppleWebKit.*Mobile/i.exec(
+          navigator.userAgent
+        ) || [0, ""])[1]
+      )
+        .replace("undefined", "3_2")
+        .replace("_", ".")
+        .replace("_", "")
+    ) || false;
   haveImageRendering = false;
   if (iOS >= 11) {
     haveZoomRendering = true;
@@ -123,5 +144,5 @@ module.exports.flags = {
   haveZoomRendering,
   webkitBased,
   possiblyMobile,
-  haveImageRendering
+  haveImageRendering,
 };
