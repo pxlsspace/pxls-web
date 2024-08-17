@@ -637,12 +637,8 @@ msgstr ""
 msgid "indexed colors;palette indicies"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "Add numbers to palette entries"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Add symbols to palette entries"
+#: /vies/index.handlebars
+msgid "Show labels on the palette:"
 msgstr ""
 
 #: /views/index.handlebars

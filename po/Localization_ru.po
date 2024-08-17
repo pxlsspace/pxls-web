@@ -609,9 +609,9 @@ msgstr "Инвертировать направление прокрутки"
 msgid "indexed colors;palette indicies"
 msgstr "индексированные цвета;индексы палитры"
 
-#: /views/index.handlebars
-msgid "Add numbers to palette entries"
-msgstr "Добавить номера к цветам палитры"
+#: /vies/index.handlebars
+msgid "Show labels on the palette:"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "scrollbar;palette scrolling"
@@ -2519,6 +2519,9 @@ msgstr ""
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Предупреждение"
+
+#~ msgid "Add numbers to palette entries"
+#~ msgstr "Добавить номера к цветам палитры"
 
 #~ msgid "Subreddit"
 #~ msgstr "Subreddit"

@@ -615,9 +615,9 @@ msgstr "o ante e tawa poka kule"
 msgid "indexed colors;palette indicies"
 msgstr ""
 
-#: /views/index.handlebars
-msgid "Add numbers to palette entries"
-msgstr "o pana e nanpa tawa kule"
+#: /vies/index.handlebars
+msgid "Show labels on the palette:"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "scrollbar;palette scrolling"
@@ -2526,3 +2526,6 @@ msgstr ""
 #: /public/pxls.js
 msgid "Alert"
 msgstr ""
+
+#~ msgid "Add numbers to palette entries"
+#~ msgstr "o pana e nanpa tawa kule"
