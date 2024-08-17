@@ -1,952 +1,892 @@
 <!DOCTYPE html>
 <html lang="{{lang}}">
-
 <head>
-  <meta charset="UTF-8">
-  <title>{{title}}</title>
-  <meta name="keywords" content="pxls, pixels, place, place clone, art, r/place">
-  {{! Site description }}
-  <meta name="description" content="{{{i18n 'Place pixels with people to create art'}}}">
-  <meta name="google-play-app" content="app-id=space.pxls.android">
-  <link rel="stylesheet" href="jquery.modal.min.css">
-  <link rel="stylesheet" href="fontawesome-all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="SLIDEIN.css">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <script src="./jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.8/interact.min.js"></script>
-  <script src="moment.min.js"></script>
-  <script src="crel.min.js"></script>
-  <script src="emoji-button.min.js"></script>
-  <script src="twemoji.min.js"></script>
-  <script src="emojiDB.min.js"></script>
-  <script src="pxlsMarkdown.min.js"></script>
-  <script src="jquery.modal.min.js"></script>
-  <script src="SLIDEIN.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta name="theme-color">
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="keywords" content="pxls, pixels, place, place clone, art, r/place">
+    {{! Site description }}
+    <meta name="description" content="{{{i18n 'Place pixels with people to create art'}}}">
+    <meta name="google-play-app" content="app-id=space.pxls.android">
+    <link rel="stylesheet" href="jquery.modal.min.css">
+    <link rel="stylesheet" href="fontawesome-all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="SLIDEIN.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="./jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.8/interact.min.js"></script>
+    <script src="moment.min.js"></script>
+    <script src="crel.min.js"></script>
+    <script src="emoji-button.min.js"></script>
+    <script src="twemoji.min.js"></script>
+    <script src="emojiDB.min.js"></script>
+    <script src="pxlsMarkdown.min.js"></script>
+    <script src="jquery.modal.min.js"></script>
+    <script src="SLIDEIN.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="theme-color">
 </head>
-
 <body class="show-placeable-bubble">
-  <header class="transparent controls">
+<header class="transparent controls">
     <div class="left">
-      <button type="button" class="panel-trigger" data-panel="info">
-        <i class="fas fa-info-circle"></i>
-      </button>
-      <button type="button" class="panel-trigger" data-panel="faq">
-        <i class="fas fa-question-circle"></i>
-      </button>
-      <button type="button" class="panel-trigger" data-panel="notifications">
-        <i class="fas fa-bell" id="notifications-icon"></i>
-        <i class="fas fa-circle ping-counter" id="notifications-ping-counter"></i>
-      </button>
+        <button type="button" class="panel-trigger" data-panel="info">
+            <i class="fas fa-info-circle"></i>
+        </button>
+        <button type="button" class="panel-trigger" data-panel="faq">
+            <i class="fas fa-question-circle"></i>
+        </button>
+        <button type="button" class="panel-trigger" data-panel="notifications">
+            <i class="fas fa-bell" id="notifications-icon"></i>
+            <i class="fas fa-circle ping-counter" id="notifications-ping-counter"></i>
+        </button>
     </div>
     <div class="mid"></div>
     <div class="right">
-      <button type="button" class="panel-trigger" id="lock-button">
-        <i class="fas fa-lock"></i>
-      </button>
-      <button type="button" class="panel-trigger" data-panel="settings">
-        <i class="fas fa-cog"></i>
-      </button>
-      <button type="button" class="panel-trigger" data-panel="chat">
-        <i class="fas fa-comment-alt" id="message-icon"></i>
-        <i class="fas fa-circle ping-counter" id="ping-counter"></i>
-      </button>
+        <button type="button" class="panel-trigger" id="lock-button">
+            <i class="fas fa-lock"><A/i>
+        </button>
+        <button type="button" class="panel-trigger" data-panel="settings">
+            <i class="fas fa-cog"></i>
+        </button>
+        <button type="button" class="panel-trigger" data-panel="chat">
+            <i class="fas fa-comment-alt" id="message-icon"></i>
+            <i class="fas fa-circle ping-counter" id="ping-counter"></i>
+        </button>
     </div>
-  </header>
+</header>
 
-  <div id="reconnecting">{{{i18n 'Lost connection to server, reconnecting...'}}}</div>
+<div id="reconnecting">{{{i18n 'Lost connection to server, reconnecting...'}}}</div>
 
-  <main>
+<main>
     <div id="board-container" style="touch-action: none">
-      <div id="grid" class="overlay transparent"></div>
-      <div id="board-zoomer">
-        <div id="board-mover">
-          <canvas id="board" class="pixelate noselect" width="100" height="100"></canvas>
+        <div id="grid" class="overlay transparent"></div>
+        <div id="board-zoomer">
+            <div id="board-mover">
+                <canvas id="board" class="pixelate noselect" width="100" height="100"></canvas>
+            </div>
         </div>
-      </div>
     </div>
 
     <div id="ui">
-      <div id="ui-top">
-        <div id="loading-bubble" class="bubble">
-          <div class="loading-bubble-item" data-process="heatmap">{{{i18n 'Loading Heatmap (press <kbd>H</kbd> to
-            cancel)'}}}</div>
-          <div class="loading-bubble-item" data-process="virginmap">{{{i18n 'Loading Virginmap (press <kbd>X</kbd> to
-            cancel)'}}}</div>
+        <div id="ui-top">
+            <div id="loading-bubble" class="bubble">
+                <div class="loading-bubble-item" data-process="heatmap">{{{i18n 'Loading Heatmap (press <kbd>H</kbd> to cancel)'}}}</div>
+                <div class="loading-bubble-item" data-process="virginmap">{{{i18n 'Loading Virginmap (press <kbd>X</kbd> to cancel)'}}}</div>
+            </div>
+            <div id="main-bubble" class="bubble">
+                <button id="setting-ui-bubble-compact"><i class="fas fa-angle-down"></i></button>
+                <div id="user-info" class="toggeable">
+                    <i class="fas fa-user"></i>
+                    <!-- TODO: link to position on stats page -->
+                    <span id="username"></span>
+                    <a href="/logout" class="logout"><i title="{{{i18n 'Logout'}}}" class="fas fa-sign-out-alt" id="logout-icon"></i></a>
+                </div>
+                <div id="pixel-counts" class="toggeable">
+                    <i class="fas fa-chart-line"></i>
+                    <ul>
+                        {{! Canvas pixel count }}
+                        <li><span>{{{i18n 'Canvas:'}}} </span><span id="current-pixel-count">{{{i18n 'N/A'}}}</span></li>
+                        {{! All time pixel count }}
+                        <li><span>{{{i18n 'All Time:'}}} </span><span id="alltime-pixel-count">{{{i18n 'N/A'}}}</span></li>
+                    </ul>
+                </div>
+                <div class="toggeable">
+                    <i class="fas fa-users"></i>
+                    <span id="online-count">{{{i18n 'Loading online user count&hellip;'}}}</span>
+                </div>
+                <div id="coords-info" class="toggeable">
+                    <a class="coords"></a>
+                    <i id="canvas-lock-icon" class="fas fa-lock"></i>
+                </div>
+                <div id="placement-info">
+                    <span id="placeable-count">{{{i18n 'N/A'}}}</span>
+                    <span>{{{i18n 'Pixels'}}}</span>
+                    <i class="fas fa-spinner fa-spin captcha-loading-icon"></i>
+                </div>
+                <div id="cooldown">
+                    <i class="far fa-clock"></i>
+                    <span id="cooldown-timer"></span>
+                </div>
+            </div>
         </div>
-        <div id="main-bubble" class="bubble">
-          <button id="setting-ui-bubble-compact"><i class="fas fa-angle-down"></i></button>
-          <div id="user-info" class="toggeable">
-            <i class="fas fa-user"></i>
-            <!-- TODO: link to position on stats page -->
-            <span id="username"></span>
-            <a href="/logout" class="logout"><i title="{{{i18n 'Logout'}}}" class="fas fa-sign-out-alt"
-                id="logout-icon"></i></a>
-          </div>
-          <div id="pixel-counts" class="toggeable">
-            <i class="fas fa-chart-line"></i>
-            <ul>
-              {{! Canvas pixel count }}
-              <li><span>{{{i18n 'Canvas:'}}} </span><span id="current-pixel-count">{{{i18n 'N/A'}}}</span></li>
-              {{! All time pixel count }}
-              <li><span>{{{i18n 'All Time:'}}} </span><span id="alltime-pixel-count">{{{i18n 'N/A'}}}</span></li>
-            </ul>
-          </div>
-          <div class="toggeable">
-            <i class="fas fa-users"></i>
-            <span id="online-count">{{{i18n 'Loading online user count&hellip;'}}}</span>
-          </div>
-          <div id="coords-info" class="toggeable">
-            <a class="coords"></a>
-            <i id="canvas-lock-icon" class="fas fa-lock"></i>
-          </div>
-          <div id="placement-info">
-            <span id="placeable-count">{{{i18n 'N/A'}}}</span>
-            <span>{{{i18n 'Pixels'}}}</span>
-            <i class="fas fa-spinner fa-spin captcha-loading-icon"></i>
-          </div>
-          <div id="cooldown">
-            <i class="far fa-clock"></i>
-            <span id="cooldown-timer"></span>
-          </div>
-        </div>
-      </div>
 
-      <div id="ui-bottom">
-        <button type="button" id="undo"><span>{{{i18n 'Undo'}}}</span></button>
-        <div id="login-overlay" class="palette-overlay">
-          <div id="sign-in-with">
-            <span>{{{i18n 'You are not signed in.'}}}</span>
-            <a href="#">{{{i18n 'Sign in with...'}}}</a>
-          </div>
-          {{! Populated if legal.termsUrl exists on /info }}
-          <span id="legal"></span>
+        <div id="ui-bottom">
+            <button type="button" id="undo"><span>{{{i18n 'Undo'}}}</span></button>
+            <div id="login-overlay" class="palette-overlay">
+                <div id="sign-in-with">
+                    <span>{{{i18n 'You are not signed in.'}}}</span>
+                    <a href="#">{{{i18n 'Sign in with...'}}}</a>
+                </div>
+                {{! Populated if legal.termsUrl exists on /info }}
+                <span id="legal"></span>
+            </div>
+            <div id="user-message" class="palette-overlay"></div>
+            <div id="palette"></div>
         </div>
-        <div id="user-message" class="palette-overlay"></div>
-        <div id="palette"></div>
-      </div>
     </div>
-  </main>
+</main>
 
 
-  <div id="lookup" class="floating-panel"></div>
-  <div id="loading"><span>{{{i18n 'Loading...'}}}</span></div>
-  <div id="reticule"></div>
-  <div id="cursor">
-    <div id="cursor-text"><i class="fas fa-spinner fa-spin captcha-loading-icon"></i> <span
-        id="placeableCount-cursor">{{{i18n 'N/A'}}}</span></div>
-  </div>
-  <div id="messages">
+<div id="lookup" class="floating-panel"></div>
+<div id="loading"><span>{{{i18n 'Loading...'}}}</span></div>
+<div id="reticule"></div>
+<div id="cursor">
+    <div id="cursor-text"><i class="fas fa-spinner fa-spin captcha-loading-icon"></i> <span id="placeableCount-cursor">{{{i18n 'N/A'}}}</span></div>
+</div>
+<div id="messages">
     <div id="prompt" class="message floating-panel"></div>
     <div id="signup" class="message floating-panel">
-      <div class="content">
-        <h1>{{{i18n 'Sign up'}}}</h1>
-        <h4>{{{i18n 'Pick a username'}}}</h4>
-        <p>
-          <label class="input-group">
-            <span class="label-text">{{{i18n 'Username:'}}}</span>
-            <input id="signup-username-input" type="text" maxlength="32">
-          </label>
-        </p>
-        <p>
-          <label class="input-group">
-            <span class="label-text">{{{i18n 'Discord Tag (Optional):'}}}</span>
-            <input id="signup-discord-input" type="text" maxlength="64" placeholder="username1234">
-          </label>
-        </p>
-        <div class="error" id="error"></div>
-      </div>
-      <button id="signup-button" class="float-right text-button">{{{i18n 'Sign up'}}}</button>
+        <div class="content">
+            <h1>{{{i18n 'Sign up'}}}</h1>
+            <h4>{{{i18n 'Pick a username'}}}</h4>
+            <p>
+                <label class="input-group">
+                    <span class="label-text">{{{i18n 'Username:'}}}</span>
+                    <input id="signup-username-input" type="text" maxlength="32">
+                </label>
+            </p>
+            <p>
+                <label class="input-group">
+                    <span class="label-text">{{{i18n 'Discord Tag (Optional):'}}}</span>
+                    <input id="signup-discord-input" type="text" maxlength="64" placeholder="username1234">
+                </label>
+            </p>
+            <div class="error" id="error"></div>
+        </div>
+        <button id="signup-button" class="float-right text-button">{{{i18n 'Sign up'}}}</button>
     </div>
-  </div>
-  <div id="drag-drop-target">
+</div>
+<div id="drag-drop-target">
     <div id="drag-drop">
-      <span>{{{i18n 'Drag and drop template image'}}}</span>
+        <span>{{{i18n 'Drag and drop template image'}}}</span>
     </div>
     <button type="button" id="drag-drop-exit">{{{i18n 'Exit'}}}</button>
-  </div>
+</div>
 
 
-  <div class="g-recaptcha" data-callback="recaptchaCallback" data-size="invisible"></div>
+<div class="g-recaptcha"
+     data-callback="recaptchaCallback"
+     data-size="invisible"></div>
 
-  <aside class="panel left" data-panel="info">
+<aside class="panel left" data-panel="info">
     <header class="panel-header">
-      <div class="left"></div>
-      <div class="mid">
+        <div class="left"></div>
+        <div class="mid">
+            <h2>
+                <i class="fas fa-info-circle fa-is-left"></i>
+                <span class="panel-title">{{{i18n 'Info'}}}</span>
+            </h2>
+        </div>
+        <div class="right">
+            <button type="button" class="panel-closer"><i class="fas fa-times"></i></button>
+        </div>
+    </header>
+    <div class="panel-body">
+        {{> info}}
+    </div>
+</aside>
+
+<aside id="chat" data-panel="chat" class="panel right">
+    <header class="panel-header">
+        <div class="left">
+            <button type="button" class="panel-closer" title="{{{i18n 'Close Panel'}}}"><i class="fas fa-times"></i></button>
+        </div>
         <h2>
-          <i class="fas fa-info-circle fa-is-left"></i>
-          <span class="panel-title">{{{i18n 'Info'}}}</span>
+            <i class="fas fa-comment-alt fa-is-left"></i>
+            <span class="panel-title">{{{i18n 'Chat'}}}</span>
+            <span class="mobile-only" id="txtMobileChatCooldown"></span>
         </h2>
-      </div>
-      <div class="right">
-        <button type="button" class="panel-closer"><i class="fas fa-times"></i></button>
-      </div>
+        <div class="right">
+            <button type="button" title="{{{i18n 'Pings'}}}"><i class="fas fa-at" id="btnPings"></i></button>
+            <button type="button" title="{{{i18n 'Settings'}}}"><i class="fas fa-cogs" id="btnChatSettings"></i></button>
+        </div>
     </header>
     <div class="panel-body">
-      {{> info}}
+        <div class="chat-wrapper">
+            <ul id="chat-body" class="chat-body"></ul>
+            <div class="chat-hints">
+                <span id="chat-hint"></span>
+            </div>
+            <div class="chat-controls">
+                <div class="chat-ratelimit-overlay"><span id="chat-ratelimit">3s</span></div>
+                <button type="button" class="fullwidth" id="jump-to-bottom" style="display: none;">
+                    <i class="fas fa-arrow-down fa-is-right" style="float: left; margin-top: 4px;"></i>
+                    <span>{{{i18n 'Jump To Bottom'}}}</span>
+                    <i class="fas fa-arrow-down fa-is-left" style="float: right; margin-top: 4px;"></i>
+                </button>
+                <div id="reply-label" class="fullwidth" style="display: none;">
+                    <span id="reply-label-username">
+                        <span style="margin-left: 5px;">{{{i18n 'Replying to'}}}</span>
+                    </span>
+                    <button type="button" id="toggle-mention" data-state="On">
+                        <i class="fas fa-at"></i>
+                        <span id="toggle-mention-label">{{{i18n 'On'}}}</span>
+                    </button>
+                    <button type="button" id="cancel-reply">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="typeahead" style="display: none;">
+                    <button data-dismiss="typeahead" class="text-muted" style="width: 100%; font-size: inherit; display:block; padding-top: .25rem; padding-bottom: .25rem; margin: 0 0 .5rem 0rem; text-align: center; font-style: italic;">Tap here or press ESC to cancel</button>
+                    <ul></ul>
+                </div>
+                {{! Open emoji picker }}
+                <button type="button" title="{{{i18n 'Emoji'}}}" id="emojiPanelTrigger"><i class="far fa-grin"></i></button>
+                <label><textarea name="txtChatContent" id="txtChatContent" placeholder="Press ENTER to send..."></textarea></label>
+                <div class="bottom-banner" id="bottom-banner"></div>
+            </div>
+        </div>
     </div>
-  </aside>
+</aside>
 
-  <aside id="chat" data-panel="chat" class="panel right">
+
+<aside id="settings" data-panel="settings" class="panel right">
     <header class="panel-header">
-      <div class="left">
-        <button type="button" class="panel-closer" title="{{{i18n 'Close Panel'}}}"><i
-            class="fas fa-times"></i></button>
-      </div>
-      <h2>
-        <i class="fas fa-comment-alt fa-is-left"></i>
-        <span class="panel-title">{{{i18n 'Chat'}}}</span>
-        <span class="mobile-only" id="txtMobileChatCooldown"></span>
-      </h2>
-      <div class="right">
-        <button type="button" title="{{{i18n 'Pings'}}}"><i class="fas fa-at" id="btnPings"></i></button>
-        <button type="button" title="{{{i18n 'Settings'}}}"><i class="fas fa-cogs" id="btnChatSettings"></i></button>
-      </div>
+        <div class="left">
+            <button type="button" class="panel-closer" title="{{{i18n 'Close Panel'}}}"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mid">
+            <h2>
+                <i class="fas fa-cogs fa-is-left"></i>
+                <span class="panel-title">{{{i18n 'Settings'}}}</span>
+            </h2>
+        </div>
+        <div class="right"></div>
     </header>
     <div class="panel-body">
-      <div class="chat-wrapper">
-        <ul id="chat-body" class="chat-body"></ul>
-        <div class="chat-hints">
-          <span id="chat-hint"></span>
-        </div>
-        <div class="chat-controls">
-          <div class="chat-ratelimit-overlay"><span id="chat-ratelimit">3s</span></div>
-          <button type="button" class="fullwidth" id="jump-to-bottom" style="display: none;">
-            <i class="fas fa-arrow-down fa-is-right" style="float: left; margin-top: 4px;"></i>
-            <span>{{{i18n 'Jump To Bottom'}}}</span>
-            <i class="fas fa-arrow-down fa-is-left" style="float: right; margin-top: 4px;"></i>
-          </button>
-          <div id="reply-label" class="fullwidth" style="display: none;">
-            <span id="reply-label-username">
-              <span style="margin-left: 5px;">{{{i18n 'Replying to'}}}</span>
-            </span>
-            <button type="button" id="toggle-mention" data-state="On">
-              <i class="fas fa-at"></i>
-              <span id="toggle-mention-label">{{{i18n 'On'}}}</span>
-            </button>
-            <button type="button" id="cancel-reply">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-          <div id="typeahead" style="display: none;">
-            <button data-dismiss="typeahead" class="text-muted"
-              style="width: 100%; font-size: inherit; display:block; padding-top: .25rem; padding-bottom: .25rem; margin: 0 0 .5rem 0rem; text-align: center; font-style: italic;">Tap
-              here or press ESC to cancel</button>
-            <ul></ul>
-          </div>
-          {{! Open emoji picker }}
-          <button type="button" title="{{{i18n 'Emoji'}}}" id="emojiPanelTrigger"><i class="far fa-grin"></i></button>
-          <label><textarea name="txtChatContent" id="txtChatContent"
-              placeholder="Press ENTER to send..."></textarea></label>
-          <div class="bottom-banner" id="bottom-banner"></div>
-        </div>
-      </div>
+        <input id="settings-search-input" type="search" placeholder="{{{i18n 'Search'}}}" class="fullwidth" />
+        <article data-id="keybinds" class="no-p-margin" data-keywords="{{{i18n 'keybinds;keys;keyboard;hotkeys'}}}">
+            <header>
+                <h3>{{{i18n 'Keybinds'}}}</h3>
+            </header>
+            <div class="pad-wrapper">
+                <section data-keywords="{{{i18n 'general'}}}">
+                    {{! General settings }}
+                    <h4>{{{i18n 'General'}}}</h4>
+                    <p data-keywords="{{{i18n 'move;moving;panning;drag'}}}">{{{i18n 'Mouse/arrows/wasd to pan'}}}</p>
+                    <p data-keywords="{{{i18n 'mousewheel;zooming'}}}">{{{i18n 'Scroll/pinch to zoom'}}}</p>
+                    <p data-keywords="{{{i18n 'scroll;zooming'}}}">{{{i18n '<kbd>+</kbd>/<kbd>-</kbd> or <kbd>Q</kbd>/<kbd>E</kbd> to zoom'}}}</p>
+                    <p data-keywords="{{{i18n 'lookups'}}}">{{{i18n '<kbd>Shift</kbd> + Click/Hold touch to lookup pixel'}}}</p>
+                    <p data-keywords="{{{i18n 'overlays;alignment;grid hidden;grid shown;hide grid;show grid'}}}">{{{i18n '<kbd>G</kbd> to toggle grid'}}}</p>
+                    <p data-keywords="{{{i18n 'close;information shown;information hidden;info shown;info hidden;hide information;show information'}}}">{{{i18n '<kbd>I</kbd> to open info'}}}</p>
+                    <p data-keywords="{{{i18n 'close;settings hidden;settings shown;hide settings;show settings'}}}">{{{i18n '<kbd>T</kbd> to open settings'}}}</p>
+                    <p data-keywords="{{{i18n 'close;chat hidden;chat shown;hide chat;show chat'}}}">{{{i18n '<kbd>B</kbd> to open chat'}}}</p>
+                    <p data-keywords="{{{i18n 'canvas locked;move;moving;zoom;zooming'}}}">{{{i18n '<kbd>L</kbd> to toggle locking panning of the canvas'}}}</p>
+                    <p data-keywords="{{{i18n 'take screenshot;image;download;picture;canvas'}}}">{{{i18n '<kbd>P</kbd> to take a snapshot'}}}</p>
+                    <p data-keywords="{{{i18n 'overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap'}}}">{{{i18n '<kbd>H</kbd> to toggle heatmap'}}}</p>
+                    <p data-keywords="{{{i18n 'overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap'}}}">{{{i18n '<kbd>X</kbd> to toggle virginmap'}}}</p>
+                    <p data-keywords="{{{i18n 'overlays;user activity;pixels placed pixels;wipe;clean;'}}}">{{{i18n '<kbd>O</kbd> to clear heatmap'}}}</p>
+                    <p data-keywords="{{{i18n 'overlays;user activity;pixels unplaced pixels;wipe;clean;'}}}">{{{i18n '<kbd>U</kbd> to clear virginmap'}}}</p>
+                    <p data-keywords="{{{i18n 'next color;previous color'}}}">{{{i18n '<kbd>J</kbd>/<kbd>K</kbd> to cycle through palette colors'}}}</p>
+                    <p data-keywords="{{{i18n 'current coordinates;coords'}}}">{{{i18n '<kbd>C</kbd> to copy link of moused-over coordinates'}}}</p>
+                    <p data-keywords="{{{i18n 'cancel selection'}}}">{{{i18n '<kbd>ESC</kbd> to deselect current pixel'}}}</p>
+                    <p data-keywords="{{{i18n 'recenter;jump;center on template;guides;focus'}}}">{{{i18n '<kbd>R</kbd> to center the board on the current template'}}}</p>
+                </section>
+
+                <section data-keywords="{{{i18n 'templates;guides'}}}">
+                    <h4>{{{i18n 'Template'}}}</h4>
+                    <p data-keywords="{{{i18n 'transparency'}}}">{{{i18n '<kbd>Page Up</kbd> to increase opacity'}}}</p>
+                    <p data-keywords="{{{i18n 'transparency'}}}">{{{i18n '<kbd>Page Down</kbd> to decrease opacity'}}}</p>
+                    <p data-keywords="{{{i18n 'hidden;shown;hide;show'}}}">{{{i18n '<kbd>V</kbd> to toggle visibility'}}}</p>
+                </section>
+
+                <br/>
+                <small>
+                    {{{i18n 'Note: These values are based on QWERTY keyboards. For other layouts, use the keys corresponding to the same position on a QWERTY keyboard.'}}}
+                </small>
+            </div>
+        </article>
+        <article data-id="templates" data-keywords="{{{i18n 'templates;overlays;guides'}}}">
+            <header>
+                <h3>{{{i18n 'Template'}}}</h3>
+            </header>
+            <div class="pad-wrapper">
+                <section data-keywords="{{{i18n 'templates;overlays;image;pixel art'}}}">
+                    <div data-keywords="{{{i18n 'template enabled;template disabled;show template;hide template;template shown;template hidden'}}}">
+                        <label class="input-group">
+                            <input type="checkbox" id="template-use">
+                            <span class="label-text">{{{i18n 'Use template'}}}</span>
+                        </label>
+                    </div>
+                    <p>{{{i18n 'Hold down <kbd>Ctrl</kbd> (or <kbd>Option</kbd> on mac) to drag the template around'}}}</p>
+                    <div data-keywords="{{{i18n 'template title;template name;tab name;tab title;title='}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Title:'}}}</span>
+                            <input class="fullwidth" type="text" id="template-title">
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'template location source;template source URL;template URL;template='}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'URL:'}}}</span>
+                            <input class="fullwidth" type="text" id="template-url" autocomplete="off">
+                            <input type="file" id="template-file-selector" accept="image/png, image/jpeg, image/webp" onchange="App.uiHelper.handleFile(this)">
+                        </label>
+                        <label id="template-image-error-warning" for="template-url" class="text-red extra-label"></label>
+                    </div>
+                    <div data-keywords="{{{i18n 'template position;template x;template y;template location; template vertical; template horizontal;ox=;oy='}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Horizontal position:'}}}</span>
+                            <input type="number" min="0" class="template-coords small-input" id="template-coords-x" autocomplete="off">
+                        </label>
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Vertical position:'}}}</span>
+                            <input type="number" min="0" class="template-coords small-input" id="template-coords-y" autocomplete="off">
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'template width;tw='}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Width:'}}}</span>
+                            <input type="number" id="template-width" class="small-input" min="0" autocomplete="off">
+                        </label>
+                        <button class="text-button" id="template-width-reset">{{{i18n 'Reset'}}}</button>
+                    </div>
+                    <div data-keywords="{{{i18n 'template style;custom template'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Style:'}}}</span>
+                            <select id="template-style-mode">
+                                <option value="">{{{i18n 'Use Source Style'}}}</option>
+                                <option value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/gD1AOQaL8IZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIklEQVQ4y2P8////fwYKABMDhWDUgFEDRg0YDAYwMjIyAgBr1AQgfweGSgAAAABJRU5ErkJggg==">{{{i18n '1-to-1'}}}</option>
+                                <option value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGklEQVQoz2P8//8/AymAiYFEMKphVMPQ0QAAVW0DHZ8uFaIAAAAASUVORK5CYII=">{{{i18n '1-to-1 (keep incorrect colors)'}}}</option>
+                                <option value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAAmJLR0QA/4ePzL8AAAAzSURBVFjD7dBBDQAACMSw828aVEAI6R4T0GShGv6DECFChAgRIkSIECFChAgRIkSIruA0nub+AuTzLZoAAAAASUVORK5CYII=">{{{i18n 'Dotted (Small, 1:2)'}}}</option>
+                                <option value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAWklEQVR42u3UwQkAIAwEwcX+e9aP2INkBvK4d2CLqva9cXv5PWgAoAGgARoAGqABoAEaABqgAaABGgAaoAGgARoAGqABoAEaABqgAaABGgAaoAGgAT/vRwOmO8dS/DI1VxCbAAAAAElFTkSuQmCC">{{{i18n 'Dotted (Big, 2:2)'}}}</option>
+                                <option value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAABwAQMAAAD8LmYIAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAZQTFRFAAAAAwMDFQUF7wAAAAJ0Uk5TAP9bkSK1AAAAuUlEQVR4nGNgQAUhjQvdz0uwMfx82OrVIgPkBj/xaOEQ6GRuP9vHAeQGsPjzyVj8LH5+iAXEDTziMd+uplHg+VE+GQaNjwHt5+WB3A+HO+bbMRACDoed+Xg0FIMW97dIMLAwNC45OF8ip+Dh8aN8Ngwsjc2sXfNFBAoePz8xX46B5+DhNj4WlpwCx+NH5W0Yan5+fn6+xU5DwWlxf58EAWs0DFC4NQX4uBaoXAFUvaNgFIyCUTAKaAYAzI49GM5w0hQAAAAASUVORK5CYII=">{{{i18n 'Symbols'}}}</option>
+                                <option value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACwCAYAAACvt+ReAAAE10lEQVR42u3d3bKjKBQGULDy/q/MXE1VdzqRH9kqZq2bqZn5JKAmErbm5JRSSbCw0pGTlb1VdttpoAS9AUpANgW1u0q2dGxTOo7faLu92TTa7vZlozz55P2/zRyQ7RXRj97+zsyWjm1GT97aGI9kR8aWaydwxIEg7g05ms0nvcnCsq8bzrVnvVNr2RyQzReP7eeO33bBp0We/E6NnJr0nJAR7UZOpR5x/LYEC9smrCyMrETMXErpvazd4fI9c3+VnW/2teze8Ss7qwAt7ZYJ50y13deqk/fBbVYb28iY8mLZvf9ebTcnlTgeOIWAZShJyi6bfX3YOH84sfOXF7oyW3amQrXs++vMarc3m7/048w+rJT957htlU/i3HCQ93J77R7N5o4vD+/ZUvmSkRvHdiSbOvqwt/2RbA7av6cdt+0Bqw8jlMDX9M9xq5WS71xKjS5VtmxbDvZ3JJsDsvnEsU09dq+GM75MPnl72s2VQZx1JehdA23pb8/YevdDax/KhWMrM84Vy2gs7dOXuJGSZMslYLTUWbsUtbT7nm25ibqlhPqp3Z7+po7+RuyHnj707t/S8fql8/XLyHzE2qPs7bJKyTxmCgFLcimSXTa7fdiwfPn3NDGbgtq9ezYNZke++JaAbApqdzj75zrw+9rd3lrekeye1vsljmZ7+5snZL/1q2clJw3uwxnZXlGPWP3VX3PgNSh9f/HaeaeXzk+FEpzNAdl88dhSQPanjttWeafX7lZq/ZRovQPqSLanDyWo3ci70XqyvXeutbQbeVdez91onkrmmVOII3c1RV02I+8Ei2g36sc/SuOVo+WSfKS/EdOfw/2wnii7bFYpmaWZA7M8lyLZZbOvD0sUf/4z7XyJ68n++f88PfyDTw9H9WHWI0W17JFHXmqv+WnHzcymjj7Utj2yvpwC9u/yx+3uc2Al1DWddtxelfnw7DJjxI9Kt14pSuM7flY2B2TzxWO73XF7/12IM8qMtXeuEmpDCfWEsR2dSvVOu4ZuWbCMxtJaf9gkHcjNKM3WVgBqlzGl7/7+HhlfrfQ9ejdaOXqSysreKquUzNLMgVmeS5Hsstlv9wMroY5lW7+4KH1Pyr6vQiihHnsquTSMy1Pf4/v3n6w58FxK3yf7VkpWQo35M7Ol4xPzvd0SnM0B2Rw9tq1y+f7Fp4fPOHlr/SgdYysHxta7H3pOyIh2/a1kfmMK0fqJ0rrd3Uq5nh6O3Q8peP8Obywre6usUjJLMwdmeS5Fsstma6Xkb8scSqjPyC5/3Fp+nfKbI0+hRq0vp45s72MsOaC/V2eXP26z5sBKqGta/rjNWgfuyfrh7Pix/cxx2w68Iy95CvWiS5wfzt7f/rKnvi2j8egpxC2fQr355TCiXU9972xrPVF22axSMo+aQkCUsCU7lyLZM7Lhn8BKqOf39xdL31PN+kOHSqhj+yF1ju0ppe+wE9h8jKW/xK1WQj1D5GM3I9mIH5vOF49tyifwij/AfOYndk8JNqLNiDJ/CWr3tOOmlMxjphB+gPn4VErp+4Jpn3VK2TOyYXM7pWTO+h4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE/1H4IIqRgL4W2oAAAAAElFTkSuQmCC">{{{i18n 'Numbers'}}}</option>
+                                <option value="" id="template-style-mode-custom">{{{i18n 'Custom…'}}}</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'template style source;template style URL;custom style URL;custom template'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Custom style URL:'}}}</span>
+                            <input class="fullwidth" type="text" id="template-custom-style-url">
+                        </label>
+                        <label id="template-style-error-warning" for="template-custom-style-url" class="text-red extra-label"></label>
+                    </div>
+                    <div data-keywords="{{{i18n 'template conversion;template palette conversion;convert to palette'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Color Conversion Mode:'}}}</span>
+                            <select id="template-conversion-mode-select">
+                                <option value="unconverted">{{{i18n 'Unconverted'}}}</option>
+                                <option value="nearestCustom">{{{i18n 'Nearest Custom'}}}</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'template transparency;template opacity;oo='}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Opacity:'}}}</span>
+                            <input type="range" id="template-opacity" min="0" max="1" step="0.01" value="0.5" autocomplete="off">
+                            <span class="range-text-value" id="template-opacity-percentage">50%</span>
+                        </label>
+                    </div>
+                </section>
+            </div>
+        </article>
+        <article data-id="ui" data-keywords="{{{i18n 'ui;interface'}}}">
+            <header>
+                <h3>{{{i18n 'UI Settings'}}}</h3>
+            </header>
+            <div class="pad-wrapper">
+                <section>
+                    <div data-keywords="{{{i18n 'language override;text'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Language override:'}}}</span>
+                            <select id="setting-ui-language-override">
+                                <option value="" selected>{{{i18n 'Use Browser Language'}}}</option>
+                                <option value="en" selected>{{{i18n 'English'}}}</option>
+                                <option value="bg" selected>{{{i18n 'Bulgarian'}}}</option>
+                                <option value="fr" selected>{{{i18n 'French'}}}</option>
+                                <option value="de" selected>{{{i18n 'German'}}}</option>
+                                <option value="ru" selected>{{{i18n 'Russian'}}}</option>
+                                <option value="sv" selected>{{{i18n 'Swedish'}}}</option>
+                                <option value="tok" selected>{{{i18n 'Toki Pona'}}}</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'themes;look;stylesheets;visuals'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Theme:'}}}</span>
+                            <select id="setting-ui-theme-index">
+                                <option value="-1" selected>{{{i18n 'Default'}}}</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden'}}}">
+                        <label class="input-group">
+                            <input id="setting-ui-reticule-enable" type="checkbox"/>
+                            <span class="label-text">{{{i18n 'Show reticule'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'hide cursor;cursor shown;cursor hidden'}}}">
+                        <label class="input-group">
+                            <input id="setting-ui-cursor-enable" type="checkbox"/>
+                            <span class="label-text">{{{i18n 'Show cursor'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'darkness filter'}}}">
+                        <label class="input-group">
+                            <input type="checkbox" id="setting-ui-brightness-enable">
+                            <span class="label-text">{{{i18n 'Enable color brightness'}}}</span>
+                        </label>
+                        <label for="setting-ui-brightness-enable" class="text-orange extra-label">
+                            <i class="fas fa-exclamation-triangle"></i> {{{i18n 'Warning: Known to cause fuzziness in Chrome on some Mac/Linux installs'}}}
+                        </label>
+                        <label class="input-group fake-indent">
+                            <span class="label-text">{{{i18n 'Color brightness:'}}}</span>
+                            <input type="range" min="0" max="1" step="0.01" value="1" id="setting-ui-brightness-value">
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'keep current selected;keep curent color;place'}}}">
+                        <label class="input-group">
+                            <input id="setting-place-deselectonplace-enable" type="checkbox"/>
+                            <span class="label-text">{{{i18n 'Deselect color after placing'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'mousewheel;palette scrolling'}}}">
+                        <label class="input-group">
+                            <input id="setting-place-palette-scrolling-enable" type="checkbox"/>
+                            <span class="label-text">{{{i18n 'Enable scrolling on the palette to switch colors'}}}</span>
+                        </label>
+                        <div class="fake-indent" data-keywords="{{{i18n 'reverse scrolling;mousewheel;palette scrolling;enable scrolling on the palette to switch colors'}}}">
+                            <label class="input-group">
+                                <input id="setting-place-palette-scrolling-invert" type="checkbox"/>
+                                <span class="label-text">{{{i18n 'Invert scroll direction'}}}</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div data-keywords="{{{i18n 'indexed colors;palette indicies'}}}">
+                      <label class="input-group">
+                        <span class="label-text">{{{i18n 'Show labels on the palette:'}}}</span>
+                        <select id="setting-ui-palette-style">
+                          <option value="off">{{{i18n 'Off'}}}</option>
+                          <option value="numbers">{{{i18n 'Numbers'}}}</option>
+                          <option value="symbols">{{{i18n 'Symbols'}}}</option>
+                        </select>
+                      </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'scrollbar;palette scrolling'}}}">
+                        <label class="input-group">
+                            <input id="setting-ui-palette-scrollbar-thin-enable" type="checkbox">
+                            <span class="label-text">{{{i18n 'Enable thin scrollbar'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'scrollbar;palette scrolling;palette stack'}}}">
+                        <label class="input-group">
+                            <input id="setting-ui-palette-stacking-enable" type="checkbox">
+                            <span class="label-text">{{{i18n 'Enable palette stacking'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'floating bubble location'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Bubble position:'}}}</span>
+                            <select id="setting-ui-bubble-position">
+                                <option value="top left">{{{i18n 'Top left'}}}</option>
+                                <option value="top right">{{{i18n 'Top right'}}}</option>
+                                <option value="bottom left" selected>{{{i18n 'Bottom left'}}}</option>
+                                <option value="bottom right">{{{i18n 'Bottom right'}}}</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'broken;offset workaround'}}}">
+                        <label class="input-group" id="chrome-canvas-offset-setting">
+                            <input id="setting-fix-chrome-offset-enable" type="checkbox"/>
+                            <span class="label-text">{{{i18n 'Attempt to fix canvas displacement bug in Chrome 78+'}}}</span>
+                        </label>
+                    </div>
+                </section>
+            </div>
+        </article>
+        <article data-id="chat" data-keywords="{{{i18n 'chat;message;ping sound'}}}">
+            <header>
+                <h3>{{{i18n 'Chat Settings'}}}</h3>
+            </header>
+            <div class="pad-wrapper">
+                <section data-keywords="{{{i18n 'username;color;colour'}}}">
+                    <div>
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Username Color:'}}} </span>
+                            <select id="selChatUsernameColor"></select>
+                        </label>
+                        <label id="lblChatUsernameColorFeedback" class="text-red extra-label"></label>
+                    </div>
+                </section>
+                <section data-keywords="{{{i18n 'chat message;chat ui'}}}">
+                    <h4>{{{i18n 'Interface'}}}</h4>
+                    <div data-keywords="{{{i18n 'enable;disable'}}}">
+                        <label class="input-group">
+                            <input id="setting-chat-enable" type="checkbox">
+                            <span class="label-text">{{{i18n 'Enable chat'}}}</span>
+                        </label>
+                        <label for="setting-chat-enable" class="extra-label">
+                            <i class="fas fa-info-circle"></i> {{{i18n 'Page must be reloaded after changing'}}}
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'chat size;chat font'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Font Size:'}}} </span>
+                            <input id="setting-chat-font-size" class="small-input" type="number" min="1" max="72">
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'time;timestamps'}}}">
+                        <label class="input-group">
+                            <input id="setting-chat-timestamps-24h" type="checkbox">
+                            <span class="label-text">{{{i18n '24 Hour Timestamps'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'badges;pixel count;pixels placed'}}}">
+                        <label class="input-group">
+                            <input id="setting-chat-badges-enable" type="checkbox">
+                            <span class="label-text">{{{i18n 'Show pixel-placed badges'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'badges;factions'}}}">
+                        <label class="input-group">
+                            <input id="setting-chat-factiontags-enable" type="checkbox">
+                            <span class="label-text">{{{i18n 'Show faction tags'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'template urls;template links;template name'}}}">
+                        <label class="input-group">
+                            <input id="setting-chat-links-templates-preferurls" type="checkbox">
+                            <span class="label-text">{{{i18n 'Replace template titles with URLs in chat where applicable'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'chat orientation;chat position'}}}">
+                        <label class="input-group">
+                            <input id="setting-ui-chat-horizontal-enable" type="checkbox">
+                            <span class="label-text">{{{i18n 'Enable horizontal chat'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'banner;animation'}}}">
+                        <label class="input-group">
+                            <input id="setting-ui-chat-banner-enable" type="checkbox">
+                            <span class="label-text">{{{i18n 'Enable the rotating banner under chat'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'max;messages;truncate'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Maximum amount of chat messages:'}}}</span>
+                            <input id="setting-chat-truncate-max" class="small-input" type="number" min="50">
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'link;url;behaviour'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n "Default internal link action click:"}}}</span>
+                            <select id="setting-chat-links-internal-behavior"></select>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'link;url;behaviour;external;bypass;skip'}}}">
+                        <label class="input-group">
+                            <input id="setting-chat-links-external-skip" type="checkbox">
+                            <span class="label-text">{{{i18n "Skip external link popup"}}}</span>
+                        </label>
+                        <label for="setting-chat-links-external-skip" class="text-muted extra-label">
+                            {{{i18n 'Note: Has no effect if external link popups are disabled by the server.'}}}
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'chat icon;chat notifications;chat ping'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Chat icon badge mode:'}}}</span>
+                            <select id="setting-ui-chat-icon-badge">
+                                <option value="ping">{{{i18n 'Show on unread ping'}}}</option>
+                                <option value="message" selected>{{{i18n 'Show on unread message'}}}</option>
+                                <option value="off">{{{i18n 'Never show'}}}</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'chat icon;chat notifications;chat message'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Chat icon highlight mode:'}}}</span>
+                            <select id="setting-ui-chat-icon-color">
+                                <option value="message" selected>{{{i18n 'Show on unread message'}}}</option>
+                                <option value="ping">{{{i18n 'Show on unread ping'}}}</option>
+                                <option value="off">{{{i18n 'Never show'}}}</option>
+                            </select>
+                        </label>
+                    </div>
+                </section>
+                <section data-keywords="{{{i18n 'ignored;ignores;unignore;blocked;blocking;unblock'}}}">
+                    <h4>{{{i18n 'Ignores'}}}</h4>
+                    <div data-keywords="{{{i18n 'unignore;unblock'}}}">
+                        <label class="input-group">
+                            <select id="selChatUserIgnore" class="fullwidth" style="font-family: monospace; padding: 5px; border-radius: 5px;"></select>
+                        </label>
+                        <div class="button-bar">
+                            <button class="text-button" id="btnChatUserUnignore">{{{i18n 'Unignore'}}}</button>
+                        </div>
+                        <label id="lblChatUserIgnoreFeedback" class="text-red extra-label"></label>
+                    </div>
+                </section>
+            </div>
+        </article>
+        <article data-id="overlays" data-keywords="{{{i18n 'overlays;virginmap;heatmap;grid'}}}">
+            <header>
+                <h3>{{{i18n 'Overlay Settings'}}}</h3>
+            </header>
+            <div class="pad-wrapper">
+                <section data-keywords="{{{i18n 'heatmap;heatmap opacity;clear heatmap'}}}">
+                    <h4>{{{i18n 'Heatmap'}}}</h4>
+                    <div data-keywords="{{{i18n 'overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap'}}}">
+                        <label class="input-group">
+                            <input id="setting-board-heatmap-enable" type="checkbox"/>
+                            <span class="label-text">{{{i18n 'Turn on heatmap'}}}</span>
+                        </label>
+                        <label for="setting-board-heatmap-enable">{{{i18n '(toggle with <kbd>H</kbd>)'}}}</label>
+                    </div>
+                    <div data-keywords="{{{i18n 'overlays;activity;pixels placed pixels;wipe;clean'}}}">
+                        <button class="text-button" id="hmapClear">{{{i18n 'Clear heatmap'}}}</button>
+                        <label for="hmapClear">{{{i18n '(hotkey: <kbd>O</kbd>)'}}}</label>
+                    </div>
+                    <div data-keywords="{{{i18n 'overlays;user activity;pixels placed pixels;transparency'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Heatmap background opacity:'}}}</span>
+                            <input type="range" min="0" max="1" step="0.01" id="setting-board-heatmap-opacity">
+                        </label>
+                    </div>
+                </section>
+                <section data-keywords="{{{i18n 'virginmap;virginmap opacity;clear virginmap'}}}">
+                    <h4>{{{i18n 'Virginmap'}}}</h4>
+                    <div data-keywords="{{{i18n 'overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap'}}}">
+                        <label class="input-group">
+                            <input id="setting-board-virginmap-enable" type="checkbox"/>
+                            <span class="label-text">{{{i18n 'Turn on virginmap'}}}</span>
+                        </label>
+                        <label for="setting-board-virginmap-enable">{{{i18n '(toggle with <kbd>X</kbd>)'}}}</label>
+                    </div>
+                    <div data-keywords="{{{i18n 'overlays;user activity;pixels unplaced pixels;transparency'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Virginmap background opacity:'}}}</span>
+                            <input type="range" min="0" max="1" step="0.01" id="setting-board-virginmap-opacity">
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'overlays;activity;pixels unplaced pixels;wipe;clean'}}}">
+                        <button class="text-button" id="vmapClear">{{{i18n 'Clear virginmap'}}}</button>
+                        <label for="vmapClear">{{{i18n '(hotkey: <kbd>U</kbd>)'}}}</label>
+                    </div>
+                    <div data-keywords="overlays;virginmap;beneath;ontop of;on top of">
+                        <label class="input-group">
+                            <input id="setting-board-template-beneathoverlays" type="checkbox"/>
+                            <span class="label-text">{{{i18n 'Layer template underneath heatmap'}}}</span>
+                        </label>
+                    </div>
+                </section>
+                <section data-keywords="{{{i18n 'grid;toggle grid'}}}">
+                    <h4>{{{i18n 'Grid'}}}</h4>
+                    <div data-keywords="{{{i18n 'overlays;alignment;grid hidden;grid shown;hide grid;show grid'}}}">
+                        <label class="input-group">
+                            <input id="setting-board-grid-enable" type="checkbox"/>
+                            <span class="label-text">{{{i18n 'Turn on grid'}}}</span>
+                        </label>
+                        <label for="setting-board-grid-enable">{{{i18n '(toggle with <kbd>G</kbd>)'}}}</label>
+                    </div>
+                </section>
+            </div>
+        </article>
+        <article data-id="controls" data-keywords="{{{i18n 'controls;zooming;panning;movement'}}}">
+            <header>
+                <h3>{{{i18n 'Control Settings'}}}</h3>
+            </header>
+            <div class="pad-wrapper">
+                <section data-keywords="{{{i18n 'zooming;scrolling;scale;scaling'}}}">
+                    <h4>{{{i18n 'Zooming'}}}</h4>
+                    <div data-keywords="{{{i18n 'scrolling sensitivity;zooming sensitivity;mousewheel sensitivity'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Zoom sensitivity:'}}}</span>
+                            <input id="setting-board-zoom-sensitivity" type="range" min="1.01" max="3" step="0.01"/>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'zooming limit;scrolling limit;mousewheel;zooming minimum;zooming maximum'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Minimum scale:'}}}</span>
+                            <input type="number" placeholder="0.5" step="any" class="template-coords small-input" id="setting-board-zoom-limit-minimum" autocomplete="off">
+                        </label>
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Maximum scale:'}}}</span>
+                            <input type="number" placeholder="50" step="any" class="template-coords small-input" id="setting-board-zoom-limit-maximum" autocomplete="off">
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'rounding;zooming;scrolling;mousewheel;integer;decimal'}}}">
+                        <label class="input-group">
+                            <input id="setting-board-zoom-rounding-enable" type="checkbox"/>
+                            <span class="label-text">{{{i18n 'Round zoom values to nearest whole number'}}}</span>
+                        </label>
+                    </div>
+                </section>
+                <section data-keywords="{{{i18n 'controls;miscellaneous'}}}">
+                    <h4>Miscellaneous</h4>
+                    <div data-keywords="locked;move;zoom;panning">
+                        <label class="input-group">
+                            <input type="checkbox" id="setting-board-lock-enable">
+                            <span class="label-text">{{{i18n 'Lock the canvas (disallow canvas drag/zoom with mouse/fingers)'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'MMB picker;mouse picker;selection;palette picker'}}}">
+                        <label class="input-group">
+                            <input id="setting-place-picker-enable" type="checkbox">
+                            <span class="label-text">{{{i18n 'Enable middle mouse button selecting color from board'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'right click action'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Right-click action:'}}}</span>
+                            <select id="setting-ui-right-click-action">
+                                <option value="nothing">{{{i18n 'Nothing'}}}</option>
+                                <option value="clear">{{{i18n 'Clear color'}}}</option>
+                                <option value="copy">{{{i18n 'Copy color'}}}</option>
+                                <option value="lookup">{{{i18n 'Lookup'}}}</option>
+                                <option value="clearlookup">{{{i18n 'Clear color + Lookup'}}}</option>
+                            </select>
+                        </label>
+                    </div>
+                </section>
+            </div>
+        </article>
+        <article data-id="snapshots" data-keywords="{{{i18n 'snapshots;screenshot;download;picture;canvas'}}}">
+            <header>
+                <h3>{{{i18n 'Snapshot Settings'}}}</h3>
+            </header>
+            <div class="pad-wrapper">
+                <section data-keywords="{{{i18n 'screenshot;snapshot;download;board;canvas'}}}"></section>
+                <div data-keywords="{{{i18n 'take screenshot;image;download format;picture;canvas;board'}}}">
+                    <label class="input-group">
+                        <span class="label-text">{{{i18n 'Snapshot image format:'}}}</span>
+                        <select id="setting-board-snapshot-format">
+                            <option value="image/png" selected>{{{i18n 'PNG'}}}</option>
+                            <option value="image/jpeg">{{{i18n 'JPEG'}}}</option>
+                            <option value="image/webp">{{{i18n 'WEBP (Chrome only)'}}}</option>
+                        </select>
+                    </label>
+                </div>
+                </section>
+            </div>
+        </article>
+        <article data-id="sound" data-keywords="{{{i18n 'sound;notification;alert;notify;ping'}}}">
+            <header>
+                <h3>{{{i18n 'Sound and Notification Settings'}}}</h3>
+            </header>
+            <div class="pad-wrapper">
+                <section data-keywords="sound;volume">
+                    <h4>{{{i18n 'General'}}}</h4>
+                    <div data-keywords="{{{i18n 'audio;mute;noise;volume'}}}">
+                        <label class="input-group">
+                            <input id="setting-audio-enable" type="checkbox"/>
+                            <span class="label-text">{{{i18n 'Enable sound'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'notifs;notify;pixel notification'}}}">
+                        <label class="input-group">
+                            <input id="setting-place-notification-enable" type="checkbox"/>
+                            <span class="label-text">{{{i18n 'Enable pixel available notification'}}}</span>
+                        </label>
+                    </div>
+                </section>
+                <section data-keywords="{{{i18n 'notification;pixel ready;alert'}}}">
+                    <h4>{{{i18n 'Pixel Ready Notification'}}}</h4>
+                    <div data-keywords="{{{i18n 'alert source;notify url;notify source;notification url;notification source'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Alert URL:'}}}</span>
+                            <input class="fullwidth" type="text" placeholder="notify.wav" id="setting-audio-alert-src">
+                        </label>
+                        <div class="button-bar">
+                            <button class="text-button" id="btnForceAudioUpdate">{{{i18n 'Update'}}}</button>
+                            <button class="text-button" id="btnAlertAudioTest">{{{i18n 'Test'}}}</button>
+                            <button class="text-button" id="btnAlertReset">{{{i18n 'Reset'}}}</button>
+                        </div>
+                    </div>
+                    <div data-keywords="{{{i18n 'sound level;audio level;mute audio;mute sound'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Volume:'}}}</span>
+                            <input type="range" id="setting-audio-alert-volume" min=0 max=1 step=".01" value="1">
+                            <span class="range-text-value" id="lblAlertVolume">100%</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'alert forewarning;alert delay; notification delay; notification forewarning'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Delay (seconds):'}}}</span>
+                            <input type="number" width="30px" value="0" id="setting-place-alert-delay">
+                        </label>
+                    </div>
+                </section>
+                <section data-keywords="{{{i18n 'chat mentions;chat pings;chat sound'}}}">
+                    <h4>{{{i18n 'Chat Pings'}}}</h4>
+                    <div data-keywords="enable mentions">
+                        <label class="input-group">
+                            <input id="setting-chat-pings-enable" type="checkbox">
+                            <span class="label-text">{{{i18n 'Enable pings'}}}</span>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'mention sound'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Play sound on ping:'}}} </span>
+                            <select id="setting-chat-pings-audio-when">
+                                <option value="off">{{{i18n 'Off'}}}</option>
+                                <option value="discrete">{{{i18n 'Only when necessary'}}}</option>
+                                <option value="always">{{{i18n 'Always'}}}</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div data-keywords="{{{i18n 'mention sound volume'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Ping sound volume:'}}} </span>
+                            <input id="setting-chat-pings-audio-volume" type="range" min="0" max="1" step="0.01">
+                            <span class="range-text-value" id="chat-pings-audio-volume-value">50%</span>
+                        </label>
+                    </div>
+                </section>
+            </div>
+        </article>
+        <article data-id="personal-account" data-keywords="{{{i18n 'personal account'}}}">
+            <header>
+                <h3>{{{i18n 'Account Settings'}}}</h3>
+            </header>
+            <div class="pad-wrapper">
+                <section data-keywords="personal;account;user">
+                    <div data-keywords="discord username">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Public Discord name:'}}}</span>
+                            <input class="fullwidth" type="text" placeholder="pxlslover1337" id="txtDiscordName">
+                        </label>
+                        <div class="button-bar">
+                            <button class="text-button" id="btnDiscordNameSet">{{{i18n 'Set'}}}</button>
+                            <button class="text-button" id="btnDiscordNameRemove">{{{i18n 'Remove'}}}</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </article>
     </div>
-  </aside>
+</aside>
 
-
-  <aside id="settings" data-panel="settings" class="panel right">
+<aside id="faq" data-panel="faq" class="panel left half-width">
     <header class="panel-header">
-      <div class="left">
-        <button type="button" class="panel-closer" title="{{{i18n 'Close Panel'}}}"><i
-            class="fas fa-times"></i></button>
-      </div>
-      <div class="mid">
+        <div class="left"></div>
         <h2>
-          <i class="fas fa-cogs fa-is-left"></i>
-          <span class="panel-title">{{{i18n 'Settings'}}}</span>
+            <i class="fas fa-question-circle fa-is-left"></i>
+            {{! FAQ panel }}
+            <span class="panel-title">{{{i18n 'Help'}}}</span>
         </h2>
-      </div>
-      <div class="right"></div>
+        <div class="right">
+            <button type="button" class="panel-closer" title="{{{i18n 'Close Panel'}}}"><i class="fas fa-times"></i></button>
+        </div>
     </header>
     <div class="panel-body">
-      <input id="settings-search-input" type="search" placeholder="{{{i18n 'Search'}}}" class="fullwidth" />
-      <article data-id="keybinds" class="no-p-margin" data-keywords="{{{i18n 'keybinds;keys;keyboard;hotkeys'}}}">
-        <header>
-          <h3>{{{i18n 'Keybinds'}}}</h3>
-        </header>
-        <div class="pad-wrapper">
-          <section data-keywords="{{{i18n 'general'}}}">
-            {{! General settings }}
-            <h4>{{{i18n 'General'}}}</h4>
-            <p data-keywords="{{{i18n 'move;moving;panning;drag'}}}">{{{i18n 'Mouse/arrows/wasd to pan'}}}</p>
-            <p data-keywords="{{{i18n 'mousewheel;zooming'}}}">{{{i18n 'Scroll/pinch to zoom'}}}</p>
-            <p data-keywords="{{{i18n 'scroll;zooming'}}}">{{{i18n '<kbd>+</kbd>/<kbd>-</kbd> or
-              <kbd>Q</kbd>/<kbd>E</kbd> to zoom'}}}
-            </p>
-            <p data-keywords="{{{i18n 'lookups'}}}">{{{i18n '<kbd>Shift</kbd> + Click/Hold touch to lookup pixel'}}}</p>
-            <p data-keywords="{{{i18n 'overlays;alignment;grid hidden;grid shown;hide grid;show grid'}}}">{{{i18n
-              '<kbd>G</kbd> to toggle grid'}}}</p>
-            <p
-              data-keywords="{{{i18n 'close;information shown;information hidden;info shown;info hidden;hide information;show information'}}}">
-              {{{i18n '<kbd>I</kbd> to open info'}}}</p>
-            <p data-keywords="{{{i18n 'close;settings hidden;settings shown;hide settings;show settings'}}}">{{{i18n
-              '<kbd>T</kbd> to open settings'}}}</p>
-            <p data-keywords="{{{i18n 'close;chat hidden;chat shown;hide chat;show chat'}}}">{{{i18n '<kbd>B</kbd> to
-              open chat'}}}</p>
-            <p data-keywords="{{{i18n 'canvas locked;move;moving;zoom;zooming'}}}">{{{i18n '<kbd>L</kbd> to toggle
-              locking panning of the canvas'}}}</p>
-            <p data-keywords="{{{i18n 'take screenshot;image;download;picture;canvas'}}}">{{{i18n '<kbd>P</kbd> to take
-              a snapshot'}}}</p>
-            <p
-              data-keywords="{{{i18n 'overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap'}}}">
-              {{{i18n '<kbd>H</kbd> to toggle heatmap'}}}</p>
-            <p
-              data-keywords="{{{i18n 'overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap'}}}">
-              {{{i18n '<kbd>X</kbd> to toggle virginmap'}}}</p>
-            <p data-keywords="{{{i18n 'overlays;user activity;pixels placed pixels;wipe;clean;'}}}">{{{i18n
-              '<kbd>O</kbd> to clear heatmap'}}}</p>
-            <p data-keywords="{{{i18n 'overlays;user activity;pixels unplaced pixels;wipe;clean;'}}}">{{{i18n
-              '<kbd>U</kbd> to clear virginmap'}}}</p>
-            <p data-keywords="{{{i18n 'next color;previous color'}}}">{{{i18n '<kbd>J</kbd>/<kbd>K</kbd> to cycle
-              through palette colors'}}}</p>
-            <p data-keywords="{{{i18n 'current coordinates;coords'}}}">{{{i18n '<kbd>C</kbd> to copy link of moused-over
-              coordinates'}}}</p>
-            <p data-keywords="{{{i18n 'cancel selection'}}}">{{{i18n '<kbd>ESC</kbd> to deselect current pixel'}}}</p>
-            <p data-keywords="{{{i18n 'recenter;jump;center on template;guides;focus'}}}">{{{i18n '<kbd>R</kbd> to
-              center the board on the current template'}}}</p>
-          </section>
-
-          <section data-keywords="{{{i18n 'templates;guides'}}}">
-            <h4>{{{i18n 'Template'}}}</h4>
-            <p data-keywords="{{{i18n 'transparency'}}}">{{{i18n '<kbd>Page Up</kbd> to increase opacity'}}}</p>
-            <p data-keywords="{{{i18n 'transparency'}}}">{{{i18n '<kbd>Page Down</kbd> to decrease opacity'}}}</p>
-            <p data-keywords="{{{i18n 'hidden;shown;hide;show'}}}">{{{i18n '<kbd>V</kbd> to toggle visibility'}}}</p>
-          </section>
-
-          <br />
-          <small>
-            {{{i18n 'Note: These values are based on QWERTY keyboards. For other layouts, use the keys corresponding to
-            the same position on a QWERTY keyboard.'}}}
-          </small>
-        </div>
-      </article>
-      <article data-id="templates" data-keywords="{{{i18n 'templates;overlays;guides'}}}">
-        <header>
-          <h3>{{{i18n 'Template'}}}</h3>
-        </header>
-        <div class="pad-wrapper">
-          <section data-keywords="{{{i18n 'templates;overlays;image;pixel art'}}}">
-            <div
-              data-keywords="{{{i18n 'template enabled;template disabled;show template;hide template;template shown;template hidden'}}}">
-              <label class="input-group">
-                <input type="checkbox" id="template-use">
-                <span class="label-text">{{{i18n 'Use template'}}}</span>
-              </label>
-            </div>
-            <p>{{{i18n 'Hold down <kbd>Ctrl</kbd> (or <kbd>Option</kbd> on mac) to drag the template around'}}}</p>
-            <div data-keywords="{{{i18n 'template title;template name;tab name;tab title;title='}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Title:'}}}</span>
-                <input class="fullwidth" type="text" id="template-title">
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'template location source;template source URL;template URL;template='}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'URL:'}}}</span>
-                <input class="fullwidth" type="text" id="template-url" autocomplete="off">
-                <input type="file" id="template-file-selector" accept="image/png, image/jpeg, image/webp"
-                  onchange="App.uiHelper.handleFile(this)">
-              </label>
-              <label id="template-image-error-warning" for="template-url" class="text-red extra-label"></label>
-            </div>
-            <div
-              data-keywords="{{{i18n 'template position;template x;template y;template location; template vertical; template horizontal;ox=;oy='}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Horizontal position:'}}}</span>
-                <input type="number" min="0" class="template-coords small-input" id="template-coords-x"
-                  autocomplete="off">
-              </label>
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Vertical position:'}}}</span>
-                <input type="number" min="0" class="template-coords small-input" id="template-coords-y"
-                  autocomplete="off">
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'template width;tw='}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Width:'}}}</span>
-                <input type="number" id="template-width" class="small-input" min="0" autocomplete="off">
-              </label>
-              <button class="text-button" id="template-width-reset">{{{i18n 'Reset'}}}</button>
-            </div>
-            <div data-keywords="{{{i18n 'template style;custom template'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Style:'}}}</span>
-                <select id="template-style-mode">
-                  <option value="">{{{i18n 'Use Source Style'}}}</option>
-                  <option
-                    value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/gD1AOQaL8IZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIklEQVQ4y2P8////fwYKABMDhWDUgFEDRg0YDAYwMjIyAgBr1AQgfweGSgAAAABJRU5ErkJggg==">
-                    {{{i18n '1-to-1'}}}</option>
-                  <option
-                    value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGklEQVQoz2P8//8/AymAiYFEMKphVMPQ0QAAVW0DHZ8uFaIAAAAASUVORK5CYII=">
-                    {{{i18n '1-to-1 (keep incorrect colors)'}}}</option>
-                  <option
-                    value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAAmJLR0QA/4ePzL8AAAAzSURBVFjD7dBBDQAACMSw828aVEAI6R4T0GShGv6DECFChAgRIkSIECFChAgRIkSIruA0nub+AuTzLZoAAAAASUVORK5CYII=">
-                    {{{i18n 'Dotted (Small, 1:2)'}}}</option>
-                  <option
-                    value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAWklEQVR42u3UwQkAIAwEwcX+e9aP2INkBvK4d2CLqva9cXv5PWgAoAGgARoAGqABoAEaABqgAaABGgAaoAGgARoAGqABoAEaABqgAaABGgAaoAGgAT/vRwOmO8dS/DI1VxCbAAAAAElFTkSuQmCC">
-                    {{{i18n 'Dotted (Big, 2:2)'}}}</option>
-                  <option
-                    value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAABwAQMAAAD8LmYIAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAZQTFRFAAAAAwMDFQUF7wAAAAJ0Uk5TAP9bkSK1AAAAuUlEQVR4nGNgQAUhjQvdz0uwMfx82OrVIgPkBj/xaOEQ6GRuP9vHAeQGsPjzyVj8LH5+iAXEDTziMd+uplHg+VE+GQaNjwHt5+WB3A+HO+bbMRACDoed+Xg0FIMW97dIMLAwNC45OF8ip+Dh8aN8Ngwsjc2sXfNFBAoePz8xX46B5+DhNj4WlpwCx+NH5W0Yan5+fn6+xU5DwWlxf58EAWs0DFC4NQX4uBaoXAFUvaNgFIyCUTAKaAYAzI49GM5w0hQAAAAASUVORK5CYII=">
-                    {{{i18n 'Symbols'}}}</option>
-                  <option
-                    value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACwCAYAAACvt+ReAAAE10lEQVR42u3d3bKjKBQGULDy/q/MXE1VdzqRH9kqZq2bqZn5JKAmErbm5JRSSbCw0pGTlb1VdttpoAS9AUpANgW1u0q2dGxTOo7faLu92TTa7vZlozz55P2/zRyQ7RXRj97+zsyWjm1GT97aGI9kR8aWaydwxIEg7g05ms0nvcnCsq8bzrVnvVNr2RyQzReP7eeO33bBp0We/E6NnJr0nJAR7UZOpR5x/LYEC9smrCyMrETMXErpvazd4fI9c3+VnW/2teze8Ss7qwAt7ZYJ50y13deqk/fBbVYb28iY8mLZvf9ebTcnlTgeOIWAZShJyi6bfX3YOH84sfOXF7oyW3amQrXs++vMarc3m7/048w+rJT957htlU/i3HCQ93J77R7N5o4vD+/ZUvmSkRvHdiSbOvqwt/2RbA7av6cdt+0Bqw8jlMDX9M9xq5WS71xKjS5VtmxbDvZ3JJsDsvnEsU09dq+GM75MPnl72s2VQZx1JehdA23pb8/YevdDax/KhWMrM84Vy2gs7dOXuJGSZMslYLTUWbsUtbT7nm25ibqlhPqp3Z7+po7+RuyHnj707t/S8fql8/XLyHzE2qPs7bJKyTxmCgFLcimSXTa7fdiwfPn3NDGbgtq9ezYNZke++JaAbApqdzj75zrw+9rd3lrekeye1vsljmZ7+5snZL/1q2clJw3uwxnZXlGPWP3VX3PgNSh9f/HaeaeXzk+FEpzNAdl88dhSQPanjttWeafX7lZq/ZRovQPqSLanDyWo3ci70XqyvXeutbQbeVdez91onkrmmVOII3c1RV02I+8Ei2g36sc/SuOVo+WSfKS/EdOfw/2wnii7bFYpmaWZA7M8lyLZZbOvD0sUf/4z7XyJ68n++f88PfyDTw9H9WHWI0W17JFHXmqv+WnHzcymjj7Utj2yvpwC9u/yx+3uc2Al1DWddtxelfnw7DJjxI9Kt14pSuM7flY2B2TzxWO73XF7/12IM8qMtXeuEmpDCfWEsR2dSvVOu4ZuWbCMxtJaf9gkHcjNKM3WVgBqlzGl7/7+HhlfrfQ9ejdaOXqSysreKquUzNLMgVmeS5Hsstlv9wMroY5lW7+4KH1Pyr6vQiihHnsquTSMy1Pf4/v3n6w58FxK3yf7VkpWQo35M7Ol4xPzvd0SnM0B2Rw9tq1y+f7Fp4fPOHlr/SgdYysHxta7H3pOyIh2/a1kfmMK0fqJ0rrd3Uq5nh6O3Q8peP8Obywre6usUjJLMwdmeS5Fsstma6Xkb8scSqjPyC5/3Fp+nfKbI0+hRq0vp45s72MsOaC/V2eXP26z5sBKqGta/rjNWgfuyfrh7Pix/cxx2w68Iy95CvWiS5wfzt7f/rKnvi2j8egpxC2fQr355TCiXU9972xrPVF22axSMo+aQkCUsCU7lyLZM7Lhn8BKqOf39xdL31PN+kOHSqhj+yF1ju0ppe+wE9h8jKW/xK1WQj1D5GM3I9mIH5vOF49tyifwij/AfOYndk8JNqLNiDJ/CWr3tOOmlMxjphB+gPn4VErp+4Jpn3VK2TOyYXM7pWTO+h4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE/1H4IIqRgL4W2oAAAAAElFTkSuQmCC">
-                    {{{i18n 'Numbers'}}}</option>
-                  <option value="" id="template-style-mode-custom">{{{i18n 'Custom…'}}}</option>
-                </select>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'template style source;template style URL;custom style URL;custom template'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Custom style URL:'}}}</span>
-                <input class="fullwidth" type="text" id="template-custom-style-url">
-              </label>
-              <label id="template-style-error-warning" for="template-custom-style-url"
-                class="text-red extra-label"></label>
-            </div>
-            <div data-keywords="{{{i18n 'template conversion;template palette conversion;convert to palette'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Color Conversion Mode:'}}}</span>
-                <select id="template-conversion-mode-select">
-                  <option value="unconverted">{{{i18n 'Unconverted'}}}</option>
-                  <option value="nearestCustom">{{{i18n 'Nearest Custom'}}}</option>
-                </select>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'template transparency;template opacity;oo='}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Opacity:'}}}</span>
-                <input type="range" id="template-opacity" min="0" max="1" step="0.01" value="0.5" autocomplete="off">
-                <span class="range-text-value" id="template-opacity-percentage">50%</span>
-              </label>
-            </div>
-          </section>
-        </div>
-      </article>
-      <article data-id="ui" data-keywords="{{{i18n 'ui;interface'}}}">
-        <header>
-          <h3>{{{i18n 'UI Settings'}}}</h3>
-        </header>
-        <div class="pad-wrapper">
-          <section>
-            <div data-keywords="{{{i18n 'language override;text'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Language override:'}}}</span>
-                <select id="setting-ui-language-override">
-                  <option value="" selected>{{{i18n 'Use Browser Language'}}}</option>
-                  <option value="en" selected>{{{i18n 'English'}}}</option>
-                  <option value="bg" selected>{{{i18n 'Bulgarian'}}}</option>
-                  <option value="fr" selected>{{{i18n 'French'}}}</option>
-                  <option value="de" selected>{{{i18n 'German'}}}</option>
-                  <option value="ru" selected>{{{i18n 'Russian'}}}</option>
-                  <option value="sv" selected>{{{i18n 'Swedish'}}}</option>
-                  <option value="tok" selected>{{{i18n 'Toki Pona'}}}</option>
-                </select>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'themes;look;stylesheets;visuals'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Theme:'}}}</span>
-                <select id="setting-ui-theme-index">
-                  <option value="-1" selected>{{{i18n 'Default'}}}</option>
-                </select>
-              </label>
-            </div>
-            <div
-              data-keywords="{{{i18n 'hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden'}}}">
-              <label class="input-group">
-                <input id="setting-ui-reticule-enable" type="checkbox" />
-                <span class="label-text">{{{i18n 'Show reticule'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'hide cursor;cursor shown;cursor hidden'}}}">
-              <label class="input-group">
-                <input id="setting-ui-cursor-enable" type="checkbox" />
-                <span class="label-text">{{{i18n 'Show cursor'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'darkness filter'}}}">
-              <label class="input-group">
-                <input type="checkbox" id="setting-ui-brightness-enable">
-                <span class="label-text">{{{i18n 'Enable color brightness'}}}</span>
-              </label>
-              <label for="setting-ui-brightness-enable" class="text-orange extra-label">
-                <i class="fas fa-exclamation-triangle"></i> {{{i18n 'Warning: Known to cause fuzziness in Chrome on some
-                Mac/Linux installs'}}}
-              </label>
-              <label class="input-group fake-indent">
-                <span class="label-text">{{{i18n 'Color brightness:'}}}</span>
-                <input type="range" min="0" max="1" step="0.01" value="1" id="setting-ui-brightness-value">
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'keep current selected;keep curent color;place'}}}">
-              <label class="input-group">
-                <input id="setting-place-deselectonplace-enable" type="checkbox" />
-                <span class="label-text">{{{i18n 'Deselect color after placing'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'mousewheel;palette scrolling'}}}">
-              <label class="input-group">
-                <input id="setting-place-palette-scrolling-enable" type="checkbox" />
-                <span class="label-text">{{{i18n 'Enable scrolling on the palette to switch colors'}}}</span>
-              </label>
-              <div class="fake-indent"
-                data-keywords="{{{i18n 'reverse scrolling;mousewheel;palette scrolling;enable scrolling on the palette to switch colors'}}}">
-                <label class="input-group">
-                  <input id="setting-place-palette-scrolling-invert" type="checkbox" />
-                  <span class="label-text">{{{i18n 'Invert scroll direction'}}}</span>
-                </label>
-              </div>
-            </div>
-            <div data-keywords="{{{i18n 'indexed colors;palette indicies'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Show labels on the palette:'}}}</span>
-                <select id="setting-ui-palette-style">
-                  <option value="off">{{{i18n 'Off'}}}</option>
-                  <option value="numbers">{{{i18n 'Numbers'}}}</option>
-                  <option value="symbols">{{{i18n 'Symbols'}}}</option>
-                </select>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'scrollbar;palette scrolling'}}}">
-              <label class="input-group">
-                <input id="setting-ui-palette-scrollbar-thin-enable" type="checkbox">
-                <span class="label-text">{{{i18n 'Enable thin scrollbar'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'scrollbar;palette scrolling;palette stack'}}}">
-              <label class="input-group">
-                <input id="setting-ui-palette-stacking-enable" type="checkbox">
-                <span class="label-text">{{{i18n 'Enable palette stacking'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'floating bubble location'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Bubble position:'}}}</span>
-                <select id="setting-ui-bubble-position">
-                  <option value="top left">{{{i18n 'Top left'}}}</option>
-                  <option value="top right">{{{i18n 'Top right'}}}</option>
-                  <option value="bottom left" selected>{{{i18n 'Bottom left'}}}</option>
-                  <option value="bottom right">{{{i18n 'Bottom right'}}}</option>
-                </select>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'broken;offset workaround'}}}">
-              <label class="input-group" id="chrome-canvas-offset-setting">
-                <input id="setting-fix-chrome-offset-enable" type="checkbox" />
-                <span class="label-text">{{{i18n 'Attempt to fix canvas displacement bug in Chrome 78+'}}}</span>
-              </label>
-            </div>
-          </section>
-        </div>
-      </article>
-      <article data-id="chat" data-keywords="{{{i18n 'chat;message;ping sound'}}}">
-        <header>
-          <h3>{{{i18n 'Chat Settings'}}}</h3>
-        </header>
-        <div class="pad-wrapper">
-          <section data-keywords="{{{i18n 'username;color;colour'}}}">
-            <div>
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Username Color:'}}} </span>
-                <select id="selChatUsernameColor"></select>
-              </label>
-              <label id="lblChatUsernameColorFeedback" class="text-red extra-label"></label>
-            </div>
-          </section>
-          <section data-keywords="{{{i18n 'chat message;chat ui'}}}">
-            <h4>{{{i18n 'Interface'}}}</h4>
-            <div data-keywords="{{{i18n 'enable;disable'}}}">
-              <label class="input-group">
-                <input id="setting-chat-enable" type="checkbox">
-                <span class="label-text">{{{i18n 'Enable chat'}}}</span>
-              </label>
-              <label for="setting-chat-enable" class="extra-label">
-                <i class="fas fa-info-circle"></i> {{{i18n 'Page must be reloaded after changing'}}}
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'chat size;chat font'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Font Size:'}}} </span>
-                <input id="setting-chat-font-size" class="small-input" type="number" min="1" max="72">
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'time;timestamps'}}}">
-              <label class="input-group">
-                <input id="setting-chat-timestamps-24h" type="checkbox">
-                <span class="label-text">{{{i18n '24 Hour Timestamps'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'badges;pixel count;pixels placed'}}}">
-              <label class="input-group">
-                <input id="setting-chat-badges-enable" type="checkbox">
-                <span class="label-text">{{{i18n 'Show pixel-placed badges'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'badges;factions'}}}">
-              <label class="input-group">
-                <input id="setting-chat-factiontags-enable" type="checkbox">
-                <span class="label-text">{{{i18n 'Show faction tags'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'template urls;template links;template name'}}}">
-              <label class="input-group">
-                <input id="setting-chat-links-templates-preferurls" type="checkbox">
-                <span class="label-text">{{{i18n 'Replace template titles with URLs in chat where applicable'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'chat orientation;chat position'}}}">
-              <label class="input-group">
-                <input id="setting-ui-chat-horizontal-enable" type="checkbox">
-                <span class="label-text">{{{i18n 'Enable horizontal chat'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'banner;animation'}}}">
-              <label class="input-group">
-                <input id="setting-ui-chat-banner-enable" type="checkbox">
-                <span class="label-text">{{{i18n 'Enable the rotating banner under chat'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'max;messages;truncate'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Maximum amount of chat messages:'}}}</span>
-                <input id="setting-chat-truncate-max" class="small-input" type="number" min="50">
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'link;url;behaviour'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n "Default internal link action click:"}}}</span>
-                <select id="setting-chat-links-internal-behavior"></select>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'link;url;behaviour;external;bypass;skip'}}}">
-              <label class="input-group">
-                <input id="setting-chat-links-external-skip" type="checkbox">
-                <span class="label-text">{{{i18n "Skip external link popup"}}}</span>
-              </label>
-              <label for="setting-chat-links-external-skip" class="text-muted extra-label">
-                {{{i18n 'Note: Has no effect if external link popups are disabled by the server.'}}}
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'chat icon;chat notifications;chat ping'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Chat icon badge mode:'}}}</span>
-                <select id="setting-ui-chat-icon-badge">
-                  <option value="ping">{{{i18n 'Show on unread ping'}}}</option>
-                  <option value="message" selected>{{{i18n 'Show on unread message'}}}</option>
-                  <option value="off">{{{i18n 'Never show'}}}</option>
-                </select>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'chat icon;chat notifications;chat message'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Chat icon highlight mode:'}}}</span>
-                <select id="setting-ui-chat-icon-color">
-                  <option value="message" selected>{{{i18n 'Show on unread message'}}}</option>
-                  <option value="ping">{{{i18n 'Show on unread ping'}}}</option>
-                  <option value="off">{{{i18n 'Never show'}}}</option>
-                </select>
-              </label>
-            </div>
-          </section>
-          <section data-keywords="{{{i18n 'ignored;ignores;unignore;blocked;blocking;unblock'}}}">
-            <h4>{{{i18n 'Ignores'}}}</h4>
-            <div data-keywords="{{{i18n 'unignore;unblock'}}}">
-              <label class="input-group">
-                <select id="selChatUserIgnore" class="fullwidth"
-                  style="font-family: monospace; padding: 5px; border-radius: 5px;"></select>
-              </label>
-              <div class="button-bar">
-                <button class="text-button" id="btnChatUserUnignore">{{{i18n 'Unignore'}}}</button>
-              </div>
-              <label id="lblChatUserIgnoreFeedback" class="text-red extra-label"></label>
-            </div>
-          </section>
-        </div>
-      </article>
-      <article data-id="overlays" data-keywords="{{{i18n 'overlays;virginmap;heatmap;grid'}}}">
-        <header>
-          <h3>{{{i18n 'Overlay Settings'}}}</h3>
-        </header>
-        <div class="pad-wrapper">
-          <section data-keywords="{{{i18n 'heatmap;heatmap opacity;clear heatmap'}}}">
-            <h4>{{{i18n 'Heatmap'}}}</h4>
-            <div
-              data-keywords="{{{i18n 'overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap'}}}">
-              <label class="input-group">
-                <input id="setting-board-heatmap-enable" type="checkbox" />
-                <span class="label-text">{{{i18n 'Turn on heatmap'}}}</span>
-              </label>
-              <label for="setting-board-heatmap-enable">{{{i18n '(toggle with <kbd>H</kbd>)'}}}</label>
-            </div>
-            <div data-keywords="{{{i18n 'overlays;activity;pixels placed pixels;wipe;clean'}}}">
-              <button class="text-button" id="hmapClear">{{{i18n 'Clear heatmap'}}}</button>
-              <label for="hmapClear">{{{i18n '(hotkey: <kbd>O</kbd>)'}}}</label>
-            </div>
-            <div data-keywords="{{{i18n 'overlays;user activity;pixels placed pixels;transparency'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Heatmap background opacity:'}}}</span>
-                <input type="range" min="0" max="1" step="0.01" id="setting-board-heatmap-opacity">
-              </label>
-            </div>
-          </section>
-          <section data-keywords="{{{i18n 'virginmap;virginmap opacity;clear virginmap'}}}">
-            <h4>{{{i18n 'Virginmap'}}}</h4>
-            <div
-              data-keywords="{{{i18n 'overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap'}}}">
-              <label class="input-group">
-                <input id="setting-board-virginmap-enable" type="checkbox" />
-                <span class="label-text">{{{i18n 'Turn on virginmap'}}}</span>
-              </label>
-              <label for="setting-board-virginmap-enable">{{{i18n '(toggle with <kbd>X</kbd>)'}}}</label>
-            </div>
-            <div data-keywords="{{{i18n 'overlays;user activity;pixels unplaced pixels;transparency'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Virginmap background opacity:'}}}</span>
-                <input type="range" min="0" max="1" step="0.01" id="setting-board-virginmap-opacity">
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'overlays;activity;pixels unplaced pixels;wipe;clean'}}}">
-              <button class="text-button" id="vmapClear">{{{i18n 'Clear virginmap'}}}</button>
-              <label for="vmapClear">{{{i18n '(hotkey: <kbd>U</kbd>)'}}}</label>
-            </div>
-            <div data-keywords="overlays;virginmap;beneath;ontop of;on top of">
-              <label class="input-group">
-                <input id="setting-board-template-beneathoverlays" type="checkbox" />
-                <span class="label-text">{{{i18n 'Layer template underneath heatmap'}}}</span>
-              </label>
-            </div>
-          </section>
-          <section data-keywords="{{{i18n 'grid;toggle grid'}}}">
-            <h4>{{{i18n 'Grid'}}}</h4>
-            <div data-keywords="{{{i18n 'overlays;alignment;grid hidden;grid shown;hide grid;show grid'}}}">
-              <label class="input-group">
-                <input id="setting-board-grid-enable" type="checkbox" />
-                <span class="label-text">{{{i18n 'Turn on grid'}}}</span>
-              </label>
-              <label for="setting-board-grid-enable">{{{i18n '(toggle with <kbd>G</kbd>)'}}}</label>
-            </div>
-          </section>
-        </div>
-      </article>
-      <article data-id="controls" data-keywords="{{{i18n 'controls;zooming;panning;movement'}}}">
-        <header>
-          <h3>{{{i18n 'Control Settings'}}}</h3>
-        </header>
-        <div class="pad-wrapper">
-          <section data-keywords="{{{i18n 'zooming;scrolling;scale;scaling'}}}">
-            <h4>{{{i18n 'Zooming'}}}</h4>
-            <div data-keywords="{{{i18n 'scrolling sensitivity;zooming sensitivity;mousewheel sensitivity'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Zoom sensitivity:'}}}</span>
-                <input id="setting-board-zoom-sensitivity" type="range" min="1.01" max="3" step="0.01" />
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'zooming limit;scrolling limit;mousewheel;zooming minimum;zooming maximum'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Minimum scale:'}}}</span>
-                <input type="number" placeholder="0.5" step="any" class="template-coords small-input"
-                  id="setting-board-zoom-limit-minimum" autocomplete="off">
-              </label>
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Maximum scale:'}}}</span>
-                <input type="number" placeholder="50" step="any" class="template-coords small-input"
-                  id="setting-board-zoom-limit-maximum" autocomplete="off">
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'rounding;zooming;scrolling;mousewheel;integer;decimal'}}}">
-              <label class="input-group">
-                <input id="setting-board-zoom-rounding-enable" type="checkbox" />
-                <span class="label-text">{{{i18n 'Round zoom values to nearest whole number'}}}</span>
-              </label>
-            </div>
-          </section>
-          <section data-keywords="{{{i18n 'controls;miscellaneous'}}}">
-            <h4>Miscellaneous</h4>
-            <div data-keywords="locked;move;zoom;panning">
-              <label class="input-group">
-                <input type="checkbox" id="setting-board-lock-enable">
-                <span class="label-text">{{{i18n 'Lock the canvas (disallow canvas drag/zoom with
-                  mouse/fingers)'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'MMB picker;mouse picker;selection;palette picker'}}}">
-              <label class="input-group">
-                <input id="setting-place-picker-enable" type="checkbox">
-                <span class="label-text">{{{i18n 'Enable middle mouse button selecting color from board'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'right click action'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Right-click action:'}}}</span>
-                <select id="setting-ui-right-click-action">
-                  <option value="nothing">{{{i18n 'Nothing'}}}</option>
-                  <option value="clear">{{{i18n 'Clear color'}}}</option>
-                  <option value="copy">{{{i18n 'Copy color'}}}</option>
-                  <option value="lookup">{{{i18n 'Lookup'}}}</option>
-                  <option value="clearlookup">{{{i18n 'Clear color + Lookup'}}}</option>
-                </select>
-              </label>
-            </div>
-          </section>
-        </div>
-      </article>
-      <article data-id="snapshots" data-keywords="{{{i18n 'snapshots;screenshot;download;picture;canvas'}}}">
-        <header>
-          <h3>{{{i18n 'Snapshot Settings'}}}</h3>
-        </header>
-        <div class="pad-wrapper">
-          <section data-keywords="{{{i18n 'screenshot;snapshot;download;board;canvas'}}}"></section>
-          <div data-keywords="{{{i18n 'take screenshot;image;download format;picture;canvas;board'}}}">
-            <label class="input-group">
-              <span class="label-text">{{{i18n 'Snapshot image format:'}}}</span>
-              <select id="setting-board-snapshot-format">
-                <option value="image/png" selected>{{{i18n 'PNG'}}}</option>
-                <option value="image/jpeg">{{{i18n 'JPEG'}}}</option>
-                <option value="image/webp">{{{i18n 'WEBP (Chrome only)'}}}</option>
-              </select>
-            </label>
-          </div>
-          </section>
-        </div>
-      </article>
-      <article data-id="sound" data-keywords="{{{i18n 'sound;notification;alert;notify;ping'}}}">
-        <header>
-          <h3>{{{i18n 'Sound and Notification Settings'}}}</h3>
-        </header>
-        <div class="pad-wrapper">
-          <section data-keywords="sound;volume">
-            <h4>{{{i18n 'General'}}}</h4>
-            <div data-keywords="{{{i18n 'audio;mute;noise;volume'}}}">
-              <label class="input-group">
-                <input id="setting-audio-enable" type="checkbox" />
-                <span class="label-text">{{{i18n 'Enable sound'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'notifs;notify;pixel notification'}}}">
-              <label class="input-group">
-                <input id="setting-place-notification-enable" type="checkbox" />
-                <span class="label-text">{{{i18n 'Enable pixel available notification'}}}</span>
-              </label>
-            </div>
-          </section>
-          <section data-keywords="{{{i18n 'notification;pixel ready;alert'}}}">
-            <h4>{{{i18n 'Pixel Ready Notification'}}}</h4>
-            <div
-              data-keywords="{{{i18n 'alert source;notify url;notify source;notification url;notification source'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Alert URL:'}}}</span>
-                <input class="fullwidth" type="text" placeholder="notify.wav" id="setting-audio-alert-src">
-              </label>
-              <div class="button-bar">
-                <button class="text-button" id="btnForceAudioUpdate">{{{i18n 'Update'}}}</button>
-                <button class="text-button" id="btnAlertAudioTest">{{{i18n 'Test'}}}</button>
-                <button class="text-button" id="btnAlertReset">{{{i18n 'Reset'}}}</button>
-              </div>
-            </div>
-            <div data-keywords="{{{i18n 'sound level;audio level;mute audio;mute sound'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Volume:'}}}</span>
-                <input type="range" id="setting-audio-alert-volume" min=0 max=1 step=".01" value="1">
-                <span class="range-text-value" id="lblAlertVolume">100%</span>
-              </label>
-            </div>
-            <div
-              data-keywords="{{{i18n 'alert forewarning;alert delay; notification delay; notification forewarning'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Delay (seconds):'}}}</span>
-                <input type="number" width="30px" value="0" id="setting-place-alert-delay">
-              </label>
-            </div>
-          </section>
-          <section data-keywords="{{{i18n 'chat mentions;chat pings;chat sound'}}}">
-            <h4>{{{i18n 'Chat Pings'}}}</h4>
-            <div data-keywords="enable mentions">
-              <label class="input-group">
-                <input id="setting-chat-pings-enable" type="checkbox">
-                <span class="label-text">{{{i18n 'Enable pings'}}}</span>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'mention sound'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Play sound on ping:'}}} </span>
-                <select id="setting-chat-pings-audio-when">
-                  <option value="off">{{{i18n 'Off'}}}</option>
-                  <option value="discrete">{{{i18n 'Only when necessary'}}}</option>
-                  <option value="always">{{{i18n 'Always'}}}</option>
-                </select>
-              </label>
-            </div>
-            <div data-keywords="{{{i18n 'mention sound volume'}}}">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Ping sound volume:'}}} </span>
-                <input id="setting-chat-pings-audio-volume" type="range" min="0" max="1" step="0.01">
-                <span class="range-text-value" id="chat-pings-audio-volume-value">50%</span>
-              </label>
-            </div>
-          </section>
-        </div>
-      </article>
-      <article data-id="personal-account" data-keywords="{{{i18n 'personal account'}}}">
-        <header>
-          <h3>{{{i18n 'Account Settings'}}}</h3>
-        </header>
-        <div class="pad-wrapper">
-          <section data-keywords="personal;account;user">
-            <div data-keywords="discord username">
-              <label class="input-group">
-                <span class="label-text">{{{i18n 'Public Discord name:'}}}</span>
-                <input class="fullwidth" type="text" placeholder="pxlslover1337" id="txtDiscordName">
-              </label>
-              <div class="button-bar">
-                <button class="text-button" id="btnDiscordNameSet">{{{i18n 'Set'}}}</button>
-                <button class="text-button" id="btnDiscordNameRemove">{{{i18n 'Remove'}}}</button>
-              </div>
-            </div>
-          </section>
-        </div>
-      </article>
+        {{> faq}}
     </div>
-  </aside>
+</aside>
 
-  <aside id="faq" data-panel="faq" class="panel left half-width">
+<aside id="notifications" data-panel="notifications" class="panel left">
     <header class="panel-header">
-      <div class="left"></div>
-      <h2>
-        <i class="fas fa-question-circle fa-is-left"></i>
-        {{! FAQ panel }}
-        <span class="panel-title">{{{i18n 'Help'}}}</span>
-      </h2>
-      <div class="right">
-        <button type="button" class="panel-closer" title="{{{i18n 'Close Panel'}}}"><i
-            class="fas fa-times"></i></button>
-      </div>
-    </header>
-    <div class="panel-body">
-      {{> faq}}
-    </div>
-  </aside>
-
-  <aside id="notifications" data-panel="notifications" class="panel left">
-    <header class="panel-header">
-      <div class="left"></div>
-      <h2>
-        <i class="fas fa-bell fa-is-left"></i>
-        <span class="panel-title">{{{i18n 'Notifications'}}}</span>
-      </h2>
-      <div class="right">
-        <button type="button" class="panel-closer" title="{{{i18n 'Close Panel'}}}"><i
-            class="fas fa-times"></i></button>
-      </div>
+        <div class="left"></div>
+        <h2>
+            <i class="fas fa-bell fa-is-left"></i>
+            <span class="panel-title">{{{i18n 'Notifications'}}}</span>
+        </h2>
+        <div class="right">
+            <button type="button" class="panel-closer" title="{{{i18n 'Close Panel'}}}"><i class="fas fa-times"></i></button>
+        </div>
     </header>
     <div class="panel-body"></div>
-  </aside>
+</aside>
 
-  <script src="pxls{{scriptLang}}.js"></script>
+<script src="pxls{{scriptLang}}.js"></script>
 
 </body>
-
 </html>
