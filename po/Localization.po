@@ -609,7 +609,7 @@ msgstr "Invert scroll direction"
 msgid "indexed colors;palette indicies"
 msgstr "indexed colors;palette indicies"
 
-#: /vies/index.handlebars
+#: /views/index.handlebars
 msgid "Show labels on the palette:"
 msgstr "Show labels on the palette:"
 

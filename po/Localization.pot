@@ -637,7 +637,7 @@ msgstr ""
 msgid "indexed colors;palette indicies"
 msgstr ""
 
-#: /vies/index.handlebars
+#: /views/index.handlebars
 msgid "Show labels on the palette:"
 msgstr ""
 

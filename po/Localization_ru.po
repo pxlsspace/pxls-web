@@ -609,7 +609,7 @@ msgstr "Инвертировать направление прокрутки"
 msgid "indexed colors;palette indicies"
 msgstr "индексированные цвета;индексы палитры"
 
-#: /vies/index.handlebars
+#: /views/index.handlebars
 msgid "Show labels on the palette:"
 msgstr ""
 

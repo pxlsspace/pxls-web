@@ -617,7 +617,7 @@ msgstr "Apgriezt ritināšanas virzienu"
 msgid "indexed colors;palette indicies"
 msgstr "indeksētas krāsas"
 
-#: /vies/index.handlebars
+#: /views/index.handlebars
 msgid "Show labels on the palette:"
 msgstr ""
 

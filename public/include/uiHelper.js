@@ -11,7 +11,7 @@ let timer;
 let place;
 let board;
 
-const uiHelper = (function () {
+const uiHelper = (function() {
   const self = {
     tabId: null,
     _workerIsTabFocused: false,
@@ -101,7 +101,7 @@ const uiHelper = (function () {
       }
     ],
     specialChatColorClasses: ['rainbow', ['donator', 'donator--green'], ['donator', 'donator--gray'], ['donator', 'donator--synthwave'], ['donator', 'donator--ace'], ['donator', 'donator--trans'], ['donator', 'donator--bi'], ['donator', 'donator--pan'], ['donator', 'donator--nonbinary'], ['donator', 'donator--mines'], ['donator', 'donator--eggplant'], ['donator', 'donator--banana'], ['donator', 'donator--teal'], ['donator', 'donator--icy'], ['donator', 'donator--blood'], ['donator', 'donator--forest']],
-    init: function () {
+    init: function() {
       timer = require('./timer').timer;
       place = require('./place').place;
       board = require('./board').board;
@@ -155,7 +155,7 @@ const uiHelper = (function () {
         settings.board.lock.enable.toggle();
       });
 
-      settings.board.lock.enable.listen(function (value) {
+      settings.board.lock.enable.listen(function(value) {
         $('#lock-button i')
           .toggleClass('fa-lock', value)
           .toggleClass('fa-unlock', !value);
@@ -165,21 +165,21 @@ const uiHelper = (function () {
         place.setPaletteStyle(value);
       });
 
-      settings.ui.palette.scrollbar.thin.enable.listen(function (value) {
+      settings.ui.palette.scrollbar.thin.enable.listen(function(value) {
         document.querySelector('#palette').classList.toggle('thin-scrollbar', value);
       });
 
-      settings.ui.palette.stacking.enable.listen(function (value) {
+      settings.ui.palette.stacking.enable.listen(function(value) {
         document.querySelector('#palette').classList.toggle('palette-stacking', value);
       });
 
       settings.board.lock.enable.listen((value) => board.setAllowDrag(!value));
 
-      settings.ui.chat.banner.enable.listen(function (value) {
+      settings.ui.chat.banner.enable.listen(function(value) {
         self.setBannerEnabled(value);
       });
 
-      settings.ui.chat.horizontal.enable.listen(function (value) {
+      settings.ui.chat.horizontal.enable.listen(function(value) {
         const _chatPanel = document.querySelector('aside.panel[data-panel="chat"]');
         if (_chatPanel) {
           _chatPanel.classList.toggle('horizontal', value === true);
@@ -193,7 +193,7 @@ const uiHelper = (function () {
 
       const brightnessFixElement = $('<div>').attr('id', 'brightness-fixer').addClass('noselect');
 
-      settings.ui.brightness.enable.listen(function (enabled) {
+      settings.ui.brightness.enable.listen(function(enabled) {
         if (enabled) {
           settings.ui.brightness.value.controls.enable();
           $('#board-mover').prepend(brightnessFixElement);
@@ -204,32 +204,32 @@ const uiHelper = (function () {
         self.adjustColorBrightness(enabled ? numOrDefault(parseFloat(settings.ui.brightness.value.get()), 1) : null);
       });
 
-      settings.ui.brightness.value.listen(function (value) {
+      settings.ui.brightness.value.listen(function(value) {
         if (settings.ui.brightness.enable.get() === true) {
           const level = numOrDefault(parseFloat(value), 1);
           self.adjustColorBrightness(level);
         }
       });
 
-      settings.ui.bubble.position.listen(function (value) {
+      settings.ui.bubble.position.listen(function(value) {
         self.elements.mainBubble.attr('position', value);
       });
 
       $('#setting-ui-bubble-compact').on('click', settings.ui.bubble.compact.toggle);
-      settings.ui.bubble.compact.listen(function (value) {
+      settings.ui.bubble.compact.listen(function(value) {
         self.elements.mainBubble.toggleClass('compact', value);
       });
 
-      settings.ui.reticule.enable.listen(function (value) {
+      settings.ui.reticule.enable.listen(function(value) {
         place.toggleReticule(value && place.color !== -1);
       });
 
-      settings.ui.cursor.enable.listen(function (value) {
+      settings.ui.cursor.enable.listen(function(value) {
         place.toggleCursor(value && place.color !== -1);
       });
 
       let overrideLang = null;
-      settings.ui.language.override.listen(function (value) {
+      settings.ui.language.override.listen(function(value) {
         if (overrideLang !== null && overrideLang !== value) {
           if (value) {
             setCookie('pxls-accept-language-override', value);
@@ -418,7 +418,7 @@ const uiHelper = (function () {
       ranges.on('input', (e) => updateBar(e.target));
       ranges.each((idx, element) => updateBar(element));
     },
-    _initThemes: function () {
+    _initThemes: function() {
       for (let i = 0; i < self.themes.length; i++) {
         self.themes[i].element = $('<link data-theme="' + i + '" rel="stylesheet" href="' + self.themes[i].location + '">');
         self.themes[i].loaded = false;
@@ -430,30 +430,30 @@ const uiHelper = (function () {
 
       // since we just changed the options available, this will coerce the settings into making the control reflect the actual theme.
       settings.ui.theme.index.set(settings.ui.theme.index.get());
-      settings.ui.theme.index.listen(async function (value) {
+      settings.ui.theme.index.listen(async function(value) {
         await self.loadTheme(parseInt(value));
       });
     },
-    _initStack: function () {
-      socket.on('pixels', function (data) {
+    _initStack: function() {
+      socket.on('pixels', function(data) {
         self.updateAvailable(data.count, data.cause);
       });
     },
-    _initAudio: function () {
+    _initAudio: function() {
       timer.audioElem.addEventListener('error', err => {
         if (console.warn) console.warn('An error occurred on the audioElem node: %o', err);
       });
 
-      settings.audio.alert.src.listen(function (url) { // change should only fire on blur so we normally won't be calling updateAudio for each keystroke. just in case though, we'll lazy update.
+      settings.audio.alert.src.listen(function(url) { // change should only fire on blur so we normally won't be calling updateAudio for each keystroke. just in case though, we'll lazy update.
         if (self._alertUpdateTimer !== false) clearTimeout(self._alertUpdateTimer);
-        self._alertUpdateTimer = setTimeout(function (url) {
+        self._alertUpdateTimer = setTimeout(function(url) {
           self.updateAudio(url);
           self._alertUpdateTimer = false;
         }, 250, url);
       });
       self.elements.btnForceAudioUpdate.click(() => settings.audio.alert.src.set(settings.audio.alert.src.get()));
 
-      settings.audio.alert.volume.listen(function (value) {
+      settings.audio.alert.volume.listen(function(value) {
         const parsed = parseFloat(value);
         const volume = isNaN(parsed) ? 1 : parsed;
         self.elements.lblAlertVolume.text(`${volume * 100 >> 0}%`);
@@ -468,8 +468,8 @@ const uiHelper = (function () {
         settings.audio.alert.src.reset();
       });
     },
-    _initAccount: function () {
-      self.elements.txtDiscordName.keydown(function (evt) {
+    _initAccount: function() {
+      self.elements.txtDiscordName.keydown(function(evt) {
         if (evt.key === 'Enter' || evt.which === 13) {
           self.handleDiscordNameSet();
         }
@@ -575,7 +575,7 @@ const uiHelper = (function () {
       }
 
       const banner = self.elements.bottomBanner[0];
-      const fadeEnd = function () {
+      const fadeEnd = function() {
         if (self.banner.enabled) {
           banner.classList.add('transparent');
           banner.removeEventListener('animationend', fadeEnd);
@@ -591,7 +591,7 @@ const uiHelper = (function () {
           self.resetBanner();
         }
       };
-      const fadeRevEnd = function () {
+      const fadeRevEnd = function() {
         if (self.banner.enabled) {
           banner.removeEventListener('animationend', fadeRevEnd);
           banner.classList.remove('transparent', 'fade-rev');
@@ -632,10 +632,10 @@ const uiHelper = (function () {
         data: {
           discordName: name
         },
-        success: function () {
+        success: function() {
           modal.showText(__('Discord name updated successfully'));
         },
-        error: function (data) {
+        error: function(data) {
           const err = data.responseJSON && data.responseJSON.details ? data.responseJSON.details : data.responseText;
           if (data.status === 200) { // seems to be caused when response body isn't json? just show whatever we can and trust server sent good enough details.
             modal.showText(err);
@@ -645,7 +645,7 @@ const uiHelper = (function () {
         }
       });
     },
-    updateAudio: function (url) {
+    updateAudio: function(url) {
       try {
         if (!url) url = 'notify.wav';
         timer.audioElem.src = url;
@@ -654,7 +654,7 @@ const uiHelper = (function () {
         timer.audioElem.src = 'notify.wav';
       }
     },
-    updateAvailable: function (count, cause) {
+    updateAvailable: function(count, cause) {
       if (count > 0 && cause === 'stackGain') timer.playAudio();
       self.setPlaceableText(count);
     },
@@ -772,7 +772,7 @@ const uiHelper = (function () {
           emojiRegex: /(?:\ud83d\udc68\ud83c\udffb\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c[\udffc-\udfff]|\ud83d\udc68\ud83c\udffc\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c[\udffb\udffd-\udfff]|\ud83d\udc68\ud83c\udffd\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c[\udffb\udffc\udffe\udfff]|\ud83d\udc68\ud83c\udffe\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c[\udffb-\udffd\udfff]|\ud83d\udc68\ud83c\udfff\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c[\udffb-\udffe]|\ud83d\udc69\ud83c\udffb\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c[\udffc-\udfff]|\ud83d\udc69\ud83c\udffb\u200d\ud83e\udd1d\u200d\ud83d\udc69\ud83c[\udffc-\udfff]|\ud83d\udc69\ud83c\udffc\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c[\udffb\udffd-\udfff]|\ud83d\udc69\ud83c\udffc\u200d\ud83e\udd1d\u200d\ud83d\udc69\ud83c[\udffb\udffd-\udfff]|\ud83d\udc69\ud83c\udffd\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c[\udffb\udffc\udffe\udfff]|\ud83d\udc69\ud83c\udffd\u200d\ud83e\udd1d\u200d\ud83d\udc69\ud83c[\udffb\udffc\udffe\udfff]|\ud83d\udc69\ud83c\udffe\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c[\udffb-\udffd\udfff]|\ud83d\udc69\ud83c\udffe\u200d\ud83e\udd1d\u200d\ud83d\udc69\ud83c[\udffb-\udffd\udfff]|\ud83d\udc69\ud83c\udfff\u200d\ud83e\udd1d\u200d\ud83d\udc68\ud83c[\udffb-\udffe]|\ud83d\udc69\ud83c\udfff\u200d\ud83e\udd1d\u200d\ud83d\udc69\ud83c[\udffb-\udffe]|\ud83e\uddd1\ud83c\udffb\u200d\ud83e\udd1d\u200d\ud83e\uddd1\ud83c[\udffb-\udfff]|\ud83e\uddd1\ud83c\udffc\u200d\ud83e\udd1d\u200d\ud83e\uddd1\ud83c[\udffb-\udfff]|\ud83e\uddd1\ud83c\udffd\u200d\ud83e\udd1d\u200d\ud83e\uddd1\ud83c[\udffb-\udfff]|\ud83e\uddd1\ud83c\udffe\u200d\ud83e\udd1d\u200d\ud83e\uddd1\ud83c[\udffb-\udfff]|\ud83e\uddd1\ud83c\udfff\u200d\ud83e\udd1d\u200d\ud83e\uddd1\ud83c[\udffb-\udfff]|\ud83e\uddd1\u200d\ud83e\udd1d\u200d\ud83e\uddd1|\ud83d\udc6b\ud83c[\udffb-\udfff]|\ud83d\udc6c\ud83c[\udffb-\udfff]|\ud83d\udc6d\ud83c[\udffb-\udfff]|\ud83d[\udc6b-\udc6d])|(?:\ud83d[\udc68\udc69]|\ud83e\uddd1)(?:\ud83c[\udffb-\udfff])?\u200d(?:\u2695\ufe0f|\u2696\ufe0f|\u2708\ufe0f|\ud83c[\udf3e\udf73\udf7c\udf84\udf93\udfa4\udfa8\udfeb\udfed]|\ud83d[\udcbb\udcbc\udd27\udd2c\ude80\ude92]|\ud83e[\uddaf-\uddb3\uddbc\uddbd])|(?:\ud83c[\udfcb\udfcc]|\ud83d[\udd74\udd75]|\u26f9)((?:\ud83c[\udffb-\udfff]|\ufe0f)\u200d[\u2640\u2642]\ufe0f)|(?:\ud83c[\udfc3\udfc4\udfca]|\ud83d[\udc6e\udc70\udc71\udc73\udc77\udc81\udc82\udc86\udc87\ude45-\ude47\ude4b\ude4d\ude4e\udea3\udeb4-\udeb6]|\ud83e[\udd26\udd35\udd37-\udd39\udd3d\udd3e\uddb8\uddb9\uddcd-\uddcf\uddd6-\udddd])(?:\ud83c[\udffb-\udfff])?\u200d[\u2640\u2642]\ufe0f|(?:\ud83d\udc68\u200d\u2764\ufe0f\u200d\ud83d\udc8b\u200d\ud83d\udc68|\ud83d\udc68\u200d\ud83d\udc68\u200d\ud83d\udc66\u200d\ud83d\udc66|\ud83d\udc68\u200d\ud83d\udc68\u200d\ud83d\udc67\u200d\ud83d[\udc66\udc67]|\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc66\u200d\ud83d\udc66|\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d[\udc66\udc67]|\ud83d\udc69\u200d\u2764\ufe0f\u200d\ud83d\udc8b\u200d\ud83d[\udc68\udc69]|\ud83d\udc69\u200d\ud83d\udc69\u200d\ud83d\udc66\u200d\ud83d\udc66|\ud83d\udc69\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d[\udc66\udc67]|\ud83d\udc68\u200d\u2764\ufe0f\u200d\ud83d\udc68|\ud83d\udc68\u200d\ud83d\udc66\u200d\ud83d\udc66|\ud83d\udc68\u200d\ud83d\udc67\u200d\ud83d[\udc66\udc67]|\ud83d\udc68\u200d\ud83d\udc68\u200d\ud83d[\udc66\udc67]|\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d[\udc66\udc67]|\ud83d\udc69\u200d\u2764\ufe0f\u200d\ud83d[\udc68\udc69]|\ud83d\udc69\u200d\ud83d\udc66\u200d\ud83d\udc66|\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d[\udc66\udc67]|\ud83d\udc69\u200d\ud83d\udc69\u200d\ud83d[\udc66\udc67]|\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f|\ud83c\udff3\ufe0f\u200d\ud83c\udf08|\ud83c\udff4\u200d\u2620\ufe0f|\ud83d\udc15\u200d\ud83e\uddba|\ud83d\udc3b\u200d\u2744\ufe0f|\ud83d\udc41\u200d\ud83d\udde8|\ud83d\udc68\u200d\ud83d[\udc66\udc67]|\ud83d\udc69\u200d\ud83d[\udc66\udc67]|\ud83d\udc6f\u200d\u2640\ufe0f|\ud83d\udc6f\u200d\u2642\ufe0f|\ud83e\udd3c\u200d\u2640\ufe0f|\ud83e\udd3c\u200d\u2642\ufe0f|\ud83e\uddde\u200d\u2640\ufe0f|\ud83e\uddde\u200d\u2642\ufe0f|\ud83e\udddf\u200d\u2640\ufe0f|\ud83e\udddf\u200d\u2642\ufe0f|\ud83d\udc08\u200d\u2b1b)|[#*0-9]\ufe0f?\u20e3|(?:[©®\u2122\u265f]\ufe0f)|(?:\ud83c[\udc04\udd70\udd71\udd7e\udd7f\ude02\ude1a\ude2f\ude37\udf21\udf24-\udf2c\udf36\udf7d\udf96\udf97\udf99-\udf9b\udf9e\udf9f\udfcd\udfce\udfd4-\udfdf\udff3\udff5\udff7]|\ud83d[\udc3f\udc41\udcfd\udd49\udd4a\udd6f\udd70\udd73\udd76-\udd79\udd87\udd8a-\udd8d\udda5\udda8\uddb1\uddb2\uddbc\uddc2-\uddc4\uddd1-\uddd3\udddc-\uddde\udde1\udde3\udde8\uddef\uddf3\uddfa\udecb\udecd-\udecf\udee0-\udee5\udee9\udef0\udef3]|[\u203c\u2049\u2139\u2194-\u2199\u21a9\u21aa\u231a\u231b\u2328\u23cf\u23ed-\u23ef\u23f1\u23f2\u23f8-\u23fa\u24c2\u25aa\u25ab\u25b6\u25c0\u25fb-\u25fe\u2600-\u2604\u260e\u2611\u2614\u2615\u2618\u2620\u2622\u2623\u2626\u262a\u262e\u262f\u2638-\u263a\u2640\u2642\u2648-\u2653\u2660\u2663\u2665\u2666\u2668\u267b\u267f\u2692-\u2697\u2699\u269b\u269c\u26a0\u26a1\u26a7\u26aa\u26ab\u26b0\u26b1\u26bd\u26be\u26c4\u26c5\u26c8\u26cf\u26d1\u26d3\u26d4\u26e9\u26ea\u26f0-\u26f5\u26f8\u26fa\u26fd\u2702\u2708\u2709\u270f\u2712\u2714\u2716\u271d\u2721\u2733\u2734\u2744\u2747\u2757\u2763\u2764\u27a1\u2934\u2935\u2b05-\u2b07\u2b1b\u2b1c\u2b50\u2b55\u3030\u303d\u3297\u3299])(?:\ufe0f|(?!\ufe0e))|(?:(?:\ud83c[\udfcb\udfcc]|\ud83d[\udd74\udd75\udd90]|[\u261d\u26f7\u26f9\u270c\u270d])(?:\ufe0f|(?!\ufe0e))|(?:\ud83c[\udf85\udfc2-\udfc4\udfc7\udfca]|\ud83d[\udc42\udc43\udc46-\udc50\udc66-\udc69\udc6e\udc70-\udc78\udc7c\udc81-\udc83\udc85-\udc87\udcaa\udd7a\udd95\udd96\ude45-\ude47\ude4b-\ude4f\udea3\udeb4-\udeb6\udec0\udecc]|\ud83e[\udd0c\udd0f\udd18-\udd1c\udd1e\udd1f\udd26\udd30-\udd39\udd3d\udd3e\udd77\uddb5\uddb6\uddb8\uddb9\uddbb\uddcd-\uddcf\uddd1-\udddd]|[\u270a\u270b]))(?:\ud83c[\udffb-\udfff])?|(?:\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f|\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f|\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc77\udb40\udc6c\udb40\udc73\udb40\udc7f|\ud83c\udde6\ud83c[\udde8-\uddec\uddee\uddf1\uddf2\uddf4\uddf6-\uddfa\uddfc\uddfd\uddff]|\ud83c\udde7\ud83c[\udde6\udde7\udde9-\uddef\uddf1-\uddf4\uddf6-\uddf9\uddfb\uddfc\uddfe\uddff]|\ud83c\udde8\ud83c[\udde6\udde8\udde9\uddeb-\uddee\uddf0-\uddf5\uddf7\uddfa-\uddff]|\ud83c\udde9\ud83c[\uddea\uddec\uddef\uddf0\uddf2\uddf4\uddff]|\ud83c\uddea\ud83c[\udde6\udde8\uddea\uddec\udded\uddf7-\uddfa]|\ud83c\uddeb\ud83c[\uddee-\uddf0\uddf2\uddf4\uddf7]|\ud83c\uddec\ud83c[\udde6\udde7\udde9-\uddee\uddf1-\uddf3\uddf5-\uddfa\uddfc\uddfe]|\ud83c\udded\ud83c[\uddf0\uddf2\uddf3\uddf7\uddf9\uddfa]|\ud83c\uddee\ud83c[\udde8-\uddea\uddf1-\uddf4\uddf6-\uddf9]|\ud83c\uddef\ud83c[\uddea\uddf2\uddf4\uddf5]|\ud83c\uddf0\ud83c[\uddea\uddec-\uddee\uddf2\uddf3\uddf5\uddf7\uddfc\uddfe\uddff]|\ud83c\uddf1\ud83c[\udde6-\udde8\uddee\uddf0\uddf7-\uddfb\uddfe]|\ud83c\uddf2\ud83c[\udde6\udde8-\udded\uddf0-\uddff]|\ud83c\uddf3\ud83c[\udde6\udde8\uddea-\uddec\uddee\uddf1\uddf4\uddf5\uddf7\uddfa\uddff]|\ud83c\uddf4\ud83c\uddf2|\ud83c\uddf5\ud83c[\udde6\uddea-\udded\uddf0-\uddf3\uddf7-\uddf9\uddfc\uddfe]|\ud83c\uddf6\ud83c\udde6|\ud83c\uddf7\ud83c[\uddea\uddf4\uddf8\uddfa\uddfc]|\ud83c\uddf8\ud83c[\udde6-\uddea\uddec-\uddf4\uddf7-\uddf9\uddfb\uddfd-\uddff]|\ud83c\uddf9\ud83c[\udde6\udde8\udde9\uddeb-\udded\uddef-\uddf4\uddf7\uddf9\uddfb\uddfc\uddff]|\ud83c\uddfa\ud83c[\udde6\uddec\uddf2\uddf3\uddf8\uddfe\uddff]|\ud83c\uddfb\ud83c[\udde6\udde8\uddea\uddec\uddee\uddf3\uddfa]|\ud83c\uddfc\ud83c[\uddeb\uddf8]|\ud83c\uddfd\ud83c\uddf0|\ud83c\uddfe\ud83c[\uddea\uddf9]|\ud83c\uddff\ud83c[\udde6\uddf2\uddfc]|\ud83c[\udccf\udd8e\udd91-\udd9a\udde6-\uddff\ude01\ude32-\ude36\ude38-\ude3a\ude50\ude51\udf00-\udf20\udf2d-\udf35\udf37-\udf7c\udf7e-\udf84\udf86-\udf93\udfa0-\udfc1\udfc5\udfc6\udfc8\udfc9\udfcf-\udfd3\udfe0-\udff0\udff4\udff8-\udfff]|\ud83d[\udc00-\udc3e\udc40\udc44\udc45\udc51-\udc65\udc6a\udc6f\udc79-\udc7b\udc7d-\udc80\udc84\udc88-\udca9\udcab-\udcfc\udcff-\udd3d\udd4b-\udd4e\udd50-\udd67\udda4\uddfb-\ude44\ude48-\ude4a\ude80-\udea2\udea4-\udeb3\udeb7-\udebf\udec1-\udec5\uded0-\uded2\uded5-\uded7\udeeb\udeec\udef4-\udefc\udfe0-\udfeb]|\ud83e[\udd0d\udd0e\udd10-\udd17\udd1d\udd20-\udd25\udd27-\udd2f\udd3a\udd3c\udd3f-\udd45\udd47-\udd76\udd78\udd7a-\uddb4\uddb7\uddba\uddbc-\uddcb\uddd0\uddde-\uddff\ude70-\ude74\ude78-\ude7a\ude80-\ude86\ude90-\udea8\udeb0-\udeb6\udec0-\udec2\uded0-\uded6]|[\u23e9-\u23ec\u23f0\u23f3\u267e\u26ce\u2705\u2728\u274c\u274e\u2753-\u2755\u2795-\u2797\u27b0\u27bf\ue50a])|\ufe0f/
         })
         .use(pxlsMarkdown.plugins.methodWhitelist, whitelist)
-        .use(function () {
+        .use(function() {
           this.Compiler.prototype.visitors.emoji = (node, next) => {
             if (twemoji.test(node.value)) {
               const el = twemoji.parse(crel('span', node.value)).children[0];
