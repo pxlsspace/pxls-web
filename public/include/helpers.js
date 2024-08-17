@@ -30,6 +30,11 @@ module.exports.analytics = function () {
 };
 module.exports.indexToSymbol = (i) => {
   const dict = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh';
+
+  if (i < 0 || i >= dict.length) {
+    return '';
+  }
+
   return dict[i];
 };
 
