@@ -1,0 +1,2521 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pxls\n"
+"POT-Creation-Date: 2023-12-31T21:19:19.842Z\n"
+"Language: fi\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: /views/error.handlebars /views/profile.handlebars /public/include/user.js
+msgid "My Profile"
+msgstr "Profiilini"
+
+#: /views/error.handlebars /views/profile.handlebars
+msgid "My Factions"
+msgstr "Ryhmäni"
+
+#. HTTP status code name
+#: /views/error.handlebars
+msgid "Not Found"
+msgstr "Ei löydetty"
+
+#: /views/error.handlebars
+msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
+msgstr "Sisältö jota yrität saada ei löytynyt tästä URL osoitteesta. Jos uskot tämän olevan virhe, ota yhteyttä kehittäjään."
+
+#. links to the homepage (the app itself)
+#: /views/error.handlebars
+msgid "Back to Pxls"
+msgstr "Palaa Pxlsiin"
+
+#. HTTP status code name
+#: /views/error.handlebars
+msgid "Not Authenticated"
+msgstr "Ei Vahvistettu"
+
+#: /views/error.handlebars
+msgid "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
+msgstr "Sinun täytyy olla kirjautunut sisään pystyäksesi näkemään tämän datan. Ole hyvä ja palaa pxlsiin käydäksesi läpi kirjautumisprosessin."
+
+#. HTTP status code name
+#: /views/error.handlebars
+msgid "Not Allowed"
+msgstr "Ei Lupaa"
+
+#: /views/error.handlebars
+msgid "The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later."
+msgstr "Toiminto jonka yritit suorittaa ei ole sallittu tai johti virheeseen. Varmista että päätepiste on käytettävissäsi ja yritä uudelleen."
+
+#: /views/index.handlebars
+msgid "Place pixels with people to create art"
+msgstr "Aseta pikseleitä muiden kanssa luodaksesi taidetta"
+
+#: /views/index.handlebars
+msgid "Lost connection to server, reconnecting..."
+msgstr "Yhteys palvelimeen katkesi, yhdistetään uudelleen..."
+
+#: /views/index.handlebars
+msgid "Loading Heatmap (press <kbd>H</kbd> to cancel)"
+msgstr "Ladataan lämpökarttaa (paina <kbd>H</kbd> peruaksesi)"
+
+#: /views/index.handlebars
+msgid "Loading Virginmap (press <kbd>X</kbd> to cancel)"
+msgstr "Ladataan neitsytkarttaa (paina <kbd>X</kbd> peruaksesi)"
+
+#: /views/index.handlebars
+msgid "Logout"
+msgstr "Kirjaudu ulos"
+
+#: /views/index.handlebars
+msgid "Canvas:"
+msgstr "Kanvas:"
+
+#: /views/index.handlebars
+msgid "N/A"
+msgstr "N/A"
+
+#: /views/index.handlebars
+msgid "All Time:"
+msgstr "Kaikki:"
+
+#: /views/index.handlebars
+msgid "Loading online user count&hellip;"
+msgstr "Ladataan actiivisten käyttäjien lukumäärää&hellip;"
+
+#: /views/index.handlebars /public/admin/admin.js /public/include/lookup.js
+msgid "Pixels"
+msgstr "Pixeliä"
+
+#: /views/index.handlebars
+msgid "Undo"
+msgstr "Peruuta"
+
+#: /views/index.handlebars
+msgid "You are not signed in."
+msgstr "Et ole kirjautunut sisään."
+
+#: /views/index.handlebars /public/include/user.js
+msgid "Sign in with..."
+msgstr "Kirjaudu sisään käyttäen..."
+
+#: /views/index.handlebars
+msgid "Loading..."
+msgstr "Ladataan..."
+
+#: /views/index.handlebars
+msgid "Sign up"
+msgstr "Rekisteröidy"
+
+#: /views/index.handlebars
+msgid "Pick a username"
+msgstr "Valitse käyttäjänimi"
+
+#: /views/index.handlebars
+msgid "Username:"
+msgstr "Käyttäjänimi:"
+
+#: /views/index.handlebars
+msgid "Discord Tag (Optional):"
+msgstr "Discord Tagi (Vapaaehtoinen):"
+
+#: /views/index.handlebars
+msgid "Drag and drop template image"
+msgstr "Vedä ja pudota mallikuva"
+
+#: /views/index.handlebars
+msgid "Exit"
+msgstr "Poistu"
+
+#: /views/index.handlebars /views/profile.handlebars
+msgid "Info"
+msgstr "Tietoja"
+
+#: /views/index.handlebars
+msgid "Close Panel"
+msgstr "Sulje Paneeli"
+
+#: /views/index.handlebars /public/include/chat.js
+msgid "Chat"
+msgstr "Chatti"
+
+#: /views/index.handlebars
+msgid "Pings"
+msgstr "Pingit"
+
+#: /views/index.handlebars
+msgid "Settings"
+msgstr "Asetukset"
+
+#: /views/index.handlebars
+msgid "Jump To Bottom"
+msgstr "Siirry pohjalle"
+
+#: /views/index.handlebars
+msgid "Replying to"
+msgstr "Vastataan käyttäjälle"
+
+#: /views/index.handlebars /public/include/chat.js
+msgid "On"
+msgstr "Päällä"
+
+#: /views/index.handlebars
+msgid "Emoji"
+msgstr "Emoji"
+
+#: /views/index.handlebars
+msgid "Search"
+msgstr "Etsi"
+
+#: /views/index.handlebars
+msgid "keybinds;keys;keyboard;hotkeys"
+msgstr "näppäinsidokset;näppäimet;näppäimistö;pikanäppäimet"
+
+#: /views/index.handlebars
+msgid "Keybinds"
+msgstr "Näppäinsidokset"
+
+#: /views/index.handlebars
+msgid "general"
+msgstr "yleiset"
+
+#: /views/index.handlebars
+msgid "General"
+msgstr "Yleiset"
+
+#: /views/index.handlebars
+msgid "move;moving;panning;drag"
+msgstr "liiku;liikkuminen;siirtäminen;vedä"
+
+#: /views/index.handlebars
+msgid "Mouse/arrows/wasd to pan"
+msgstr "Hiiri/nuolet/wasd siirtyäksesi"
+
+#: /views/index.handlebars
+msgid "mousewheel;zooming"
+msgstr "hiiren rulla;zoomaaminen"
+
+#: /views/index.handlebars
+msgid "Scroll/pinch to zoom"
+msgstr "Rullaa/nipistä zoomataksesi"
+
+#: /views/index.handlebars
+msgid "scroll;zooming"
+msgstr "rullaa;zoomaaminen"
+
+#: /views/index.handlebars
+msgid "<kbd>+</kbd>/<kbd>-</kbd> or <kbd>Q</kbd>/<kbd>E</kbd> to zoom"
+msgstr "<kbd>+</kbd>/<kbd>-</kbd> tai <kbd>Q</kbd>/<kbd>E</kbd> zoomataksesi"
+
+#: /views/index.handlebars
+msgid "lookups"
+msgstr "tarkastelut"
+
+#: /views/index.handlebars
+msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
+msgstr "<kbd>Shift</kbd> + Click/Pidä kosketusta pohjassa tarkastellaksesi pixeliä"
+
+#: /views/index.handlebars
+msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
+msgstr "näkymät;linjaus;ruudukko piilotettu;ruudukko näytetty;piilota ruudukko;näytä ruudukko"
+
+#: /views/index.handlebars
+msgid "<kbd>G</kbd> to toggle grid"
+msgstr "<kbd>G</kbd> kytkeäksesi ruudukon"
+
+#: /views/index.handlebars
+msgid "close;information shown;information hidden;info shown;info hidden;hide information;show information"
+msgstr "sulje;tiedot näytetty;tiedot piilotetty;tieto näytetty;tieto piilotetty;piilota tiedot;näytä tiedot"
+
+#: /views/index.handlebars
+msgid "<kbd>I</kbd> to open info"
+msgstr "<kbd>I</kbd> avataksesi tiedot"
+
+#: /views/index.handlebars
+msgid "close;settings hidden;settings shown;hide settings;show settings"
+msgstr "sulje;asetukset piilotettu;asetukset näytetty;piilota asetukset;näytä asetukset"
+
+#: /views/index.handlebars
+msgid "<kbd>T</kbd> to open settings"
+msgstr "<kbd>T</kbd> avataksesi asetukset"
+
+#: /views/index.handlebars
+msgid "close;chat hidden;chat shown;hide chat;show chat"
+msgstr "sulje;chatti piilotetty;chatti näytetty;piilota chatti;näytä chatti"
+
+#: /views/index.handlebars
+msgid "<kbd>B</kbd> to open chat"
+msgstr "<kbd>B</kbd> avataksesi chatin"
+
+#: /views/index.handlebars
+msgid "canvas locked;move;moving;zoom;zooming"
+msgstr "kanvas lukittu;liiku;liikkuminen;zoom;zoomaaminen"
+
+#: /views/index.handlebars
+msgid "<kbd>L</kbd> to toggle locking panning of the canvas"
+msgstr "<kbd>L</kbd> kytkeäksesi kanvasin siirtämisen"
+
+#: /views/index.handlebars
+msgid "take screenshot;image;download;picture;canvas"
+msgstr "ota kuvankaappaus;kuva;lataa;kuva;kanvas"
+
+#: /views/index.handlebars
+msgid "<kbd>P</kbd> to take a snapshot"
+msgstr "<kbd>P</kbd> ottaaksesi kaappauksen"
+
+#: /views/index.handlebars
+msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
+msgstr "näkymät;käyttäjän aktiviteetti;pikseleitä asetettuja pixeleitä;lämpökartta piilotettu;lämpökartta näytetty;piilota lämpökartta;näytä lämpökartta"
+
+#: /views/index.handlebars
+msgid "<kbd>H</kbd> to toggle heatmap"
+msgstr "<kbd>H</kbd> kytkeäksesi lämpokartan"
+
+#: /views/index.handlebars
+msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
+msgstr "näkymät;käyttäjän aktiviteetti;pikseleitä asettamattomia pikseleitä;neitsytkartta piilotettu;neitsytkartta näytetty;piilota neitsytkartta;näytä neitsytkartta"
+
+#: /views/index.handlebars
+msgid "<kbd>X</kbd> to toggle virginmap"
+msgstr "<kbd>X</kbd> kytkeäksesi neitsytkartan"
+
+#: /views/index.handlebars
+msgid "overlays;user activity;pixels placed pixels;wipe;clean;"
+msgstr "näkymät;käyttäjän aktiviteetti;pikseleitä asetettuja pixeleitä;pyyhi;puhdista;"
+
+#: /views/index.handlebars
+msgid "<kbd>O</kbd> to clear heatmap"
+msgstr "<kbd>O</kbd> tyhjentääksesi lämpökartan"
+
+#: /views/index.handlebars
+msgid "overlays;user activity;pixels unplaced pixels;wipe;clean;"
+msgstr "näkymät;käyttäjän aktiviteetti;pikseleitä asettamattomia pikseleitä;pyyhi;puhdista;"
+
+#: /views/index.handlebars
+msgid "<kbd>U</kbd> to clear virginmap"
+msgstr "<kbd>U</kbd> tyhjentääksesi neitsytkartan"
+
+#: /views/index.handlebars
+msgid "next color;previous color"
+msgstr "seuraava väri;edellinen väri"
+
+#: /views/index.handlebars
+msgid "<kbd>J</kbd>/<kbd>K</kbd> to cycle through palette colors"
+msgstr "<kbd>J</kbd>/<kbd>K</kbd> käydäksesi läpi paletin värit"
+
+#: /views/index.handlebars
+msgid "current coordinates;coords"
+msgstr "nykyiset koordinaatit;koordinaatit"
+
+#: /views/index.handlebars
+msgid "<kbd>C</kbd> to copy link of moused-over coordinates"
+msgstr "<kbd>C</kbd> kopioidaksesi linkki hiiren osoittamiin koordinaatteihin"
+
+#: /views/index.handlebars
+msgid "cancel selection"
+msgstr "peruuta valinta"
+
+#: /views/index.handlebars
+msgid "<kbd>ESC</kbd> to deselect current pixel"
+msgstr "<kbd>ESC</kbd> postaaksesi nykyinen pikselivalinta"
+
+#: /views/index.handlebars
+msgid "recenter;jump;center on template;guides;focus"
+msgstr "uudelleenkeskitä;siirry;keskitä malliin;ohjeet;keskitys"
+
+#: /views/index.handlebars
+msgid "<kbd>R</kbd> to center the board on the current template"
+msgstr "<kbd>R</kbd> keskittääksesi näkymän nykyiseen malliin"
+
+#: /views/index.handlebars
+msgid "templates;guides"
+msgstr "mallit;ohjeet"
+
+#: /views/index.handlebars
+msgid "Template"
+msgstr "Malli"
+
+#: /views/index.handlebars
+msgid "transparency"
+msgstr "läpinäkyvyys"
+
+#: /views/index.handlebars
+msgid "<kbd>Page Up</kbd> to increase opacity"
+msgstr "<kbd>Page Up</kbd> lisätäksesi opasiteettiä"
+
+#: /views/index.handlebars
+msgid "<kbd>Page Down</kbd> to decrease opacity"
+msgstr "<kbd>Page Down</kbd> vähentääksesi opasiteettiä"
+
+#: /views/index.handlebars
+msgid "hidden;shown;hide;show"
+msgstr "piilotettu;näytetty;piilota;näytetty"
+
+#: /views/index.handlebars
+msgid "<kbd>V</kbd> to toggle visibility"
+msgstr "<kbd>V</kbd> kytkeäksesi näkyvyyden"
+
+#: /views/index.handlebars
+msgid "Note: These values are based on QWERTY keyboards. For other layouts, use the keys corresponding to the same position on a QWERTY keyboard."
+msgstr "Huom: Nämä arvot perustuvat QWERTY näppäimistöasetteluun. Muilla asetteluilla käytä QWERTY näppimiston sijainteja vastaavissa sijainneissa olevia näppäimiä."
+
+#: /views/index.handlebars
+msgid "templates;overlays;guides"
+msgstr "mallit;näkymät;ohjeet"
+
+#: /views/index.handlebars
+msgid "templates;overlays;image;pixel art"
+msgstr "mallit;näkymät;kuva;pikselitaide"
+
+#: /views/index.handlebars
+msgid "template enabled;template disabled;show template;hide template;template shown;template hidden"
+msgstr "malli käytössä;malli possa käytöstä;näytä malli;piilota malli;malli näytetty;malli piilotettu"
+
+#: /views/index.handlebars
+msgid "Use template"
+msgstr "Käytä mallia"
+
+#: /views/index.handlebars
+msgid "Hold down <kbd>Ctrl</kbd> (or <kbd>Option</kbd> on mac) to drag the template around"
+msgstr "Pidä <kbd>Ctrl</kbd> (tai <kbd>Option</kbd> macillä) siirtääksesi mallia"
+
+#: /views/index.handlebars
+msgid "template title;template name;tab name;tab title;title="
+msgstr "mallin otsikko;mallin nimi;välilehden nimi;välilehden otsikko;title="
+
+#: /views/index.handlebars
+msgid "Title:"
+msgstr "Otsikko:"
+
+#: /views/index.handlebars
+msgid "template location source;template source URL;template URL;template="
+msgstr "mallin sijainnin lähde;mallin lähde URL;mallin URL;template="
+
+#: /views/index.handlebars
+msgid "URL:"
+msgstr "URL:"
+
+#: /views/index.handlebars
+msgid "template position;template x;template y;template location; template vertical; template horizontal;ox=;oy="
+msgstr "mallin sijainti;mallin x;mallin y;mallin sijainti; malling pystysuunta; mallin vaakasuunta;ox=;oy="
+
+#: /views/index.handlebars
+msgid "Horizontal position:"
+msgstr "Vaakassuntainen sijainti:"
+
+#: /views/index.handlebars
+msgid "Vertical position:"
+msgstr "Pystysuuntainen sijainti:"
+
+#: /views/index.handlebars
+msgid "template width;tw="
+msgstr "mallin leveys;tw="
+
+#: /views/index.handlebars
+msgid "Width:"
+msgstr "Leveys:"
+
+#: /views/index.handlebars
+msgid "Reset"
+msgstr "Palauta"
+
+#: /views/index.handlebars
+msgid "template style;custom template"
+msgstr "mallin tyyli;oma malli;muokatty malli"
+
+#: /views/index.handlebars
+msgid "Style:"
+msgstr "Tyyli:"
+
+#: /views/index.handlebars
+msgid "Use Source Style"
+msgstr "Keytä lähteen tyyliä"
+
+#: /views/index.handlebars
+msgid "1-to-1"
+msgstr "yksi-yhteen"
+
+#: /views/index.handlebars
+msgid "1-to-1 (keep incorrect colors)"
+msgstr "yksi-yhteen (pidä virheelliset värit)"
+
+#: /views/index.handlebars
+msgid "Dotted (Small, 1:2)"
+msgstr "Pisteet (Pieni, 1:2)"
+
+#: /views/index.handlebars
+msgid "Dotted (Big, 2:2)"
+msgstr "Pisteet (Suuri, 2:2)"
+
+#: /views/index.handlebars
+msgid "Symbols"
+msgstr "Symbolit"
+
+#: /views/index.handlebars
+msgid "Numbers"
+msgstr "Numerot"
+
+#: /views/index.handlebars
+msgid "Custom…"
+msgstr "Muokattu…"
+
+#: /views/index.handlebars
+msgid "template style source;template style URL;custom style URL;custom template"
+msgstr "mallin tyyli lähde;mallih tyylin URL;muokatun tyylin URL;muokattu malli"
+
+#: /views/index.handlebars
+msgid "Custom style URL:"
+msgstr "Muokatun tyylin URL:"
+
+#: /views/index.handlebars
+msgid "template conversion;template palette conversion;convert to palette"
+msgstr "mallin muuntaminen;mallin paletin muuntaminen;muunna palettiin"
+
+#: /views/index.handlebars
+msgid "Color Conversion Mode:"
+msgstr "Värinmuunnostila:"
+
+#: /views/index.handlebars
+msgid "Unconverted"
+msgstr "Muuttumaton"
+
+#: /views/index.handlebars
+msgid "Nearest Custom"
+msgstr "Lähin muokattu"
+
+#: /views/index.handlebars
+msgid "template transparency;template opacity;oo="
+msgstr "mallin läpinäkyvyys;mallin opasiteetti;oo="
+
+#: /views/index.handlebars
+msgid "Opacity:"
+msgstr "Opasiteetti:"
+
+#: /views/index.handlebars
+msgid "ui;interface"
+msgstr "ui;käyttöliittymä"
+
+#: /views/index.handlebars
+msgid "UI Settings"
+msgstr "UI Asetukset"
+
+#: /views/index.handlebars
+msgid "language override;text"
+msgstr "kielen ylikirjoitus;teksti"
+
+#: /views/index.handlebars
+msgid "Language override:"
+msgstr "Kielen ylikirjoitus:"
+
+#: /views/index.handlebars
+msgid "Use Browser Language"
+msgstr "Käytä Selaimen Kieltä"
+
+#: /views/index.handlebars
+msgid "English"
+msgstr "englanti"
+
+#: /views/index.handlebars
+msgid "Bulgarian"
+msgstr "bulgaria"
+
+#: /views/index.handlebars
+msgid "French"
+msgstr "ranska"
+
+#: /views/index.handlebars
+msgid "German"
+msgstr "saksa"
+
+#: /views/index.handlebars
+msgid "Russian"
+msgstr "vänäjä"
+
+#: /views/index.handlebars
+msgid "Swedish"
+msgstr "ruotsi"
+
+#: /views/index.handlebars
+msgid "Toki Pona"
+msgstr "Toki Pona"
+
+#: /views/index.handlebars
+msgid "themes;look;stylesheets;visuals"
+msgstr "teemat;ulkonäky;tyylisivut;visuaalit"
+
+#: /views/index.handlebars
+msgid "Theme:"
+msgstr "Teema:"
+
+#: /views/index.handlebars
+msgid "Default"
+msgstr "Oletus"
+
+#: /views/index.handlebars
+msgid "hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden"
+msgstr "piilota ristikko;ristikko näytetty;ristikko piilotettu"
+
+#: /views/index.handlebars
+msgid "Show reticule"
+msgstr "Näytä ristikko"
+
+#: /views/index.handlebars
+msgid "hide cursor;cursor shown;cursor hidden"
+msgstr "piilota kursori;kursori näytettu;kursori piilotettu"
+
+#: /views/index.handlebars
+msgid "Show cursor"
+msgstr "Näytä kursori"
+
+#: /views/index.handlebars
+msgid "darkness filter"
+msgstr "pimeys suodatin"
+
+#: /views/index.handlebars
+msgid "Enable color brightness"
+msgstr "Ota värien kirkkaus käyttöön"
+
+#: /views/index.handlebars
+msgid "Warning: Known to cause fuzziness in Chrome on some Mac/Linux installs"
+msgstr "Varoitus: Tiedetään aiheuttavan sumuisuutta Chromessa Mac/Linux asennuksilla"
+
+#: /views/index.handlebars
+msgid "Color brightness:"
+msgstr "Värien kirkkaus:"
+
+#: /views/index.handlebars
+msgid "keep current selected;keep curent color;place"
+msgstr "pidä tällä hetkellä valittu;pidä nykyinen väri;aseta"
+
+#: /views/index.handlebars
+msgid "Deselect color after placing"
+msgstr "Poista värin valinta asettamisen jälkeen"
+
+#: /views/index.handlebars
+msgid "mousewheel;palette scrolling"
+msgstr "hiiren rulla;paletin rullaminen"
+
+#: /views/index.handlebars
+msgid "Enable scrolling on the palette to switch colors"
+msgstr "Ota käyttöön paletin rullaminen värien vaihtamiseksi"
+
+#: /views/index.handlebars
+msgid "reverse scrolling;mousewheel;palette scrolling;enable scrolling on the palette to switch colors"
+msgstr "rullaaminen takaperin;hiiren rulla;paletin rullaaminen;ota käyttöön paletin rullaminen värien vaihtamiseksi"
+
+#: /views/index.handlebars
+msgid "Invert scroll direction"
+msgstr "Käännä rullamisen suunta"
+
+#: /views/index.handlebars
+msgid "indexed colors;palette indicies"
+msgstr "indeksoidut värit;paletti-indeksit"
+
+#: /views/index.handlebars
+msgid "Add numbers to palette entries"
+msgstr "Lisää numerot paletin kohteisiin"
+
+#: /views/index.handlebars
+msgid "scrollbar;palette scrolling"
+msgstr "rullauspalkki;paletin rullaaminen"
+
+#: /views/index.handlebars
+msgid "Enable thin scrollbar"
+msgstr "Ota ohut rullauspalkki käyttöön"
+
+#: /views/index.handlebars
+msgid "scrollbar;palette scrolling;palette stack"
+msgstr "rullauspalkki;paletin rullaaminen;paletin pinoutuminen"
+
+#: /views/index.handlebars
+msgid "Enable palette stacking"
+msgstr "Ota paletin pinoutuminen käyttöön"
+
+#: /views/index.handlebars
+msgid "floating bubble location"
+msgstr "kelluvan kuplan sijainti"
+
+#: /views/index.handlebars
+msgid "Bubble position:"
+msgstr "Kuplan sijainti:"
+
+#: /views/index.handlebars
+msgid "Top left"
+msgstr "Ylävasen"
+
+#: /views/index.handlebars
+msgid "Top right"
+msgstr "Yläoikea"
+
+#: /views/index.handlebars
+msgid "Bottom left"
+msgstr "Alavasen"
+
+#: /views/index.handlebars
+msgid "Bottom right"
+msgstr "Alaoikea"
+
+#: /views/index.handlebars
+msgid "broken;offset workaround"
+msgstr "rikki;offsetin kiertotapa"
+
+#: /views/index.handlebars
+msgid "Attempt to fix canvas displacement bug in Chrome 78+"
+msgstr "Yritä korjata kanvasin siirtymä bugi Chrome versiossa 78+"
+
+#: /views/index.handlebars
+msgid "chat;message;ping sound"
+msgstr "Chatti;viesti;ping ääni"
+
+#: /views/index.handlebars
+msgid "Chat Settings"
+msgstr "Chatin asetukset"
+
+#: /views/index.handlebars
+msgid "username;color;colour"
+msgstr "käyttäjänimi;väri"
+
+#: /views/index.handlebars
+msgid "Username Color:"
+msgstr "Käyttäjänimen Väri:"
+
+#: /views/index.handlebars
+msgid "chat message;chat ui"
+msgstr "chattiviesti;chatin ui"
+
+#: /views/index.handlebars
+msgid "Interface"
+msgstr "käyttöliittymä"
+
+#: /views/index.handlebars
+msgid "enable;disable"
+msgstr "ota käyttöön;poista käytöstä"
+
+#: /views/index.handlebars
+msgid "Enable chat"
+msgstr "Ota chatti käyttöön"
+
+#: /views/index.handlebars
+msgid "Page must be reloaded after changing"
+msgstr "Sivu täytyy ladata uudestaan muuttamisen jälkeen"
+
+#: /views/index.handlebars
+msgid "chat size;chat font"
+msgstr "chatin koko;chatin fontti"
+
+#: /views/index.handlebars
+msgid "Font Size:"
+msgstr "Fontin koko:"
+
+#: /views/index.handlebars
+msgid "time;timestamps"
+msgstr "aika;timestampit"
+
+#: /views/index.handlebars
+msgid "24 Hour Timestamps"
+msgstr "24-Tunnin Timestampit"
+
+#: /views/index.handlebars
+msgid "badges;pixel count;pixels placed"
+msgstr "merkit;pikselien määrä;pikseleitä asetettu"
+
+#: /views/index.handlebars
+msgid "Show pixel-placed badges"
+msgstr "Näytä pikseleitä-asetettu merkit"
+
+#: /views/index.handlebars
+msgid "badges;factions"
+msgstr "merkit;ryhmät"
+
+#: /views/index.handlebars
+msgid "Show faction tags"
+msgstr "Näytä rymien tagit"
+
+#: /views/index.handlebars
+msgid "template urls;template links;template name"
+msgstr "mallien url;mallien linkit;mallin nimi"
+
+#: /views/index.handlebars
+msgid "Replace template titles with URLs in chat where applicable"
+msgstr "Korvaa mallien otsikot URL-osoitteilla chatissä kun mahdollista"
+
+#: /views/index.handlebars
+msgid "chat orientation;chat position"
+msgstr "chatin suunta;chatin sijainti"
+
+#: /views/index.handlebars
+msgid "Enable horizontal chat"
+msgstr "Ota käyttöön Vaakassuntainen chatti"
+
+#: /views/index.handlebars
+msgid "banner;animation"
+msgstr "banneri;animaatio"
+
+#: /views/index.handlebars
+msgid "Enable the rotating banner under chat"
+msgstr "Ota keyttöön muuttuva banneri chatin alla"
+
+#: /views/index.handlebars
+msgid "max;messages;truncate"
+msgstr "maksimi;viestit;katkaise"
+
+#: /views/index.handlebars
+msgid "Maximum amount of chat messages:"
+msgstr "Maksimimäärä chattiviestejä:"
+
+#: /views/index.handlebars
+msgid "link;url;behaviour"
+msgstr "linkki;url;käyttäytyminen"
+
+#: /views/index.handlebars
+msgid "Default internal link action click:"
+msgstr "Oletus sisäisen linkin klikkaustoiminto:"
+
+#: /views/index.handlebars
+msgid "link;url;behaviour;external;bypass;skip"
+msgstr "linkki;url;käyttäytyminen;ulkoinen;ohitus;ohita"
+
+#: /views/index.handlebars
+msgid "Skip external link popup"
+msgstr "Ohita ulkoisten linkkien popupit"
+
+#: /views/index.handlebars
+msgid "Note: Has no effect if external link popups are disabled by the server."
+msgstr "Huom: Vaikutusta ei ole jos ulkoisten linkkien popupit on poistettu käytöstä palvelimella."
+
+#: /views/index.handlebars
+msgid "chat icon;chat notifications;chat ping"
+msgstr "chattikuvake;chatti-ilmoitukset;chattipingi"
+
+#: /views/index.handlebars
+msgid "Chat icon badge mode:"
+msgstr "Chattikuvakkeen merrkitila:"
+
+#: /views/index.handlebars
+msgid "Show on unread ping"
+msgstr "Näytä lukemattomalla pingillä"
+
+#: /views/index.handlebars
+msgid "Show on unread message"
+msgstr "Näytä lukemattomalla viestillä"
+
+#: /views/index.handlebars
+msgid "Never show"
+msgstr "Älä näytäs"
+
+#: /views/index.handlebars
+msgid "chat icon;chat notifications;chat message"
+msgstr "chatin kuvake;chatin ilmoitukset;chattiviesti"
+
+#: /views/index.handlebars
+msgid "Chat icon highlight mode:"
+msgstr "Chattikuvakkeen highlighting tila:"
+
+#: /views/index.handlebars
+msgid "ignored;ignores;unignore;blocked;blocking;unblock"
+msgstr "ei huomioitu;ei huomioi;älä ole huomioimatta;estetty;estäminen;poista esto"
+
+#: /views/index.handlebars
+msgid "Ignores"
+msgstr "Ei huomioi"
+
+#: /views/index.handlebars
+msgid "unignore;unblock"
+msgstr "älä ole huomioimatta;posta esto"
+
+#: /views/index.handlebars
+msgid "Unignore"
+msgstr "Älä ole huomioimatta"
+
+#: /views/index.handlebars
+msgid "overlays;virginmap;heatmap;grid"
+msgstr "näkymät;neitsytkartta;lämpökartta;ruudukko"
+
+#: /views/index.handlebars
+msgid "Overlay Settings"
+msgstr "Näkymien asetukset"
+
+#: /views/index.handlebars
+msgid "heatmap;heatmap opacity;clear heatmap"
+msgstr "lämpökartta;lämpokartan opasiteetti;tyhjennä lämpökartta"
+
+#: /views/index.handlebars
+msgid "Heatmap"
+msgstr "Lämpökartta"
+
+#: /views/index.handlebars
+msgid "Turn on heatmap"
+msgstr "Laita lämpökartta päälle"
+
+#: /views/index.handlebars
+msgid "(toggle with <kbd>H</kbd>)"
+msgstr "(kytke käyttämällä <kbd>H</kbd>)"
+
+#: /views/index.handlebars
+msgid "overlays;activity;pixels placed pixels;wipe;clean"
+msgstr "näkymät;aktiviteetti;oikseleitä asetettuja pikseleitä;tyhjennä;puhdista"
+
+#: /views/index.handlebars
+msgid "Clear heatmap"
+msgstr "Tyhjennä lämpökartta"
+
+#: /views/index.handlebars
+msgid "(hotkey: <kbd>O</kbd>)"
+msgstr "(pikanäppäin: <kbd>O</kbd>)"
+
+#: /views/index.handlebars
+msgid "overlays;user activity;pixels placed pixels;transparency"
+msgstr "näkymät;käyttäjän aktiivisuus;pikseleitä asetettuja pikseleitä;läpinäkyvyys"
+
+#: /views/index.handlebars
+msgid "Heatmap background opacity:"
+msgstr "Lämpökartan taustan opasiteetti:"
+
+#: /views/index.handlebars
+msgid "virginmap;virginmap opacity;clear virginmap"
+msgstr "neitsytkartta;neitsytkartan opasiteetti;tyhjennä neitsytkartta"
+
+#: /views/index.handlebars
+msgid "Virginmap"
+msgstr "Neitsytkartta"
+
+#: /views/index.handlebars
+msgid "Turn on virginmap"
+msgstr "Laita Neitsytkartta päälle"
+
+#: /views/index.handlebars
+msgid "(toggle with <kbd>X</kbd>)"
+msgstr "(kytke kyttämällä <kbd>X</kbd>)"
+
+#: /views/index.handlebars
+msgid "overlays;user activity;pixels unplaced pixels;transparency"
+msgstr "näkymät;keyttäjien aktiivisuus;pikseleitä asettamattomia pikseleitä;läpinäkyvyys"
+
+#: /views/index.handlebars
+msgid "Virginmap background opacity:"
+msgstr "Neitsytkartan taustan opasiteetti:"
+
+#: /views/index.handlebars
+msgid "overlays;activity;pixels unplaced pixels;wipe;clean"
+msgstr "näkymät;aktiviteetti;pikseleitä asettamattomia pikseleitä;tyhjennä;puhdista"
+
+#: /views/index.handlebars
+msgid "Clear virginmap"
+msgstr "Tyhjennä neitsytkartta"
+
+#: /views/index.handlebars
+msgid "(hotkey: <kbd>U</kbd>)"
+msgstr "(pikanäppäin: <kbd>U</kbd>)"
+
+#: /views/index.handlebars
+msgid "Layer template underneath heatmap"
+msgstr "Laita malli lämpökartan taakse"
+
+#: /views/index.handlebars
+msgid "grid;toggle grid"
+msgstr "ruudukko;kytke ruudukko"
+
+#: /views/index.handlebars
+msgid "Grid"
+msgstr "Ruudukko"
+
+#: /views/index.handlebars
+msgid "Turn on grid"
+msgstr "Laita ruudukko päälle"
+
+#: /views/index.handlebars
+msgid "(toggle with <kbd>G</kbd>)"
+msgstr "(kytke käyttämällä <kbd>G</kbd>)"
+
+#: /views/index.handlebars
+msgid "controls;zooming;panning;movement"
+msgstr "kontrollit;zoomaaminen;siirtyminen;liike"
+
+#: /views/index.handlebars
+msgid "Control Settings"
+msgstr "Kontrolliasetukset"
+
+#: /views/index.handlebars
+msgid "zooming;scrolling;scale;scaling"
+msgstr "zoomaaminen;rullaaminen;skaala;skaalaaminen"
+
+#: /views/index.handlebars
+msgid "Zooming"
+msgstr "Zoomaaminen"
+
+#: /views/index.handlebars
+msgid "scrolling sensitivity;zooming sensitivity;mousewheel sensitivity"
+msgstr "rullaamisen herkkyys;zoomaamisen herkkyys;hiiren rullan herkkyys"
+
+#: /views/index.handlebars
+msgid "Zoom sensitivity:"
+msgstr "Zoomaamisen herkkkyys:"
+
+#: /views/index.handlebars
+msgid "zooming limit;scrolling limit;mousewheel;zooming minimum;zooming maximum"
+msgstr "zoomaamisen raja;rullaamisen raja;hiiren rulla;zoomaamisen minimi;zoomaamisen maksimi"
+
+#: /views/index.handlebars
+msgid "Minimum scale:"
+msgstr "Minimiskaala:"
+
+#: /views/index.handlebars
+msgid "Maximum scale:"
+msgstr "Maksimiskaala:"
+
+#: /views/index.handlebars
+msgid "rounding;zooming;scrolling;mousewheel;integer;decimal"
+msgstr "pyöristäminen;zoomaaminen;rullaaminen;hiiren rulla;kokonaisluku;desimaali"
+
+#: /views/index.handlebars
+msgid "Round zoom values to nearest whole number"
+msgstr "Pyöristä zoomausarvot lähimpään kokonaislukuun"
+
+#: /views/index.handlebars
+msgid "controls;miscellaneous"
+msgstr "kontrollit;sekalaiset"
+
+#: /views/index.handlebars
+msgid "Lock the canvas (disallow canvas drag/zoom with mouse/fingers)"
+msgstr "Lukitse kanvas (älä salli kanvasin vetämistä/hiirellä zoomaamista/sormia)"
+
+#: /views/index.handlebars
+msgid "MMB picker;mouse picker;selection;palette picker"
+msgstr "MMB valitsin;hiiren valitsin;valinta;paletin valitsin"
+
+#: /views/index.handlebars
+msgid "Enable middle mouse button selecting color from board"
+msgstr "Ota käyyttöön värin valitseminen kentältä hiiren keskinäppäimellä"
+
+#: /views/index.handlebars
+msgid "right click action"
+msgstr "oikean hiiren näppäimen toiminto"
+
+#: /views/index.handlebars
+msgid "Right-click action:"
+msgstr "Oikean hiiren näppäimen toiminto:"
+
+#: /views/index.handlebars
+msgid "Nothing"
+msgstr "Ei mitään"
+
+#: /views/index.handlebars
+msgid "Clear color"
+msgstr "Tyhjennä väri"
+
+#: /views/index.handlebars
+msgid "Copy color"
+msgstr "Kopioi väri"
+
+#: /views/index.handlebars
+msgid "Lookup"
+msgstr "Haku"
+
+#: /views/index.handlebars
+msgid "Clear color + Lookup"
+msgstr "Tyhjennnä väri + Haku"
+
+#: /views/index.handlebars
+msgid "snapshots;screenshot;download;picture;canvas"
+msgstr "snapshotit;kuvankaappaukset;lataa;kuva;kanvaasi"
+
+#: /views/index.handlebars
+msgid "Snapshot Settings"
+msgstr "Snapshottien asetukset"
+
+#: /views/index.handlebars
+msgid "screenshot;snapshot;download;board;canvas"
+msgstr "kuvankaappaus;snapshotti;lataa;kenttä;kanvaasi"
+
+#: /views/index.handlebars
+msgid "take screenshot;image;download format;picture;canvas;board"
+msgstr "ota kuvankaappaus;kuva;latausformaatti;kanvaasi;kenttä"
+
+#: /views/index.handlebars
+msgid "Snapshot image format:"
+msgstr "Snapshottien kuvaformaatti:"
+
+#: /views/index.handlebars
+msgid "PNG"
+msgstr "PNG"
+
+#: /views/index.handlebars
+msgid "JPEG"
+msgstr "JPEG"
+
+#: /views/index.handlebars
+msgid "WEBP (Chrome only)"
+msgstr "WEBP (vain Chrome)"
+
+#: /views/index.handlebars
+msgid "sound;notification;alert;notify;ping"
+msgstr "ääni;ilmoitus;hälytys;ilmoita;pingi"
+
+#: /views/index.handlebars
+msgid "Sound and Notification Settings"
+msgstr "Ääni- ja Ilmoitusasetukset"
+
+#: /views/index.handlebars
+msgid "audio;mute;noise;volume"
+msgstr "ääni;hiljennä;äänenvoimakkuus"
+
+#: /views/index.handlebars
+msgid "Enable sound"
+msgstr "Ota ääni käyttöön"
+
+#: /views/index.handlebars
+msgid "notifs;notify;pixel notification"
+msgstr "ilmoitukset;ilmoita;pixeli-ilmoitukset"
+
+#: /views/index.handlebars
+msgid "Enable pixel available notification"
+msgstr "Ota käyttöön pikseli saatavilla -ilmoitus"
+
+#: /views/index.handlebars
+msgid "notification;pixel ready;alert"
+msgstr "ilmoitus;piskeli valmis;hälytys"
+
+#: /views/index.handlebars
+msgid "Pixel Ready Notification"
+msgstr "Pikseli Valmis Ilmoitus"
+
+#: /views/index.handlebars
+msgid "alert source;notify url;notify source;notification url;notification source"
+msgstr "hälätyksen lähde;ilmoitus url;ilmoistuksen lähde;ilmoituksen url"
+
+#: /views/index.handlebars
+msgid "Alert URL:"
+msgstr "Ilmoitusäänen URL:"
+
+#: /views/index.handlebars
+msgid "Update"
+msgstr "Päivitä"
+
+#: /views/index.handlebars
+msgid "Test"
+msgstr "Testaa"
+
+#: /views/index.handlebars
+msgid "sound level;audio level;mute audio;mute sound"
+msgstr "äänitaso;äänen voimakkuus;mykistä äänet;mykistä ääni"
+
+#: /views/index.handlebars
+msgid "Volume:"
+msgstr "Äänenvoimakkuus:"
+
+#: /views/index.handlebars
+msgid "alert forewarning;alert delay; notification delay; notification forewarning"
+msgstr "hälytyksen esivaroitus;hälytyksen viive; ilmoituksen viive; ilmoituksen esivaroitus"
+
+#: /views/index.handlebars
+msgid "Delay (seconds):"
+msgstr "Viive (sekunttia):"
+
+#: /views/index.handlebars
+msgid "chat mentions;chat pings;chat sound"
+msgstr "chattimaininnat;chattipingit;chatin äänet"
+
+#: /views/index.handlebars
+msgid "Chat Pings"
+msgstr "Chattipingit"
+
+#: /views/index.handlebars
+msgid "Enable pings"
+msgstr "Ota pingit käyttööm"
+
+#: /views/index.handlebars
+msgid "mention sound"
+msgstr "mainitsemisääni"
+
+#: /views/index.handlebars
+msgid "Play sound on ping:"
+msgstr "Toista ääni pingille:"
+
+#: /views/index.handlebars /public/include/chat.js
+msgid "Off"
+msgstr "Ei käytössä"
+
+#: /views/index.handlebars
+msgid "Only when necessary"
+msgstr "Vain tarvittaessa"
+
+#: /views/index.handlebars
+msgid "Always"
+msgstr "Aina"
+
+#: /views/index.handlebars
+msgid "mention sound volume"
+msgstr "mainintaäänen voimakkuus"
+
+#: /views/index.handlebars
+msgid "Ping sound volume:"
+msgstr "Pingiäänen voimakkuus:"
+
+#: /views/index.handlebars
+msgid "personal account"
+msgstr "henkilökohtainen tili"
+
+#: /views/index.handlebars
+msgid "Account Settings"
+msgstr "Tilin Asetukset"
+
+#: /views/index.handlebars
+msgid "Public Discord name:"
+msgstr "Julkinen Discord nimi:"
+
+#: /views/index.handlebars /public/include/chat.js
+msgid "Set"
+msgstr "Aseta"
+
+#: /views/index.handlebars
+msgid "Remove"
+msgstr "Poista"
+
+#: /views/index.handlebars
+msgid "Help"
+msgstr "Ohjeet"
+
+#: /views/index.handlebars
+msgid "Notifications"
+msgstr "Ilmoitukset"
+
+#: /views/partials/faq.handlebars
+msgid "FAQ"
+msgstr "FAQ"
+
+#: /views/partials/faq.handlebars
+msgid "Why is the cooldown as long as it is?"
+msgstr "Miiksi cooldown on niin pitkä kuin on?"
+
+#: /views/partials/faq.handlebars
+msgid "The time it takes to get a pixel is dynamic, and changes based on how many people are online. The cooldown time is longer when more users are online."
+msgstr "Pixelin saamiseen kuluva aika on dynaaminen ja muuttuu aktiivisena olevien käyttäjien määrän mukaan. Cooldownin aika on pidempi mitä enemmän käyttäjiä on aktiivisena."
+
+#: /views/partials/faq.handlebars
+msgid "Why does it say 0/6 pixels?"
+msgstr "Mitä 0/6 pikseliä tarkoittaa?"
+
+#: /views/partials/faq.handlebars
+msgid "This means that you are waiting for your next pixel. When you place a pixel, there is a cooldown for when you can place the next one. Over time, you can gain up to 6 \"stacked\" pixels to place at once."
+msgstr "Tämä tarkoittaa, että odotat seuraavaa pikseliäsi. Pikselien asettamisella on cooldown ennen kuin voit asettaa seuraavan pikselin. Ajan kuluessa voit saada enintään 6 \"pinottua\"pikseliä jotka voit asettaa kaikki kerralla."
+
+#: /views/partials/faq.handlebars
+msgid "Why does it take so long to \"stack\" pixels?"
+msgstr "Miksi pikselien \"pinoaminen\" kestää niin kauan?"
+
+#: /views/partials/faq.handlebars
+msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
+msgstr "Tämä on taroituksellista. On parempi asetta pikseli heti kun saat yhden. Pikselien \"pinoamisen\" tarkoitus antaa tönäisy jos menet AFK vähäksi aikaa. Täyden 6/6 pikseliä pinon saaminen kestää noin 40 minuuttia, mutta voit asettaa 6 pikseliä vain noin 3:ssa minuutissa jos asetat ne niin pian kuin mahdollista."
+
+#: /views/partials/faq.handlebars
+msgid "How do I appeal a ban?"
+msgstr "Kuinka valitan porttikiellosta?"
+
+#: /views/partials/faq.handlebars
+msgid "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
+msgstr "Ota meihin yhteyttä <a href=\"https://pxls.space/discord\" target=\"_blank\">Discordissa</a> tai lähettä valitus <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google formsissa</a> info paneelin sääntöjen lukemisen jälkeen."
+
+#: /views/partials/faq.handlebars
+msgid "How do I make a template?"
+msgstr "Kunka teen mallin?"
+
+#: /views/partials/faq.handlebars
+msgid "A template is an image link that is posted in the template textbox in the settings panel so you can place over it on the canvas. You may use a regular image link to your pixel art, but many people use 3rd party tools like <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> or <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn pixel art into a fancier link. If you need to make pixel art yourself, you can use <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> to create art to put into Charity or Clueless."
+msgstr "Malli on kuvalinkki joka julkaistaan malli tekstikenttään asetuspaneelissa, jotta voit asettaa seen päälle kanvaasilla. Voit käyttää tavallista kuvalinkkiä pikselitaiteeseesi, mutta monet käyttävät 3. osapuolen työkaluja, kuten <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> tai <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> muuttaakseen pikselitaiteen hienompaan linkkiin. Jos sinun tarvitsee itse tehdä pikselitaidetta, voit käyttä <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskeliä</a> luodaksesi taidetta laitettavaksi Charity:n tai Clueless:iin."
+
+#: /views/partials/faq.handlebars
+msgid "How do I move a template?"
+msgstr "Kuinka siirrän mallia?"
+
+#: /views/partials/faq.handlebars
+msgid "Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to move it around. On mobile, you can tap and hold where you want to move the template and click \"Move Template Here\" in the pop-up."
+msgstr "Pidä <kbd>CTRL</kbd> (tai <kbd>OPTION</kbd> macOS:llä) pohjassa ja klikkaa ja vedä sitä ympräiinsä. Mobiililla voit napauttaa ja pitää pohjassa siellä minne haluat siirtää mallinn ja painaa \"Siirrä Malli Tänne\" pop-upissa."
+
+#: /views/partials/faq.handlebars
+msgid "Does the canvas reset? When?"
+msgstr "Nollautuuko kanvas? Milloin?"
+
+#: /views/partials/faq.handlebars
+msgid "Yes. The canvas resets when it is completely full. A reset date is not usually decided until the canvas is full, but the average canvas life-span is around 1 month. Updates are posted in our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> when a reset date is set."
+msgstr "Kyllä. Kanvas nollautuu kun se on aivan täynnä. Nollautumispäivää ei yleensä päätetä ennen kuin kanvas on täynnä, mutta kanvaasin keskimääräinen elinikä on noin 1 kuukausi. Päivityksiä julkaistaan <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord serverillämme</a> kun Nollautumispäivä on asetettu."
+
+#: /views/partials/faq.handlebars
+msgid "Where can I see the past canvases?"
+msgstr "Missä voin nähdä aikaissemmat kanvaasit?"
+
+#: /views/partials/faq.handlebars
+msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
+msgstr "Aikaisemmat kanvaasit ovat esillä <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord serverillämme</a>, tai 3. osapuolen sivustolla <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, joka tallentaa timelapseja ja paljon hyödyllistä informaatiota jokaisesta kanvaasista."
+
+#: /views/partials/faq.handlebars
+msgid "How do I see who placed a pixel?"
+msgstr "Kuinka näen kuka asetti pikselin?"
+
+#: /views/partials/faq.handlebars
+msgid "By shift-clicking (or tap and hold on mobile) a pixel, you can see who placed a pixel, how many pixels they have placed, and when they placed it."
+msgstr "Shift-klikkaamalla (tai napauta ja pidä pohjassa mobiililla) pikseliä, voit ähdä kuka asetti pikselin, kuinka monta pikseliä he ovat asettaneet ja milloin he asettivat sen."
+
+#: /views/partials/faq.handlebars
+msgid "How do I report someone?"
+msgstr "Kuinka ilmiannan jonkun?"
+
+#: /views/partials/faq.handlebars
+msgid "Shift-click (or tap and hold on mobile) on a pixel, and click the Report button."
+msgstr "Shift-klikkaa (tai napauta ja pidä pohjassa mobiililla) pikseliä ja paina Ilmianna painiketta."
+
+#: /views/partials/faq.handlebars
+msgid "How do I change the color of my name in the chat?"
+msgstr "Kuinka muutan nimeni väriä chatissä?"
+
+#: /views/partials/faq.handlebars
+msgid "There is a \"Username Color\" option near the bottom of the settings panel."
+msgstr "Asetuspaneelin alaosan lähellä on \"Käyttäjänimen Väri\" asetus."
+
+#: /views/partials/faq.handlebars
+msgid "What is a \"virginmap\"?"
+msgstr "Mikä on \"neitsytkartta\"?"
+
+#: /views/partials/faq.handlebars
+msgid "The virginmap shows which pixels have not yet been placed on (or “virgin” pixels)."
+msgstr "Neitsytkartta näyttää pikselit, jolle ei ole vielä asetettu (tai “neitsyyt” pikselit)."
+
+#: /views/partials/faq.handlebars
+msgid "How do I report bugs?"
+msgstr "Kuinka raportoin bugeista?"
+
+#: /views/partials/faq.handlebars
+msgid "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
+msgstr "Lähetä bugit #dev-and-bugs -kanavalle <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord serverillä</a>.Jos olet löytänyt exploitin, ole hyvä ja lähetä viesti yhdelle henkilökuntamme jäsenistä yksityisesti (DM:ien kautta)."
+
+#: /views/partials/faq.handlebars
+msgid "How do I get more info or contact staff?"
+msgstr "Kuinka saan lisätietoa tai otan yhteyttä henkilökuntaan?"
+
+#: /views/partials/faq.handlebars
+msgid "Check the info panel (the icon on the top left) for more details and links, or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, where a staff member will gladly respond."
+msgstr "Tarkista infopaneeli (kuvake ylävasemmalla) saadaksesi lisää yksityiskohtia ja linkkejä, tai liity <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord serverillemme</a>, jossa henkilökunnan jäsenet ovat ilosia vastaamaan."
+
+#: /views/partials/info.handlebars
+msgid "Welcome!"
+msgstr "Tervetuloa!"
+
+#: /views/partials/info.handlebars
+msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
+msgstr "Tervetuloa pxls.space:een! Pxls on monen pelaajan yhteistyöllinen nettikanvaasi, joka perustuu Redditin <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> -tapahtumaan vuodelta 2017. joka mahdollistaq minkä tahansi huviteltavissasi olvean luomisen pikseli kerrallaan. Liity satojen muiden pelaajien kanssa Pxls yhteisöön ja luo mahtavia taideteoksia yhdessä joukkueena, tai yksin."
+
+#: /views/partials/info.handlebars
+msgid "The best place to reach staff and fellow community is in the discord!"
+msgstr "Paras paikka saavuttaa henkilökunta ja yhteisön jäseniä on Discordissa!"
+
+#: /views/partials/info.handlebars
+msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
+msgstr "Käy katsomassa sosiaalisen median sivumme, ja ole hyvä ja lue säännöt alapuolella. Pidä hauskaa luodessasi (tai muuttaessasi) taidetta!"
+
+#: /views/partials/info.handlebars
+msgid "Canvas Rules"
+msgstr "Kanvaasin Säännöt"
+
+#: /views/partials/info.handlebars
+msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
+msgstr "Olemme ylpeitä yrittäessämme pitää avoimen kanvaasin puhtaana ulkoisista häiriöistä meidän osaltamme, etenkin sensoroinnista. Kuitenkin, yhteisön hyväksi ja uskomustemme puolseta, ole hyvä ja huomioi ja noudata seuraavia ohjeita:"
+
+#: /views/partials/info.handlebars
+msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
+msgstr "Ei vihanomaista kuvantamista tai halventavaa puhetta. Tämä sisältää mutta ei ole rajattu sanoihin kuten <i>f****t</i>, <i>n****r</i>, jne; mukaanlukien Swastika, Vasara ja Sirppi, ja mitkä tahansa muut terrorismin symbolit."
+
+#: /views/partials/info.handlebars
+msgid "No NSFW or NSFL content."
+msgstr "Ei NSFW tai NSFL sisältöä."
+
+#: /views/partials/info.handlebars
+msgid "No nudity or otherwise sexually explicit content"
+msgstr "Ei alastomuutta tai muuten seksuaalista sisältöä"
+
+#: /views/partials/info.handlebars
+msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
+msgstr "Ei naista-esittäviä nännejä/paljaita rintoja, sukuelimiä, seksuaalisia nesteitä"
+
+#: /views/partials/info.handlebars
+msgid "No sexual imagery/erotica"
+msgstr "Ei seksuaalista kuvantamista/erotiikkaa"
+
+#: /views/partials/info.handlebars
+msgid "No excessive blood or otherwise obscene/shocking content"
+msgstr "Ei liioiteltua verta tai muuten säädytöntä/järkyttävää sisältöä"
+
+#: /views/partials/info.handlebars
+msgid "No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas."
+msgstr "Ei enempää kuin <b>yksi</b> tili käyttäjää kohden, ei poikkeuksia. Monen tilin käyttäjät saavat porttikiellon taiteen luomisesta kanvaasille."
+
+#: /views/partials/info.handlebars
+msgid "No auto-placement tools of any kind, you must place the pixels manually."
+msgstr "Ei minkäänlaisia automaattiasetustyökaluja, sinun täytyy asettaa pikselit manuaalisesti."
+
+#: /views/partials/info.handlebars
+msgid "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
+msgstr "Älä hyväksikäytä sivun toimintoja, kuten raportointia tai hakuja. (esim. automatisoitu raportointi/haku, yms.)"
+
+#: /views/partials/info.handlebars
+msgid "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
+msgstr "Kaikki käyttäjähakudatan automaattinen yhdistäminen on kielletty ja tulee johtamaan porttikieltoon."
+
+#: /views/partials/info.handlebars
+msgid "Staff have final say in any rule disputes"
+msgstr "Henkilökunnalla on suurin päätösvalta kaikissa sääntöriidoissa"
+
+#: /views/partials/info.handlebars
+msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
+msgstr "Jos tunnet moderaattorin käyttäytyneen epäsopivasti, ole hyvä ja ilmoita asiasta järjestelmänvalvojalle."
+
+#: /views/partials/info.handlebars
+msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
+msgstr "Jos uskot virheellisesti saaneesi porttikiellon voit ottaa yhteyttä moderaattoriin tai järjestelmänvalvojaan."
+
+#: /views/partials/info.handlebars
+msgid "Chat Rules"
+msgstr "Chatin Säännöt"
+
+#: /views/partials/info.handlebars
+msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
+msgstr "Pidä chatti säädyllisenä. Ei haukkumista tai homophobista/transphobista/disabliststa kielenkäyttöä."
+
+#: /views/partials/info.handlebars
+msgid "No hate speech. This includes emoji/symbols/ASCII art."
+msgstr "Ei vihapuhetta. Tämä sisältää emojit/symboit/ASCII taiteen."
+
+#: /views/partials/info.handlebars
+msgid "Normal swearing/etc is allowed"
+msgstr "Tavallinen kiroilu/yms on sallittua"
+
+#: /views/partials/info.handlebars
+msgid "No spamming"
+msgstr "Ei spämmäystä"
+
+#: /views/partials/info.handlebars
+msgid "This includes excessive ASCII art/emojis/symbols/whitespace"
+msgstr "Tämää sisältää liiallisen ASCII taiteen/emojit/symbolit/välilyönnit"
+
+#: /views/partials/info.handlebars
+msgid "No \"copy pasta\"s"
+msgstr "Ei \"copy pastoja\""
+
+#: /views/partials/info.handlebars
+msgid "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
+msgstr "Ei linkkejä sivustoille jotka aktiivisesti rikkovat kanvaasin tai chatin sääntöjä (esim. porno sivustoja)"
+
+#: /views/partials/info.handlebars
+msgid "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
+msgstr "Ei symbologiaa joka rikkoo kanvaasin tai chatin sääntöjä (esim. NSFW ASCII taide)"
+
+#: /views/partials/info.handlebars
+msgid "No personal information"
+msgstr "Ei henkilökohtaista informaatiota"
+
+#: /views/partials/info.handlebars
+msgid "Links"
+msgstr "Linkit"
+
+#: /views/partials/info.handlebars
+msgid "Terms of Service"
+msgstr "Palvelun Ehdot"
+
+#: /views/partials/info.handlebars
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+#: /views/partials/info.handlebars
+msgid "Discord (main hub)"
+msgstr "Discord (pääkeskus)"
+
+#: /views/partials/info.handlebars
+msgid "Twitter"
+msgstr "Twitteri"
+
+#: /views/partials/info.handlebars
+msgid "GitHub (back end)"
+msgstr "GitHub (backendi)"
+
+#: /views/partials/info.handlebars
+msgid "GitHub (front end)"
+msgstr "GitHub (frontendi)"
+
+#: /views/partials/info.handlebars
+msgid "Single-player mode"
+msgstr "Yksinpelitila"
+
+#: /views/partials/info.handlebars
+msgid "Statistics"
+msgstr "Statistiikkoja"
+
+#: /views/partials/info.handlebars
+msgid "Profile (user info, factions, etc.)"
+msgstr "Profiili (käyttäjätietoja, ryhmät, yms.)"
+
+#: /views/partials/info.handlebars
+msgid "Wiki"
+msgstr "Wiki"
+
+#: /views/partials/info.handlebars
+msgid "Generator, progress checker, and monitor for Pxls templates"
+msgstr "Generaattori, edistyksentarkistaja, ja tarkkailija Pxls malleille"
+
+#: /views/partials/info.handlebars
+msgid "Charity (templates, monitors, etc.)"
+msgstr "Charity (mallit, tarkkailu, yms.)"
+
+#: /views/partials/info.handlebars
+msgid "Archives"
+msgstr "Arkistot"
+
+#: /views/partials/info.handlebars
+msgid "PxlsFiddle (archives)"
+msgstr "PxlsFiddle (arkistot)"
+
+#: /views/partials/info.handlebars
+msgid "Donate"
+msgstr "Lahjoita"
+
+#: /views/partials/info.handlebars
+msgid "Donations are not accepted at this time, but this panel will be updated when they're open again!"
+msgstr "Lahjoituksia ei tällä hetkellä oteta vastaan, mutta tämö paneeli päivitetään kun ne ovet taas avoimet!"
+
+#: /views/profile.handlebars
+msgid "{0}'s Profile"
+msgstr "{0}:n Profiili"
+
+#: /views/profile.handlebars
+msgid "My Data"
+msgstr "Datani"
+
+#: /views/profile.handlebars
+msgid "Reports"
+msgstr "Ilmiannot"
+
+#: /views/profile.handlebars
+msgid "Factions"
+msgstr "Ryhmät"
+
+#: /views/profile.handlebars
+msgid "Data"
+msgstr "Data"
+
+#: /views/profile.handlebars
+msgid "You must be logged in to view your profile."
+msgstr "Sinun täytyy olla kirjautunut sisään nähdäksesi profiilisi."
+
+#: /views/profile.handlebars
+msgid "Registration Date"
+msgstr "Rekisteröitymispäivä"
+
+#: /views/profile.handlebars /public/include/lookup.js
+msgid "Alltime Pixels"
+msgstr "Kaiken Ajan Pikselit"
+
+#: /views/profile.handlebars
+msgid "Current Canvas Pixels"
+msgstr "Nykyisen Kanvaasin Pikselit"
+
+#: /views/profile.handlebars
+msgid "Discord Tag"
+msgstr "Discord Tagi"
+
+#: /views/profile.handlebars /public/include/lookup.js
+msgid "Faction"
+msgstr "Ryhmät"
+
+#: /views/profile.handlebars
+msgid "None"
+msgstr "Ei mitään"
+
+#: /views/profile.handlebars /public/admin/admin.js
+msgid "Roles"
+msgstr "Roolit"
+
+#: /views/profile.handlebars
+msgid "Canvas Ban Expiry"
+msgstr "Kanvaasiporttikiellon Päättymisaika"
+
+#: /views/profile.handlebars
+msgid "Never"
+msgstr "Ei koskaan"
+
+#: /views/profile.handlebars
+msgid "Chat Ban Expiry"
+msgstr "Chattiporttikiellon Päättymisaika"
+
+#: /views/profile.handlebars
+msgid "View rankings and other stats <a href=\"/stats\">here</a>."
+msgstr "Katso listasijoitkuskia ja muita statistiikkoja <a href=\"/stats\">täällä</a>."
+
+#: /views/profile.handlebars
+msgid "You must be logged in to view your reports."
+msgstr "Sinun täytyy olla kirjautunut sisään nähdäksesi ilmiantosi."
+
+#: /views/profile.handlebars
+msgid "Canvas Reports ({0}/{1} open)"
+msgstr "Kanvaasi-ilmiannot ({0}/{1} avoinna)"
+
+#. eg "Report on Bob (closed)
+#: /views/profile.handlebars
+msgid "Report on {0} (closed)"
+msgstr "Ilmiannettu {0} (suljettu)"
+
+#. eg "Report on Bob (open)
+#: /views/profile.handlebars
+msgid "Report on {0} (open)"
+msgstr "Ilmiannettu {0} (avoinna)"
+
+#. eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
+#: /views/profile.handlebars
+msgid "Reported {0} on {1}"
+msgstr "Ilmiannettiin {0} aikaan {1}"
+
+#: /views/profile.handlebars
+msgid "There are no canvas reports to show."
+msgstr "Ei kanvaasi-ilmiantoja näytettävissä."
+
+#: /views/profile.handlebars
+msgid "Chat Reports ({0}/{1} open)"
+msgstr "Chatti-ilmiannot ({0}/{1} avoinna)"
+
+#: /views/profile.handlebars
+msgid "There are no chat reports to show."
+msgstr "Ei chatti-ilmiantoja näytettävissä."
+
+#: /views/profile.handlebars
+msgid "You must be logged in to manage your factions."
+msgstr "Sinun täytyy olla kirjautunut sisään hallitaksesi ryhmiäsi."
+
+#: /views/profile.handlebars
+msgid "You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator."
+msgstr "Olet ryhmärajoitettu ja et voi luoda uusia ryhmiä. Jos uskot tämän olevan virhe, ole hyvä ja ota yhteys moderaattoriin."
+
+#: /views/profile.handlebars
+msgid "You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator."
+msgstr "Sinulla on kanvaasiporttikielto ja et voi luoda uusi ryhmiä. Jos uskot tämän olevan virhe, ole hyvä ja ota yhteys moderaattoriin."
+
+#: /views/profile.handlebars
+msgid "You must have at least {0} all-time pixels to create a faction."
+msgstr "Sinullä täytyy olla ainakin {0} pixeliä kaikelta ajalta luodakses ryhmän."
+
+#: /views/profile.handlebars
+msgid "Create"
+msgstr "Luo"
+
+#: /views/profile.handlebars
+msgid "Join"
+msgstr "Liity"
+
+#: /views/profile.handlebars
+msgid "This is your currently displayed faction."
+msgstr "Tämä on tällä hetkellä esitetty ryhmäsi."
+
+#. eg "Pixelers (members: 100, ID: 1)"
+#: /views/profile.handlebars
+msgid "{0} (members: {1}, ID: {2})"
+msgstr "{0} (jäsenet: {1}, ID: {2})"
+
+#: /views/profile.handlebars
+msgid "Owner: {0}"
+msgstr "Omistaja: {0}"
+
+#. makes the faction no longer the one displayed for the current user
+#: /views/profile.handlebars
+msgid "Remove Displayed"
+msgstr "Poista Esitetty"
+
+#. makes the faction the one displayed for the current user
+#: /views/profile.handlebars
+msgid "Set Displayed"
+msgstr "Aseta Esitetty"
+
+#: /views/profile.handlebars
+msgid "Members"
+msgstr "Jäsenet"
+
+#: /views/profile.handlebars
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: /views/profile.handlebars /public/include/chat.js
+msgid "Delete"
+msgstr "Poista"
+
+#: /views/profile.handlebars
+msgid "Leave"
+msgstr "Poistu"
+
+#: /views/profile.handlebars
+msgid "You are not in any factions yet!"
+msgstr "Et ole vielä yhdessäkään ryhmässä!"
+
+#: /views/profile.handlebars
+msgid "You must be logged in to view your data."
+msgstr "Sinun täytyy olla kirjautunut sisään nähdäksesi datasi."
+
+#: /views/profile.handlebars
+msgid "Log Keys"
+msgstr "Logiavaimet"
+
+#: /views/profile.handlebars
+msgid "Log keys can be used by those who have them to tell which pixels you placed on previous canvases."
+msgstr "Ne, joilla on logiavain voivat keyttää sitä selvittääkseen mitkä pikselit asetit aikaisemmilla kanvaaseilla."
+
+#: /views/profile.handlebars
+msgid "Canvas Code"
+msgstr "Kanvaasikoodi"
+
+#: /views/profile.handlebars
+msgid "Log Key"
+msgstr "Logiavain"
+
+#: /views/profile.handlebars
+msgid "You have no log keys yet!"
+msgstr "Sinulla ei vielä ole yhtään logiavaimia!"
+
+#: /views/profile.handlebars
+msgid "Log keys should show up here after a canvas you have placed on ends."
+msgstr "Logiavaimien pitäisi tulla näkyviin täällä kun kanvaasi jolla olet asettanut päättyy."
+
+#: /views/profile.handlebars
+msgid "Members of {0} ([{1}])"
+msgstr "{0}:n jäsenet ([{1}])"
+
+#: /views/profile.handlebars /public/admin/admin.js /public/include/lookup.js
+msgid "Close"
+msgstr "Sulje"
+
+#: /views/profile.handlebars
+msgid "Faction Members"
+msgstr "Ryhmän jäsenet"
+
+#. This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list.
+#. since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list
+#: /views/profile.handlebars
+msgid "Transfer Ownership"
+msgstr "Siirrä Omistus"
+
+#. bans a user from the faction
+#: /views/profile.handlebars /public/include/chat.js
+msgid "Ban"
+msgstr "Anna Porttikielto"
+
+#: /views/profile.handlebars
+msgid "Nothing to see here!"
+msgstr "Ei mitään nähtävää!"
+
+#: /views/profile.handlebars
+msgid "Faction Bans"
+msgstr "Ryhmäporttikiellot"
+
+#: /views/profile.handlebars /public/admin/admin.js /public/include/chat.js
+msgid "Unban"
+msgstr "Poista Porttikielto"
+
+#: /views/profile.handlebars
+msgid "Find A Faction"
+msgstr "Löydä Ryhmä"
+
+#: /views/profile.handlebars
+msgid "Search:"
+msgstr "Etsi:"
+
+#: /views/profile.handlebars
+msgid "Enter a search term to get started."
+msgstr "Anna hakutermi aloittaaksesi."
+
+#: /views/profile.handlebars
+msgid "Load More"
+msgstr "Lataa Lisää"
+
+#: /public/admin/admin.js
+msgid "Send alert..."
+msgstr "Lähetä hälytys..."
+
+#: /public/admin/admin.js /public/include/lookup.js
+msgid "Rule #1: Hateful/derogatory speech or symbols"
+msgstr "Sääntö #1: Vihamielinen/halventava puhe tai sumbolit"
+
+#: /public/admin/admin.js /public/include/lookup.js
+msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
+msgstr "Sääntö #2: Alastomuus, sukupuolielimet, tai ei-PG-13 sisältö"
+
+#: /public/admin/admin.js /public/include/lookup.js
+msgid "Rule #3: Multi-account"
+msgstr "Sääntö #3: Monta tiliä"
+
+#: /public/admin/admin.js /public/include/lookup.js
+msgid "Rule #4: Botting"
+msgstr "Sääntö #4: Bottaaminen"
+
+#: /public/admin/admin.js /public/include/lookup.js
+msgid "Other (specify below)"
+msgstr "Muu (määrittele alla)"
+
+#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+msgid "Additional information (if applicable)"
+msgstr "Lisätiedot (jos sovellettavissa)"
+
+#. "Revert pixels of the last *n* hours", part before 'n'
+#: /public/admin/admin.js
+msgid "Revert pixels of the last "
+msgstr "Palauta pikselit edellisen "
+
+#. "Revert pixels of the last *n* hours", part after 'n'
+#: /public/admin/admin.js
+msgid " hours"
+msgstr " tunnin ajalta"
+
+#: /public/admin/admin.js /public/include/lookup.js
+msgid "You must specify the details."
+msgstr "Sinun täytyy määrittää yksityiskohdat."
+
+#: /public/admin/admin.js
+msgid "Something went wrong! Perhaps insufficient permissions?"
+msgstr "Jokin meni pieleen! Mahdollisesti oikeuksien puute?"
+
+#: /public/admin/admin.js
+msgid "Shadowban user"
+msgstr "Piiloporttikiellä käyttäjä"
+
+#: /public/admin/admin.js
+msgid "Shadowbanned user"
+msgstr "Piiloporttikielletty käyttäjä"
+
+#: /public/admin/admin.js
+msgid "Permaban user"
+msgstr "Porttikiellä käyttäjä lopullisesti"
+
+#: /public/admin/admin.js
+msgid "Permabanned user"
+msgstr "Lopullisesti porttikielletty käyttäjä"
+
+#: /public/admin/admin.js
+msgid "Ban user"
+msgstr "Porttikiellä käyttäjä"
+
+#: /public/admin/admin.js
+msgid "Banned user"
+msgstr "Porttikielletty käyttäjä"
+
+#: /public/admin/admin.js
+msgid "Unbanned user ${username}"
+msgstr "Poistettu porttikielto käyttäjältä ${username}"
+
+#. Context: ban type
+#: /public/admin/admin.js
+msgid "shadow"
+msgstr "piilo"
+
+#: /public/admin/admin.js
+msgid "never"
+msgstr "ei koskaan"
+
+#: /public/admin/admin.js
+msgid "permanent"
+msgstr "lopullinen"
+
+#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/include/user.js
+msgid "Yes"
+msgstr "Kyllä"
+
+#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/include/user.js
+msgid "No"
+msgstr "Ei"
+
+#: /public/admin/admin.js
+msgid "Yes (permanent)"
+msgstr "Kyllä (lopullinen)"
+
+#: /public/admin/admin.js /public/include/lookup.js
+msgid "Username"
+msgstr "Käyttäjänimi"
+
+#: /public/admin/admin.js /public/include/chat.js
+msgid "Profile"
+msgstr "Profiili"
+
+#: /public/admin/admin.js
+msgid "Logins"
+msgstr "Kirjautumiset"
+
+#: /public/admin/admin.js
+msgid "All Time Pixels"
+msgstr "Kaiken Ajan Pikselit"
+
+#: /public/admin/admin.js /public/include/user.js
+msgid "Rename Requested"
+msgstr "Nimenvaihto Pyydetty"
+
+#: /public/admin/admin.js
+msgid "Discord Name"
+msgstr "Discord Nimi"
+
+#: /public/admin/admin.js /public/include/user.js
+msgid "Banned"
+msgstr "Porttikielletty"
+
+#: /public/admin/admin.js
+msgid "Chatbanned"
+msgstr "Chattiporttikielletty"
+
+#: /public/admin/admin.js
+msgid "Ban Reason"
+msgstr "Porttikiellon Syy"
+
+#: /public/admin/admin.js
+msgid "Ban Expiracy"
+msgstr "Porttikiellon Päättyminen"
+
+#: /public/admin/admin.js
+msgid "Chatban Reason"
+msgstr "Chattiporttikiellon Syy"
+
+#: /public/admin/admin.js
+msgid "(canvas ban)"
+msgstr "(kanvaasiporttikielto)"
+
+#: /public/admin/admin.js
+msgid "when canvas ban ends"
+msgstr "milloin kanvaasiporttikielto päättyy"
+
+#: /public/admin/admin.js
+msgid "Chatban Expires"
+msgstr "Chattiporttikielto Päättyy"
+
+#: /public/admin/admin.js
+msgid "Ban (24h)"
+msgstr "Porttikiellä (24h)"
+
+#: /public/admin/admin.js
+msgid "Permaban"
+msgstr "Porttikiellä Lopullisesti"
+
+#: /public/admin/admin.js
+msgid "Shadowban"
+msgstr "Piiloporttikiellä"
+
+#: /public/admin/admin.js
+msgid "Custom ban length: "
+msgstr "Muokattu porttikiellon pituus: "
+
+#. Admin check. Example: type = 'username', arg = 'pxlsuser94'
+#: /public/admin/admin.js
+msgid "${type} ${arg} not found."
+msgstr "${type} ${arg} ei löydetty."
+
+#: /public/admin/admin.js
+msgid "Unban Reason:"
+msgstr "Porttikiellon Poistamisen Syy:"
+
+#: /public/admin/admin.js
+msgid "Unbanning ${username}"
+msgstr "Poistetaan porttikielto keyttäjältä ${username}"
+
+#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/include/user.js
+msgid "Cancel"
+msgstr "Peruuta"
+
+#. Moderator panel label
+#: /public/admin/admin.js
+msgid "MOD"
+msgstr "MODERAATTORI"
+
+#: /public/admin/admin.js
+msgid "Ignore cooldown"
+msgstr "Jätä viive huomioimatta"
+
+#: /public/admin/admin.js
+msgid "Place any color"
+msgstr "Aseta mikä tahansa väri"
+
+#: /public/admin/admin.js
+msgid "Ignore placemap"
+msgstr "Jätä asetuskartta huomioimatta"
+
+#: /public/admin/admin.js
+msgid "Ban user (24h)"
+msgstr "Porttikiellä käyttäjä (24h)"
+
+#: /public/admin/admin.js
+msgid "Unban user"
+msgstr "Poista käyttäjän porttikielto"
+
+#: /public/admin/admin.js
+msgid "Check user"
+msgstr "Tarkista käyttäjä"
+
+#: /public/admin/admin.js
+msgid "profile"
+msgstr "profiili"
+
+#: /public/admin/admin.js
+msgid "User Agent"
+msgstr "Käyttäjäagentti"
+
+#: /public/admin/admin.js
+msgid "Send Alert"
+msgstr "Lähetä Hälytys"
+
+#: /public/admin/admin.js
+msgid "Mod Actions"
+msgstr "Moderaattoritoiminnot"
+
+#: /public/admin/admin.js
+msgid "More..."
+msgstr "Lisää..."
+
+#. Snapshot save name
+#: /public/include/board.js
+msgid "pxls canvas"
+msgstr "pxls kanvaasi"
+
+#. template link action
+#: /public/include/chat.js
+msgid "Ask"
+msgstr "Kysy"
+
+#: /public/include/chat.js
+msgid "Open in a new tab"
+msgstr "Avaa uudessa välilehdessä"
+
+#: /public/include/chat.js
+msgid "Open in current tab (replacing template)"
+msgstr "Avaa nykyisessä välilehdessä (malli korvautuu)"
+
+#: /public/include/chat.js
+msgid "Jump to coordinates without replacing template"
+msgstr "Mene koordinaatteihin korvaamatta mallia"
+
+#: /public/include/chat.js
+msgid "Please upload your template image to a third-party image host."
+msgstr "Ole hyvä ja lataa mallikuvasi kolmannen osapuolen kuvapalvelimelle."
+
+#: /public/include/chat.js
+msgid "You must have at least "
+msgstr "Sinulla täytyy olla ainakin "
+
+#: /public/include/chat.js
+msgid " pixels to send links."
+msgstr " pikseliä lähettääksesi linkkejä."
+
+#: /public/include/chat.js
+msgid "You must be logged in to chat."
+msgstr "Sinun täytyy olla kirjautunut sisään käyttääksesi chattia."
+
+#: /public/include/chat.js
+msgid "No Results"
+msgstr "Ei Tuloksia"
+
+#: /public/include/chat.js
+msgid "Reply"
+msgstr "Vastaa"
+
+#: /public/include/chat.js
+msgid "none provided"
+msgstr "ei mitään annettu"
+
+#: /public/include/chat.js
+msgid "Purged by ${purge.initiator} with reason: ${reason}"
+msgstr "Puhdistettu ${purge.initiator} toimesta syystä: ${reason}"
+
+#: /public/include/chat.js
+msgid "External Link"
+msgstr "Ulkoinen Linkki"
+
+#: /public/include/chat.js
+msgid "This link is taking you to the following website:"
+msgstr "Tämä linkki vie sinut seuraavalle verkkosivulle:"
+
+#: /public/include/chat.js
+msgid "The operators of this website have no responsibility or control over the contents hosted at {0}. Are you sure you want to go there?"
+msgstr "Tämän sivuston operoijilla ei ole vastuuta tai hallintaa sisältöön, joka sijaitsee kohteessa {0}. Oletko varma että haluat mennä sinne?"
+
+#: /public/include/chat.js
+msgid "Note: You can disable this popup in settings."
+msgstr "Huom: Voit kytkeä tämän ponnahdusikkunan pois käytöstä asetuksissa."
+
+#: /public/include/chat.js
+msgid "Visit Site"
+msgstr "Vieraile Sivustolla"
+
+#: /public/include/chat.js
+msgid "template:"
+msgstr "malli:"
+
+#: /public/include/chat.js
+msgid "Open Failed"
+msgstr "Avaaminen Epäonnistui"
+
+#: /public/include/chat.js
+msgid "Failed to automatically open in a new tab"
+msgstr "Avaaminen automaattisesti uudessa ikkunassa epäonnistui"
+
+#: /public/include/chat.js
+msgid "Click here to open in a new tab instead"
+msgstr "Paina tästä sen sijaan avataksesi uudessa välilehdessä"
+
+#: /public/include/chat.js
+msgid "Open Template"
+msgstr "Avaa Malli"
+
+#: /public/include/chat.js
+msgid "This link will overwrite your current template. What would you like to do?"
+msgstr "Tämä linkki korvaa nykyisen mallisi. Mitä haluaisit tehdä?"
+
+#: /public/include/chat.js
+msgid "Note: You can set a default action in the settings menu which bypasses this popup completely."
+msgstr "Huom: Voit asettaa oletustoiminnon asetusvalikossa, jolloin ohitat tämän ponnahdusikkunan kokonaan."
+
+#: /public/include/chat.js
+msgid "OK"
+msgstr "OK"
+
+#: /public/include/chat.js /public/include/lookup.js
+msgid "Report"
+msgstr "Ilmianna"
+
+#: /public/include/chat.js
+msgid "Mention"
+msgstr "Mainitse"
+
+#: /public/include/chat.js
+msgid "Ignore"
+msgstr "Älä Huomioi"
+
+#: /public/include/chat.js
+msgid "Chat (un)ban"
+msgstr "Chatti porttikiellä/poista porttikielto"
+
+#: /public/include/chat.js
+msgid "Purge User"
+msgstr "Siivoa Käyttäjä"
+
+#: /public/include/chat.js
+msgid "Mod Lookup"
+msgstr "Moderaattorihaku"
+
+#: /public/include/chat.js
+msgid "Chat Lookup"
+msgstr "Chattihaku"
+
+#: /public/include/chat.js
+msgid "Enter a reason for your report"
+msgstr "Anna syy ilmiannollesi"
+
+#: /public/include/chat.js
+msgid "You are reporting a chat message from ${reportTarget} with the content:"
+msgstr "Olet ilmiantamassa viestin käyttäjältä ${reportTarget}, jonka sisältö on:"
+
+#: /public/include/chat.js /public/include/lookup.js
+msgid "Sent report!"
+msgstr "Ilmianto lähetetty!"
+
+#: /public/include/chat.js /public/include/lookup.js
+msgid "Error sending report."
+msgstr "Virhe ilmiantoa lähettäessä."
+
+#: /public/include/chat.js
+msgid "Report User"
+msgstr "Ilmianna Käyttäjä"
+
+#: /public/include/chat.js
+msgid "User ignored. You can unignore from chat settings."
+msgstr "Käyttäjää ei huomioida. Voit poistaa huomitta jättämisen chattiasetuksissa."
+
+#: /public/include/chat.js
+msgid "Failed to ignore user. Either they\\'re already ignored, or an error occurred. If the problem persists, contact a developer."
+msgstr "Käyttäjän huomioimatta jättäminen epäonnistui. Joko hän on jo asetettu olemaan huomioimatta, tai virhe tapahtui. Jos ongelma toistuu, ota yhteys kehittäjään."
+
+#: /public/include/chat.js
+msgid "Permanent"
+msgstr "Lopullinen"
+
+#: /public/include/chat.js
+msgid "Temporary"
+msgstr "Väliaikainen"
+
+#: /public/include/chat.js
+msgid "Rule 3: Spam"
+msgstr "Sääntö 3: Spämmääminen"
+
+#: /public/include/chat.js
+msgid "Rule 1: Chat civility"
+msgstr "Sääntö 1: Chatin säävyllisyys"
+
+#: /public/include/chat.js
+msgid "Rule 2: Hate Speech"
+msgstr "Sääntö 2: Vihapuhe"
+
+#: /public/include/chat.js
+msgid "Rule 5: NSFW"
+msgstr "Sääntö 5: NSFW"
+
+#: /public/include/chat.js
+msgid "Custom"
+msgstr "Muokattu"
+
+#: /public/include/chat.js
+msgid "Banning:"
+msgstr "Porttikielletään:"
+
+#: /public/include/chat.js
+msgid "Message:"
+msgstr "Viesti:"
+
+#: /public/include/chat.js
+msgid "Ban Length"
+msgstr "Portttikiellon Pituus"
+
+#: /public/include/chat.js
+msgid "Reason"
+msgstr "Syy"
+
+#: /public/include/chat.js
+msgid "Purge Messages"
+msgstr "Siivoa Viestit"
+
+#: /public/include/chat.js
+msgid "Purging all messages is disabled during snip mode"
+msgstr "Kaikkien viestien puhdistaminen on poistettu käytöstä leikkaustilassa"
+
+#: /public/include/chat.js
+msgid "Silent (no purge message)"
+msgstr "Hiljainen (ei siivousviestiä)"
+
+#: /public/include/chat.js
+msgid "Custom reason"
+msgstr "Muokattu syy"
+
+#: /public/include/chat.js
+msgid "Additional information:"
+msgstr "Lisätietoja:"
+
+#: /public/include/chat.js
+msgid "Chatban initiated"
+msgstr "Chattiporttikielto käynnistetty"
+
+#: /public/include/chat.js
+msgid "Error occurred while chatbanning"
+msgstr "Virhe tapahtui chattiporttikieltäessä"
+
+#: /public/include/chat.js
+msgid "Chatban"
+msgstr "Chattiporttikielto"
+
+#: /public/include/chat.js
+msgid "Failed to delete"
+msgstr "Poistaminen epäonnistui"
+
+#: /public/include/chat.js
+msgid "ID: "
+msgstr "ID: "
+
+#: /public/include/chat.js
+msgid "User: "
+msgstr "Käyttäjä: "
+
+#: /public/include/chat.js
+msgid "Message: "
+msgstr "Viesti: "
+
+#: /public/include/chat.js
+msgid "Reason: "
+msgstr "Syy: "
+
+#: /public/include/chat.js
+msgid "Delete Message"
+msgstr "Poista Viesti"
+
+#: /public/include/chat.js
+msgid "Purge"
+msgstr "Siivoa"
+
+#: /public/include/chat.js
+msgid "Selected Message"
+msgstr "Valittu Viesti"
+
+#: /public/include/chat.js
+msgid "Purge Reason"
+msgstr "Siiivoamisen Syy"
+
+#: /public/include/chat.js
+msgid "User purged"
+msgstr "Käyttäjä siivottu"
+
+#: /public/include/chat.js
+msgid "Error sending purge."
+msgstr "Virhe siivousta lähettäessä."
+
+#: /public/include/chat.js
+msgid "Toggle Rename Request"
+msgstr "Kytke Nimenvaihtopyyntö"
+
+#: /public/include/chat.js
+msgid "Select one of the options below to set the current rename request state."
+msgstr "Valitse yksi alla olevista vaihtoehdoista asettaaksesi nykyisen uudelleennimeämispyynnön tilan."
+
+#: /public/include/chat.js
+msgid "Rename request updated"
+msgstr "Uudelleenniemämispyyntö päivitetty"
+
+#: /public/include/chat.js
+msgid "An unknown error occurred. Please contact a developer"
+msgstr "Tuntematon virhe tapahtui. Ole hyvä ja ota yhteys kehittäjään"
+
+#: /public/include/chat.js
+msgid "New Name: "
+msgstr "Uusi Nimi: "
+
+#: /public/include/chat.js
+msgid "Enter the new name for the user below. Please note that if you\\'re trying to change the caps, you\\'ll have to rename to something else first."
+msgstr "Anna uusi nimi käyttäjälle alla. Huomio, että jos olet muuttamassa kirjainkokoja, sinun täytyy ensin vaihtaa nimi johonkin muuhun."
+
+#: /public/include/chat.js
+msgid "User renamed"
+msgstr "Käyttäjän nimi vaihdettu"
+
+#: /public/include/chat.js
+msgid "Force Rename"
+msgstr "Pakota Uudelleennimeäminen"
+
+#: /public/include/chat.js
+msgid "You cannot use chat while canvas banned."
+msgstr "Et voi käyttää chattia kun sinulla on kanvaasiporttikielto."
+
+#: /public/include/lookup.js
+msgid "Sending..."
+msgstr "Lähetetään..."
+
+#: /public/include/lookup.js
+msgid "additional information:"
+msgstr "lisätietoja:"
+
+#: /public/include/lookup.js
+msgid "Report Pixel"
+msgstr "Ilmianna pikseli"
+
+#: /public/include/lookup.js
+msgid "This pixel is background (was not placed by a user)."
+msgstr "Tämä pikseli on osa taustaa (ei ole käyttäjän asettama)."
+
+#: /public/include/lookup.js
+msgid "Hide sensitive information"
+msgstr "Piilota arkaluonteiset tiedot"
+
+#: /public/include/lookup.js
+msgid "Move Template Here"
+msgstr "Siirrä Malli Tänne"
+
+#: /public/include/lookup.js
+msgid "An error occurred, either you aren't logged in or you may be attempting to look up users too fast. Please try again in 60 seconds"
+msgstr "Virhe tapahtui, joko et ole kirjautuut sisään tai yrität hakea käyttäjiiä liian nopeasti. Ole hyvä ja yritä uudelleen 69 sekunnin kuluttua"
+
+#: /public/include/lookup.js
+msgid "Coords"
+msgstr "Koordinaatit"
+
+#: /public/include/lookup.js
+msgid "View Profile"
+msgstr "Katso Profiili"
+
+#: /public/include/lookup.js
+msgid "Origin"
+msgstr "Lähde"
+
+#: /public/include/lookup.js
+msgid "Part of a nuke"
+msgstr "Osa pommitusta"
+
+#: /public/include/lookup.js
+msgid "Placed by a staff member using placement overrides"
+msgstr "Henkilökunnan jäsenen asettama käyttäen asetusohitusta"
+
+#: /public/include/lookup.js
+msgid "Time"
+msgstr "Aika"
+
+#: /public/include/lookup.js
+msgid "just now"
+msgstr "juuri nyt"
+
+#: /public/include/lookup.js
+msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
+msgstr "${hoursStr}:${minuteStr}:${secsStr} sitten"
+
+#: /public/include/lookup.js
+msgid "Discord"
+msgstr "Discord"
+
+#: /public/include/notifications.js
+msgid "Posted by ${notification.who}"
+msgstr "Julkaissut ${notification.who}"
+
+#: /public/include/notifications.js
+msgid "Expires ${expiry}"
+msgstr "Vanhenee ${expiry}"
+
+#: /public/include/template.js
+msgid "There was an error getting the image"
+msgstr "Tapahtui virhe hankkiessa kuvaa"
+
+#: /public/include/timer.js
+msgid "Your next pixel will be available in ${delay} seconds!"
+msgstr "Seuraava pikselisi tulee olemaan saatavilla ${delay} sekunnissa!"
+
+#: /public/include/timer.js
+msgid "Your next pixel has been available for ${alertDelay} seconds!"
+msgstr "Seuraava pikseilisi on ollut saatavilla ${alertDelay} sekuntia!"
+
+#: /public/include/timer.js
+msgid "Your next pixel is available!"
+msgstr "Seuraava pikselisi on saatavilla!"
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Dark"
+msgstr "Tumma"
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Darker"
+msgstr "Tummempi"
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Blue"
+msgstr "Sininen"
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Purple"
+msgstr "Violetti"
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Green"
+msgstr "Vihreä"
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Matte"
+msgstr "Matta"
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Terminal"
+msgstr "Terminaali"
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Red"
+msgstr "Punainen"
+
+#: /public/include/uiHelper.js
+msgid "A new ${type} report has been received."
+msgstr "Uusi ${type} ilmianto on saatu."
+
+#: /public/include/uiHelper.js
+msgid "Cannot fetch local files. Use the file selector in template settings."
+msgstr "Ei voida noutaa paikallisia tiedostoja. Käytä tiedostonvalitsinta malliasetuksissa."
+
+#: /public/include/uiHelper.js
+msgid "Redirect Warning"
+msgstr "Uudelleenohjausvaroitus"
+
+#: /public/include/uiHelper.js
+msgid "Are you sure you want to redirect to the following URL?"
+msgstr "Oletko varma että haluat uudelleenohjata seuraavaan URL:n?"
+
+#: /public/include/uiHelper.js
+msgid "Drag and dropped file must be a valid image."
+msgstr "Vedetyn ja pudotetun tiedoston täytyy olla oikeamuotoinen kuva"
+
+#: /public/include/uiHelper.js
+msgid "Discord name updated successfully"
+msgstr "Discord nimi päivitetty onnistuneesti"
+
+#: /public/include/uiHelper.js
+msgid "Couldn\\'t change discord name: "
+msgstr "Ei voitu muuttaa Discord nimeä: "
+
+#: /public/include/user.js
+msgid "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
+msgstr "Krjautumalla sisään ja rekisteröitymällä hyväksyt <a href=\"{0}\" target=\"_blank\">käyttöehdot</a> ja <a href=\"{1}\" target=\"_blank\">tietosuojakäytännön</a>."
+
+#: /public/include/user.js
+msgid "Sign in with {0}"
+msgstr "Kirjaudu sisään käyttäen {0}"
+
+#: /public/include/user.js
+msgid "New Accounts Disabled"
+msgstr "Uudet Tilit Poistettu käytöstä"
+
+#: /public/include/user.js
+msgid "online"
+msgstr "paikalla"
+
+#: /public/include/user.js
+msgid "Sign Out"
+msgstr "Kirjaudu Ulos"
+
+#: /public/include/user.js
+msgid "Are you sure you want to sign out?"
+msgstr "Oletko varma että haluat kirjautua ulos?"
+
+#: /public/include/user.js
+msgid "You are permanently banned."
+msgstr "Sinulla on lopullinen porttikielto."
+
+#: /public/include/user.js
+msgid "You are temporarily banned and will not be allowed to place until ${timestamp}"
+msgstr "Sinulla on väliaikainen porttikielto ja et voi asettaa ennen aikaa ${timestamp}"
+
+#: /public/include/user.js
+msgid "You can contact us using one of the links in the info menu."
+msgstr "Voit ottaa meihin yhteyttä käyttäen jotain infovalikon linkeistä."
+
+#: /public/include/user.js
+msgid "If you think this was an error, please contact us using one of the links in the info tab."
+msgstr "Jos arvelet tämän olevan virhe, ole hyvä ja ota meihin yhteyttä käyttäen jotain infovälilehden linkeistä."
+
+#: /public/include/user.js
+msgid "Ban reason:"
+msgstr "Porttikiellon syy:"
+
+#: /public/include/user.js
+msgid "An unknown error occurred. Please contact staff on discord"
+msgstr "Tuntematon virhe tapahtui. Ole hyvä ja ota yhteyttä henkilökuntaan Discordissa"
+
+#: /public/include/user.js
+msgid "Staff have required you to change your username, this usually means your name breaks one of our rules."
+msgstr "Henkilökunta on vaatinut sinun vaihtavan käyttäjänimesi, yleensä tämä tarkoittaa että nimesi rikkoo jotain säännöistämme."
+
+#: /public/include/user.js
+msgid "If you disagree, please contact us on Discord (link in the info panel)."
+msgstr "Jos arvelet toisin, ole hyvä ja ota meihin yhteyttä Discordissa (linkki infopaneelissa)."
+
+#: /public/include/user.js
+msgid "New Username:"
+msgstr "Uuusi Käyttäjänimi:"
+
+#: /public/include/user.js
+msgid "Not now"
+msgstr "Ei nyt"
+
+#: /public/include/user.js
+msgid "Change"
+msgstr "Vaihda"
+
+#: /public/include/user.js
+msgid "You must change your username."
+msgstr "Sinun täytyy vaihtaa käyttäjänimesi."
+
+#: /public/include/user.js
+msgid "Click here to continue."
+msgstr "Paina tästä jatkaaksesi."
+
+#: /public/pxls.js
+msgid "Alert"
+msgstr "Hälytys"
