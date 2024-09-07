@@ -1,11 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-31T21:19:19.842Z\n"
+"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
 "PO-Revision-Date: 2024-01-20 11:30+0000\n"
 "Last-Translator: Weblate Admin <thiscamefrom@pxls.space>\n"
-"Language-Team: German <https://weblate.pxls.space/projects/pxls-space/"
-"pxls-web/de/>\n"
+"Language-Team: German <https://weblate.pxls.space/projects/pxls-space/pxls-web/de/>\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -538,6 +537,10 @@ msgstr ""
 
 #: /views/index.handlebars
 msgid "Swedish"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Finnish"
 msgstr ""
 
 #: /views/index.handlebars

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-31T21:19:19.842Z\n"
+"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
 "Language: fr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -531,6 +531,10 @@ msgstr ""
 
 #: /views/index.handlebars
 msgid "Swedish"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Finnish"
 msgstr ""
 
 #: /views/index.handlebars

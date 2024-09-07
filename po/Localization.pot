@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-31T21:19:19.842Z\n"
+"POT-Creation-Date: 2024-09-07T20:42:20.086Z\n"
 "Language: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -559,6 +559,10 @@ msgstr ""
 
 #: /views/index.handlebars
 msgid "Swedish"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Finnish"
 msgstr ""
 
 #: /views/index.handlebars
@@ -1496,6 +1500,8 @@ msgstr ""
 msgid "Charity (templates, monitors, etc.)"
 msgstr ""
 
+#: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 #: /views/partials/info.handlebars
 msgid "Archives"
 msgstr ""
