@@ -95,9 +95,16 @@ const uiHelper = (function() {
         color: '#cf0000'
       },
       {
-        name: 'Synthwave',
+        // translator: theme name
+        name: __('Synthwave'),
         location: '/themes/synthwave.css',
         color: '#1d192c'
+      },
+      {
+        // translator: theme name
+        name: __('Pink'),
+        location: '/themes/pink.css',
+        color: '#f5cdde'
       }
     ],
     specialChatColorClasses: ['rainbow', ['donator', 'donator--green'], ['donator', 'donator--gray'], ['donator', 'donator--synthwave'], ['donator', 'donator--ace'], ['donator', 'donator--trans'], ['donator', 'donator--bi'], ['donator', 'donator--pan'], ['donator', 'donator--nonbinary'], ['donator', 'donator--mines'], ['donator', 'donator--eggplant'], ['donator', 'donator--banana'], ['donator', 'donator--teal'], ['donator', 'donator--icy'], ['donator', 'donator--blood'], ['donator', 'donator--forest']],
