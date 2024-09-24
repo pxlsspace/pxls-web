@@ -479,6 +479,13 @@ dt {
     margin: 0 !important;
 }
 
+@font-face {
+  font-family: "Pxls Symbols";
+  src: url(webfonts/PxlsSymbols.ttf) format("truetype"),
+    url(webfonts/PxlsSymbols.woff) format("woff"),
+    url(webfonts/PxlsSymbols.woff2) format("woff2")
+}
+
 /*//////////////////////////*\
 | Overlays
 \*\\\\\\\\\\\\\\\\\\\\\\\\\\*/
@@ -912,26 +919,43 @@ dt {
     bottom: 11px;
 }
 
-.palette-number {
+.palette-pill {
     position: absolute;
     transform: translate(-50%, 50%);
     left: 50%;
     bottom: 100%;
     border-radius: 16px;
     text-align: center;
-    color: var(--palette-number-text-color);
     background-color: var(--palette-number-background-color);
     border: 1px solid #000;
     width: 1.5rem;
-    font-size: .75rem;
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
 }
 
-#palette.no-pills .palette-number {
+.palette-number {
+    color: var(--palette-number-text-color);
+    font-size: .75rem;
+}
+
+.palette-symbol {
+    color: var(--palette-number-text-color);
+    font-size: 1.25rem;
+    font-family: "Pxls Symbols";
+}
+
+#palette.no-pills .palette-number,
+#palette.no-pills .palette-symbol,
+#palette.palette-numbers .palette-symbol,
+#palette.palette-symbols .palette-number {
     display: none !important;
+}
+
+#palette.palette-numbers .palette-number,
+#palette.palette-symbols .palette-symbol {
+    display: block !important;
 }
 
 #reticule {
@@ -2327,4 +2351,3 @@ body .emoji-picker {
         max-height: initial;
     }
 }
-

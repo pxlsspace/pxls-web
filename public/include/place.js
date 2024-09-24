@@ -11,6 +11,7 @@ const {
   analytics,
   hexToRGB
 } = require('./helpers');
+const { indexToSymbol } = require('./helpers');
 
 // this takes care of placing pixels, the palette, the reticule and stuff associated with that
 module.exports.place = (function() {
@@ -129,8 +130,21 @@ module.exports.place = (function() {
         self.toggleCursor(true);
       }
     },
-    setNumberedPaletteEnabled: function(shouldBeNumbered) {
-      self.elements.palette[0].classList.toggle('no-pills', !shouldBeNumbered);
+    setPaletteStyle: function (style) {
+      const styles = ['no-pills', 'palette-numbers', 'palette-symbols'];
+      self.elements.palette[0].classList.remove(...styles);
+
+      switch (style) {
+        case 'off':
+          self.elements.palette[0].classList.add('no-pills');
+          break;
+        case 'numbers':
+          self.elements.palette[0].classList.add('palette-numbers');
+          break;
+        case 'symbols':
+          self.elements.palette[0].classList.add('palette-symbols');
+          break;
+      }
     },
     toggleReticule: (show) => {
       if (show && settings.ui.reticule.enable.get()) {
@@ -159,7 +173,8 @@ module.exports.place = (function() {
             .append(
               $('<div>').addClass('palette-color')
                 .css('background-color', `#${color.value}`)
-                .append($('<span>').addClass('palette-number').text(idx))
+                .append($('<span>').addClass('palette-pill').addClass('palette-number').text(idx))
+                .append($('<span>').addClass('palette-pill').addClass('palette-symbol').text(indexToSymbol(idx)))
             )
             .click(function() {
               self.switch(idx);
@@ -363,7 +378,7 @@ module.exports.place = (function() {
     getPaletteABGR: self.getPaletteABGR,
     togglePaletteSpecialColors: self.togglePaletteSpecialColors,
     setAutoReset: self.setAutoReset,
-    setNumberedPaletteEnabled: self.setNumberedPaletteEnabled,
+    setPaletteStyle: self.setPaletteStyle,
     get color() {
       return self.color;
     },

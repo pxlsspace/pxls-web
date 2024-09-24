@@ -196,7 +196,7 @@ module.exports.settings = (function() {
     'ui.show-cursor': 'ui.cursor.enable',
     templateBeneathHeatmap: 'board.template.beneathoverlays',
     enableMiddleMouseSelect: 'place.picker.enable',
-    enableNumberedPalette: 'ui.palette.numbers.enable',
+    paletteStyle: 'ui.palette.style',
     heatmap_background_opacity: 'board.heatmap.opacity',
     virginmap_background_opacity: 'board.virginmap.opacity',
     snapshotImageFormat: 'board.snapshot.format',
@@ -346,9 +346,7 @@ module.exports.settings = (function() {
         value: setting('ui.brightness.value', SettingType.RANGE, 1, $('#setting-ui-brightness-value'))
       },
       palette: {
-        numbers: {
-          enable: setting('ui.palette.numbers.enable', SettingType.TOGGLE, false, $('#setting-ui-palette-numbers-enable'))
-        },
+        style : setting('ui.palette.style', SettingType.SELECT, "off", $('#setting-ui-palette-style')),
         scrollbar: {
           thin: {
             enable: setting('ui.palette.scrollbar.thin.enable', SettingType.TOGGLE, true, $('#setting-ui-palette-scrollbar-thin-enable'))

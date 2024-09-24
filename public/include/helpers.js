@@ -28,6 +28,15 @@ module.exports.analytics = function() {
     window.ga.apply(this, arguments);
   }
 };
+module.exports.indexToSymbol = (i) => {
+  const charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh';
+
+  if (i < 0 || i >= charSet.length) {
+    return '';
+  }
+
+  return charSet[i];
+};
 
 class LazyPromise extends Promise {
   constructor(execute) {

@@ -620,8 +620,8 @@ msgid "indexed colors;palette indicies"
 msgstr "indexerade färger;palett index"
 
 #: /views/index.handlebars
-msgid "Add numbers to palette entries"
-msgstr "Lägg till nummber till palett entréerna"
+msgid "Show labels on the palette:"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "scrollbar;palette scrolling"
@@ -2529,6 +2529,9 @@ msgstr "Klicka här för att fortsätta."
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Alert"
+
+#~ msgid "Add numbers to palette entries"
+#~ msgstr "Lägg till nummber till palett entréerna"
 
 #~ msgid "Subreddit"
 #~ msgstr "Subreddit"

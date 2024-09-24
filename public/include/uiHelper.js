@@ -161,8 +161,8 @@ const uiHelper = (function() {
           .toggleClass('fa-unlock', !value);
       });
 
-      settings.ui.palette.numbers.enable.listen(function(value) {
-        place.setNumberedPaletteEnabled(value);
+      settings.ui.palette.style.listen(function (value) {
+        place.setPaletteStyle(value);
       });
 
       settings.ui.palette.scrollbar.thin.enable.listen(function(value) {
