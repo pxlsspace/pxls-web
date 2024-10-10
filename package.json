@@ -14,8 +14,8 @@
   "author": "Pxls Contributors",
   "license": "MIT",
   "dependencies": {
-    "cookie-parser": "^1.4.6",
-    "express": "^4.21.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.1",
     "express-handlebars": "^7.1.2",
     "http-proxy-middleware": "^2.0.6",
     "json5": "^2.2.3",
