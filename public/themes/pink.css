@@ -49,9 +49,8 @@ html {
     --input-background: #ffeff7;
     --input-border-color: #1f1f1f;
 
-    --option-bubble-position-background-selected: #ffeff7;
-    --bubble-background: #ffddf1f2;
-    --bubble-text-color: #000;
+    --bubble-background: rgba(0, 0, 0, 0.7);
+    --bubble-text-color: #fff;
 
     --text-blue-color: #1ea1bb;
     --text-green-color: #34bd53;
