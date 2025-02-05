@@ -1712,6 +1712,10 @@ msgid "Log keys can be used by those who have them to tell which pixels you plac
 msgstr ""
 
 #: /views/profile.handlebars
+msgid "You can see the public <a href=\"https://pxls.space/extra/logs/\" target=\"_blank\">Pxls Logs</a> to learn more."
+msgstr ""
+
+#: /views/profile.handlebars
 msgid "Canvas Code"
 msgstr ""
 
