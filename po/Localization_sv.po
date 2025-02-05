@@ -1671,7 +1671,7 @@ msgstr "Logg nycklar kan bli använda av dom som har dom för att se vilka pixla
 
 #: /views/profile.handlebars
 msgid "You can see the public <a href=\"https://pxls.space/extra/logs/\" target=\"_blank\">Pxls Logs</a> to learn more."
-msgstr ""
+msgstr "Allmänt tillgängliga loggfiler med mer information finns <a href=\"https://pxls.space/extra/logs/\" target=\"_blank\">här</a>."
 
 #: /views/profile.handlebars
 msgid "Canvas Code"
