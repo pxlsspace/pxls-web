@@ -1600,8 +1600,9 @@ const chat = (function() {
 
         e.preventDefault();
 
+        const isLocal = new URL(href).origin === window.location.origin;
         const skipLinkCheck = !self.defaultExternalLinkPopup || settings.chat.links.external.skip.get();
-        if (skipLinkCheck) {
+        if (skipLinkCheck || isLocal) {
           window.open(href, '_blank');
         } else {
           self._popLinkCheck(href).then(action => {
