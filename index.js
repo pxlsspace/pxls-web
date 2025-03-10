@@ -30,7 +30,7 @@ const proxy = createProxyMiddleware({
   selfHandleResponse: true,
   logLevel: 'error',
   onProxyRes: async function (proxyRes, req, res) {
-    if (proxyRes.statusCode >= 400) {
+    if (proxyRes.statusCode >= 400 && req.method === 'GET') {
       await sendErrorPage(req, res, proxyRes.statusCode);
       return;
     }
