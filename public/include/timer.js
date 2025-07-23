@@ -71,7 +71,7 @@ module.exports.timer = (function() {
       }
 
       /* Notification */
-      if (delta > 0 && alertDelay < delta) {
+      if (delta > 0 && Math.abs(alertDelay) < delta) {
         self.hasFiredNotification = false;
       }
 
@@ -93,7 +93,11 @@ module.exports.timer = (function() {
         if (alertDelay < 0 && delta <= Math.abs(alertDelay)) {
           self.hasFiredNotification = true;
           fireNotification(`Your next pixel will be available in ${Math.round(Math.abs(alertDelay) * 10) / 10} seconds!`);
-          setTimeout(() => uiHelper.setPlaceableText(1), Math.abs(alertDelay) * 1000);
+          setTimeout(() => {
+            if (self.hasFiredNotification) {
+              uiHelper.setPlaceableText(1);
+            }
+          }, delta * 1000);
         }
         // Positive delay
         else if (alertDelay > 0 && delta <= 0) {
@@ -114,7 +118,7 @@ module.exports.timer = (function() {
       }
 
       /* Continue updating? */
-      if (!self.hasFiredNotification) {
+      if (!self.hasFiredNotification || delta > 0) {
         setTimeout(() => self.update(true), 1000);
       }
     },
