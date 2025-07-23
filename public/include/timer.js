@@ -90,7 +90,7 @@ module.exports.timer = (function() {
         };
 
         // Negative delay
-        if (alertDelay < 0 && delta <= alertDelay) {
+        if (alertDelay < 0 && delta <= Math.abs(alertDelay)) {
           self.hasFiredNotification = true;
           fireNotification(`Your next pixel will be available in ${Math.round(Math.abs(alertDelay) * 10) / 10} seconds!`);
           setTimeout(() => uiHelper.setPlaceableText(1), Math.abs(alertDelay) * 1000);
