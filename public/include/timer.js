@@ -1,3 +1,4 @@
+/* eslint-disable brace-style */
 const { settings } = require('./settings');
 const { nativeNotifications } = require('./nativeNotifications');
 const { uiHelper } = require('./uiHelper');
@@ -54,8 +55,10 @@ module.exports.timer = (function() {
         self.elements.timer_countdown.text(self.currentTimer);
         self.elements.timer_chat.text(self.currentTimer);
         self.elements.timer_container.show();
+
+        document.title = uiHelper.getTitle();
       } else {
-        self.currentTimer = '';
+        self.currentTimer = '00:00';
 
         self.elements.timer_container.hide();
         self.elements.timer_countdown.text(self.currentTimer);
@@ -65,10 +68,6 @@ module.exports.timer = (function() {
         // * https://github.com/pxlsspace/pxls-web/blob/f51c7266fbec2ba98d60f6e6e68c75bba18b159d/public/include/uiHelper.js#L438-L440
         // on the following code:
         // * socket.on('pixels', [...]);
-      }
-
-      if (document.title !== uiHelper.getTitle()) {
-        document.title = uiHelper.getTitle();
       }
 
       /* Notification */
@@ -90,15 +89,24 @@ module.exports.timer = (function() {
           }
         };
 
-        if (alertDelay < 0 && delta < Math.abs(alertDelay)) {
+        // Negative delay
+        if (alertDelay < 0 && delta <= alertDelay) {
           self.hasFiredNotification = true;
           fireNotification(`Your next pixel will be available in ${Math.round(Math.abs(alertDelay) * 10) / 10} seconds!`);
           setTimeout(() => uiHelper.setPlaceableText(1), Math.abs(alertDelay) * 1000);
-        } else if (alertDelay > 0 && delta <= 0) {
+        }
+        // Positive delay
+        else if (alertDelay > 0 && delta <= 0) {
           self.hasFiredNotification = true;
           uiHelper.setPlaceableText(1);
-          setTimeout(() => fireNotification(`Your next pixel has been available for ${Math.round(alertDelay * 10) / 10} seconds!`), alertDelay * 1000);
-        } else if (delta <= 0) {
+          setTimeout(() => {
+            if (uiHelper.getAvailable() > 0) {
+              fireNotification(`Your next pixel has been available for ${Math.round(alertDelay * 10) / 10} seconds!`);
+            }
+          }, alertDelay * 1000);
+        }
+        // No delay
+        else if (delta <= 0) {
           self.hasFiredNotification = true;
           uiHelper.setPlaceableText(1);
           fireNotification('Your next pixel is available!');
