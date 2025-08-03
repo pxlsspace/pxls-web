@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:42:20.086Z\n"
+"POT-Creation-Date: 2025-08-03T22:45:06.512Z\n"
 "Language: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -2515,7 +2515,27 @@ msgid "Drag and dropped file must be a valid image."
 msgstr ""
 
 #: /public/include/uiHelper.js
+msgid "Discord name must be a string."
+msgstr ""
+
+#: /public/include/uiHelper.js
+msgid "Wait, what - how did this happened?"
+msgstr ""
+
+#: /public/include/uiHelper.js
+msgid "Discord name is not valid."
+msgstr ""
+
+#: /public/include/uiHelper.js
 msgid "Discord name updated successfully"
+msgstr ""
+
+#: /public/include/uiHelper.js
+msgid "Discord name reset successfully"
+msgstr ""
+
+#: /public/include/uiHelper.js
+msgid "Error"
 msgstr ""
 
 #: /public/include/uiHelper.js
