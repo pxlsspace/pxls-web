@@ -98,6 +98,11 @@ const uiHelper = (function() {
         name: 'Synthwave',
         location: '/themes/synthwave.css',
         color: '#1d192c'
+      },
+      {
+        name: 'Blurple (Discord)',
+        location: '/themes/blurple.css',
+        color: '#5865F2'
       }
     ],
     specialChatColorClasses: ['rainbow', ['donator', 'donator--green'], ['donator', 'donator--gray'], ['donator', 'donator--synthwave'], ['donator', 'donator--ace'], ['donator', 'donator--trans'], ['donator', 'donator--bi'], ['donator', 'donator--pan'], ['donator', 'donator--nonbinary'], ['donator', 'donator--mines'], ['donator', 'donator--eggplant'], ['donator', 'donator--banana'], ['donator', 'donator--teal'], ['donator', 'donator--icy'], ['donator', 'donator--blood'], ['donator', 'donator--forest']],
