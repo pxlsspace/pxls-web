@@ -1,15 +1,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
+"POT-Creation-Date: 2024-09-07T20:42:20.086Z\n"
+"PO-Revision-Date: 2025-08-04T02:20:31.126Z\n"
+"Last-Translator: Automatic generation\n"
+"Language-Team: English\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"X-Generator: Pxls localization generator\n"
 
-#: /views/error.handlebars /views/profile.handlebars /public/include/user.js
+#: /views/error.handlebars
+#: /views/error.handlebars
+#: /views/error.handlebars
+#: /views/profile.handlebars
+#: /public/include/user.js
 msgid "My Profile"
 msgstr "My Profile"
 
-#: /views/error.handlebars /views/profile.handlebars
+#: /views/error.handlebars
+#: /views/profile.handlebars
 msgid "My Factions"
 msgstr "My Factions"
 
@@ -23,6 +32,8 @@ msgid "The content you requested could not be found at this URL. If you believe 
 msgstr "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
 
 #. links to the homepage (the app itself)
+#: /views/error.handlebars
+#: /views/error.handlebars
 #: /views/error.handlebars
 msgid "Back to Pxls"
 msgstr "Back to Pxls"
@@ -70,6 +81,9 @@ msgid "Canvas:"
 msgstr "Canvas:"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
 msgid "N/A"
 msgstr "N/A"
 
@@ -81,7 +95,9 @@ msgstr "All Time:"
 msgid "Loading online user count&hellip;"
 msgstr "Loading online user count&hellip;"
 
-#: /views/index.handlebars /public/admin/admin.js /public/include/lookup.js
+#: /views/index.handlebars
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Pixels"
 msgstr "Pixels"
 
@@ -93,7 +109,8 @@ msgstr "Undo"
 msgid "You are not signed in."
 msgstr "You are not signed in."
 
-#: /views/index.handlebars /public/include/user.js
+#: /views/index.handlebars
+#: /public/include/user.js
 msgid "Sign in with..."
 msgstr "Sign in with..."
 
@@ -101,6 +118,7 @@ msgstr "Sign in with..."
 msgid "Loading..."
 msgstr "Loading..."
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Sign up"
 msgstr "Sign up"
@@ -125,15 +143,20 @@ msgstr "Drag and drop template image"
 msgid "Exit"
 msgstr "Exit"
 
-#: /views/index.handlebars /views/profile.handlebars
+#: /views/index.handlebars
+#: /views/profile.handlebars
 msgid "Info"
 msgstr "Info"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Close Panel"
 msgstr "Close Panel"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Chat"
 msgstr "Chat"
 
@@ -141,6 +164,7 @@ msgstr "Chat"
 msgid "Pings"
 msgstr "Pings"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Settings"
 msgstr "Settings"
@@ -153,7 +177,8 @@ msgstr "Jump To Bottom"
 msgid "Replying to"
 msgstr "Replying to"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "On"
 msgstr "On"
 
@@ -177,6 +202,7 @@ msgstr "Keybinds"
 msgid "general"
 msgstr "general"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "General"
 msgstr "General"
@@ -213,6 +239,7 @@ msgstr "lookups"
 msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
 msgstr "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
 msgstr "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
@@ -262,6 +289,7 @@ msgid "<kbd>P</kbd> to take a snapshot"
 msgstr "<kbd>P</kbd> to take a snapshot"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
 msgstr "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
 
@@ -269,6 +297,7 @@ msgstr "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown
 msgid "<kbd>H</kbd> to toggle heatmap"
 msgstr "<kbd>H</kbd> to toggle heatmap"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
 msgstr "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
@@ -330,9 +359,11 @@ msgid "templates;guides"
 msgstr "templates;guides"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Template"
 msgstr "Template"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "transparency"
 msgstr "transparency"
@@ -413,6 +444,7 @@ msgstr "template width;tw="
 msgid "Width:"
 msgstr "Width:"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Reset"
 msgstr "Reset"
@@ -794,13 +826,16 @@ msgid "Chat icon badge mode:"
 msgstr "Chat icon badge mode:"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread ping"
 msgstr "Show on unread ping"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread message"
 msgstr "Show on unread message"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Never show"
 msgstr "Never show"
@@ -1133,7 +1168,8 @@ msgstr "mention sound"
 msgid "Play sound on ping:"
 msgstr "Play sound on ping:"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Off"
 msgstr "Off"
 
@@ -1165,7 +1201,8 @@ msgstr "Account Settings"
 msgid "Public Discord name:"
 msgstr "Public Discord name:"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Set"
 msgstr "Set"
 
@@ -1362,9 +1399,11 @@ msgid "Any automated aggregation of data from user lookups is not allowed, and w
 msgstr "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
 
 #: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Staff have final say in any rule disputes"
 msgstr "Staff have final say in any rule disputes"
 
+#: /views/partials/info.handlebars
 #: /views/partials/info.handlebars
 msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
 msgstr "If you feel a moderator has acted inappropriately, please report it to an administrator."
@@ -1466,6 +1505,8 @@ msgid "Charity (templates, monitors, etc.)"
 msgstr "Charity (templates, monitors, etc.)"
 
 #: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Archives"
 msgstr "Archives"
 
@@ -1482,6 +1523,7 @@ msgid "Donations are not accepted at this time, but this panel will be updated w
 msgstr "Donations are not accepted at this time, but this panel will be updated when they're open again!"
 
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "{0}'s Profile"
 msgstr "{0}'s Profile"
 
@@ -1489,6 +1531,7 @@ msgstr "{0}'s Profile"
 msgid "My Data"
 msgstr "My Data"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reports"
 msgstr "Reports"
@@ -1509,7 +1552,8 @@ msgstr "You must be logged in to view your profile."
 msgid "Registration Date"
 msgstr "Registration Date"
 
-#: /views/profile.handlebars /public/include/lookup.js
+#: /views/profile.handlebars
+#: /public/include/lookup.js
 msgid "Alltime Pixels"
 msgstr "Alltime Pixels"
 
@@ -1521,15 +1565,18 @@ msgstr "Current Canvas Pixels"
 msgid "Discord Tag"
 msgstr "Discord Tag"
 
-#: /views/profile.handlebars /public/include/lookup.js
+#: /views/profile.handlebars
+#: /public/include/lookup.js
 msgid "Faction"
 msgstr "Faction"
 
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "None"
 msgstr "None"
 
-#: /views/profile.handlebars /public/admin/admin.js
+#: /views/profile.handlebars
+#: /public/admin/admin.js
 msgid "Roles"
 msgstr "Roles"
 
@@ -1537,6 +1584,7 @@ msgstr "Roles"
 msgid "Canvas Ban Expiry"
 msgstr "Canvas Ban Expiry"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Never"
 msgstr "Never"
@@ -1559,15 +1607,18 @@ msgstr "Canvas Reports ({0}/{1} open)"
 
 #. eg "Report on Bob (closed)
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (closed)"
 msgstr "Report on {0} (closed)"
 
 #. eg "Report on Bob (open)
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (open)"
 msgstr "Report on {0} (open)"
 
 #. eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reported {0} on {1}"
 msgstr "Reported {0} on {1}"
@@ -1639,7 +1690,8 @@ msgstr "Members"
 msgid "Edit"
 msgstr "Edit"
 
-#: /views/profile.handlebars /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/include/chat.js
 msgid "Delete"
 msgstr "Delete"
 
@@ -1683,7 +1735,12 @@ msgstr "Log keys should show up here after a canvas you have placed on ends."
 msgid "Members of {0} ([{1}])"
 msgstr "Members of {0} ([{1}])"
 
-#: /views/profile.handlebars /public/admin/admin.js /public/include/lookup.js
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Close"
 msgstr "Close"
 
@@ -1698,10 +1755,12 @@ msgid "Transfer Ownership"
 msgstr "Transfer Ownership"
 
 #. bans a user from the faction
-#: /views/profile.handlebars /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/include/chat.js
 msgid "Ban"
 msgstr "Ban"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Nothing to see here!"
 msgstr "Nothing to see here!"
@@ -1710,7 +1769,9 @@ msgstr "Nothing to see here!"
 msgid "Faction Bans"
 msgstr "Faction Bans"
 
-#: /views/profile.handlebars /public/admin/admin.js /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/admin/admin.js
+#: /public/include/chat.js
 msgid "Unban"
 msgstr "Unban"
 
@@ -1734,27 +1795,34 @@ msgstr "Load More"
 msgid "Send alert..."
 msgstr "Send alert..."
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #1: Hateful/derogatory speech or symbols"
 msgstr "Rule #1: Hateful/derogatory speech or symbols"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
 msgstr "Rule #2: Nudity, genitalia, or non-PG-13 content"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #3: Multi-account"
 msgstr "Rule #3: Multi-account"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #4: Botting"
 msgstr "Rule #4: Botting"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Other (specify below)"
 msgstr "Other (specify below)"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Additional information (if applicable)"
 msgstr "Additional information (if applicable)"
 
@@ -1768,7 +1836,8 @@ msgstr "Revert pixels of the last "
 msgid " hours"
 msgstr " hours"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "You must specify the details."
 msgstr "You must specify the details."
 
@@ -1817,12 +1886,16 @@ msgstr "never"
 msgid "permanent"
 msgstr "permanent"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "Yes"
 msgstr "Yes"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "No"
 msgstr "No"
@@ -1831,11 +1904,13 @@ msgstr "No"
 msgid "Yes (permanent)"
 msgstr "Yes (permanent)"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Username"
 msgstr "Username"
 
-#: /public/admin/admin.js /public/include/chat.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
 msgid "Profile"
 msgstr "Profile"
 
@@ -1847,7 +1922,8 @@ msgstr "Logins"
 msgid "All Time Pixels"
 msgstr "All Time Pixels"
 
-#: /public/admin/admin.js /public/include/user.js
+#: /public/admin/admin.js
+#: /public/include/user.js
 msgid "Rename Requested"
 msgstr "Rename Requested"
 
@@ -1855,7 +1931,8 @@ msgstr "Rename Requested"
 msgid "Discord Name"
 msgstr "Discord Name"
 
-#: /public/admin/admin.js /public/include/user.js
+#: /public/admin/admin.js
+#: /public/include/user.js
 msgid "Banned"
 msgstr "Banned"
 
@@ -1916,7 +1993,9 @@ msgstr "Unban Reason:"
 msgid "Unbanning ${username}"
 msgstr "Unbanning ${username}"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 #: /public/include/user.js
 msgid "Cancel"
 msgstr "Cancel"
@@ -2076,7 +2155,8 @@ msgstr "Note: You can set a default action in the settings menu which bypasses t
 msgid "OK"
 msgstr "OK"
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Report"
 msgstr "Report"
 
@@ -2112,11 +2192,13 @@ msgstr "Enter a reason for your report"
 msgid "You are reporting a chat message from ${reportTarget} with the content:"
 msgstr "You are reporting a chat message from ${reportTarget} with the content:"
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Sent report!"
 msgstr "Sent report!"
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Error sending report."
 msgstr "Error sending report."
 
