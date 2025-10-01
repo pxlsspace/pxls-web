@@ -453,6 +453,12 @@ dt {
 .donator.donator--purple{
     background-image: linear-gradient(45deg, #661fb0, #a630d2, #cd57e3);
 }
+.donator.donator--gay{
+    background-image: linear-gradient(45deg, #FFFFFF, #98E8C1, #26CEAA, #078D70, #26CEAA, #98E8C1, #FFFFFF, #7BADE2, #5049CC, #3D1A78, #5049CC, #7BADE2, #FFFFFF);
+}
+.donator.donator--lesbian{
+    background-image: linear-gradient(45deg, #FFFFFF, #FF9A56, #EF7627, #D52D00, #EF7627, #FF9A56, #FFFFFF, #D162A4, #B55690, #A30262, #B55690, #D162A4, #FFFFFF);
+}
 
 .error {
     color: var(--error-color);
@@ -2330,4 +2336,3 @@ body .emoji-picker {
         max-height: initial;
     }
 }
-

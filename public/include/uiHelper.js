@@ -107,7 +107,27 @@ const uiHelper = (function() {
         color: '#f5cdde'
       }
     ],
-    specialChatColorClasses: ['rainbow', ['donator', 'donator--green'], ['donator', 'donator--gray'], ['donator', 'donator--synthwave'], ['donator', 'donator--ace'], ['donator', 'donator--trans'], ['donator', 'donator--bi'], ['donator', 'donator--pan'], ['donator', 'donator--nonbinary'], ['donator', 'donator--mines'], ['donator', 'donator--eggplant'], ['donator', 'donator--banana'], ['donator', 'donator--teal'], ['donator', 'donator--icy'], ['donator', 'donator--blood'], ['donator', 'donator--forest'], ['donator', 'donator--purple']],
+    specialChatColorClasses: [
+      'rainbow',
+      ['donator', 'donator--green'],
+      ['donator', 'donator--gray'],
+      ['donator', 'donator--synthwave'],
+      ['donator', 'donator--ace'],
+      ['donator', 'donator--trans'],
+      ['donator', 'donator--bi'],
+      ['donator', 'donator--pan'],
+      ['donator', 'donator--nonbinary'],
+      ['donator', 'donator--mines'],
+      ['donator', 'donator--eggplant'],
+      ['donator', 'donator--banana'],
+      ['donator', 'donator--teal'],
+      ['donator', 'donator--icy'],
+      ['donator', 'donator--blood'],
+      ['donator', 'donator--forest'],
+      ['donator', 'donator--purple'],
+      ['donator', 'donator--gay'],
+      ['donator', 'donator--lesbian']
+    ],
     init: function() {
       timer = require('./timer').timer;
       place = require('./place').place;
