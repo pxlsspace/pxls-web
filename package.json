@@ -25,6 +25,7 @@
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.5",
     "@handlebars/parser": "^2.1.0",
+    "@types/jquery": "^3.5.32",
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
     "eslint": "^8.55.0",

@@ -1,142 +1,159 @@
+/* eslint-disable brace-style */
 const { settings } = require('./settings');
 const { nativeNotifications } = require('./nativeNotifications');
 const { uiHelper } = require('./uiHelper');
 const { socket } = require('./socket');
 
+/// Thanks to volcanofr for refactoring this file
+/// and fixing most of timer-related bugs.
+
 // this takes care of the countdown timer
 module.exports.timer = (function() {
   const self = {
+
+    /* DOM Elements */
     elements: {
+      /** @type {JQuery} */
       palette: $('#palette'),
+      /** @type {JQuery} */
       timer_container: $('#cooldown'),
+      /** @type {JQuery} */
       timer_countdown: $('#cooldown-timer'),
+      /** @type {JQuery} */
       timer_chat: $('#txtMobileChatCooldown')
     },
+
+    /* Timer Variables */
     hasFiredNotification: true,
     cooldown: 0,
-    runningTimer: false,
     audio: new Audio('notify.wav'),
     title: '',
     currentTimer: '',
+
     cooledDown: function() {
       return self.cooldown < (new Date()).getTime();
     },
-    update: function(die) {
-      // subtract one extra millisecond to prevent the first displaying to be derped
-      let delta = (self.cooldown - (new Date()).getTime() - 1) / 1000;
 
-      if (self.runningTimer === false) {
-        self.elements.timer_container.hide();
-      }
-
-      if (self.status) {
-        self.elements.timer_countdown.text(self.status);
-      }
-
+    update: function() {
+      /* Local variables */
       const alertDelay = settings.place.alert.delay.get();
-      if (alertDelay < 0 && delta < Math.abs(alertDelay) && !self.hasFiredNotification) {
-        self.playAudio();
-        let notif;
-        const delay = Math.abs(alertDelay);
-        if (!document.hasFocus()) {
-          notif = nativeNotifications.maybeShow(__(`Your next pixel will be available in ${delay} seconds!`));
-        }
-        setTimeout(() => {
-          uiHelper.setPlaceableText(1);
-          if (notif) {
-            $(window).one('pxls:ack:place', () => notif.close());
-          }
-        }, delta * 1000);
-        self.hasFiredNotification = true;
+      // subtract one extra millisecond to prevent the first displaying to be derped
+      const delta = (self.cooldown - Date.now() - 1) / 1000;
+
+      /* Old stuff */
+      if (self.status) {
+        console.warn('Timer: A vestige of the past wants to be reused. Note that \'timer.self.status\' is not supported anymore.');
+        // self.elements.timer_countdown.text(self.status);
       }
 
+      /* Visible timer */
       if (delta > 0) {
+        const secs = Math.floor(Math.ceil(delta) % 60);
+        const mins = Math.floor(Math.ceil(delta) / 60);
+        self.currentTimer = mins.toString().padStart(2, '0') + ':' + secs.toString().padStart(2, '0');
+
+        self.elements.timer_countdown.text(self.currentTimer);
+        self.elements.timer_chat.text(self.currentTimer);
         self.elements.timer_container.show();
-        delta++; // real people don't count seconds zero-based (programming is more awesome)
-        const secs = Math.floor(delta % 60);
-        const secsStr = secs < 10 ? '0' + secs : secs;
-        const minutes = Math.floor(delta / 60);
-        const minuteStr = minutes < 10 ? '0' + minutes : minutes;
-        self.currentTimer = `${minuteStr}:${secsStr}`;
-        self.elements.timer_countdown.text(`${self.currentTimer}`);
-        self.elements.timer_chat.text(`(${self.currentTimer})`);
 
         document.title = uiHelper.getTitle();
+      } else {
+        self.currentTimer = '00:00';
 
-        if (self.runningTimer && !die) {
-          return;
-        }
-        self.runningTimer = true;
-        setTimeout(function() {
-          self.update(true);
-        }, 1000);
-        return;
+        self.elements.timer_container.hide();
+        self.elements.timer_countdown.text(self.currentTimer);
+        self.elements.timer_chat.text(self.currentTimer);
+
+        // Placeable from 2 are updated at:
+        // * https://github.com/pxlsspace/pxls-web/blob/f51c7266fbec2ba98d60f6e6e68c75bba18b159d/public/include/uiHelper.js#L438-L440
+        // on the following code:
+        // * socket.on('pixels', [...]);
       }
 
-      self.runningTimer = false;
-      self.currentTimer = '';
-
-      document.title = uiHelper.getTitle();
-      self.elements.timer_container.hide();
-      self.elements.timer_chat.text('');
-
-      if (alertDelay > 0 && !self.hasFiredNotification) {
-        setTimeout(() => {
-          if (!this.runningTimer) {
-            self.playAudio();
-            if (!document.hasFocus()) {
-              const notif = nativeNotifications.maybeShow(__(`Your next pixel has been available for ${alertDelay} seconds!`));
-              if (notif) {
-                $(window).one('pxls:ack:place', () => notif.close());
-              }
-            }
-          }
-
-          self.hasFiredNotification = true;
-        }, alertDelay * 1000);
-        setTimeout(() => {
-          uiHelper.setPlaceableText(1);
-        }, delta * 1000);
-        return;
+      /* Notification */
+      if (delta > 0 && Math.abs(alertDelay) < delta) {
+        self.hasFiredNotification = false;
       }
 
       if (!self.hasFiredNotification) {
-        self.playAudio();
-        if (!document.hasFocus()) {
-          const notif = nativeNotifications.maybeShow(__('Your next pixel is available!'));
-          if (notif) {
-            $(window).one('pxls:ack:place', () => notif.close());
+        /** @param {string} text */
+        const fireNotification = (text) => {
+          self.playAudio();
+
+          if (!document.hasFocus()) {
+            const notif = nativeNotifications.maybeShow(__(text));
+
+            if (notif) {
+              $(window).one('pxls:ack:place', () => notif.close());
+            }
           }
+        };
+
+        // Negative delay
+        if (alertDelay < 0 && delta <= Math.abs(alertDelay)) {
+          self.hasFiredNotification = true;
+          fireNotification(`Your next pixel will be available in ${Math.round(Math.abs(alertDelay) * 10) / 10} seconds!`);
+          setTimeout(() => {
+            if (self.hasFiredNotification) {
+              uiHelper.setPlaceableText(1);
+            }
+          }, delta * 1000);
         }
-        uiHelper.setPlaceableText(1);
-        self.hasFiredNotification = true;
+        // Positive delay
+        else if (alertDelay > 0 && delta <= 0) {
+          self.hasFiredNotification = true;
+          uiHelper.setPlaceableText(1);
+          setTimeout(() => {
+            if (uiHelper.getAvailable() > 0) {
+              fireNotification(`Your next pixel has been available for ${Math.round(alertDelay * 10) / 10} seconds!`);
+            }
+          }, alertDelay * 1000);
+        }
+        // No delay
+        else if (delta <= 0) {
+          self.hasFiredNotification = true;
+          uiHelper.setPlaceableText(1);
+          fireNotification('Your next pixel is available!');
+        }
+      }
+
+      /* Continue updating? */
+      if (!self.hasFiredNotification || delta > 0) {
+        setTimeout(() => self.update(true), 1000);
       }
     },
+
     init: function() {
       self.title = document.title;
+
       self.elements.timer_container.hide();
-      self.elements.timer_chat.text('');
+      self.elements.timer_countdown.text(self.currentTimer);
+      self.elements.timer_chat.text(self.currentTimer);
 
       setTimeout(function() {
         if (self.cooledDown() && uiHelper.getAvailable() === 0) {
           uiHelper.setPlaceableText(1);
         }
       }, 250);
+
       socket.on('cooldown', function(data) {
         self.cooldown = (new Date()).getTime() + (data.wait * 1000);
         self.hasFiredNotification = data.wait === 0;
         self.update();
       });
     },
+
     playAudio: function() {
       if (uiHelper.tabHasFocus() && settings.audio.enable.get()) {
         self.audio.play();
       }
     },
+
     getCurrentTimer: function() {
       return self.currentTimer;
     }
   };
+
   return {
     init: self.init,
     cooledDown: self.cooledDown,

@@ -15,7 +15,6 @@ const uiHelper = (function() {
   const self = {
     tabId: null,
     _workerIsTabFocused: false,
-    _available: -1,
     pixelsAvailable: -1,
     maxStacked: -1,
     _alertUpdateTimer: false,
@@ -705,7 +704,7 @@ const uiHelper = (function() {
       ].join(', ')).css('filter', level != null ? `brightness(${level})` : '');
     },
     getAvailable() {
-      return self._available;
+      return self.pixelsAvailable;
     },
     styleElemWithChatNameColor: (elem, colorIdx, layer = 'bg') => {
       elem.classList.remove(...self.specialChatColorClasses.reduce((acc, val) => {
