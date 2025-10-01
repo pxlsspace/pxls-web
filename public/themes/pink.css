@@ -1,0 +1,171 @@
+html {
+    --general-text-color: #1f1f1f;
+    --general-background: #2a1c2d;
+
+    --kbd-background: #ffe6f1;
+    --kbd-border-color: #1f1f1f;
+    --kbd-text-color: #1f1f1f;
+
+    --button-background: #ffeff7;
+    --button-border-color: #1f1f1f;
+    --button-text-color: #1f1f1f;
+    --button-text-color-disabled: var(--button-text-color);
+    --button-border-color-disabled: var(--button-border-color);
+    --button-background-disabled: var(--button-background);
+    --button-text-color-hover: var(--button-text-color);
+    --button-border-color-hover: #1f1f1f;
+    --button-background-hover: #F8C8DC;
+
+    --dangerous-button-text-color: #fff;
+    --dangerous-button-background: #ff5959;
+    --dangerous-button-border-color: #ff5959;
+    --dangerous-button-text-color-hover: var(--dangerous-button-text-color);
+    --dangerous-button-background-hover: #f33;
+    --dangerous-button-border-color-hover: var(--dangerous-button-border-color);
+
+    --floating-panel-text-color: inherit;
+    --floating-panel-border-color: #1f1f1f;
+    --floating-panel-background: #ffdfee;
+
+    --palette-background: #ffddf1e3;
+    --palette-item-border-color: #1f1f1f;
+    --palette-overlay-background: #f5cdde;
+    --palette-overlay-text-color: inherit;
+    --palette-deselect-button-color: #000;
+    --palette-number-text-color: #000;
+    --palette-number-background-color: #ffdfee;
+
+    --cursor-text-color: #1f1f1f;
+    --cursor-text-background-color: #f5cdde;
+
+    --selection-color: #1f1f1f;
+    --selection-background-color: #ffa4fc;
+
+    --undo-text-color: #1f1f1f;
+    --undo-background: linear-gradient(to top, #ffe8f2cc, #ffe3ef);
+    --undo-border-color: #1f1f1f;
+
+    --input-text-color: #1f1f1f;
+    --input-background: #ffeff7;
+    --input-border-color: #1f1f1f;
+
+    --bubble-background: rgba(0, 0, 0, 0.7);
+    --bubble-text-color: #fff;
+
+    --text-blue-color: #1ea1bb;
+    --text-green-color: #34bd53;
+    --text-red-color: #ff2626;
+    --text-muted-color: #999;
+    --text-yellow-color: #fffb07;
+    --text-orange-color: #ff8707;
+
+    --copypulse-color: rgba(0, 211, 221, 0.7);
+    --error-color: #cc3333;
+    --notification-color: #b20;
+    --ping-highlight-color: #ffbee0;
+    --ping-flash-color: #8ef7d1;
+    --ping-counter-color: #ffa5d4;
+    --reply-highlight-color: #ffd5e7;
+    --notification-expiry-color: var(--text-orange-color);
+
+    --panel-background: #ffdfee;
+    --panel-text-color: inherit;
+    --panel-border-color: #1f1f1f;
+    --panel-header-text-color: inherit;
+    --panel-header-background: #ffd5e7;
+    --panel-footer-text-color: var(--text-muted-color);
+    --panel-footer-background: var(--panel-header-background);
+    --panel-close-button-color: var(--text-red-color);
+    --panel-close-button-color-hover: var(--panel-close-button-color);
+    --panel-close-button-color-active: var(--panel-close-button-color);
+
+    --panel-article-background: #ffe3ef;
+    --panel-article-text-color: var(--panel-text-color);
+    --panel-article-border-color: var(--panel-border-color);
+    --panel-article-header-text-color: inherit;
+    --panel-article-header-background: var(--panel-header-background);
+    --panel-article-footer-text-color: var(--panel-footer-text-color);
+    --panel-article-footer-background: var(--panel-footer-background);
+
+    --panel-trigger-outline-color: #1f1f1f;
+
+    --chat-separator-color: #1f1f1f;
+    --chat-odd-background: #ffe5f0;
+    --chat-abbr-underline-color: var(--general-text-color);
+    --chat-badge-background: #e9bfe1;
+    --chat-badge-text-color: #770053;
+    --chat-mention-text-color: #1ea1bb;
+    --chat-server-action-text-color: var(--text-muted-color);
+    --chat-purged-text-color: var(--text-muted-color);
+
+    --chat-tobottom-text-color: #1f1f1f;
+    --chat-tobottom-background: #ffe3ef;
+    --chat-tobottom-text-color-hover: var(--chat-tobottom-text-color);
+    --chat-tobottom-background-hover: #ffe3ef;
+
+    --chat-typeahead-menu-background: var(--panel-article-background);
+    --chat-typeahead-item-text-color: inherit;
+    --chat-typeahead-item-background: #ffe3ef;
+    --chat-typeahead-item-background-hover: #ffe3ef;
+    --chat-typeahead-item-background-active: #ffe3ef;
+
+    --emoji-picker-border-color: var(--floating-panel-border-color);
+    --emoji-picker-background: var(--floating-panel-background);
+    --emoji-picker-preview-name-text-color: var(--general-text-color);
+    --emoji-picker-tab-icon-color: inherit;
+    --emoji-picker-tab-icon-color-selected: #ffe6f1;
+    --emoji-picker-section-text-color: var(--general-text-color);
+    --emoji-picker-emoji-background: #ffe8f2cc;
+    --emoji-picker-emoji-background-hover: rgba(0, 0, 0, 0.1);
+    --emoji-picker-search-input-border-color: var(--input-border-color);
+    --emoji-picker-search-input-border-color-focus: #ffe6f1;
+    --emoji-picker-search-input-background: var(--input-background);
+    --emoji-picker-search-input-text-color: var(--input-text-color);
+    --emoji-picker-search-icon-color: var(--text-muted-color);
+    --emoji-picker-search-no-results-color: var(--text-muted-color);
+    --emoji-picker-variant-overlay-background: #ffe6f1;
+    --emoji-picker-variant-popup-background: var(--floating-panel-background);
+
+    accent-color: #ffcdf1;
+}
+
+.button:disabled {
+    opacity: .65;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #919191aa;
+}
+
+@keyframes -scrolled-flash {
+    from {
+        background: #860d82;
+    }
+    to {
+        background: #8ef7d1;
+    }
+}
+
+.text-badge {
+    background-color: #ffcdf1;
+}
+
+header .text-badge {
+    background-color: #e9bfe1;
+}
+
+.panel-trigger {
+    color: #000
+}
+
+::selection {
+    background-color: var(--selection-background-color);
+    color: var(--selection-color);
+}
+
+.admin input {
+    background: #fff;
+    border-color: #ccc;
+    color: #1f1f1f;
+}
