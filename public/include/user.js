@@ -154,7 +154,13 @@ const user = (function() {
           self.pendingSignupToken = null;
         },
         error: function(data) {
-          self.elements.signup.find('#error').text(data.responseJSON.message);
+          let errorMsg;
+          if (data.responseJSON && data.responseJSON.message) {
+            errorMsg = data.responseJSON.message;
+          } else {
+            errorMsg = data.responseText;
+          }
+          self.elements.signup.find('#error').text(errorMsg);
         }
       });
       // self.pendingSignupToken = null;

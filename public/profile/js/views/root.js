@@ -176,7 +176,13 @@ async function _doPostLike(url, type, data = {}) {
     const req = new XMLHttpRequest();
     req.onload = function() {
       try {
-        resolve(JSON.parse(this.responseText));
+        let response;
+        try {
+          response = JSON.parse(this.responseText);
+        } catch (error) {
+          response = { details: this.responseText };
+        }
+        resolve(response);
       } catch (e) {
         reject(e);
       }
