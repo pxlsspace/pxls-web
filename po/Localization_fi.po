@@ -1,15 +1,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
+"POT-Creation-Date: 2024-09-07T20:42:20.086Z\n"
+"PO-Revision-Date: 2025-08-04T02:20:31.179Z\n"
+"Last-Translator: Automatic generation\n"
+"Language-Team: Finnish\n"
 "Language: fi\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"X-Generator: Pxls localization generator\n"
 
-#: /views/error.handlebars /views/profile.handlebars /public/include/user.js
+#: /views/error.handlebars
+#: /views/error.handlebars
+#: /views/error.handlebars
+#: /views/profile.handlebars
+#: /public/include/user.js
 msgid "My Profile"
 msgstr "Profiilini"
 
-#: /views/error.handlebars /views/profile.handlebars
+#: /views/error.handlebars
+#: /views/profile.handlebars
 msgid "My Factions"
 msgstr "Ryhmäni"
 
@@ -23,6 +32,8 @@ msgid "The content you requested could not be found at this URL. If you believe 
 msgstr "Sisältö jota yrität saada ei löytynyt tästä URL osoitteesta. Jos uskot tämän olevan virhe, ota yhteyttä kehittäjään."
 
 #. links to the homepage (the app itself)
+#: /views/error.handlebars
+#: /views/error.handlebars
 #: /views/error.handlebars
 msgid "Back to Pxls"
 msgstr "Palaa Pxlsiin"
@@ -70,6 +81,9 @@ msgid "Canvas:"
 msgstr "Kanvas:"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
 msgid "N/A"
 msgstr "N/A"
 
@@ -81,7 +95,9 @@ msgstr "Kaikki:"
 msgid "Loading online user count&hellip;"
 msgstr "Ladataan actiivisten käyttäjien lukumäärää&hellip;"
 
-#: /views/index.handlebars /public/admin/admin.js /public/include/lookup.js
+#: /views/index.handlebars
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Pixels"
 msgstr "Pixeliä"
 
@@ -93,7 +109,8 @@ msgstr "Peruuta"
 msgid "You are not signed in."
 msgstr "Et ole kirjautunut sisään."
 
-#: /views/index.handlebars /public/include/user.js
+#: /views/index.handlebars
+#: /public/include/user.js
 msgid "Sign in with..."
 msgstr "Kirjaudu sisään käyttäen..."
 
@@ -101,6 +118,7 @@ msgstr "Kirjaudu sisään käyttäen..."
 msgid "Loading..."
 msgstr "Ladataan..."
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Sign up"
 msgstr "Rekisteröidy"
@@ -125,15 +143,20 @@ msgstr "Vedä ja pudota mallikuva"
 msgid "Exit"
 msgstr "Poistu"
 
-#: /views/index.handlebars /views/profile.handlebars
+#: /views/index.handlebars
+#: /views/profile.handlebars
 msgid "Info"
 msgstr "Tietoja"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Close Panel"
 msgstr "Sulje Paneeli"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Chat"
 msgstr "Chatti"
 
@@ -141,6 +164,7 @@ msgstr "Chatti"
 msgid "Pings"
 msgstr "Pingit"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Settings"
 msgstr "Asetukset"
@@ -153,7 +177,8 @@ msgstr "Siirry pohjalle"
 msgid "Replying to"
 msgstr "Vastataan käyttäjälle"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "On"
 msgstr "Päällä"
 
@@ -177,6 +202,7 @@ msgstr "Näppäinsidokset"
 msgid "general"
 msgstr "yleiset"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "General"
 msgstr "Yleiset"
@@ -213,6 +239,7 @@ msgstr "tarkastelut"
 msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
 msgstr "<kbd>Shift</kbd> + Click/Pidä kosketusta pohjassa tarkastellaksesi pixeliä"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
 msgstr "näkymät;linjaus;ruudukko piilotettu;ruudukko näytetty;piilota ruudukko;näytä ruudukko"
@@ -262,6 +289,7 @@ msgid "<kbd>P</kbd> to take a snapshot"
 msgstr "<kbd>P</kbd> ottaaksesi kaappauksen"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
 msgstr "näkymät;käyttäjän aktiviteetti;pikseleitä asetettuja pixeleitä;lämpökartta piilotettu;lämpökartta näytetty;piilota lämpökartta;näytä lämpökartta"
 
@@ -269,6 +297,7 @@ msgstr "näkymät;käyttäjän aktiviteetti;pikseleitä asetettuja pixeleitä;l�
 msgid "<kbd>H</kbd> to toggle heatmap"
 msgstr "<kbd>H</kbd> kytkeäksesi lämpokartan"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
 msgstr "näkymät;käyttäjän aktiviteetti;pikseleitä asettamattomia pikseleitä;neitsytkartta piilotettu;neitsytkartta näytetty;piilota neitsytkartta;näytä neitsytkartta"
@@ -330,9 +359,11 @@ msgid "templates;guides"
 msgstr "mallit;ohjeet"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Template"
 msgstr "Malli"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "transparency"
 msgstr "läpinäkyvyys"
@@ -413,6 +444,7 @@ msgstr "mallin leveys;tw="
 msgid "Width:"
 msgstr "Leveys:"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Reset"
 msgstr "Palauta"
@@ -794,13 +826,16 @@ msgid "Chat icon badge mode:"
 msgstr "Chattikuvakkeen merrkitila:"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread ping"
 msgstr "Näytä lukemattomalla pingillä"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread message"
 msgstr "Näytä lukemattomalla viestillä"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Never show"
 msgstr "Älä näytäs"
@@ -1133,7 +1168,8 @@ msgstr "mainitsemisääni"
 msgid "Play sound on ping:"
 msgstr "Toista ääni pingille:"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Off"
 msgstr "Ei käytössä"
 
@@ -1165,7 +1201,8 @@ msgstr "Tilin Asetukset"
 msgid "Public Discord name:"
 msgstr "Julkinen Discord nimi:"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Set"
 msgstr "Aseta"
 
@@ -1362,9 +1399,11 @@ msgid "Any automated aggregation of data from user lookups is not allowed, and w
 msgstr "Kaikki käyttäjähakudatan automaattinen yhdistäminen on kielletty ja tulee johtamaan porttikieltoon."
 
 #: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Staff have final say in any rule disputes"
 msgstr "Henkilökunnalla on suurin päätösvalta kaikissa sääntöriidoissa"
 
+#: /views/partials/info.handlebars
 #: /views/partials/info.handlebars
 msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
 msgstr "Jos tunnet moderaattorin käyttäytyneen epäsopivasti, ole hyvä ja ilmoita asiasta järjestelmänvalvojalle."
@@ -1466,6 +1505,8 @@ msgid "Charity (templates, monitors, etc.)"
 msgstr "Charity (mallit, tarkkailu, yms.)"
 
 #: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Archives"
 msgstr "Arkistot"
 
@@ -1482,6 +1523,7 @@ msgid "Donations are not accepted at this time, but this panel will be updated w
 msgstr "Lahjoituksia ei tällä hetkellä oteta vastaan, mutta tämö paneeli päivitetään kun ne ovet taas avoimet!"
 
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "{0}'s Profile"
 msgstr "{0}:n Profiili"
 
@@ -1489,6 +1531,7 @@ msgstr "{0}:n Profiili"
 msgid "My Data"
 msgstr "Datani"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reports"
 msgstr "Ilmiannot"
@@ -1509,7 +1552,8 @@ msgstr "Sinun täytyy olla kirjautunut sisään nähdäksesi profiilisi."
 msgid "Registration Date"
 msgstr "Rekisteröitymispäivä"
 
-#: /views/profile.handlebars /public/include/lookup.js
+#: /views/profile.handlebars
+#: /public/include/lookup.js
 msgid "Alltime Pixels"
 msgstr "Kaiken Ajan Pikselit"
 
@@ -1521,15 +1565,18 @@ msgstr "Nykyisen Kanvaasin Pikselit"
 msgid "Discord Tag"
 msgstr "Discord Tagi"
 
-#: /views/profile.handlebars /public/include/lookup.js
+#: /views/profile.handlebars
+#: /public/include/lookup.js
 msgid "Faction"
 msgstr "Ryhmät"
 
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "None"
 msgstr "Ei mitään"
 
-#: /views/profile.handlebars /public/admin/admin.js
+#: /views/profile.handlebars
+#: /public/admin/admin.js
 msgid "Roles"
 msgstr "Roolit"
 
@@ -1537,6 +1584,7 @@ msgstr "Roolit"
 msgid "Canvas Ban Expiry"
 msgstr "Kanvaasiporttikiellon Päättymisaika"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Never"
 msgstr "Ei koskaan"
@@ -1559,15 +1607,18 @@ msgstr "Kanvaasi-ilmiannot ({0}/{1} avoinna)"
 
 #. eg "Report on Bob (closed)
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (closed)"
 msgstr "Ilmiannettu {0} (suljettu)"
 
 #. eg "Report on Bob (open)
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (open)"
 msgstr "Ilmiannettu {0} (avoinna)"
 
 #. eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reported {0} on {1}"
 msgstr "Ilmiannettiin {0} aikaan {1}"
@@ -1639,7 +1690,8 @@ msgstr "Jäsenet"
 msgid "Edit"
 msgstr "Muokkaa"
 
-#: /views/profile.handlebars /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/include/chat.js
 msgid "Delete"
 msgstr "Poista"
 
@@ -1683,7 +1735,12 @@ msgstr "Logiavaimien pitäisi tulla näkyviin täällä kun kanvaasi jolla olet 
 msgid "Members of {0} ([{1}])"
 msgstr "{0}:n jäsenet ([{1}])"
 
-#: /views/profile.handlebars /public/admin/admin.js /public/include/lookup.js
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Close"
 msgstr "Sulje"
 
@@ -1698,10 +1755,12 @@ msgid "Transfer Ownership"
 msgstr "Siirrä Omistus"
 
 #. bans a user from the faction
-#: /views/profile.handlebars /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/include/chat.js
 msgid "Ban"
 msgstr "Anna Porttikielto"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Nothing to see here!"
 msgstr "Ei mitään nähtävää!"
@@ -1710,7 +1769,9 @@ msgstr "Ei mitään nähtävää!"
 msgid "Faction Bans"
 msgstr "Ryhmäporttikiellot"
 
-#: /views/profile.handlebars /public/admin/admin.js /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/admin/admin.js
+#: /public/include/chat.js
 msgid "Unban"
 msgstr "Poista Porttikielto"
 
@@ -1734,27 +1795,34 @@ msgstr "Lataa Lisää"
 msgid "Send alert..."
 msgstr "Lähetä hälytys..."
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #1: Hateful/derogatory speech or symbols"
 msgstr "Sääntö #1: Vihamielinen/halventava puhe tai sumbolit"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
 msgstr "Sääntö #2: Alastomuus, sukupuolielimet, tai ei-PG-13 sisältö"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #3: Multi-account"
 msgstr "Sääntö #3: Monta tiliä"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #4: Botting"
 msgstr "Sääntö #4: Bottaaminen"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Other (specify below)"
 msgstr "Muu (määrittele alla)"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Additional information (if applicable)"
 msgstr "Lisätiedot (jos sovellettavissa)"
 
@@ -1768,7 +1836,8 @@ msgstr "Palauta pikselit edellisen "
 msgid " hours"
 msgstr " tunnin ajalta"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "You must specify the details."
 msgstr "Sinun täytyy määrittää yksityiskohdat."
 
@@ -1817,12 +1886,16 @@ msgstr "ei koskaan"
 msgid "permanent"
 msgstr "lopullinen"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "Yes"
 msgstr "Kyllä"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "No"
 msgstr "Ei"
@@ -1831,11 +1904,13 @@ msgstr "Ei"
 msgid "Yes (permanent)"
 msgstr "Kyllä (lopullinen)"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Username"
 msgstr "Käyttäjänimi"
 
-#: /public/admin/admin.js /public/include/chat.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
 msgid "Profile"
 msgstr "Profiili"
 
@@ -1847,7 +1922,8 @@ msgstr "Kirjautumiset"
 msgid "All Time Pixels"
 msgstr "Kaiken Ajan Pikselit"
 
-#: /public/admin/admin.js /public/include/user.js
+#: /public/admin/admin.js
+#: /public/include/user.js
 msgid "Rename Requested"
 msgstr "Nimenvaihto Pyydetty"
 
@@ -1855,7 +1931,8 @@ msgstr "Nimenvaihto Pyydetty"
 msgid "Discord Name"
 msgstr "Discord Nimi"
 
-#: /public/admin/admin.js /public/include/user.js
+#: /public/admin/admin.js
+#: /public/include/user.js
 msgid "Banned"
 msgstr "Porttikielletty"
 
@@ -1916,7 +1993,9 @@ msgstr "Porttikiellon Poistamisen Syy:"
 msgid "Unbanning ${username}"
 msgstr "Poistetaan porttikielto keyttäjältä ${username}"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 #: /public/include/user.js
 msgid "Cancel"
 msgstr "Peruuta"
@@ -2076,7 +2155,8 @@ msgstr "Huom: Voit asettaa oletustoiminnon asetusvalikossa, jolloin ohitat täm�
 msgid "OK"
 msgstr "OK"
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Report"
 msgstr "Ilmianna"
 
@@ -2112,11 +2192,13 @@ msgstr "Anna syy ilmiannollesi"
 msgid "You are reporting a chat message from ${reportTarget} with the content:"
 msgstr "Olet ilmiantamassa viestin käyttäjältä ${reportTarget}, jonka sisältö on:"
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Sent report!"
 msgstr "Ilmianto lähetetty!"
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Error sending report."
 msgstr "Virhe ilmiantoa lähettäessä."
 

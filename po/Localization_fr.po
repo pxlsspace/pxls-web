@@ -1,15 +1,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
+"POT-Creation-Date: 2024-09-07T20:42:20.086Z\n"
+"PO-Revision-Date: 2025-08-04T02:20:31.193Z\n"
+"Last-Translator: Automatic generation\n"
+"Language-Team: French\n"
 "Language: fr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"X-Generator: Pxls localization generator\n"
 
-#: /views/error.handlebars /views/profile.handlebars /public/include/user.js
+#: /views/error.handlebars
+#: /views/error.handlebars
+#: /views/error.handlebars
+#: /views/profile.handlebars
+#: /public/include/user.js
 msgid "My Profile"
 msgstr "Mon Profil"
 
-#: /views/error.handlebars /views/profile.handlebars
+#: /views/error.handlebars
+#: /views/profile.handlebars
 msgid "My Factions"
 msgstr "Mes Factions"
 
@@ -23,6 +32,8 @@ msgid "The content you requested could not be found at this URL. If you believe 
 msgstr "Le contenu que tu as demandé n'a pas pu être trouvé sur ce lien. Si tu penses que c'est un erreur, merci de contacter un développeur."
 
 #. links to the homepage (the app itself)
+#: /views/error.handlebars
+#: /views/error.handlebars
 #: /views/error.handlebars
 msgid "Back to Pxls"
 msgstr "Retourner sur Pxls"
@@ -70,6 +81,9 @@ msgid "Canvas:"
 msgstr "Canvas :"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
 msgid "N/A"
 msgstr "N/A"
 
@@ -81,7 +95,9 @@ msgstr "Total :"
 msgid "Loading online user count&hellip;"
 msgstr "Chargement du nombre d'utilisateurs en ligne&hellip;"
 
-#: /views/index.handlebars /public/admin/admin.js /public/include/lookup.js
+#: /views/index.handlebars
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Pixels"
 msgstr "Pixels"
 
@@ -93,7 +109,8 @@ msgstr "Annuler"
 msgid "You are not signed in."
 msgstr "Tu n'es pas connecté."
 
-#: /views/index.handlebars /public/include/user.js
+#: /views/index.handlebars
+#: /public/include/user.js
 msgid "Sign in with..."
 msgstr "Se connecter avec..."
 
@@ -101,6 +118,7 @@ msgstr "Se connecter avec..."
 msgid "Loading..."
 msgstr "Chargement..."
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Sign up"
 msgstr "S'inscrire"
@@ -125,15 +143,20 @@ msgstr ""
 msgid "Exit"
 msgstr "Sortie"
 
-#: /views/index.handlebars /views/profile.handlebars
+#: /views/index.handlebars
+#: /views/profile.handlebars
 msgid "Info"
 msgstr "Info"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Close Panel"
 msgstr "Fermer le panneau"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Chat"
 msgstr "Chat"
 
@@ -141,6 +164,7 @@ msgstr "Chat"
 msgid "Pings"
 msgstr "Mentions"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Settings"
 msgstr "Paramètres"
@@ -153,7 +177,8 @@ msgstr "Sauter à la fin"
 msgid "Replying to"
 msgstr ""
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "On"
 msgstr "Activé"
 
@@ -177,6 +202,7 @@ msgstr "Contrôles"
 msgid "general"
 msgstr "général"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "General"
 msgstr "Général"
@@ -213,6 +239,7 @@ msgstr "inspections"
 msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
 msgstr "<kbd>Shift</kbd> + Click/Garder appuyé pour inspecter un pixel"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
 msgstr "calques;alignement;grille cachée;grille;cacher la grille;afficher la grille"
@@ -262,6 +289,7 @@ msgid "<kbd>P</kbd> to take a snapshot"
 msgstr "<kbd>P</kbd> pour télécharger une image du canvas"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
 msgstr "calques;activité;pixels placés;heatmap;carte d'activité;afficher carte d'activité;cacher carte d'activité"
 
@@ -269,6 +297,7 @@ msgstr "calques;activité;pixels placés;heatmap;carte d'activité;afficher cart
 msgid "<kbd>H</kbd> to toggle heatmap"
 msgstr "<kbd>H</kbd> pour activer/désactiver la carte d'activité"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
 msgstr "calques;activité;pixels non touchés;virginmap;afficher virginmap;cacher virginmap"
@@ -330,9 +359,11 @@ msgid "templates;guides"
 msgstr "modèle;templates;guide"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Template"
 msgstr "Modèle"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "transparency"
 msgstr "Transparence"
@@ -413,6 +444,7 @@ msgstr "largeur du modèle;tw="
 msgid "Width:"
 msgstr "Largeur :"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Reset"
 msgstr "Réinitialiser"
@@ -794,13 +826,16 @@ msgid "Chat icon badge mode:"
 msgstr ""
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread ping"
 msgstr ""
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread message"
 msgstr ""
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Never show"
 msgstr ""
@@ -1133,7 +1168,8 @@ msgstr "son de mention;ping"
 msgid "Play sound on ping:"
 msgstr "Émettre un son quand on est mentionné :"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Off"
 msgstr "Jamais"
 
@@ -1165,7 +1201,8 @@ msgstr "Paramètres du Compte"
 msgid "Public Discord name:"
 msgstr "Nom Public Discord :"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Set"
 msgstr "Définir"
 
@@ -1362,9 +1399,11 @@ msgid "Any automated aggregation of data from user lookups is not allowed, and w
 msgstr "Toute accumulation automatisée d'information utilisateur par inspections est interdite, et résultera en un bannissement."
 
 #: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Staff have final say in any rule disputes"
 msgstr "Le staff a le dernier mot dans tout débat concernant les règles"
 
+#: /views/partials/info.handlebars
 #: /views/partials/info.handlebars
 msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
 msgstr "Si tu penses qu'un modérateur a agi de façon inappropriée, merci de le signaler à un administrateur."
@@ -1466,6 +1505,8 @@ msgid "Charity (templates, monitors, etc.)"
 msgstr "Charity (modèles, contrôleurs, etc...)"
 
 #: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Archives"
 msgstr "Archives"
 
@@ -1482,6 +1523,7 @@ msgid "Donations are not accepted at this time, but this panel will be updated w
 msgstr "Les dons ne sont pas acceptés en ce moment, mais cet onglet sera mis à jour quand ils seront de retour!"
 
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "{0}'s Profile"
 msgstr "Profil de {0}"
 
@@ -1489,6 +1531,7 @@ msgstr "Profil de {0}"
 msgid "My Data"
 msgstr ""
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reports"
 msgstr "Signalements"
@@ -1509,7 +1552,8 @@ msgstr "Tu dois être connecté pour consulter ton profil."
 msgid "Registration Date"
 msgstr "Date d'inscription"
 
-#: /views/profile.handlebars /public/include/lookup.js
+#: /views/profile.handlebars
+#: /public/include/lookup.js
 msgid "Alltime Pixels"
 msgstr "Pixels totaux"
 
@@ -1521,15 +1565,18 @@ msgstr "Pixels placés ce canvas"
 msgid "Discord Tag"
 msgstr "Tag Discord"
 
-#: /views/profile.handlebars /public/include/lookup.js
+#: /views/profile.handlebars
+#: /public/include/lookup.js
 msgid "Faction"
 msgstr "Faction"
 
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "None"
 msgstr "Aucune"
 
-#: /views/profile.handlebars /public/admin/admin.js
+#: /views/profile.handlebars
+#: /public/admin/admin.js
 msgid "Roles"
 msgstr "Rôles"
 
@@ -1537,6 +1584,7 @@ msgstr "Rôles"
 msgid "Canvas Ban Expiry"
 msgstr "Expiration du bannissement de canvas"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Never"
 msgstr "Jamais"
@@ -1559,15 +1607,18 @@ msgstr "Signalements du canvas ({0}/{1} ouvert(s))"
 
 #. eg "Report on Bob (closed)
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (closed)"
 msgstr "Signalement sur {0} (fermé)"
 
 #. eg "Report on Bob (open)
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (open)"
 msgstr "Signalement sur {0} (ouvert)"
 
 #. eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reported {0} on {1}"
 msgstr "Signalé {0} à la date du {1}"
@@ -1639,7 +1690,8 @@ msgstr "Membres"
 msgid "Edit"
 msgstr "Modifier"
 
-#: /views/profile.handlebars /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/include/chat.js
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -1683,7 +1735,12 @@ msgstr ""
 msgid "Members of {0} ([{1}])"
 msgstr "Membres de {0} ([{1}])"
 
-#: /views/profile.handlebars /public/admin/admin.js /public/include/lookup.js
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Close"
 msgstr "Fermer"
 
@@ -1698,10 +1755,12 @@ msgid "Transfer Ownership"
 msgstr "Transférer la possession"
 
 #. bans a user from the faction
-#: /views/profile.handlebars /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/include/chat.js
 msgid "Ban"
 msgstr "Exclure"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Nothing to see here!"
 msgstr "Rien à voir ici !"
@@ -1710,7 +1769,9 @@ msgstr "Rien à voir ici !"
 msgid "Faction Bans"
 msgstr "Bannissements de la Faction"
 
-#: /views/profile.handlebars /public/admin/admin.js /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/admin/admin.js
+#: /public/include/chat.js
 msgid "Unban"
 msgstr "Révoquer le bannissement"
 
@@ -1734,27 +1795,34 @@ msgstr "Charger plus"
 msgid "Send alert..."
 msgstr ""
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #1: Hateful/derogatory speech or symbols"
 msgstr "Règle #1 : Propos ou symboles haineux/dérogatoires"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
 msgstr "Règle #2 : Nudité, organes génitaux ou contenu non adapté aux mineurs"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #3: Multi-account"
 msgstr "Règle #3 : Multi-compte"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #4: Botting"
 msgstr "Règle #4 : Usage de bot"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Other (specify below)"
 msgstr "Autre (préciser ci-dessous)"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Additional information (if applicable)"
 msgstr "Information supplémentaire (si applicable)"
 
@@ -1768,7 +1836,8 @@ msgstr ""
 msgid " hours"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "You must specify the details."
 msgstr "Tu dois spécifier les détails."
 
@@ -1817,12 +1886,16 @@ msgstr "jamais"
 msgid "permanent"
 msgstr "définitif"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "Yes"
 msgstr "Oui"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "No"
 msgstr "Non"
@@ -1831,11 +1904,13 @@ msgstr "Non"
 msgid "Yes (permanent)"
 msgstr "Oui (définitif)"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Username"
 msgstr "Nom d'utilisateur"
 
-#: /public/admin/admin.js /public/include/chat.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
 msgid "Profile"
 msgstr "Profil"
 
@@ -1847,7 +1922,8 @@ msgstr "Logins"
 msgid "All Time Pixels"
 msgstr "Pixels totaux"
 
-#: /public/admin/admin.js /public/include/user.js
+#: /public/admin/admin.js
+#: /public/include/user.js
 msgid "Rename Requested"
 msgstr "Renommage demandé"
 
@@ -1855,7 +1931,8 @@ msgstr "Renommage demandé"
 msgid "Discord Name"
 msgstr "Nom Discord"
 
-#: /public/admin/admin.js /public/include/user.js
+#: /public/admin/admin.js
+#: /public/include/user.js
 msgid "Banned"
 msgstr "Banni"
 
@@ -1916,7 +1993,9 @@ msgstr "Raison de la révocation du bannissement"
 msgid "Unbanning ${username}"
 msgstr "Révocation du bannissement de ${username}"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 #: /public/include/user.js
 msgid "Cancel"
 msgstr "Annuler"
@@ -2076,7 +2155,8 @@ msgstr "Note : Tu peux définir une action par défaut dans les paramètres qui 
 msgid "OK"
 msgstr ""
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Report"
 msgstr "Signaler"
 
@@ -2112,11 +2192,13 @@ msgstr "Entre une raison pour ton signalement"
 msgid "You are reporting a chat message from ${reportTarget} with the content:"
 msgstr ""
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Sent report!"
 msgstr ""
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Error sending report."
 msgstr "Erreur lors de l'envoi du signalement."
 
@@ -2523,9 +2605,3 @@ msgstr ""
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Alerte"
-
-#~ msgid "Subreddit"
-#~ msgstr "Subreddit"
-
-#~ msgid "GitHub"
-#~ msgstr "GitHub"

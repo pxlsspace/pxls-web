@@ -1,21 +1,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
-"PO-Revision-Date: 2023-12-09 17:04+0000\n"
-"Last-Translator: Mikarific <mikerific2@gmail.com>\n"
-"Language-Team: Toki Pona <https://weblate.pxls.space/projects/pxls-space/pxls-web/tok/>\n"
+"POT-Creation-Date: 2024-09-07T20:42:20.086Z\n"
+"PO-Revision-Date: 2025-08-04T02:20:31.245Z\n"
+"Last-Translator: Automatic generation\n"
+"Language-Team: Tok Pisin\n"
 "Language: tok\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.2.1\n"
+"X-Generator: Pxls localization generator\n"
 
-#: /views/error.handlebars /views/profile.handlebars /public/include/user.js
+#: /views/error.handlebars
+#: /views/error.handlebars
+#: /views/error.handlebars
+#: /views/profile.handlebars
+#: /public/include/user.js
 msgid "My Profile"
 msgstr "lipu mi"
 
-#: /views/error.handlebars /views/profile.handlebars
+#: /views/error.handlebars
+#: /views/profile.handlebars
 msgid "My Factions"
 msgstr "kulupu mi"
 
@@ -29,6 +32,8 @@ msgid "The content you requested could not be found at this URL. If you believe 
 msgstr "lipu ni li jo e ijo ala. ni li powe la, sina ken toki tawa jan pali pi musi Pxls."
 
 #. links to the homepage (the app itself)
+#: /views/error.handlebars
+#: /views/error.handlebars
 #: /views/error.handlebars
 msgid "Back to Pxls"
 msgstr ""
@@ -76,6 +81,9 @@ msgid "Canvas:"
 msgstr "sitelen ni:"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
 msgid "N/A"
 msgstr "ala"
 
@@ -87,7 +95,9 @@ msgstr "sitelen ale:"
 msgid "Loading online user count&hellip;"
 msgstr "nanpa jan li kama lon&hellip;"
 
-#: /views/index.handlebars /public/admin/admin.js /public/include/lookup.js
+#: /views/index.handlebars
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Pixels"
 msgstr "leko"
 
@@ -99,7 +109,8 @@ msgstr "o weka e leko sina"
 msgid "You are not signed in."
 msgstr ""
 
-#: /views/index.handlebars /public/include/user.js
+#: /views/index.handlebars
+#: /public/include/user.js
 msgid "Sign in with..."
 msgstr ""
 
@@ -107,6 +118,7 @@ msgstr ""
 msgid "Loading..."
 msgstr "mi kama lon..."
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Sign up"
 msgstr "o jo e lipu jan"
@@ -131,15 +143,20 @@ msgstr "o pana e ilo sitelen tawa mi"
 msgid "Exit"
 msgstr ""
 
-#: /views/index.handlebars /views/profile.handlebars
+#: /views/index.handlebars
+#: /views/profile.handlebars
 msgid "Info"
 msgstr "sona suli"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Close Panel"
 msgstr "o weka e lipu ni"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Chat"
 msgstr "poki toki"
 
@@ -147,6 +164,7 @@ msgstr "poki toki"
 msgid "Pings"
 msgstr "mu tawa sina"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Settings"
 msgstr "ante"
@@ -159,7 +177,8 @@ msgstr "o lon anpa"
 msgid "Replying to"
 msgstr "o toki tawa jan"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "On"
 msgstr "mu"
 
@@ -183,6 +202,7 @@ msgstr "ilo nena"
 msgid "general"
 msgstr "ijo"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "General"
 msgstr "ijo"
@@ -219,6 +239,7 @@ msgstr "alasa"
 msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
 msgstr "sina kepeken e nena <kbd>Shift</kbd> e ilo misa la, sina ken alasa e jan pi pali leko."
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
 msgstr ""
@@ -268,6 +289,7 @@ msgid "<kbd>P</kbd> to take a snapshot"
 msgstr "nena <kbd>P</kbd> la, sina lanpan e sitelen."
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
 msgstr ""
 
@@ -275,6 +297,7 @@ msgstr ""
 msgid "<kbd>H</kbd> to toggle heatmap"
 msgstr "nena <kbd>H</kbd> la, sina lon e sitelen seli."
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
 msgstr ""
@@ -336,9 +359,11 @@ msgid "templates;guides"
 msgstr ""
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Template"
 msgstr "ilo sitelen"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "transparency"
 msgstr ""
@@ -419,6 +444,7 @@ msgstr ""
 msgid "Width:"
 msgstr "nanpa suli pi ilo sitelen:"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Reset"
 msgstr "o sin"
@@ -800,13 +826,16 @@ msgid "Chat icon badge mode:"
 msgstr "nasin pi sike lon sitelen pi poki toki:"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread ping"
 msgstr "jan li mu tawa sina, o lon"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread message"
 msgstr "jan li toki, o lon"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Never show"
 msgstr "o lon ala"
@@ -1139,8 +1168,8 @@ msgstr ""
 msgid "Play sound on ping:"
 msgstr "mu pi poki toki li lon la, nasin kalama li ni:"
 
-#: /views/index.handlebars /public/include/chat.js
-#, fuzzy
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Off"
 msgstr "mu ala"
 
@@ -1172,7 +1201,8 @@ msgstr "ante pi lipu sina"
 msgid "Public Discord name:"
 msgstr "nimi sina pi ilo Siko:"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Set"
 msgstr "o ante"
 
@@ -1369,9 +1399,11 @@ msgid "Any automated aggregation of data from user lookups is not allowed, and w
 msgstr ""
 
 #: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Staff have final say in any rule disputes"
 msgstr ""
 
+#: /views/partials/info.handlebars
 #: /views/partials/info.handlebars
 msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
 msgstr ""
@@ -1473,6 +1505,8 @@ msgid "Charity (templates, monitors, etc.)"
 msgstr ""
 
 #: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Archives"
 msgstr ""
 
@@ -1489,6 +1523,7 @@ msgid "Donations are not accepted at this time, but this panel will be updated w
 msgstr ""
 
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "{0}'s Profile"
 msgstr ""
 
@@ -1496,6 +1531,7 @@ msgstr ""
 msgid "My Data"
 msgstr ""
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reports"
 msgstr ""
@@ -1516,7 +1552,8 @@ msgstr ""
 msgid "Registration Date"
 msgstr ""
 
-#: /views/profile.handlebars /public/include/lookup.js
+#: /views/profile.handlebars
+#: /public/include/lookup.js
 msgid "Alltime Pixels"
 msgstr ""
 
@@ -1528,15 +1565,18 @@ msgstr ""
 msgid "Discord Tag"
 msgstr ""
 
-#: /views/profile.handlebars /public/include/lookup.js
+#: /views/profile.handlebars
+#: /public/include/lookup.js
 msgid "Faction"
 msgstr ""
 
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "None"
 msgstr ""
 
-#: /views/profile.handlebars /public/admin/admin.js
+#: /views/profile.handlebars
+#: /public/admin/admin.js
 msgid "Roles"
 msgstr ""
 
@@ -1544,6 +1584,7 @@ msgstr ""
 msgid "Canvas Ban Expiry"
 msgstr ""
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Never"
 msgstr ""
@@ -1566,15 +1607,18 @@ msgstr ""
 
 #. eg "Report on Bob (closed)
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (closed)"
 msgstr ""
 
 #. eg "Report on Bob (open)
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (open)"
 msgstr ""
 
 #. eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reported {0} on {1}"
 msgstr ""
@@ -1646,7 +1690,8 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: /views/profile.handlebars /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/include/chat.js
 msgid "Delete"
 msgstr ""
 
@@ -1690,7 +1735,12 @@ msgstr ""
 msgid "Members of {0} ([{1}])"
 msgstr ""
 
-#: /views/profile.handlebars /public/admin/admin.js /public/include/lookup.js
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Close"
 msgstr ""
 
@@ -1705,10 +1755,12 @@ msgid "Transfer Ownership"
 msgstr ""
 
 #. bans a user from the faction
-#: /views/profile.handlebars /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/include/chat.js
 msgid "Ban"
 msgstr ""
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Nothing to see here!"
 msgstr ""
@@ -1717,7 +1769,9 @@ msgstr ""
 msgid "Faction Bans"
 msgstr ""
 
-#: /views/profile.handlebars /public/admin/admin.js /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/admin/admin.js
+#: /public/include/chat.js
 msgid "Unban"
 msgstr ""
 
@@ -1741,27 +1795,34 @@ msgstr ""
 msgid "Send alert..."
 msgstr ""
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #1: Hateful/derogatory speech or symbols"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #3: Multi-account"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #4: Botting"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Other (specify below)"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Additional information (if applicable)"
 msgstr ""
 
@@ -1775,7 +1836,8 @@ msgstr ""
 msgid " hours"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "You must specify the details."
 msgstr ""
 
@@ -1824,12 +1886,16 @@ msgstr ""
 msgid "permanent"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "Yes"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "No"
 msgstr ""
@@ -1838,11 +1904,13 @@ msgstr ""
 msgid "Yes (permanent)"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Username"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/chat.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
 msgid "Profile"
 msgstr ""
 
@@ -1854,7 +1922,8 @@ msgstr ""
 msgid "All Time Pixels"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/user.js
+#: /public/admin/admin.js
+#: /public/include/user.js
 msgid "Rename Requested"
 msgstr ""
 
@@ -1862,7 +1931,8 @@ msgstr ""
 msgid "Discord Name"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/user.js
+#: /public/admin/admin.js
+#: /public/include/user.js
 msgid "Banned"
 msgstr ""
 
@@ -1923,7 +1993,9 @@ msgstr ""
 msgid "Unbanning ${username}"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 #: /public/include/user.js
 msgid "Cancel"
 msgstr ""
@@ -2083,7 +2155,8 @@ msgstr ""
 msgid "OK"
 msgstr ""
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Report"
 msgstr ""
 
@@ -2119,11 +2192,13 @@ msgstr ""
 msgid "You are reporting a chat message from ${reportTarget} with the content:"
 msgstr ""
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Sent report!"
 msgstr ""
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Error sending report."
 msgstr ""
 

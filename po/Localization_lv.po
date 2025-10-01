@@ -1,15 +1,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
-"Language: \n"
+"POT-Creation-Date: 2024-09-07T20:42:20.086Z\n"
+"PO-Revision-Date: 2025-08-04T02:20:31.206Z\n"
+"Last-Translator: Automatic generation\n"
+"Language: lv\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"X-Generator: Pxls localization generator\n"
 
-#: /views/error.handlebars /views/profile.handlebars /public/include/user.js
+#: /views/error.handlebars
+#: /views/error.handlebars
+#: /views/error.handlebars
+#: /views/profile.handlebars
+#: /public/include/user.js
 msgid "My Profile"
 msgstr "Mans Profils"
 
-#: /views/error.handlebars /views/profile.handlebars
+#: /views/error.handlebars
+#: /views/profile.handlebars
 msgid "My Factions"
 msgstr "Manas Frakcijas"
 
@@ -23,6 +31,8 @@ msgid "The content you requested could not be found at this URL. If you believe 
 msgstr "Saturs, kuru meklējāt, nevarēja būt atrasts šajā URL. Ja uzskatāt ka šī ir kļūda, sazinieties ar izstrādātāju."
 
 #. links to the homepage (the app itself)
+#: /views/error.handlebars
+#: /views/error.handlebars
 #: /views/error.handlebars
 msgid "Back to Pxls"
 msgstr "Atpakaļ uz Pxls"
@@ -57,7 +67,6 @@ msgstr "Zaudēts savienojums ar serveri, atkārtoti savienojas... "
 msgid "Loading Heatmap (press <kbd>H</kbd> to cancel)"
 msgstr "Lādējas siltuma karte (nospiediet <kbd>H</kbd> lai atceltu)"
 
-# translating as "background pixel map"
 #: /views/index.handlebars
 msgid "Loading Virginmap (press <kbd>X</kbd> to cancel)"
 msgstr "Lādējas fona pikseļu karte (nospiediet <kbd>X</kbd> lai atceltu)"
@@ -71,6 +80,9 @@ msgid "Canvas:"
 msgstr "Kanva:"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
 msgid "N/A"
 msgstr "N/A"
 
@@ -82,7 +94,9 @@ msgstr "Pavisam:"
 msgid "Loading online user count&hellip;"
 msgstr "Lādējas tiešsaistes lietotāju skaits&hellip;"
 
-#: /views/index.handlebars /public/admin/admin.js /public/include/lookup.js
+#: /views/index.handlebars
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Pixels"
 msgstr "Pikseļi"
 
@@ -94,7 +108,8 @@ msgstr "Atsaukt"
 msgid "You are not signed in."
 msgstr "Jūs neesat pierakstījies."
 
-#: /views/index.handlebars /public/include/user.js
+#: /views/index.handlebars
+#: /public/include/user.js
 msgid "Sign in with..."
 msgstr "Pierakstīties ar..."
 
@@ -102,6 +117,7 @@ msgstr "Pierakstīties ar..."
 msgid "Loading..."
 msgstr "Lādējas..."
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Sign up"
 msgstr "Reģistrēties"
@@ -126,15 +142,20 @@ msgstr "Velciet un nometiet šablona bildi"
 msgid "Exit"
 msgstr "Izeja"
 
-#: /views/index.handlebars /views/profile.handlebars
+#: /views/index.handlebars
+#: /views/profile.handlebars
 msgid "Info"
 msgstr "Info"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Close Panel"
 msgstr "Aizvērt Paneli"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Chat"
 msgstr "Čats"
 
@@ -142,6 +163,7 @@ msgstr "Čats"
 msgid "Pings"
 msgstr "Pieminējumi"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Settings"
 msgstr "Iestatījumi"
@@ -154,7 +176,8 @@ msgstr "Aizlekt Uz Leju"
 msgid "Replying to"
 msgstr ""
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "On"
 msgstr ""
 
@@ -179,6 +202,7 @@ msgid "general"
 msgstr "vispārīgi"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "General"
 msgstr "Vispārīgi"
 
@@ -194,7 +218,6 @@ msgstr "Pele/bultas/wasd lai panorāmētu"
 msgid "mousewheel;zooming"
 msgstr "peles ritenis;ritināt;tālummaiņa;pietuvināt;attālināt"
 
-# is there a way to say pinch in 1 word?
 #: /views/index.handlebars
 msgid "Scroll/pinch to zoom"
 msgstr "Ritināt/savilkt 2 pirkstus lai tuvinātu"
@@ -215,6 +238,7 @@ msgstr "meklēšana;uzmeklēšana"
 msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
 msgstr "<kbd>Shift</kbd> + Noklikšķināt/Turēt lai uzmeklētu pikseli"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
 msgstr "pārklājums;nolīdzināšana;režģis parādīts;režģis paslēpts;parādīt režģi;paslēpt režģi"
@@ -264,6 +288,7 @@ msgid "<kbd>P</kbd> to take a snapshot"
 msgstr "<kbd>P</kbd> lai izveidotu momentuzņēmumu"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
 msgstr "pārklājumi;lietotāju darbība;karstuma karte;parādīt karstuma karti;paslēpt karstuma karti"
 
@@ -271,6 +296,7 @@ msgstr "pārklājumi;lietotāju darbība;karstuma karte;parādīt karstuma karti
 msgid "<kbd>H</kbd> to toggle heatmap"
 msgstr "<kbd>H</kbd> lai ieslēgtu/izslēgtu karstuma karti"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
 msgstr "pārklājumi;lietotāju darbība;pikseļi;neliktie pikseļi;virginmap;fona pikseļi paslēpti;fona pikseļi parādīti;paslēpt fona pikseļus;parādīt fona pikseļud"
@@ -323,7 +349,6 @@ msgstr "<kbd>ESC</kbd> lai atceltu pašreizējā pikseļa atlasi"
 msgid "recenter;jump;center on template;guides;focus"
 msgstr "centrēt;pārlekt;centrēt uz šablonu;fokusēt"
 
-# board/canvas - same thing? or not
 #: /views/index.handlebars
 msgid "<kbd>R</kbd> to center the board on the current template"
 msgstr "<kbd>R</kbd> lai centrētu kanvu uz pašreizējo šablonu"
@@ -333,14 +358,15 @@ msgid "templates;guides"
 msgstr "šabloni"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Template"
 msgstr "Šablons"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "transparency"
 msgstr "caurredzamība;caurspīdīgums"
 
-# write caurredzamība instead and switch increase/decrease? russian translator did exactly that, but I didn't. Not sure which is less confusing
 #: /views/index.handlebars
 msgid "<kbd>Page Up</kbd> to increase opacity"
 msgstr "<kbd>Page Up</kbd> lai palielinātu necaurredzamību"
@@ -418,6 +444,7 @@ msgid "Width:"
 msgstr "Platums:"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Reset"
 msgstr "Atiestatīt"
 
@@ -425,7 +452,6 @@ msgstr "Atiestatīt"
 msgid "template style;custom template"
 msgstr "šablona veids;pielāgots šablons"
 
-# stils also makes sense, but veids feels closer to what it is
 #: /views/index.handlebars
 msgid "Style:"
 msgstr "Veids:"
@@ -506,7 +532,6 @@ msgstr "Lietotāja Saskarsnes Iestatījumi"
 msgid "language override;text"
 msgstr "valodas izvēle;teksts"
 
-# override in this sense doesn't translate easily so it's izvēle
 #: /views/index.handlebars
 msgid "Language override:"
 msgstr "Valodas izvēle:"
@@ -563,7 +588,6 @@ msgstr "Noklusējums"
 msgid "hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden"
 msgstr "paslēpt retiklu"
 
-# honestly don't exactly know that word in english
 #: /views/index.handlebars
 msgid "Show reticule"
 msgstr "Rādīt retiklu"
@@ -616,7 +640,6 @@ msgstr "apgriezta ritināšana;peles ritenis;paletes ritināšana;iespējot pale
 msgid "Invert scroll direction"
 msgstr "Apgriezt ritināšanas virzienu"
 
-# who will ever search for it like that? or like most of these things
 #: /views/index.handlebars
 msgid "indexed colors;palette indicies"
 msgstr "indeksētas krāsas"
@@ -802,13 +825,16 @@ msgid "Chat icon badge mode:"
 msgstr "Čata paziņojuma ikonas režīms:"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread ping"
 msgstr "Parādīt nelasīta pieminējuma gadījumā"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread message"
 msgstr "Parādīt nelasītas ziņas gadījumā"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Never show"
 msgstr "Nekad nerādīt"
@@ -833,7 +859,6 @@ msgstr "Ignorētie"
 msgid "unignore;unblock"
 msgstr "beigt ignorēt;atbloķēt"
 
-# stop ignoring
 #: /views/index.handlebars
 msgid "Unignore"
 msgstr "Beigt ignorēt"
@@ -1142,7 +1167,8 @@ msgstr ""
 msgid "Play sound on ping:"
 msgstr "Iespējot pieminējumu paziņojumu skaņu:"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Off"
 msgstr "Izslēgts"
 
@@ -1174,7 +1200,8 @@ msgstr "Konta Iestatījumi"
 msgid "Public Discord name:"
 msgstr "Publisks Discord vārds:"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Set"
 msgstr "Iestatīt"
 
@@ -1294,7 +1321,6 @@ msgstr "Fona pikseļu karte parāda pikseļus, uz kuriem neviens lietotājs vēl
 msgid "How do I report bugs?"
 msgstr "Kā man paziņot par kļūdu?"
 
-# I can't think of a way to say staff without sounding super weird
 #: /views/partials/faq.handlebars
 msgid "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
 msgstr "Par kļūdām varat paziņot #dev-and-bugs kanālā mūsu <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord serverī</a>. Ja atradāt eksploitu, lūdzu sazinieties ar administratoru privātā sarakstē."
@@ -1315,7 +1341,6 @@ msgstr "Laipni lūdzam!"
 msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
 msgstr "Esiet sveicināti uz pxls.space! Pxls ir tiešsaistes vairāku spēlētāju sadarbības kanva, kura ļauj jums izveidot jebko, ko varat iedomāties, pa vienam pikselim reizē. Pievienojieties simtiem citu spēlētāju Pxls kopienā un veidojiet apbrīnojamus mākslas darbus kopā kā komanda, vai viens pats."
 
-# project maintainers = staff, makes sense right?
 #: /views/partials/info.handlebars
 msgid "The best place to reach staff and fellow community is in the discord!"
 msgstr "Labākā vieta, kur sazināties ar projekta uzturētājiem un citiem, ir discord!"
@@ -1373,9 +1398,11 @@ msgid "Any automated aggregation of data from user lookups is not allowed, and w
 msgstr "Jebkāda automātiska informācijas apkopošana no uzmeklēšanas nav atļauta un beigsies ar banu."
 
 #: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Staff have final say in any rule disputes"
 msgstr "Moderatoriem ir pēdējais vārds jebkādos strīdos par noteikumiem"
 
+#: /views/partials/info.handlebars
 #: /views/partials/info.handlebars
 msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
 msgstr "Ja uzskatāt, ka moderators ir rīkojies neatbilstoši, lūdzu, ziņojiet par to administratoram."
@@ -1477,6 +1504,8 @@ msgid "Charity (templates, monitors, etc.)"
 msgstr "Charity (šabloni, grafiki, utt.)"
 
 #: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Archives"
 msgstr "Arhīvi"
 
@@ -1493,6 +1522,7 @@ msgid "Donations are not accepted at this time, but this panel will be updated w
 msgstr "Ziedojumi šobrīd netiek pieņemti, bet šis panelis būs atjaunināts, kad tas būs atkal iespējams!"
 
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "{0}'s Profile"
 msgstr "{0} Profils"
 
@@ -1500,6 +1530,7 @@ msgstr "{0} Profils"
 msgid "My Data"
 msgstr "Mani Dati"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reports"
 msgstr "Sūdzības"
@@ -1520,7 +1551,8 @@ msgstr "Jums ir nepieciešams pierakstīties lau redzētu savu profilu."
 msgid "Registration Date"
 msgstr "Reģistrācijas Datums"
 
-#: /views/profile.handlebars /public/include/lookup.js
+#: /views/profile.handlebars
+#: /public/include/lookup.js
 msgid "Alltime Pixels"
 msgstr "Pikseļi Pavisam"
 
@@ -1532,15 +1564,18 @@ msgstr "Pašreizējās Kanvas Pikseļi"
 msgid "Discord Tag"
 msgstr "Discord Lietotājvārds"
 
-#: /views/profile.handlebars /public/include/lookup.js
+#: /views/profile.handlebars
+#: /public/include/lookup.js
 msgid "Faction"
 msgstr "Frakcija"
 
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "None"
 msgstr "Nekāda"
 
-#: /views/profile.handlebars /public/admin/admin.js
+#: /views/profile.handlebars
+#: /public/admin/admin.js
 msgid "Roles"
 msgstr "Lomas"
 
@@ -1548,6 +1583,7 @@ msgstr "Lomas"
 msgid "Canvas Ban Expiry"
 msgstr "Kanvas Bana Beigas"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Never"
 msgstr "Nekad"
@@ -1570,15 +1606,18 @@ msgstr "Kanvas Sūdzības ({0}/{1} atvērtas)"
 
 #. eg "Report on Bob (closed)
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (closed)"
 msgstr "Sūdzība uz {0} (aizvērta)"
 
 #. eg "Report on Bob (open)
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (open)"
 msgstr "Sūdzība uz {0} (atvērta)"
 
 #. eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reported {0} on {1}"
 msgstr "Sūdzība uz {0} sūtīta {1}"
@@ -1650,7 +1689,8 @@ msgstr "Biedri"
 msgid "Edit"
 msgstr "Rediģēt"
 
-#: /views/profile.handlebars /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/include/chat.js
 msgid "Delete"
 msgstr "Izdzēst"
 
@@ -1694,7 +1734,12 @@ msgstr "Datu atslēgām vajadzētu šeit parādīties pēc kanvas kurā piedalī
 msgid "Members of {0} ([{1}])"
 msgstr "{0} ([{1}]) biedri"
 
-#: /views/profile.handlebars /public/admin/admin.js /public/include/lookup.js
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Close"
 msgstr "Aizvērt"
 
@@ -1709,10 +1754,12 @@ msgid "Transfer Ownership"
 msgstr "Pārvest Īpašnieka Statusu"
 
 #. bans a user from the faction
-#: /views/profile.handlebars /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/include/chat.js
 msgid "Ban"
 msgstr "Banot"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Nothing to see here!"
 msgstr "Šeit nav ko redzēt!"
@@ -1721,7 +1768,9 @@ msgstr "Šeit nav ko redzēt!"
 msgid "Faction Bans"
 msgstr "Frakcijas Bani"
 
-#: /views/profile.handlebars /public/admin/admin.js /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/admin/admin.js
+#: /public/include/chat.js
 msgid "Unban"
 msgstr "Noņemt banu"
 
@@ -1745,27 +1794,34 @@ msgstr "Ielādēt Vēl"
 msgid "Send alert..."
 msgstr ""
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #1: Hateful/derogatory speech or symbols"
 msgstr "Noteikums #1: Naida runa vai simboli"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
 msgstr "Noteikums #2: Kailums, ģenitālijas vai 13+ saturs"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #3: Multi-account"
 msgstr "Noteikums #3: Vairāki konti"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #4: Botting"
 msgstr "Noteikums #4: Automātiski rīki"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Other (specify below)"
 msgstr "Cits (paskaidrojiet zemāk)"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Additional information (if applicable)"
 msgstr "Papildus informācija (ja piemērojams)"
 
@@ -1779,7 +1835,8 @@ msgstr ""
 msgid " hours"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "You must specify the details."
 msgstr "Jums ir jānorāda detaļas."
 
@@ -1828,12 +1885,16 @@ msgstr ""
 msgid "permanent"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "Yes"
 msgstr "Jā"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "No"
 msgstr "Nē"
@@ -1842,11 +1903,13 @@ msgstr "Nē"
 msgid "Yes (permanent)"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Username"
 msgstr "Lietotājvārds"
 
-#: /public/admin/admin.js /public/include/chat.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
 msgid "Profile"
 msgstr "Profils"
 
@@ -1858,7 +1921,8 @@ msgstr ""
 msgid "All Time Pixels"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/user.js
+#: /public/admin/admin.js
+#: /public/include/user.js
 msgid "Rename Requested"
 msgstr "Pārsaukšana Pieprasīta"
 
@@ -1866,7 +1930,8 @@ msgstr "Pārsaukšana Pieprasīta"
 msgid "Discord Name"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/user.js
+#: /public/admin/admin.js
+#: /public/include/user.js
 msgid "Banned"
 msgstr "Banots"
 
@@ -1927,7 +1992,9 @@ msgstr ""
 msgid "Unbanning ${username}"
 msgstr ""
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 #: /public/include/user.js
 msgid "Cancel"
 msgstr "Atcelt"
@@ -2087,7 +2154,8 @@ msgstr "Piezīme: Jūs varat iestatīt noklusējuma darbību iestatījumos lai i
 msgid "OK"
 msgstr ""
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Report"
 msgstr "Sūdzēties"
 
@@ -2123,11 +2191,13 @@ msgstr "Ievadiet iemeslu jūsu sūdzībai"
 msgid "You are reporting a chat message from ${reportTarget} with the content:"
 msgstr ""
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Sent report!"
 msgstr ""
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Error sending report."
 msgstr "Radās kļuda sūtot sūdzību."
 
@@ -2534,9 +2604,3 @@ msgstr ""
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Brīdinājums"
-
-#~ msgid "Subreddit"
-#~ msgstr "Subreddits"
-
-#~ msgid "GitHub"
-#~ msgstr "GitHub"

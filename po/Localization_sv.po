@@ -1,21 +1,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
-"PO-Revision-Date: 2023-12-15 08:20+0000\n"
-"Last-Translator: Weblate Admin <thiscamefrom@pxls.space>\n"
-"Language-Team: Swedish <https://weblate.pxls.space/projects/pxls-space/pxls-web/sv/>\n"
+"POT-Creation-Date: 2024-09-07T20:42:20.086Z\n"
+"PO-Revision-Date: 2025-08-04T02:20:31.235Z\n"
+"Last-Translator: Automatic generation\n"
+"Language-Team: Swedish\n"
 "Language: sv\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.2.1\n"
+"X-Generator: Pxls localization generator\n"
 
-#: /views/error.handlebars /views/profile.handlebars /public/include/user.js
+#: /views/error.handlebars
+#: /views/error.handlebars
+#: /views/error.handlebars
+#: /views/profile.handlebars
+#: /public/include/user.js
 msgid "My Profile"
 msgstr "Min Profil"
 
-#: /views/error.handlebars /views/profile.handlebars
+#: /views/error.handlebars
+#: /views/profile.handlebars
 msgid "My Factions"
 msgstr "Mina Grupper"
 
@@ -29,6 +32,8 @@ msgid "The content you requested could not be found at this URL. If you believe 
 msgstr "Innehållet du försökte nå kunde inte bli hittad vid denna URL. Om du tror att detta är ett fel, snälla kontakta en utvecklare av hemsidan."
 
 #. links to the homepage (the app itself)
+#: /views/error.handlebars
+#: /views/error.handlebars
 #: /views/error.handlebars
 msgid "Back to Pxls"
 msgstr "Tillbaka till Pxls"
@@ -76,6 +81,9 @@ msgid "Canvas:"
 msgstr "Kanvas:"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
 msgid "N/A"
 msgstr "N/A"
 
@@ -87,7 +95,9 @@ msgstr "Heltid:"
 msgid "Loading online user count&hellip;"
 msgstr "Laddar in aktiva antalet användare&hellip;"
 
-#: /views/index.handlebars /public/admin/admin.js /public/include/lookup.js
+#: /views/index.handlebars
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Pixels"
 msgstr "Pixlar"
 
@@ -99,7 +109,8 @@ msgstr "Ångra"
 msgid "You are not signed in."
 msgstr "Du är inte inloggad."
 
-#: /views/index.handlebars /public/include/user.js
+#: /views/index.handlebars
+#: /public/include/user.js
 msgid "Sign in with..."
 msgstr "Logga in med..."
 
@@ -107,6 +118,7 @@ msgstr "Logga in med..."
 msgid "Loading..."
 msgstr "Läser in..."
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Sign up"
 msgstr "Gör ett konto"
@@ -131,15 +143,20 @@ msgstr "Dra och släpp templatebilden"
 msgid "Exit"
 msgstr "Utgång"
 
-#: /views/index.handlebars /views/profile.handlebars
+#: /views/index.handlebars
+#: /views/profile.handlebars
 msgid "Info"
 msgstr "Info"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Close Panel"
 msgstr "Stäng Panel"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Chat"
 msgstr "Chatt"
 
@@ -147,6 +164,7 @@ msgstr "Chatt"
 msgid "Pings"
 msgstr "Notiser"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Settings"
 msgstr "Inställningar"
@@ -159,7 +177,8 @@ msgstr "Hoppa till botten"
 msgid "Replying to"
 msgstr "Svarar"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "On"
 msgstr "På"
 
@@ -183,6 +202,7 @@ msgstr "Tangentbindningar"
 msgid "general"
 msgstr "allmän"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "General"
 msgstr "Allmän"
@@ -219,6 +239,7 @@ msgstr "uppslagningar"
 msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
 msgstr "<kbd>Skift</kbd> + Klicka/håll för att kolla upp pixeln"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
 msgstr "överlägg;inriktning,rutnät gömd;rutnät visad; göm rutnät; visa rutnät"
@@ -268,6 +289,7 @@ msgid "<kbd>P</kbd> to take a snapshot"
 msgstr "<kbd>P</kbd> för att ta en skärmbild"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
 msgstr "överlägg;användarsaktivitet;pixlar placerade;värmekarta gömd;värmekarta visad;göm värmekarta;visa värmekarta"
 
@@ -275,6 +297,7 @@ msgstr "överlägg;användarsaktivitet;pixlar placerade;värmekarta gömd;värme
 msgid "<kbd>H</kbd> to toggle heatmap"
 msgstr "<kbd>H</kbd> för att växla värmekartan"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
 msgstr "överlägg;användarsaktivitet;pixlar oplacerade pixlar;oskuldskartan gömd;oskuldskartan visad;göm oskuldskartan;visa oskuldskartan"
@@ -336,9 +359,11 @@ msgid "templates;guides"
 msgstr "template;guider"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Template"
 msgstr "Template"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "transparency"
 msgstr "genomskinlighet"
@@ -419,6 +444,7 @@ msgstr "template bred:tw="
 msgid "Width:"
 msgstr "Bred:"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Reset"
 msgstr "Nollställ"
@@ -800,13 +826,16 @@ msgid "Chat icon badge mode:"
 msgstr "Chatt ikonbrickorsläge:"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread ping"
 msgstr "Visa vid oläst notis"
 
 #: /views/index.handlebars
+#: /views/index.handlebars
 msgid "Show on unread message"
 msgstr "Visa vid oläst medellande"
 
+#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Never show"
 msgstr "Visa aldrig"
@@ -1139,7 +1168,8 @@ msgstr "nämningsljud"
 msgid "Play sound on ping:"
 msgstr "Spela ljud vid nämning:"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Off"
 msgstr "Av"
 
@@ -1171,7 +1201,8 @@ msgstr "Konto inställningar"
 msgid "Public Discord name:"
 msgstr "Publikt Discord namn:"
 
-#: /views/index.handlebars /public/include/chat.js
+#: /views/index.handlebars
+#: /public/include/chat.js
 msgid "Set"
 msgstr "Sätt"
 
@@ -1368,9 +1399,11 @@ msgid "Any automated aggregation of data from user lookups is not allowed, and w
 msgstr "Någon sorts automatiserad aggregering av data från användar-uppslagningar är inte tillåtet, och kommer resultera i en bannlysning från hemsidan."
 
 #: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Staff have final say in any rule disputes"
 msgstr "Moderatorer har sista ordet i alla regel konflikter"
 
+#: /views/partials/info.handlebars
 #: /views/partials/info.handlebars
 msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
 msgstr "Om du känner att en moderator har agerat olämpligt, snälla raportera det till en administrator."
@@ -1472,6 +1505,8 @@ msgid "Charity (templates, monitors, etc.)"
 msgstr "Charity (template, övervakare, etc.)"
 
 #: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
+#: /views/partials/info.handlebars
 msgid "Archives"
 msgstr "Arkiv"
 
@@ -1488,6 +1523,7 @@ msgid "Donations are not accepted at this time, but this panel will be updated w
 msgstr "Donationer är inte accepterade vid denna tid, men denna panel kommer att bli updaterad så fort dom är öppna igen!"
 
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "{0}'s Profile"
 msgstr "{0}'s Profil"
 
@@ -1495,6 +1531,7 @@ msgstr "{0}'s Profil"
 msgid "My Data"
 msgstr "Min Data"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reports"
 msgstr "Reporter"
@@ -1515,7 +1552,8 @@ msgstr "Du måste vara inloggad för att kunna se din profil."
 msgid "Registration Date"
 msgstr "Registrerings Datum"
 
-#: /views/profile.handlebars /public/include/lookup.js
+#: /views/profile.handlebars
+#: /public/include/lookup.js
 msgid "Alltime Pixels"
 msgstr "Heltids Pixlar"
 
@@ -1527,15 +1565,18 @@ msgstr "Nuvarande Kanvas Pixlar"
 msgid "Discord Tag"
 msgstr "Discord Tag"
 
-#: /views/profile.handlebars /public/include/lookup.js
+#: /views/profile.handlebars
+#: /public/include/lookup.js
 msgid "Faction"
 msgstr "Grupp"
 
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "None"
 msgstr "Ingen"
 
-#: /views/profile.handlebars /public/admin/admin.js
+#: /views/profile.handlebars
+#: /public/admin/admin.js
 msgid "Roles"
 msgstr "Roler"
 
@@ -1543,6 +1584,7 @@ msgstr "Roler"
 msgid "Canvas Ban Expiry"
 msgstr "Kanvas Bannlysning Utgång"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Never"
 msgstr "Aldrig"
@@ -1565,15 +1607,18 @@ msgstr "Kanvas Reporter ({0}/{1} öppen)"
 
 #. eg "Report on Bob (closed)
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (closed)"
 msgstr "Report på {0} (sluten)"
 
 #. eg "Report on Bob (open)
 #: /views/profile.handlebars
+#: /views/profile.handlebars
 msgid "Report on {0} (open)"
 msgstr "Report på {0} (öppen)"
 
 #. eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reported {0} on {1}"
 msgstr "Reporterade {0} på {1}"
@@ -1645,7 +1690,8 @@ msgstr "Medlemmar"
 msgid "Edit"
 msgstr "Redigera"
 
-#: /views/profile.handlebars /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/include/chat.js
 msgid "Delete"
 msgstr "Ta bort"
 
@@ -1689,7 +1735,12 @@ msgstr "Logg nycklar borde visas up här efter en kanvas du har placerat på tar
 msgid "Members of {0} ([{1}])"
 msgstr "Medlemamr av {0} ([{1}])"
 
-#: /views/profile.handlebars /public/admin/admin.js /public/include/lookup.js
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Close"
 msgstr "Stäng"
 
@@ -1704,10 +1755,12 @@ msgid "Transfer Ownership"
 msgstr "Överför Ägande"
 
 #. bans a user from the faction
-#: /views/profile.handlebars /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/include/chat.js
 msgid "Ban"
 msgstr "Bannlysning"
 
+#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Nothing to see here!"
 msgstr "Inget att se här!"
@@ -1716,7 +1769,9 @@ msgstr "Inget att se här!"
 msgid "Faction Bans"
 msgstr "Grupp Bannlysningar"
 
-#: /views/profile.handlebars /public/admin/admin.js /public/include/chat.js
+#: /views/profile.handlebars
+#: /public/admin/admin.js
+#: /public/include/chat.js
 msgid "Unban"
 msgstr "Ta Bort Bannlysning"
 
@@ -1740,27 +1795,34 @@ msgstr "Ladda mer"
 msgid "Send alert..."
 msgstr "Skicka varning..."
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #1: Hateful/derogatory speech or symbols"
 msgstr "Regel #1: Hatfult/kränkande språk eller symboler"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
 msgstr "Regel #2: Nakenhet, genitalier eller icke-PG-13 innehåll"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #3: Multi-account"
 msgstr "Regel #3: Flera konton"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Rule #4: Botting"
 msgstr "Regel #4: Botting"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Other (specify below)"
 msgstr "Annat (specifiera under)"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Additional information (if applicable)"
 msgstr "Ytterligare information (om tillämpligt)"
 
@@ -1774,7 +1836,8 @@ msgstr "Återställ pixlar för de senaste "
 msgid " hours"
 msgstr " timmar"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "You must specify the details."
 msgstr "Du måste specifiera detaljerna."
 
@@ -1823,12 +1886,16 @@ msgstr "aldrig"
 msgid "permanent"
 msgstr "permanent"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "Yes"
 msgstr "Ja"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "No"
 msgstr "Nej"
@@ -1837,11 +1904,13 @@ msgstr "Nej"
 msgid "Yes (permanent)"
 msgstr "Ja (permanent)"
 
-#: /public/admin/admin.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/lookup.js
 msgid "Username"
 msgstr "Användarnamn"
 
-#: /public/admin/admin.js /public/include/chat.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
 msgid "Profile"
 msgstr "Profil"
 
@@ -1853,7 +1922,8 @@ msgstr "Inloggningar"
 msgid "All Time Pixels"
 msgstr "Heltids Pixlar"
 
-#: /public/admin/admin.js /public/include/user.js
+#: /public/admin/admin.js
+#: /public/include/user.js
 msgid "Rename Requested"
 msgstr "Namnbyte Begärd"
 
@@ -1861,7 +1931,8 @@ msgstr "Namnbyte Begärd"
 msgid "Discord Name"
 msgstr "Discord Namn"
 
-#: /public/admin/admin.js /public/include/user.js
+#: /public/admin/admin.js
+#: /public/include/user.js
 msgid "Banned"
 msgstr "Bannlyst"
 
@@ -1922,7 +1993,9 @@ msgstr "Tog Bort Bannlyssning, Anledningar är:"
 msgid "Unbanning ${username}"
 msgstr "Tar Bort Bannlysning på ${username}"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 #: /public/include/user.js
 msgid "Cancel"
 msgstr "Avbryt"
@@ -2082,7 +2155,8 @@ msgstr "Notera: Du kan ställa in en standard aktion i inställningsmenyn vilket
 msgid "OK"
 msgstr "OK"
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Report"
 msgstr "Reportera"
 
@@ -2118,11 +2192,13 @@ msgstr "Skriv in en anledning till din report"
 msgid "You are reporting a chat message from ${reportTarget} with the content:"
 msgstr "Du raporterar ett chatt medellande från ${reportTarget} med innehållet:"
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Sent report!"
 msgstr "Skickade raport!"
 
-#: /public/include/chat.js /public/include/lookup.js
+#: /public/include/chat.js
+#: /public/include/lookup.js
 msgid "Error sending report."
 msgstr "Ett fel uppstod med skickandet av reporten."
 
@@ -2529,12 +2605,3 @@ msgstr "Klicka här för att fortsätta."
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Alert"
-
-#~ msgid "Subreddit"
-#~ msgstr "Subreddit"
-
-#~ msgid "GitHub"
-#~ msgstr "GitHub"
-
-#~ msgid "You are not signed in.&nbsp;<a href=\"#\">Sign in with...</a>"
-#~ msgstr "Du är inte inloggad. &nbsp;<a href=\"#\">Logga in med...</a>"
