@@ -104,6 +104,11 @@ const uiHelper = (function() {
         name: __('Pink'),
         location: '/themes/pink.css',
         color: '#f5cdde'
+      },
+      {
+        name: 'Blurple (Discord)',
+        location: '/themes/blurple.css',
+        color: '#5865F2'
       }
     ],
     specialChatColorClasses: [
