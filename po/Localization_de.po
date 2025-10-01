@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Pxls\n"
 "POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
 "PO-Revision-Date: 2024-01-20 11:30+0000\n"
-"Last-Translator: Weblate Admin <thiscamefrom@pxls.space>\n"
+"Last-Translator: Starshine\n"
 "Language-Team: German <https://weblate.pxls.space/projects/pxls-space/pxls-web/de/>\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,7 @@ msgstr "Mein Profil"
 
 #: /views/error.handlebars /views/profile.handlebars
 msgid "My Factions"
-msgstr "Meine Fraktionen"
+msgstr "Meine Gilden"
 
 #. HTTP status code name
 #: /views/error.handlebars
@@ -101,7 +101,7 @@ msgstr "Du bist nicht angemeldet."
 
 #: /views/index.handlebars /public/include/user.js
 msgid "Sign in with..."
-msgstr ""
+msgstr "Melde dich an mit..."
 
 #: /views/index.handlebars
 msgid "Loading..."
@@ -125,7 +125,7 @@ msgstr "Discord Tag (optional):"
 
 #: /views/index.handlebars
 msgid "Drag and drop template image"
-msgstr "Vorlagenbild ziehen und ablegen"
+msgstr "Vorlage hineinziehen und ablegen"
 
 #: /views/index.handlebars
 msgid "Exit"
@@ -153,7 +153,7 @@ msgstr "Einstellungen"
 
 #: /views/index.handlebars
 msgid "Jump To Bottom"
-msgstr "Nach unten springen"
+msgstr "Zum Anfang springen"
 
 #: /views/index.handlebars
 msgid "Replying to"
@@ -221,7 +221,7 @@ msgstr "<kbd>Shift</kbd> + klicken/halten zum Abrufen von Pixeln"
 
 #: /views/index.handlebars
 msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
-msgstr ""
+msgstr "Overlay;Ausrichtung;Gitter versteckt;Gitter angezeigt;Gitter anzeigen"
 
 #: /views/index.handlebars
 msgid "<kbd>G</kbd> to toggle grid"
@@ -229,35 +229,35 @@ msgstr "<kbd>G</kbd> um Gitternetz umzuschalten"
 
 #: /views/index.handlebars
 msgid "close;information shown;information hidden;info shown;info hidden;hide information;show information"
-msgstr ""
+msgstr "Schließen;Information angezeigt;Information versteckt;Info angezeigt;Info versteckt;Information ausblenden;Information einblenden"
 
 #: /views/index.handlebars
 msgid "<kbd>I</kbd> to open info"
-msgstr ""
+msgstr "<kbd>I</kbd> um Info anzuzeigen"
 
 #: /views/index.handlebars
 msgid "close;settings hidden;settings shown;hide settings;show settings"
-msgstr ""
+msgstr "schließen;Einstellungen ausgeblendet;Einstellungen angezeigt;Einstellungen ausblenden;Einstellungen anzeigen"
 
 #: /views/index.handlebars
 msgid "<kbd>T</kbd> to open settings"
-msgstr ""
+msgstr "<kbd>T</kbd> um Einstellungen zu öffnen"
 
 #: /views/index.handlebars
 msgid "close;chat hidden;chat shown;hide chat;show chat"
-msgstr ""
+msgstr "schließen;Chat ausgeblendet;Chat angezeigt;Chat ausblenden;Chat anzeigen"
 
 #: /views/index.handlebars
 msgid "<kbd>B</kbd> to open chat"
-msgstr ""
+msgstr "<kbd>B</kbd> um Chat zu öffnen"
 
 #: /views/index.handlebars
 msgid "canvas locked;move;moving;zoom;zooming"
-msgstr ""
+msgstr "Leinwand gesperrt;bewegen;verschieben;zoom;zoomen"
 
 #: /views/index.handlebars
 msgid "<kbd>L</kbd> to toggle locking panning of the canvas"
-msgstr ""
+msgstr "<kbd>L</kbd> um das verschieben und zoomen der Leinwand ein/auszuschalten"
 
 #: /views/index.handlebars
 msgid "take screenshot;image;download;picture;canvas"
@@ -265,495 +265,496 @@ msgstr ""
 
 #: /views/index.handlebars
 msgid "<kbd>P</kbd> to take a snapshot"
-msgstr ""
+msgstr "<kbd>P</kbd> um einen screenshot zu machen"
 
 #: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
-msgstr ""
+msgstr "Overlays;Nutzeraktivität;platzierte Pixel;Heatmap versteckt;Heatmap angezeigt;Heatmap ausblenden;Heatmap einblenden"
 
 #: /views/index.handlebars
 msgid "<kbd>H</kbd> to toggle heatmap"
-msgstr ""
+msgstr "<kbd>H</kbd> zum Umschalten der Heatmap"
 
 #: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
-msgstr ""
+msgstr "Overlays;Nutzeraktivität;unplatzierte Pixel;Virginmap versteckt;Virginmap angezeigt;Virginmap ausblenden;Virginmap einblenden"
 
 #: /views/index.handlebars
 msgid "<kbd>X</kbd> to toggle virginmap"
-msgstr ""
+msgstr "<kbd>X</kbd> zum Umschalten der Virginmap"
 
 #: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;wipe;clean;"
-msgstr ""
+msgstr "Overlays;Nutzeraktivität;platzierte Pixel;löschen;reinigen;"
 
 #: /views/index.handlebars
 msgid "<kbd>O</kbd> to clear heatmap"
-msgstr ""
+msgstr "<kbd>O</kbd>, um die Heatmap zu löschen"
 
 #: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;wipe;clean;"
-msgstr ""
+msgstr "Overlays;Nutzeraktivität;unplatzierte Pixel;löschen;reinigen;"
 
 #: /views/index.handlebars
 msgid "<kbd>U</kbd> to clear virginmap"
-msgstr ""
+msgstr "<kbd>U</kbd>, um die Virginmap zu löschen"
 
 #: /views/index.handlebars
 msgid "next color;previous color"
-msgstr ""
+msgstr "nächste Farbe;vorherige Farbe"
 
 #: /views/index.handlebars
 msgid "<kbd>J</kbd>/<kbd>K</kbd> to cycle through palette colors"
-msgstr ""
+msgstr "<kbd>J</kbd>/<kbd>K</kbd>, um durch Palettenfarben zu wechseln"
 
 #: /views/index.handlebars
 msgid "current coordinates;coords"
-msgstr ""
+msgstr "aktuelle Koordinaten;Koordinaten"
 
 #: /views/index.handlebars
 msgid "<kbd>C</kbd> to copy link of moused-over coordinates"
-msgstr ""
+msgstr "<kbd>C</kbd>, um den Link der angezeigten Koordinaten zu kopieren"
 
 #: /views/index.handlebars
 msgid "cancel selection"
-msgstr ""
+msgstr "Auswahl abbrechen"
 
 #: /views/index.handlebars
 msgid "<kbd>ESC</kbd> to deselect current pixel"
-msgstr ""
+msgstr "<kbd>ESC</kbd>, um das aktuelle Pixel abzuwählen"
 
 #: /views/index.handlebars
 msgid "recenter;jump;center on template;guides;focus"
-msgstr ""
+msgstr "neu zentrieren;springen;auf Vorlage zentrieren;Leitlinien;fokussieren"
 
 #: /views/index.handlebars
 msgid "<kbd>R</kbd> to center the board on the current template"
-msgstr ""
+msgstr "<kbd>R</kbd>, um das Board auf die aktuelle Vorlage zu zentrieren"
 
 #: /views/index.handlebars
 msgid "templates;guides"
-msgstr ""
+msgstr "Vorlagen;Leitlinien"
 
 #: /views/index.handlebars
 msgid "Template"
-msgstr ""
+msgstr "Vorlage"
 
 #: /views/index.handlebars
 msgid "transparency"
-msgstr ""
+msgstr "Transparenz"
 
 #: /views/index.handlebars
 msgid "<kbd>Page Up</kbd> to increase opacity"
-msgstr ""
+msgstr "<kbd>Bild hoch</kbd>, um die Deckkraft zu erhöhen"
 
 #: /views/index.handlebars
 msgid "<kbd>Page Down</kbd> to decrease opacity"
-msgstr ""
+msgstr "<kbd>Bild runter</kbd>, um die Deckkraft zu verringern"
 
 #: /views/index.handlebars
 msgid "hidden;shown;hide;show"
-msgstr ""
+msgstr "versteckt;angezeigt;ausblenden;einblenden"
 
 #: /views/index.handlebars
 msgid "<kbd>V</kbd> to toggle visibility"
-msgstr ""
+msgstr "<kbd>V</kbd>, um die Sichtbarkeit umzuschalten"
 
 #: /views/index.handlebars
 msgid "Note: These values are based on QWERTY keyboards. For other layouts, use the keys corresponding to the same position on a QWERTY keyboard."
-msgstr ""
+msgstr "Hinweis: Diese Werte basieren auf QWERTY-Tastaturen. Bei anderen Layouts verwenden Sie die Tasten, die sich an der gleichen Position auf einer QWERTY-Tastatur befinden."
 
 #: /views/index.handlebars
 msgid "templates;overlays;guides"
-msgstr ""
+msgstr "Vorlagen;Overlays;Leitlinien"
 
 #: /views/index.handlebars
 msgid "templates;overlays;image;pixel art"
-msgstr ""
+msgstr "Vorlagen;Overlays;Bild;Pixelkunst"
 
 #: /views/index.handlebars
 msgid "template enabled;template disabled;show template;hide template;template shown;template hidden"
-msgstr ""
+msgstr "Vorlage aktiviert;Vorlage deaktiviert;Vorlage anzeigen;Vorlage ausblenden;Vorlage angezeigt;Vorlage versteckt"
 
 #: /views/index.handlebars
 msgid "Use template"
-msgstr ""
+msgstr "Vorlage verwenden"
 
 #: /views/index.handlebars
 msgid "Hold down <kbd>Ctrl</kbd> (or <kbd>Option</kbd> on mac) to drag the template around"
-msgstr ""
+msgstr "Halten Sie <kbd>Strg</kbd> (oder <kbd>Option</kbd> auf dem Mac) gedrückt, um die Vorlage zu verschieben"
 
 #: /views/index.handlebars
 msgid "template title;template name;tab name;tab title;title="
-msgstr ""
+msgstr "Vorlagentitel;Vorlagenname;Tab-Name;Tab-Titel;Titel="
 
 #: /views/index.handlebars
 msgid "Title:"
-msgstr ""
+msgstr "Titel:"
 
 #: /views/index.handlebars
 msgid "template location source;template source URL;template URL;template="
-msgstr ""
+msgstr "Vorlagenquelle;Vorlagenquellen-URL;Vorlagen-URL;Vorlage="
 
 #: /views/index.handlebars
 msgid "URL:"
-msgstr ""
+msgstr "URL:"
 
 #: /views/index.handlebars
 msgid "template position;template x;template y;template location; template vertical; template horizontal;ox=;oy="
-msgstr ""
+msgstr "Vorlagenposition;Vorlage X;Vorlage Y;Vorlagenstandort;Vorlage vertikal;Vorlage horizontal;ox=;oy="
 
 #: /views/index.handlebars
 msgid "Horizontal position:"
-msgstr ""
+msgstr "Horizontale Position:"
 
 #: /views/index.handlebars
 msgid "Vertical position:"
-msgstr ""
+msgstr "Vertikale Position:"
 
 #: /views/index.handlebars
 msgid "template width;tw="
-msgstr ""
+msgstr "Vorlagenbreite;tw="
 
 #: /views/index.handlebars
 msgid "Width:"
-msgstr ""
+msgstr "Breite:"
 
 #: /views/index.handlebars
 msgid "Reset"
-msgstr ""
+msgstr "Zurücksetzen"
 
 #: /views/index.handlebars
 msgid "template style;custom template"
-msgstr ""
+msgstr "Vorlagenstil;benutzerdefinierte Vorlage"
 
 #: /views/index.handlebars
 msgid "Style:"
-msgstr ""
+msgstr "Stil:"
 
 #: /views/index.handlebars
 msgid "Use Source Style"
-msgstr ""
+msgstr "Quellenstil verwenden"
 
 #: /views/index.handlebars
 msgid "1-to-1"
-msgstr ""
+msgstr "1-zu-1"
 
 #: /views/index.handlebars
 msgid "1-to-1 (keep incorrect colors)"
-msgstr ""
+msgstr "1-zu-1 (falsche Farben beibehalten)"
 
 #: /views/index.handlebars
 msgid "Dotted (Small, 1:2)"
-msgstr ""
+msgstr "Gepunktet (Klein, 1:2)"
 
 #: /views/index.handlebars
 msgid "Dotted (Big, 2:2)"
-msgstr ""
+msgstr "Gepunktet (Groß, 2:2)"
 
 #: /views/index.handlebars
 msgid "Symbols"
-msgstr ""
+msgstr "Symbole"
 
 #: /views/index.handlebars
 msgid "Numbers"
-msgstr ""
+msgstr "Zahlen"
 
 #: /views/index.handlebars
 msgid "Custom…"
-msgstr ""
+msgstr "Benutzerdefiniert…"
 
 #: /views/index.handlebars
 msgid "template style source;template style URL;custom style URL;custom template"
-msgstr ""
+msgstr "Vorlagenstilquelle;Vorlagenstil-URL;benutzerdefinierte Stil-URL;benutzerdefinierte Vorlage"
 
 #: /views/index.handlebars
 msgid "Custom style URL:"
-msgstr ""
+msgstr "Benutzerdefinierte Stil-URL:"
 
 #: /views/index.handlebars
 msgid "template conversion;template palette conversion;convert to palette"
-msgstr ""
+msgstr "Vorlagenkonvertierung;Vorlagenpalettenkonvertierung;in Palette konvertieren"
 
 #: /views/index.handlebars
 msgid "Color Conversion Mode:"
-msgstr ""
+msgstr "Farbkonvertierungsmodus:"
 
 #: /views/index.handlebars
 msgid "Unconverted"
-msgstr ""
+msgstr "Unkonvertiert"
 
 #: /views/index.handlebars
 msgid "Nearest Custom"
-msgstr ""
+msgstr "Nächste benutzerdefinierte"
 
 #: /views/index.handlebars
 msgid "template transparency;template opacity;oo="
-msgstr ""
+msgstr "Vorlagentransparenz;Vorlagendeckkraft;oo="
 
 #: /views/index.handlebars
 msgid "Opacity:"
-msgstr ""
+msgstr "Deckkraft:"
 
 #: /views/index.handlebars
 msgid "ui;interface"
-msgstr ""
+msgstr "UI;Benutzeroberfläche"
 
 #: /views/index.handlebars
 msgid "UI Settings"
-msgstr ""
+msgstr "UI-Einstellungen"
 
 #: /views/index.handlebars
 msgid "language override;text"
-msgstr ""
+msgstr "Sprachüberschreibung;Text"
 
 #: /views/index.handlebars
 msgid "Language override:"
-msgstr ""
+msgstr "Sprachüberschreibung:"
 
 #: /views/index.handlebars
 msgid "Use Browser Language"
-msgstr ""
+msgstr "Browser-Sprache verwenden"
 
 #: /views/index.handlebars
 msgid "English"
-msgstr ""
+msgstr "Englisch"
+
 
 #: /views/index.handlebars
 msgid "Bulgarian"
-msgstr ""
+msgstr "Bulgarisch"
 
 #: /views/index.handlebars
 msgid "French"
-msgstr ""
+msgstr "Französisch"
 
 #: /views/index.handlebars
 msgid "German"
-msgstr ""
+msgstr "Deutsch"
 
 #: /views/index.handlebars
 msgid "Russian"
-msgstr ""
+msgstr "Russisch"
 
 #: /views/index.handlebars
 msgid "Swedish"
-msgstr ""
+msgstr "Schwedisch"
 
 #: /views/index.handlebars
 msgid "Finnish"
-msgstr ""
+msgstr "Finnisch"
 
 #: /views/index.handlebars
 msgid "Toki Pona"
-msgstr ""
+msgstr "Toki Pona"
 
 #: /views/index.handlebars
 msgid "themes;look;stylesheets;visuals"
-msgstr ""
+msgstr "Themen;Aussehen;Stylesheets;Visuals"
 
 #: /views/index.handlebars
 msgid "Theme:"
-msgstr ""
+msgstr "Thema:"
 
 #: /views/index.handlebars
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: /views/index.handlebars
 msgid "hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden"
-msgstr ""
+msgstr "Fadenkreuz ausblenden;Fadenkreuz anzeigen;Fadenkreuz angezeigt;Fadenkreuz versteckt"
 
 #: /views/index.handlebars
 msgid "Show reticule"
-msgstr ""
+msgstr "Fadenkreuz anzeigen"
 
 #: /views/index.handlebars
 msgid "hide cursor;cursor shown;cursor hidden"
-msgstr ""
+msgstr "Cursor ausblenden;Cursor anzeigen;Cursor versteckt"
 
 #: /views/index.handlebars
 msgid "Show cursor"
-msgstr ""
+msgstr "Cursor anzeigen"
 
 #: /views/index.handlebars
 msgid "darkness filter"
-msgstr ""
+msgstr "Dunkelheitsfilter"
 
 #: /views/index.handlebars
 msgid "Enable color brightness"
-msgstr ""
+msgstr "Farbsättigung aktivieren"
 
 #: /views/index.handlebars
 msgid "Warning: Known to cause fuzziness in Chrome on some Mac/Linux installs"
-msgstr ""
+msgstr "Warnung: Kann auf einigen Mac/Linux-Installationen in Chrome Unschärfe verursachen"
 
 #: /views/index.handlebars
 msgid "Color brightness:"
-msgstr ""
+msgstr "Farbsättigung:"
 
 #: /views/index.handlebars
 msgid "keep current selected;keep curent color;place"
-msgstr ""
+msgstr "Aktuelle Auswahl beibehalten;aktuelle Farbe beibehalten;platzieren"
 
 #: /views/index.handlebars
 msgid "Deselect color after placing"
-msgstr ""
+msgstr "Farbe nach Platzierung abwählen"
 
 #: /views/index.handlebars
 msgid "mousewheel;palette scrolling"
-msgstr ""
+msgstr "Mausrad;Paletten-Scrolling"
 
 #: /views/index.handlebars
 msgid "Enable scrolling on the palette to switch colors"
-msgstr ""
+msgstr "Scrolling in der Palette zum Wechseln der Farben aktivieren"
 
 #: /views/index.handlebars
 msgid "reverse scrolling;mousewheel;palette scrolling;enable scrolling on the palette to switch colors"
-msgstr ""
+msgstr "Scrolling umkehren;Mausrad;Paletten-Scrolling;Scrolling in der Palette aktivieren, um Farben zu wechseln"
 
 #: /views/index.handlebars
 msgid "Invert scroll direction"
-msgstr ""
+msgstr "Scrollrichtung umkehren"
 
 #: /views/index.handlebars
 msgid "indexed colors;palette indicies"
-msgstr ""
+msgstr "Indizierte Farben;Palettenindizes"
 
 #: /views/index.handlebars
 msgid "Add numbers to palette entries"
-msgstr ""
+msgstr "Nummern zu Paletteneinträgen hinzufügen"
 
 #: /views/index.handlebars
 msgid "scrollbar;palette scrolling"
-msgstr ""
+msgstr "Scrollleiste;Paletten-Scrolling"
 
 #: /views/index.handlebars
 msgid "Enable thin scrollbar"
-msgstr ""
+msgstr "Dünne Scrollleiste aktivieren"
 
 #: /views/index.handlebars
 msgid "scrollbar;palette scrolling;palette stack"
-msgstr ""
+msgstr "Scrollleiste;Paletten-Scrolling;Palettenstapel"
 
 #: /views/index.handlebars
 msgid "Enable palette stacking"
-msgstr ""
+msgstr "Palettenstapel aktivieren"
 
 #: /views/index.handlebars
 msgid "floating bubble location"
-msgstr ""
+msgstr "fliegende Infobox position"
 
 #: /views/index.handlebars
 msgid "Bubble position:"
-msgstr ""
+msgstr "Infobox position:"
 
 #: /views/index.handlebars
 msgid "Top left"
-msgstr ""
+msgstr "Oben links"
 
 #: /views/index.handlebars
 msgid "Top right"
-msgstr ""
+msgstr "Oben rechts"
 
 #: /views/index.handlebars
 msgid "Bottom left"
-msgstr ""
+msgstr "Unten links"
 
 #: /views/index.handlebars
 msgid "Bottom right"
-msgstr ""
+msgstr "Unten rechts"
 
 #: /views/index.handlebars
 msgid "broken;offset workaround"
-msgstr ""
+msgstr "Fehlerhaft;Offset-Workaround"
 
 #: /views/index.handlebars
 msgid "Attempt to fix canvas displacement bug in Chrome 78+"
-msgstr ""
+msgstr "Versuch, den Canvas-Verschiebungsfehler in Chrome 78+ zu beheben"
 
 #: /views/index.handlebars
 msgid "chat;message;ping sound"
-msgstr ""
+msgstr "Chat;Nachricht;Ping-Ton"
 
 #: /views/index.handlebars
 msgid "Chat Settings"
-msgstr ""
+msgstr "Chat-Einstellungen"
 
 #: /views/index.handlebars
 msgid "username;color;colour"
-msgstr ""
+msgstr "Benutzername;Farbe"
 
 #: /views/index.handlebars
 msgid "Username Color:"
-msgstr ""
+msgstr "Farbe des Benutzernamens:"
 
 #: /views/index.handlebars
 msgid "chat message;chat ui"
-msgstr ""
+msgstr "Chat-Nachricht;Chat-Oberfläche"
 
 #: /views/index.handlebars
 msgid "Interface"
-msgstr ""
+msgstr "Oberfläche"
 
 #: /views/index.handlebars
 msgid "enable;disable"
-msgstr ""
+msgstr "aktivieren;deaktivieren"
 
 #: /views/index.handlebars
 msgid "Enable chat"
-msgstr ""
+msgstr "Chat aktivieren"
 
 #: /views/index.handlebars
 msgid "Page must be reloaded after changing"
-msgstr ""
+msgstr "Die Seite muss nach Änderung neu geladen werden"
 
 #: /views/index.handlebars
 msgid "chat size;chat font"
-msgstr ""
+msgstr "Chat-Größe;Chat-Schriftart"
 
 #: /views/index.handlebars
 msgid "Font Size:"
-msgstr ""
+msgstr "Schriftgröße:"
 
 #: /views/index.handlebars
 msgid "time;timestamps"
-msgstr ""
+msgstr "Zeit;Zeitstempel"
 
 #: /views/index.handlebars
 msgid "24 Hour Timestamps"
-msgstr ""
+msgstr "24-Stunden-Zeitstempel"
 
 #: /views/index.handlebars
 msgid "badges;pixel count;pixels placed"
-msgstr ""
+msgstr "Abzeichen;Pixelanzahl;platzierte Pixel"
 
 #: /views/index.handlebars
 msgid "Show pixel-placed badges"
-msgstr ""
+msgstr "Abzeichen für platzierte Pixel anzeigen"
 
 #: /views/index.handlebars
 msgid "badges;factions"
-msgstr ""
+msgstr "Abzeichen;Fraktionen"
 
 #: /views/index.handlebars
 msgid "Show faction tags"
-msgstr ""
+msgstr "Fraktionstags anzeigen"
 
 #: /views/index.handlebars
 msgid "template urls;template links;template name"
-msgstr ""
+msgstr "Vorlagen-URLs;Vorlagen-Links;Vorlagenname"
 
 #: /views/index.handlebars
 msgid "Replace template titles with URLs in chat where applicable"
-msgstr ""
+msgstr "Vorlagentitel im Chat durch URLs ersetzen, falls zutreffend"
 
 #: /views/index.handlebars
 msgid "chat orientation;chat position"
-msgstr ""
+msgstr "Chat-Ausrichtung;Chat-Position"
 
 #: /views/index.handlebars
 msgid "Enable horizontal chat"
-msgstr ""
+msgstr "Horizontalen Chat aktivieren"
 
 #: /views/index.handlebars
 msgid "banner;animation"
