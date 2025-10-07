@@ -53,8 +53,9 @@ module.exports.timer = (function() {
         self.currentTimer = mins.toString().padStart(2, '0') + ':' + secs.toString().padStart(2, '0');
 
         self.elements.timer_countdown.text(self.currentTimer);
-        self.elements.timer_chat.text(self.currentTimer);
         self.elements.timer_container.show();
+        self.elements.timer_chat.text(self.currentTimer);
+        self.elements.timer_chat.show();
 
         document.title = uiHelper.getTitle();
       } else {
@@ -62,6 +63,7 @@ module.exports.timer = (function() {
 
         self.elements.timer_container.hide();
         self.elements.timer_countdown.text(self.currentTimer);
+        self.elements.timer_chat.hide();
         self.elements.timer_chat.text(self.currentTimer);
 
         // Placeable from 2 are updated at:
