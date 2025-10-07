@@ -55,7 +55,7 @@ module.exports.timer = (function() {
         self.elements.timer_countdown.text(self.currentTimer);
         self.elements.timer_container.show();
         self.elements.timer_chat.text(self.currentTimer);
-        self.elements.timer_chat.show();
+        self.elements.timer_chat.css('display', '');
 
         document.title = uiHelper.getTitle();
       } else {
