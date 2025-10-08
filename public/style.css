@@ -708,12 +708,14 @@ dt {
 }
 
 #ui .bubble {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    display: inline-block;
-    padding: 0.5em 1em;
+    padding: 1em 1.25em;
     background: var(--bubble-background);
     border-radius: 5px;
     color: var(--bubble-text-color);
+    min-width: 14em;
 }
 
 #ui-top {
@@ -732,9 +734,17 @@ dt {
     display: none;
 }
 
+#bubble-grid {
+    align-items: center;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    row-gap: 0.25rem;
+    column-gap: 0.25rem;
+}
+
 #main-bubble[position~="top"] {
+    flex-direction: column-reverse;
     top: 4rem;
-    padding-bottom: 1em;
 }
 
 #main-bubble[position~="left"] {
@@ -742,12 +752,16 @@ dt {
 }
 
 #main-bubble[position~="bottom"] {
+    flex-direction: column;
     bottom: 1rem;
-    padding-top: 1em;
 }
 
 #main-bubble[position~="right"] {
     right: 1rem;
+}
+
+#main-bubble[position~="hide"] {
+    visibility: hidden;
 }
 
 #main-bubble a {
@@ -759,24 +773,60 @@ dt {
     text-align: center;
 }
 
-#main-bubble.compact .toggeable {
-    /* don't hide it completely to keep their width */
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 0;
+#main-bubble.compact {
+    justify-content: space-between;
+    min-width: 12em;
+    gap: 1rem;
 }
 
-#main-bubble #setting-ui-bubble-compact {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+#main-bubble.compact > div {
+    display: flex;
+    align-items: center;
+}
+
+#main-bubble.compact #bubble-grid {
+    font-size: 125%;
+    font-weight: bold;
+}
+
+#main-bubble.compact .toggeable {
+    display: none !important /* Override jquery's show method when hiding toggeable records */;
 }
 
 #main-bubble[position~="top"] #setting-ui-bubble-compact {
-    top: initial;
-    bottom: 0;
+    margin-block-start: 1rem;
+}
+
+#main-bubble[position~="bottom"] #setting-ui-bubble-compact {
+    margin-block-end: 0.75rem;
+}
+
+#main-bubble.compact[position~="left"] {
+    flex-direction: row-reverse;
+}
+
+#main-bubble.compact[position~="right"] {
+    flex-direction: row;
+}
+
+#main-bubble.compact #setting-ui-bubble-compact{
+    margin-block: 0;
+    height: 1.5em;
+    width: 2em;
+}
+
+#main-bubble #setting-ui-bubble-compact {
+    width: 100%;
+    font-size: 130%;
+    padding-block: 2px;
+    border-radius: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.075);
+    /* transition: background-color 0.5s */
+}
+
+#main-bubble #setting-ui-bubble-compact:hover {
+    /* width: 90%; */
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 #main-bubble[position~="top"] #setting-ui-bubble-compact .fas,
@@ -787,6 +837,17 @@ dt {
 #main-bubble[position~="bottom"] #setting-ui-bubble-compact .fas,
 #main-bubble.compact[position~="top"] #setting-ui-bubble-compact .fas {
     transform: rotate(0);
+}
+
+.lable, #cooldown-timer  {
+    font-weight: bold;
+}
+
+#user-info {
+    font-size: large;
+    margin-inline: auto;
+    width: fit-content;
+    margin-block-end: 1rem;
 }
 
 #pixel-counts .fas {
@@ -800,9 +861,8 @@ dt {
     display: inline-block;
 }
 
-#coords-info {
-    margin-top: 16px;
-    margin-bottom: 8px;
+#pixel-counts li:first-child {
+    margin-block-end: 2px;
 }
 
 #ui-bottom {
@@ -1032,7 +1092,7 @@ body:not(.show-placeable-bubble) #placeableInfoBubble {
 }
 
 .copyPulse {
-    color: var(--copypulse-color);
+    color: var(--copypulse-color) !important;
 }
 
 .ban-alert-content > p:not(:nth-last-of-type(2)) {

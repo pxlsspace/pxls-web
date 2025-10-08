@@ -420,6 +420,10 @@ input[type='number'] {
     text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975;
 }
 
+#setting-ui-bubble-compact {
+    transition: background-color 500ms !important;
+}
+
 #logout-icon {
     color: var(--panel-close-button-color);
     text-shadow: 0 0 2px #000, 0 0 3px currentColor, 0 0 5px currentColor;
