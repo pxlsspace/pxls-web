@@ -798,7 +798,7 @@ dt {
 }
 
 #main-bubble[position~="bottom"] #setting-ui-bubble-compact {
-    margin-block-end: 0.75rem;
+    margin-block-end: 0.5rem;
 }
 
 #main-bubble.compact[position~="left"] {
@@ -847,7 +847,7 @@ dt {
     font-size: large;
     margin-inline: auto;
     width: fit-content;
-    margin-block-end: 1rem;
+    margin-block-end: 0.5rem;
 }
 
 #pixel-counts .fas {
