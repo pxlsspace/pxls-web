@@ -193,10 +193,10 @@ const user = (function() {
       });
       self.elements.signup.find('#signup-button').click(self.doSignup);
       $.get('/users', data => {
-         self.elements.users.text(data.count).fadeIn(200);
+          self.elements.users.text(data.count).fadeIn(200);
       }).fail(function(e) {
         console.error('Error fetching /users: ', e);
-          self.elements.users.text(NaN).fadeIn(200);
+        self.elements.users.text(NaN).fadeIn(200);
       });
       self.elements.pixelCounts.hide();
       self.elements.pixelCountsIcon.hide();
@@ -228,7 +228,7 @@ const user = (function() {
         }
       });
       socket.on('users', function(data) {
-          self.elements.users.text(data.count);
+        self.elements.users.text(data.count);
       });
       socket.on('userinfo', function(data) {
         let isBanned = false;
