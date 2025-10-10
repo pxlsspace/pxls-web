@@ -5,15 +5,14 @@ let board;
 module.exports.coords = (function() {
   const self = {
     elements: {
-      coordsWrapper: $('#coords-info'),
       coords: $('#coords-info .coords'),
-      lockIcon: $('#canvas-lock-icon')
+      icon: $('#coords-ico')
     },
     mouseCoords: null,
     init: function() {
       board = require('./board').board;
       query = require('./query').query;
-      self.elements.coordsWrapper.hide();
+      // self.elements.coords.hide();
       const _board = board.getRenderBoard()[0];
       _board.addEventListener('pointermove', pointerHandler, { passive: false });
       _board.addEventListener('mousemove', pointerHandler, { passive: false });
@@ -23,12 +22,16 @@ module.exports.coords = (function() {
       // }).on("touchstart touchmove", function(evt) {
       // });
 
+      function fadeCoords() {
+        if (!self.elements.coords.is(':visible')) self.elements.coords.fadeIn(200);
+      }
+
       function pointerHandler(evt) {
         const boardPos = board.fromScreen(evt.clientX, evt.clientY);
 
         self.mouseCoords = boardPos;
         self.elements.coords.text('(' + (boardPos.x) + ', ' + (boardPos.y) + ')');
-        if (!self.elements.coordsWrapper.is(':visible')) self.elements.coordsWrapper.fadeIn(200);
+        fadeCoords();
       }
 
       function touchHandler(evt) {
@@ -36,7 +39,7 @@ module.exports.coords = (function() {
 
         self.mouseCoords = boardPos;
         self.elements.coords.text('(' + (boardPos.x) + ', ' + (boardPos.y) + ')');
-        if (!self.elements.coordsWrapper.is(':visible')) self.elements.coordsWrapper.fadeIn(200);
+        fadeCoords();
       }
 
       $(window).keydown((event) => {
@@ -58,9 +61,9 @@ module.exports.coords = (function() {
       const y = useHash ? query.get('y') : self.mouseCoords.y;
       const scale = useHash ? query.get('scale') : 20;
       navigator.clipboard.writeText(self.getLinkToCoords(x, y, scale));
-      self.elements.coordsWrapper.addClass('copyPulse');
+      self.elements.coords.addClass('copyPulse');
       setTimeout(() => {
-        self.elements.coordsWrapper.removeClass('copyPulse');
+        self.elements.coords.removeClass('copyPulse');
       }, 200);
     },
     /**
@@ -81,6 +84,6 @@ module.exports.coords = (function() {
     init: self.init,
     copyCoords: self.copyCoords,
     getLinkToCoords: self.getLinkToCoords,
-    lockIcon: self.elements.lockIcon
+    icon: self.elements.icon
   };
 })();

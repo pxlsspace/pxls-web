@@ -16,6 +16,8 @@ module.exports.timer = (function() {
       /** @type {JQuery} */
       palette: $('#palette'),
       /** @type {JQuery} */
+      placement_info: $('#placement-info'),
+      /** @type {JQuery} */
       timer_container: $('#cooldown'),
       /** @type {JQuery} */
       timer_countdown: $('#cooldown-timer'),
@@ -57,6 +59,8 @@ module.exports.timer = (function() {
         self.elements.timer_chat.text(self.currentTimer);
         self.elements.timer_chat.show();
 
+        self.elements.placement_info.hide();
+
         document.title = uiHelper.getTitle();
       } else {
         self.currentTimer = '00:00';
@@ -65,6 +69,8 @@ module.exports.timer = (function() {
         self.elements.timer_countdown.text(self.currentTimer);
         self.elements.timer_chat.hide();
         self.elements.timer_chat.text(self.currentTimer);
+
+        self.elements.placement_info.show();
 
         // Placeable from 2 are updated at:
         // * https://github.com/pxlsspace/pxls-web/blob/f51c7266fbec2ba98d60f6e6e68c75bba18b159d/public/include/uiHelper.js#L438-L440
@@ -115,6 +121,7 @@ module.exports.timer = (function() {
         else if (delta <= 0) {
           self.hasFiredNotification = true;
           uiHelper.setPlaceableText(1);
+          self.elements.placement_info.show();
           fireNotification('Your next pixel is available!');
         }
       }
@@ -131,6 +138,8 @@ module.exports.timer = (function() {
       self.elements.timer_container.hide();
       self.elements.timer_countdown.text(self.currentTimer);
       self.elements.timer_chat.text(self.currentTimer);
+
+      self.elements.placement_info.show();
 
       setTimeout(function() {
         if (self.cooledDown() && uiHelper.getAvailable() === 0) {
