@@ -16,8 +16,9 @@ const user = (function() {
     elements: {
       users: $('#online-count-value'),
       userInfo: $('#user-info'),
-      pixelCounts: $('#pixel-counts'),
-      pixelCountsIcon: $('#pixel-counts-ico'),
+      pixelCounts: $('.pixel-counts'),
+      currentPixelCount: $('#current-pixel-count'),
+      alltimePixelCount: $('#alltime-pixel-count'),
       loginOverlay: $('#login-overlay'),
       signInWith: $('#sign-in-with'),
       legal: $('#legal'),
@@ -170,7 +171,6 @@ const user = (function() {
       return fetch('/logout').then(() => {
         self.elements.userInfo.fadeOut(200);
         self.elements.pixelCounts.fadeOut(200);
-        self.elements.pixelCountsIcon.fadeOut(200);
         self.elements.userMessage.fadeOut(200);
         self.elements.loginOverlay.fadeIn(200);
         if (window.deInitAdmin) {
@@ -193,13 +193,12 @@ const user = (function() {
       });
       self.elements.signup.find('#signup-button').click(self.doSignup);
       $.get('/users', data => {
-          self.elements.users.text(data.count).fadeIn(200);
+        self.elements.users.text(data.count).fadeIn(200);
       }).fail(function(e) {
         console.error('Error fetching /users: ', e);
         self.elements.users.text(NaN).fadeIn(200);
       });
       self.elements.pixelCounts.hide();
-      self.elements.pixelCountsIcon.hide();
       self.elements.userInfo.hide();
       self.elements.userInfo.find('.logout').click(function(evt) {
         evt.preventDefault();
@@ -239,7 +238,6 @@ const user = (function() {
         self.pixelCountAllTime = data.pixelCountAllTime;
         self.updatePixelCountElements();
         self.elements.pixelCounts.fadeIn(200);
-        self.elements.pixelCountsIcon.fadeIn(200);
         self.placementOverrides = data.placementOverrides;
         place.togglePaletteSpecialColors(data.placementOverrides.canPlaceAnyColor);
         self.chatNameColor = data.chatNameColor;
@@ -407,8 +405,8 @@ const user = (function() {
       self.elements.userMessage.fadeOut(200);
     },
     updatePixelCountElements: () => {
-      self.elements.pixelCounts.find('#current-pixel-count').text(self.pixelCount.toLocaleString());
-      self.elements.pixelCounts.find('#alltime-pixel-count').text(self.pixelCountAllTime.toLocaleString());
+      self.elements.currentPixelCount.text(self.pixelCount.toLocaleString());
+      self.elements.alltimePixelCount.text(self.pixelCountAllTime.toLocaleString());
     }
   };
   return {

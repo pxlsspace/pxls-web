@@ -711,11 +711,10 @@ dt {
     display: flex;
     flex-direction: column;
     position: absolute;
-    padding: 1em 1.25em;
     background: var(--bubble-background);
     border-radius: 5px;
     color: var(--bubble-text-color);
-    min-width: 14em;
+    min-width: 175px;
 }
 
 #ui-top {
@@ -734,12 +733,33 @@ dt {
     display: none;
 }
 
-#bubble-grid {
+#bubble-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    padding: 1rem;
+}
+
+#main-bubble[position~="top"]:not(.compact) #bubble-content {
+    padding-bottom: 0;
+}
+
+#main-bubble[position~="bottom"]:not(.compact) #bubble-content {
+    padding-top: 0;
+}
+
+#online-count {
+    margin-block-end: 0.5em;
+}
+
+#cooldown-timer, #placement-info {
+    font-weight: bold;
+}
+
+#bubble-content > div {
+    display: flex;
     align-items: center;
-    display: inline-grid;
-    grid-template-columns: auto auto;
-    row-gap: 0.25rem;
-    column-gap: 0.25rem;
+    gap: 0.25em;
 }
 
 #main-bubble[position~="top"] {
@@ -775,8 +795,7 @@ dt {
 
 #main-bubble.compact {
     justify-content: space-between;
-    min-width: 12em;
-    gap: 1rem;
+    min-width: 10em;
 }
 
 #main-bubble.compact > div {
@@ -784,7 +803,7 @@ dt {
     align-items: center;
 }
 
-#main-bubble.compact #bubble-grid {
+#main-bubble.compact #bubble-content {
     font-size: 125%;
     font-weight: bold;
 }
@@ -794,7 +813,7 @@ dt {
 }
 
 #main-bubble[position~="top"] #setting-ui-bubble-compact {
-    margin-block-start: 1rem;
+    margin-block-start: 0.5rem;
 }
 
 #main-bubble[position~="bottom"] #setting-ui-bubble-compact {
@@ -811,17 +830,17 @@ dt {
 
 #main-bubble.compact #setting-ui-bubble-compact{
     margin-block: 0;
-    height: 1.5em;
+    height: 100%;
     width: 2em;
+    height: auto;
 }
 
 #main-bubble #setting-ui-bubble-compact {
     width: 100%;
     font-size: 130%;
-    padding-block: 2px;
-    border-radius: 0.25rem;
     background-color: rgba(255, 255, 255, 0.075);
     /* transition: background-color 0.5s */
+    height: 1.25em;
 }
 
 #main-bubble #setting-ui-bubble-compact:hover {
@@ -839,19 +858,8 @@ dt {
     transform: rotate(0);
 }
 
-.lable, #cooldown-timer  {
-    font-weight: bold;
-}
-
-#user-info {
-    font-size: large;
-    margin-inline: auto;
-    width: fit-content;
-    margin-block-end: 0.5rem;
-}
-
-#pixel-counts .fas {
-    vertical-align: top;
+#user-info  {
+    margin-block-end: 0.25em;
 }
 
 #pixel-counts > ul {
