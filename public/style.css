@@ -752,7 +752,7 @@ dt {
     margin-block-end: 0.5em;
 }
 
-#cooldown-timer, #placement-info {
+#cooldown-timer, #placement-info, .lable {
     font-weight: bold;
 }
 
