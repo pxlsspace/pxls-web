@@ -145,6 +145,10 @@ a {
     border: 2px solid #000801;
 }
 
+#setting-ui-bubble-compact:hover {
+    background-color: #004e0079 !important;
+}
+
 .panel-trigger:hover {
     color: #004e00;
 }

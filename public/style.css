@@ -715,6 +715,7 @@ dt {
     border-radius: 5px;
     color: var(--bubble-text-color);
     min-width: 175px;
+    overflow: hidden;
 }
 
 #ui-top {
