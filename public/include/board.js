@@ -127,7 +127,7 @@ const board = (function() {
           if (self.numKeysPressed.length >= 3) {
             self.numKeysPressed = '';
             return;
-          };
+          }
 
           self.numKeysTimeout = setTimeout(() => {
             self.numKeysPressed = '';
