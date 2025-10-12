@@ -12,6 +12,8 @@ html {
     --button-background-hover: #252525;
 
     --bubble-background: #000;
+    --bubble-button-background-hover: #ffffff1a;
+    --bubble-button-border-color: #ffffff2f;
 
     --floating-panel-text-color: #fff;
     --floating-panel-border-color: #222;
@@ -86,6 +88,9 @@ html {
     --notification-expiry-color: #c45454;
 }
 
+.bubble {
+    outline: solid 1px var(--bubble-button-border-color)
+}
 
 .message {
     border: 2px solid #333;
