@@ -26,6 +26,9 @@ html {
     --floating-panel-background: #1c2228;
     --bubble-background: #141b1fcc;
     --bubble-text-color: #708192;
+    --bubble-button-background: transparent;
+    --bubble-button-background-hover: #00000034;
+    --bubble-button-border-color: #70819270;
     --palette-background: #141b1fcc;
     --palette-item-border-color: #468079;
     --palette-overlay-background: #141b1fcc;
