@@ -13,6 +13,9 @@ html {
     --button-background: #bbb;
     --button-border-color-hover: #844;
 
+    --bubble-button-background: rgba(151, 151, 151, 0.09);
+    --bubble-button-background-hover: rgba(182, 182, 182, 0.15);
+
     --floating-panel-border-color: #222;
     --floating-panel-background: #333;
     --floating-panel-text-color: #eee;

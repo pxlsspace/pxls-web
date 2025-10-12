@@ -57,6 +57,8 @@ html {
 
     --bubble-background: rgba(0, 0, 0, 0.7);
     --bubble-text-color: #fff;
+    --bubble-button-background: rgba(255, 255, 255, 0.075);
+    --bubble-button-background-hover: rgba(255, 255, 255, 0.15);
 
     --palette-background: rgba(255, 255, 255, 0.8);
     --palette-item-border-color: black;
@@ -708,12 +710,14 @@ dt {
 }
 
 #ui .bubble {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    display: inline-block;
-    padding: 0.5em 1em;
     background: var(--bubble-background);
     border-radius: 5px;
     color: var(--bubble-text-color);
+    min-width: 175px;
+    overflow: hidden;
 }
 
 #ui-top {
@@ -732,9 +736,38 @@ dt {
     display: none;
 }
 
+#bubble-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    padding: 1rem;
+}
+
+#main-bubble[position~="top"]:not(.compact) #bubble-content {
+    padding-bottom: 0;
+}
+
+#main-bubble[position~="bottom"]:not(.compact) #bubble-content {
+    padding-top: 0;
+}
+
+#online-count {
+    margin-block-end: 0.5em;
+}
+
+#cooldown-timer, #placement-info, .lable {
+    font-weight: bold;
+}
+
+#bubble-content > div {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+}
+
 #main-bubble[position~="top"] {
+    flex-direction: column-reverse;
     top: 4rem;
-    padding-bottom: 1em;
 }
 
 #main-bubble[position~="left"] {
@@ -742,12 +775,16 @@ dt {
 }
 
 #main-bubble[position~="bottom"] {
+    flex-direction: column;
     bottom: 1rem;
-    padding-top: 1em;
 }
 
 #main-bubble[position~="right"] {
     right: 1rem;
+}
+
+#main-bubble[position~="hide"] {
+    visibility: hidden;
 }
 
 #main-bubble a {
@@ -759,24 +796,59 @@ dt {
     text-align: center;
 }
 
-#main-bubble.compact .toggeable {
-    /* don't hide it completely to keep their width */
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 0;
+#main-bubble.compact {
+    justify-content: space-between;
+    min-width: 10em;
 }
 
-#main-bubble #setting-ui-bubble-compact {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+#main-bubble.compact > div {
+    display: flex;
+    align-items: center;
+}
+
+#main-bubble.compact #bubble-content {
+    font-size: 125%;
+    font-weight: bold;
+}
+
+#main-bubble.compact .toggeable {
+    display: none !important /* Override jquery's show method when hiding toggeable records */;
 }
 
 #main-bubble[position~="top"] #setting-ui-bubble-compact {
-    top: initial;
-    bottom: 0;
+    margin-block-start: 0.5rem;
+}
+
+#main-bubble[position~="bottom"] #setting-ui-bubble-compact {
+    margin-block-end: 0.5rem;
+}
+
+#main-bubble.compact[position~="left"] {
+    flex-direction: row-reverse;
+}
+
+#main-bubble.compact[position~="right"] {
+    flex-direction: row;
+}
+
+#main-bubble.compact #setting-ui-bubble-compact{
+    margin-block: 0;
+    height: 100%;
+    width: 2em;
+    height: auto;
+}
+
+#main-bubble #setting-ui-bubble-compact {
+    width: 100%;
+    font-size: 130%;
+    background-color: var(--bubble-button-background);
+    /* transition: background-color 0.5s */
+    height: 1.25em;
+}
+
+#main-bubble #setting-ui-bubble-compact:hover {
+    /* width: 90%; */
+    background-color: var(--bubble-button-background-hover);
 }
 
 #main-bubble[position~="top"] #setting-ui-bubble-compact .fas,
@@ -789,8 +861,8 @@ dt {
     transform: rotate(0);
 }
 
-#pixel-counts .fas {
-    vertical-align: top;
+#user-info  {
+    margin-block-end: 0.25em;
 }
 
 #pixel-counts > ul {
@@ -800,9 +872,8 @@ dt {
     display: inline-block;
 }
 
-#coords-info {
-    margin-top: 16px;
-    margin-bottom: 8px;
+#pixel-counts li:first-child {
+    margin-block-end: 2px;
 }
 
 #ui-bottom {
@@ -1032,7 +1103,7 @@ body:not(.show-placeable-bubble) #placeableInfoBubble {
 }
 
 .copyPulse {
-    color: var(--copypulse-color);
+    color: var(--copypulse-color) !important;
 }
 
 .ban-alert-content > p:not(:nth-last-of-type(2)) {

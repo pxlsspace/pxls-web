@@ -14,9 +14,11 @@ const user = (function() {
   const self = {
     instaban: false,
     elements: {
-      users: $('#online-count'),
+      users: $('#online-count-value'),
       userInfo: $('#user-info'),
-      pixelCounts: $('#pixel-counts'),
+      pixelCounts: $('.pixel-counts'),
+      currentPixelCount: $('#current-pixel-count'),
+      alltimePixelCount: $('#alltime-pixel-count'),
       loginOverlay: $('#login-overlay'),
       signInWith: $('#sign-in-with'),
       legal: $('#legal'),
@@ -191,10 +193,10 @@ const user = (function() {
       });
       self.elements.signup.find('#signup-button').click(self.doSignup);
       $.get('/users', data => {
-        self.elements.users.text(data.count + ' ' + __('online')).fadeIn(200);
+        self.elements.users.text(data.count).fadeIn(200);
       }).fail(function(e) {
         console.error('Error fetching /users: ', e);
-        self.elements.users.hide();
+        self.elements.users.text(NaN).fadeIn(200);
       });
       self.elements.pixelCounts.hide();
       self.elements.userInfo.hide();
@@ -225,7 +227,7 @@ const user = (function() {
         }
       });
       socket.on('users', function(data) {
-        self.elements.users.text(data.count + ' ' + __('online'));
+        self.elements.users.text(data.count);
       });
       socket.on('userinfo', function(data) {
         let isBanned = false;
@@ -403,8 +405,8 @@ const user = (function() {
       self.elements.userMessage.fadeOut(200);
     },
     updatePixelCountElements: () => {
-      self.elements.pixelCounts.find('#current-pixel-count').text(self.pixelCount.toLocaleString());
-      self.elements.pixelCounts.find('#alltime-pixel-count').text(self.pixelCountAllTime.toLocaleString());
+      self.elements.currentPixelCount.text(self.pixelCount.toLocaleString());
+      self.elements.alltimePixelCount.text(self.pixelCountAllTime.toLocaleString());
     }
   };
   return {
