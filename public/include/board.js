@@ -16,6 +16,8 @@ let query;
 const { flags, createImageData, binaryAjax } = require('./helpers');
 const { haveImageRendering, haveZoomRendering } = flags;
 
+const numKeys = [...Array(10).keys()].map(String) + '`';
+
 // this object holds all board information and is responsible of rendering the board
 const board = (function() {
   const self = {
@@ -41,6 +43,8 @@ const board = (function() {
     allowDrag: true,
     pannedWithKeys: false,
     rgbPalette: [],
+    numKeysPressed: '',
+    numKeysTimeout: null,
     loaded: false,
     pixelBuffer: [],
     holdTimer: {
@@ -112,6 +116,22 @@ const board = (function() {
         if (['INPUT', 'TEXTAREA'].includes(evt.target.nodeName)) {
           // prevent inputs from triggering shortcuts
           return;
+        }
+
+        if (numKeys.includes(evt.key)) {
+          self.numKeysPressed += (evt.key);
+          place.switch(Number(self.numKeysPressed.replace('`', '0')));
+
+          clearTimeout(self.numKeysTimeout);
+
+          if (self.numKeysPressed.length >= place.getPaletteMaxDigits()) {
+            self.numKeysPressed = '';
+            return;
+          }
+
+          self.numKeysTimeout = setTimeout(() => {
+            self.numKeysPressed = '';
+          }, 500);
         }
 
         switch (evt.originalEvent.code || evt.keyCode || evt.which || evt.key) {
