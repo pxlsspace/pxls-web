@@ -348,6 +348,9 @@ module.exports.place = (function() {
         result[i] = 0xFF000000 | b << 16 | g << 8 | r;
       }
       return result;
+    },
+    getPaletteMaxDigits: function() {
+      return Math.floor(Math.log10(self.palette.length)) + 1;
     }
   };
   return {
@@ -361,6 +364,7 @@ module.exports.place = (function() {
     },
     getPaletteColorValue: (idx, def = '000000') => self.palette[idx] ? self.palette[idx].value : def,
     getPaletteABGR: self.getPaletteABGR,
+    getPaletteMaxDigits: self.getPaletteMaxDigits,
     togglePaletteSpecialColors: self.togglePaletteSpecialColors,
     setAutoReset: self.setAutoReset,
     setNumberedPaletteEnabled: self.setNumberedPaletteEnabled,

@@ -124,14 +124,14 @@ const board = (function() {
 
           clearTimeout(self.numKeysTimeout);
 
-          if (self.numKeysPressed.length >= 3) {
+          if (self.numKeysPressed.length >= place.getPaletteMaxDigits()) {
             self.numKeysPressed = '';
             return;
           }
 
           self.numKeysTimeout = setTimeout(() => {
             self.numKeysPressed = '';
-          }, 850);
+          }, 500);
         }
 
         switch (evt.originalEvent.code || evt.keyCode || evt.which || evt.key) {
