@@ -246,6 +246,14 @@ const uiHelper = (function() {
         self.elements.mainBubble.attr('position', value);
       });
 
+      // Show the animation to the user when enabling the setting
+      settings.ui.bubble.animation.listen(function(value) {
+        // Do not show animation during site load
+        if (self.pixelsAvailable === -1) return;
+
+        self.shakeMainBubble();
+      });
+
       $('#setting-ui-bubble-compact').on('click', settings.ui.bubble.compact.toggle);
       settings.ui.bubble.compact.listen(function(value) {
         self.elements.mainBubble.toggleClass('compact', value);
@@ -863,6 +871,12 @@ const uiHelper = (function() {
      */
     handleFileUrl(url) {
       template.update({ use: true, url, convertMode: 'nearestCustom' });
+    },
+    shakeMainBubble() {
+      if (settings.ui.bubble.animation.get() === false) return;
+      if (self.elements.mainBubble.hasClass('shake')) return;
+      self.elements.mainBubble.addClass('shake');
+      setTimeout(() => { self.elements.mainBubble.removeClass('shake'); }, 1000);
     }
   };
 
@@ -910,7 +924,8 @@ const uiHelper = (function() {
         : ls.get('tabs.has-focus') === self.tabId;
     },
     prettifyRange: self.prettifyRange,
-    handleFile: self.handleFile
+    handleFile: self.handleFile,
+    shakeMainBubble: self.shakeMainBubble
   };
 })();
 

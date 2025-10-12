@@ -201,6 +201,7 @@ module.exports.settings = (function() {
     virginmap_background_opacity: 'board.virginmap.opacity',
     snapshotImageFormat: 'board.snapshot.format',
     'bubble-position': 'ui.bubble.position',
+    'bubble-animation.enable': 'ui.bubble.animation.enable',
     'brightness.enabled': 'ui.brightness.enable',
     colorBrightness: 'ui.brightness.value',
     'alert.src': 'audio.alert.src',
@@ -339,6 +340,7 @@ module.exports.settings = (function() {
       },
       bubble: {
         position: setting('ui.bubble.position', SettingType.SELECT, 'bottom left', $('#setting-ui-bubble-position')),
+        animation: setting('ui.bubble.animation.enable', SettingType.TOGGLE, true, $('#setting-ui-bubble-animation-enable')),
         compact: setting('ui.bubble.compact', SettingType.TOGGLE, false)
       },
       brightness: {

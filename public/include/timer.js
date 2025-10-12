@@ -86,6 +86,8 @@ module.exports.timer = (function() {
       if (!self.hasFiredNotification) {
         /** @param {string} text */
         const fireNotification = (text) => {
+          uiHelper.shakeMainBubble();
+
           self.playAudio();
 
           if (!document.hasFocus()) {
