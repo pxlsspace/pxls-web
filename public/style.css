@@ -57,6 +57,8 @@ html {
 
     --bubble-background: rgba(0, 0, 0, 0.7);
     --bubble-text-color: #fff;
+    --bubble-button-background: rgba(255, 255, 255, 0.075);
+    --bubble-button-background-hover: rgba(255, 255, 255, 0.15);
 
     --palette-background: rgba(255, 255, 255, 0.8);
     --palette-item-border-color: black;
@@ -839,14 +841,14 @@ dt {
 #main-bubble #setting-ui-bubble-compact {
     width: 100%;
     font-size: 130%;
-    background-color: rgba(255, 255, 255, 0.075);
+    background-color: var(--bubble-button-background);
     /* transition: background-color 0.5s */
     height: 1.25em;
 }
 
 #main-bubble #setting-ui-bubble-compact:hover {
     /* width: 90%; */
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: var(--bubble-button-background-hover);
 }
 
 #main-bubble[position~="top"] #setting-ui-bubble-compact .fas,

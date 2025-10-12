@@ -424,11 +424,6 @@ input[type='number'] {
 
 #setting-ui-bubble-compact {
     transition: background-color 250ms !important;
-    background-color: var(--bubble-button-background) !important;
-}
-
-#setting-ui-bubble-compact:hover {
-    background-color: var(--bubble-button-background-hover) !important;
 }
 
 #logout-icon {
