@@ -30,7 +30,7 @@ html {
     --bubble-text-color: inherit;
     --bubble-border-color: #ffccf9;
     --bubble-button-background-hover: #fa6dff3f;
-    --bubble-button-border-color: #ffccf991;
+    --bubble-border-color: #ffccf991;
 
     --palette-item-border-color: #000;
     --palette-background: linear-gradient(to left, #5c0058d1, #2c1c57cc);
@@ -422,8 +422,12 @@ input[type='number'] {
     text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975;
 }
 
-#cooldown-timer, #placement-info, .lable {
+.lable {
     font-weight: normal;
+}
+
+#main-bubble.compact span, #placement-info span {
+    font-weight: bold;
 }
 
 #setting-ui-bubble-compact {

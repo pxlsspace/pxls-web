@@ -37,7 +37,7 @@ html {
     --blurple-color-background--mentionned-aside: #ce9c5c;
     --blurple-color-background--focused: rgba(88, 101, 242, 0.16);
     --blurple-color-background--focused-finished: rgba(88, 101, 242, 0);
-    --blurple-color-border: rgba(151, 151, 159, 0.2);
+    --blurple-color-border: rgba(151, 151, 159, 0.3);
     --blurple-color-border-focused: rgba(151, 151, 159, 0.12);
     --blurple-border_radius-border: 8px;
     --blurple-color-background--code: rgba(88, 101, 242, 0.08);
@@ -98,6 +98,7 @@ html {
 
     --bubble-background: var(--blurple-color-background);
     --bubble-text-color: var(--blurple-color-text);
+    --bubble-border-color: var(--blurple-color-border);
 
     --palette-background: var(--blurple-color-background);
     --palette-item-border-color: var(--blurple-color-border);
@@ -278,7 +279,6 @@ dt:last-of-type {
 
 #ui .bubble {
     border-radius: var(--blurple-border_radius-border);
-    border: 1px solid var(--blurple-color-border); /* Theme-specific */
     transition: border-radius .5s ease-in-out;
 }
 #ui #loading-bubble.bubble {
