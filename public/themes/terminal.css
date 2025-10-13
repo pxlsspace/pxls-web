@@ -27,7 +27,7 @@ html {
     --bubble-background: #000801;
     --bubble-text-color: #94e044;
     --bubble-button-background-hover: #263b0f2d;
-    --bubble-button-border-color: #95e04473;
+    --bubble-border-color: #95e04473;
     --palette-background: #000801cc;
     --palette-item-border-color: #004e00;
     --palette-overlay-background: #141b1fcc;
@@ -141,10 +141,6 @@ html {
 
 a {
     color: #026102;
-}
-
-.bubble {
-    outline: solid 1px var(--bubble-button-border-color)
 }
 
 #reticule {

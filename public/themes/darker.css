@@ -13,7 +13,7 @@ html {
 
     --bubble-background: #000;
     --bubble-button-background-hover: #ffffff1a;
-    --bubble-button-border-color: #ffffff2f;
+    --bubble-border-color: #ffffff2f;
 
     --floating-panel-text-color: #fff;
     --floating-panel-border-color: #222;
@@ -86,10 +86,6 @@ html {
     --chat-typeahead-item-background-active: #3b3b3b;
 
     --notification-expiry-color: #c45454;
-}
-
-.bubble {
-    outline: solid 1px var(--bubble-button-border-color)
 }
 
 .message {

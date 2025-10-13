@@ -33,10 +33,10 @@ html {
     --palette-overlay-text-color: inherit;
     --palette-deselect-button-color: #000;
     --palette-number-text-color: #000;
-    --palette-number-background-color: #ffdfee;
+    --palette-number-background-color: #fcf7f9;
 
     --cursor-text-color: #1f1f1f;
-    --cursor-text-background-color: #f5cdde;
+    --cursor-text-background-color: #fcf7f9;
 
     --selection-color: #1f1f1f;
     --selection-background-color: #ffa4fc;
