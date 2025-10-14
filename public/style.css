@@ -57,8 +57,9 @@ html {
 
     --bubble-background: rgba(0, 0, 0, 0.7);
     --bubble-text-color: #fff;
-    --bubble-button-background: rgba(255, 255, 255, 0.075);
+    --bubble-button-background: none;
     --bubble-button-background-hover: rgba(255, 255, 255, 0.15);
+    --bubble-border-color: rgba(184, 184, 184, 0.295);
 
     --palette-background: rgba(255, 255, 255, 0.8);
     --palette-item-border-color: black;
@@ -714,9 +715,10 @@ dt {
     flex-direction: column;
     position: absolute;
     background: var(--bubble-background);
+    outline: solid 1px var(--bubble-border-color);
     border-radius: 5px;
+    padding: 0.5em 1em;
     color: var(--bubble-text-color);
-    min-width: 175px;
     overflow: hidden;
 }
 
@@ -734,6 +736,11 @@ dt {
 
 #ui #loading-bubble .loading-bubble-item {
     display: none;
+}
+
+#main-bubble {
+    min-width: 175px;
+    padding: 0 !important;
 }
 
 #bubble-content {
@@ -849,6 +856,28 @@ dt {
 #main-bubble #setting-ui-bubble-compact:hover {
     /* width: 90%; */
     background-color: var(--bubble-button-background-hover);
+}
+
+#main-bubble[position~="bottom"] #setting-ui-bubble-compact {
+	border-bottom: 1px solid var(--bubble-border-color);
+}
+
+#main-bubble[position~="top"] #setting-ui-bubble-compact {
+	border-top: 1px solid var(--bubble-border-color);
+}
+
+#main-bubble[positon]:not(.compact) #setting-ui-bubble-compact {
+	border-bottom: 1px solid var(--bubble-border-color);
+}
+
+#main-bubble[position~="left"].compact #setting-ui-bubble-compact {
+    border: none;
+    border-left: 1px solid var(--bubble-border-color);
+}
+
+#main-bubble[position~="right"].compact #setting-ui-bubble-compact {
+    border: none;
+    border-right: 1px solid var(--bubble-border-color);
 }
 
 #main-bubble[position~="top"] #setting-ui-bubble-compact .fas,

@@ -29,8 +29,8 @@ html {
     --bubble-background: linear-gradient(to bottom, #000000d1, #1f0f4cd1);
     --bubble-text-color: inherit;
     --bubble-border-color: #ffccf9;
-    --bubble-button-background: #cbeeff17;
     --bubble-button-background-hover: #fa6dff3f;
+    --bubble-border-color: #ffccf991;
 
     --palette-item-border-color: #000;
     --palette-background: linear-gradient(to left, #5c0058d1, #2c1c57cc);
@@ -422,6 +422,14 @@ input[type='number'] {
     text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975;
 }
 
+.lable {
+    font-weight: normal;
+}
+
+#main-bubble.compact span, #placement-info span {
+    font-weight: bold;
+}
+
 #setting-ui-bubble-compact {
     transition: background-color 250ms !important;
 }
@@ -437,7 +445,7 @@ input[type='number'] {
     text-shadow: 0 0 2px #000, 0 0 5px var(--panel-close-button-color), 0 0 10px var(--panel-close-button-color);
 }
 
-#cooldown {
+#cooldown, #placement-info {
     color: var(--text-blue-color);
 }
 
