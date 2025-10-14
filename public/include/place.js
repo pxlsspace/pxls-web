@@ -266,7 +266,13 @@ module.exports.place = (function() {
             break;
         }
 
-        if (uiHelper.getAvailable() === 0) { uiHelper.setPlaceableText(data.ackFor === 'PLACE' ? 0 : 1); }
+        if (uiHelper.getAvailable() === 0) {
+          if (data.ackFor === 'PLACE') {
+            uiHelper.updateAvailable(0, 'consume');
+          } else {
+            uiHelper.updateAvailable(1, 'undo');
+          }
+        }
       });
       socket.on('admin_placement_overrides', function(data) {
         self.togglePaletteSpecialColors(data.placementOverrides.canPlaceAnyColor);
