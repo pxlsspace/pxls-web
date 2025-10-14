@@ -105,14 +105,14 @@ module.exports.timer = (function() {
           fireNotification(`Your next pixel will be available in ${Math.round(Math.abs(alertDelay) * 10) / 10} seconds!`);
           setTimeout(() => {
             if (self.hasFiredNotification) {
-              uiHelper.setPlaceableText(1);
+              uiHelper.updateAvailable(1, 'gain');
             }
           }, delta * 1000);
         }
         // Positive delay
         else if (alertDelay > 0 && delta <= 0) {
           self.hasFiredNotification = true;
-          uiHelper.setPlaceableText(1);
+          uiHelper.updateAvailable(1, 'gain');
           setTimeout(() => {
             if (uiHelper.getAvailable() > 0) {
               fireNotification(`Your next pixel has been available for ${Math.round(alertDelay * 10) / 10} seconds!`);
@@ -122,7 +122,7 @@ module.exports.timer = (function() {
         // No delay
         else if (delta <= 0) {
           self.hasFiredNotification = true;
-          uiHelper.setPlaceableText(1);
+          uiHelper.updateAvailable(1, 'gain');
           self.elements.placement_info.show();
           fireNotification('Your next pixel is available!');
         }
@@ -145,7 +145,7 @@ module.exports.timer = (function() {
 
       setTimeout(function() {
         if (self.cooledDown() && uiHelper.getAvailable() === 0) {
-          uiHelper.setPlaceableText(1);
+          uiHelper.updateAvailable(1, 'gain');
         }
       }, 250);
 
