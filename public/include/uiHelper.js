@@ -713,16 +713,26 @@ const uiHelper = (function() {
       }
     },
     updateAvailable: function(count, cause) {
-      if (count > 0 && cause === 'stackGain') timer.playAudio();
-      self.setPlaceableText(count);
+      if (cause === 'gain' || cause === 'stackGain') {
+        self.elements.mainBubble.addClass('animate-plusone');
+        setTimeout(
+          () => self.elements.mainBubble.removeClass('animate-plusone'),
+          // NOTE ([  ]): This is the animation duration.
+          // It's hardcoded here because hooking an animation-end listener for
+          // the ::after pseudo element is not possible, but perhaps a better
+          // solution exists which eludes me.
+          1000
+        );
+      }
+      if (count > 0 && cause === 'stackGain') {
+        timer.playAudio();
+      }
+      self.elements.stackCount.text(`${count}/${self.maxStacked}`);
+      self.pixelsAvailable = count;
+      document.title = uiHelper.getTitle();
     },
     setMax(maxStacked) {
       self.maxStacked = maxStacked + 1;
-    },
-    setPlaceableText(placeable) {
-      self.elements.stackCount.text(`${placeable}/${self.maxStacked}`);
-      self.pixelsAvailable = placeable;
-      document.title = uiHelper.getTitle();
     },
     setDiscordName(name) {
       self.elements.txtDiscordName.val(name);

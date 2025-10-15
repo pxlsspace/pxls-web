@@ -60,6 +60,7 @@ html {
     --bubble-button-background: none;
     --bubble-button-background-hover: rgba(255, 255, 255, 0.15);
     --bubble-border-color: rgba(184, 184, 184, 0.295);
+    --bubble-plusone-color: inherit;
 
     --palette-background: rgba(255, 255, 255, 0.8);
     --palette-item-border-color: black;
@@ -764,6 +765,27 @@ dt {
 
 #cooldown-timer, #placement-info, .lable {
     font-weight: bold;
+}
+
+@keyframes fade-out-and-up {
+	0% { bottom: 25%; opacity: 1; }
+	100% { bottom: 80%; opacity: 0; }
+}
+
+#main-bubble.animate-plusone #placeable-count {
+	position: relative;
+}
+
+#main-bubble.animate-plusone #placeable-count::after {
+	content: '+1';
+	position: absolute;
+	bottom: 25%;
+	left: 110%;
+	font-size: medium;
+	font-weight: bold;
+	animation: fade-out-and-up 1s forwards;
+	color: var(--bubble-plusone-color);
+	text-shadow: 0 0 2px var(--bubble-background);
 }
 
 #bubble-content > div {
