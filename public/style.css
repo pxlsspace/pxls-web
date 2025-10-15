@@ -785,8 +785,8 @@ dt {
 }
 
 @keyframes fade-out-and-up {
-	0% { bottom: 50%; opacity: 1; }
-	100% { bottom: 110%; opacity: 0; }
+	0% { bottom: 25%; opacity: 1; }
+	100% { bottom: 80%; opacity: 0; }
 }
 
 .gain-pixel {
@@ -796,11 +796,21 @@ dt {
 .gain-pixel::after {
 	content: '+1';
 	position: absolute;
-	bottom: 50%;
-	left: 100%;
-	font-size: small;
-	font-weight: normal;
+	bottom: 25%;
+	left: 110%;
+	font-size: medium;
+	font-weight: bold;
 	animation: fade-out-and-up 1s forwards;
+	color: var(--text-green-color);
+	text-shadow: 
+		1px 1px 0 var(--bubble-background),
+		-1px 1px 0 var(--bubble-background),
+		1px -1px 0 var(--bubble-background),
+		-1px -1px 0 var(--bubble-background),
+		0px 1px 0 var(--bubble-background),
+		0px -1px 0 var(--bubble-background),
+		-1px 0px 0 var(--bubble-background),
+		1px 0px 0 var(--bubble-background);
 }
 
 #bubble-content > div {
