@@ -60,6 +60,7 @@ html {
     --bubble-button-background: none;
     --bubble-button-background-hover: rgba(255, 255, 255, 0.15);
     --bubble-border-color: rgba(184, 184, 184, 0.295);
+    --bubble-plusone-color: inherit;
 
     --palette-background: rgba(255, 255, 255, 0.8);
     --palette-item-border-color: black;
@@ -801,16 +802,8 @@ dt {
 	font-size: medium;
 	font-weight: bold;
 	animation: fade-out-and-up 1s forwards;
-	color: var(--text-green-color);
-	text-shadow: 
-		1px 1px 0 var(--bubble-background),
-		-1px 1px 0 var(--bubble-background),
-		1px -1px 0 var(--bubble-background),
-		-1px -1px 0 var(--bubble-background),
-		0px 1px 0 var(--bubble-background),
-		0px -1px 0 var(--bubble-background),
-		-1px 0px 0 var(--bubble-background),
-		1px 0px 0 var(--bubble-background);
+	color: var(--bubble-plusone-color);
+	text-shadow: 0 0 2px var(--bubble-background);
 }
 
 #bubble-content > div {
