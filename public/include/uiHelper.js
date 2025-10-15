@@ -714,9 +714,9 @@ const uiHelper = (function() {
     },
     updateAvailable: function(count, cause) {
       if (cause === 'gain' || cause === 'stackGain') {
-        self.elements.stackCount.addClass('gain-pixel');
+        self.elements.mainBubble.addClass('animate-plusone');
         setTimeout(
-          () => self.elements.stackCount.removeClass('gain-pixel'),
+          () => self.elements.mainBubble.removeClass('animate-plusone'),
           // NOTE ([  ]): This is the animation duration.
           // It's hardcoded here because hooking an animation-end listener for
           // the ::after pseudo element is not possible, but perhaps a better
