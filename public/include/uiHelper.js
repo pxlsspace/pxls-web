@@ -713,7 +713,6 @@ const uiHelper = (function() {
       }
     },
     updateAvailable: function(count, cause) {
-      console.debug(count, cause);
       if (cause === 'gain' || cause === 'stackGain') {
         self.elements.stackCount.addClass('gain-pixel');
         setTimeout(
