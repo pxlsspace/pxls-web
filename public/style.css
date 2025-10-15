@@ -789,11 +789,11 @@ dt {
 	100% { bottom: 80%; opacity: 0; }
 }
 
-.gain-pixel {
+#main-bubble.animate-plusone #placeable-count {
 	position: relative;
 }
 
-.gain-pixel::after {
+#main-bubble.animate-plusone #placeable-count::after {
 	content: '+1';
 	position: absolute;
 	bottom: 25%;
