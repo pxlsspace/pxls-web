@@ -751,6 +751,24 @@ dt {
     padding: 1rem;
 }
 
+@keyframes shake-horizontally {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-8px); }
+    20% { transform: translateX(8px); }
+    30% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    50% { transform: translateX(-4px); }
+    60% { transform: translateX(4px); }
+    70% { transform: translateX(-2px); }
+    80% { transform: translateX(2px); }
+    90% { transform: translateX(-1px); }
+    100% { transform: translateX(0); }
+}
+
+#main-bubble.animate-shake {
+    animation: shake-horizontally 1s ease-in-out;
+}
+
 #main-bubble[position~="top"]:not(.compact) #bubble-content {
     padding-bottom: 0;
 }
@@ -786,6 +804,15 @@ dt {
 	animation: fade-out-and-up 1s forwards;
 	color: var(--bubble-plusone-color);
 	text-shadow: 0 0 2px var(--bubble-background);
+}
+
+/* We do this so the animation preview still shows even when the cooldown is active */
+#main-bubble.animate-plusone #cooldown {
+    display: none !important;
+}
+
+#main-bubble.animate-plusone #placement-info {
+    display: flex !important;
 }
 
 #bubble-content > div {

@@ -246,6 +246,13 @@ const uiHelper = (function() {
         self.elements.mainBubble.attr('position', value);
       });
 
+      // Show the animation to the user when changing the setting
+      settings.ui.bubble.animation.listen(function(value) {
+        // Do not show animation during site load
+        if (self.pixelsAvailable === -1) return;
+        self.animateMainBubble(value.split(' '));
+      });
+
       $('#setting-ui-bubble-compact').on('click', settings.ui.bubble.compact.toggle);
       settings.ui.bubble.compact.listen(function(value) {
         self.elements.mainBubble.toggleClass('compact', value);
@@ -714,15 +721,7 @@ const uiHelper = (function() {
     },
     updateAvailable: function(count, cause) {
       if (cause === 'gain' || cause === 'stackGain') {
-        self.elements.mainBubble.addClass('animate-plusone');
-        setTimeout(
-          () => self.elements.mainBubble.removeClass('animate-plusone'),
-          // NOTE ([  ]): This is the animation duration.
-          // It's hardcoded here because hooking an animation-end listener for
-          // the ::after pseudo element is not possible, but perhaps a better
-          // solution exists which eludes me.
-          1000
-        );
+        self.animateMainBubble(settings.ui.bubble.animation.get().split(' '));
       }
       if (count > 0 && cause === 'stackGain') {
         timer.playAudio();
@@ -873,6 +872,21 @@ const uiHelper = (function() {
      */
     handleFileUrl(url) {
       template.update({ use: true, url, convertMode: 'nearestCustom' });
+    },
+    animateMainBubble(animations) {
+      animations.forEach((animation) => {
+        const animationClassName = `animate-${animation}`;
+        if (self.elements.mainBubble.hasClass(animationClassName)) return;
+        self.elements.mainBubble.addClass(animationClassName);
+        setTimeout(
+          () => { self.elements.mainBubble.removeClass(animationClassName); },
+          // NOTE ([  ]): This is the animation duration.
+          // It's hardcoded here because hooking an animation-end listener for
+          // the ::after pseudo element is not possible, but perhaps a better
+          // solution exists which eludes me.
+          1000
+        );
+      });
     }
   };
 
@@ -920,7 +934,8 @@ const uiHelper = (function() {
         : ls.get('tabs.has-focus') === self.tabId;
     },
     prettifyRange: self.prettifyRange,
-    handleFile: self.handleFile
+    handleFile: self.handleFile,
+    animateMainBubble: self.animateMainBubble
   };
 })();
 
