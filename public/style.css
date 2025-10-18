@@ -815,6 +815,30 @@ dt {
     animation: shake-horizontally 1s ease-in-out;
 }
 
+@keyframes bump {
+    0% { transform: translateY(0); }
+    10% { transform: translateY(-1em); }
+    30% { transform: translateY(0.25em); }
+    50% { transform: translateY(-0.25em); }
+    70% { transform: translateY(0.125em); }
+    100% { transform: translateY(0); }
+}
+
+#main-bubble.animate-bump {
+    animation: bump 1s;
+}
+
+@keyframes pulse {
+    0% { color: inherit; }
+    15% { color: var(--copypulse-color); }
+    30% { color: inherit; }
+    45% { color: var(--copypulse-color); }
+    60% { color: inherit; }
+}
+
+#main-bubble.animate-pulse #placeable-count {
+    animation: pulse 1s linear;
+}
 
 #bubble-content > div {
     display: flex;
