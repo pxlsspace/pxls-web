@@ -806,6 +806,14 @@ dt {
 	text-shadow: 0 0 2px var(--bubble-background);
 }
 
+/* We do this so the animation preview still shows even when the cooldown is active */
+#main-bubble.animate-plusone #cooldown {
+    display: none !important;
+}
+#main-bubble.animate-plusone #placement-info {
+    display: flex !important;
+}
+
 #bubble-content > div {
     display: flex;
     align-items: center;
