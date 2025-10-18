@@ -810,6 +810,7 @@ dt {
 #main-bubble.animate-plusone #cooldown {
     display: none !important;
 }
+
 #main-bubble.animate-plusone #placement-info {
     display: flex !important;
 }
