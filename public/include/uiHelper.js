@@ -250,7 +250,7 @@ const uiHelper = (function() {
       settings.ui.bubble.animation.listen(function(value) {
         // Do not show animation during site load
         if (self.pixelsAvailable === -1) return;
-        self.animateMainBubble(value.split(' '))
+        self.animateMainBubble(value.split(' '));
       });
 
       $('#setting-ui-bubble-compact').on('click', settings.ui.bubble.compact.toggle);
@@ -875,11 +875,11 @@ const uiHelper = (function() {
     },
     animateMainBubble(animations) {
       animations.forEach((animation) => {
-        const animationClassName = `animate-${animation}`
+        const animationClassName = `animate-${animation}`;
         if (self.elements.mainBubble.hasClass(animationClassName)) return;
         self.elements.mainBubble.addClass(animationClassName);
         setTimeout(
-          () => { self.elements.mainBubble.removeClass(animationClassName); }, 
+          () => { self.elements.mainBubble.removeClass(animationClassName); },
           // NOTE ([  ]): This is the animation duration.
           // It's hardcoded here because hooking an animation-end listener for
           // the ::after pseudo element is not possible, but perhaps a better
@@ -887,7 +887,7 @@ const uiHelper = (function() {
           1000
         );
       });
-    },
+    }
   };
 
   return {
@@ -935,7 +935,7 @@ const uiHelper = (function() {
     },
     prettifyRange: self.prettifyRange,
     handleFile: self.handleFile,
-    animateMainBubble: self.animateMainBubble,
+    animateMainBubble: self.animateMainBubble
   };
 })();
 
