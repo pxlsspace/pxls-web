@@ -583,19 +583,6 @@ li.chat-line[data-id] .reply-button {
     border-radius: var(--blurple-border_radius-border) var(--blurple-border_radius-border) 0 0;
 }
 
-@keyframes main-bubble-shake {
-    0%   { transform: scale(1); }
-    20%  { transform: scale(1.07); }
-    40%  { transform: scale(1); }
-    60%  { transform: scale(1.09); }
-    80%  { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-#main-bubble.shake {
-    animation: main-bubble-shake 500ms ease-in-out;
-}
-
 @keyframes -scrolled-flash {
     from {
         background: var(--blurple-color-background--focused);
