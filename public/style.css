@@ -840,6 +840,11 @@ dt {
     animation: pulse 1s linear;
 }
 
+#placeable-count {
+    /* NOTE ([  ]): to account for the plusone gain animation */
+    margin-right: 1em;
+}
+
 #bubble-content > div {
     display: flex;
     align-items: center;
