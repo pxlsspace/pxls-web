@@ -751,6 +751,52 @@ dt {
     padding: 1rem;
 }
 
+#main-bubble[position~="top"]:not(.compact) #bubble-content {
+    padding-bottom: 0;
+}
+
+#main-bubble[position~="bottom"]:not(.compact) #bubble-content {
+    padding-top: 0;
+}
+
+#online-count {
+    margin-block-end: 0.5em;
+}
+
+#cooldown-timer, #placement-info, .lable {
+    font-weight: bold;
+}
+
+@keyframes fade-out-and-up {
+    0% { bottom: 25%; opacity: 1; }
+    100% { bottom: 80%; opacity: 0; }
+}
+
+#main-bubble.animate-plusone #placeable-count {
+    position: relative;
+}
+
+#main-bubble.animate-plusone #placeable-count::after {
+    content: '+1';
+    position: absolute;
+    bottom: 25%;
+    left: 110%;
+    font-size: medium;
+    font-weight: bold;
+    animation: fade-out-and-up 1s forwards;
+    color: var(--bubble-plusone-color);
+    text-shadow: 0 0 2px var(--bubble-background);
+}
+
+/* We do this so the animation preview still shows even when the cooldown is active */
+#main-bubble.animate-plusone #cooldown {
+    display: none !important;
+}
+
+#main-bubble.animate-plusone #placement-info {
+    display: flex !important;
+}
+
 @keyframes shake-horizontally {
     0% { transform: translateX(0); }
     10% { transform: translateX(-8px); }
@@ -769,51 +815,6 @@ dt {
     animation: shake-horizontally 1s ease-in-out;
 }
 
-#main-bubble[position~="top"]:not(.compact) #bubble-content {
-    padding-bottom: 0;
-}
-
-#main-bubble[position~="bottom"]:not(.compact) #bubble-content {
-    padding-top: 0;
-}
-
-#online-count {
-    margin-block-end: 0.5em;
-}
-
-#cooldown-timer, #placement-info, .lable {
-    font-weight: bold;
-}
-
-@keyframes fade-out-and-up {
-	0% { bottom: 25%; opacity: 1; }
-	100% { bottom: 80%; opacity: 0; }
-}
-
-#main-bubble.animate-plusone #placeable-count {
-	position: relative;
-}
-
-#main-bubble.animate-plusone #placeable-count::after {
-	content: '+1';
-	position: absolute;
-	bottom: 25%;
-	left: 110%;
-	font-size: medium;
-	font-weight: bold;
-	animation: fade-out-and-up 1s forwards;
-	color: var(--bubble-plusone-color);
-	text-shadow: 0 0 2px var(--bubble-background);
-}
-
-/* We do this so the animation preview still shows even when the cooldown is active */
-#main-bubble.animate-plusone #cooldown {
-    display: none !important;
-}
-
-#main-bubble.animate-plusone #placement-info {
-    display: flex !important;
-}
 
 #bubble-content > div {
     display: flex;
