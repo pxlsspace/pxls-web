@@ -250,8 +250,7 @@ const uiHelper = (function() {
       settings.ui.bubble.animation.listen(function(value) {
         // Do not show animation during site load
         if (self.pixelsAvailable === -1) return;
-
-        self.shakeMainBubble();
+        self.animateMainBubble('shake');
       });
 
       $('#setting-ui-bubble-compact').on('click', settings.ui.bubble.compact.toggle);
@@ -722,15 +721,7 @@ const uiHelper = (function() {
     },
     updateAvailable: function(count, cause) {
       if (cause === 'gain' || cause === 'stackGain') {
-        self.elements.mainBubble.addClass('animate-plusone');
-        setTimeout(
-          () => self.elements.mainBubble.removeClass('animate-plusone'),
-          // NOTE ([  ]): This is the animation duration.
-          // It's hardcoded here because hooking an animation-end listener for
-          // the ::after pseudo element is not possible, but perhaps a better
-          // solution exists which eludes me.
-          1000
-        );
+        uiHelper.animateMainBubble('shake', 'plusone');
       }
       if (count > 0 && cause === 'stackGain') {
         timer.playAudio();
@@ -882,12 +873,28 @@ const uiHelper = (function() {
     handleFileUrl(url) {
       template.update({ use: true, url, convertMode: 'nearestCustom' });
     },
-    shakeMainBubble() {
-      if (settings.ui.bubble.animation.get() === false) return;
-      if (self.elements.mainBubble.hasClass('shake')) return;
-      self.elements.mainBubble.addClass('shake');
-      setTimeout(() => { self.elements.mainBubble.removeClass('shake'); }, 1000);
-    }
+    animateMainBubble(...animations) {
+      animations.forEach((animation) => {
+        switch (animation) {
+          case 'shake':
+            if (settings.ui.bubble.animation.get() === false) return;
+          default:
+            break;
+        }
+
+        const animationClassName = `animate-${animation}`
+        if (self.elements.mainBubble.hasClass(animationClassName)) return;
+        self.elements.mainBubble.addClass(animationClassName);
+        setTimeout(
+          () => { self.elements.mainBubble.removeClass(animationClassName); }, 
+          // NOTE ([  ]): This is the animation duration.
+          // It's hardcoded here because hooking an animation-end listener for
+          // the ::after pseudo element is not possible, but perhaps a better
+          // solution exists which eludes me.
+          1000
+        );
+      });
+    },
   };
 
   return {
@@ -935,7 +942,7 @@ const uiHelper = (function() {
     },
     prettifyRange: self.prettifyRange,
     handleFile: self.handleFile,
-    shakeMainBubble: self.shakeMainBubble
+    animateMainBubble: self.animateMainBubble,
   };
 })();
 

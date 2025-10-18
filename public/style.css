@@ -751,7 +751,7 @@ dt {
     padding: 1rem;
 }
 
-@keyframes main-bubble-shake {
+@keyframes shake-horizontally {
     0% { transform: translateX(0); }
     10% { transform: translateX(-8px); }
     20% { transform: translateX(8px); }
@@ -765,8 +765,8 @@ dt {
     100% { transform: translateX(0); }
 }
 
-#main-bubble.shake {
-    animation: main-bubble-shake 1s ease-in-out;
+#main-bubble.animate-shake {
+    animation: shake-horizontally 1s ease-in-out;
 }
 
 #main-bubble[position~="top"]:not(.compact) #bubble-content {
