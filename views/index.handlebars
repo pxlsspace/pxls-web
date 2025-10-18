@@ -489,10 +489,15 @@
                             </select>
                         </label>
                     </div>
-                    <div data-keywords="{{{i18n 'floating bubble shake animation'}}}">
+                    <div data-keywords="{{{i18n 'floating bubble animation'}}}">
                         <label class="input-group">
-                            <input id="setting-ui-bubble-animation-enable" type="checkbox">
-                            <span class="label-text">{{{i18n 'Enable bubble animation'}}}</span>
+                            <span class="label-text">{{{i18n 'Bubble animation:'}}}</span>
+                            <select id="setting-ui-bubble-animation">
+                                <option value="">{{{i18n 'None'}}}</option>
+                                <option value="plusone">{{{i18n 'Plusone'}}}</option>
+                                <option value="shake">{{{i18n 'Shake'}}}</option>
+                                <option value="plusone shake" selected>{{{i18n 'Plusone & Shake'}}}</option>
+                            </select>
                         </label>
                     </div>
                     <div data-keywords="{{{i18n 'broken;offset workaround'}}}">

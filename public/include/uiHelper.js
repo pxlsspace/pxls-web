@@ -246,11 +246,11 @@ const uiHelper = (function() {
         self.elements.mainBubble.attr('position', value);
       });
 
-      // Show the animation to the user when enabling the setting
+      // Show the animation to the user when changing the setting
       settings.ui.bubble.animation.listen(function(value) {
         // Do not show animation during site load
         if (self.pixelsAvailable === -1) return;
-        self.animateMainBubble('shake');
+        self.animateMainBubble(value.split(' '))
       });
 
       $('#setting-ui-bubble-compact').on('click', settings.ui.bubble.compact.toggle);
@@ -721,7 +721,7 @@ const uiHelper = (function() {
     },
     updateAvailable: function(count, cause) {
       if (cause === 'gain' || cause === 'stackGain') {
-        uiHelper.animateMainBubble('shake', 'plusone');
+        self.animateMainBubble(settings.ui.bubble.animation.get().split(' '));
       }
       if (count > 0 && cause === 'stackGain') {
         timer.playAudio();
@@ -873,15 +873,8 @@ const uiHelper = (function() {
     handleFileUrl(url) {
       template.update({ use: true, url, convertMode: 'nearestCustom' });
     },
-    animateMainBubble(...animations) {
+    animateMainBubble(animations) {
       animations.forEach((animation) => {
-        switch (animation) {
-          case 'shake':
-            if (settings.ui.bubble.animation.get() === false) return;
-          default:
-            break;
-        }
-
         const animationClassName = `animate-${animation}`
         if (self.elements.mainBubble.hasClass(animationClassName)) return;
         self.elements.mainBubble.addClass(animationClassName);
