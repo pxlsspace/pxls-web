@@ -1242,7 +1242,7 @@ const chat = (function() {
           if (hasAllGradientColors || hasPermForColor(`gradient.${gradient.name.toLowerCase()}`)) {
             return crel('option', { value: -i - 1, class: `gradient ${uiHelper.getSpecialChatColorClass(-i - 1)}` }, `Gradient ${i}. ${gradient.name}`);
           }
-        }),
+        })
       );
       self.elements.username_color_select[0].value = user.getChatNameColor();
     },
@@ -1412,7 +1412,7 @@ const chat = (function() {
       );
       let nameClasses = 'user';
       if (packet.authorNameColor < 0) {
-        nameClasses += ` gradient ${uiHelper.getSpecialChatColorClass(packet.authorNameColor)}`
+        nameClasses += ` gradient ${uiHelper.getSpecialChatColorClass(packet.authorNameColor)}`;
       }
 
       // Truncate older chat messages by removing the diff of the current message count and the maximum count.

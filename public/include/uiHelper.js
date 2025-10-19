@@ -746,8 +746,8 @@ const uiHelper = (function() {
       return self.specialChatColors;
     },
     getSpecialChatColorClass(idx) {
-      const gradient =  uiHelper.getSpecialChatColors()[-idx - 1];
-      return `gradient--${gradient.name.toLocaleLowerCase()}`
+      const gradient = uiHelper.getSpecialChatColors()[-idx - 1];
+      return `gradient--${gradient.name.toLocaleLowerCase()}`;
     },
     styleElemWithChatNameColor: (elem, colorIdx, layer = 'bg') => {
       elem.className = elem.classList.contains('user') ? 'user' : '';
