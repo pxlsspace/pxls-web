@@ -112,27 +112,6 @@ const uiHelper = (function() {
       }
     ],
     specialChatColors: [],
-    specialChatColorClasses: [
-      // 'rainbow',
-      // ['donator', 'donator--green'],
-      // ['donator', 'donator--gray'],
-      // ['donator', 'donator--synthwave'],
-      // ['donator', 'donator--ace'],
-      // ['donator', 'donator--trans'],
-      // ['donator', 'donator--bi'],
-      // ['donator', 'donator--pan'],
-      // ['donator', 'donator--nonbinary'],
-      // ['donator', 'donator--mines'],
-      // ['donator', 'donator--eggplant'],
-      // ['donator', 'donator--banana'],
-      // ['donator', 'donator--teal'],
-      // ['donator', 'donator--icy'],
-      // ['donator', 'donator--blood'],
-      // ['donator', 'donator--forest'],
-      // ['donator', 'donator--purple'],
-      // ['donator', 'donator--gay'],
-      // ['donator', 'donator--lesbian']
-    ],
     init: function() {
       timer = require('./timer').timer;
       place = require('./place').place;
@@ -545,13 +524,11 @@ const uiHelper = (function() {
       self.specialChatColors = specialChatColors;
 
       let classBuffer = '';
-      specialChatColors.forEach((color) => {
-        const className = 'donator--' + color.name.toLowerCase();
-        // Adding the `donator` class to each gradient is redundant.
-        // Todo: Make it so the `donator` class does not have to be added for each gradient.
-        self.specialChatColorClasses.push(['donator', className]);
-        classBuffer += `.donator.${className}{background-image:linear-gradient(${color.gradient})}`;
-      });
+
+      for (let i = 0; i < specialChatColors.length; i++) {
+        const className = self.getSpecialChatColorClass(-i - 1);
+        classBuffer += `.gradient.${className}{background-image:linear-gradient(${specialChatColors[i].gradient})}`;
+      }
 
       $('<style>')
         .prop('type', 'text/css')
@@ -768,29 +745,23 @@ const uiHelper = (function() {
     getSpecialChatColors() {
       return self.specialChatColors;
     },
-    getSpecialChatColorClasses() {
-      return self.specialChatColorClasses;
+    getSpecialChatColorClass(idx) {
+      const gradient =  uiHelper.getSpecialChatColors()[-idx - 1];
+      return `gradient--${gradient.name.toLocaleLowerCase()}`
     },
     styleElemWithChatNameColor: (elem, colorIdx, layer = 'bg') => {
-      elem.classList.remove(...self.specialChatColorClasses.reduce((acc, val) => {
-        acc.push(...(Array.isArray(val) ? val : [val]));
-        return acc;
-      }, []));
+      elem.className = elem.classList.contains('user') ? 'user' : '';
+
       if (colorIdx >= 0) {
-        switch (layer) {
-          case 'bg':
-            elem.style.backgroundColor = `#${place.getPaletteColorValue(colorIdx)}`;
-            break;
-          case 'color':
-            elem.style.color = `#${place.getPaletteColorValue(colorIdx)}`;
-            break;
-        }
-      } else {
-        elem.style.backgroundColor = null;
-        elem.style.color = null;
-        const classes = self.specialChatColorClasses[-colorIdx - 1];
-        elem.classList.add(...(Array.isArray(classes) ? classes : [classes]));
+        const hex = `#${place.getPaletteColorValue(colorIdx)}`;
+        if (layer === 'color') elem.style.color = hex;
+        else elem.style.backgroundColor = hex;
+        return;
       }
+
+      elem.style.backgroundColor = null;
+      elem.style.color = null;
+      elem.classList.add('gradient', self.getSpecialChatColorClass(colorIdx));
     },
     setLoadingBubbleState: (process, state) => {
       self.loadingStates[process] = state;
@@ -922,7 +893,7 @@ const uiHelper = (function() {
     updateAvailable: self.updateAvailable,
     getAvailable: self.getAvailable,
     getSpecialChatColors: self.getSpecialChatColors,
-    getSpecialChatColorClasses: self.getSpecialChatColorClasses,
+    getSpecialChatColorClass: self.getSpecialChatColorClass,
     setPlaceableText: self.setPlaceableText,
     setMax: self.setMax,
     setDiscordName: self.setDiscordName,

@@ -393,7 +393,7 @@ dt {
     transform: rotateZ(360deg); /* force rendering onto GPU if available */
 }
 
-@keyframes donator-move {
+@keyframes gradient-move {
     0% {
         background-position: 5px 0%;
     }
@@ -402,9 +402,9 @@ dt {
     }
 }
 
-.donator {
+.gradient {
     background-size: 500px 100%;
-    animation: donator-move 4s linear 1ms infinite;
+    animation: gradient-move 4s linear 1ms infinite;
     transform: rotateZ(360deg); /* force rendering onto GPU if available */
 }
 
@@ -2161,14 +2161,14 @@ ul.chat-history, ul.chatban-history {
     text-shadow: none !important;
 }
 
-#chat-select-username-color.donator {
+#chat-select-username-color.gradient {
     background-color: black;
     text-shadow: 0 0 0.5em black;
     color: white;
 }
 
 /*for reference: linear-gradient(45deg, #94E044, #02BE01 25%, #005F00 50%, #02BE01 75%, #94E044 90%)*/
-@keyframes donator-transition-bg {
+@keyframes gradient-transition-bg {
     0% { background-color: #94E044; }
     25% { background-color: #02BE01; }
     50% { background-color: #005F00; }
@@ -2176,12 +2176,12 @@ ul.chat-history, ul.chatban-history {
     90% { background-color: #94E044; }
 }
 
-#chat-select-username-color option.donator {
-    animation: donator-transition-bg 4s linear infinite;
+#chat-select-username-color option.gradient {
+    animation: gradient-transition-bg 4s linear infinite;
     background-color: green;
 }
 
-.user.donator {
+.user.gradient {
     display: inline-block;
     -webkit-background-clip: text;
     background-clip: text;

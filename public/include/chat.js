@@ -734,19 +734,22 @@ const chat = (function() {
       self.elements.user_unignore_button.on('click', function() {
         if (self.removeIgnore(self.elements.user_ignore_select.val())) {
           self.elements.user_ignore_select.find(`option[value="${self.elements.user_ignore_select.val()}"]`).remove();
+          self.elements.user_ignore_feedback_label.fadeOut(0);
           self.elements.user_ignore_feedback_label.text('User unignored.');
-          self.elements.user_ignore_feedback_label.css('color', 'var(--text-red-color)');
-          self.elements.user_ignore_feedback_label.css('display', 'block');
+          self.elements.user_ignore_feedback_label.addClass('text-green').removeClass('text-red');
+          self.elements.user_ignore_feedback_label.fadeIn();
           setTimeout(() => self.elements.user_ignore_feedback_label.fadeOut(500), 3000);
         } else if (self.ignored.length === 0) {
+          self.elements.user_ignore_feedback_label.fadeOut(0);
           self.elements.user_ignore_feedback_label.text('You haven\'t ignored any users. Congratulations!');
-          self.elements.user_ignore_feedback_label.css('color', 'var(--text-red-color)');
-          self.elements.user_ignore_feedback_label.css('display', 'block');
+          self.elements.user_ignore_feedback_label.addClass('text-red').removeClass('text-green');
+          self.elements.user_ignore_feedback_label.fadeIn();
           setTimeout(() => self.elements.user_ignore_feedback_label.fadeOut(500), 3000);
         } else {
+          self.elements.user_ignore_feedback_label.fadeOut(0);
           self.elements.user_ignore_feedback_label.text('Failed to unignore user. Either they weren\'t actually ignored, or an error occurred. Contact a developer if the problem persists.');
-          self.elements.user_ignore_feedback_label.css('color', 'var(--text-red-color)');
-          self.elements.user_ignore_feedback_label.css('display', 'block');
+          self.elements.user_ignore_feedback_label.addClass('text-green').removeClass('text-red');
+          self.elements.user_ignore_feedback_label.fadeIn();
           setTimeout(() => self.elements.user_ignore_feedback_label.fadeOut(500), 5000);
         }
       });
@@ -789,15 +792,23 @@ const chat = (function() {
           success: () => {
             user.setChatNameColor(color);
             self.updateSelectedNameColor(color);
-            self.elements.username_color_feedback_label.innerText = 'Color updated';
+            self.elements.username_color_feedback_label.fadeOut(0);
+            self.elements.username_color_feedback_label.removeClass('text-red').addClass('text-green');
+            self.elements.username_color_feedback_label.text('Color updated!');
+            self.elements.username_color_feedback_label.fadeIn();
+            setTimeout(() => self.elements.username_color_feedback_label.fadeOut(500), 3000);
           },
           error: (data) => {
             const err = data.responseJSON && data.responseJSON.details ? data.responseJSON.details : data.responseText;
+            self.elements.username_color_feedback_label.fadeOut(0);
+            self.elements.username_color_feedback_label.removeClass('text-green').addClass('text-red');
             if (data.status === 200) {
-              self.elements.username_color_feedback_label.innerText = err;
+              self.elements.username_color_feedback_label.text(err);
             } else {
-              self.elements.username_color_feedback_label.innerText = 'Couldn\'t change chat color: ' + err;
+              self.elements.username_color_feedback_label.text('Couldn\'t change chat color: ' + err);
             }
+            self.elements.username_color_feedback_label.fadeIn();
+            setTimeout(() => self.elements.username_color_feedback_label.fadeOut(500), 3000);
           },
           complete: () => {
             self.elements.username_color_select.value = user.getChatNameColor();
@@ -1220,18 +1231,18 @@ const chat = (function() {
     },
     _populateUsernameColor: () => {
       const hasPermForColor = (name) => user.hasPermission(`chat.usercolor.${name}`);
-      const hasAllDonatorColors = hasPermForColor('donator') || hasPermForColor('donator.*');
+      const hasAllGradientColors = hasPermForColor('gradient') || hasPermForColor('gradient.*');
       self.elements.username_color_select.empty().append(
-        uiHelper.getSpecialChatColors().map((gradient, i) => {
-          if (hasAllDonatorColors || hasPermForColor(`donator.${gradient.name.toLowerCase()}`)) {
-            return crel('option', { value: -(i + 1), class: `donator donator--${gradient.name.toLowerCase()}` }, `*. Donator ${gradient.name}`);
-          }
-        }),
         place.palette.map(({ name, value: hex }, i) => crel('option', {
           value: i,
           'data-idx': i,
           style: `background-color: #${hex}`
-        }, `${i}. ${name}`))
+        }, `${i}. ${name}`)),
+        uiHelper.getSpecialChatColors().map((gradient, i) => {
+          if (hasAllGradientColors || hasPermForColor(`gradient.${gradient.name.toLowerCase()}`)) {
+            return crel('option', { value: -i - 1, class: `gradient ${uiHelper.getSpecialChatColorClass(-i - 1)}` }, `Gradient ${i}. ${gradient.name}`);
+          }
+        }),
       );
       self.elements.username_color_select[0].value = user.getChatNameColor();
     },
@@ -1401,7 +1412,7 @@ const chat = (function() {
       );
       let nameClasses = 'user';
       if (packet.authorNameColor < 0) {
-        nameClasses += ` ${uiHelper.getSpecialChatColorClasses()[-packet.authorNameColor - 1].join(' ')}`;
+        nameClasses += ` gradient ${uiHelper.getSpecialChatColorClass(packet.authorNameColor)}`
       }
 
       // Truncate older chat messages by removing the diff of the current message count and the maximum count.
