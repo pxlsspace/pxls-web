@@ -111,26 +111,27 @@ const uiHelper = (function() {
         color: '#5865F2'
       }
     ],
+    specialChatColors: [],
     specialChatColorClasses: [
-      'rainbow',
-      ['donator', 'donator--green'],
-      ['donator', 'donator--gray'],
-      ['donator', 'donator--synthwave'],
-      ['donator', 'donator--ace'],
-      ['donator', 'donator--trans'],
-      ['donator', 'donator--bi'],
-      ['donator', 'donator--pan'],
-      ['donator', 'donator--nonbinary'],
-      ['donator', 'donator--mines'],
-      ['donator', 'donator--eggplant'],
-      ['donator', 'donator--banana'],
-      ['donator', 'donator--teal'],
-      ['donator', 'donator--icy'],
-      ['donator', 'donator--blood'],
-      ['donator', 'donator--forest'],
-      ['donator', 'donator--purple'],
-      ['donator', 'donator--gay'],
-      ['donator', 'donator--lesbian']
+      // 'rainbow',
+      // ['donator', 'donator--green'],
+      // ['donator', 'donator--gray'],
+      // ['donator', 'donator--synthwave'],
+      // ['donator', 'donator--ace'],
+      // ['donator', 'donator--trans'],
+      // ['donator', 'donator--bi'],
+      // ['donator', 'donator--pan'],
+      // ['donator', 'donator--nonbinary'],
+      // ['donator', 'donator--mines'],
+      // ['donator', 'donator--eggplant'],
+      // ['donator', 'donator--banana'],
+      // ['donator', 'donator--teal'],
+      // ['donator', 'donator--icy'],
+      // ['donator', 'donator--blood'],
+      // ['donator', 'donator--forest'],
+      // ['donator', 'donator--purple'],
+      // ['donator', 'donator--gay'],
+      // ['donator', 'donator--lesbian']
     ],
     init: function() {
       timer = require('./timer').timer;
@@ -540,6 +541,23 @@ const uiHelper = (function() {
 
       self._bannerIntervalTick();
     },
+    initSpecialChatColors(specialChatColors) {
+      self.specialChatColors = specialChatColors;
+
+      let classBuffer = '';
+      specialChatColors.forEach((color) => {
+        const className = 'donator--' + color.name.toLowerCase()
+        // Adding the `donator` class to each gradient is redundant.
+        // Todo: Make it so the `donator` class does not have to be added for each gradient.
+        self.specialChatColorClasses.push(['donator', className])
+        classBuffer += `.donator.${className}{background-image:linear-gradient(${color.gradient})}`
+      })
+
+      $('<style>')
+      .prop('type', 'text/css')
+      .text(classBuffer)
+      .appendTo('head');
+    },
     _initMultiTabDetection() {
       let handleUnload;
 
@@ -747,6 +765,12 @@ const uiHelper = (function() {
     getAvailable() {
       return self.pixelsAvailable;
     },
+    getSpecialChatColors() {
+      return self.specialChatColors;
+    },
+    getSpecialChatColorClasses() {
+      return self.specialChatColorClasses;
+    },
     styleElemWithChatNameColor: (elem, colorIdx, layer = 'bg') => {
       elem.classList.remove(...self.specialChatColorClasses.reduce((acc, val) => {
         acc.push(...(Array.isArray(val) ? val : [val]));
@@ -893,9 +917,12 @@ const uiHelper = (function() {
   return {
     init: self.init,
     initBanner: self.initBanner,
+    initSpecialChatColors: self.initSpecialChatColors,
     updateTimer: self.updateTimer,
     updateAvailable: self.updateAvailable,
     getAvailable: self.getAvailable,
+    getSpecialChatColors: self.getSpecialChatColors,
+    getSpecialChatColorClasses: self.getSpecialChatColorClasses,
     setPlaceableText: self.setPlaceableText,
     setMax: self.setMax,
     setDiscordName: self.setDiscordName,

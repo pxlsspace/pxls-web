@@ -1222,25 +1222,11 @@ const chat = (function() {
       const hasPermForColor = (name) => user.hasPermission(`chat.usercolor.${name}`);
       const hasAllDonatorColors = hasPermForColor('donator') || hasPermForColor('donator.*');
       self.elements.username_color_select.empty().append(
-        hasPermForColor('rainbow') ? crel('option', { value: -1, class: 'rainbow' }, '*. Rainbow') : null,
-        hasAllDonatorColors || hasPermForColor('donator.green') ? crel('option', { value: -2, class: 'donator donator--green' }, '*. Donator Green') : null,
-        hasAllDonatorColors || hasPermForColor('donator.gray') ? crel('option', { value: -3, class: 'donator donator--gray' }, '*. Donator Gray') : null,
-        hasAllDonatorColors || hasPermForColor('donator.synthwave') ? crel('option', { value: -4, class: 'donator donator--synthwave' }, '*. Donator Synthwave') : null,
-        hasAllDonatorColors || hasPermForColor('donator.ace') ? crel('option', { value: -5, class: 'donator donator--ace' }, '*. Donator Asexual') : null,
-        hasAllDonatorColors || hasPermForColor('donator.trans') ? crel('option', { value: -6, class: 'donator donator--trans' }, '*. Donator Transgender') : null,
-        hasAllDonatorColors || hasPermForColor('donator.bi') ? crel('option', { value: -7, class: 'donator donator--bi' }, '*. Donator Bisexual') : null,
-        hasAllDonatorColors || hasPermForColor('donator.pan') ? crel('option', { value: -8, class: 'donator donator--pan' }, '*. Donator Pansexual') : null,
-        hasAllDonatorColors || hasPermForColor('donator.nonbinary') ? crel('option', { value: -9, class: 'donator donator--nonbinary' }, '*. Donator Nonbinary') : null,
-        hasAllDonatorColors || hasPermForColor('donator.mines') ? crel('option', { value: -10, class: 'donator donator--mines' }, '*. Donator Mines') : null,
-        hasAllDonatorColors || hasPermForColor('donator.eggplant') ? crel('option', { value: -11, class: 'donator donator--eggplant' }, '*. Donator Eggplant') : null,
-        hasAllDonatorColors || hasPermForColor('donator.banana') ? crel('option', { value: -12, class: 'donator donator--banana' }, '*. Donator Banana') : null,
-        hasAllDonatorColors || hasPermForColor('donator.teal') ? crel('option', { value: -13, class: 'donator donator--teal' }, '*. Donator Teal') : null,
-        hasAllDonatorColors || hasPermForColor('donator.icy') ? crel('option', { value: -14, class: 'donator donator--icy' }, '*. Donator Icy') : null,
-        hasAllDonatorColors || hasPermForColor('donator.icy') ? crel('option', { value: -15, class: 'donator donator--blood' }, '*. Donator Blood') : null,
-        hasAllDonatorColors || hasPermForColor('donator.forest') ? crel('option', { value: -16, class: 'donator donator--forest' }, '*. Donator Forest') : null,
-        hasAllDonatorColors || hasPermForColor('donator.purple') ? crel('option', { value: -17, class: 'donator donator--purple' }, '*. Donator Purple') : null,
-        hasAllDonatorColors || hasPermForColor('donator.gay') ? crel('option', { value: -18, class: 'donator donator--gay' }, '*. Donator Gay') : null,
-        hasAllDonatorColors || hasPermForColor('donator.lesbian') ? crel('option', { value: -19, class: 'donator donator--lesbian' }, '*. Donator Lesbian') : null,
+        uiHelper.getSpecialChatColors().map((gradient, i) => {
+            if (hasAllDonatorColors || hasPermForColor(`donator.${gradient.name.toLowerCase()}`))
+            return crel('option', { value: -(i+1), class: `donator donator--${gradient.name.toLowerCase()}` }, `*. Donator ${gradient.name}`)
+          }
+        ),
         place.palette.map(({ name, value: hex }, i) => crel('option', {
           value: i,
           'data-idx': i,
@@ -1414,7 +1400,9 @@ const chat = (function() {
         })
       );
       let nameClasses = 'user';
-      if (Array.isArray(packet.authorNameClass)) nameClasses += ` ${packet.authorNameClass.join(' ')}`;
+      if (packet.authorNameColor < 0) {
+        nameClasses += ` ${uiHelper.getSpecialChatColorClasses()[-packet.authorNameColor - 1].join(' ')}`
+      }
 
       // Truncate older chat messages by removing the diff of the current message count and the maximum count.
       const diff = self.elements.body.children().length - settings.chat.truncate.max.get();

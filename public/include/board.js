@@ -480,6 +480,7 @@ const board = (function() {
         uiHelper.setMax(data.maxStacked);
         chat.webinit(data);
         uiHelper.initBanner(data.chatBannerText);
+        uiHelper.initSpecialChatColors(data.chatGradients)
         chromeOffsetWorkaround.update();
         if (data.captchaKey) {
           $('.g-recaptcha').attr('data-sitekey', data.captchaKey);
