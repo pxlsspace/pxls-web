@@ -723,7 +723,6 @@ const uiHelper = (function() {
       self.elements.stackCount.text(`${count}/${self.maxStacked}`);
       self.pixelsAvailable = count;
       document.title = uiHelper.getTitle();
-      
       if (cause === 'gain' || cause === 'stackGain') {
         self.animateMainBubble(settings.ui.bubble.animation.get().split(' '));
       }
