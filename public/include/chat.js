@@ -1223,10 +1223,10 @@ const chat = (function() {
       const hasAllDonatorColors = hasPermForColor('donator') || hasPermForColor('donator.*');
       self.elements.username_color_select.empty().append(
         uiHelper.getSpecialChatColors().map((gradient, i) => {
-            if (hasAllDonatorColors || hasPermForColor(`donator.${gradient.name.toLowerCase()}`))
-            return crel('option', { value: -(i+1), class: `donator donator--${gradient.name.toLowerCase()}` }, `*. Donator ${gradient.name}`)
+          if (hasAllDonatorColors || hasPermForColor(`donator.${gradient.name.toLowerCase()}`)) {
+            return crel('option', { value: -(i + 1), class: `donator donator--${gradient.name.toLowerCase()}` }, `*. Donator ${gradient.name}`);
           }
-        ),
+        }),
         place.palette.map(({ name, value: hex }, i) => crel('option', {
           value: i,
           'data-idx': i,
@@ -1401,7 +1401,7 @@ const chat = (function() {
       );
       let nameClasses = 'user';
       if (packet.authorNameColor < 0) {
-        nameClasses += ` ${uiHelper.getSpecialChatColorClasses()[-packet.authorNameColor - 1].join(' ')}`
+        nameClasses += ` ${uiHelper.getSpecialChatColorClasses()[-packet.authorNameColor - 1].join(' ')}`;
       }
 
       // Truncate older chat messages by removing the diff of the current message count and the maximum count.

@@ -546,17 +546,17 @@ const uiHelper = (function() {
 
       let classBuffer = '';
       specialChatColors.forEach((color) => {
-        const className = 'donator--' + color.name.toLowerCase()
+        const className = 'donator--' + color.name.toLowerCase();
         // Adding the `donator` class to each gradient is redundant.
         // Todo: Make it so the `donator` class does not have to be added for each gradient.
-        self.specialChatColorClasses.push(['donator', className])
-        classBuffer += `.donator.${className}{background-image:linear-gradient(${color.gradient})}`
-      })
+        self.specialChatColorClasses.push(['donator', className]);
+        classBuffer += `.donator.${className}{background-image:linear-gradient(${color.gradient})}`;
+      });
 
       $('<style>')
-      .prop('type', 'text/css')
-      .text(classBuffer)
-      .appendTo('head');
+        .prop('type', 'text/css')
+        .text(classBuffer)
+        .appendTo('head');
     },
     _initMultiTabDetection() {
       let handleUnload;
