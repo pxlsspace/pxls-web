@@ -245,6 +245,7 @@ module.exports.place = (function() {
         }
       });
       socket.on('pixel', function(data) {
+        $(window).trigger('pxls:pixelPlacement', data.pixels);
         $.map(data.pixels, function(px) {
           board.setPixelIndex(px.x, px.y, px.color, false);
         });
