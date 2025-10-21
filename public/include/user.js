@@ -3,7 +3,6 @@ const { socket } = require('./socket');
 const { modal } = require('./modal');
 const { place } = require('./place');
 const { chat } = require('./chat');
-const { uiHelper } = require('./uiHelper');
 const { lookup } = require('./lookup');
 const { ban } = require('./ban');
 
@@ -76,58 +75,6 @@ const user = (function() {
           .replace('{0}', data.legal.termsUrl)
           .replace('{1}', data.legal.privacyUrl));
       }
-
-      const signInPromptLink = self.elements.signInWith.find('a');
-
-      const authServices = Object.values(data.authServices);
-      if (authServices.length === 1) {
-        const service = authServices[0];
-        signInPromptLink.text(__('Sign in with {0}').replace('{0}', service.name));
-        signInPromptLink.attr('href', `/signin/${service.id}?redirect=1`);
-        signInPromptLink.click(function(evt) {
-          if (window.open(`/signin/${service.id}?redirect=1`, '_blank')) {
-            evt.preventDefault();
-            return;
-          }
-          ls.set('auth_same_window', true);
-        });
-        return;
-      }
-
-      signInPromptLink.click(function(evt) {
-        evt.preventDefault();
-
-        const cancelButton = crel('button', { class: 'float-right text-button' }, __('Cancel'));
-        cancelButton.addEventListener('click', function() {
-          self.elements.prompt.fadeOut(200);
-        });
-
-        self.elements.prompt[0].innerHTML = '';
-        crel(self.elements.prompt[0],
-          crel('div', { class: 'content' },
-            crel('h1', __('Sign in with...')),
-            crel('ul',
-              Object.values(data.authServices).map(service => {
-                const anchor = crel('a', { href: `/signin/${service.id}?redirect=1` }, service.name);
-                anchor.addEventListener('click', function(e) {
-                  if (window.open(this.href, '_blank')) {
-                    e.preventDefault();
-                    return;
-                  }
-                  ls.set('auth_same_window', true);
-                });
-                const toRet = crel('li', anchor);
-                if (!service.registrationEnabled) {
-                  crel(toRet, crel('span', { style: 'font-style: italic; font-size: .75em; font-weight: bold; color: red; margin-left: .5em' }, __('New Accounts Disabled')));
-                }
-                return toRet;
-              })
-            )
-          ),
-          cancelButton
-        );
-        self.elements.prompt.fadeIn(200);
-      });
     },
     wsinit: function() {
       if (ls.get('auth_proceed')) {
@@ -135,37 +82,6 @@ const user = (function() {
         ls.remove('auth_proceed');
         self.signin();
       }
-    },
-    doSignup: function() {
-      if (!self.pendingSignupToken) return;
-
-      $.post({
-        type: 'POST',
-        url: '/signup',
-        data: {
-          token: self.pendingSignupToken,
-          username: self.elements.signup.find('#signup-username-input').val(),
-          discord: self.elements.signup.find('#signup-discord-input').val()
-        },
-        success: function() {
-          self.elements.signup.find('#error').text('');
-          self.elements.signup.find('#signup-username-input').val('');
-          self.elements.signup.find('#signup-discord-input').val('');
-          self.elements.signup.fadeOut(200);
-          socket.reconnectSocket();
-          self.pendingSignupToken = null;
-        },
-        error: function(data) {
-          let errorMsg;
-          if (data.responseJSON && data.responseJSON.message) {
-            errorMsg = data.responseJSON.message;
-          } else {
-            errorMsg = data.responseText;
-          }
-          self.elements.signup.find('#error').text(errorMsg);
-        }
-      });
-      // self.pendingSignupToken = null;
     },
     doSignOut: function() {
       return fetch('/logout').then(() => {
@@ -245,7 +161,6 @@ const user = (function() {
         self.roles = data.roles;
         $(window).trigger('pxls:user:loginState', [true]);
         self.renameRequested = data.renameRequested;
-        uiHelper.setDiscordName(data.discordName || null);
         self.elements.loginOverlay.fadeOut(200);
         self.elements.userInfo.find('span#username').html(crel('a', {
           href: `/profile/${data.username}`,
@@ -335,7 +250,7 @@ const user = (function() {
       });
       socket.on('rename_success', e => {
         self.username = e.newName;
-        self.elements.userInfo.find('span.name').text(e.newName);
+        self.elements.userInfo.find('#username > a').text(e.newName);
       });
     },
     _handleRenameSubmit: function(event) {
