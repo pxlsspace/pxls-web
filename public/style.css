@@ -789,11 +789,11 @@ dt {
 }
 
 /* We do this so the animation preview still shows even when the cooldown is active */
-#main-bubble.animate-plusone #cooldown {
+#main-bubble.animate-plusone #cooldown, #main-bubble.animate-pulse #cooldown {
     display: none !important;
 }
 
-#main-bubble.animate-plusone #placement-info {
+#main-bubble.animate-plusone #placement-info, #main-bubble.animate-pulse #placement-info {
     display: flex !important;
 }
 

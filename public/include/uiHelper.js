@@ -720,15 +720,15 @@ const uiHelper = (function() {
       }
     },
     updateAvailable: function(count, cause) {
+      self.elements.stackCount.text(`${count}/${self.maxStacked}`);
+      self.pixelsAvailable = count;
+      document.title = uiHelper.getTitle();
       if (cause === 'gain' || cause === 'stackGain') {
         self.animateMainBubble(settings.ui.bubble.animation.get().split(' '));
       }
       if (count > 0 && cause === 'stackGain') {
         timer.playAudio();
       }
-      self.elements.stackCount.text(`${count}/${self.maxStacked}`);
-      self.pixelsAvailable = count;
-      document.title = uiHelper.getTitle();
     },
     setMax(maxStacked) {
       self.maxStacked = maxStacked + 1;
