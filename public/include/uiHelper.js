@@ -111,27 +111,7 @@ const uiHelper = (function() {
         color: '#5865F2'
       }
     ],
-    specialChatColorClasses: [
-      'rainbow',
-      ['donator', 'donator--green'],
-      ['donator', 'donator--gray'],
-      ['donator', 'donator--synthwave'],
-      ['donator', 'donator--ace'],
-      ['donator', 'donator--trans'],
-      ['donator', 'donator--bi'],
-      ['donator', 'donator--pan'],
-      ['donator', 'donator--nonbinary'],
-      ['donator', 'donator--mines'],
-      ['donator', 'donator--eggplant'],
-      ['donator', 'donator--banana'],
-      ['donator', 'donator--teal'],
-      ['donator', 'donator--icy'],
-      ['donator', 'donator--blood'],
-      ['donator', 'donator--forest'],
-      ['donator', 'donator--purple'],
-      ['donator', 'donator--gay'],
-      ['donator', 'donator--lesbian']
-    ],
+    specialChatColors: [],
     init: function() {
       timer = require('./timer').timer;
       place = require('./place').place;
@@ -540,6 +520,21 @@ const uiHelper = (function() {
 
       self._bannerIntervalTick();
     },
+    initSpecialChatColors(specialChatColors) {
+      self.specialChatColors = specialChatColors;
+
+      let classBuffer = '';
+
+      for (let i = 0; i < specialChatColors.length; i++) {
+        const className = self.getSpecialChatColorClass(-i - 1);
+        classBuffer += `.gradient.${className}{background-image:linear-gradient(${specialChatColors[i].gradient})}`;
+      }
+
+      $('<style>')
+        .prop('type', 'text/css')
+        .text(classBuffer)
+        .appendTo('head');
+    },
     _initMultiTabDetection() {
       let handleUnload;
 
@@ -747,26 +742,26 @@ const uiHelper = (function() {
     getAvailable() {
       return self.pixelsAvailable;
     },
+    getSpecialChatColors() {
+      return self.specialChatColors;
+    },
+    getSpecialChatColorClass(idx) {
+      const gradient = uiHelper.getSpecialChatColors()[-idx - 1];
+      return `gradient--${gradient.name.toLocaleLowerCase()}`;
+    },
     styleElemWithChatNameColor: (elem, colorIdx, layer = 'bg') => {
-      elem.classList.remove(...self.specialChatColorClasses.reduce((acc, val) => {
-        acc.push(...(Array.isArray(val) ? val : [val]));
-        return acc;
-      }, []));
+      elem.className = elem.classList.contains('user') ? 'user' : '';
+
       if (colorIdx >= 0) {
-        switch (layer) {
-          case 'bg':
-            elem.style.backgroundColor = `#${place.getPaletteColorValue(colorIdx)}`;
-            break;
-          case 'color':
-            elem.style.color = `#${place.getPaletteColorValue(colorIdx)}`;
-            break;
-        }
-      } else {
-        elem.style.backgroundColor = null;
-        elem.style.color = null;
-        const classes = self.specialChatColorClasses[-colorIdx - 1];
-        elem.classList.add(...(Array.isArray(classes) ? classes : [classes]));
+        const hex = `#${place.getPaletteColorValue(colorIdx)}`;
+        if (layer === 'color') elem.style.color = hex;
+        else elem.style.backgroundColor = hex;
+        return;
       }
+
+      elem.style.backgroundColor = null;
+      elem.style.color = null;
+      elem.classList.add('gradient', self.getSpecialChatColorClass(colorIdx));
     },
     setLoadingBubbleState: (process, state) => {
       self.loadingStates[process] = state;
@@ -893,9 +888,12 @@ const uiHelper = (function() {
   return {
     init: self.init,
     initBanner: self.initBanner,
+    initSpecialChatColors: self.initSpecialChatColors,
     updateTimer: self.updateTimer,
     updateAvailable: self.updateAvailable,
     getAvailable: self.getAvailable,
+    getSpecialChatColors: self.getSpecialChatColors,
+    getSpecialChatColorClass: self.getSpecialChatColorClass,
     setPlaceableText: self.setPlaceableText,
     setMax: self.setMax,
     setDiscordName: self.setDiscordName,
@@ -932,6 +930,18 @@ const uiHelper = (function() {
       return serviceWorkerHelper.hasSupport
         ? self._workerIsTabFocused
         : ls.get('tabs.has-focus') === self.tabId;
+    },
+    fadeInAndOut: (elem) => {
+      const $elem = $(elem);
+      $elem.stop(true, true);
+      const pendingTimeout = $elem.data('fadeTimeout');
+      if (pendingTimeout) clearTimeout(pendingTimeout);
+      $elem.fadeIn(200);
+      const id = setTimeout(() => {
+        $elem.fadeOut(200);
+        $elem.removeData('fadeTimeout');
+      }, 2500);
+      $elem.data('fadeTimeout', id);
     },
     prettifyRange: self.prettifyRange,
     handleFile: self.handleFile,
