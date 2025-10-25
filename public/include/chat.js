@@ -732,26 +732,27 @@ const chat = (function() {
       );
 
       self.elements.user_unignore_button.on('click', function() {
+        const label = self.elements.user_ignore_feedback_label.fadeOut(0);
+
         if (self.removeIgnore(self.elements.user_ignore_select.val())) {
           self.elements.user_ignore_select.find(`option[value="${self.elements.user_ignore_select.val()}"]`).remove();
-          self.elements.user_ignore_feedback_label.fadeOut(0);
-          self.elements.user_ignore_feedback_label.text('User unignored.');
-          self.elements.user_ignore_feedback_label.addClass('text-green').removeClass('text-red');
-          self.elements.user_ignore_feedback_label.fadeIn();
-          setTimeout(() => self.elements.user_ignore_feedback_label.fadeOut(500), 3000);
+          label
+            .text('User unignored.')
+            .addClass('text-green')
+            .removeClass('text-red');
         } else if (self.ignored.length === 0) {
-          self.elements.user_ignore_feedback_label.fadeOut(0);
-          self.elements.user_ignore_feedback_label.text('You haven\'t ignored any users. Congratulations!');
-          self.elements.user_ignore_feedback_label.addClass('text-red').removeClass('text-green');
-          self.elements.user_ignore_feedback_label.fadeIn();
-          setTimeout(() => self.elements.user_ignore_feedback_label.fadeOut(500), 3000);
+          label
+            .text('You haven\'t ignored any users. Congratulations!')
+            .addClass('text-red')
+            .removeClass('text-green');
         } else {
-          self.elements.user_ignore_feedback_label.fadeOut(0);
-          self.elements.user_ignore_feedback_label.text('Failed to unignore user. Either they weren\'t actually ignored, or an error occurred. Contact a developer if the problem persists.');
-          self.elements.user_ignore_feedback_label.addClass('text-green').removeClass('text-red');
-          self.elements.user_ignore_feedback_label.fadeIn();
-          setTimeout(() => self.elements.user_ignore_feedback_label.fadeOut(500), 5000);
+          label
+            .text('Failed to unignore user. Either they weren\'t actually ignored, or an error occurred. Contact a developer if the problem persists.')
+            .addClass('text-green')
+            .removeClass('text-red');
         }
+
+        uiHelper.fadeInAndOut(label);
       });
     },
     disable: () => {
@@ -783,6 +784,8 @@ const chat = (function() {
         self.elements.username_color_select.disabled = true;
 
         const color = this.value >> 0;
+        const label = self.elements.username_color_feedback_label.fadeOut(0);
+
         $.post({
           type: 'POST',
           url: '/chat/setColor',
@@ -791,28 +794,23 @@ const chat = (function() {
           },
           success: () => {
             user.setChatNameColor(color);
+
             self.updateSelectedNameColor(color);
-            self.elements.username_color_feedback_label.fadeOut(0);
-            self.elements.username_color_feedback_label.removeClass('text-red').addClass('text-green');
-            self.elements.username_color_feedback_label.text('Color updated!');
-            self.elements.username_color_feedback_label.fadeIn();
-            setTimeout(() => self.elements.username_color_feedback_label.fadeOut(500), 3000);
+            label
+              .removeClass('text-red').addClass('text-green')
+              .text('Color updated!');
           },
           error: (data) => {
             const err = data.responseJSON && data.responseJSON.details ? data.responseJSON.details : data.responseText;
-            self.elements.username_color_feedback_label.fadeOut(0);
-            self.elements.username_color_feedback_label.removeClass('text-green').addClass('text-red');
-            if (data.status === 200) {
-              self.elements.username_color_feedback_label.text(err);
-            } else {
-              self.elements.username_color_feedback_label.text('Couldn\'t change chat color: ' + err);
-            }
-            self.elements.username_color_feedback_label.fadeIn();
-            setTimeout(() => self.elements.username_color_feedback_label.fadeOut(500), 3000);
+            label
+              .text('Couldn\'t change chat color: ' + err)
+              .removeClass('text-green')
+              .addClass('text-red');
           },
           complete: () => {
             self.elements.username_color_select.value = user.getChatNameColor();
             self.elements.username_color_select.disabled = false;
+            uiHelper.fadeInAndOut(label);
           }
         });
       });

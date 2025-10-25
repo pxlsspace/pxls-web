@@ -931,6 +931,18 @@ const uiHelper = (function() {
         ? self._workerIsTabFocused
         : ls.get('tabs.has-focus') === self.tabId;
     },
+    fadeInAndOut: (elem) => {
+      const $elem = $(elem);
+      $elem.stop(true, true);
+      const pendingTimeout = $elem.data('fadeTimeout');
+      if (pendingTimeout) clearTimeout(pendingTimeout);
+      $elem.fadeIn(200);
+      const id = setTimeout(() => {
+        $elem.fadeOut(200);
+        $elem.removeData('fadeTimeout');
+      }, 2500);
+      $elem.data('fadeTimeout', id);
+    },
     prettifyRange: self.prettifyRange,
     handleFile: self.handleFile,
     animateMainBubble: self.animateMainBubble
