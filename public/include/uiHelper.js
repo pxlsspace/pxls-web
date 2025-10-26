@@ -38,7 +38,6 @@ const uiHelper = (function() {
       btnForceAudioUpdate: $('#btnForceAudioUpdate'),
       themeSelect: $('#setting-ui-theme-index'),
       themeColorMeta: $('meta[name="theme-color"]'),
-      txtDiscordName: $('#txtDiscordName'),
       bottomBanner: $('#bottom-banner'),
       dragDropTarget: $('#drag-drop-target'),
       dragDrop: $('#drag-drop'),
@@ -140,7 +139,6 @@ const uiHelper = (function() {
       self._initThemes();
       self._initStack();
       self._initAudio();
-      self._initAccount();
       self._initMultiTabDetection();
       self.prettifyRange('input[type=range]');
 
@@ -506,21 +504,6 @@ const uiHelper = (function() {
         settings.audio.alert.src.reset();
       });
     },
-    _initAccount: function() {
-      self.elements.txtDiscordName.keydown(function(evt) {
-        if (evt.key === 'Enter' || evt.which === 13) {
-          self.handleDiscordNameSet();
-        }
-        evt.stopPropagation();
-      });
-      $('#btnDiscordNameSet').click(() => {
-        self.handleDiscordNameSet();
-      });
-      $('#btnDiscordNameRemove').click(() => {
-        self.setDiscordName('');
-        self.handleDiscordNameSet();
-      });
-    },
     initBanner(textList) {
       self.banner.enabled = settings.ui.chat.banner.enable.get() !== false;
 
@@ -660,56 +643,6 @@ const uiHelper = (function() {
         self._bannerIntervalTick();
       }
     },
-    handleDiscordNameSet() {
-      let name = self.elements.txtDiscordName.val();
-
-      if (name === null || name === undefined) {
-        self.setDiscordName('');
-        return self.handleDiscordNameSet();
-      } else if (typeof name !== 'string') return modal.showText(__('Discord name must be a string.') + '\n' + __('Wait, what - how did this happened?'));
-
-      name = name.trim();
-      self.setDiscordName(name);
-
-      // TODO: server-side real Discord username validation
-      // Discord username regex: ^[a-z0-9_\.]{2,32}$
-      // Discord display name regex: ^.{1,32}$
-      // Currently allowing both
-
-      if (name.length > 32) modal.showText(__('Discord name is not valid.'));
-      else {
-        $.post({
-          type: 'POST',
-          url: '/setDiscordName',
-          data: {
-            discordName: name
-          },
-          success: function() {
-            modal.showText(name.length > 0 ? __('Discord name updated successfully') : __('Discord name reset successfully'));
-          },
-          error: function(data) {
-            const err = data.responseJSON && data.responseJSON.details ? data.responseJSON.details : data.responseText;
-
-            if (data.status === 200) modal.showText(err); // Seems to be caused when response body isn't json? Hope that the server sent good enough details.
-            else if (/(<h1>(.*)<\/h1>)/.test(err) && /<p>(.*)<\/p>/.test(err)) {
-              modal.show(modal.buildDom(
-                crel('h2', { class: 'modal-title' }, __('Error') + ' ' + data.status),
-                crel('div',
-                  crel('h3', { style: 'margin: 0; text-align: center;' }, __('Couldn\'t change discord name: ').trim()),
-                  crel('h4', { style: 'text-align: center;' }, err.match(/<h1>(.*)<\/h1>/)[1]),
-                  crel('p', { style: 'margin: 0;' }, err.match(/<p>(.*)<\/p>/)[1])
-                ),
-                crel('p', { style: 'margin: 0; font-style: normal; text-align: left;' }, data.status + ': ' + data.statusText)
-              ));
-            } else {
-              modal.showText(__('Couldn\'t change discord name: ') + err, {
-                title: __('Error') + ' ' + data.status
-              });
-            }
-          }
-        });
-      }
-    },
     updateAudio: function(url) {
       try {
         if (!url) url = 'notify.wav';
@@ -732,9 +665,6 @@ const uiHelper = (function() {
     },
     setMax(maxStacked) {
       self.maxStacked = maxStacked + 1;
-    },
-    setDiscordName(name) {
-      self.elements.txtDiscordName.val(name);
     },
     adjustColorBrightness(level) {
       $([
@@ -898,7 +828,6 @@ const uiHelper = (function() {
     getAvailable: self.getAvailable,
     setPlaceableText: self.setPlaceableText,
     setMax: self.setMax,
-    setDiscordName: self.setDiscordName,
     updateAudio: self.updateAudio,
     styleElemWithChatNameColor: self.styleElemWithChatNameColor,
     setBannerEnabled: self.setBannerEnabled,
