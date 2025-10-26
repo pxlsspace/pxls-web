@@ -732,23 +732,27 @@ const chat = (function() {
       );
 
       self.elements.user_unignore_button.on('click', function() {
+        const label = self.elements.user_ignore_feedback_label.fadeOut(0);
+
         if (self.removeIgnore(self.elements.user_ignore_select.val())) {
           self.elements.user_ignore_select.find(`option[value="${self.elements.user_ignore_select.val()}"]`).remove();
-          self.elements.user_ignore_feedback_label.text('User unignored.');
-          self.elements.user_ignore_feedback_label.css('color', 'var(--text-red-color)');
-          self.elements.user_ignore_feedback_label.css('display', 'block');
-          setTimeout(() => self.elements.user_ignore_feedback_label.fadeOut(500), 3000);
+          label
+            .text('User unignored.')
+            .addClass('text-green')
+            .removeClass('text-red');
         } else if (self.ignored.length === 0) {
-          self.elements.user_ignore_feedback_label.text('You haven\'t ignored any users. Congratulations!');
-          self.elements.user_ignore_feedback_label.css('color', 'var(--text-red-color)');
-          self.elements.user_ignore_feedback_label.css('display', 'block');
-          setTimeout(() => self.elements.user_ignore_feedback_label.fadeOut(500), 3000);
+          label
+            .text('You haven\'t ignored any users. Congratulations!')
+            .addClass('text-red')
+            .removeClass('text-green');
         } else {
-          self.elements.user_ignore_feedback_label.text('Failed to unignore user. Either they weren\'t actually ignored, or an error occurred. Contact a developer if the problem persists.');
-          self.elements.user_ignore_feedback_label.css('color', 'var(--text-red-color)');
-          self.elements.user_ignore_feedback_label.css('display', 'block');
-          setTimeout(() => self.elements.user_ignore_feedback_label.fadeOut(500), 5000);
+          label
+            .text('Failed to unignore user. Either they weren\'t actually ignored, or an error occurred. Contact a developer if the problem persists.')
+            .addClass('text-red')
+            .removeClass('text-green');
         }
+
+        uiHelper.fadeInAndOut(label);
       });
     },
     disable: () => {
@@ -780,6 +784,8 @@ const chat = (function() {
         self.elements.username_color_select.disabled = true;
 
         const color = this.value >> 0;
+        const label = self.elements.username_color_feedback_label.fadeOut(0);
+
         $.post({
           type: 'POST',
           url: '/chat/setColor',
@@ -788,20 +794,23 @@ const chat = (function() {
           },
           success: () => {
             user.setChatNameColor(color);
+
             self.updateSelectedNameColor(color);
-            self.elements.username_color_feedback_label.innerText = 'Color updated';
+            label
+              .removeClass('text-red').addClass('text-green')
+              .text('Color updated!');
           },
           error: (data) => {
             const err = data.responseJSON && data.responseJSON.details ? data.responseJSON.details : data.responseText;
-            if (data.status === 200) {
-              self.elements.username_color_feedback_label.innerText = err;
-            } else {
-              self.elements.username_color_feedback_label.innerText = 'Couldn\'t change chat color: ' + err;
-            }
+            label
+              .text('Couldn\'t change chat color: ' + err)
+              .removeClass('text-green')
+              .addClass('text-red');
           },
           complete: () => {
             self.elements.username_color_select.value = user.getChatNameColor();
             self.elements.username_color_select.disabled = false;
+            uiHelper.fadeInAndOut(label);
           }
         });
       });
@@ -1220,32 +1229,18 @@ const chat = (function() {
     },
     _populateUsernameColor: () => {
       const hasPermForColor = (name) => user.hasPermission(`chat.usercolor.${name}`);
-      const hasAllDonatorColors = hasPermForColor('donator') || hasPermForColor('donator.*');
+      const hasAllGradientColors = hasPermForColor('gradient') || hasPermForColor('gradient.*');
       self.elements.username_color_select.empty().append(
-        hasPermForColor('rainbow') ? crel('option', { value: -1, class: 'rainbow' }, '*. Rainbow') : null,
-        hasAllDonatorColors || hasPermForColor('donator.green') ? crel('option', { value: -2, class: 'donator donator--green' }, '*. Donator Green') : null,
-        hasAllDonatorColors || hasPermForColor('donator.gray') ? crel('option', { value: -3, class: 'donator donator--gray' }, '*. Donator Gray') : null,
-        hasAllDonatorColors || hasPermForColor('donator.synthwave') ? crel('option', { value: -4, class: 'donator donator--synthwave' }, '*. Donator Synthwave') : null,
-        hasAllDonatorColors || hasPermForColor('donator.ace') ? crel('option', { value: -5, class: 'donator donator--ace' }, '*. Donator Asexual') : null,
-        hasAllDonatorColors || hasPermForColor('donator.trans') ? crel('option', { value: -6, class: 'donator donator--trans' }, '*. Donator Transgender') : null,
-        hasAllDonatorColors || hasPermForColor('donator.bi') ? crel('option', { value: -7, class: 'donator donator--bi' }, '*. Donator Bisexual') : null,
-        hasAllDonatorColors || hasPermForColor('donator.pan') ? crel('option', { value: -8, class: 'donator donator--pan' }, '*. Donator Pansexual') : null,
-        hasAllDonatorColors || hasPermForColor('donator.nonbinary') ? crel('option', { value: -9, class: 'donator donator--nonbinary' }, '*. Donator Nonbinary') : null,
-        hasAllDonatorColors || hasPermForColor('donator.mines') ? crel('option', { value: -10, class: 'donator donator--mines' }, '*. Donator Mines') : null,
-        hasAllDonatorColors || hasPermForColor('donator.eggplant') ? crel('option', { value: -11, class: 'donator donator--eggplant' }, '*. Donator Eggplant') : null,
-        hasAllDonatorColors || hasPermForColor('donator.banana') ? crel('option', { value: -12, class: 'donator donator--banana' }, '*. Donator Banana') : null,
-        hasAllDonatorColors || hasPermForColor('donator.teal') ? crel('option', { value: -13, class: 'donator donator--teal' }, '*. Donator Teal') : null,
-        hasAllDonatorColors || hasPermForColor('donator.icy') ? crel('option', { value: -14, class: 'donator donator--icy' }, '*. Donator Icy') : null,
-        hasAllDonatorColors || hasPermForColor('donator.icy') ? crel('option', { value: -15, class: 'donator donator--blood' }, '*. Donator Blood') : null,
-        hasAllDonatorColors || hasPermForColor('donator.forest') ? crel('option', { value: -16, class: 'donator donator--forest' }, '*. Donator Forest') : null,
-        hasAllDonatorColors || hasPermForColor('donator.purple') ? crel('option', { value: -17, class: 'donator donator--purple' }, '*. Donator Purple') : null,
-        hasAllDonatorColors || hasPermForColor('donator.gay') ? crel('option', { value: -18, class: 'donator donator--gay' }, '*. Donator Gay') : null,
-        hasAllDonatorColors || hasPermForColor('donator.lesbian') ? crel('option', { value: -19, class: 'donator donator--lesbian' }, '*. Donator Lesbian') : null,
         place.palette.map(({ name, value: hex }, i) => crel('option', {
           value: i,
           'data-idx': i,
           style: `background-color: #${hex}`
-        }, `${i}. ${name}`))
+        }, `${i}. ${name}`)),
+        uiHelper.getSpecialChatColors().map((gradient, i) => {
+          if (hasAllGradientColors || hasPermForColor(`gradient.${gradient.name.toLowerCase()}`)) {
+            return crel('option', { value: -i - 1, class: `gradient ${uiHelper.getSpecialChatColorClass(-i - 1)}` }, `Gradient ${i}. ${gradient.name}`);
+          }
+        })
       );
       self.elements.username_color_select[0].value = user.getChatNameColor();
     },
@@ -1414,7 +1409,9 @@ const chat = (function() {
         })
       );
       let nameClasses = 'user';
-      if (Array.isArray(packet.authorNameClass)) nameClasses += ` ${packet.authorNameClass.join(' ')}`;
+      if (packet.authorNameColor < 0) {
+        nameClasses += ` gradient ${uiHelper.getSpecialChatColorClass(packet.authorNameColor)}`;
+      }
 
       // Truncate older chat messages by removing the diff of the current message count and the maximum count.
       const diff = self.elements.body.children().length - settings.chat.truncate.max.get();
