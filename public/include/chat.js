@@ -748,8 +748,8 @@ const chat = (function() {
         } else {
           label
             .text('Failed to unignore user. Either they weren\'t actually ignored, or an error occurred. Contact a developer if the problem persists.')
-            .addClass('text-green')
-            .removeClass('text-red');
+            .addClass('text-red')
+            .removeClass('text-green');
         }
 
         uiHelper.fadeInAndOut(label);
