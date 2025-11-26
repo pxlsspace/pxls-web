@@ -151,7 +151,7 @@ const uiHelper = (function() {
           crel('h2', { class: 'modal-title' }, 'Alert'),
           crel('p', { style: 'padding: 0; margin: 0;' }, chat.processMessage(data.message)),
           crel('span', `Sent from ${data.sender || '$Unknown'}`)
-        ), { closeExisting: false });
+        ), { closeExisting: false, clickClose: false });
       });
       socket.on('received_report', (data) => {
         const type = data.report_type.toLowerCase();
