@@ -1241,6 +1241,7 @@ const chat = (function() {
         hasAllDonatorColors || hasPermForColor('donator.purple') ? crel('option', { value: -17, class: 'donator donator--purple' }, '*. Donator Purple') : null,
         hasAllDonatorColors || hasPermForColor('donator.gay') ? crel('option', { value: -18, class: 'donator donator--gay' }, '*. Donator Gay') : null,
         hasAllDonatorColors || hasPermForColor('donator.lesbian') ? crel('option', { value: -19, class: 'donator donator--lesbian' }, '*. Donator Lesbian') : null,
+        hasAllDonatorColors || hasPermForColor('donator.neuro') ? crel('option', { value: -20, class: 'donator donator--neuro' }, '*. Donator Neuro-Sama') : null,
         place.palette.map(({ name, value: hex }, i) => crel('option', {
           value: i,
           'data-idx': i,
