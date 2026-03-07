@@ -130,7 +130,8 @@ const uiHelper = (function() {
       ['donator', 'donator--forest'],
       ['donator', 'donator--purple'],
       ['donator', 'donator--gay'],
-      ['donator', 'donator--lesbian']
+      ['donator', 'donator--lesbian'],
+      ['donator', 'donator--neuro']
     ],
     init: function() {
       timer = require('./timer').timer;
