@@ -463,7 +463,9 @@ dt {
 .donator.donator--lesbian{
     background-image: linear-gradient(45deg, #FFFFFF, #FF9A56, #EF7627, #D52D00, #EF7627, #FF9A56, #FFFFFF, #D162A4, #B55690, #A30262, #B55690, #D162A4, #FFFFFF);
 }
-
+.donator.donator--neuro{
+    background-image: linear-gradient(45deg, #ea3465, #b08e7c, #79e5e1, #ffd292, #b8c5ec, #ea3465);
+}
 .error {
     color: var(--error-color);
     font-weight: 700;
