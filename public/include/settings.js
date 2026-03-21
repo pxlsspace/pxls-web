@@ -217,6 +217,7 @@ module.exports.settings = (function() {
     'chat.text-icons-enabled': 'chat.badges.enable',
     'chat.faction-tags-enabled': 'chat.factiontags.enable',
     'chat.pings-enabled': 'chat.pings.enable',
+    'chat.ping-audio-src': 'chat.pings.audio.src',
     'chat.ping-audio-state': 'chat.pings.audio.when',
     'chat.ping-audio-volume': 'chat.pings.audio.volume',
     'chat.banner-enabled': 'ui.chat.banner.enable',
@@ -473,6 +474,7 @@ module.exports.settings = (function() {
       pings: {
         enable: setting('chat.pings.enable', SettingType.TOGGLE, true, $('#setting-chat-pings-enable')),
         audio: {
+          src: setting('chat.pings.audio.src', SettingType.TEXT, '', $('#setting-chat-pings-audio-src')),
           when: setting('chat.pings.audio.when', SettingType.SELECT, 'off', $('#setting-chat-pings-audio-when')),
           volume: setting('chat.pings.audio.volume', SettingType.RANGE, 0.5, $('#setting-chat-pings-audio-volume'))
         }

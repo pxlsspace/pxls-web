@@ -857,6 +857,15 @@
                     </div>
                     <div data-keywords="{{{i18n 'mention sound'}}}">
                         <label class="input-group">
+                            <span class="label-text">{{{i18n 'Ping Sound URL:'}}}</span>
+                            <input class="fullwidth" type="text" placeholder="chatnotify.wav" id="setting-chat-pings-audio-src">
+                        </label>
+                        <div class="button-bar">
+                            <button class="text-button" id="btnForceChatPingAudioUpdate">{{{i18n 'Update'}}}</button>
+                            <button class="text-button" id="btnChatPingAudioTest">{{{i18n 'Test'}}}</button>
+                            <button class="text-button" id="btnChatPingSrcReset">{{{i18n 'Reset'}}}</button>
+                        </div>
+                        <label class="input-group">
                             <span class="label-text">{{{i18n 'Play sound on ping:'}}} </span>
                             <select id="setting-chat-pings-audio-when">
                                 <option value="off">{{{i18n 'Off'}}}</option>

@@ -19,6 +19,7 @@ const uiHelper = (function() {
     maxStacked: -1,
     _alertUpdateTimer: false,
     _placeSoundUpdateTimer: false,
+    _chatPingSoundUpdateTimer: false,
     initTitle: '',
     isLoadingBubbleShown: false,
     loadingStates: {},
@@ -39,6 +40,7 @@ const uiHelper = (function() {
       lblPlaceSoundVolume: $('#lblPlaceSoundVolume'),
       btnForceAudioUpdate: $('#btnForceAudioUpdate'),
       btnForcePlaceSoundAudioUpdate: $('#btnForcePlaceSoundAudioUpdate'),
+      btnForceChatPingAudioUpdate: $('#btnForceChatPingAudioUpdate'),
       themeSelect: $('#setting-ui-theme-index'),
       themeColorMeta: $('meta[name="theme-color"]'),
       txtDiscordName: $('#txtDiscordName'),
@@ -550,17 +552,17 @@ const uiHelper = (function() {
 
       $('#btnPlaceAudioTest').click(() => place.audioElem.play());
 
-      $('#btnAlertReset').click(() => {
+      $('#btnPlaceSoundReset').click(() => {
         modal.show(modal.buildDom(
           crel('h2', { class: 'modal-title' }, __('Reset Sound')),
           crel('div',
-            crel('p', __('Are you sure you want to reset the pixel notification sound?')),
+            crel('p', __('Are you sure you want to reset the pixel place sound?')),
             crel('div', { class: 'buttons' },
               crel('button', {
                 class: 'dangerous-button text-button',
                 onclick: () => {
                   self.updateAudio('place.wav', 'place');
-                  settings.audio.alert.src.reset();
+                  settings.audio.place.src.reset();
                   modal.closeAll();
                 }
               }, __('Yes')),
@@ -572,18 +574,33 @@ const uiHelper = (function() {
           )
         ));
       });
+      // chat ping
+      chat.pingAudioElem.addEventListener('error', err => {
+        if (console.warn) console.warn('An error occurred on the audioElem node: %o', err);
+      });
 
-      $('#btnPlaceSoundReset').click(() => {
+      settings.chat.pings.audio.src.listen(function(url) {
+        if (self._chatPingSoundUpdateTimer !== false) clearTimeout(self._chatPingSoundUpdateTimer);
+        self._chatPingSoundUpdateTimer = setTimeout(function(url) {
+          self.updateAudio(url, 'chatnotify');
+          self._chatPingSoundUpdateTimer = false;
+        }, 250, url);
+      });
+      self.elements.btnForcePlaceSoundAudioUpdate.click(() => settings.chat.pings.audio.src.set(settings.chat.pings.audio.src.get()));
+
+      $('#btnChatPingAudioTest').click(() => chat.pingAudioElem.play());
+
+      $('#btnChatPingSrcReset').click(() => {
         modal.show(modal.buildDom(
           crel('h2', { class: 'modal-title' }, __('Reset Sound')),
           crel('div',
-            crel('p', __('Are you sure you want to reset the pixel palced sound?')),
+            crel('p', __('Are you sure you want to reset the chat ping sound?')),
             crel('div', { class: 'buttons' },
               crel('button', {
                 class: 'dangerous-button text-button',
                 onclick: () => {
-                  self.updateAudio('place.wav', 'place');
-                  settings.audio.place.src.reset();
+                  self.updateAudio('chatnotify.wav', 'chatnotify');
+                  settings.chat.pings.audio.src.reset();
                   modal.closeAll();
                 }
               }, __('Yes')),
