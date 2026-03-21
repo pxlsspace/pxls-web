@@ -206,6 +206,8 @@ module.exports.settings = (function() {
     colorBrightness: 'ui.brightness.value',
     'alert.src': 'audio.alert.src',
     'alert.volume': 'audio.alert.volume',
+    'place.src': 'audio.place.src',
+    'place.volume': 'audio.place.volume',
     alert_delay: 'place.alert.delay',
     'chrome-canvas-offset-workaround': 'fix.chrome.offset.enable',
     hide_sensitive: 'lookup.filter.sensitive.enable',
@@ -378,6 +380,10 @@ module.exports.settings = (function() {
       alert: {
         src: setting('audio.alert.src', SettingType.TEXT, '', $('#setting-audio-alert-src')),
         volume: setting('audio.alert.volume', SettingType.RANGE, 1, $('#setting-audio-alert-volume'))
+      },
+      place: {
+        src: setting('audio.place.src', SettingType.TEXT, '', $('#setting-audio-place-src')),
+        volume: setting('audio.place.volume', SettingType.RANGE, 1, $('#setting-audio-place-volume'))
       }
     },
     board: {

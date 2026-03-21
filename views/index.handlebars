@@ -826,6 +826,27 @@
                         </label>
                     </div>
                 </section>
+                <section data-keywords="{{{i18n 'place sound;pixel placed'}}}">
+                    <h4>{{{i18n 'Pixel Placed Sound'}}}</h4>
+                    <div data-keywords="{{{i18n 'place sound;place sound url;place sound source;pixel placed sound'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Pixel Placed Sound URL:'}}}</span>
+                            <input class="fullwidth" type="text" placeholder="place.wav" id="setting-audio-place-src">
+                        </label>
+                        <div class="button-bar">
+                            <button class="text-button" id="btnForcePlaceSoundAudioUpdate">{{{i18n 'Update'}}}</button>
+                            <button class="text-button" id="btnPlaceAudioTest">{{{i18n 'Test'}}}</button>
+                            <button class="text-button" id="btnPlaceSoundReset">{{{i18n 'Reset'}}}</button>
+                        </div>
+                    </div>
+                    <div data-keywords="{{{i18n 'sound level;audio level;mute audio;mute sound'}}}">
+                        <label class="input-group">
+                            <span class="label-text">{{{i18n 'Volume:'}}}</span>
+                            <input type="range" id="setting-audio-place-volume" min=0 max=1 step=".01" value="1">
+                            <span class="range-text-value" id="lblPlaceSoundVolume">100%</span>
+                        </label>
+                    </div>
+                </section>
                 <section data-keywords="{{{i18n 'chat mentions;chat pings;chat sound'}}}">
                     <h4>{{{i18n 'Chat Pings'}}}</h4>
                     <div data-keywords="enable mentions">

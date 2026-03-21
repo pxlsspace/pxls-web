@@ -2543,6 +2543,7 @@ const chat = (function() {
     init: self.init,
     webinit: self.webinit,
     _handleActionClick: self._handleActionClick,
+    pingAudioElem: self.pingAudio,
     clearPings: self.clearPings,
     setCharLimit: self.setCharLimit,
     processMessage: self.processMessage,

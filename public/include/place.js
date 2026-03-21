@@ -257,7 +257,8 @@ module.exports.place = (function() {
             $(window).trigger('pxls:ack:place', [data.x, data.y]);
             if (uiHelper.tabHasFocus() && settings.audio.enable.get()) {
               const clone = self.audio.cloneNode(false);
-              clone.volume = parseFloat(settings.audio.alert.volume.get());
+              clone.src = settings.audio.place.src.get() || clone.src;
+              clone.volume = parseFloat(settings.audio.place.volume.get());
               clone.play();
             }
             break;
@@ -381,6 +382,7 @@ module.exports.place = (function() {
       return self.lastPixel;
     },
     toggleReticule: self.toggleReticule,
-    toggleCursor: self.toggleCursor
+    toggleCursor: self.toggleCursor,
+    audioElem: self.audio
   };
 })();
