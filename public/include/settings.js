@@ -383,7 +383,7 @@ module.exports.settings = (function() {
       },
       place: {
         src: setting('audio.place.src', SettingType.TEXT, '', $('#setting-audio-place-src')),
-        volume: setting('audio.place.volume', SettingType.RANGE, 1, $('#setting-audio-place-volume'))
+        volume: setting('audio.place.volume', SettingType.RANGE, -1, $('#setting-audio-place-volume'))
       }
     },
     board: {
@@ -503,6 +503,10 @@ module.exports.settings = (function() {
       }
     }
   };
+  // this is so users who previously had alert volume lowered do not get jumpscared if the default value of 100% is too loud
+  if (self.audio.place.volume.get() === -1) {
+    self.audio.place.volume.set(self.audio.alert.volume.get());
+  }
   $(window).on('pxls:panel:closed', (event, panel) => {
     if (panel === 'settings') {
       self.filter.search('');
