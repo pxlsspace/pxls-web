@@ -1780,10 +1780,11 @@ li.chat-line i[title], #reply-label-username i[title] {
 }
 
 .text-badge {
-    line-height: 1em;
+    line-height: 1;
+    font-size: 75%;
     background: var(--chat-badge-background);
-    padding: .15em .5em;
-    border-radius: 1em;
+    padding: .1em .25em;
+    border-radius: .25em;
     color: var(--chat-badge-text-color);
     cursor: default;
     -webkit-user-select: none;
@@ -1791,6 +1792,45 @@ li.chat-line i[title], #reply-label-username i[title] {
     -ms-user-select: none;
     user-select: none;
 }
+
+.text-badge[title$="Pixels Placed"] {
+  background: #111;
+  color: lightgray;
+  font-weight: 600;
+}
+
+.text-badge[title^="1k+"] {color: red}
+.text-badge[title^="5k+"] {color: orangered}
+.text-badge[title^="10k+"] {color: orange}
+.text-badge[title^="25k+"] {color: yellow}
+.text-badge[title^="50k+"] {color: lime}
+.text-badge[title^="100k+"] {color: #0fc}
+.text-badge[title^="200k+"] {color: #0df}
+.text-badge[title^="300k+"] {color: #07f}
+.text-badge[title^="400k+"] {color: #a5f}
+.text-badge[title^="500k+"] {color: #f0f}
+.text-badge[title^="600k+"] {color: #fff;background:red}
+.text-badge[title^="700k+"] {color: #fff;background:orangered}
+.text-badge[title^="800k+"] {color: #fff;background:orange}
+.text-badge[title^="900k+"] {color: #000;background:yellow}
+.text-badge[title^="1M+"] {color: #000;background:lime}
+.text-badge[title^="1.25M+"] {color: #000;background:#0fc}
+.text-badge[title^="1.5M+"] {color: #000;background:#0df}
+.text-badge[title^="1.75M+"] {color: #fff;background:#07f}
+.text-badge[title^="2M+"] {color: #fff;background:#a5f}
+/* duplicated classname to override synthwave */
+.text-badge.text-badge[title^="2.25M+"] {color: red;box-shadow:inset 0 0 0 1px red}
+.text-badge.text-badge[title^="2.5M+"] {color: orangered;box-shadow:inset 0 0 0 1px orangered}
+.text-badge.text-badge[title^="2.75M+"] {color: orange;box-shadow:inset 0 0 0 1px orange}
+.text-badge.text-badge[title^="3M+"] {color: yellow;box-shadow:inset 0 0 0 1px yellow}
+.text-badge.text-badge[title^="3.25M+"] {color: lime;box-shadow:inset 0 0 0 1px lime}
+.text-badge.text-badge[title^="3.5M+"] {color: #0fc;box-shadow:inset 0 0 0 1px #0fc}
+.text-badge.text-badge[title^="3.75M+"] {color: #0df;box-shadow:inset 0 0 0 1px #0df}
+.text-badge.text-badge[title^="4M+"] {color: #07f;box-shadow:inset 0 0 0 1px #07f}
+.text-badge.text-badge[title^="4.25M+"] {color: #07f;box-shadow:inset 0 0 0 1px #07f}
+.text-badge.text-badge[title^="4.5M+"] {color: #07f;box-shadow:inset 0 0 0 1px #07f}
+.text-badge.text-badge[title^="4.75M+"] {color: #07f;box-shadow:inset 0 0 0 1px #07f}
+.text-badge.text-badge[title^="5M+"] {color: #a5f;box-shadow:inset 0 0 0 1px #a5f}
 
 .chat-line .content {
     white-space: pre-wrap;
