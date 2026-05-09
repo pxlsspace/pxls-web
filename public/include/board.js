@@ -296,7 +296,7 @@ const board = (function() {
         }
       }, { passive: true });
 
-      self.elements.zoomer.on('pointerdown mousedown', function() {
+      self.elements.container.on('pointerdown mousedown', function() {
         // unfocus whatever input boxes might be focused
         document.activeElement && typeof document.activeElement.blur === 'function' && document.activeElement.blur();
       }).contextmenu(function(evt) {
