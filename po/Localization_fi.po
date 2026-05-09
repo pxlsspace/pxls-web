@@ -1206,7 +1206,7 @@ msgid "Why does it take so long to \"stack\" pixels?"
 msgstr "Miksi pikselien \"pinoaminen\" kestää niin kauan?"
 
 #: /views/partials/faq.handlebars
-msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
+msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 20-30 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
 msgstr "Tämä on taroituksellista. On parempi asetta pikseli heti kun saat yhden. Pikselien \"pinoamisen\" tarkoitus antaa tönäisy jos menet AFK vähäksi aikaa. Täyden 6/6 pikseliä pinon saaminen kestää noin 40 minuuttia, mutta voit asettaa 6 pikseliä vain noin 3:ssa minuutissa jos asetat ne niin pian kuin mahdollista."
 
 #: /views/partials/faq.handlebars
@@ -1246,7 +1246,7 @@ msgid "Where can I see the past canvases?"
 msgstr "Missä voin nähdä aikaissemmat kanvaasit?"
 
 #: /views/partials/faq.handlebars
-msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
+msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the <a href=\"https://archives.pxls.space\" target=\"_blank\">archives</a>, which records timelapses and a lot of useful information on each canvas."
 msgstr "Aikaisemmat kanvaasit ovat esillä <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord serverillämme</a>, tai 3. osapuolen sivustolla <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, joka tallentaa timelapseja ja paljon hyödyllistä informaatiota jokaisesta kanvaasista."
 
 #: /views/partials/faq.handlebars
@@ -1286,7 +1286,7 @@ msgid "How do I report bugs?"
 msgstr "Kuinka raportoin bugeista?"
 
 #: /views/partials/faq.handlebars
-msgid "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
+msgid "Submit bugs to the #dev-and-bugs forum in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs) or open a modmail by DMing pxls.mail#8384."
 msgstr "Lähetä bugit #dev-and-bugs -kanavalle <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord serverillä</a>.Jos olet löytänyt exploitin, ole hyvä ja lähetä viesti yhdelle henkilökuntamme jäsenistä yksityisesti (DM:ien kautta)."
 
 #: /views/partials/faq.handlebars

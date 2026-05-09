@@ -1244,7 +1244,7 @@ msgid "Why does it take so long to \"stack\" pixels?"
 msgstr "Pourquoi ça prends si longtemps à avoir sa réserve de pixel pleine ?"
 
 #: /views/partials/faq.handlebars
-msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
+msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 20-30 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
 msgstr "C'est une question de conception. Il est préférable de poser un pixel dès que vous en avez. La réserve a pour but de vous donner un coup de pouce si vous restez AFK. Cela prends environ 40 minutes pour avoir la réserve pleine (6/6), mais seulement 3 minutes si vous les placer dès que possible."
 
 #: /views/partials/faq.handlebars
@@ -1284,7 +1284,7 @@ msgid "Where can I see the past canvases?"
 msgstr "Où puis-je voir les canvas passés ?"
 
 #: /views/partials/faq.handlebars
-msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
+msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the <a href=\"https://archives.pxls.space\" target=\"_blank\">archives</a>, which records timelapses and a lot of useful information on each canvas."
 msgstr "Les anciens canvas sont mis en avant sur notre <a href=\"https://pxls.space/discord\" target=\"_blank\">serveur Discord</a> ou sur le site externe <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, qui enregistre des timelapses et bien d'autres informations utiles sur chaque canvas."
 
 #: /views/partials/faq.handlebars
@@ -1324,7 +1324,7 @@ msgid "How do I report bugs?"
 msgstr "Comment signaler un bug ?"
 
 #: /views/partials/faq.handlebars
-msgid "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
+msgid "Submit bugs to the #dev-and-bugs forum in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs) or open a modmail by DMing pxls.mail#8384."
 msgstr "Envoyer vos trouvailles dans le salon #dev-and-bugs sur notre <a href=\"https://pxls.space/discord\" target=\"_blank\">serveur Discord</a>. Si vous avez trouver une faille, merci de contacter en priver l'un des staffs (via les MPs)."
 
 #: /views/partials/faq.handlebars
