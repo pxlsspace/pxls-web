@@ -100,6 +100,8 @@ module.exports.panels = (function() {
           document.body.classList.toggle(`panel-${panelPosition}`, true);
         } else {
           $(window).trigger('pxls:panel:closed', panelDescriptor);
+          // unfocus any active input boxes
+          document.activeElement && typeof document.activeElement.blur === 'function' && document.activeElement.blur();
           document.body.classList.toggle('panel-open', document.querySelectorAll('.panel.open').length - 1 > 0);
           document.body.classList.toggle(`panel-${panelPosition}`, false);
         }
