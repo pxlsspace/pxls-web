@@ -3,7 +3,6 @@ const { place } = require('./place');
 const { settings } = require('./settings');
 const { template } = require('./template');
 const { panels } = require('./panels');
-const { user } = require('./user');
 const { uiHelper } = require('./uiHelper');
 const { chat } = require('./chat');
 const { overlays } = require('./overlays');
@@ -472,7 +471,6 @@ const board = (function() {
         self.webInfo = data;
         lookup.webinit();
         overlays.webinit(data);
-        user.webinit(data);
         self.width = data.width;
         self.height = data.height;
         place.setPalette(data.palette);
