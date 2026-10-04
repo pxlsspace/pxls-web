@@ -96,8 +96,15 @@
                         </tr>
                         {{/unless}}
                         <tr>
-                            <th class="text-right pr-3">{{i18n 'Discord Tag'}}</th>
-                            <td class="text-left">{{default user.discordName "Not Connected"}}</td>
+                            <th class="text-right pr-3">{{i18n 'Connected Accounts'}}</th>
+                            <td>
+                                <dl class="logins">
+                                {{#each user.logins}}
+                                    <dt>{{this.identityProvider}}</dt>
+                                    <dd>{{this.userName}}</dd>
+                                {{/each}}
+                                </dl>
+                            </td>
                         </tr>
                         <tr>
                             <th class="text-right pr-3">{{i18n 'Faction'}}</th>

@@ -1,8 +1,9 @@
 'use strict';
 (function () {
   let admin = null;
-  const userLogins = data => crel('dl',
-    data.logins.map(
+  const userLogins = logins => crel('dl',
+    { class: 'logins' },
+    logins.map(
       ({ userName, userId, identityProvider }) => [
         crel('dt', identityProvider),
         crel('dd', userId)
@@ -199,15 +200,14 @@
             target: '_blank'
           }, data.username)],
           [__('Profile'), crel('a', { href: `/profile/${data.username}`, target: '_blank' }, data.username)],
-          [__('Logins'), data.logins
-            ? userLogins(data)
+          [__('Logins'), data.allLogins
+            ? userLogins(data.allLogins)
             : null
           ],
           [__('Roles'), data.roles.map(role => role.name).join(', ')],
           [__('Pixels'), data.pixelCount],
           [__('All Time Pixels'), data.pixelCountAllTime],
           [__('Rename Requested'), data.renameRequested ? 'Yes' : 'No'],
-          [__('Discord Name'), data.discordName || '(not set)'],
           [__('Banned'), bannedStr],
           [__('Chatbanned'), chatbannedStr]
         ];
@@ -461,13 +461,9 @@
           id: 'logins',
           name: __('Logins'),
           sensitive: true,
-          get: data => {
-            if (data.logins == null) {
-              return null;
-            }
-
-            return userLogins(data);
-          }
+          get: data => data.allLogins
+            ? userLogins(data.allLogins)
+            : null
         }, {
           id: 'user_agent',
           name: __('User Agent'),
