@@ -330,13 +330,15 @@ const user = (function() {
       self.elements.visibleAccounts.empty();
       for (const { userName, userId, identityProvider, visible } of logins) {
         const accountSpecifier = `${identityProvider}:${userId}`;
+        const checkbox = crel('input', {
+          type: 'checkbox',
+          onchange: (e) => self.setAccountVisible(accountSpecifier, e.target.checked)
+        });
+        checkbox.checked = visible;
+
         self.elements.visibleAccounts.append(crel('li',
           crel('label', { class: 'input-group' }, [
-            crel('input', {
-              type: 'checkbox',
-              checked: visible,
-              onchange: (e) => self.setAccountVisible(accountSpecifier, e.target.checked)
-            }),
+            checkbox,
             ' ',
             crel('span', { class: 'connected-account-service' }, identityProvider + ':'),
             ' ',
