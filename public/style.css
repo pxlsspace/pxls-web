@@ -372,6 +372,15 @@ dt {
     font-size: 1.15rem;
 }
 
+ul.unbulleted {
+	list-style: none;
+	padding: 0;
+}
+
+.connected-account-service {
+	font-weight: bold;
+}
+
 @keyframes rainbow-move {
     0% {
         background-position: 5px 0%;
@@ -533,6 +542,31 @@ dt {
     top: 50px;
     right: 16px;
     z-index: 22;
+}
+
+dl.logins {
+	display: grid;
+	grid-template-columns: max-content max-content;
+	gap: 0 0.5em;
+	margin: 0;
+	margin-left: 1em;
+	font-size: small;
+}
+
+dl.logins > dt {
+	font-size: 1em;
+	font-weight: bold;
+	margin: 0;
+	text-align: right;
+}
+
+dl.logins > dt::after {
+	content: ':';
+}
+
+dl.logins > dd {
+	font-size: 1em;
+	margin: 0;
 }
 
 /* moderator action popup styles */

@@ -1,6 +1,15 @@
 'use strict';
 (function () {
   let admin = null;
+  const userLogins = logins => crel('dl',
+    { class: 'logins' },
+    logins.map(
+      ({ userName, userId, identityProvider }) => [
+        crel('dt', identityProvider),
+        crel('dd', userId)
+      ]
+    )
+  );
   const genButton = function(s) {
     return $('<button>').css({
       position: 'initial',
@@ -191,15 +200,14 @@
             target: '_blank'
           }, data.username)],
           [__('Profile'), crel('a', { href: `/profile/${data.username}`, target: '_blank' }, data.username)],
-          [__('Logins'), data.logins
-            ? data.logins.map(({ serviceID, serviceUserID }) => `${serviceID}:${serviceUserID}`).join(', ')
+          [__('Logins'), data.allLogins
+            ? userLogins(data.allLogins)
             : null
           ],
           [__('Roles'), data.roles.map(role => role.name).join(', ')],
           [__('Pixels'), data.pixelCount],
           [__('All Time Pixels'), data.pixelCountAllTime],
           [__('Rename Requested'), data.renameRequested ? 'Yes' : 'No'],
-          [__('Discord Name'), data.discordName || '(not set)'],
           [__('Banned'), bannedStr],
           [__('Chatbanned'), chatbannedStr]
         ];
@@ -453,21 +461,9 @@
           id: 'logins',
           name: __('Logins'),
           sensitive: true,
-          get: data => {
-            if (data.logins == null) {
-              return null;
-            }
-
-            const elems = $('<div>');
-            for (let i = 0; i < data.logins.length; i++) {
-              const login = data.logins[i];
-              elems.append($('<span>').text(`${login.serviceID}:${login.serviceUserID}`));
-              if (i !== data.logins.length - 1) {
-                elems.append(', ');
-              }
-            }
-            return elems;
-          }
+          get: data => data.allLogins
+            ? userLogins(data.allLogins)
+            : null
         }, {
           id: 'user_agent',
           name: __('User Agent'),

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
+"POT-Creation-Date: 2026-10-05T01:31:23.819Z\n"
 "PO-Revision-Date: 2025-06-17T01:05:37.440Z\n"
 "Last-Translator: volcanofr <volcano0france@gmail.com>\n"
 "Language-Team: French\n"
@@ -10,16 +10,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Custom by volcanofr 1.0\n"
 
-#: /views/error.handlebars
-#: /views/error.handlebars
-#: /views/error.handlebars
-#: /views/profile.handlebars
-#: /public/include/user.js
+#: /views/error.handlebars /views/profile.handlebars /public/include/user.js
 msgid "My Profile"
 msgstr "Mon profil"
 
-#: /views/error.handlebars
-#: /views/profile.handlebars
+#: /views/error.handlebars /views/profile.handlebars
 msgid "My Factions"
 msgstr "Mes factions"
 
@@ -33,8 +28,6 @@ msgid "The content you requested could not be found at this URL. If you believe 
 msgstr "Le contenu que vous avez demandé n'a pas pu être trouvé à cette URL. Si vous pensez qu'il s'agit d'une erreur, merci de contacter un développeur."
 
 #. links to the homepage (the app itself)
-#: /views/error.handlebars
-#: /views/error.handlebars
 #: /views/error.handlebars
 msgid "Back to Pxls"
 msgstr "Retourner sur Pxls"
@@ -82,9 +75,6 @@ msgid "Canvas:"
 msgstr "Canvas :"
 
 #: /views/index.handlebars
-#: /views/index.handlebars
-#: /views/index.handlebars
-#: /views/index.handlebars
 msgid "N/A"
 msgstr "N/A"
 
@@ -93,12 +83,14 @@ msgid "All Time:"
 msgstr "Total :"
 
 #: /views/index.handlebars
+msgid "Online:"
+msgstr ""
+
+#: /views/index.handlebars
 msgid "Loading online user count&hellip;"
 msgstr "Chargement du nombre d'utilisateurs en ligne&hellip;"
 
-#: /views/index.handlebars
-#: /public/admin/admin.js
-#: /public/include/lookup.js
+#: /views/index.handlebars /public/admin/admin.js /public/include/lookup.js
 msgid "Pixels"
 msgstr "Pixels"
 
@@ -111,30 +103,12 @@ msgid "You are not signed in."
 msgstr "Tu n'es pas connecté."
 
 #: /views/index.handlebars
-#: /public/include/user.js
-msgid "Sign in with..."
-msgstr "Se connecter avec..."
+msgid "Sign in"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "Loading..."
 msgstr "Chargement..."
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "Sign up"
-msgstr "S'inscripte"
-
-#: /views/index.handlebars
-msgid "Pick a username"
-msgstr "Choisis ton pseudo"
-
-#: /views/index.handlebars
-msgid "Username:"
-msgstr "Pseudo :"
-
-#: /views/index.handlebars
-msgid "Discord Tag (Optional):"
-msgstr "Nom d'utilisateur Discord (optionnel) :"
 
 #: /views/index.handlebars
 msgid "Drag and drop template image"
@@ -144,20 +118,15 @@ msgstr "Glisser-déposer l'image modèle"
 msgid "Exit"
 msgstr "Sortir"
 
-#: /views/index.handlebars
-#: /views/profile.handlebars
+#: /views/index.handlebars /views/profile.handlebars
 msgid "Info"
 msgstr "Info"
 
 #: /views/index.handlebars
-#: /views/index.handlebars
-#: /views/index.handlebars
-#: /views/index.handlebars
 msgid "Close Panel"
 msgstr "Fermer le menu"
 
-#: /views/index.handlebars
-#: /public/include/chat.js
+#: /views/index.handlebars /public/include/chat.js
 msgid "Chat"
 msgstr "Tchat"
 
@@ -165,7 +134,6 @@ msgstr "Tchat"
 msgid "Pings"
 msgstr "Mentions"
 
-#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Settings"
 msgstr "Paramètres"
@@ -178,8 +146,7 @@ msgstr "Descendre en bas de page"
 msgid "Replying to"
 msgstr "Répondre à"
 
-#: /views/index.handlebars
-#: /public/include/chat.js
+#: /views/index.handlebars /public/include/chat.js
 msgid "On"
 msgstr "Activé"
 
@@ -203,7 +170,6 @@ msgstr "Raccourcis clavier"
 msgid "general"
 msgstr "general;général"
 
-#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "General"
 msgstr "Général"
@@ -240,7 +206,6 @@ msgstr "lookups;infos"
 msgid "<kbd>Shift</kbd> + Click/Hold touch to lookup pixel"
 msgstr "<kbd>Shift</kbd> + clic/maintient de la touche pour voir les infos du pixel"
 
-#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;alignment;grid hidden;grid shown;hide grid;show grid"
 msgstr "overlays;alignment;grid hidden;grid shown;hide grid;show grid;grille"
@@ -290,7 +255,6 @@ msgid "<kbd>P</kbd> to take a snapshot"
 msgstr "<kbd>P</kbd> pour prendre une capture d'écran"
 
 #: /views/index.handlebars
-#: /views/index.handlebars
 msgid "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap"
 msgstr "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap;activité"
 
@@ -298,7 +262,6 @@ msgstr "overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown
 msgid "<kbd>H</kbd> to toggle heatmap"
 msgstr "<kbd>H</kbd> pour afficher la Heatmap"
 
-#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap"
 msgstr "overlays;user activity;pixels unplaced pixels;virginmap hidden;virginmap shown;hide virginmap;show virginmap;activité"
@@ -360,11 +323,9 @@ msgid "templates;guides"
 msgstr "templates;guides;modèles"
 
 #: /views/index.handlebars
-#: /views/index.handlebars
 msgid "Template"
 msgstr "Modèle"
 
-#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "transparency"
 msgstr "transparency;transparence"
@@ -445,7 +406,6 @@ msgstr "template width;tw=;modèle;largeur"
 msgid "Width:"
 msgstr "Largeur :"
 
-#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Reset"
 msgstr "Réinitialiser"
@@ -691,12 +651,72 @@ msgid "Bottom right"
 msgstr "Bas à droite"
 
 #: /views/index.handlebars
+msgid "floating bubble animation"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Bubble animation:"
+msgstr ""
+
+#: /views/index.handlebars /views/profile.handlebars
+msgid "None"
+msgstr "Aucune"
+
+#: /views/index.handlebars
+msgid "Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Shake"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Shake & Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Bump"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Bump & Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse & Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse & Shake"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse & Bump"
+msgstr ""
+
+#: /views/index.handlebars
 msgid "broken;offset workaround"
 msgstr "broken;offset workaround;cassé;décalage;correction"
 
 #: /views/index.handlebars
 msgid "Attempt to fix canvas displacement bug in Chrome 78+"
 msgstr "Tentative de correction du bug de décalage sur le canvas pour Chrome 78+"
+
+#: /views/index.handlebars
+msgid "personal account"
+msgstr "compte personnel"
+
+#: /views/index.handlebars
+msgid "Account Settings"
+msgstr "Paramètres du compte"
+
+#: /views/index.handlebars
+msgid "Visible Connected Accounts"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "chat;message;ping sound"
@@ -827,16 +847,13 @@ msgid "Chat icon badge mode:"
 msgstr "Mode d'icône de badge tchat :"
 
 #: /views/index.handlebars
-#: /views/index.handlebars
 msgid "Show on unread ping"
 msgstr "Voir lors d'une mention non lue"
 
 #: /views/index.handlebars
-#: /views/index.handlebars
 msgid "Show on unread message"
 msgstr "Voir lors d'un message non lu"
 
-#: /views/index.handlebars
 #: /views/index.handlebars
 msgid "Never show"
 msgstr "Ne jamais afficher"
@@ -1169,8 +1186,7 @@ msgstr "son des mentions"
 msgid "Play sound on ping:"
 msgstr "Son quand mentionné :"
 
-#: /views/index.handlebars
-#: /public/include/chat.js
+#: /views/index.handlebars /public/include/chat.js
 msgid "Off"
 msgstr "Désactivé"
 
@@ -1189,27 +1205,6 @@ msgstr "volume des mentions"
 #: /views/index.handlebars
 msgid "Ping sound volume:"
 msgstr "Volume des mentions :"
-
-#: /views/index.handlebars
-msgid "personal account"
-msgstr "compte personnel"
-
-#: /views/index.handlebars
-msgid "Account Settings"
-msgstr "Paramètres du compte"
-
-#: /views/index.handlebars
-msgid "Public Discord name:"
-msgstr "Nom d'utilisateur Discord publique :"
-
-#: /views/index.handlebars
-#: /public/include/chat.js
-msgid "Set"
-msgstr "Définir"
-
-#: /views/index.handlebars
-msgid "Remove"
-msgstr "Retirer"
 
 #: /views/index.handlebars
 msgid "Help"
@@ -1400,11 +1395,9 @@ msgid "Any automated aggregation of data from user lookups is not allowed, and w
 msgstr "Toute collecte automatisée de donnée est strictement interdite et en résultera d'un bannissement."
 
 #: /views/partials/info.handlebars
-#: /views/partials/info.handlebars
 msgid "Staff have final say in any rule disputes"
 msgstr "Le staff a le dernier mot en cas de littige sur les règles"
 
-#: /views/partials/info.handlebars
 #: /views/partials/info.handlebars
 msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
 msgstr "Si vous trouvez qu'un modérateur a agit de manière inappropriée, veuillez le signaler à un administrateur."
@@ -1474,6 +1467,10 @@ msgid "Twitter"
 msgstr "Twitter"
 
 #: /views/partials/info.handlebars
+msgid "Bluesky"
+msgstr ""
+
+#: /views/partials/info.handlebars
 msgid "GitHub (back end)"
 msgstr "GitHub (back end)"
 
@@ -1498,16 +1495,8 @@ msgid "Wiki"
 msgstr "Wiki"
 
 #: /views/partials/info.handlebars
-msgid "Generator, progress checker, and monitor for Pxls templates"
-msgstr "Générateur et suivi de progression pour les modèles Pxls"
-
-#: /views/partials/info.handlebars
 msgid "Archives"
 msgstr "Archives"
-
-#: /views/partials/info.handlebars
-msgid "PxlsFiddle (archives)"
-msgstr "PxlsFiddle (archives)"
 
 #: /views/partials/info.handlebars
 msgid "Donate"
@@ -1518,7 +1507,6 @@ msgid "Donations are not accepted at this time, but this panel will be updated w
 msgstr "Les donations ne sont pas actuellement acceptées, mais le menu sera mis à jour quand de nouveau ouvert !"
 
 #: /views/profile.handlebars
-#: /views/profile.handlebars
 msgid "{0}'s Profile"
 msgstr "Profil de {0}"
 
@@ -1526,7 +1514,6 @@ msgstr "Profil de {0}"
 msgid "My Data"
 msgstr "Mes données"
 
-#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reports"
 msgstr "Signalements"
@@ -1547,8 +1534,7 @@ msgstr "Vous devez être connecté pour voir votre profil."
 msgid "Registration Date"
 msgstr "Date d'incription"
 
-#: /views/profile.handlebars
-#: /public/include/lookup.js
+#: /views/profile.handlebars /public/include/lookup.js
 msgid "Alltime Pixels"
 msgstr "Pixels totaux"
 
@@ -1556,22 +1542,15 @@ msgstr "Pixels totaux"
 msgid "Current Canvas Pixels"
 msgstr "Pixels du canvas en cours"
 
-#: /views/profile.handlebars
-msgid "Discord Tag"
-msgstr "Nom d'utilisateur Discord"
+#: /views/profile.handlebars /public/include/lookup.js
+msgid "Connected Accounts"
+msgstr ""
 
-#: /views/profile.handlebars
-#: /public/include/lookup.js
+#: /views/profile.handlebars /public/include/lookup.js
 msgid "Faction"
 msgstr "Faction"
 
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-msgid "None"
-msgstr "Aucune"
-
-#: /views/profile.handlebars
-#: /public/admin/admin.js
+#: /views/profile.handlebars /public/admin/admin.js
 msgid "Roles"
 msgstr "Riles"
 
@@ -1579,7 +1558,6 @@ msgstr "Riles"
 msgid "Canvas Ban Expiry"
 msgstr "Fin du ban du canvas"
 
-#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Never"
 msgstr "Jamais"
@@ -1602,18 +1580,15 @@ msgstr "Signalements du canvas ({0}/{1} ouverts)"
 
 #. eg "Report on Bob (closed)
 #: /views/profile.handlebars
-#: /views/profile.handlebars
 msgid "Report on {0} (closed)"
 msgstr "Signalement sur {0} (fermé)"
 
 #. eg "Report on Bob (open)
 #: /views/profile.handlebars
-#: /views/profile.handlebars
 msgid "Report on {0} (open)"
 msgstr "Report on {0} (ouvert)"
 
 #. eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC)
-#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Reported {0} on {1}"
 msgstr "Signalement {0} sur {1}"
@@ -1685,8 +1660,7 @@ msgstr "Membres"
 msgid "Edit"
 msgstr "Modifier"
 
-#: /views/profile.handlebars
-#: /public/include/chat.js
+#: /views/profile.handlebars /public/include/chat.js
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -1734,12 +1708,7 @@ msgstr "Des clés de log devraient apparaître ici après avoir placé sur un ca
 msgid "Members of {0} ([{1}])"
 msgstr "Membres de {0} ([{1}])"
 
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-#: /public/admin/admin.js
-#: /public/include/lookup.js
+#: /views/profile.handlebars /public/admin/admin.js /public/include/lookup.js
 msgid "Close"
 msgstr "Fermer"
 
@@ -1754,12 +1723,10 @@ msgid "Transfer Ownership"
 msgstr "Transférer la propriété"
 
 #. bans a user from the faction
-#: /views/profile.handlebars
-#: /public/include/chat.js
+#: /views/profile.handlebars /public/include/chat.js
 msgid "Ban"
 msgstr "Ban"
 
-#: /views/profile.handlebars
 #: /views/profile.handlebars
 msgid "Nothing to see here!"
 msgstr "Il n'y a rien à voir ici !"
@@ -1768,9 +1735,7 @@ msgstr "Il n'y a rien à voir ici !"
 msgid "Faction Bans"
 msgstr "Bans de faction"
 
-#: /views/profile.handlebars
-#: /public/admin/admin.js
-#: /public/include/chat.js
+#: /views/profile.handlebars /public/admin/admin.js /public/include/chat.js
 msgid "Unban"
 msgstr "Unban"
 
@@ -1794,34 +1759,27 @@ msgstr "Charger plus"
 msgid "Send alert..."
 msgstr "Envoyer une alerte..."
 
-#: /public/admin/admin.js
-#: /public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Rule #1: Hateful/derogatory speech or symbols"
 msgstr "Règle #1 : Discours et symboles haineux/méprisants"
 
-#: /public/admin/admin.js
-#: /public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
 msgstr "Règle #2 : Nudité, sexualité et contenu -13"
 
-#: /public/admin/admin.js
-#: /public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Rule #3: Multi-account"
 msgstr "Règle #3 : Doubles comptes"
 
-#: /public/admin/admin.js
-#: /public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Rule #4: Botting"
 msgstr "Règle #4 : Automatisation"
 
-#: /public/admin/admin.js
-#: /public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Other (specify below)"
 msgstr "Autre (spécifié ci-dessous)"
 
-#: /public/admin/admin.js
-#: /public/include/chat.js
-#: /public/include/lookup.js
+#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
 msgid "Additional information (if applicable)"
 msgstr "Information additionnelle (si applicable)"
 
@@ -1835,8 +1793,7 @@ msgstr "Annuler les pixels des dernières "
 msgid " hours"
 msgstr " heures"
 
-#: /public/admin/admin.js
-#: /public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "You must specify the details."
 msgstr "Vous devez spécifiez les détails."
 
@@ -1885,16 +1842,12 @@ msgstr "jamais"
 msgid "permanent"
 msgstr "permanent"
 
-#: /public/admin/admin.js
-#: /public/include/chat.js
-#: /public/include/uiHelper.js
+#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "Yes"
 msgstr "Oui"
 
-#: /public/admin/admin.js
-#: /public/include/chat.js
-#: /public/include/uiHelper.js
+#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
 #: /public/include/user.js
 msgid "No"
 msgstr "Non"
@@ -1903,13 +1856,11 @@ msgstr "Non"
 msgid "Yes (permanent)"
 msgstr "Oui (permanent)"
 
-#: /public/admin/admin.js
-#: /public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Username"
 msgstr "Nom d'utilisateur"
 
-#: /public/admin/admin.js
-#: /public/include/chat.js
+#: /public/admin/admin.js /public/include/chat.js
 msgid "Profile"
 msgstr "Profil"
 
@@ -1921,17 +1872,11 @@ msgstr "Identifiants"
 msgid "All Time Pixels"
 msgstr "Pixels totaux"
 
-#: /public/admin/admin.js
-#: /public/include/user.js
+#: /public/admin/admin.js /public/include/user.js
 msgid "Rename Requested"
 msgstr "Renommage demandé"
 
-#: /public/admin/admin.js
-msgid "Discord Name"
-msgstr "Nom d'utilisateur Discord"
-
-#: /public/admin/admin.js
-#: /public/include/user.js
+#: /public/admin/admin.js /public/include/user.js
 msgid "Banned"
 msgstr "Banni"
 
@@ -1992,10 +1937,7 @@ msgstr "Raison du débannissement :"
 msgid "Unbanning ${username}"
 msgstr "Débannir ${username}"
 
-#: /public/admin/admin.js
-#: /public/include/chat.js
-#: /public/include/lookup.js
-#: /public/include/user.js
+#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -2154,8 +2096,7 @@ msgstr "Note : vous pouvez définir une action par défaut dans le menu des para
 msgid "OK"
 msgstr "OK"
 
-#: /public/include/chat.js
-#: /public/include/lookup.js
+#: /public/include/chat.js /public/include/lookup.js
 msgid "Report"
 msgstr "Singaler"
 
@@ -2191,13 +2132,11 @@ msgstr "Entrer la raison de votre signalement"
 msgid "You are reporting a chat message from ${reportTarget} with the content:"
 msgstr "Vous signalez un message tchat de ${reportTarget} ayant comme contenu :"
 
-#: /public/include/chat.js
-#: /public/include/lookup.js
+#: /public/include/chat.js /public/include/lookup.js
 msgid "Sent report!"
 msgstr "Signalement envoyé !"
 
-#: /public/include/chat.js
-#: /public/include/lookup.js
+#: /public/include/chat.js /public/include/lookup.js
 msgid "Error sending report."
 msgstr "Erreur lors de l'envoi du signalement."
 
@@ -2334,6 +2273,10 @@ msgid "Error sending purge."
 msgstr "Erreur d'envoi de la purge."
 
 #: /public/include/chat.js
+msgid "Set"
+msgstr "Définir"
+
+#: /public/include/chat.js
 msgid "Toggle Rename Request"
 msgstr "Activer les demandes de renommage"
 
@@ -2429,10 +2372,6 @@ msgstr "maintenant"
 msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
 msgstr "il y a ${hoursStr}:${minuteStr}:${secsStr}"
 
-#: /public/include/lookup.js
-msgid "Discord"
-msgstr "Discord"
-
 #: /public/include/notifications.js
 msgid "Posted by ${notification.who}"
 msgstr "Posté par ${notification.who}"
@@ -2446,16 +2385,8 @@ msgid "There was an error getting the image"
 msgstr "Une erreur est apparue lors de l'acquisition de l'image"
 
 #: /public/include/timer.js
-msgid "Your next pixel will be available in ${delay} seconds!"
-msgstr "Votre prochain pixel sera disponible dans ${delay} secondes !"
-
-#: /public/include/timer.js
-msgid "Your next pixel has been available for ${alertDelay} seconds!"
-msgstr "Votre pixel est disponible depuis ${alertDelay} secondes !"
-
-#: /public/include/timer.js
-msgid "Your next pixel is available!"
-msgstr "Votre prochain pixel est disponible !"
+msgid "ex"
+msgstr ""
 
 #. theme name
 #: /public/include/uiHelper.js
@@ -2497,6 +2428,16 @@ msgstr "Terminal"
 msgid "Red"
 msgstr "Rouge"
 
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Synthwave"
+msgstr ""
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Pink"
+msgstr ""
+
 #: /public/include/uiHelper.js
 msgid "A new ${type} report has been received."
 msgstr "Un nouveau signalement ${type} a été reçu."
@@ -2517,29 +2458,9 @@ msgstr "Êtes-vous sûr de vouloir vous rediriger vers l'URL suivante ?"
 msgid "Drag and dropped file must be a valid image."
 msgstr "Les fichiers en glisser-déposer doivent être une image valide."
 
-#: /public/include/uiHelper.js
-msgid "Discord name updated successfully"
-msgstr "Nom d'utilisateur Discord mis à jour"
-
-#: /public/include/uiHelper.js
-msgid "Couldn\\'t change discord name: "
-msgstr "N'a pas pu changer le nom d'utilisateur Discord : "
-
 #: /public/include/user.js
 msgid "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
 msgstr "En se connectant ou s'enregistrant, vous acceptez les <a href=\"{0}\" target=\"_blank\">conditions d'utilisation</a> et la <a href=\"{1}\" target=\"_blank\">charte de confidentialité</a>."
-
-#: /public/include/user.js
-msgid "Sign in with {0}"
-msgstr "Se connecter avec {0}"
-
-#: /public/include/user.js
-msgid "New Accounts Disabled"
-msgstr "Nouveaux comptes désactivés"
-
-#: /public/include/user.js
-msgid "online"
-msgstr "en ligne"
 
 #: /public/include/user.js
 msgid "Sign Out"
@@ -2601,6 +2522,70 @@ msgstr "Vous devez changer votre pseudonyme."
 msgid "Click here to continue."
 msgstr "Cliquez ici pour continuer."
 
+#: /public/include/user.js
+msgid "You do not have permission to set account visibility."
+msgstr ""
+
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Alerte"
+
+#~ msgid "Sign in with..."
+#~ msgstr "Se connecter avec..."
+
+#~ msgid "Sign up"
+#~ msgstr "S'inscripte"
+
+#~ msgid "Pick a username"
+#~ msgstr "Choisis ton pseudo"
+
+#~ msgid "Username:"
+#~ msgstr "Pseudo :"
+
+#~ msgid "Discord Tag (Optional):"
+#~ msgstr "Nom d'utilisateur Discord (optionnel) :"
+
+#~ msgid "Public Discord name:"
+#~ msgstr "Nom d'utilisateur Discord publique :"
+
+#~ msgid "Remove"
+#~ msgstr "Retirer"
+
+#~ msgid "Generator, progress checker, and monitor for Pxls templates"
+#~ msgstr "Générateur et suivi de progression pour les modèles Pxls"
+
+#~ msgid "PxlsFiddle (archives)"
+#~ msgstr "PxlsFiddle (archives)"
+
+#~ msgid "Discord Tag"
+#~ msgstr "Nom d'utilisateur Discord"
+
+#~ msgid "Discord Name"
+#~ msgstr "Nom d'utilisateur Discord"
+
+#~ msgid "Discord"
+#~ msgstr "Discord"
+
+#~ msgid "Your next pixel will be available in ${delay} seconds!"
+#~ msgstr "Votre prochain pixel sera disponible dans ${delay} secondes !"
+
+#~ msgid "Your next pixel has been available for ${alertDelay} seconds!"
+#~ msgstr "Votre pixel est disponible depuis ${alertDelay} secondes !"
+
+#~ msgid "Your next pixel is available!"
+#~ msgstr "Votre prochain pixel est disponible !"
+
+#~ msgid "Discord name updated successfully"
+#~ msgstr "Nom d'utilisateur Discord mis à jour"
+
+#~ msgid "Couldn\\'t change discord name: "
+#~ msgstr "N'a pas pu changer le nom d'utilisateur Discord : "
+
+#~ msgid "Sign in with {0}"
+#~ msgstr "Se connecter avec {0}"
+
+#~ msgid "New Accounts Disabled"
+#~ msgstr "Nouveaux comptes désactivés"
+
+#~ msgid "online"
+#~ msgstr "en ligne"

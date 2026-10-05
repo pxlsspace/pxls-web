@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
+"POT-Creation-Date: 2026-10-05T01:31:23.819Z\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -78,6 +78,10 @@ msgid "All Time:"
 msgstr "All Time:"
 
 #: /views/index.handlebars
+msgid "Online:"
+msgstr "Online:"
+
+#: /views/index.handlebars
 msgid "Loading online user count&hellip;"
 msgstr "Loading online user count&hellip;"
 
@@ -93,29 +97,13 @@ msgstr "Undo"
 msgid "You are not signed in."
 msgstr "You are not signed in."
 
-#: /views/index.handlebars /public/include/user.js
-msgid "Sign in with..."
-msgstr "Sign in with..."
+#: /views/index.handlebars
+msgid "Sign in"
+msgstr "Sign in"
 
 #: /views/index.handlebars
 msgid "Loading..."
 msgstr "Loading..."
-
-#: /views/index.handlebars
-msgid "Sign up"
-msgstr "Sign up"
-
-#: /views/index.handlebars
-msgid "Pick a username"
-msgstr "Pick a username"
-
-#: /views/index.handlebars
-msgid "Username:"
-msgstr "Username:"
-
-#: /views/index.handlebars
-msgid "Discord Tag (Optional):"
-msgstr "Discord Tag (Optional):"
 
 #: /views/index.handlebars
 msgid "Drag and drop template image"
@@ -658,12 +646,72 @@ msgid "Bottom right"
 msgstr "Bottom right"
 
 #: /views/index.handlebars
+msgid "floating bubble animation"
+msgstr "floating bubble animation"
+
+#: /views/index.handlebars
+msgid "Bubble animation:"
+msgstr "Bubble animation:"
+
+#: /views/index.handlebars /views/profile.handlebars
+msgid "None"
+msgstr "None"
+
+#: /views/index.handlebars
+msgid "Plusone"
+msgstr "Plusone"
+
+#: /views/index.handlebars
+msgid "Shake"
+msgstr "Shake"
+
+#: /views/index.handlebars
+msgid "Shake & Plusone"
+msgstr "Shake & Plusone"
+
+#: /views/index.handlebars
+msgid "Bump"
+msgstr "Bump"
+
+#: /views/index.handlebars
+msgid "Bump & Plusone"
+msgstr "Bump & Plusone"
+
+#: /views/index.handlebars
+msgid "Pulse"
+msgstr "Pulse"
+
+#: /views/index.handlebars
+msgid "Pulse & Plusone"
+msgstr "Pulse & Plusone"
+
+#: /views/index.handlebars
+msgid "Pulse & Shake"
+msgstr "Pulse & Shake"
+
+#: /views/index.handlebars
+msgid "Pulse & Bump"
+msgstr "Pulse & Bump"
+
+#: /views/index.handlebars
 msgid "broken;offset workaround"
 msgstr "broken;offset workaround"
 
 #: /views/index.handlebars
 msgid "Attempt to fix canvas displacement bug in Chrome 78+"
 msgstr "Attempt to fix canvas displacement bug in Chrome 78+"
+
+#: /views/index.handlebars
+msgid "personal account"
+msgstr "personal account"
+
+#: /views/index.handlebars
+msgid "Account Settings"
+msgstr "Account Settings"
+
+#: /views/index.handlebars
+msgid "Visible Connected Accounts"
+msgstr "Visible Connected Accounts"
 
 #: /views/index.handlebars
 msgid "chat;message;ping sound"
@@ -1154,26 +1202,6 @@ msgid "Ping sound volume:"
 msgstr "Ping sound volume:"
 
 #: /views/index.handlebars
-msgid "personal account"
-msgstr "personal account"
-
-#: /views/index.handlebars
-msgid "Account Settings"
-msgstr "Account Settings"
-
-#: /views/index.handlebars
-msgid "Public Discord name:"
-msgstr "Public Discord name:"
-
-#: /views/index.handlebars /public/include/chat.js
-msgid "Set"
-msgstr "Set"
-
-#: /views/index.handlebars
-msgid "Remove"
-msgstr "Remove"
-
-#: /views/index.handlebars
 msgid "Help"
 msgstr "Help"
 
@@ -1434,6 +1462,10 @@ msgid "Twitter"
 msgstr "Twitter"
 
 #: /views/partials/info.handlebars
+msgid "Bluesky"
+msgstr "Bluesky"
+
+#: /views/partials/info.handlebars
 msgid "GitHub (back end)"
 msgstr "GitHub (back end)"
 
@@ -1458,16 +1490,8 @@ msgid "Wiki"
 msgstr "Wiki"
 
 #: /views/partials/info.handlebars
-msgid "Generator, progress checker, and monitor for Pxls templates"
-msgstr "Generator, progress checker, and monitor for Pxls templates"
-
-#: /views/partials/info.handlebars
 msgid "Archives"
 msgstr "Archives"
-
-#: /views/partials/info.handlebars
-msgid "PxlsFiddle (archives)"
-msgstr "PxlsFiddle (archives)"
 
 #: /views/partials/info.handlebars
 msgid "Donate"
@@ -1513,17 +1537,13 @@ msgstr "Alltime Pixels"
 msgid "Current Canvas Pixels"
 msgstr "Current Canvas Pixels"
 
-#: /views/profile.handlebars
-msgid "Discord Tag"
-msgstr "Discord Tag"
+#: /views/profile.handlebars /public/include/lookup.js
+msgid "Connected Accounts"
+msgstr ""
 
 #: /views/profile.handlebars /public/include/lookup.js
 msgid "Faction"
 msgstr "Faction"
-
-#: /views/profile.handlebars
-msgid "None"
-msgstr "None"
 
 #: /views/profile.handlebars /public/admin/admin.js
 msgid "Roles"
@@ -1851,10 +1871,6 @@ msgstr "All Time Pixels"
 msgid "Rename Requested"
 msgstr "Rename Requested"
 
-#: /public/admin/admin.js
-msgid "Discord Name"
-msgstr "Discord Name"
-
 #: /public/admin/admin.js /public/include/user.js
 msgid "Banned"
 msgstr "Banned"
@@ -1917,7 +1933,6 @@ msgid "Unbanning ${username}"
 msgstr "Unbanning ${username}"
 
 #: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
-#: /public/include/user.js
 msgid "Cancel"
 msgstr "Cancel"
 
@@ -2253,6 +2268,10 @@ msgid "Error sending purge."
 msgstr "Error sending purge."
 
 #: /public/include/chat.js
+msgid "Set"
+msgstr "Set"
+
+#: /public/include/chat.js
 msgid "Toggle Rename Request"
 msgstr "Toggle Rename Request"
 
@@ -2348,10 +2367,6 @@ msgstr "just now"
 msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
 msgstr "${hoursStr}:${minuteStr}:${secsStr} ago"
 
-#: /public/include/lookup.js
-msgid "Discord"
-msgstr "Discord"
-
 #: /public/include/notifications.js
 msgid "Posted by ${notification.who}"
 msgstr "Posted by ${notification.who}"
@@ -2365,16 +2380,8 @@ msgid "There was an error getting the image"
 msgstr "There was an error getting the image"
 
 #: /public/include/timer.js
-msgid "Your next pixel will be available in ${delay} seconds!"
-msgstr "Your next pixel will be available in ${delay} seconds!"
-
-#: /public/include/timer.js
-msgid "Your next pixel has been available for ${alertDelay} seconds!"
-msgstr "Your next pixel has been available for ${alertDelay} seconds!"
-
-#: /public/include/timer.js
-msgid "Your next pixel is available!"
-msgstr "Your next pixel is available!"
+msgid "ex"
+msgstr ""
 
 #. theme name
 #: /public/include/uiHelper.js
@@ -2416,6 +2423,16 @@ msgstr "Terminal"
 msgid "Red"
 msgstr "Red"
 
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Synthwave"
+msgstr "Synthwave"
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Pink"
+msgstr "Pink"
+
 #: /public/include/uiHelper.js
 msgid "A new ${type} report has been received."
 msgstr "A new ${type} report has been received."
@@ -2436,29 +2453,9 @@ msgstr "Are you sure you want to redirect to the following URL?"
 msgid "Drag and dropped file must be a valid image."
 msgstr "Drag and dropped file must be a valid image."
 
-#: /public/include/uiHelper.js
-msgid "Discord name updated successfully"
-msgstr "Discord name updated successfully"
-
-#: /public/include/uiHelper.js
-msgid "Couldn\\'t change discord name: "
-msgstr "Couldn\\'t change discord name: "
-
 #: /public/include/user.js
 msgid "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
 msgstr "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
-
-#: /public/include/user.js
-msgid "Sign in with {0}"
-msgstr "Sign in with {0}"
-
-#: /public/include/user.js
-msgid "New Accounts Disabled"
-msgstr "New Accounts Disabled"
-
-#: /public/include/user.js
-msgid "online"
-msgstr "online"
 
 #: /public/include/user.js
 msgid "Sign Out"
@@ -2520,6 +2517,70 @@ msgstr "You must change your username."
 msgid "Click here to continue."
 msgstr "Click here to continue."
 
+#: /public/include/user.js
+msgid "You do not have permission to set account visibility."
+msgstr "You do not have permission to set account visibility."
+
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Alert"
+
+#~ msgid "Sign in with..."
+#~ msgstr "Sign in with..."
+
+#~ msgid "Sign up"
+#~ msgstr "Sign up"
+
+#~ msgid "Pick a username"
+#~ msgstr "Pick a username"
+
+#~ msgid "Username:"
+#~ msgstr "Username:"
+
+#~ msgid "Discord Tag (Optional):"
+#~ msgstr "Discord Tag (Optional):"
+
+#~ msgid "Public Discord name:"
+#~ msgstr "Public Discord name:"
+
+#~ msgid "Remove"
+#~ msgstr "Remove"
+
+#~ msgid "Generator, progress checker, and monitor for Pxls templates"
+#~ msgstr "Generator, progress checker, and monitor for Pxls templates"
+
+#~ msgid "PxlsFiddle (archives)"
+#~ msgstr "PxlsFiddle (archives)"
+
+#~ msgid "Discord Tag"
+#~ msgstr "Discord Tag"
+
+#~ msgid "Discord Name"
+#~ msgstr "Discord Name"
+
+#~ msgid "Discord"
+#~ msgstr "Discord"
+
+#~ msgid "Your next pixel will be available in ${delay} seconds!"
+#~ msgstr "Your next pixel will be available in ${delay} seconds!"
+
+#~ msgid "Your next pixel has been available for ${alertDelay} seconds!"
+#~ msgstr "Your next pixel has been available for ${alertDelay} seconds!"
+
+#~ msgid "Your next pixel is available!"
+#~ msgstr "Your next pixel is available!"
+
+#~ msgid "Discord name updated successfully"
+#~ msgstr "Discord name updated successfully"
+
+#~ msgid "Couldn\\'t change discord name: "
+#~ msgstr "Couldn\\'t change discord name: "
+
+#~ msgid "Sign in with {0}"
+#~ msgstr "Sign in with {0}"
+
+#~ msgid "New Accounts Disabled"
+#~ msgstr "New Accounts Disabled"
+
+#~ msgid "online"
+#~ msgstr "online"
