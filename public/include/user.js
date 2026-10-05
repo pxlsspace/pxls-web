@@ -23,7 +23,9 @@ const user = (function() {
       legal: $('#legal'),
       userMessage: $('#user-message'),
       prompt: $('#prompt'),
-      signup: $('#signup')
+      signup: $('#signup'),
+      visibleAccounts: $('#connected-account-visible-list'),
+      visibleAccountsError: $('#set-account-visible-error')
     },
     roles: [],
     pendingSignupToken: null,
@@ -159,6 +161,7 @@ const user = (function() {
         self.chatNameColor = data.chatNameColor;
         chat.updateSelectedNameColor(data.chatNameColor);
         self.roles = data.roles;
+        self.updateAccountSettings(data.allLogins);
         $(window).trigger('pxls:user:loginState', [true]);
         self.renameRequested = data.renameRequested;
         self.elements.loginOverlay.fadeOut(200);
@@ -322,6 +325,43 @@ const user = (function() {
     updatePixelCountElements: () => {
       self.elements.currentPixelCount.text(self.pixelCount.toLocaleString());
       self.elements.alltimePixelCount.text(self.pixelCountAllTime.toLocaleString());
+    },
+    updateAccountSettings: (logins) => {
+      self.elements.visibleAccounts.empty();
+      for (const { userName, userId, identityProvider, visible } of logins) {
+        const accountSpecifier = `${identityProvider}:${userId}`;
+        self.elements.visibleAccounts.append(crel('li',
+          crel('label', { class: 'input-group' }, [
+            crel('input', {
+              type: 'checkbox',
+              checked: visible,
+              onchange: (e) => self.setAccountVisible(accountSpecifier, e.target.checked)
+            }),
+            ' ',
+            crel('span', { class: 'connected-account-service' }, identityProvider + ':'),
+            ' ',
+            crel('span', { class: 'connected-account-username' }, userName)
+          ])
+        ));
+      }
+    },
+    setAccountVisible: (account, visible) => {
+      $.post('/setLinkVisibility', { account, visible }).always(() => {
+        self.elements.visibleAccountsError.empty();
+      }).fail((r) => {
+        let resp = __('An unknown error occurred. Please contact staff on discord');
+        if (r.status === 403) {
+          resp = __('You do not have permission to set account visibility.');
+        }
+        if (r.responseJSON) {
+          resp = r.responseJSON.details || resp;
+        } else if (r.responseText) {
+          try {
+            resp = JSON.parse(r.responseText).details;
+          } catch (ignored) {}
+        }
+        self.elements.visibleAccountsError.append(resp);
+      });
     }
   };
   return {

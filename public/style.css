@@ -372,6 +372,15 @@ dt {
     font-size: 1.15rem;
 }
 
+ul.unbulleted {
+	list-style: none;
+	padding: 0;
+}
+
+.connected-account-service {
+	font-weight: bold;
+}
+
 @keyframes rainbow-move {
     0% {
         background-position: 5px 0%;
