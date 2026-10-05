@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2025-08-03T22:45:06.512Z\n"
+"POT-Creation-Date: 2026-10-05T01:31:23.819Z\n"
 "Language: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -88,6 +88,10 @@ msgid "All Time:"
 msgstr ""
 
 #: /views/index.handlebars
+msgid "Online:"
+msgstr ""
+
+#: /views/index.handlebars
 msgid "Loading online user count&hellip;"
 msgstr ""
 
@@ -106,29 +110,11 @@ msgid "You are not signed in."
 msgstr ""
 
 #: /views/index.handlebars
-#: /public/include/user.js
-msgid "Sign in with..."
+msgid "Sign in"
 msgstr ""
 
 #: /views/index.handlebars
 msgid "Loading..."
-msgstr ""
-
-#: /views/index.handlebars
-#: /views/index.handlebars
-msgid "Sign up"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Pick a username"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Username:"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Discord Tag (Optional):"
 msgstr ""
 
 #: /views/index.handlebars
@@ -686,11 +672,73 @@ msgid "Bottom right"
 msgstr ""
 
 #: /views/index.handlebars
+msgid "floating bubble animation"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Bubble animation:"
+msgstr ""
+
+#: /views/index.handlebars
+#: /views/profile.handlebars
+#: /views/profile.handlebars
+msgid "None"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Shake"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Shake & Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Bump"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Bump & Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse & Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse & Shake"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse & Bump"
+msgstr ""
+
+#: /views/index.handlebars
 msgid "broken;offset workaround"
 msgstr ""
 
 #: /views/index.handlebars
 msgid "Attempt to fix canvas displacement bug in Chrome 78+"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "personal account"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Account Settings"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Visible Connected Accounts"
 msgstr ""
 
 #: /views/index.handlebars
@@ -1186,27 +1234,6 @@ msgid "Ping sound volume:"
 msgstr ""
 
 #: /views/index.handlebars
-msgid "personal account"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Account Settings"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Public Discord name:"
-msgstr ""
-
-#: /views/index.handlebars
-#: /public/include/chat.js
-msgid "Set"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Remove"
-msgstr ""
-
-#: /views/index.handlebars
 msgid "Help"
 msgstr ""
 
@@ -1469,6 +1496,10 @@ msgid "Twitter"
 msgstr ""
 
 #: /views/partials/info.handlebars
+msgid "Bluesky"
+msgstr ""
+
+#: /views/partials/info.handlebars
 msgid "GitHub (back end)"
 msgstr ""
 
@@ -1493,17 +1524,8 @@ msgid "Wiki"
 msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "Generator, progress checker, and monitor for Pxls templates"
-msgstr ""
-
-#: /views/partials/info.handlebars
-#: /views/partials/info.handlebars
 #: /views/partials/info.handlebars
 msgid "Archives"
-msgstr ""
-
-#: /views/partials/info.handlebars
-msgid "PxlsFiddle (archives)"
 msgstr ""
 
 #: /views/partials/info.handlebars
@@ -1554,17 +1576,13 @@ msgid "Current Canvas Pixels"
 msgstr ""
 
 #: /views/profile.handlebars
-msgid "Discord Tag"
+#: /public/include/lookup.js
+msgid "Connected Accounts"
 msgstr ""
 
 #: /views/profile.handlebars
 #: /public/include/lookup.js
 msgid "Faction"
-msgstr ""
-
-#: /views/profile.handlebars
-#: /views/profile.handlebars
-msgid "None"
 msgstr ""
 
 #: /views/profile.handlebars
@@ -1924,10 +1942,6 @@ msgid "Rename Requested"
 msgstr ""
 
 #: /public/admin/admin.js
-msgid "Discord Name"
-msgstr ""
-
-#: /public/admin/admin.js
 #: /public/include/user.js
 msgid "Banned"
 msgstr ""
@@ -1992,7 +2006,6 @@ msgstr ""
 #: /public/admin/admin.js
 #: /public/include/chat.js
 #: /public/include/lookup.js
-#: /public/include/user.js
 msgid "Cancel"
 msgstr ""
 
@@ -2331,6 +2344,10 @@ msgid "Error sending purge."
 msgstr ""
 
 #: /public/include/chat.js
+msgid "Set"
+msgstr ""
+
+#: /public/include/chat.js
 msgid "Toggle Rename Request"
 msgstr ""
 
@@ -2426,10 +2443,6 @@ msgstr ""
 msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
 msgstr ""
 
-#: /public/include/lookup.js
-msgid "Discord"
-msgstr ""
-
 #: /public/include/notifications.js
 msgid "Posted by ${notification.who}"
 msgstr ""
@@ -2443,15 +2456,7 @@ msgid "There was an error getting the image"
 msgstr ""
 
 #: /public/include/timer.js
-msgid "Your next pixel will be available in ${delay} seconds!"
-msgstr ""
-
-#: /public/include/timer.js
-msgid "Your next pixel has been available for ${alertDelay} seconds!"
-msgstr ""
-
-#: /public/include/timer.js
-msgid "Your next pixel is available!"
+msgid "ex"
 msgstr ""
 
 #. theme name
@@ -2494,6 +2499,16 @@ msgstr ""
 msgid "Red"
 msgstr ""
 
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Synthwave"
+msgstr ""
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Pink"
+msgstr ""
+
 #: /public/include/uiHelper.js
 msgid "A new ${type} report has been received."
 msgstr ""
@@ -2514,48 +2529,8 @@ msgstr ""
 msgid "Drag and dropped file must be a valid image."
 msgstr ""
 
-#: /public/include/uiHelper.js
-msgid "Discord name must be a string."
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Wait, what - how did this happened?"
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Discord name is not valid."
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Discord name updated successfully"
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Discord name reset successfully"
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Error"
-msgstr ""
-
-#: /public/include/uiHelper.js
-msgid "Couldn\\'t change discord name: "
-msgstr ""
-
 #: /public/include/user.js
 msgid "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
-msgstr ""
-
-#: /public/include/user.js
-msgid "Sign in with {0}"
-msgstr ""
-
-#: /public/include/user.js
-msgid "New Accounts Disabled"
-msgstr ""
-
-#: /public/include/user.js
-msgid "online"
 msgstr ""
 
 #: /public/include/user.js
@@ -2616,6 +2591,10 @@ msgstr ""
 
 #: /public/include/user.js
 msgid "Click here to continue."
+msgstr ""
+
+#: /public/include/user.js
+msgid "You do not have permission to set account visibility."
 msgstr ""
 
 #: /public/pxls.js
