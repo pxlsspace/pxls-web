@@ -23,6 +23,16 @@ module.exports.hexToRGB = function(hex) {
     b: parseInt(result[3], 16)
   } : null;
 };
+module.exports.sanitizeLinkURL = function(url) {
+  if (typeof url !== 'string') return null;
+  let parsed;
+  try {
+    parsed = new URL(url, document.baseURI);
+  } catch (e) {
+    return null;
+  }
+  return ['http:', 'https:', 'mailto:'].includes(parsed.protocol) ? parsed.href : null;
+};
 module.exports.analytics = function() {
   if (window.ga) {
     window.ga.apply(this, arguments);

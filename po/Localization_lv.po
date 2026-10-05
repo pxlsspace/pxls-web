@@ -1215,7 +1215,7 @@ msgid "Why does it take so long to \"stack\" pixels?"
 msgstr "Kāpēc tas aizņem tik ilgi sakrāt vairākus pikseļus?"
 
 #: /views/partials/faq.handlebars
-msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
+msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 20-30 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
 msgstr "Tā ir domāts. Ir ātrāk nolikt pikseli uzreiz, kad tas ir pieejams. Pikseļu krāšana ir domāta, lai iedotu jums nelielu bonusu pēc tā, ka pārstājat likt. Iegūt pilnus 6/6 pikseļus aizņem 40 minūtes, bet ja tos likt uzreiz, 6 pikseļi aizņemtu tikai 3 minūtes."
 
 #: /views/partials/faq.handlebars
@@ -1255,7 +1255,7 @@ msgid "Where can I see the past canvases?"
 msgstr "Kur es varu redzēt pagājušās kanvas?"
 
 #: /views/partials/faq.handlebars
-msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
+msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the <a href=\"https://archives.pxls.space\" target=\"_blank\">archives</a>, which records timelapses and a lot of useful information on each canvas."
 msgstr "Pagājušās kanvas ir parādītas mūsu <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord serverī</a>, vai trešās puses mājaslapā <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, kas ieraksta video un daudz noderīgas informācijas par katru kanvu."
 
 #: /views/partials/faq.handlebars
@@ -1296,7 +1296,7 @@ msgstr "Kā man paziņot par kļūdu?"
 
 # I can't think of a way to say staff without sounding super weird
 #: /views/partials/faq.handlebars
-msgid "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
+msgid "Submit bugs to the #dev-and-bugs forum in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs) or open a modmail by DMing pxls.mail#8384."
 msgstr "Par kļūdām varat paziņot #dev-and-bugs kanālā mūsu <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord serverī</a>. Ja atradāt eksploitu, lūdzu sazinieties ar administratoru privātā sarakstē."
 
 #: /views/partials/faq.handlebars

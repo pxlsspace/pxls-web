@@ -295,6 +295,19 @@ const board = (function() {
         }
       }, { passive: true });
 
+      self.elements.container.on('pointerdown mousedown', function() {
+        // unfocus whatever input boxes might be focused
+        document.activeElement && typeof document.activeElement.blur === 'function' && document.activeElement.blur();
+      }).contextmenu(function(evt) {
+        evt.preventDefault();
+        switch (settings.place.rightclick.action.get()) {
+          case 'clear':
+          case 'clearlookup':
+            place.switch(-1);
+            break;
+        }
+      });
+
       // now init the movement
       let downX, downY, downStart;
       self.elements.board_render.on('pointerdown mousedown', handleInputDown)
@@ -478,6 +491,7 @@ const board = (function() {
         uiHelper.setMax(data.maxStacked);
         chat.webinit(data);
         uiHelper.initBanner(data.chatBannerText);
+        uiHelper.initSpecialChatColors(data.chatGradients);
         chromeOffsetWorkaround.update();
         if (data.captchaKey) {
           $('.g-recaptcha').attr('data-sitekey', data.captchaKey);
