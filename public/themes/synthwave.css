@@ -483,6 +483,11 @@ input[type='number'] {
     background: var(--chat-badge-background);
 }
 
+.text-badge[title$="Pixels Placed"] {
+  box-shadow: none;
+  text-shadow: none;
+}
+
 .chat-line .content .mention {
     text-shadow: 0 0 2px #001716, 0 0 5px #03edf975, 0 0 8px #03edf975, 0 0 10px #03edf975;
 }
