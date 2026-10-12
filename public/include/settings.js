@@ -206,6 +206,8 @@ module.exports.settings = (function() {
     colorBrightness: 'ui.brightness.value',
     'alert.src': 'audio.alert.src',
     'alert.volume': 'audio.alert.volume',
+    'place.src': 'audio.place.src',
+    'place.volume': 'audio.place.volume',
     alert_delay: 'place.alert.delay',
     'chrome-canvas-offset-workaround': 'fix.chrome.offset.enable',
     hide_sensitive: 'lookup.filter.sensitive.enable',
@@ -215,6 +217,7 @@ module.exports.settings = (function() {
     'chat.text-icons-enabled': 'chat.badges.enable',
     'chat.faction-tags-enabled': 'chat.factiontags.enable',
     'chat.pings-enabled': 'chat.pings.enable',
+    'chat.ping-audio-src': 'chat.pings.audio.src',
     'chat.ping-audio-state': 'chat.pings.audio.when',
     'chat.ping-audio-volume': 'chat.pings.audio.volume',
     'chat.banner-enabled': 'ui.chat.banner.enable',
@@ -378,6 +381,10 @@ module.exports.settings = (function() {
       alert: {
         src: setting('audio.alert.src', SettingType.TEXT, '', $('#setting-audio-alert-src')),
         volume: setting('audio.alert.volume', SettingType.RANGE, 1, $('#setting-audio-alert-volume'))
+      },
+      place: {
+        src: setting('audio.place.src', SettingType.TEXT, '', $('#setting-audio-place-src')),
+        volume: setting('audio.place.volume', SettingType.RANGE, -1, $('#setting-audio-place-volume'))
       }
     },
     board: {
@@ -467,6 +474,7 @@ module.exports.settings = (function() {
       pings: {
         enable: setting('chat.pings.enable', SettingType.TOGGLE, true, $('#setting-chat-pings-enable')),
         audio: {
+          src: setting('chat.pings.audio.src', SettingType.TEXT, '', $('#setting-chat-pings-audio-src')),
           when: setting('chat.pings.audio.when', SettingType.SELECT, 'off', $('#setting-chat-pings-audio-when')),
           volume: setting('chat.pings.audio.volume', SettingType.RANGE, 0.5, $('#setting-chat-pings-audio-volume'))
         }
@@ -497,6 +505,10 @@ module.exports.settings = (function() {
       }
     }
   };
+  // this is so users who previously had alert volume lowered do not get jumpscared if the default value of 100% is too loud
+  if (self.audio.place.volume.get() === -1) {
+    self.audio.place.volume.set(self.audio.alert.volume.get());
+  }
   $(window).on('pxls:panel:closed', (event, panel) => {
     if (panel === 'settings') {
       self.filter.search('');
