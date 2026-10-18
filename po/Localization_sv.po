@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
+"POT-Creation-Date: 2026-10-05T01:31:23.819Z\n"
 "PO-Revision-Date: 2023-12-15 08:20+0000\n"
 "Last-Translator: Weblate Admin <thiscamefrom@pxls.space>\n"
 "Language-Team: Swedish <https://weblate.pxls.space/projects/pxls-space/pxls-web/sv/>\n"
@@ -84,6 +84,10 @@ msgid "All Time:"
 msgstr "Heltid:"
 
 #: /views/index.handlebars
+msgid "Online:"
+msgstr ""
+
+#: /views/index.handlebars
 msgid "Loading online user count&hellip;"
 msgstr "Laddar in aktiva antalet användare&hellip;"
 
@@ -99,29 +103,13 @@ msgstr "Ångra"
 msgid "You are not signed in."
 msgstr "Du är inte inloggad."
 
-#: /views/index.handlebars /public/include/user.js
-msgid "Sign in with..."
-msgstr "Logga in med..."
+#: /views/index.handlebars
+msgid "Sign in"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "Loading..."
 msgstr "Läser in..."
-
-#: /views/index.handlebars
-msgid "Sign up"
-msgstr "Gör ett konto"
-
-#: /views/index.handlebars
-msgid "Pick a username"
-msgstr "Välj ett användarnamn"
-
-#: /views/index.handlebars
-msgid "Username:"
-msgstr "Användarnamn:"
-
-#: /views/index.handlebars
-msgid "Discord Tag (Optional):"
-msgstr "Discord Tag (Frivilligt):"
 
 #: /views/index.handlebars
 msgid "Drag and drop template image"
@@ -664,12 +652,72 @@ msgid "Bottom right"
 msgstr "Botten till höger"
 
 #: /views/index.handlebars
+msgid "floating bubble animation"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Bubble animation:"
+msgstr ""
+
+#: /views/index.handlebars /views/profile.handlebars
+msgid "None"
+msgstr "Ingen"
+
+#: /views/index.handlebars
+msgid "Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Shake"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Shake & Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Bump"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Bump & Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse & Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse & Shake"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse & Bump"
+msgstr ""
+
+#: /views/index.handlebars
 msgid "broken;offset workaround"
 msgstr "trasig;offset lösning"
 
 #: /views/index.handlebars
 msgid "Attempt to fix canvas displacement bug in Chrome 78+"
 msgstr "Försök till att fixa kanvasförskjutnings buggen i Chrome 78+"
+
+#: /views/index.handlebars
+msgid "personal account"
+msgstr "personligt konto"
+
+#: /views/index.handlebars
+msgid "Account Settings"
+msgstr "Konto inställningar"
+
+#: /views/index.handlebars
+msgid "Visible Connected Accounts"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "chat;message;ping sound"
@@ -1160,26 +1208,6 @@ msgid "Ping sound volume:"
 msgstr "Notis ljud volym:"
 
 #: /views/index.handlebars
-msgid "personal account"
-msgstr "personligt konto"
-
-#: /views/index.handlebars
-msgid "Account Settings"
-msgstr "Konto inställningar"
-
-#: /views/index.handlebars
-msgid "Public Discord name:"
-msgstr "Publikt Discord namn:"
-
-#: /views/index.handlebars /public/include/chat.js
-msgid "Set"
-msgstr "Sätt"
-
-#: /views/index.handlebars
-msgid "Remove"
-msgstr "Ta bort"
-
-#: /views/index.handlebars
 msgid "Help"
 msgstr "Hjälp"
 
@@ -1440,6 +1468,10 @@ msgid "Twitter"
 msgstr "Twitter"
 
 #: /views/partials/info.handlebars
+msgid "Bluesky"
+msgstr ""
+
+#: /views/partials/info.handlebars
 msgid "GitHub (back end)"
 msgstr ""
 
@@ -1464,16 +1496,8 @@ msgid "Wiki"
 msgstr ""
 
 #: /views/partials/info.handlebars
-msgid "Generator, progress checker, and monitor for Pxls templates"
-msgstr "Genererare, utvecklingskollare, och övervakare för Pxls template"
-
-#: /views/partials/info.handlebars
 msgid "Archives"
 msgstr "Arkiv"
-
-#: /views/partials/info.handlebars
-msgid "PxlsFiddle (archives)"
-msgstr "PxlsFiddle (arkiv)"
 
 #: /views/partials/info.handlebars
 msgid "Donate"
@@ -1519,17 +1543,13 @@ msgstr "Heltids Pixlar"
 msgid "Current Canvas Pixels"
 msgstr "Nuvarande Kanvas Pixlar"
 
-#: /views/profile.handlebars
-msgid "Discord Tag"
-msgstr "Discord Tag"
+#: /views/profile.handlebars /public/include/lookup.js
+msgid "Connected Accounts"
+msgstr ""
 
 #: /views/profile.handlebars /public/include/lookup.js
 msgid "Faction"
 msgstr "Grupp"
-
-#: /views/profile.handlebars
-msgid "None"
-msgstr "Ingen"
 
 #: /views/profile.handlebars /public/admin/admin.js
 msgid "Roles"
@@ -1857,10 +1877,6 @@ msgstr "Heltids Pixlar"
 msgid "Rename Requested"
 msgstr "Namnbyte Begärd"
 
-#: /public/admin/admin.js
-msgid "Discord Name"
-msgstr "Discord Namn"
-
 #: /public/admin/admin.js /public/include/user.js
 msgid "Banned"
 msgstr "Bannlyst"
@@ -1923,7 +1939,6 @@ msgid "Unbanning ${username}"
 msgstr "Tar Bort Bannlysning på ${username}"
 
 #: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
-#: /public/include/user.js
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -2259,6 +2274,10 @@ msgid "Error sending purge."
 msgstr "Ett fel uppstod med genomförningen av rensandet."
 
 #: /public/include/chat.js
+msgid "Set"
+msgstr "Sätt"
+
+#: /public/include/chat.js
 msgid "Toggle Rename Request"
 msgstr "Växla Omdöpnings Begäran"
 
@@ -2354,10 +2373,6 @@ msgstr "just nu"
 msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
 msgstr "${hoursStr}:${minuteStr}:${secsStr} sen"
 
-#: /public/include/lookup.js
-msgid "Discord"
-msgstr "Discord"
-
 #: /public/include/notifications.js
 msgid "Posted by ${notification.who}"
 msgstr "Utlagd av ${notification.who}"
@@ -2371,16 +2386,8 @@ msgid "There was an error getting the image"
 msgstr "Det uppstod ett fel vid erhållandet av bilden"
 
 #: /public/include/timer.js
-msgid "Your next pixel will be available in ${delay} seconds!"
-msgstr "Din nästa pixel kommer att vara tillgänglig inom ${delay} sekunder!"
-
-#: /public/include/timer.js
-msgid "Your next pixel has been available for ${alertDelay} seconds!"
-msgstr "Din nästa pixel har varit tillgänglig för ${alertDelay} sekunder!"
-
-#: /public/include/timer.js
-msgid "Your next pixel is available!"
-msgstr "Din nästa pixel är tillgänglig!"
+msgid "ex"
+msgstr ""
 
 #. theme name
 #: /public/include/uiHelper.js
@@ -2422,6 +2429,16 @@ msgstr "Terminal"
 msgid "Red"
 msgstr "Röd"
 
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Synthwave"
+msgstr ""
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Pink"
+msgstr ""
+
 #: /public/include/uiHelper.js
 msgid "A new ${type} report has been received."
 msgstr "En ny ${type} har blivit mottagen."
@@ -2442,29 +2459,9 @@ msgstr "Är du säker på att du vill följa länken?"
 msgid "Drag and dropped file must be a valid image."
 msgstr "Indragen fil måste vara en giltig bild."
 
-#: /public/include/uiHelper.js
-msgid "Discord name updated successfully"
-msgstr "Discord namn uppdatering lyckades"
-
-#: /public/include/uiHelper.js
-msgid "Couldn\\'t change discord name: "
-msgstr "Kan inte ändra discord namn: "
-
 #: /public/include/user.js
 msgid "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
 msgstr "Genom att du loggar in eller registrerar dig, så godkänner du <a href=\"{0}\">användarvillkoren</a> och <a href=\"{1}\">integritetspolicyn</a>"
-
-#: /public/include/user.js
-msgid "Sign in with {0}"
-msgstr "Logga in med {0}"
-
-#: /public/include/user.js
-msgid "New Accounts Disabled"
-msgstr "Nytt Konto Avstängt"
-
-#: /public/include/user.js
-msgid "online"
-msgstr "online"
 
 #: /public/include/user.js
 msgid "Sign Out"
@@ -2526,9 +2523,73 @@ msgstr "Du måste ändra ditt användarnamn."
 msgid "Click here to continue."
 msgstr "Klicka här för att fortsätta."
 
+#: /public/include/user.js
+msgid "You do not have permission to set account visibility."
+msgstr ""
+
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Alert"
+
+#~ msgid "Sign in with..."
+#~ msgstr "Logga in med..."
+
+#~ msgid "Sign up"
+#~ msgstr "Gör ett konto"
+
+#~ msgid "Pick a username"
+#~ msgstr "Välj ett användarnamn"
+
+#~ msgid "Username:"
+#~ msgstr "Användarnamn:"
+
+#~ msgid "Discord Tag (Optional):"
+#~ msgstr "Discord Tag (Frivilligt):"
+
+#~ msgid "Public Discord name:"
+#~ msgstr "Publikt Discord namn:"
+
+#~ msgid "Remove"
+#~ msgstr "Ta bort"
+
+#~ msgid "Generator, progress checker, and monitor for Pxls templates"
+#~ msgstr "Genererare, utvecklingskollare, och övervakare för Pxls template"
+
+#~ msgid "PxlsFiddle (archives)"
+#~ msgstr "PxlsFiddle (arkiv)"
+
+#~ msgid "Discord Tag"
+#~ msgstr "Discord Tag"
+
+#~ msgid "Discord Name"
+#~ msgstr "Discord Namn"
+
+#~ msgid "Discord"
+#~ msgstr "Discord"
+
+#~ msgid "Your next pixel will be available in ${delay} seconds!"
+#~ msgstr "Din nästa pixel kommer att vara tillgänglig inom ${delay} sekunder!"
+
+#~ msgid "Your next pixel has been available for ${alertDelay} seconds!"
+#~ msgstr "Din nästa pixel har varit tillgänglig för ${alertDelay} sekunder!"
+
+#~ msgid "Your next pixel is available!"
+#~ msgstr "Din nästa pixel är tillgänglig!"
+
+#~ msgid "Discord name updated successfully"
+#~ msgstr "Discord namn uppdatering lyckades"
+
+#~ msgid "Couldn\\'t change discord name: "
+#~ msgstr "Kan inte ändra discord namn: "
+
+#~ msgid "Sign in with {0}"
+#~ msgstr "Logga in med {0}"
+
+#~ msgid "New Accounts Disabled"
+#~ msgstr "Nytt Konto Avstängt"
+
+#~ msgid "online"
+#~ msgstr "online"
 
 #~ msgid "Subreddit"
 #~ msgstr "Subreddit"

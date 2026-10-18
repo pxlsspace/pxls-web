@@ -284,10 +284,18 @@ module.exports.lookup = (function() {
           sensitive: board.snipMode,
           get: data => data.pixelCountAlltime
         }, {
-          id: 'discord_name',
-          name: __('Discord'),
+          id: 'logins',
+          name: __('Connected Accounts'),
           sensitive: board.snipMode,
-          get: data => data.discordName
+          get: data => crel('dl',
+            { class: 'logins' },
+            data.logins.map(
+              ({ userName, userId, identityProvider }) => [
+                crel('dt', identityProvider),
+                crel('dd', userName)
+              ]
+            )
+          )
         }
       );
 

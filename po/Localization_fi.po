@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T20:41:44.977Z\n"
+"POT-Creation-Date: 2026-10-05T01:31:23.819Z\n"
 "Language: fi\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -78,6 +78,10 @@ msgid "All Time:"
 msgstr "Kaikki:"
 
 #: /views/index.handlebars
+msgid "Online:"
+msgstr ""
+
+#: /views/index.handlebars
 msgid "Loading online user count&hellip;"
 msgstr "Ladataan actiivisten käyttäjien lukumäärää&hellip;"
 
@@ -93,29 +97,13 @@ msgstr "Peruuta"
 msgid "You are not signed in."
 msgstr "Et ole kirjautunut sisään."
 
-#: /views/index.handlebars /public/include/user.js
-msgid "Sign in with..."
-msgstr "Kirjaudu sisään käyttäen..."
+#: /views/index.handlebars
+msgid "Sign in"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "Loading..."
 msgstr "Ladataan..."
-
-#: /views/index.handlebars
-msgid "Sign up"
-msgstr "Rekisteröidy"
-
-#: /views/index.handlebars
-msgid "Pick a username"
-msgstr "Valitse käyttäjänimi"
-
-#: /views/index.handlebars
-msgid "Username:"
-msgstr "Käyttäjänimi:"
-
-#: /views/index.handlebars
-msgid "Discord Tag (Optional):"
-msgstr "Discord Tagi (Vapaaehtoinen):"
 
 #: /views/index.handlebars
 msgid "Drag and drop template image"
@@ -658,12 +646,72 @@ msgid "Bottom right"
 msgstr "Alaoikea"
 
 #: /views/index.handlebars
+msgid "floating bubble animation"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Bubble animation:"
+msgstr ""
+
+#: /views/index.handlebars /views/profile.handlebars
+msgid "None"
+msgstr "Ei mitään"
+
+#: /views/index.handlebars
+msgid "Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Shake"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Shake & Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Bump"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Bump & Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse & Plusone"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse & Shake"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Pulse & Bump"
+msgstr ""
+
+#: /views/index.handlebars
 msgid "broken;offset workaround"
 msgstr "rikki;offsetin kiertotapa"
 
 #: /views/index.handlebars
 msgid "Attempt to fix canvas displacement bug in Chrome 78+"
 msgstr "Yritä korjata kanvasin siirtymä bugi Chrome versiossa 78+"
+
+#: /views/index.handlebars
+msgid "personal account"
+msgstr "henkilökohtainen tili"
+
+#: /views/index.handlebars
+msgid "Account Settings"
+msgstr "Tilin Asetukset"
+
+#: /views/index.handlebars
+msgid "Visible Connected Accounts"
+msgstr ""
 
 #: /views/index.handlebars
 msgid "chat;message;ping sound"
@@ -1154,26 +1202,6 @@ msgid "Ping sound volume:"
 msgstr "Pingiäänen voimakkuus:"
 
 #: /views/index.handlebars
-msgid "personal account"
-msgstr "henkilökohtainen tili"
-
-#: /views/index.handlebars
-msgid "Account Settings"
-msgstr "Tilin Asetukset"
-
-#: /views/index.handlebars
-msgid "Public Discord name:"
-msgstr "Julkinen Discord nimi:"
-
-#: /views/index.handlebars /public/include/chat.js
-msgid "Set"
-msgstr "Aseta"
-
-#: /views/index.handlebars
-msgid "Remove"
-msgstr "Poista"
-
-#: /views/index.handlebars
 msgid "Help"
 msgstr "Ohjeet"
 
@@ -1434,6 +1462,10 @@ msgid "Twitter"
 msgstr "Twitteri"
 
 #: /views/partials/info.handlebars
+msgid "Bluesky"
+msgstr ""
+
+#: /views/partials/info.handlebars
 msgid "GitHub (back end)"
 msgstr "GitHub (backendi)"
 
@@ -1458,16 +1490,8 @@ msgid "Wiki"
 msgstr "Wiki"
 
 #: /views/partials/info.handlebars
-msgid "Generator, progress checker, and monitor for Pxls templates"
-msgstr "Generaattori, edistyksentarkistaja, ja tarkkailija Pxls malleille"
-
-#: /views/partials/info.handlebars
 msgid "Archives"
 msgstr "Arkistot"
-
-#: /views/partials/info.handlebars
-msgid "PxlsFiddle (archives)"
-msgstr "PxlsFiddle (arkistot)"
 
 #: /views/partials/info.handlebars
 msgid "Donate"
@@ -1513,17 +1537,13 @@ msgstr "Kaiken Ajan Pikselit"
 msgid "Current Canvas Pixels"
 msgstr "Nykyisen Kanvaasin Pikselit"
 
-#: /views/profile.handlebars
-msgid "Discord Tag"
-msgstr "Discord Tagi"
+#: /views/profile.handlebars /public/include/lookup.js
+msgid "Connected Accounts"
+msgstr ""
 
 #: /views/profile.handlebars /public/include/lookup.js
 msgid "Faction"
 msgstr "Ryhmät"
-
-#: /views/profile.handlebars
-msgid "None"
-msgstr "Ei mitään"
 
 #: /views/profile.handlebars /public/admin/admin.js
 msgid "Roles"
@@ -1851,10 +1871,6 @@ msgstr "Kaiken Ajan Pikselit"
 msgid "Rename Requested"
 msgstr "Nimenvaihto Pyydetty"
 
-#: /public/admin/admin.js
-msgid "Discord Name"
-msgstr "Discord Nimi"
-
 #: /public/admin/admin.js /public/include/user.js
 msgid "Banned"
 msgstr "Porttikielletty"
@@ -1917,7 +1933,6 @@ msgid "Unbanning ${username}"
 msgstr "Poistetaan porttikielto keyttäjältä ${username}"
 
 #: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
-#: /public/include/user.js
 msgid "Cancel"
 msgstr "Peruuta"
 
@@ -2253,6 +2268,10 @@ msgid "Error sending purge."
 msgstr "Virhe siivousta lähettäessä."
 
 #: /public/include/chat.js
+msgid "Set"
+msgstr "Aseta"
+
+#: /public/include/chat.js
 msgid "Toggle Rename Request"
 msgstr "Kytke Nimenvaihtopyyntö"
 
@@ -2348,10 +2367,6 @@ msgstr "juuri nyt"
 msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
 msgstr "${hoursStr}:${minuteStr}:${secsStr} sitten"
 
-#: /public/include/lookup.js
-msgid "Discord"
-msgstr "Discord"
-
 #: /public/include/notifications.js
 msgid "Posted by ${notification.who}"
 msgstr "Julkaissut ${notification.who}"
@@ -2365,16 +2380,8 @@ msgid "There was an error getting the image"
 msgstr "Tapahtui virhe hankkiessa kuvaa"
 
 #: /public/include/timer.js
-msgid "Your next pixel will be available in ${delay} seconds!"
-msgstr "Seuraava pikselisi tulee olemaan saatavilla ${delay} sekunnissa!"
-
-#: /public/include/timer.js
-msgid "Your next pixel has been available for ${alertDelay} seconds!"
-msgstr "Seuraava pikseilisi on ollut saatavilla ${alertDelay} sekuntia!"
-
-#: /public/include/timer.js
-msgid "Your next pixel is available!"
-msgstr "Seuraava pikselisi on saatavilla!"
+msgid "ex"
+msgstr ""
 
 #. theme name
 #: /public/include/uiHelper.js
@@ -2416,6 +2423,16 @@ msgstr "Terminaali"
 msgid "Red"
 msgstr "Punainen"
 
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Synthwave"
+msgstr ""
+
+#. theme name
+#: /public/include/uiHelper.js
+msgid "Pink"
+msgstr ""
+
 #: /public/include/uiHelper.js
 msgid "A new ${type} report has been received."
 msgstr "Uusi ${type} ilmianto on saatu."
@@ -2436,29 +2453,9 @@ msgstr "Oletko varma että haluat uudelleenohjata seuraavaan URL:n?"
 msgid "Drag and dropped file must be a valid image."
 msgstr "Vedetyn ja pudotetun tiedoston täytyy olla oikeamuotoinen kuva"
 
-#: /public/include/uiHelper.js
-msgid "Discord name updated successfully"
-msgstr "Discord nimi päivitetty onnistuneesti"
-
-#: /public/include/uiHelper.js
-msgid "Couldn\\'t change discord name: "
-msgstr "Ei voitu muuttaa Discord nimeä: "
-
 #: /public/include/user.js
 msgid "By logging in or registering, you agree to the <a href=\"{0}\" target=\"_blank\">terms of use</a> and <a href=\"{1}\" target=\"_blank\">privacy policy</a>."
 msgstr "Krjautumalla sisään ja rekisteröitymällä hyväksyt <a href=\"{0}\" target=\"_blank\">käyttöehdot</a> ja <a href=\"{1}\" target=\"_blank\">tietosuojakäytännön</a>."
-
-#: /public/include/user.js
-msgid "Sign in with {0}"
-msgstr "Kirjaudu sisään käyttäen {0}"
-
-#: /public/include/user.js
-msgid "New Accounts Disabled"
-msgstr "Uudet Tilit Poistettu käytöstä"
-
-#: /public/include/user.js
-msgid "online"
-msgstr "paikalla"
 
 #: /public/include/user.js
 msgid "Sign Out"
@@ -2520,6 +2517,70 @@ msgstr "Sinun täytyy vaihtaa käyttäjänimesi."
 msgid "Click here to continue."
 msgstr "Paina tästä jatkaaksesi."
 
+#: /public/include/user.js
+msgid "You do not have permission to set account visibility."
+msgstr ""
+
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Hälytys"
+
+#~ msgid "Sign in with..."
+#~ msgstr "Kirjaudu sisään käyttäen..."
+
+#~ msgid "Sign up"
+#~ msgstr "Rekisteröidy"
+
+#~ msgid "Pick a username"
+#~ msgstr "Valitse käyttäjänimi"
+
+#~ msgid "Username:"
+#~ msgstr "Käyttäjänimi:"
+
+#~ msgid "Discord Tag (Optional):"
+#~ msgstr "Discord Tagi (Vapaaehtoinen):"
+
+#~ msgid "Public Discord name:"
+#~ msgstr "Julkinen Discord nimi:"
+
+#~ msgid "Remove"
+#~ msgstr "Poista"
+
+#~ msgid "Generator, progress checker, and monitor for Pxls templates"
+#~ msgstr "Generaattori, edistyksentarkistaja, ja tarkkailija Pxls malleille"
+
+#~ msgid "PxlsFiddle (archives)"
+#~ msgstr "PxlsFiddle (arkistot)"
+
+#~ msgid "Discord Tag"
+#~ msgstr "Discord Tagi"
+
+#~ msgid "Discord Name"
+#~ msgstr "Discord Nimi"
+
+#~ msgid "Discord"
+#~ msgstr "Discord"
+
+#~ msgid "Your next pixel will be available in ${delay} seconds!"
+#~ msgstr "Seuraava pikselisi tulee olemaan saatavilla ${delay} sekunnissa!"
+
+#~ msgid "Your next pixel has been available for ${alertDelay} seconds!"
+#~ msgstr "Seuraava pikseilisi on ollut saatavilla ${alertDelay} sekuntia!"
+
+#~ msgid "Your next pixel is available!"
+#~ msgstr "Seuraava pikselisi on saatavilla!"
+
+#~ msgid "Discord name updated successfully"
+#~ msgstr "Discord nimi päivitetty onnistuneesti"
+
+#~ msgid "Couldn\\'t change discord name: "
+#~ msgstr "Ei voitu muuttaa Discord nimeä: "
+
+#~ msgid "Sign in with {0}"
+#~ msgstr "Kirjaudu sisään käyttäen {0}"
+
+#~ msgid "New Accounts Disabled"
+#~ msgstr "Uudet Tilit Poistettu käytöstä"
+
+#~ msgid "online"
+#~ msgstr "paikalla"
