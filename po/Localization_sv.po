@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2026-10-05T01:31:23.819Z\n"
+"POT-Creation-Date: 2026-10-20T21:04:19.851Z\n"
 "PO-Revision-Date: 2023-12-15 08:20+0000\n"
 "Last-Translator: Weblate Admin <thiscamefrom@pxls.space>\n"
 "Language-Team: Swedish <https://weblate.pxls.space/projects/pxls-space/pxls-web/sv/>\n"
@@ -2496,8 +2496,16 @@ msgid "An unknown error occurred. Please contact staff on discord"
 msgstr "Ett okänt fel uppstod. Snälla kontakta moderatorerna på discord"
 
 #: /public/include/user.js
-msgid "Staff have required you to change your username, this usually means your name breaks one of our rules."
-msgstr "Moderatorerna kräver att du ändrar ditt användarnamn, detta brukar betyda att ditt namn bryter mot någon av våra regler."
+msgid "You may now change your username."
+msgstr ""
+
+#: /public/include/user.js
+msgid "If you just signed up, this is because your preferred name was taken already. You have been assigned a new username with a number added to your desired username. You may enter that username to keep it."
+msgstr ""
+
+#: /public/include/user.js
+msgid "If you did not immediately get this message on signing up and did not request a rename manually, then your username breaks our rules. Please choose a new one."
+msgstr ""
 
 #: /public/include/user.js
 msgid "If you disagree, please contact us on Discord (link in the info panel)."
@@ -2530,6 +2538,9 @@ msgstr ""
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Alert"
+
+#~ msgid "Staff have required you to change your username, this usually means your name breaks one of our rules."
+#~ msgstr "Moderatorerna kräver att du ändrar ditt användarnamn, detta brukar betyda att ditt namn bryter mot någon av våra regler."
 
 #~ msgid "Sign in with..."
 #~ msgstr "Logga in med..."

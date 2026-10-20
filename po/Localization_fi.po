@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2026-10-05T01:31:23.819Z\n"
+"POT-Creation-Date: 2026-10-20T21:04:19.851Z\n"
 "Language: fi\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -2490,8 +2490,16 @@ msgid "An unknown error occurred. Please contact staff on discord"
 msgstr "Tuntematon virhe tapahtui. Ole hyvä ja ota yhteyttä henkilökuntaan Discordissa"
 
 #: /public/include/user.js
-msgid "Staff have required you to change your username, this usually means your name breaks one of our rules."
-msgstr "Henkilökunta on vaatinut sinun vaihtavan käyttäjänimesi, yleensä tämä tarkoittaa että nimesi rikkoo jotain säännöistämme."
+msgid "You may now change your username."
+msgstr ""
+
+#: /public/include/user.js
+msgid "If you just signed up, this is because your preferred name was taken already. You have been assigned a new username with a number added to your desired username. You may enter that username to keep it."
+msgstr ""
+
+#: /public/include/user.js
+msgid "If you did not immediately get this message on signing up and did not request a rename manually, then your username breaks our rules. Please choose a new one."
+msgstr ""
 
 #: /public/include/user.js
 msgid "If you disagree, please contact us on Discord (link in the info panel)."
@@ -2524,6 +2532,9 @@ msgstr ""
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Hälytys"
+
+#~ msgid "Staff have required you to change your username, this usually means your name breaks one of our rules."
+#~ msgstr "Henkilökunta on vaatinut sinun vaihtavan käyttäjänimesi, yleensä tämä tarkoittaa että nimesi rikkoo jotain säännöistämme."
 
 #~ msgid "Sign in with..."
 #~ msgstr "Kirjaudu sisään käyttäen..."

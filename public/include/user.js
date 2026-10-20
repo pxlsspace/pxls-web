@@ -284,8 +284,10 @@ const user = (function() {
       });
     },
     _handleRenameClick: function(event) {
-      const renamePopup = crel('form', { onsubmit: self._handleRenameSubmit },
-        crel('p', __('Staff have required you to change your username, this usually means your name breaks one of our rules.')),
+      const renamePopup = crel('form', { onsubmit: self._handleRenameSubmit, style: 'max-width: 40em' },
+        crel('p', __('You may now change your username.')),
+        crel('p', __('If you just signed up, this is because your preferred name was taken already. You have been assigned a new username with a number added to your desired username. You may enter that username to keep it.')),
+        crel('p', __('If you did not immediately get this message on signing up and did not request a rename manually, then your username breaks our rules. Please choose a new one.')),
         crel('p', __('If you disagree, please contact us on Discord (link in the info panel).')),
         crel('label', __('New Username:') + ' ',
           crel('input', {

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2026-10-05T01:31:23.819Z\n"
+"POT-Creation-Date: 2026-10-20T21:04:19.851Z\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -2490,8 +2490,16 @@ msgid "An unknown error occurred. Please contact staff on discord"
 msgstr "An unknown error occurred. Please contact staff on discord"
 
 #: /public/include/user.js
-msgid "Staff have required you to change your username, this usually means your name breaks one of our rules."
-msgstr "Staff have required you to change your username, this usually means your name breaks one of our rules."
+msgid "You may now change your username."
+msgstr "You may now change your username."
+
+#: /public/include/user.js
+msgid "If you just signed up, this is because your preferred name was taken already. You have been assigned a new username with a number added to your desired username. You may enter that username to keep it."
+msgstr "If you just signed up, this is because your preferred name was taken already. You have been assigned a new username with a number added to your desired username. You may enter that username to keep it."
+
+#: /public/include/user.js
+msgid "If you did not immediately get this message on signing up and did not request a rename manually, then your username breaks our rules. Please choose a new one."
+msgstr "If you did not immediately get this message on signing up and did not request a rename manually, then your username breaks our rules. Please choose a new one."
 
 #: /public/include/user.js
 msgid "If you disagree, please contact us on Discord (link in the info panel)."
@@ -2524,63 +2532,3 @@ msgstr "You do not have permission to set account visibility."
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Alert"
-
-#~ msgid "Sign in with..."
-#~ msgstr "Sign in with..."
-
-#~ msgid "Sign up"
-#~ msgstr "Sign up"
-
-#~ msgid "Pick a username"
-#~ msgstr "Pick a username"
-
-#~ msgid "Username:"
-#~ msgstr "Username:"
-
-#~ msgid "Discord Tag (Optional):"
-#~ msgstr "Discord Tag (Optional):"
-
-#~ msgid "Public Discord name:"
-#~ msgstr "Public Discord name:"
-
-#~ msgid "Remove"
-#~ msgstr "Remove"
-
-#~ msgid "Generator, progress checker, and monitor for Pxls templates"
-#~ msgstr "Generator, progress checker, and monitor for Pxls templates"
-
-#~ msgid "PxlsFiddle (archives)"
-#~ msgstr "PxlsFiddle (archives)"
-
-#~ msgid "Discord Tag"
-#~ msgstr "Discord Tag"
-
-#~ msgid "Discord Name"
-#~ msgstr "Discord Name"
-
-#~ msgid "Discord"
-#~ msgstr "Discord"
-
-#~ msgid "Your next pixel will be available in ${delay} seconds!"
-#~ msgstr "Your next pixel will be available in ${delay} seconds!"
-
-#~ msgid "Your next pixel has been available for ${alertDelay} seconds!"
-#~ msgstr "Your next pixel has been available for ${alertDelay} seconds!"
-
-#~ msgid "Your next pixel is available!"
-#~ msgstr "Your next pixel is available!"
-
-#~ msgid "Discord name updated successfully"
-#~ msgstr "Discord name updated successfully"
-
-#~ msgid "Couldn\\'t change discord name: "
-#~ msgstr "Couldn\\'t change discord name: "
-
-#~ msgid "Sign in with {0}"
-#~ msgstr "Sign in with {0}"
-
-#~ msgid "New Accounts Disabled"
-#~ msgstr "New Accounts Disabled"
-
-#~ msgid "online"
-#~ msgstr "online"
