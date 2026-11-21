@@ -12,8 +12,7 @@ const { ls } = require('./storage');
 const { coords } = require('./coords');
 let query;
 
-const { flags, createImageData, binaryAjax } = require('./helpers');
-const { haveImageRendering, haveZoomRendering } = flags;
+const { createImageData, binaryAjax } = require('./helpers');
 
 const numKeys = [...Array(10).keys()].map(String) + '`';
 
@@ -28,8 +27,6 @@ const board = (function() {
       container: $('#board-container')
     },
     ctx: null,
-    use_js_render: !haveImageRendering && !haveZoomRendering,
-    use_zoom: !haveImageRendering && haveZoomRendering,
     width: 0,
     height: 0,
     scale: 1,
@@ -458,18 +455,7 @@ const board = (function() {
       $('#ui').hide();
       self.elements.container.hide();
 
-      if (self.use_js_render) {
-        self.elements.board_render = $('<canvas>').css({
-          width: '100vw',
-          height: '100vh',
-          margin: 0,
-          marginTop: 3 // wtf? Noticed by experimenting
-        });
-        self.elements.board.parent().append(self.elements.board_render);
-        self.elements.board.detach();
-      } else {
-        self.elements.board_render = self.elements.board;
-      }
+      self.elements.board_render = self.elements.board;
       self.ctx = self.elements.board[0].getContext('2d');
       self.initInteraction();
 
@@ -507,16 +493,10 @@ const board = (function() {
         self.centerOn(cx, cy, true);
         socket.init();
 
-        if (self.use_js_render) {
-          $(window).resize(function() {
-            self.update();
-          }).resize();
-        } else {
-          $(window).resize(function() {
-            place.update();
-            grid.update();
-          });
-        }
+        $(window).resize(function() {
+          place.update();
+          grid.update();
+        });
         const url = query.get('template');
         if (url) { // we have a template!
           template.queueUpdate({
@@ -579,65 +559,6 @@ const board = (function() {
           scale: Math.round(scale * 100) / 100
         }, true);
       }
-      if (self.use_js_render) {
-        const ctx2 = self.elements.board_render[0].getContext('2d');
-        let pxlX = -self.pan.x + ((self.width - (window.innerWidth / scale)) / 2);
-        let pxlY = -self.pan.y + ((self.height - (window.innerHeight / scale)) / 2);
-        let dx = 0;
-        let dy = 0;
-        let dw = 0;
-        let dh = 0;
-        let pxlW = window.innerWidth / scale;
-        let pxlH = window.innerHeight / scale;
-
-        if (pxlX < 0) {
-          dx = -pxlX;
-          pxlX = 0;
-          pxlW -= dx;
-          dw += dx;
-        }
-
-        if (pxlY < 0) {
-          dy = -pxlY;
-          pxlY = 0;
-          pxlH -= dy;
-          dh += dy;
-        }
-
-        if (pxlX + pxlW > self.width) {
-          dw += pxlW + pxlX - self.width;
-          pxlW = self.width - pxlX;
-        }
-
-        if (pxlY + pxlH > self.height) {
-          dh += pxlH + pxlY - self.height;
-          pxlH = self.height - pxlY;
-        }
-
-        ctx2.canvas.width = window.innerWidth;
-        ctx2.canvas.height = window.innerHeight;
-        ctx2.mozImageSmoothingEnabled = ctx2.webkitImageSmoothingEnabled = ctx2.msImageSmoothingEnabled = ctx2.imageSmoothingEnabled = (scale < 1);
-
-        ctx2.globalAlpha = 1;
-        ctx2.fillStyle = '#CCCCCC';
-        ctx2.fillRect(0, 0, ctx2.canvas.width, ctx2.canvas.height);
-        ctx2.drawImage(self.elements.board[0],
-          pxlX,
-          pxlY,
-          pxlW,
-          pxlH,
-          0 + (dx * scale),
-          0 + (dy * scale),
-          window.innerWidth - (dw * scale),
-          window.innerHeight - (dh * scale)
-        );
-
-        template.draw(ctx2, pxlX, pxlY);
-
-        place.update();
-        grid.update();
-        return true;
-      }
       if (optional) {
         return false;
       }
@@ -650,17 +571,21 @@ const board = (function() {
       template.setPixelated(scale >= template.getWidthRatio());
 
       if (ignoreCanvasLock || self.allowDrag || (!self.allowDrag && self.pannedWithKeys)) {
+        const translate = {
+          x: scale <= 1 ? Math.round(self.pan.x) : self.pan.x,
+          y: scale <= 1 ? Math.round(self.pan.y) : self.pan.y
+        };
         self.elements.mover.css({
-          width: self.width,
-          height: self.height,
-          transform: 'translate(' + (scale <= 1 ? Math.round(self.pan.x) : self.pan.x) + 'px, ' + (scale <= 1 ? Math.round(self.pan.y) : self.pan.y) + 'px)'
+          transform: `translate(${translate.x * scale}px, ${translate.y * scale}px)`
         });
       }
-      if (self.use_zoom) {
-        self.elements.zoomer.css('zoom', (scale * 100).toString() + '%');
-      } else {
-        self.elements.zoomer.css('transform', 'scale(' + scale + ')');
-      }
+      self.elements.board.css('width', `${self.width * scale}px`);
+      self.elements.board.css('height', `${self.height * scale}px`);
+      overlays.heatmap.setScale(scale);
+      overlays.heatbackground.setScale(scale);
+      overlays.virginmap.setScale(scale);
+      overlays.virginbackground.setScale(scale);
+      template.setScale(scale);
 
       place.update();
       grid.update();
@@ -770,26 +695,11 @@ const board = (function() {
       }
 
       const scale = self.getScale();
-      if (self.use_js_render) {
-        toRet = {
-          x: -self.pan.x + ((self.width - (window.innerWidth / scale)) / 2) + (screenX / scale) + adjustX,
-          y: -self.pan.y + ((self.height - (window.innerHeight / scale)) / 2) + (screenY / scale) + adjustY
-        };
-      } else {
-        // we scope these into the `else` so that we don't have to redefine `boardBox` twice. getBoundingClientRect() forces a redraw so we don't want to do it every call either if we can help it.
-        const boardBox = self.elements.board[0].getBoundingClientRect();
-        if (self.use_zoom) {
-          toRet = {
-            x: (screenX / scale) - boardBox.left + adjustX,
-            y: (screenY / scale) - boardBox.top + adjustY
-          };
-        } else {
-          toRet = {
-            x: ((screenX - boardBox.left) / scale) + adjustX,
-            y: ((screenY - boardBox.top) / scale) + adjustY
-          };
-        }
-      }
+      const boardBox = self.elements.board[0].getBoundingClientRect();
+      toRet = {
+        x: ((screenX - boardBox.left) / scale) + adjustX,
+        y: ((screenY - boardBox.top) / scale) + adjustY
+      };
 
       if (floored) {
         toRet.x >>= 0;
@@ -804,19 +714,7 @@ const board = (function() {
         boardX -= self.width - 1;
         boardY -= self.height - 1;
       }
-      if (self.use_js_render) {
-        return {
-          x: (boardX + self.pan.x - ((self.width - (window.innerWidth / scale)) / 2)) * scale,
-          y: (boardY + self.pan.y - ((self.height - (window.innerHeight / scale)) / 2)) * scale
-        };
-      }
       const boardBox = self.elements.board[0].getBoundingClientRect();
-      if (self.use_zoom) {
-        return {
-          x: (boardX + boardBox.left) * scale,
-          y: (boardY + boardBox.top) * scale
-        };
-      }
       return {
         x: boardX * scale + boardBox.left,
         y: boardY * scale + boardBox.top

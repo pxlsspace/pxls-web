@@ -13,6 +13,7 @@ module.exports.overlays = (function() {
       ctx: null,
       width: null,
       height: null,
+      scale: 1,
       isShown: false,
       previouslyLazyInited: false,
       lazyInitStarted: false,
@@ -30,6 +31,7 @@ module.exports.overlays = (function() {
           width: self.width = imageData.width,
           height: self.height = imageData.height
         });
+        self.updateSize();
         self.ctx = self.elements.overlay.getContext('2d');
         self.ctx.mozImageSmoothingEnabled = self.ctx.webkitImageSmoothingEnabled = self.ctx.msImageSmoothingEnabled = self.ctx.imageSmoothingEnabled = false;
         self.setImageData(imageData);
@@ -38,6 +40,14 @@ module.exports.overlays = (function() {
         self.previouslyLazyInited = true;
         uiHelper.setLoadingBubbleState(self.name, false);
         self.setShown();
+      },
+      updateSize() {
+        self.elements.overlay.style.width = `${self.width * self.scale}px`;
+        self.elements.overlay.style.height = `${self.height * self.scale}px`;
+      },
+      setScale(scale) {
+        self.scale = scale;
+        self.updateSize();
       },
       setPixel: function(x, y, color) {
         if (self.ctx !== null) {
@@ -96,6 +106,7 @@ module.exports.overlays = (function() {
       get isShown() {
         return self.isShown;
       },
+      setScale: self.setScale,
       setPixel: self.setPixel,
       getImageData: self.getImageData,
       setImageData: self.setImageData,

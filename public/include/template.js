@@ -309,8 +309,9 @@ module.exports.template = (function() {
     },
     applyOptions() {
       if (self.options.use) {
-        [['left', 'x'], ['top', 'y']].forEach(x => {
-          self.elements.visibles.css(x[0], self.options[x[1]]);
+        self.elements.visibles.css({
+          left: self.options.x * self.scale,
+          top: self.options.y * self.scale
         });
       }
 
@@ -320,13 +321,18 @@ module.exports.template = (function() {
       self.elements.sourceImage.toggleClass('hidden', !self.options.use || self.usesStyle());
     },
     updateSize: function() {
-      self.elements.visibles.css({
-        width: self.getDisplayWidth()
-      });
       self.elements.template.attr({
         width: self.getInternalWidth(),
         height: self.getInternalHeight()
       });
+      self.setScale(self.scale);
+    },
+    setScale(scale) {
+      self.scale = scale;
+      self.elements.visibles.css({
+        width: self.getDisplayWidth() * self.scale
+      });
+      self.applyOptions();
     },
     isDirty: function() {
       return parseFloat(self.elements.visibles.css('width')) !== self.getDisplayWidth() ||
@@ -335,20 +341,6 @@ module.exports.template = (function() {
     },
     disableTemplate: function() {
       self._update({ url: null });
-    },
-    draw: function(ctx2, pxlX, pxlY) {
-      if (!self.options.use) {
-        return;
-      }
-      let width = self.elements.template[0].width;
-      let height = self.elements.template[0].height;
-      const scale = board.getScale();
-      if (self.options.width !== -1) {
-        height *= (self.options.width / width);
-        width = self.options.width;
-      }
-      ctx2.globalAlpha = settings.board.template.opacity.get();
-      ctx2.drawImage(self.elements.template[0], (self.options.x - pxlX) * scale, (self.options.y - pxlY) * scale, width * scale, height * scale);
     },
     init: function() {
       board = require('./board').board;
@@ -923,11 +915,11 @@ module.exports.template = (function() {
   return {
     normalizeTemplateObj: self.normalizeTemplateObj,
     update: self._update,
-    draw: self.draw,
     init: self.init,
     webinit: self.webinit,
     queueUpdate: self.queueUpdate,
     getOptions: () => self.options,
+    setScale: self.setScale,
     setPixelated: self.setPixelated,
     getDisplayWidth: self.getDisplayWidth,
     getDisplayHeight: self.getDisplayHeight,
