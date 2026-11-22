@@ -743,7 +743,8 @@ module.exports.template = (function() {
             int bestIndex = int(PALETTE_MAXSIZE);
             vec3 bestColor = vec3(0.0);
             for(int i = 0; i < PALETTE_LENGTH; i++) {
-              float diff = ${comparisonFunctionName}(color.rgb, u_Palette[i]);
+              vec3 p = u_Palette[i];
+              float diff = diffCustom(color.rgb, p);
               if(diff < bestDiff) {
                 bestDiff = diff;
                 bestIndex = i;
