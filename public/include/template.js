@@ -535,7 +535,7 @@ module.exports.template = (function() {
     },
     webinit: function(data) {
       self.initGl(self.elements.template[0].getContext('webgl', {
-        premultipliedAlpha: false
+        premultipliedAlpha: true
       }), data.palette);
 
       self.initCORS(data.corsBase, data.corsParam);
@@ -794,6 +794,7 @@ module.exports.template = (function() {
           
           vec4 styleMask = vec4(1.0, 1.0, 1.0, texture2D(u_Style, styleCoord).a);
           gl_FragColor = vec4(templateSample.rgb, templateSample.a == PALETTE_TRANSPARENT ? 0.0 : 1.0) * styleMask;
+          gl_FragColor.rgb *= gl_FragColor.a;
         }
       `);
       self.gl.context.useProgram(self.gl.programs.stylize);
