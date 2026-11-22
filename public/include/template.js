@@ -647,7 +647,7 @@ module.exports.template = (function() {
         ]),
         self.gl.context.STATIC_DRAW
       );
-      const identityVertexShader = `
+      const identityVertexShader = /* glsl */ `
         attribute vec2 a_Pos;
         varying vec2 v_TexCoord;
         void main() {
@@ -655,13 +655,13 @@ module.exports.template = (function() {
           gl_Position = vec4(a_Pos, 0.0, 1.0);
         }
       `;
-      const paletteDefs = `
+      const paletteDefs = /* glsl */ `
         #define PALETTE_LENGTH ${palette.length}
         #define PALETTE_MAXSIZE 255.0
         #define PALETTE_TRANSPARENT (PALETTE_MAXSIZE - 1.0) / PALETTE_MAXSIZE
         #define PALETTE_UNKNOWN 1.0
       `;
-      const diffCustom = `
+      const diffCustom = /* glsl */ `
         #define LUMA_WEIGHTS vec3(0.299, 0.587, 0.114)
         // a simple custom colorspace that stores:
         // - brightness
@@ -681,7 +681,7 @@ module.exports.template = (function() {
           return length(rgb2Custom(col1) - rgb2Custom(col2));
         }
       `;
-      const downscalingFragmentShader = (comparisonFunctionName = null) => `
+      const downscalingFragmentShader = (comparisonFunctionName = null) => /* glsl */ `
         precision mediump float;
         // GLES (and thus WebGL) does not support dynamic for loops
         // the workaround is to specify the condition as an upper bound
@@ -774,7 +774,7 @@ module.exports.template = (function() {
         self.gl.context.uniform1i(self.gl.context.getUniformLocation(program, 'u_Template'), 0);
         self.gl.context.uniform3fv(self.gl.context.getUniformLocation(program, 'u_Palette'), paletteBuffer);
       }
-      self.gl.programs.stylize = self.createGlProgram(identityVertexShader, `
+      self.gl.programs.stylize = self.createGlProgram(identityVertexShader, /* glsl */ `
         precision mediump float;
         #define STYLES_X float(${STYLES_X})
         #define STYLES_Y float(${STYLES_Y})
