@@ -776,7 +776,7 @@ module.exports.template = (function() {
         self.gl.context.uniform3fv(self.gl.context.getUniformLocation(program, 'u_Palette'), paletteBuffer);
       }
       self.gl.programs.stylize = self.createGlProgram(identityVertexShader, /* glsl */ `
-        precision mediump float;
+        precision highp float;
         #define STYLES_X float(${STYLES_X})
         #define STYLES_Y float(${STYLES_Y})
         ${paletteDefs}
