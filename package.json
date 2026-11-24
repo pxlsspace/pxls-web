@@ -22,7 +22,7 @@
     "pofile": "^1.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
+    "@babel/core": "^7.29.6",
     "@babel/preset-env": "^7.14.5",
     "@handlebars/parser": "^2.1.0",
     "@types/jquery": "^3.5.32",
