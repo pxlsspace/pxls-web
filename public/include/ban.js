@@ -8,6 +8,7 @@ module.exports.ban = (function() {
       /^chrome-extension:\/\/lmleofkkoohkbgjikogbpmnjmpdedfil/gi,
       /^https?:\/\/.*mlpixel\.org/gi],
     bad_events: ['mousedown', 'mouseup', 'click'],
+    flaggedAt: 0,
     checkSrc: function(src) {
       // as naive as possible to make injection next to impossible
       for (let i = 0; i < self.bad_src.length; i++) {
@@ -16,12 +17,18 @@ module.exports.ban = (function() {
         }
       }
     },
+    checkPlace: function() {
+      const delta = Date.now() - self.flaggedAt;
+      if (delta < 20) {
+        self.me('placed while flagged for creating a MouseEvent');
+      }
+    },
     init: function() {
       setInterval(self.update, 5000);
 
       // don't even try to generate mouse events. I am being nice
       window.MouseEvent = function() {
-        self.me('new MouseEvent instance');
+        self.flaggedAt = Date.now();
       };
 
       const _Event = Event;
@@ -109,6 +116,7 @@ module.exports.ban = (function() {
   return {
     init: self.init,
     shadow: self.shadow,
-    me: self.me
+    me: self.me,
+    checkPlace: self.checkPlace
   };
 })();
