@@ -4,6 +4,7 @@ const { socket } = require('./socket');
 const { settings } = require('./settings');
 const { uiHelper } = require('./uiHelper');
 const { modal } = require('./modal');
+const { ban } = require('./ban');
 let board;
 let user;
 
@@ -78,6 +79,7 @@ module.exports.place = (function() {
       }
     },
     place: function(x, y, color = null) {
+      ban.checkPlace();
       if (!timer.cooledDown() || self.color === -1) { // nope can't place yet
         return;
       }
