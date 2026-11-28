@@ -535,7 +535,7 @@ module.exports.template = (function() {
     },
     webinit: function(data) {
       self.initGl(self.elements.template[0].getContext('webgl', {
-        premultipliedAlpha: false
+        premultipliedAlpha: true
       }), data.palette);
 
       self.initCORS(data.corsBase, data.corsParam);
@@ -647,7 +647,7 @@ module.exports.template = (function() {
         ]),
         self.gl.context.STATIC_DRAW
       );
-      const identityVertexShader = `
+      const identityVertexShader = /* glsl */ `
         attribute vec2 a_Pos;
         varying vec2 v_TexCoord;
         void main() {
@@ -655,13 +655,13 @@ module.exports.template = (function() {
           gl_Position = vec4(a_Pos, 0.0, 1.0);
         }
       `;
-      const paletteDefs = `
+      const paletteDefs = /* glsl */ `
         #define PALETTE_LENGTH ${palette.length}
         #define PALETTE_MAXSIZE 255.0
         #define PALETTE_TRANSPARENT (PALETTE_MAXSIZE - 1.0) / PALETTE_MAXSIZE
         #define PALETTE_UNKNOWN 1.0
       `;
-      const diffCustom = `
+      const diffCustom = /* glsl */ `
         #define LUMA_WEIGHTS vec3(0.299, 0.587, 0.114)
         // a simple custom colorspace that stores:
         // - brightness
@@ -681,7 +681,7 @@ module.exports.template = (function() {
           return length(rgb2Custom(col1) - rgb2Custom(col2));
         }
       `;
-      const downscalingFragmentShader = (comparisonFunctionName = null) => `
+      const downscalingFragmentShader = (comparisonFunctionName = null) => /* glsl */ `
         precision mediump float;
         // GLES (and thus WebGL) does not support dynamic for loops
         // the workaround is to specify the condition as an upper bound
@@ -743,7 +743,8 @@ module.exports.template = (function() {
             int bestIndex = int(PALETTE_MAXSIZE);
             vec3 bestColor = vec3(0.0);
             for(int i = 0; i < PALETTE_LENGTH; i++) {
-              float diff = ${comparisonFunctionName}(color.rgb, u_Palette[i]);
+              vec3 p = u_Palette[i];
+              float diff = diffCustom(color.rgb, p);
               if(diff < bestDiff) {
                 bestDiff = diff;
                 bestIndex = i;
@@ -774,8 +775,8 @@ module.exports.template = (function() {
         self.gl.context.uniform1i(self.gl.context.getUniformLocation(program, 'u_Template'), 0);
         self.gl.context.uniform3fv(self.gl.context.getUniformLocation(program, 'u_Palette'), paletteBuffer);
       }
-      self.gl.programs.stylize = self.createGlProgram(identityVertexShader, `
-        precision mediump float;
+      self.gl.programs.stylize = self.createGlProgram(identityVertexShader, /* glsl */ `
+        precision highp float;
         #define STYLES_X float(${STYLES_X})
         #define STYLES_Y float(${STYLES_Y})
         ${paletteDefs}
@@ -793,6 +794,7 @@ module.exports.template = (function() {
           
           vec4 styleMask = vec4(1.0, 1.0, 1.0, texture2D(u_Style, styleCoord).a);
           gl_FragColor = vec4(templateSample.rgb, templateSample.a == PALETTE_TRANSPARENT ? 0.0 : 1.0) * styleMask;
+          gl_FragColor.rgb *= gl_FragColor.a;
         }
       `);
       self.gl.context.useProgram(self.gl.programs.stylize);
